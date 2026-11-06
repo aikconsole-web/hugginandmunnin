@@ -1,0 +1,36 @@
+---
+const chapters = [
+  { num: 'I',   rune: 'ᚺ', title: 'The Species',       body: 'All ten ravens — portraits, ranges, calls and how to tell them apart.',              href: '#species' },
+  { num: 'II',  rune: 'ᚨ', title: 'Norse Lore',        body: 'Huginn, Muninn and the Raven-God — the birds in the Eddas and the sagas.',           href: '#lore' },
+  { num: 'III', rune: 'ᛗ', title: 'Myths of the World', body: 'Trickster, omen, messenger — the raven from the Pacific coast to the Tower of London.', href: '#lore' },
+  { num: 'IV',  rune: 'ᚱ', title: 'Mind &amp; Behaviour', body: 'Puzzles, play, caching and calls — inside one of nature\'s sharpest minds.',       href: '#mind' },
+  { num: 'V',   rune: 'ᚠ', title: 'Anatomy &amp; Flight', body: 'Feathers, fingered wings and the aerial rolls that set ravens apart in the sky.',   href: '#field' },
+  { num: 'VI',  rune: 'ᚾ', title: 'Field Guide',        body: 'Where to look, what to listen for, and how to tell a raven from a crow.',             href: '#field' },
+];
+---
+
+<section id="library" aria-labelledby="library-title" style="max-width:1280px;margin:0 auto;padding:120px 32px 120px">
+
+  <div class="reveal" style="text-align:center;max-width:760px;margin:0 auto 60px">
+    <p style="margin:0 0 12px;font-size:12px;letter-spacing:.35em;text-transform:uppercase;color:#d4ae5a">V · The Library</p>
+    <h2 id="library-title" class="serif" style="margin:0;font-size:clamp(44px,6vw,72px);font-weight:600;line-height:1;color:#ecebe6">Open the saga.</h2>
+    <p style="margin:20px 0 0;font-size:16px;line-height:1.65;color:#a3abb8">
+      Six chapters, written like an old Norse manuscript — each page a leaf of the raven's book.
+    </p>
+  </div>
+
+  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:30px">
+    {chapters.map(({ num, rune, title, body, href }) => (
+      <article class="reveal paper" style="padding:34px 32px 30px;color:#2b2118;border-radius:2px">
+        <div style="display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid rgba(43,33,24,.35);padding-bottom:14px">
+          <span class="serif" style="font-size:15px;letter-spacing:.3em;text-transform:uppercase;color:#5a4a36">Chapter {num}</span>
+          <span class="rune" style="font-size:22px;color:#6b2d1c">{rune}</span>
+        </div>
+        <h3 class="serif" style="margin:22px 0 10px;font-size:34px;font-weight:700;line-height:1.05" set:html={title}/>
+        <p class="serif" style="margin:0;font-size:19px;line-height:1.5;color:#4a3b2a" set:html={body}/>
+        <a href={href} style="display:inline-block;margin-top:22px;padding:10px 0;font-family:Inter,sans-serif;font-size:12px;letter-spacing:.25em;text-transform:uppercase;text-decoration:none;font-weight:600">Turn the page →</a>
+      </article>
+    ))}
+  </div>
+
+</section>

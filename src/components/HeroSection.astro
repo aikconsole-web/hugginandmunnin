@@ -1,0 +1,144 @@
+---
+import RavenSVG from './RavenSVG.astro';
+import { SPECIES } from '../data/species';
+
+// Near flock: pick 7 specific species for variety
+const nearBirds: Array<{ cls: string; glide: boolean; species: typeof SPECIES[0] }> = [
+  { cls: 'r6',  glide: true,  species: SPECIES[0] },  // Common Raven
+  { cls: 'r7',  glide: false, species: SPECIES[2] },  // White-necked
+  { cls: 'r8',  glide: false, species: SPECIES[5] },  // Fan-tailed
+  { cls: 'r9',  glide: true,  species: SPECIES[1] },  // Thick-billed
+  { cls: 'r10', glide: false, species: SPECIES[7] },  // Australian
+  { cls: 'r11', glide: false, species: SPECIES[3] },  // Chihuahuan
+  { cls: 'r12', glide: true,  species: SPECIES[8] },  // Forest
+];
+---
+
+<section class="hero sky-bg" id="top" aria-label="Hrafn — ravens over the night ridge" style="position:relative;height:100svh;min-height:600px;overflow:hidden">
+
+  <!-- Sky atmosphere -->
+  <div class="stars"  aria-hidden="true"></div>
+  <div class="stars2" aria-hidden="true"></div>
+  <div class="moon-wrap" aria-hidden="true">
+    <div class="moon-halo"></div>
+    <svg class="moon" viewBox="0 0 200 200"><use href="#moonArt"/></svg>
+  </div>
+  <div class="cloud c1" aria-hidden="true"></div>
+  <div class="cloud c2" aria-hidden="true"></div>
+  <div class="cloud c3" aria-hidden="true"></div>
+  <div class="cloud c4" aria-hidden="true"></div>
+
+  <!-- Far raven flock (5 birds, blurred, behind back ridge) -->
+  {[1,2,3,4,5].map(n => (
+    <div class={`raven far flock-far r${n}`} aria-hidden="true">
+      <div class="bob">
+        <RavenSVG tail="wedge"/>
+      </div>
+    </div>
+  ))}
+
+  <!-- Back ridge -->
+  <svg aria-hidden="true" viewBox="0 0 1440 300" preserveAspectRatio="none"
+    style="position:absolute;left:0;bottom:70px;width:100%;height:300px">
+    <path fill="#182031" d="M0 300 L0 170 L90 120 L160 150 L250 80 L330 130 L420 100 L520 160 L610 90 L700 140 L790 70 L880 130 L980 110 L1060 150 L1160 85 L1250 135 L1340 105 L1440 140 L1440 300 Z"/>
+  </svg>
+
+  <div class="mist" aria-hidden="true"></div>
+
+  <!-- Near ravens (hover to name) -->
+  {nearBirds.map(({ cls, glide, species }) => (
+    <div class={`raven flock-near ${cls}${glide ? ' glide' : ''}`} title={species.name}>
+      <div class="bob" style="position:relative">
+        <RavenSVG
+          tail={species.tail}
+          neck={species.neck}
+          thick={species.thick}
+          brown={species.brown}
+          whiteEye={species.whiteEye}
+          ariaLabel={`${species.name} in flight`}
+        />
+        <span class="tag">{species.name}</span>
+      </div>
+    </div>
+  ))}
+
+  <!-- Front ridge with perched raven -->
+  <svg aria-hidden="true" viewBox="0 0 1440 300" preserveAspectRatio="none"
+    style="position:absolute;left:0;bottom:0;width:100%;height:280px">
+    <path fill="#0b0d12" d="M0 300 L0 210 L120 190 L200 220 L300 170 L380 200 L470 185 L560 230 L660 200 L760 215 L860 175 L940 205 L1040 190 L1110 140 L1150 150 L1200 200 L1300 210 L1440 190 L1440 300 Z"/>
+  </svg>
+
+  <!-- Perched raven on crag at x=77.1% -->
+  <svg aria-hidden="true" viewBox="0 0 80 80"
+    style="position:absolute;left:calc(77.1% - 35px);bottom:138px;width:70px;height:70px">
+    <g class="ptail">
+      <path fill="url(#rvBody)" d="M28 52 L 8 70 L 15 72 L 34 58 Z"/>
+      <path fill="none" stroke="rgba(150,170,220,.18)" stroke-width=".6" d="M28 55 L 11 70 M31 57 L 14 71"/>
+    </g>
+    <path fill="#07080b" d="M38 57 L 37 66 L 39 66 L 40 57 Z M43 56 L 44 66 L 46 66 L 45 56 Z M33 66 L 41 66 L 41 67 L 33 67 Z M41 66 L 49 66 L 49 67 L 41 67 Z"/>
+    <path fill="url(#rvBody)" d="M22 46 C 24 34, 38 26, 52 28 C 58 30, 60 36, 58 42 C 54 52, 42 58, 30 58 C 26 56, 22 52, 22 46 Z"/>
+    <path fill="url(#rvWing)" d="M28 40 C 36 33, 48 33, 56 37 C 52 48, 40 56, 24 58 Z"/>
+    <path fill="none" stroke="rgba(160,178,225,.22)" stroke-width=".6" d="M30 42 C 38 37, 48 37, 54 39 M28 47 C 36 43, 46 42, 52 44 M27 52 C 34 49, 42 48, 48 49"/>
+    <path fill="none" stroke="rgba(185,200,235,.32)" stroke-width=".8" d="M26 40 C 32 32, 42 28, 52 28"/>
+    <g class="phead">
+      <path fill="url(#rvBody)" d="M50 26 C 52 18, 62 16, 66 22 C 68 26, 66 30, 62 32 C 58 34, 52 32, 50 28 Z"/>
+      <path fill="#090a0e" d="M53 31 L 51 39 L 54 36 L 55 41 L 57 35 L 59 39 L 60 33 Z"/>
+      <path fill="url(#rvBill)" d="M65 20.5 C 71 20.5, 76 22.5, 79 26 C 75 27, 70 27, 65.5 27 Z"/>
+      <circle cx="61" cy="23" r="1.4" fill="#16181e"/>
+      <circle cx="61.5" cy="22.5" r=".45" fill="#ffffff" opacity=".85"/>
+    </g>
+  </svg>
+
+  <!-- Feathers -->
+  {[1,2,3,4,5,6].map(n => (
+    <div class={`feather f${n}`} aria-hidden="true">
+      <svg viewBox="0 0 20 44" fill="currentColor">
+        <path d="M10 0 C 16 10, 16 30, 10 40 C 4 30, 4 10, 10 0 Z"/>
+        <path d="M9.5 8 L 10.5 8 L 10.5 44 L 9.5 44 Z" fill="#454c5c"/>
+      </svg>
+    </div>
+  ))}
+
+  <!-- Nav -->
+  <header class="nav" style="position:absolute;top:0;left:0;right:0;z-index:5">
+    <div style="max-width:1280px;margin:0 auto;padding:22px 32px;display:flex;align-items:center;justify-content:space-between;gap:24px;flex-wrap:wrap">
+      <a href="#top" aria-label="Hrafn home" style="display:flex;align-items:center;gap:12px;padding:6px 0;text-decoration:none">
+        <span class="rune" style="font-size:26px;color:#d4ae5a;letter-spacing:0">ᚺ</span>
+        <span class="serif" style="font-size:24px;font-weight:700;letter-spacing:.28em;color:#e8e6e1">HRAFN</span>
+      </a>
+      <nav aria-label="Primary" class="nav-links" style="display:flex;gap:28px;flex-wrap:wrap;align-items:center">
+        <a href="#species">Species</a>
+        <a href="#lore">Lore</a>
+        <a href="#mind">Mind</a>
+        <a href="#field">Field Guide</a>
+        <a href="#library">Library</a>
+      </nav>
+      <a class="btn btn-ghost" href="#library" style="min-height:44px;padding:0 18px;font-size:12px">Enter the Library</a>
+    </div>
+  </header>
+
+  <!-- Hero copy -->
+  <div style="position:relative;z-index:4;max-width:980px;margin:0 auto;padding:200px 24px 0;text-align:center;pointer-events:none">
+    <p class="eyebrow rune-line" style="margin:0 0 18px;font-size:13px;letter-spacing:.4em;text-transform:uppercase;color:#d4ae5a">
+      <span class="rune" style="letter-spacing:.5em">ᚺᚱᚨᚠᚾ</span> · The Raven Library
+    </p>
+    <h1 class="serif" style="margin:0;font-weight:600;font-size:clamp(92px,15vw,210px);line-height:.9;letter-spacing:.1em;color:#ecebe6;text-shadow:0 10px 60px rgba(0,0,0,.6)">
+      <span class="letter l1">H</span><span class="letter l2">R</span><span class="letter l3">A</span><span class="letter l4">F</span><span class="letter l5">N</span>
+    </h1>
+    <p class="sub serif" style="margin:26px auto 0;max-width:640px;font-size:26px;line-height:1.35;font-style:italic;color:#d5d9e0">
+      The ravens of the world — ten species, the gods who kept them, and the minds behind the black feathers.
+    </p>
+    <div class="ctas" style="margin-top:40px;display:flex;gap:16px;justify-content:center;flex-wrap:wrap;pointer-events:auto">
+      <a class="btn btn-gold" href="#species">Meet the species</a>
+      <a class="btn btn-ghost" href="#lore">Read the lore</a>
+    </div>
+    <p class="ctas" style="margin:22px 0 0;font-size:13px;color:#a3abb8;letter-spacing:.06em">Hover a raven in flight to learn its name</p>
+  </div>
+
+  <!-- Scroll cue -->
+  <div aria-hidden="true" style="position:absolute;z-index:4;left:50%;bottom:34px;transform:translateX(-50%);display:flex;flex-direction:column;align-items:center;gap:10px">
+    <span style="font-size:11px;letter-spacing:.35em;text-transform:uppercase;color:#a3abb8">Descend</span>
+    <div class="cue-line"></div>
+  </div>
+
+</section>

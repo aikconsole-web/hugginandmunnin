@@ -1,0 +1,109 @@
+---
+import RavenSVG from './RavenSVG.astro';
+import { SPECIES } from '../data/species';
+
+const first = SPECIES[0];
+---
+
+<section id="species" aria-labelledby="atlas-title" style="max-width:1280px;margin:0 auto;padding:80px 32px 100px">
+
+  <div class="reveal" style="display:flex;justify-content:space-between;align-items:flex-end;gap:24px;flex-wrap:wrap;margin-bottom:44px">
+    <div>
+      <p style="margin:0 0 12px;font-size:12px;letter-spacing:.35em;text-transform:uppercase;color:#d4ae5a">I · The Species Atlas</p>
+      <h2 id="atlas-title" class="serif" style="margin:0;font-size:clamp(44px,6vw,72px);font-weight:600;line-height:1;color:#ecebe6">Ten ravens, one sky.</h2>
+    </div>
+    <p style="margin:0;max-width:420px;font-size:16px;line-height:1.65;color:#a3abb8">
+      Choose a species to see its silhouette in flight — tail shape, bill and neck markings are how field watchers tell them apart.
+    </p>
+  </div>
+
+  <div class="reveal" style="display:flex;flex-wrap:wrap;gap:0;border:1px solid rgba(232,230,225,.12);background:#0e1118">
+
+    <!-- Species list -->
+    <div role="group" aria-label="Raven species" style="flex:1 1 340px;min-width:0;border-right:1px solid rgba(232,230,225,.12)">
+      {SPECIES.map((s, i) => (
+        <button
+          type="button"
+          class={`sp${i === 0 ? ' on' : ''}`}
+          data-i={i}
+          aria-pressed={i === 0 ? 'true' : 'false'}
+          tabindex={i === 0 ? 0 : -1}
+        >
+          <span class="num">{s.num}</span>
+          <span class="nm">{s.name}</span>
+          <span class="lat">{s.latin}</span>
+        </button>
+      ))}
+    </div>
+
+    <!-- Detail panel — updated by hrafn.ts via data-f / data-flag attributes -->
+    <div id="atlas-detail" aria-live="polite"
+      style="flex:999 1 560px;min-width:0;position:relative;overflow:hidden;padding:48px 48px 44px;display:flex;flex-direction:column;gap:28px">
+
+      <!-- Giant faint rune watermark -->
+      <div aria-hidden="true" class="rune"
+        style="position:absolute;right:-10px;top:-40px;font-size:320px;line-height:1;color:rgba(212,174,90,.05)">
+        <span data-f="rune">{first.rune}</span>
+      </div>
+
+      <!-- Moon + raven illustration -->
+      <div style="position:relative;height:330px;display:flex;align-items:center;justify-content:center">
+        <div class="halo" aria-hidden="true"
+          style="position:absolute;width:310px;height:310px;border-radius:50%;box-shadow:0 0 70px 14px rgba(220,224,232,.16),0 0 180px 60px rgba(140,160,195,.12)">
+          <svg viewBox="0 0 200 200" style="display:block;width:100%;height:100%"><use href="#moonArt"/></svg>
+        </div>
+        <div class="detail-raven" style="position:relative;width:400px;max-width:100%">
+          <!-- This is the dynamic atlas bird — data-flag attributes let JS switch variants -->
+          <RavenSVG
+            tail={first.tail}
+            neck={first.neck}
+            thick={first.thick}
+            brown={first.brown}
+            whiteEye={first.whiteEye}
+            ariaLabel={`${first.name} in flight`}
+            dataDynamic={true}
+          />
+        </div>
+      </div>
+
+      <!-- Species meta -->
+      <div style="position:relative;display:flex;justify-content:space-between;align-items:flex-end;gap:20px;flex-wrap:wrap;border-bottom:1px solid rgba(232,230,225,.12);padding-bottom:22px">
+        <div>
+          <p style="margin:0 0 8px;font-size:12px;letter-spacing:.3em;text-transform:uppercase;color:#d4ae5a">
+            No. <span data-f="num">{first.num}</span> / 10
+          </p>
+          <h3 class="serif" style="margin:0;font-size:48px;font-weight:600;line-height:1;color:#ecebe6">
+            <span data-f="name">{first.name}</span>
+          </h3>
+          <p class="serif" style="margin:8px 0 0;font-size:22px;font-style:italic;color:#a3abb8">
+            <span data-f="latin">{first.latin}</span>
+          </p>
+        </div>
+        <a href="#species" style="font-size:13px;letter-spacing:.14em;text-transform:uppercase;text-decoration:none;padding:12px 0;color:#d4ae5a">Full entry →</a>
+      </div>
+
+      <!-- Facts row -->
+      <div style="position:relative;display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:26px">
+        <div>
+          <p style="margin:0 0 8px;font-size:11px;letter-spacing:.3em;text-transform:uppercase;color:#8f97a6">Range</p>
+          <p style="margin:0;font-size:15px;line-height:1.6;color:#d5d9e0">
+            <span data-f="region">{first.region}</span>
+          </p>
+        </div>
+        <div>
+          <p style="margin:0 0 8px;font-size:11px;letter-spacing:.3em;text-transform:uppercase;color:#8f97a6">Field mark</p>
+          <p style="margin:0;font-size:15px;line-height:1.6;color:#d5d9e0">
+            <span data-f="mark">{first.mark}</span>
+          </p>
+        </div>
+        <div>
+          <p style="margin:0 0 8px;font-size:11px;letter-spacing:.3em;text-transform:uppercase;color:#8f97a6">Size</p>
+          <p style="margin:0;font-size:15px;line-height:1.6;color:#d5d9e0">
+            <span data-f="size">{first.size}</span>
+          </p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>

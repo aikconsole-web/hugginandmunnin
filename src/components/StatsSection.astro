@@ -1,0 +1,19 @@
+---
+const stats = [
+  { value: 'Corvus',     note: 'The genus shared by ravens, crows, rooks and jackdaws.' },
+  { value: '~1.5 m',    note: 'Upper wingspan of the Common Raven — among the largest songbirds on Earth.' },
+  { value: '4 continents', note: 'North America, Eurasia, Africa and Australia — from Arctic cliffs to the Sahara.' },
+  { value: '10 species',   note: 'Charted in this library, each with its range, field marks and lore.', gold: true },
+];
+---
+
+<section aria-label="Ravens at a glance" style="max-width:1280px;margin:0 auto;padding:88px 32px 40px">
+  <div class="reveal" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:0;border:1px solid rgba(232,230,225,.12)">
+    {stats.map(({ value, note, gold }, i) => (
+      <div style={`padding:34px 30px;${i < stats.length - 1 ? 'border-right:1px solid rgba(232,230,225,.12)' : ''}`}>
+        <p class="serif" style={`margin:0;font-size:44px;font-weight:600;color:${gold ? '#d4ae5a' : '#ecebe6'}`}>{value}</p>
+        <p style="margin:10px 0 0;font-size:14px;line-height:1.55;color:#a3abb8">{note}</p>
+      </div>
+    ))}
+  </div>
+</section>

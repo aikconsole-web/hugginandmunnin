@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 440 440" width="440" height="440"><title>Elder Futhark rune ring (needs Noto Sans Runic)</title>
+          <defs><path id="runeCircle" d="M220 220 m -186 0 a 186 186 0 1 1 372 0 a 186 186 0 1 1 -372 0"></path></defs>
+          <circle cx="220" cy="220" r="208" fill="none" stroke="rgba(212,174,90,.35)" stroke-width="1"></circle>
+          <circle cx="220" cy="220" r="164" fill="none" stroke="rgba(212,174,90,.2)" stroke-width="1"></circle>
+          <text fill="#d4ae5a" style="font-family: 'Noto Sans Runic', sans-serif; font-size: 24px; letter-spacing: 14px"><textPath href="#runeCircle">ᚠᚢᚦᚨᚱᚲᚷᚹᚺᚾᛁᛃᛇᛈᛉᛊᛏᛒᛖᛗᛚᛜᛞᛟ ᚠᚢᚦᚨᚱᚲᚷᚹᚺᚾᛁᛃᛇᛈᛉᛊᛏᛒᛖᛗᛚᛜᛞᛟ</textPath></text>
+        </svg>

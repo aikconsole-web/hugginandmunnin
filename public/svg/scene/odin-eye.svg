@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 60" width="200" height="120"><title>Odin's eye</title>
+            <path d="M4 30 C 26 4, 74 4, 96 30 C 74 56, 26 56, 4 30 Z" fill="none" stroke="#d4ae5a" stroke-width="2.5"></path>
+            <circle cx="50" cy="30" r="13" fill="#d4ae5a"></circle>
+            <circle cx="50" cy="30" r="5" fill="#0b0d12"></circle>
+          </svg>

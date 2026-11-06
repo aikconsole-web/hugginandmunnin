@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="400" height="400" role="img" aria-label="Full moon"><title>Moon — Hrafn hero</title><defs><radialGradient id="moonBase" cx=".44" cy=".4" r=".62"><stop offset="0" stop-color="#f8f5ed"></stop><stop offset=".5" stop-color="#e7e2d5"></stop><stop offset=".8" stop-color="#d0cabb"></stop><stop offset="1" stop-color="#aba597"></stop></radialGradient><radialGradient id="moonLimb" cx=".5" cy=".5" r=".5"><stop offset=".62" stop-color="#2a2722" stop-opacity="0"></stop><stop offset="1" stop-color="#2a2722" stop-opacity=".62"></stop></radialGradient><clipPath id="moonClip"><circle cx="100" cy="100" r="98"></circle></clipPath><filter id="mariaRough" x="-20%" y="-20%" width="140%" height="140%"><feTurbulence type="fractalNoise" baseFrequency="0.045" numOctaves="3" seed="11" result="t"></feTurbulence><feDisplacementMap in="SourceGraphic" in2="t" scale="18" xChannelSelector="R" yChannelSelector="G" result="d"></feDisplacementMap><feGaussianBlur in="d" stdDeviation="1.6"></feGaussianBlur></filter><filter id="mariaSoft" x="-30%" y="-30%" width="160%" height="160%"><feGaussianBlur stdDeviation="6"></feGaussianBlur></filter><filter id="rayBlur" x="-10%" y="-10%" width="120%" height="120%"><feGaussianBlur stdDeviation="1.2"></feGaussianBlur></filter><filter id="moonTex" x="0" y="0" width="100%" height="100%"><feTurbulence type="fractalNoise" baseFrequency="0.75" numOctaves="4" seed="4"></feTurbulence><feColorMatrix type="matrix" values="0 0 0 0 0.32  0 0 0 0 0.30  0 0 0 0 0.27  0 0 0 -1.6 1.15"></feColorMatrix></filter></defs>
+      <circle cx="100" cy="100" r="98" fill="url(#moonBase)"></circle>
+      <g clip-path="url(#moonClip)">
+        <g filter="url(#mariaSoft)" fill="#8b8578" opacity=".35"><ellipse cx="58" cy="102" rx="40" ry="54"></ellipse><ellipse cx="122" cy="80" rx="32" ry="26"></ellipse></g>
+        <g filter="url(#mariaRough)" fill="#777165" opacity=".62">
+          <ellipse cx="50" cy="102" rx="28" ry="42"></ellipse>
+          <ellipse cx="74" cy="64" rx="26" ry="19"></ellipse>
+          <ellipse cx="116" cy="62" rx="15" ry="14"></ellipse>
+          <ellipse cx="128" cy="88" rx="20" ry="15"></ellipse>
+          <ellipse cx="160" cy="72" rx="10" ry="8"></ellipse>
+          <ellipse cx="150" cy="110" rx="11" ry="15"></ellipse>
+          <ellipse cx="132" cy="118" rx="7" ry="7"></ellipse>
+          <ellipse cx="84" cy="132" rx="16" ry="11"></ellipse>
+          <ellipse cx="60" cy="134" rx="8" ry="8"></ellipse>
+          <ellipse cx="100" cy="36" rx="34" ry="5"></ellipse>
+        </g>
+        <g filter="url(#rayBlur)" stroke="#fffaf0" stroke-opacity=".24" stroke-width="1.3" fill="none">
+          <path d="M92 166 L 44 118 M92 166 L 72 92 M92 166 L 128 112 M92 166 L 160 142 M92 166 L 150 196 M92 166 L 60 196 M92 166 L 22 160 M92 166 L 104 64"></path>
+        </g>
+        <circle cx="92" cy="166" r="4.6" fill="#fbf8f1"></circle><circle cx="92" cy="166" r="2" fill="#d6d0c2"></circle>
+        <circle cx="82" cy="92" r="3.6" fill="#f3efe5"></circle><circle cx="82.6" cy="92.6" r="1.6" fill="#cfc8b9"></circle>
+        <circle cx="60" cy="96" r="2.2" fill="#f2ede2"></circle>
+        <circle cx="46" cy="78" r="1.8" fill="#fffdf6"></circle>
+        <ellipse cx="88" cy="46" rx="3.4" ry="2.4" fill="#6f695e"></ellipse>
+        <ellipse cx="25" cy="112" rx="3" ry="5" fill="#6a645a"></ellipse>
+        <g fill="none" stroke="#5e584d" stroke-opacity=".35" stroke-width=".7">
+          <circle cx="112" cy="140" r="3"></circle><circle cx="140" cy="150" r="2.2"></circle><circle cx="120" cy="170" r="2.6"></circle><circle cx="70" cy="160" r="2"></circle><circle cx="150" cy="40" r="2.4"></circle><circle cx="170" cy="100" r="2"></circle><circle cx="104" cy="112" r="1.6"></circle><circle cx="36" cy="60" r="1.8"></circle><circle cx="164" cy="128" r="1.6"></circle>
+        </g>
+        <rect x="0" y="0" width="200" height="200" filter="url(#moonTex)" opacity=".55"></rect>
+        <circle cx="100" cy="100" r="98" fill="url(#moonLimb)"></circle>
+      </g>
+    </svg>

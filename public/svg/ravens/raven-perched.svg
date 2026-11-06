@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 80" width="320" height="320" role="img" aria-label="Perched raven"><title>Perched raven — head turn (.phead) and tail flick (.ptail) are animated in hrafn.css</title><defs><linearGradient id="rvBody" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#34405f"></stop><stop offset=".28" stop-color="#171b28"></stop><stop offset=".7" stop-color="#0a0b11"></stop><stop offset="1" stop-color="#040507"></stop></linearGradient><linearGradient id="rvWing" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#2c3654"></stop><stop offset=".45" stop-color="#10131d"></stop><stop offset="1" stop-color="#050609"></stop></linearGradient><linearGradient id="rvWingFar" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#0f121b"></stop><stop offset="1" stop-color="#040506"></stop></linearGradient><linearGradient id="rvBill" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#3d4049"></stop><stop offset="1" stop-color="#0b0c0f"></stop></linearGradient></defs>
+    <g class="ptail"><path fill="url(#rvBody)" d="M28 52 L 8 70 L 15 72 L 34 58 Z"></path><path fill="none" stroke="rgba(150,170,220,.18)" stroke-width=".6" d="M28 55 L 11 70 M31 57 L 14 71"></path></g>
+    <path fill="#07080b" d="M38 57 L 37 66 L 39 66 L 40 57 Z M43 56 L 44 66 L 46 66 L 45 56 Z M33 66 L 41 66 L 41 67 L 33 67 Z M41 66 L 49 66 L 49 67 L 41 67 Z"></path>
+    <path fill="url(#rvBody)" d="M22 46 C 24 34, 38 26, 52 28 C 58 30, 60 36, 58 42 C 54 52, 42 58, 30 58 C 26 56, 22 52, 22 46 Z"></path>
+    <path fill="url(#rvWing)" d="M28 40 C 36 33, 48 33, 56 37 C 52 48, 40 56, 24 58 Z"></path>
+    <path fill="none" stroke="rgba(160,178,225,.22)" stroke-width=".6" d="M30 42 C 38 37, 48 37, 54 39 M28 47 C 36 43, 46 42, 52 44 M27 52 C 34 49, 42 48, 48 49"></path>
+    <path fill="none" stroke="rgba(185,200,235,.32)" stroke-width=".8" d="M26 40 C 32 32, 42 28, 52 28"></path>
+    <g class="phead">
+      <path fill="url(#rvBody)" d="M50 26 C 52 18, 62 16, 66 22 C 68 26, 66 30, 62 32 C 58 34, 52 32, 50 28 Z"></path>
+      <path fill="#090a0e" d="M53 31 L 51 39 L 54 36 L 55 41 L 57 35 L 59 39 L 60 33 Z"></path>
+      <path fill="url(#rvBill)" d="M65 20.5 C 71 20.5, 76 22.5, 79 26 C 75 27, 70 27, 65.5 27 Z"></path>
+      <circle cx="61" cy="23" r="1.4" fill="#16181e"></circle><circle cx="61.5" cy="22.5" r=".45" fill="#ffffff" opacity=".85"></circle>
+    </g>
+  </svg>

@@ -1,0 +1,98 @@
+---
+import '../styles/global.css';
+import { SITE, absolute, ORG_ID, SITE_ID } from '../config/site';
+
+interface Props {
+  title:       string;
+  description?: string;
+  path:        string;
+  noindex?:    boolean;
+}
+
+const {
+  title,
+  description = SITE.description,
+  path,
+  noindex = false,
+} = Astro.props;
+
+const canonical = absolute(path);
+const ogImage   = absolute(SITE.ogImage);
+const PAGE_ID   = `${canonical}#webpage`;
+
+const siteJsonLd = {
+  '@context': 'https://schema.org',
+  '@graph': [
+    {
+      '@type': 'Organization',
+      '@id': ORG_ID,
+      name: SITE.name,
+      url: absolute('/'),
+      description: SITE.description,
+    },
+    {
+      '@type': 'WebSite',
+      '@id': SITE_ID,
+      name: `${SITE.name} — ${SITE.tagline}`,
+      url: absolute('/'),
+      description: SITE.description,
+    },
+    {
+      '@type': 'WebPage',
+      '@id': PAGE_ID,
+      url: canonical,
+      name: title,
+      description,
+      inLanguage: 'en',
+      isPartOf: { '@id': SITE_ID },
+    },
+  ],
+};
+---
+
+<!doctype html>
+<html lang="en" data-flock="many">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>{title}</title>
+  <meta name="description" content={description}/>
+  <link rel="canonical" href={canonical}/>
+
+  {noindex
+    ? <meta name="robots" content="noindex, follow"/>
+    : <meta name="robots" content="index, follow, max-image-preview:large"/>
+  }
+
+  <meta property="og:type"        content="website"/>
+  <meta property="og:title"       content={title}/>
+  <meta property="og:description" content={description}/>
+  <meta property="og:url"         content={canonical}/>
+  <meta property="og:site_name"   content={SITE.name}/>
+  <meta property="og:image"       content={ogImage}/>
+
+  <meta name="twitter:card"        content="summary_large_image"/>
+  <meta name="twitter:title"       content={title}/>
+  <meta name="twitter:description" content={description}/>
+  <meta name="twitter:image"       content={ogImage}/>
+
+  <meta name="theme-color" content="#0b0d12"/>
+
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml"/>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Inter:wght@400;500;600&family=Noto+Sans+Runic&display=swap"
+    rel="stylesheet"
+  />
+
+  <script type="application/ld+json" set:html={JSON.stringify(siteJsonLd)}/>
+
+  <slot name="head"/>
+</head>
+
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+  <slot/>
+</body>
+</html>

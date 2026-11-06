@@ -1,0 +1,83 @@
+---
+const rows = [
+  { sign: 'Tail',   raven: 'Long wedge, like a pointed diamond',           crow: 'Rounded, fan-shaped' },
+  { sign: 'Voice',  raven: 'Deep, rolling croak',                          crow: 'Higher, sharper caw' },
+  { sign: 'Size',   raven: 'About the size of a buzzard or hawk',          crow: 'Noticeably smaller' },
+  { sign: 'Flight', raven: 'Soars, glides and tumbles on long, fingered wings', crow: 'Steady rowing wingbeats, rarely soars' },
+  { sign: 'Throat', raven: 'Shaggy beard of hackle feathers',              crow: 'Smooth' },
+  { sign: 'Bill',   raven: 'Heavy and arched',                             crow: 'Slimmer and straighter' },
+];
+---
+
+<section id="field" aria-labelledby="field-title"
+  style="background:#0e1118;border-top:1px solid rgba(232,230,225,.08);border-bottom:1px solid rgba(232,230,225,.08)">
+  <div style="max-width:1280px;margin:0 auto;padding:110px 32px">
+
+    <div class="reveal" style="text-align:center;max-width:720px;margin:0 auto 56px">
+      <p style="margin:0 0 12px;font-size:12px;letter-spacing:.35em;text-transform:uppercase;color:#d4ae5a">IV · Field Guide</p>
+      <h2 id="field-title" class="serif" style="margin:0;font-size:clamp(44px,6vw,72px);font-weight:600;line-height:1;color:#ecebe6">Raven, or crow?</h2>
+      <p style="margin:20px 0 0;font-size:16px;line-height:1.65;color:#a3abb8">The question every watcher asks. Look up — the tail tells you first.</p>
+    </div>
+
+    <!-- Silhouettes -->
+    <div class="reveal" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:24px;margin-bottom:48px">
+
+      <!-- Raven: wedge tail -->
+      <figure style="margin:0;padding:36px 24px 26px;border:1px solid rgba(212,174,90,.4);background:linear-gradient(180deg,#2a3549,#172033);text-align:center">
+        <svg role="img" aria-label="Raven silhouette from below with a wedge-shaped tail"
+          viewBox="0 0 160 160" fill="#06070a" style="width:230px;max-width:100%;height:auto;transform:rotate(-90deg)">
+          <path d="M94 76 C 92 52, 84 26, 70 4 L 65 12 L 61 3 L 57 13 L 52 6 L 50 17 C 54 40, 60 60, 66 77 Z"/>
+          <path d="M94 84 C 92 108, 84 134, 70 156 L 65 148 L 61 157 L 57 147 L 52 154 L 50 143 C 54 120, 60 100, 66 83 Z"/>
+          <path d="M48 74 L 22 71 L 10 80 L 22 89 L 48 86 Z"/>
+          <ellipse cx="84" cy="80" rx="38" ry="8.5"/>
+          <circle cx="124" cy="80" r="8.5"/>
+          <path d="M129 74 L 151 80 L 129 86 Z"/>
+        </svg>
+        <figcaption class="serif" style="margin-top:8px;font-size:30px;font-weight:600;color:#ecebe6">
+          Raven
+          <span style="display:block;font-family:Inter,sans-serif;font-size:12px;letter-spacing:.3em;text-transform:uppercase;color:#d4ae5a;margin-top:8px">Wedge-shaped tail</span>
+        </figcaption>
+      </figure>
+
+      <!-- Crow: fan tail -->
+      <figure style="margin:0;padding:36px 24px 26px;border:1px solid rgba(232,230,225,.14);background:linear-gradient(180deg,#2a3549,#172033);text-align:center">
+        <svg role="img" aria-label="Crow silhouette from below with a fan-shaped tail"
+          viewBox="0 0 160 160" fill="#06070a" style="width:190px;max-width:100%;height:auto;transform:rotate(-90deg)">
+          <path d="M92 76 C 90 56, 84 34, 74 14 C 70 16, 66 14, 62 16 C 58 15, 55 18, 52 20 C 55 42, 60 60, 66 77 Z"/>
+          <path d="M92 84 C 90 104, 84 126, 74 146 C 70 144, 66 146, 62 144 C 58 145, 55 142, 52 140 C 55 118, 60 100, 66 83 Z"/>
+          <path d="M50 74 L 26 68 Q 16 80 26 92 L 50 86 Z"/>
+          <ellipse cx="84" cy="80" rx="36" ry="8"/>
+          <circle cx="122" cy="80" r="8"/>
+          <path d="M128 76 L 142 80 L 128 84 Z"/>
+        </svg>
+        <figcaption class="serif" style="margin-top:8px;font-size:30px;font-weight:600;color:#ecebe6">
+          Crow
+          <span style="display:block;font-family:Inter,sans-serif;font-size:12px;letter-spacing:.3em;text-transform:uppercase;color:#a3abb8;margin-top:8px">Rounded, fan-shaped tail</span>
+        </figcaption>
+      </figure>
+    </div>
+
+    <!-- Comparison table -->
+    <div class="reveal" style="border:1px solid rgba(232,230,225,.12);overflow-x:auto">
+      <table style="width:100%;min-width:620px;border-collapse:collapse;font-size:15px">
+        <thead>
+          <tr style="background:#0b0d12">
+            <th scope="col" style="text-align:left;padding:18px 24px;font-size:11px;letter-spacing:.3em;text-transform:uppercase;color:#8f97a6;font-weight:500">Sign</th>
+            <th scope="col" style="text-align:left;padding:18px 24px;font-size:11px;letter-spacing:.3em;text-transform:uppercase;color:#d4ae5a;font-weight:500">Raven</th>
+            <th scope="col" style="text-align:left;padding:18px 24px;font-size:11px;letter-spacing:.3em;text-transform:uppercase;color:#8f97a6;font-weight:500">Crow</th>
+          </tr>
+        </thead>
+        <tbody>
+          {rows.map(({ sign, raven, crow }) => (
+            <tr style="border-top:1px solid rgba(232,230,225,.1)">
+              <th scope="row" class="serif" style="text-align:left;padding:18px 24px;font-size:20px;font-weight:600;color:#ecebe6">{sign}</th>
+              <td style="padding:18px 24px;color:#d5d9e0">{raven}</td>
+              <td style="padding:18px 24px;color:#a3abb8">{crow}</td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
+
+  </div>
+</section>

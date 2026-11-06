@@ -1,0 +1,75 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import SvgDefs from '../components/SvgDefs.astro';
+import HeroSection from '../components/HeroSection.astro';
+import MarqueeSection from '../components/MarqueeSection.astro';
+import StatsSection from '../components/StatsSection.astro';
+import SpeciesAtlas from '../components/SpeciesAtlas.astro';
+import LoreSection from '../components/LoreSection.astro';
+import MindSection from '../components/MindSection.astro';
+import FieldGuide from '../components/FieldGuide.astro';
+import LibrarySection from '../components/LibrarySection.astro';
+import { SITE } from '../config/site';
+import { SPECIES } from '../data/species';
+
+const title       = `${SITE.name} — ${SITE.tagline}`;
+const description = SITE.description;
+
+// Serialise species for the client-side atlas script
+const speciesJson = JSON.stringify(SPECIES);
+---
+
+<BaseLayout title={title} description={description} path="/">
+
+  <main id="main">
+
+    <!-- Hidden SVG defs (gradients + moon symbol) used by all raven SVGs -->
+    <SvgDefs/>
+
+    <HeroSection/>
+    <MarqueeSection/>
+    <StatsSection/>
+    <SpeciesAtlas/>
+    <LoreSection/>
+    <MindSection/>
+    <FieldGuide/>
+    <LibrarySection/>
+
+    <!-- Footer -->
+    <footer style="border-top:1px solid rgba(212,174,90,.25);background:#080a0e">
+      <div style="max-width:1280px;margin:0 auto;padding:64px 32px 40px;display:flex;flex-wrap:wrap;gap:40px;justify-content:space-between">
+        <div style="flex:1 1 320px;min-width:0">
+          <p style="margin:0;display:flex;align-items:center;gap:12px">
+            <span class="rune" style="font-size:28px;color:#d4ae5a">ᚺ</span>
+            <span class="serif" style="font-size:28px;font-weight:700;letter-spacing:.28em;color:#ecebe6">HRAFN</span>
+          </p>
+          <p class="serif" style="margin:16px 0 0;max-width:380px;font-size:19px;line-height:1.5;font-style:italic;color:#a3abb8">
+            A library of ravens — their species, their stories and their minds.
+          </p>
+        </div>
+        <nav aria-label="Footer" style="display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:4px 48px">
+          <a href="#species" style="padding:10px 0;text-decoration:none;color:#c9ced8;font-size:14px">Species Atlas</a>
+          <a href="#lore"    style="padding:10px 0;text-decoration:none;color:#c9ced8;font-size:14px">Norse Lore</a>
+          <a href="#mind"    style="padding:10px 0;text-decoration:none;color:#c9ced8;font-size:14px">Mind &amp; Behaviour</a>
+          <a href="#field"   style="padding:10px 0;text-decoration:none;color:#c9ced8;font-size:14px">Field Guide</a>
+          <a href="#library" style="padding:10px 0;text-decoration:none;color:#c9ced8;font-size:14px">The Library</a>
+          <a href="#top"     style="padding:10px 0;text-decoration:none;color:#c9ced8;font-size:14px">About</a>
+        </nav>
+      </div>
+      <div style="max-width:1280px;margin:0 auto;padding:22px 32px 34px;border-top:1px solid rgba(232,230,225,.08);display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;font-size:13px;color:#8f97a6">
+        <span>© 2026 Hrafn — The Raven Library. General natural-history and cultural information; not a substitute for academic study or wildlife-care advice.</span>
+        <span class="rune" style="letter-spacing:.4em;color:#6f6750">ᚺᚱᚨᚠᚾ</span>
+      </div>
+    </footer>
+
+  </main>
+
+</BaseLayout>
+
+<!-- Inject species data, then run the atlas + hero script -->
+<script define:vars={{ speciesJson }}>
+  window.HRAFN_SPECIES = JSON.parse(speciesJson);
+</script>
+<script>
+  import '../scripts/hrafn.ts';
+</script>

@@ -1,0 +1,21 @@
+---
+import { SPECIES } from '../data/species';
+
+const items = SPECIES.map(s => ({ latin: s.latin, rune: s.rune }));
+---
+
+<div aria-hidden="true" style="overflow:hidden;border-top:1px solid rgba(212,174,90,.25);border-bottom:1px solid rgba(212,174,90,.25);background:#0e1118;padding:20px 0">
+  <div class="marquee serif" style="font-size:22px;font-style:italic;color:#a3abb8;white-space:nowrap">
+    {[0,1].map(() => (
+      <span style="padding-right:48px">
+        {items.map(({ latin, rune }, i) => (
+          <>
+            {latin}
+            <span class="rune" style="color:#d4ae5a;font-style:normal;padding:0 22px">{rune}</span>
+            {i < items.length - 1 ? '' : ''}
+          </>
+        ))}
+      </span>
+    ))}
+  </div>
+</div>

@@ -1,0 +1,116 @@
+<!-- Hidden SVG sprite: gradient defs + moonArt symbol. Referenced anywhere on the page. -->
+<svg aria-hidden="true" focusable="false" width="0" height="0" style="position:absolute;width:0;height:0;overflow:hidden">
+  <defs>
+    <!-- Raven body / wing gradients -->
+    <linearGradient id="rvBody" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0"   stop-color="#34405f"/>
+      <stop offset=".28" stop-color="#171b28"/>
+      <stop offset=".7"  stop-color="#0a0b11"/>
+      <stop offset="1"   stop-color="#040507"/>
+    </linearGradient>
+    <linearGradient id="rvWing" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0"   stop-color="#2c3654"/>
+      <stop offset=".45" stop-color="#10131d"/>
+      <stop offset="1"   stop-color="#050609"/>
+    </linearGradient>
+    <linearGradient id="rvWingFar" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0f121b"/>
+      <stop offset="1" stop-color="#040506"/>
+    </linearGradient>
+    <linearGradient id="rvBill" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#3d4049"/>
+      <stop offset="1" stop-color="#0b0c0f"/>
+    </linearGradient>
+    <!-- Moonlit palette (Huginn & Muninn) -->
+    <linearGradient id="rvLit" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0"  stop-color="#9aa5c2"/>
+      <stop offset=".4" stop-color="#3e4866"/>
+      <stop offset="1"  stop-color="#161b2a"/>
+    </linearGradient>
+    <linearGradient id="rvLitFar" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#3a4360"/>
+      <stop offset="1" stop-color="#121622"/>
+    </linearGradient>
+    <!-- Moon -->
+    <radialGradient id="moonBase" cx=".44" cy=".4" r=".62">
+      <stop offset="0"  stop-color="#f8f5ed"/>
+      <stop offset=".5" stop-color="#e7e2d5"/>
+      <stop offset=".8" stop-color="#d0cabb"/>
+      <stop offset="1"  stop-color="#aba597"/>
+    </radialGradient>
+    <radialGradient id="moonLimb" cx=".5" cy=".5" r=".5">
+      <stop offset=".62" stop-color="#2a2722" stop-opacity="0"/>
+      <stop offset="1"   stop-color="#2a2722" stop-opacity=".62"/>
+    </radialGradient>
+    <clipPath id="moonClip"><circle cx="100" cy="100" r="98"/></clipPath>
+    <filter id="mariaRough" x="-20%" y="-20%" width="140%" height="140%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.045" numOctaves="3" seed="11" result="t"/>
+      <feDisplacementMap in="SourceGraphic" in2="t" scale="18" xChannelSelector="R" yChannelSelector="G" result="d"/>
+      <feGaussianBlur in="d" stdDeviation="1.6"/>
+    </filter>
+    <filter id="mariaSoft" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="6"/>
+    </filter>
+    <filter id="rayBlur" x="-10%" y="-10%" width="120%" height="120%">
+      <feGaussianBlur stdDeviation="1.2"/>
+    </filter>
+    <filter id="moonTex" x="0" y="0" width="100%" height="100%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.75" numOctaves="4" seed="4"/>
+      <feColorMatrix type="matrix" values="0 0 0 0 0.32  0 0 0 0 0.30  0 0 0 0 0.27  0 0 0 -1.6 1.15"/>
+    </filter>
+
+    <!-- Moon symbol — reused in atlas panel and hero -->
+    <symbol id="moonArt" viewBox="0 0 200 200">
+      <circle cx="100" cy="100" r="98" fill="url(#moonBase)"/>
+      <g clip-path="url(#moonClip)">
+        <g filter="url(#mariaSoft)" fill="#8b8578" opacity=".35">
+          <ellipse cx="58" cy="102" rx="40" ry="54"/>
+          <ellipse cx="122" cy="80" rx="32" ry="26"/>
+        </g>
+        <g filter="url(#mariaRough)" fill="#777165" opacity=".62">
+          <ellipse cx="50"  cy="102" rx="28" ry="42"/>
+          <ellipse cx="74"  cy="64"  rx="26" ry="19"/>
+          <ellipse cx="116" cy="62"  rx="15" ry="14"/>
+          <ellipse cx="128" cy="88"  rx="20" ry="15"/>
+          <ellipse cx="160" cy="72"  rx="10" ry="8"/>
+          <ellipse cx="150" cy="110" rx="11" ry="15"/>
+          <ellipse cx="132" cy="118" rx="7"  ry="7"/>
+          <ellipse cx="84"  cy="132" rx="16" ry="11"/>
+          <ellipse cx="60"  cy="134" rx="8"  ry="8"/>
+          <ellipse cx="100" cy="36"  rx="34" ry="5"/>
+        </g>
+        <g filter="url(#rayBlur)" stroke="#fffaf0" stroke-opacity=".24" stroke-width="1.3" fill="none">
+          <path d="M92 166 L 44 118 M92 166 L 72 92 M92 166 L 128 112 M92 166 L 160 142 M92 166 L 150 196 M92 166 L 60 196 M92 166 L 22 160 M92 166 L 104 64"/>
+        </g>
+        <!-- Tycho -->
+        <circle cx="92" cy="166" r="4.6" fill="#fbf8f1"/>
+        <circle cx="92" cy="166" r="2"   fill="#d6d0c2"/>
+        <!-- Copernicus -->
+        <circle cx="82" cy="92" r="3.6" fill="#f3efe5"/>
+        <circle cx="82.6" cy="92.6" r="1.6" fill="#cfc8b9"/>
+        <!-- Kepler -->
+        <circle cx="60" cy="96" r="2.2" fill="#f2ede2"/>
+        <!-- Aristarchus -->
+        <circle cx="46" cy="78" r="1.8" fill="#fffdf6"/>
+        <!-- Plato -->
+        <ellipse cx="88"  cy="46"  rx="3.4" ry="2.4" fill="#6f695e"/>
+        <!-- Grimaldi -->
+        <ellipse cx="25"  cy="112" rx="3"   ry="5"   fill="#6a645a"/>
+        <!-- Small craters -->
+        <g fill="none" stroke="#5e584d" stroke-opacity=".35" stroke-width=".7">
+          <circle cx="112" cy="140" r="3"/>
+          <circle cx="140" cy="150" r="2.2"/>
+          <circle cx="120" cy="170" r="2.6"/>
+          <circle cx="70"  cy="160" r="2"/>
+          <circle cx="150" cy="40"  r="2.4"/>
+          <circle cx="170" cy="100" r="2"/>
+          <circle cx="104" cy="112" r="1.6"/>
+          <circle cx="36"  cy="60"  r="1.8"/>
+          <circle cx="164" cy="128" r="1.6"/>
+        </g>
+        <rect x="0" y="0" width="200" height="200" filter="url(#moonTex)" opacity=".55"/>
+        <circle cx="100" cy="100" r="98" fill="url(#moonLimb)"/>
+      </g>
+    </symbol>
+  </defs>
+</svg>

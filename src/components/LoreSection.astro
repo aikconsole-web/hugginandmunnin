@@ -1,0 +1,116 @@
+---
+import RavenSVG from './RavenSVG.astro';
+
+const worldLore = [
+  {
+    location: 'Pacific Northwest',
+    title: 'Raven the Trickster',
+    body: 'In Haida and Tlingit tradition, Raven is a cunning creator who steals the light and sets the sun, moon and stars in the sky.',
+  },
+  {
+    location: 'London',
+    title: 'Ravens of the Tower',
+    body: 'Legend says that if the ravens ever leave the Tower of London, the kingdom will fall — so a resident flock is kept there still.',
+  },
+  {
+    location: 'Book of Genesis',
+    title: "Noah's First Bird",
+    body: 'Before the dove, Noah sends a raven from the ark, and it flies to and fro until the floodwaters dry from the earth.',
+  },
+  {
+    location: 'Irish myth',
+    title: 'The Morrígan',
+    body: 'The goddess of war and fate often takes the form of a raven or crow, appearing over battlefields to foretell who will fall.',
+  },
+];
+---
+
+<section id="lore" aria-labelledby="lore-title"
+  style="position:relative;background:#0e1118;border-top:1px solid rgba(232,230,225,.08);border-bottom:1px solid rgba(232,230,225,.08);overflow:hidden">
+
+  <!-- Huginn & Muninn -->
+  <div style="max-width:1280px;margin:0 auto;padding:110px 32px 100px;display:flex;flex-wrap:wrap;gap:64px;align-items:center">
+
+    <div class="reveal" style="flex:1 1 420px;min-width:0">
+      <p style="margin:0 0 12px;font-size:12px;letter-spacing:.35em;text-transform:uppercase;color:#d4ae5a">II · Norse Lore</p>
+      <h2 id="lore-title" class="serif" style="margin:0;font-size:clamp(44px,6vw,72px);font-weight:600;line-height:1;color:#ecebe6">Thought &amp; Memory.</h2>
+      <p class="serif" style="margin:28px 0 0;font-size:24px;line-height:1.45;font-style:italic;color:#d5d9e0">
+        Each dawn, Odin's two ravens fly out over the whole of Midgard. At dusk they return to his shoulders and whisper all they have seen.
+      </p>
+      <p style="margin:22px 0 0;font-size:16px;line-height:1.7;color:#a3abb8">
+        Their names are <strong style="color:#ecebe6;font-weight:600">Huginn</strong> — thought — and <strong style="color:#ecebe6;font-weight:600">Muninn</strong> — memory, or mind.
+        In the Eddic poem <em>Grímnismál</em>, Odin admits he fears for Huginn, but fears more that Muninn may not come back.
+      </p>
+      <div style="margin-top:34px;display:flex;gap:36px;flex-wrap:wrap">
+        <div>
+          <p class="rune" style="margin:0;font-size:30px;color:#d4ae5a">ᚺᚢᚷᛁᚾ</p>
+          <p style="margin:6px 0 0;font-size:12px;letter-spacing:.3em;text-transform:uppercase;color:#a3abb8">Huginn · Thought</p>
+        </div>
+        <div>
+          <p class="rune" style="margin:0;font-size:30px;color:#d4ae5a">ᛗᚢᚾᛁᚾ</p>
+          <p style="margin:6px 0 0;font-size:12px;letter-spacing:.3em;text-transform:uppercase;color:#a3abb8">Muninn · Memory</p>
+        </div>
+      </div>
+      <a class="btn btn-ghost" href="#library" style="margin-top:40px">Open the Norse chapter</a>
+    </div>
+
+    <!-- Rune ring + orbit -->
+    <div class="reveal" aria-hidden="true" style="flex:1 1 420px;min-width:0;display:flex;justify-content:center">
+      <div style="position:relative;width:440px;max-width:100%;aspect-ratio:1/1">
+
+        <!-- Spinning rune ring -->
+        <svg class="ring" viewBox="0 0 440 440" style="position:absolute;inset:0;width:100%;height:100%">
+          <defs>
+            <path id="runeCircle" d="M220 220 m -186 0 a 186 186 0 1 1 372 0 a 186 186 0 1 1 -372 0"/>
+          </defs>
+          <circle cx="220" cy="220" r="208" fill="none" stroke="rgba(212,174,90,.35)" stroke-width="1"/>
+          <circle cx="220" cy="220" r="164" fill="none" stroke="rgba(212,174,90,.2)"  stroke-width="1"/>
+          <text fill="#d4ae5a" style="font-family:'Noto Sans Runic',sans-serif;font-size:24px;letter-spacing:14px">
+            <textPath href="#runeCircle">ᚠᚢᚦᚨᚱᚲᚷᚹᚺᚾᛁᛃᛇᛈᛉᛊᛏᛒᛖᛗᛚᛜᛞᛟ ᚠᚢᚦᚨᚱᚲᚷᚹᚺᚾᛁᛃᛇᛈᛉᛊᛏᛒᛖᛗᛚᛜᛞᛟ</textPath>
+          </text>
+        </svg>
+
+        <!-- Odin's eye -->
+        <div style="position:absolute;inset:28%;border-radius:50%;background:radial-gradient(circle,#1d2433 0%,#0b0d12 75%);border:1px solid rgba(212,174,90,.4);display:flex;align-items:center;justify-content:center;box-shadow:0 0 80px rgba(212,174,90,.12)">
+          <svg class="eye" viewBox="0 0 100 60" style="width:52%;height:auto">
+            <path d="M4 30 C 26 4, 74 4, 96 30 C 74 56, 26 56, 4 30 Z" fill="none" stroke="#d4ae5a" stroke-width="2.5"/>
+            <circle cx="50" cy="30" r="13" fill="#d4ae5a"/>
+            <circle cx="50" cy="30" r="5"  fill="#0b0d12"/>
+          </svg>
+        </div>
+
+        <!-- Huginn orbit -->
+        <div class="orbit" style="inset:8%">
+          <div class="or">
+            <RavenSVG moonlit={true}/>
+          </div>
+        </div>
+
+        <!-- Muninn orbit (offset -8s) -->
+        <div class="orbit orbit2" style="inset:8%">
+          <div class="or">
+            <RavenSVG moonlit={true}/>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- World lore cards -->
+  <div style="max-width:1280px;margin:0 auto;padding:0 32px 110px">
+    <p class="reveal" style="margin:0 0 26px;font-size:12px;letter-spacing:.35em;text-transform:uppercase;color:#a3abb8">
+      The raven across the world's stories
+    </p>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:20px">
+      {worldLore.map(({ location, title, body }) => (
+        <article class="reveal lift" style="padding:30px 28px;border:1px solid rgba(232,230,225,.12);background:#0b0d12">
+          <p style="margin:0;font-size:11px;letter-spacing:.3em;text-transform:uppercase;color:#d4ae5a">{location}</p>
+          <h3 class="serif" style="margin:14px 0 10px;font-size:28px;font-weight:600;color:#ecebe6">{title}</h3>
+          <p style="margin:0;font-size:15px;line-height:1.65;color:#a3abb8">{body}</p>
+        </article>
+      ))}
+    </div>
+  </div>
+
+</section>

@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 160" width="320" height="320" fill="#06070a"><title>Crow silhouette from below (rotate -90° to show head-up)</title>
+          <path d="M92 76 C 90 56, 84 34, 74 14 C 70 16, 66 14, 62 16 C 58 15, 55 18, 52 20 C 55 42, 60 60, 66 77 Z"></path>
+          <path d="M92 84 C 90 104, 84 126, 74 146 C 70 144, 66 146, 62 144 C 58 145, 55 142, 52 140 C 55 118, 60 100, 66 83 Z"></path>
+          <path d="M50 74 L 26 68 Q 16 80 26 92 L 50 86 Z"></path>
+          <ellipse cx="84" cy="80" rx="36" ry="8"></ellipse>
+          <circle cx="122" cy="80" r="8"></circle>
+          <path d="M128 76 L 142 80 L 128 84 Z"></path>
+        </svg>

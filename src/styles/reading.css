@@ -1,0 +1,779 @@
+/* ─── Reading / Chapter page — Saga style ─────────────────────────────────── */
+
+/* ── Top bar ────────────────────────────────────────────────────────────── */
+.read-topbar {
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  background: #0d0f14;
+  border-bottom: 1px solid rgba(212,174,90,.12);
+}
+.read-topbar-inner {
+  max-width: var(--page-w);
+  margin-inline: auto;
+  padding-inline: var(--page-pad);
+  height: 44px;
+  display: flex;
+  align-items: center;
+  gap: 0;
+}
+.read-topbar-logo {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  text-decoration: none;
+  flex-shrink: 0;
+  margin-right: 32px;
+}
+.read-topbar-logo .rune { font-size: 17px; color: var(--gold-500); }
+.read-topbar-logo .wordmark {
+  font-family: var(--font-serif);
+  font-weight: 700;
+  font-size: 15px;
+  letter-spacing: .28em;
+  color: #e8e6e1;
+}
+.read-topbar-nav {
+  display: flex;
+  gap: 24px;
+  align-items: center;
+  flex: 1;
+}
+.read-topbar-nav a {
+  color: rgba(232,230,225,.5);
+  text-decoration: none;
+  font: 500 10px/1 var(--font-ui);
+  letter-spacing: .2em;
+  text-transform: uppercase;
+  transition: color .15s;
+}
+.read-topbar-nav a:hover          { color: rgba(232,230,225,.85); }
+.read-topbar-nav a[aria-current]  { color: var(--gold-300); }
+/* Theme + font-size controls */
+.read-topbar-controls {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-shrink: 0;
+}
+.read-theme-btn {
+  padding: 3px 10px;
+  font: 500 10px/1 var(--font-ui);
+  letter-spacing: .1em;
+  border-radius: 2px;
+  border: 1px solid rgba(212,174,90,.25);
+  background: none;
+  color: rgba(232,230,225,.5);
+  cursor: pointer;
+  transition: background .15s, color .15s;
+}
+.read-theme-btn.active,
+.read-theme-btn:hover { background: rgba(212,174,90,.15); color: var(--gold-300); }
+.read-topbar-sep { width: 1px; height: 18px; background: rgba(232,230,225,.12); margin: 0 4px; }
+.read-font-btn {
+  background: none;
+  border: none;
+  color: rgba(232,230,225,.4);
+  cursor: pointer;
+  font-family: var(--font-serif);
+  padding: 2px 4px;
+  line-height: 1;
+  transition: color .15s;
+}
+.read-font-btn:hover { color: rgba(232,230,225,.85); }
+.read-font-btn.sm { font-size: 11px; }
+.read-font-btn.md { font-size: 15px; }
+.read-font-btn.lg { font-size: 19px; }
+
+/* ── Breadcrumb bar ─────────────────────────────────────────────────────── */
+.read-breadcrumb {
+  background: var(--vellum-200);
+  border-bottom: 1px solid var(--vellum-300);
+}
+.read-breadcrumb-inner {
+  max-width: var(--page-w);
+  margin-inline: auto;
+  padding-inline: var(--page-pad);
+  height: 34px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+.read-breadcrumb-left {
+  font: 500 9px/1 var(--font-ui);
+  letter-spacing: .2em;
+  text-transform: uppercase;
+  color: var(--ink-soft);
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+.read-breadcrumb-left a { color: var(--ink-soft); text-decoration: none; }
+.read-breadcrumb-left a:hover { color: var(--oxblood); }
+.read-breadcrumb-left .sep { opacity: .4; }
+.read-breadcrumb-callnum {
+  font-family: var(--font-serif);
+  font-size: 11px;
+  font-style: italic;
+  color: var(--ink-soft);
+  opacity: .7;
+}
+
+/* ── Page body ──────────────────────────────────────────────────────────── */
+.read-page {
+  background: var(--vellum-100);
+  color: var(--iron-ink);
+  min-height: 100vh;
+}
+
+/* ── Hero banner ────────────────────────────────────────────────────────── */
+.read-hero {
+  background: var(--vellum-200);
+  border-bottom: 1px solid var(--vellum-300);
+  padding: 32px 0;
+  overflow: hidden;
+  position: relative;
+}
+.read-hero-inner {
+  max-width: var(--page-w);
+  margin-inline: auto;
+  padding-inline: var(--page-pad);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  position: relative;
+}
+/* Two raven silhouettes flanking */
+.read-hero-raven {
+  flex: 0 0 160px;
+  opacity: .82;
+}
+.read-hero-raven.flip { transform: scaleX(-1); }
+/* Central rune ring area */
+.read-hero-center {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+}
+.read-hero-ring {
+  width: 110px;
+  height: 110px;
+  position: relative;
+}
+.read-hero-ring svg { width: 100%; height: 100%; }
+/* labels below ravens */
+.read-hero-labels {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  padding-inline: 0;
+}
+.read-hero-label {
+  font: 500 9px/1 var(--font-ui);
+  letter-spacing: .22em;
+  text-transform: uppercase;
+  color: var(--ink-soft);
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+.read-hero-label .rune { font-size: 11px; color: var(--oxblood); opacity: .6; }
+
+/* ── Chapter header ─────────────────────────────────────────────────────── */
+.read-chap-head {
+  max-width: var(--page-w);
+  margin-inline: auto;
+  padding: 36px var(--page-pad) 0;
+  text-align: center;
+}
+.read-chap-eyebrow {
+  font: 500 10px/1 var(--font-ui);
+  letter-spacing: .3em;
+  text-transform: uppercase;
+  color: var(--ink-soft);
+  margin: 0 0 18px;
+}
+.read-chap-eyebrow span { color: var(--oxblood); }
+.read-chap-h1 {
+  font-family: var(--font-serif);
+  font-size: clamp(44px, 7vw, 80px);
+  font-weight: 700;
+  line-height: 1.0;
+  color: var(--iron-ink);
+  margin: 0 0 14px;
+}
+.read-chap-sub {
+  font-family: var(--font-serif);
+  font-size: 18px;
+  font-style: italic;
+  color: var(--ink-soft);
+  margin: 0 0 20px;
+}
+.read-chap-meta {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-bottom: 10px;
+}
+.read-chap-reviewer {
+  font: 400 11px/1 var(--font-ui);
+  color: var(--ink-soft);
+  opacity: .7;
+}
+/* ornament */
+.read-ornament {
+  display: flex;
+  justify-content: center;
+  padding: 20px 0 0;
+}
+
+/* ── Body layout ────────────────────────────────────────────────────────── */
+.read-body {
+  max-width: var(--page-w);
+  margin-inline: auto;
+  padding-inline: var(--page-pad);
+  padding-block: 40px 80px;
+  display: grid;
+  grid-template-columns: 200px 1fr 220px;
+  gap: 48px;
+  align-items: flex-start;
+}
+@media (max-width: 1100px) {
+  .read-body { grid-template-columns: 180px 1fr; }
+  .read-sidebar-right { display: none; }
+}
+@media (max-width: 760px) {
+  .read-body { grid-template-columns: 1fr; }
+  .read-sidebar-left { display: none; }
+}
+
+/* ── Left sidebar: TOC ──────────────────────────────────────────────────── */
+.read-sidebar-left {
+  position: sticky;
+  top: 64px;
+  align-self: flex-start;
+}
+.read-toc-head {
+  font: 700 9px/1 var(--font-ui);
+  letter-spacing: .22em;
+  text-transform: uppercase;
+  color: var(--ink-soft);
+  margin: 0 0 12px;
+}
+.read-toc {
+  list-style: none;
+  margin: 0 0 32px;
+  padding: 0;
+}
+.read-toc li { border-bottom: 1px solid var(--vellum-300); }
+.read-toc a {
+  display: block;
+  padding: 8px 0;
+  font: 400 12px/1.3 var(--font-serif);
+  color: var(--ink-soft);
+  text-decoration: none;
+  transition: color .15s;
+}
+.read-toc a:hover,
+.read-toc a.active { color: var(--oxblood); }
+.read-toc a.active { font-weight: 600; }
+
+/* ── Main article ───────────────────────────────────────────────────────── */
+.read-article {
+  min-width: 0;
+  max-width: 680px;
+}
+
+/* Drop cap */
+.read-dropcap::first-letter {
+  font-family: var(--font-serif);
+  font-size: 5.4em;
+  font-weight: 700;
+  line-height: .78;
+  float: left;
+  margin: 4px 10px 0 0;
+  color: var(--iron-ink);
+  background: var(--vellum-300);
+  padding: 6px 10px 4px;
+  border: 1px solid var(--vellum-300);
+}
+
+/* Body prose */
+.read-article p {
+  font-family: var(--font-serif);
+  font-size: 17px;
+  line-height: 1.72;
+  color: var(--iron-ink);
+  margin: 0 0 1.1em;
+}
+.read-article p + p { text-indent: 1.4em; }
+.read-article p.read-dropcap + p { text-indent: 0; }
+
+/* Section headings */
+.read-h2 {
+  font-family: var(--font-serif);
+  font-size: 26px;
+  font-weight: 700;
+  color: var(--iron-ink);
+  margin: 2em 0 .6em;
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+  border-top: 1px solid var(--vellum-300);
+  padding-top: 1.4em;
+}
+.read-h2 .sec-rune {
+  font-family: var(--font-rune);
+  font-size: 14px;
+  color: var(--oxblood);
+  opacity: .55;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+.read-h2:first-of-type { border-top: none; padding-top: 0; margin-top: 1em; }
+
+/* Footnote superscripts */
+.fn { font-size: .65em; vertical-align: super; color: var(--oxblood); font-family: var(--font-ui); font-weight: 600; }
+
+/* ── Poem blockquote (parallel Old Norse / English) ─────────────────────── */
+.read-poem {
+  border: 1px solid var(--vellum-300);
+  background: var(--vellum-200);
+  margin: 1.6em 0;
+  overflow: hidden;
+}
+.read-poem-header {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0;
+  border-bottom: 1px solid var(--vellum-300);
+}
+.read-poem-header-cell {
+  padding: 8px 14px;
+  font: 700 9px/1 var(--font-ui);
+  letter-spacing: .2em;
+  text-transform: uppercase;
+  color: var(--ink-soft);
+}
+.read-poem-header-cell:first-child { border-right: 1px solid var(--vellum-300); }
+.read-poem-header-cell .pill { margin-left: 6px; }
+.read-poem-body {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+.read-poem-col {
+  padding: 16px 14px 18px;
+  font-family: var(--font-serif);
+  font-size: 14px;
+  line-height: 1.8;
+  color: var(--iron-ink);
+  font-style: italic;
+}
+.read-poem-col:first-child {
+  border-right: 1px solid var(--vellum-300);
+  font-style: normal;
+  font-size: 13px;
+}
+.read-poem-col .poem-source {
+  display: block;
+  font: 500 9px/1 var(--font-ui);
+  letter-spacing: .15em;
+  text-transform: uppercase;
+  color: var(--ink-soft);
+  margin-bottom: 10px;
+  font-style: normal;
+}
+
+/* ── Pull quote / Key idea ──────────────────────────────────────────────── */
+.read-pullquote {
+  border-left: 3px solid var(--vellum-300);
+  margin: 1.6em 0;
+  padding: 14px 20px;
+  background: var(--vellum-200);
+}
+.read-pullquote-label {
+  font: 700 8px/1 var(--font-ui);
+  letter-spacing: .25em;
+  text-transform: uppercase;
+  color: var(--ink-soft);
+  margin-bottom: 10px;
+}
+.read-pullquote-body {
+  font-family: var(--font-serif);
+  font-size: 17px;
+  font-style: italic;
+  line-height: 1.55;
+  color: var(--iron-ink);
+  margin: 0;
+}
+
+/* ── Science callout ────────────────────────────────────────────────────── */
+.read-science-box {
+  border: 1px solid rgba(43,74,43,.2);
+  background: rgba(43,74,43,.04);
+  padding: 14px 16px 16px;
+  margin: 1.4em 0;
+}
+.read-science-box-label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 10px;
+}
+.read-science-box-label .pill-science {
+  background: #2b4a2b;
+  color: #c8e6c8;
+  border: 1px solid #3a5c3a;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 3px 9px;
+  border-radius: 2px;
+  font: 700 9px/1 var(--font-ui);
+  letter-spacing: .18em;
+  text-transform: uppercase;
+}
+.read-science-box-title {
+  font: 600 10px/1 var(--font-ui);
+  letter-spacing: .15em;
+  text-transform: uppercase;
+  color: var(--ink-soft);
+}
+.read-science-box p {
+  font-family: var(--font-serif);
+  font-size: 15px;
+  line-height: 1.65;
+  color: var(--iron-ink);
+  margin: 0 0 .8em;
+}
+.read-science-box p:last-child { margin: 0; }
+
+/* ── Timeline ───────────────────────────────────────────────────────────── */
+.read-timeline-wrap {
+  margin: 1.6em 0;
+}
+.read-timeline-label {
+  font: 400 13px/1 var(--font-serif);
+  font-style: italic;
+  color: var(--ink-soft);
+  margin-bottom: 16px;
+}
+.read-timeline {
+  position: relative;
+  display: flex;
+  align-items: flex-start;
+  gap: 0;
+}
+.read-timeline::before {
+  content: '';
+  position: absolute;
+  left: 0; right: 0;
+  top: 7px;
+  height: 1px;
+  background: var(--vellum-300);
+}
+.read-timeline-item {
+  flex: 1;
+  position: relative;
+  padding-top: 20px;
+  text-align: left;
+}
+.read-timeline-item::before {
+  content: '';
+  position: absolute;
+  top: 4px;
+  left: 0;
+  width: 7px; height: 7px;
+  border-radius: 50%;
+  background: var(--vellum-300);
+  border: 1.5px solid var(--ink-soft);
+}
+.read-timeline-item.active::before {
+  background: var(--oxblood);
+  border-color: var(--oxblood);
+  width: 9px; height: 9px;
+  top: 3px;
+}
+.read-timeline-date {
+  font: 700 10px/1 var(--font-ui);
+  letter-spacing: .1em;
+  color: var(--iron-ink);
+  margin-bottom: 3px;
+}
+.read-timeline-name {
+  font: 400 11px/1.3 var(--font-serif);
+  font-style: italic;
+  color: var(--ink-soft);
+}
+/* selected entry body */
+.read-timeline-entry {
+  margin-top: 20px;
+  border-top: 1px solid var(--vellum-300);
+  padding-top: 14px;
+}
+.read-timeline-entry-head {
+  font: 700 10px/1 var(--font-ui);
+  letter-spacing: .15em;
+  text-transform: uppercase;
+  color: var(--ink-soft);
+  margin-bottom: 8px;
+}
+.read-timeline-entry-body {
+  font-family: var(--font-serif);
+  font-size: 14px;
+  line-height: 1.65;
+  color: var(--iron-ink);
+  margin: 0;
+}
+
+/* ── Quiz widget ────────────────────────────────────────────────────────── */
+.read-quiz {
+  border: 1px solid var(--vellum-300);
+  background: var(--vellum-200);
+  margin: 1.6em 0;
+  overflow: hidden;
+}
+.read-quiz-head {
+  border-bottom: 1px solid var(--vellum-300);
+  padding: 10px 14px;
+  font: 700 9px/1 var(--font-ui);
+  letter-spacing: .2em;
+  text-transform: uppercase;
+  color: var(--ink-soft);
+}
+.read-quiz-body { padding: 16px 14px 20px; }
+.read-quiz-q {
+  font-family: var(--font-serif);
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--iron-ink);
+  margin: 0 0 16px;
+  line-height: 1.25;
+}
+.read-quiz-q em {
+  font-style: italic;
+  color: var(--oxblood);
+}
+.read-quiz-options {
+  list-style: none;
+  margin: 0; padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.read-quiz-option {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  padding: 10px 12px;
+  border: 1px solid var(--vellum-300);
+  background: var(--vellum-100);
+  cursor: pointer;
+  transition: background .15s, border-color .15s;
+  border-radius: 2px;
+}
+.read-quiz-option:hover { background: var(--vellum-300); }
+.read-quiz-option.correct { background: rgba(43,74,43,.08); border-color: rgba(43,74,43,.3); }
+.read-quiz-option.wrong   { background: rgba(107,45,28,.06); border-color: rgba(107,45,28,.25); }
+.read-quiz-opt-letter {
+  font: 700 11px/1 var(--font-ui);
+  letter-spacing: .1em;
+  color: var(--ink-soft);
+  min-width: 16px;
+  margin-top: 1px;
+}
+.read-quiz-opt-text {
+  font-family: var(--font-serif);
+  font-size: 15px;
+  line-height: 1.4;
+  color: var(--iron-ink);
+}
+
+/* ── Sources / footnotes ────────────────────────────────────────────────── */
+.read-sources {
+  margin-top: 2em;
+  border-top: 1px solid var(--vellum-300);
+  padding-top: 1.2em;
+}
+.read-sources-group-label {
+  font: 700 9px/1 var(--font-ui);
+  letter-spacing: .22em;
+  text-transform: uppercase;
+  color: var(--ink-soft);
+  margin: 1em 0 .5em;
+}
+.read-sources ol {
+  list-style: decimal;
+  padding-left: 20px;
+  margin: 0;
+}
+.read-sources li {
+  font-family: var(--font-serif);
+  font-size: 13px;
+  line-height: 1.6;
+  color: var(--ink-soft);
+  margin-bottom: .4em;
+}
+.read-sources li strong { color: var(--iron-ink); }
+
+/* ── Prev / Next navigation ─────────────────────────────────────────────── */
+.read-prevnext {
+  border-top: 1px solid var(--vellum-300);
+  margin-top: 2.4em;
+  padding-top: 1.4em;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+}
+.read-prevnext-item {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  text-decoration: none;
+  color: var(--iron-ink);
+}
+.read-prevnext-item:last-child { text-align: right; }
+.read-prevnext-dir {
+  font: 500 9px/1 var(--font-ui);
+  letter-spacing: .2em;
+  text-transform: uppercase;
+  color: var(--ink-soft);
+}
+.read-prevnext-callnum {
+  font: 500 10px/1 var(--font-ui);
+  letter-spacing: .1em;
+  color: var(--oxblood);
+  font-size: 10px;
+}
+.read-prevnext-title {
+  font-family: var(--font-serif);
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 1.25;
+  color: var(--iron-ink);
+  transition: color .15s;
+}
+.read-prevnext-item:hover .read-prevnext-title { color: var(--oxblood); }
+
+/* ── Right sidebar: terms + side-notes ─────────────────────────────────── */
+.read-sidebar-right {
+  position: sticky;
+  top: 64px;
+  align-self: flex-start;
+}
+.read-terms-head {
+  font: 700 9px/1 var(--font-ui);
+  letter-spacing: .22em;
+  text-transform: uppercase;
+  color: var(--ink-soft);
+  margin: 0 0 14px;
+}
+.read-terms {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  margin-bottom: 28px;
+}
+.read-term-entry {}
+.read-term-word {
+  font-family: var(--font-serif);
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--iron-ink);
+  margin: 0 0 2px;
+}
+.read-term-def {
+  font-size: 11px;
+  line-height: 1.6;
+  color: var(--ink-soft);
+  margin: 0;
+}
+.read-sidenote {
+  border-top: 1px solid var(--vellum-300);
+  padding-top: 14px;
+  margin-top: 14px;
+}
+.read-sidenote-label {
+  font: 700 9px/1 var(--font-ui);
+  letter-spacing: .2em;
+  text-transform: uppercase;
+  color: var(--ink-soft);
+  margin-bottom: 8px;
+}
+.read-sidenote-body {
+  font-size: 11px;
+  line-height: 1.6;
+  color: var(--ink-soft);
+}
+.read-sidenote-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  margin-top: 8px;
+  font: 700 8px/1 var(--font-ui);
+  letter-spacing: .2em;
+  text-transform: uppercase;
+  color: var(--oxblood);
+  text-decoration: none;
+}
+.read-sidenote-link:hover { text-decoration: underline; }
+
+/* ── Footnote for rune note ─────────────────────────────────────────────── */
+.read-rune-note {
+  border-top: 1px solid var(--vellum-300);
+  padding-top: 14px;
+  margin-top: 20px;
+  font-size: 11px;
+  line-height: 1.6;
+  color: var(--ink-soft);
+}
+.read-rune-note strong { color: var(--iron-ink); }
+
+/* ── Footer ─────────────────────────────────────────────────────────────── */
+.read-footer {
+  background: #0d0f14;
+  border-top: 1px solid rgba(212,174,90,.18);
+}
+.read-footer-inner {
+  max-width: var(--page-w);
+  margin-inline: auto;
+  padding: 28px var(--page-pad);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+.read-footer-copy {
+  font-size: 11px;
+  color: rgba(232,230,225,.3);
+}
+.read-footer-copy a { color: rgba(212,174,90,.5); text-decoration: none; }
+.read-footer-copy a:hover { color: var(--gold-300); }
+.read-footer-rune {
+  font-family: var(--font-rune);
+  font-size: 13px;
+  letter-spacing: .4em;
+  color: rgba(212,174,90,.3);
+}
+
+/* ── Pill (re-used from library) ────────────────────────────────────────── */
+.pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 3px 9px;
+  border-radius: 2px;
+  font: 700 9px/1 var(--font-ui);
+  letter-spacing: .18em;
+  text-transform: uppercase;
+}
+.pill-lore        { background: var(--oxblood); color: #f3ead6; border: 1px solid var(--oxblood); }
+.pill-science     { background: #2b4a2b; color: #c8e6c8; border: 1px solid #3a5c3a; }
+.pill-observation { background: transparent; color: var(--ink-soft); border: 1px solid var(--vellum-300); }

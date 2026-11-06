@@ -1,0 +1,351 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import '../styles/library.css';
+import SvgDefs from '../components/SvgDefs.astro';
+import RavenSVG from '../components/RavenSVG.astro';
+import { SITE } from '../config/site';
+import { LEAVES, COLLECTIONS, REGIONS, CHAPTERS, FEATURED, type Leaf } from '../data/library';
+
+const title       = `The Library — ${SITE.name}`;
+const description = "Every leaf of the raven's book — species, Norse lore, mythology, mind & behaviour, anatomy, and field-guide tools.";
+
+const leavesJson      = JSON.stringify(LEAVES);
+const collectionsJson = JSON.stringify(COLLECTIONS);
+const regionsJson     = JSON.stringify(REGIONS);
+
+function claimLabel(k: Leaf['claimKind']) {
+  if (k === 'science')     return 'Science';
+  if (k === 'lore')        return 'Lore';
+  return 'Observation';
+}
+function typeLabel(t: Leaf['contentType']) {
+  const map: Record<string, string> = {
+    species: 'Species', chapter: 'Chapter', saga: 'Saga', myth: 'Myth', tool: 'Tool',
+  };
+  return map[t] ?? t;
+}
+
+// Species tail shape helper
+function speciesTail(speciesId?: string): 'wedge'|'fan'|'short' {
+  if (speciesId === 'fan-tailed-raven') return 'fan';
+  if (speciesId === 'forest-raven')     return 'short';
+  return 'wedge';
+}
+
+// Species extra props
+function speciesNeck(speciesId?: string): boolean {
+  return speciesId === 'white-necked-raven';
+}
+function speciesThick(speciesId?: string): boolean {
+  return speciesId === 'thick-billed-raven';
+}
+function speciesBrown(speciesId?: string): boolean {
+  return speciesId === 'brown-necked-raven';
+}
+function speciesWhiteEye(speciesId?: string): boolean {
+  return speciesId === 'australian-raven';
+}
+
+// Rune ring letters for featured card
+const ringRunes = ['ᚺ','ᚱ','ᚨ','ᚠ','ᚾ','ᛗ','ᚢ','ᛁ','ᚾ','ᚾ','ᛟ','ᛞ'];
+---
+
+<BaseLayout title={title} description={description} path="/library">
+  <SvgDefs/>
+
+  <div class="lib-page">
+
+    <!-- ── Top bar ───────────────────────────────────────────────────────── -->
+    <header class="lib-topbar">
+      <div class="lib-topbar-inner">
+        <a href="/" class="lib-topbar-logo" aria-label="Hrafn home">
+          <span class="rune lib-topbar-logo-rune">ᚺ</span>
+          <span class="wordmark">HRAFN</span>
+        </a>
+        <nav class="lib-topbar-nav" aria-label="Primary navigation">
+          <a href="/#species">Species</a>
+          <a href="/#lore">Lore</a>
+          <a href="/#mind">Mind</a>
+          <a href="/#field">Field Guide</a>
+          <a href="/library" aria-current="page">Library</a>
+        </nav>
+      </div>
+    </header>
+
+    <!-- ── Breadcrumb bar ────────────────────────────────────────────────── -->
+    <div class="lib-breadcrumb" aria-label="Breadcrumb">
+      <div class="lib-breadcrumb-inner">
+        <span class="lib-breadcrumb-left">
+          <a href="/">Hrafn</a> / The Library
+        </span>
+        <span class="lib-breadcrumb-center">The Raven's Book · Contents</span>
+        <span class="lib-breadcrumb-right">ᚺᚱᚠᚾ</span>
+      </div>
+    </div>
+
+    <!-- ── Hero band ─────────────────────────────────────────────────────── -->
+    <div class="lib-hero">
+      <div class="lib-hero-inner">
+
+        <!-- Left -->
+        <div class="lib-hero-text">
+          <p class="lib-hero-eyebrow">Box · The Library</p>
+          <h1 class="lib-hero-h1">Every leaf of the raven's book.</h1>
+          <p class="lib-hero-lead">
+            Species, sagas and studies, bound in one volume. Each leaf says
+            whether it rests on <em>science</em> or on <em>lore</em>, and names its sources.
+          </p>
+          <div class="lib-hero-pills">
+            <span class="pill pill-science">Science</span>
+            <span class="pill-label">Studies &amp; field guides</span>
+            <span class="pill pill-lore">Lore</span>
+            <span class="pill-label">named lore &amp; traditions</span>
+            <span class="pill pill-observation">Observation</span>
+          </div>
+          <p style="margin:8px 0 0;font:400 10px/1 var(--font-ui);letter-spacing:.05em;color:var(--ink-soft);opacity:.7">
+            reported, not tested
+          </p>
+        </div>
+
+        <!-- Right: featured card -->
+        <div class="lib-featured" aria-label="Featured leaf: Thought &amp; Memory">
+          <!-- Square art area with rune ring -->
+          <div class="lib-featured-art">
+            <div class="ring-text" aria-hidden="true">
+              <svg viewBox="0 0 260 260" width="260" height="260">
+                <!-- outer decorative ring -->
+                <circle cx="130" cy="130" r="120" fill="none" stroke="rgba(43,33,24,.12)" stroke-width=".8"/>
+                <circle cx="130" cy="130" r="112" fill="none" stroke="rgba(43,33,24,.08)" stroke-width=".5"/>
+                <!-- rune text path around ring -->
+                <defs>
+                  <path id="runeRing" d="M130,18 a112,112 0 1,1 -0.1,0"/>
+                </defs>
+                <text font-family="var(--font-rune)" font-size="11" fill="rgba(43,33,24,.35)" letter-spacing="10">
+                  <textPath href="#runeRing">ᚺᚱᚨᚠᚾ · ᛗᚢᚾᛁᚾᚾ · ᚺᚢᚷᛁᚾᚾ · ᛟᚦᛁᚾᚾ ·</textPath>
+                </text>
+                <!-- inner rings -->
+                <circle cx="130" cy="130" r="94" fill="none" stroke="rgba(43,33,24,.1)" stroke-width=".6"/>
+                <circle cx="130" cy="130" r="86" fill="none" stroke="rgba(43,33,24,.06)" stroke-width=".4"/>
+              </svg>
+            </div>
+            <div class="ring-raven">
+              <RavenSVG tail="wedge" ariaLabel="Huginn or Muninn — Odin's ravens"/>
+            </div>
+          </div>
+          <!-- Body -->
+          <div class="lib-featured-body">
+            <p class="lib-featured-label">Featured Leaf · {FEATURED.callNum}</p>
+            <p class="lib-featured-title">{FEATURED.title}</p>
+            <p class="lib-featured-sub">{FEATURED.subtitle}</p>
+            <a class="lib-featured-link" href={`#${FEATURED.id}`}>Read the Saga →</a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- ── Ornament divider ───────────────────────────────────────────────── -->
+    <div aria-hidden="true" style="text-align:center;padding:14px 0 2px;background:var(--vellum-100);border-bottom:1px solid var(--vellum-300)">
+      <svg width="120" height="12" viewBox="0 0 120 12">
+        <line x1="0" y1="6" x2="48" y2="6" stroke="rgba(43,33,24,.18)" stroke-width=".8"/>
+        <circle cx="60" cy="6" r="3.5" fill="none" stroke="rgba(43,33,24,.25)" stroke-width=".8"/>
+        <circle cx="60" cy="6" r="1.2" fill="rgba(43,33,24,.2)"/>
+        <line x1="72" y1="6" x2="120" y2="6" stroke="rgba(43,33,24,.18)" stroke-width=".8"/>
+      </svg>
+    </div>
+
+    <!-- ── Body: sidebar + main ───────────────────────────────────────────── -->
+    <div class="lib-body">
+
+      <!-- Sidebar -->
+      <aside class="lib-sidebar" aria-label="Table of contents">
+        <p class="lib-sidebar-head">Contents</p>
+        <p class="lib-sidebar-sub">Six chapters of the book</p>
+
+        <ol class="lib-toc" aria-label="Chapters">
+          {CHAPTERS.map(ch => (
+            <li>
+              <button
+                class="lib-toc-item"
+                data-toc-collection={ch.collection}
+                aria-label={`Chapter ${ch.num}: ${ch.title}`}
+              >
+                <span class="lib-toc-num">{ch.num}</span>
+                <span class="lib-toc-title">{ch.title}</span>
+                <span class="lib-toc-rune">{ch.rune}</span>
+              </button>
+            </li>
+          ))}
+        </ol>
+
+        <p class="lib-how-head">How to read this book</p>
+        <p class="lib-how-body">
+          A <strong>species</strong> leaf is a field portrait. A <strong>saga</strong> retells a named text.
+          A <strong>myth</strong> to fact sets a popular belief beside the evidence.
+        </p>
+      </aside>
+
+      <!-- Main explore -->
+      <main class="lib-main" id="explore" aria-label="Library explorer">
+
+        <div class="lib-explore-head">
+          <h2 class="lib-explore-title">Explore the leaves</h2>
+          <span class="lib-count" id="lib-count">Showing {LEAVES.length} of {LEAVES.length}</span>
+        </div>
+
+        <!-- Search -->
+        <div class="lib-search-wrap">
+          <svg class="lib-search-icon" width="14" height="14" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+            <circle cx="6.5" cy="6.5" r="4.5" stroke="currentColor" stroke-width="1.5"/>
+            <path d="M10 10 L14 14" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+          </svg>
+          <input
+            class="lib-search"
+            type="search"
+            id="lib-search"
+            placeholder={`Search — "Huginn", "white-necked", "caching"…`}
+            aria-label="Search leaves"
+            autocomplete="off"
+          />
+        </div>
+
+        <!-- Collection tabs -->
+        <div class="lib-tabs" role="tablist" aria-label="Filter by collection" id="lib-tabs">
+          {COLLECTIONS.map((c, i) => (
+            <button
+              class={`lib-tab${i === 0 ? ' active' : ''}`}
+              role="tab"
+              aria-selected={i === 0 ? 'true' : 'false'}
+              data-collection={c.id}
+            >{c.label}</button>
+          ))}
+        </div>
+
+        <!-- Region chips -->
+        <div class="lib-regions" role="group" aria-label="Filter by region">
+          <span class="lib-regions-label">Region</span>
+          {REGIONS.map((r, i) => (
+            <button
+              class={`lib-chip${i === 0 ? ' active' : ''}`}
+              data-region={r.id}
+              aria-pressed={i === 0 ? 'true' : 'false'}
+            >{r.label}</button>
+          ))}
+        </div>
+
+        <!-- Card grid -->
+        <div class="lib-grid" id="lib-grid" role="list">
+
+          {LEAVES.map(leaf => {
+            const isSpecies = leaf.contentType === 'species';
+            const artClass  = isSpecies ? 'lib-card-art' : 'lib-card-art art-lore';
+            return (
+              <article
+                class="lib-card"
+                role="listitem"
+                id={leaf.id}
+                data-collection={leaf.collection}
+                data-region={leaf.region ?? 'global'}
+                data-claim={leaf.claimKind}
+                data-title={leaf.title.toLowerCase()}
+                data-subtitle={leaf.subtitle?.toLowerCase() ?? ''}
+                data-body={leaf.body.toLowerCase()}
+              >
+                <!-- Art -->
+                <div class={artClass} aria-hidden="true">
+                  {leaf.letter && <span class="art-letter">{leaf.letter}</span>}
+                  {leaf.rune   && <span class="art-rune">{leaf.rune}</span>}
+                  {isSpecies && leaf.photo ? (
+                    <img
+                      class="art-photo"
+                      src={leaf.photo.src}
+                      srcset={leaf.photo.srcset}
+                      alt={leaf.photo.alt}
+                      loading="lazy"
+                      decoding="async"
+                      sizes="(max-width:560px) 100vw, (max-width:1000px) 50vw, 33vw"
+                    />
+                  ) : isSpecies ? (
+                    <>
+                      <div class="art-raven">
+                        <RavenSVG
+                          tail={speciesTail(leaf.speciesId)}
+                          neck={speciesNeck(leaf.speciesId)}
+                          thick={speciesThick(leaf.speciesId)}
+                          brown={speciesBrown(leaf.speciesId)}
+                          whiteEye={speciesWhiteEye(leaf.speciesId)}
+                          ariaLabel={leaf.title}
+                        />
+                      </div>
+                      <span class="art-photo-label">Photo pending</span>
+                    </>
+                  ) : null}
+                </div>
+
+                <!-- Body -->
+                <div class="lib-card-body">
+                  <div class="lib-card-meta">
+                    <span class="lib-card-callnum">{leaf.callNum}</span>
+                    <span class="lib-card-sep">·</span>
+                    <span class="lib-card-type">{typeLabel(leaf.contentType)}</span>
+                    <span class={`pill pill-${leaf.claimKind}`}>{claimLabel(leaf.claimKind)}</span>
+                  </div>
+                  <p class="lib-card-title">{leaf.title}</p>
+                  {leaf.subtitle && <p class="lib-card-subtitle">{leaf.subtitle}</p>}
+                  <p class="lib-card-desc">{leaf.body}</p>
+                  {leaf.credit && <p class="lib-card-credit">{leaf.credit}</p>}
+                  {leaf.status === 'awaiting-cultural-review' && (
+                    <span class="lib-card-status">Awaiting Cultural Review</span>
+                  )}
+                </div>
+              </article>
+            );
+          })}
+
+          <div class="lib-empty" id="lib-empty" hidden aria-live="polite">
+            No leaves match your search.
+          </div>
+
+        </div>
+
+      </main>
+    </div>
+
+    <!-- ── Footer ────────────────────────────────────────────────────────── -->
+    <footer class="lib-footer">
+      <div class="lib-footer-inner">
+        <div>
+          <div class="lib-footer-brand">
+            <span class="rune" style="font-size:22px;color:var(--gold-500)">ᚺ</span>
+            <span class="lib-footer-wordmark">HRAFN</span>
+          </div>
+          <p class="lib-footer-tagline">
+            Every leaf of the raven's book — cited and cross-referenced.
+          </p>
+        </div>
+        <nav class="lib-footer-nav" aria-label="Footer">
+          <a href="/#species">Species Atlas</a>
+          <a href="/#lore">Norse Lore</a>
+          <a href="/#mind">Mind &amp; Behaviour</a>
+          <a href="/#field">Field Guide</a>
+          <a href="/library">The Library</a>
+          <a href="/">Home</a>
+        </nav>
+      </div>
+      <div class="lib-footer-base">
+        <span>© 2026 Hrafn — The Raven Library. General natural-history and cultural information; not a substitute for academic study or wildlife-care advice.</span>
+        <span class="lib-footer-rune">ᚺᚱᚨᚠᚾ</span>
+      </div>
+    </footer>
+
+  </div>
+</BaseLayout>
+
+<script define:vars={{ leavesJson, collectionsJson, regionsJson }}>
+  window.HRAFN_LEAVES      = JSON.parse(leavesJson);
+  window.HRAFN_COLLECTIONS = JSON.parse(collectionsJson);
+  window.HRAFN_REGIONS     = JSON.parse(regionsJson);
+</script>
+<script>
+  import '../scripts/library.ts';
+</script>

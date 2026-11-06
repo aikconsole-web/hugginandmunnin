@@ -1,0 +1,444 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import '../../styles/reading.css';
+import SvgDefs from '../../components/SvgDefs.astro';
+import RavenSVG from '../../components/RavenSVG.astro';
+import { SITE } from '../../config/site';
+import { THOUGHT_AND_MEMORY as C } from '../../data/chapters';
+
+const title       = `${C.title} — ${SITE.name}`;
+const description = C.subtitle;
+---
+
+<BaseLayout title={title} description={description} path="/read/saga-thought-memory">
+  <SvgDefs/>
+
+  <div class="read-page">
+
+    <!-- ── Top bar ─────────────────────────────────────────────────────── -->
+    <header class="read-topbar">
+      <div class="read-topbar-inner">
+        <a href="/" class="read-topbar-logo" aria-label="Hrafn home">
+          <span class="rune read-topbar-logo-rune">ᚺ</span>
+          <span class="wordmark">HRAFN</span>
+        </a>
+        <nav class="read-topbar-nav" aria-label="Primary">
+          <a href="/#species">Species</a>
+          <a href="/#lore" aria-current="page">Lore</a>
+          <a href="/library">Library</a>
+        </nav>
+        <div class="read-topbar-controls">
+          <button class="read-theme-btn active" data-theme="vellum">Vellum</button>
+          <button class="read-theme-btn" data-theme="sepia">Sepia</button>
+          <button class="read-theme-btn" data-theme="night">Night</button>
+          <div class="read-topbar-sep"></div>
+          <button class="read-font-btn sm" data-font="sm" aria-label="Small text">a</button>
+          <button class="read-font-btn md" data-font="md" aria-label="Medium text">A</button>
+          <button class="read-font-btn lg" data-font="lg" aria-label="Large text">A</button>
+        </div>
+      </div>
+    </header>
+
+    <!-- ── Breadcrumb ──────────────────────────────────────────────────── -->
+    <div class="read-breadcrumb">
+      <div class="read-breadcrumb-inner">
+        <span class="read-breadcrumb-left">
+          <a href="/library">Library</a>
+          <span class="sep">/</span>
+          <span>II · Norse Lore</span>
+          <span class="sep">/</span>
+          <span>Thought &amp; Memory</span>
+        </span>
+        <span class="read-breadcrumb-callnum">{C.callNum}</span>
+      </div>
+    </div>
+
+    <!-- ── Hero banner ─────────────────────────────────────────────────── -->
+    <div class="read-hero">
+      <div class="read-hero-inner">
+
+        <!-- Left raven -->
+        <div class="read-hero-raven">
+          <RavenSVG tail="wedge" moonlit={true} ariaLabel="Huginn in flight"/>
+        </div>
+
+        <!-- Center ring -->
+        <div class="read-hero-center">
+          <div class="read-hero-ring">
+            <svg viewBox="0 0 110 110" aria-hidden="true">
+              <circle cx="55" cy="55" r="50" fill="none" stroke="rgba(43,33,24,.14)" stroke-width=".8"/>
+              <circle cx="55" cy="55" r="42" fill="none" stroke="rgba(43,33,24,.09)" stroke-width=".5"/>
+              <defs>
+                <path id="rr1" d="M55,8 a47,47 0 1,1 -0.1,0"/>
+              </defs>
+              <text font-family="var(--font-rune)" font-size="8.5" fill="rgba(43,33,24,.3)" letter-spacing="6">
+                <textPath href="#rr1">ᚺᚢᚷᛁᚾᚾ · ᛗᚢᚾᛁᚾᚾ · ᛟᚦᛁᚾᚾ ·</textPath>
+              </text>
+              <!-- Eye of Odin -->
+              <ellipse cx="55" cy="55" rx="12" ry="8" fill="none" stroke="rgba(43,33,24,.3)" stroke-width=".9"/>
+              <circle cx="55" cy="55" r="4.5" fill="none" stroke="rgba(43,33,24,.4)" stroke-width=".8"/>
+              <circle cx="55" cy="55" r="1.5" fill="rgba(43,33,24,.4)"/>
+              <path d="M43,55 C47,47 63,47 67,55 C63,63 47,63 43,55 Z" fill="none" stroke="rgba(43,33,24,.2)" stroke-width=".5"/>
+            </svg>
+          </div>
+          <div class="read-hero-labels">
+            <span class="read-hero-label">
+              <span class="rune">ᚺᚢᚷᛁᚾᚾ</span> · Huginn, Thought
+            </span>
+            <span class="read-hero-label" style="justify-content:flex-end">
+              Muninn, Memory · <span class="rune">ᛗᚢᚾᛁᚾᚾ</span>
+            </span>
+          </div>
+        </div>
+
+        <!-- Right raven (flipped) -->
+        <div class="read-hero-raven flip">
+          <RavenSVG tail="wedge" moonlit={true} ariaLabel="Muninn in flight"/>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- ── Chapter header ─────────────────────────────────────────────── -->
+    <div class="read-chap-head">
+      <p class="read-chap-eyebrow">
+        Chapter {C.chapter} · {C.collection} · <span>{C.contentType}</span>
+      </p>
+      <h1 class="read-chap-h1">{C.title}</h1>
+      <p class="read-chap-sub">{C.subtitle}</p>
+      <div class="read-chap-meta">
+        <span class="pill pill-lore">Lore</span>
+        <span class="pill pill-observation" style="color:var(--iron-ink)">Reviewed</span>
+        <span class="read-chap-reviewer">
+          5 sources · Reviewed on {C.reviewedOn} · Reviewer: {C.reviewer}
+        </span>
+      </div>
+      <div class="read-ornament" aria-hidden="true">
+        <svg width="140" height="14" viewBox="0 0 140 14">
+          <line x1="0" y1="7" x2="58" y2="7" stroke="rgba(43,33,24,.2)" stroke-width=".8"/>
+          <circle cx="70" cy="7" r="4" fill="none" stroke="rgba(43,33,24,.28)" stroke-width=".8"/>
+          <circle cx="70" cy="7" r="1.5" fill="rgba(43,33,24,.22)"/>
+          <line x1="82" y1="7" x2="140" y2="7" stroke="rgba(43,33,24,.2)" stroke-width=".8"/>
+        </svg>
+      </div>
+    </div>
+
+    <!-- ── Body ────────────────────────────────────────────────────────── -->
+    <div class="read-body">
+
+      <!-- Left sidebar: TOC -->
+      <aside class="read-sidebar-left" aria-label="In this chapter">
+        <p class="read-toc-head">In this chapter</p>
+        <ol class="read-toc" aria-label="Sections">
+          {C.toc.map(item => (
+            <li><a href={`#${item.id}`}>{item.label}</a></li>
+          ))}
+        </ol>
+      </aside>
+
+      <!-- Main article -->
+      <article class="read-article" id="article">
+
+        <!-- Opening paragraph with drop cap -->
+        <p class="read-dropcap" id="intro">
+          ach dawn, says the Eddic poem <em>Grímnismál</em>, two ravens leave
+          Odin's side and fly out over the whole world. By the day's first
+          meal they are back on his shoulders, telling him everything they
+          have seen and heard. They are among the best-known creatures in
+          Norse myth — and among the oldest images of the raven as a bird of knowledge.
+        </p>
+
+        <!-- § Two names -->
+        <h2 class="read-h2" id="two-names">
+          <span class="sec-rune">§</span> Two names
+        </h2>
+        <p>
+          <strong>Huginn</strong> comes from Old Norse <em>hugr</em>, "thought" or "mind". <strong>Muninn</strong> is usually
+          linked to words for mind and remembering, and is most often translated
+          "memory". Together they give the god a mind that ranges across the world, and a
+          memory that brings it home.
+        </p>
+
+        <!-- § What the poem says -->
+        <h2 class="read-h2" id="poem-says">
+          <span class="sec-rune">§</span> What the poem says
+        </h2>
+        <p>
+          In <em>Grímnismál</em>, Odin speaks in disguise and describes the worlds. One stanza is
+          given to his ravens, and to a fear.<sup class="fn">1</sup>
+        </p>
+
+        <!-- Parallel text blockquote -->
+        <div class="read-poem" role="figure" aria-label="Grímnismál stanza 20 — Old Norse and English">
+          <div class="read-poem-header">
+            <div class="read-poem-header-cell">
+              Old Norse
+            </div>
+            <div class="read-poem-header-cell">
+              <span class="pill pill-lore" style="font-size:8px">Lore</span>
+              &nbsp; Poetic Edda · <em>Grímnismál</em>
+              &nbsp;·&nbsp; In English, Hrafn's own translation
+            </div>
+          </div>
+          <div class="read-poem-body">
+            <div class="read-poem-col">
+              <span class="poem-source">Old Norse · Stanza 20</span>
+              Huginn ok Muninn<br/>
+              fljúga hvert dag<br/>
+              Jörmungrund yfir;<br/>
+              óumk ek of Hugin,<br/>
+              at hann aftr né komi-t,<br/>
+              þó sjámk meir of Munin.
+            </div>
+            <div class="read-poem-col">
+              <span class="poem-source">In English · Hrafn's own translation</span>
+              Huginn and Muninn<br/>
+              fly every day<br/>
+              over the wide earth;<br/>
+              I fear for Huginn,<br/>
+              that he may not come back,<br/>
+              yet I fear more for Muninn.
+            </div>
+          </div>
+        </div>
+
+        <p>
+          Why fear more for memory? The poem does not say. Scholars have read it in
+          many ways — as a god's fear of losing his mind, or as a hint of the ecstatic,
+          trance-like journeys sometimes linked with Odin.
+        </p>
+
+        <!-- Pull quote -->
+        <blockquote class="read-pullquote">
+          <p class="read-pullquote-label">Key idea</p>
+          <p class="read-pullquote-body">
+            Odin's ravens are a picture of knowledge gathered from the whole
+            world — and of the fear of losing mind and memory.
+          </p>
+        </blockquote>
+
+        <!-- § The Raven-God -->
+        <h2 class="read-h2" id="raven-god">
+          <span class="sec-rune">ᚺ</span> The Raven-God
+        </h2>
+        <p>
+          Writing in Iceland around 1220, Snorri Sturluson retells the story in the Prose
+          Edda. The two ravens sit on Odin's shoulders and speak into his ears all the news
+          they see or hear. He sends them out at daybreak and they return by the morning
+          meal — and for this, Snorri says, Odin is called <em>Hrafnaguð</em>, the Raven-God.<sup class="fn">2</sup>
+        </p>
+
+        <!-- § Beyond the poems -->
+        <h2 class="read-h2" id="beyond">
+          <span class="sec-rune">ᚱ</span> Beyond the poems
+        </h2>
+        <p>
+          Ravens flew outside the myth too. The Anglo-Saxon Chronicle, in its entry for
+          878, records a Viking banner that its bearers called "Raven".<sup class="fn">3</sup> And in
+          <em>Landnámabók</em>, the Icelandic Book of Settlements, the voyager Flóki sets three
+          ravens free at sea: the first flies back the way they came, the second circles and
+          returns to the ship, and the third flies ahead — towards the land that became
+          Iceland. He was remembered as Hrafna-Flóki, Raven-Flóki.<sup class="fn">4</sup>
+        </p>
+        <p>
+          Some Viking-age and earlier objects show a figure accompanied by two birds,
+          which many scholars read as Odin and his ravens.
+        </p>
+
+        <!-- § Why ravens? -->
+        <h2 class="read-h2" id="why-ravens">
+          <span class="sec-rune">ᚱ</span> Why ravens?
+        </h2>
+
+        <!-- Science callout -->
+        <div class="read-science-box">
+          <div class="read-science-box-label">
+            <span class="pill-science">Science</span>
+            <span class="read-science-box-title">What the birds really do</span>
+          </div>
+          <p>
+            Wild ravens range widely, notice everything, and gather quickly wherever there is
+            food — including where wolves have made a kill.<sup class="fn">5</sup> A bird that seems to know
+            where events are happening makes a natural messenger for a god of knowledge.
+          </p>
+        </div>
+
+        <p>
+          Battle poetry draws on the same habits. Old English and Norse verse often pair
+          the raven with the wolf and the eagle as the beasts that follow armies, and
+          skaldic poets praised warriors for "feeding the raven".
+        </p>
+
+        <!-- § Sources in time -->
+        <h2 class="read-h2" id="sources-time">
+          <span class="sec-rune">§</span> Sources in time
+        </h2>
+
+        <div class="read-timeline-wrap">
+          <p class="read-timeline-label">Choose a source to see where the ravens appear in it.</p>
+          <div class="read-timeline" role="list" id="timeline">
+            <div class="read-timeline-item" role="listitem" data-entry="aschronicle">
+              <div class="read-timeline-date">878</div>
+              <div class="read-timeline-name">Anglo-Saxon Chronicle</div>
+            </div>
+            <div class="read-timeline-item active" role="listitem" data-entry="proseedda">
+              <div class="read-timeline-date">c. 1220</div>
+              <div class="read-timeline-name">Prose Edda</div>
+            </div>
+            <div class="read-timeline-item" role="listitem" data-entry="landnamabok">
+              <div class="read-timeline-date">c. 1270</div>
+              <div class="read-timeline-name">Landnámabók</div>
+            </div>
+            <div class="read-timeline-item" role="listitem" data-entry="codexregius">
+              <div class="read-timeline-date">c. 1270</div>
+              <div class="read-timeline-name">Codex Regius</div>
+            </div>
+          </div>
+
+          <!-- Timeline entries (shown one at a time by JS) -->
+          <div id="tl-entry-aschronicle" class="read-timeline-entry" hidden>
+            <p class="read-timeline-entry-head">Anglo-Saxon Chronicle · 878</p>
+            <p class="read-timeline-entry-body">
+              The chronicle records a Viking army carrying a banner its bearers called "Raven" (<em>Hræfn</em>). It is seized at Cynwit by Alfred's forces — an early written record of the raven as a Norse war symbol.
+            </p>
+          </div>
+          <div id="tl-entry-proseedda" class="read-timeline-entry">
+            <p class="read-timeline-entry-head">Prose Edda · c. 1220</p>
+            <p class="read-timeline-entry-body">
+              Snorri Sturluson describes the ravens on Odin's shoulders bringing him news, and
+              names him Hrafnaguð, the Raven-God.
+            </p>
+          </div>
+          <div id="tl-entry-landnamabok" class="read-timeline-entry" hidden>
+            <p class="read-timeline-entry-head">Landnámabók · c. 1270</p>
+            <p class="read-timeline-entry-body">
+              The Icelandic Book of Settlements tells the story of Hrafna-Flóki (Raven-Flóki), who used three ravens to navigate his way to Iceland.
+            </p>
+          </div>
+          <div id="tl-entry-codexregius" class="read-timeline-entry" hidden>
+            <p class="read-timeline-entry-head">Codex Regius · c. 1270</p>
+            <p class="read-timeline-entry-body">
+              The manuscript preserving the Poetic Edda, including <em>Grímnismál</em> stanza 20, the principal source for Huginn and Muninn's names and Odin's fear of losing Muninn.
+            </p>
+          </div>
+        </div>
+
+        <!-- § Check your reading -->
+        <h2 class="read-h2" id="check">
+          <span class="sec-rune">§</span> Check your reading
+        </h2>
+
+        <div class="read-quiz" id="quiz" role="group" aria-label="Reading comprehension quiz">
+          <div class="read-quiz-head">Check your reading</div>
+          <div class="read-quiz-body">
+            <p class="read-quiz-q">
+              In <em>Grímnismál</em>, which raven does Odin fear for more?
+            </p>
+            <ul class="read-quiz-options" aria-label="Quiz options">
+              <li>
+                <button class="read-quiz-option" data-answer="wrong" aria-pressed="false">
+                  <span class="read-quiz-opt-letter">A</span>
+                  <span class="read-quiz-opt-text">Huginn — thought</span>
+                </button>
+              </li>
+              <li>
+                <button class="read-quiz-option" data-answer="correct" aria-pressed="false">
+                  <span class="read-quiz-opt-letter">B</span>
+                  <span class="read-quiz-opt-text">Muninn — memory</span>
+                </button>
+              </li>
+              <li>
+                <button class="read-quiz-option" data-answer="wrong" aria-pressed="false">
+                  <span class="read-quiz-opt-letter">C</span>
+                  <span class="read-quiz-opt-text">He fears for neither</span>
+                </button>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- § Sources -->
+        <h2 class="read-h2" id="sources">
+          <span class="sec-rune">§</span> Sources
+        </h2>
+
+        <div class="read-sources">
+          <p class="read-sources-group-label">Lore</p>
+          <ol>
+            <li><strong>1.</strong> Grímnismál, stanza 20, Poetic Edda (Codex Regius) — Edition of the Old Norse text to add</li>
+            <li><strong>2.</strong> Snorri Sturluson, Prose Edda, <em>Gylfaginning</em> — Edition and chapter to add</li>
+            <li><strong>3.</strong> Anglo-Saxon Chronicle, entry 878 — Edition to add</li>
+            <li><strong>4.</strong> Landnámabók, the story of Flóki Vilgerðarson — Edition to add</li>
+          </ol>
+          <p class="read-sources-group-label">Science</p>
+          <ol start={5}>
+            <li><strong>5.</strong> Study or review on raven associating with wolves at kills — citation to add</li>
+          </ol>
+        </div>
+
+        <!-- Prev / Next -->
+        <nav class="read-prevnext" aria-label="Chapter navigation">
+          <a class="read-prevnext-item" href="/library">
+            <span class="read-prevnext-dir">← Previous</span>
+            <span class="read-prevnext-callnum">I · The Species</span>
+            <span class="read-prevnext-title">The Species</span>
+          </a>
+          <a class="read-prevnext-item" href="/read/saga-odin-raven-god">
+            <span class="read-prevnext-dir">Next →</span>
+            <span class="read-prevnext-callnum">{C.nextLeaf?.callNum}</span>
+            <span class="read-prevnext-title">{C.nextLeaf?.title}</span>
+          </a>
+        </nav>
+
+      </article>
+
+      <!-- Right sidebar: terms + side notes -->
+      <aside class="read-sidebar-right" aria-label="Terms in this chapter">
+        <p class="read-terms-head">Terms in this chapter</p>
+        <div class="read-terms">
+          {C.terms.map(t => (
+            <div class="read-term-entry">
+              <p class="read-term-word">{t.term}</p>
+              <p class="read-term-def">{t.definition}</p>
+            </div>
+          ))}
+        </div>
+
+        {C.sideNotes.map(note => (
+          <div class="read-sidenote">
+            <p class="read-sidenote-label">{note.label}</p>
+            <p class="read-sidenote-body">{note.body}</p>
+            <a class="read-sidenote-link" href="/library?collection=species">
+              Open the species leaf →
+            </a>
+          </div>
+        ))}
+
+        <div class="read-rune-note">
+          <strong>A note on the runes</strong><br/>
+          Runes on these pages are decorative Elder Futhark. Viking-age carvers used the Younger Futhark.
+        </div>
+      </aside>
+
+    </div>
+    <!-- /read-body -->
+
+    <!-- ── Footer ──────────────────────────────────────────────────────── -->
+    <footer class="read-footer">
+      <div class="read-footer-inner">
+        <span class="read-footer-copy">
+          © 2026 Hrafn — The Raven Library. Translations are Hrafn's own unless credited.
+          <a href="/library">Sources</a>
+        </span>
+        <span class="read-footer-rune">ᚺᚱᚨᚠᚾ</span>
+      </div>
+    </footer>
+
+  </div>
+  <!-- /read-page -->
+
+</BaseLayout>
+
+<script>
+  import '../../scripts/reading.ts';
+</script>

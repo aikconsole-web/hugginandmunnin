@@ -1,0 +1,149 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const title       = 'Do Ravens Remember Human Faces? — The Myth vs the Evidence';
+const description = 'Ravens can recognise individual humans and have been shown to remember negative interactions for years. This page reviews the experimental evidence and what it actually shows.';
+const path        = '/myths/ravens-remember-faces/';
+
+const breadcrumbs = [
+  { name: 'Home',   url: '/' },
+  { name: 'Myths',  url: '/myths/' },
+  { name: 'Do Ravens Remember Human Faces?', url: path },
+];
+
+const faq = [
+  { q: 'Do ravens remember human faces?', a: 'Yes, with qualifications. Ravens (and American Crows) have been shown to recognise individual humans by face and to remember negative interactions for extended periods. The best-published evidence comes from studies on American Crows (Marzluff et al. 2010) rather than Common Ravens specifically, but raven individual recognition of humans is documented in field observations.' },
+  { q: 'How long do ravens remember faces?', a: 'In Marzluff et al.\'s crow studies, individuals remembered the face of a person who had trapped them for at least 2.7 years — the duration of the follow-up study. Longer retention periods are plausible given corvid longevity and cognitive capacity, but have not been quantified in controlled studies.' },
+  { q: 'Can ravens recognise individual ravens?', a: 'Yes. This is very well established. Ravens maintain complex social hierarchies that require recognising individuals by voice, appearance, and behaviour. This individual recognition capability is the cognitive foundation for face recognition of humans — it is an extension of a well-documented corvid ability.' },
+];
+---
+
+<BaseLayout title={title} description={description} path={path} ogType="article"
+  datePublished="2026-11-07" dateModified="2026-11-07"
+  breadcrumbs={breadcrumbs} faq={faq} pageType="Article">
+
+<article class="myth-page">
+  <nav class="myth-breadcrumb" aria-label="Breadcrumb">
+    <ol>
+      {breadcrumbs.map((b, i) => (
+        <li>
+          {i < breadcrumbs.length - 1
+            ? <><a href={b.url}>{b.name}</a><span aria-hidden="true"> › </span></>
+            : <span aria-current="page">{b.name}</span>}
+        </li>
+      ))}
+    </ol>
+  </nav>
+  <header class="myth-header">
+    <p class="myth-pillar">Myth Check · MYTH·04</p>
+    <h1>Do Ravens Remember Human Faces?</h1>
+    <p class="myth-subtitle">Verdict: <strong class="verdict-true">True</strong> — with important species and evidence caveats</p>
+  </header>
+
+  <section class="myth-snippet" aria-label="Quick answer">
+    <p><strong class="claim-science">[science]</strong> Ravens and their close relatives do recognise individual humans and retain memories of negative interactions for extended periods. The strongest experimental evidence comes from American Crows (<em>Corvus brachyrhynchos</em>) rather than Common Ravens specifically, but the underlying individual-recognition capability is well-established in Common Ravens from social behaviour research. The claim is essentially true, though often overstated in popular accounts.</p>
+  </section>
+
+  <section class="myth-section">
+    <h2>The Evidence: American Crow Studies</h2>
+    <p><strong class="claim-science">[science]</strong> The most rigorous published study on corvid face recognition is Marzluff, Walls, Cornell, Withey, and Craig (2010) in <em>Animal Cognition</em>. The researchers:</p>
+    <ul>
+      <li>Trapped crows at the University of Washington campus while wearing a distinctive "dangerous" mask.</li>
+      <li>Tested crows' responses to the same mask (worn by different people) over 2.7 years.</li>
+      <li>Found that crows scolded, mobbed, and dived at the dangerous mask far more than a neutral control mask — and that this behaviour <em>increased</em> over time as more crows learned from each other.</li>
+      <li>Demonstrated that the response was face-specific: changing which person wore the dangerous mask did not reduce scolding.<sup><a href="#src-1">1</a></sup></li>
+    </ul>
+    <p>This is the best-controlled published evidence for individual human face recognition in corvids. It was conducted on American Crows, not Common Ravens.</p>
+  </section>
+
+  <section class="myth-section">
+    <h2>What the Evidence Shows for Common Ravens</h2>
+    <p><strong class="claim-science">[science]</strong> For Common Ravens specifically, the evidence is primarily observational rather than experimental. John Marzluff and Tony Angell's field observations document ravens responding differently to familiar vs unfamiliar human researchers over extended field seasons — appearing more tolerant of regular observers and more alert around strangers. Bernd Heinrich documented similar differential responses in his long-term raven study in Maine.<sup><a href="#src-2">2</a></sup><sup><a href="#src-3">3</a></sup></p>
+    <p>No controlled masked-researcher experiment equivalent to Marzluff et al. (2010) has been published specifically for Common Ravens as of this writing. The inference that Common Ravens have the same capability as American Crows is biologically reasonable (they are closely related corvids with similar social complexity) but is not yet as directly evidenced.</p>
+  </section>
+
+  <section class="myth-section">
+    <h2>The Cognitive Basis</h2>
+    <p><strong class="claim-science">[science]</strong> Individual recognition of conspecifics is essential to raven social life. Ravens maintain dominance hierarchies, pair bonds, coalition partnerships, and cache-protection strategies that all require knowing which individual they are dealing with. This individual recognition system — based on voice, appearance, and behavioural cues — provides the cognitive infrastructure for recognising human individuals as well. Humans are simply other large social animals that ravens interact with regularly.<sup><a href="#src-3">3</a></sup></p>
+  </section>
+
+  <section class="myth-section">
+    <h2>What the Popular Accounts Get Wrong</h2>
+    <p>Several popular claims about raven/crow face memory overstate the evidence:</p>
+    <ul>
+      <li><strong>"Ravens never forget a face"</strong> — There is no evidence that the memory lasts a lifetime. The experimental follow-up was 2.7 years.</li>
+      <li><strong>"Ravens will punish you for years"</strong> — The experimental evidence shows scolding and mobbing, which are defensive responses; there is no documented evidence of ravens taking sustained deliberate revenge.</li>
+      <li><strong>"All ravens do this"</strong> — The experimental evidence is from one population of American Crows in Seattle. Individual variation within populations has not been systematically studied.</li>
+    </ul>
+  </section>
+
+  <section class="myth-verdict myth-section">
+    <h2>Verdict</h2>
+    <p><strong>True — with caveats.</strong> Corvids do recognise individual humans by face and retain this memory for at least several years. The best experimental evidence is from American Crows rather than Common Ravens, though Common Raven individual recognition of humans is documented observationally. The specific details of duration, generalisability, and mechanism are more uncertain than popular accounts suggest.</p>
+  </section>
+
+  <section class="myth-section">
+    <h2>Related Pages</h2>
+    <ul>
+      <li><a href="/behaviour/raven-intelligence/">Raven intelligence — full chapter</a></li>
+      <li><a href="/behaviour/raven-social-structure/">Raven social structure</a></li>
+      <li><a href="/questions/how-smart-are-ravens/">How smart are ravens?</a></li>
+    </ul>
+  </section>
+
+  <section class="myth-faq myth-section" aria-labelledby="faq-h2">
+    <h2 id="faq-h2">Frequently Asked Questions</h2>
+    {faq.map(item => (
+      <details class="myth-faq-item">
+        <summary class="myth-faq-q">{item.q}</summary>
+        <p class="myth-faq-a">{item.a}</p>
+      </details>
+    ))}
+  </section>
+
+  <section class="myth-sources myth-section" aria-labelledby="src-h2">
+    <h2 id="src-h2">Sources</h2>
+    <ol class="myth-src-list">
+      <li id="src-1">Marzluff, J.M., Walls, J., Cornell, H.N., Withey, J.C. &amp; Craig, D.P. (2010). Lasting recognition of threatening people by wild American crows. <em>Animal Cognition</em> 13(3), 401–411. DOI: 10.1007/s10071-009-0300-3 — controlled face-recognition and long-term memory study.</li>
+      <li id="src-2">Heinrich, B. (2000). <em>Mind of the Raven</em>. HarperCollins. — observational evidence for Common Raven individual human recognition in field studies.</li>
+      <li id="src-3">Marzluff, J.M. &amp; Angell, T. (2005). <em>In the Company of Crows and Ravens</em>. Yale University Press. — corvid social cognition, individual recognition, and human–corvid interactions.</li>
+    </ol>
+    <p class="myth-claim-note"><strong class="claim-science">[science]</strong> peer-reviewed study and field-guide data</p>
+  </section>
+
+  <nav class="myth-nav-bottom">
+    <a href="/myths/ravens-bring-death/" class="myth-back">← Do Ravens Bring Death?</a>
+    <a href="/myths/" class="myth-next">All Myth Checks →</a>
+  </nav>
+</article>
+</BaseLayout>
+
+<style>
+  .myth-page { max-width: 820px; margin: 0 auto; padding: 2rem 1.25rem 4rem; color: var(--iron-ink, #e8e4d8); font-family: 'Inter', sans-serif; line-height: 1.72; }
+  .myth-breadcrumb ol { display: flex; flex-wrap: wrap; gap: .25rem; list-style: none; padding: 0; margin: 0 0 2rem; font-size: .8rem; color: var(--ink-soft, #8a8070); }
+  .myth-breadcrumb a { color: var(--gold-500, #d4ae5a); text-decoration: none; }
+  .myth-pillar { font-size: .72rem; letter-spacing: .12em; text-transform: uppercase; color: var(--gold-500, #d4ae5a); margin: 0 0 .4rem; }
+  .myth-page h1 { font-family: 'Cormorant Garamond', serif; font-size: clamp(2rem, 5vw, 3.25rem); font-weight: 700; color: #fff; margin: 0 0 .4rem; line-height: 1.1; }
+  .myth-subtitle { font-size: 1rem; color: var(--ink-soft, #c0b89a); margin: 0 0 2rem; }
+  .verdict-true { color: #7ab9e0; }
+  .myth-snippet { background: rgba(212,174,90,.08); border-left: 3px solid var(--gold-500, #d4ae5a); border-radius: 0 6px 6px 0; padding: 1rem 1.25rem; margin-bottom: 2.5rem; font-size: 1.03rem; }
+  .myth-section { margin-bottom: 2.75rem; }
+  .myth-section h2 { font-family: 'Cormorant Garamond', serif; font-size: 1.6rem; font-weight: 600; color: #fff; margin: 0 0 1rem; border-bottom: 1px solid rgba(212,174,90,.2); padding-bottom: .4rem; }
+  .myth-section p { margin: 0 0 1rem; font-size: .97rem; }
+  .myth-section ul { padding-left: 1.25rem; margin: 0 0 1rem; }
+  .myth-section li { margin-bottom: .5rem; font-size: .95rem; }
+  .myth-verdict { background: rgba(212,174,90,.06); border: 1px solid rgba(212,174,90,.2); border-radius: 8px; padding: 1.25rem 1.5rem; }
+  .claim-science { color: #7ab9e0; font-style: normal; font-size: .78rem; }
+  a[href] { color: var(--gold-500, #d4ae5a); }
+  .myth-faq-item { border-bottom: 1px solid rgba(255,255,255,.07); }
+  .myth-faq-q { cursor: pointer; padding: .9rem 0; font-size: .97rem; font-weight: 500; color: #fff; list-style: none; }
+  .myth-faq-q::before { content: '+ '; color: var(--gold-500, #d4ae5a); font-weight: 700; }
+  details[open] .myth-faq-q::before { content: '− '; }
+  .myth-faq-a { margin: 0 0 1rem; line-height: 1.7; font-size: .93rem; color: var(--ink-soft, #c8c0b0); }
+  .myth-src-list { padding-left: 1.25rem; margin: 0 0 1rem; }
+  .myth-src-list li { margin-bottom: .6rem; font-size: .82rem; color: var(--ink-soft, #8a8070); line-height: 1.6; }
+  .myth-claim-note { font-size: .78rem; color: var(--ink-soft, #605848); border-top: 1px solid rgba(255,255,255,.06); padding-top: .75rem; }
+  .myth-nav-bottom { display: flex; justify-content: space-between; padding-top: 2rem; border-top: 1px solid rgba(255,255,255,.07); }
+  .myth-nav-bottom a { font-size: .9rem; text-decoration: none; }
+  .myth-nav-bottom a:hover { text-decoration: underline; }
+</style>

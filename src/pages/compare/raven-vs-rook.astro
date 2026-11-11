@@ -1,0 +1,119 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const title       = 'Raven vs Rook — Field Identification';
+const description = 'How to tell a Common Raven from a Rook: the pale face and bill base, floppy wingtips, colonial nesting, and very different calls. Sourced measurements.';
+const path        = '/compare/raven-vs-rook/';
+
+const breadcrumbs = [
+  { name: 'Home',    url: '/' },
+  { name: 'Compare', url: '/compare/' },
+  { name: 'Raven vs Rook', url: path },
+];
+
+const faq = [
+  { q: 'Can you confuse a raven with a Rook?', a: 'At distance, both are large black corvids, but up close they are very different. Rooks have a distinctive pale, almost whitish face and grey bill base (adults) — ravens have an entirely black face and heavy dark bill. Rooks also have notably "baggy" thigh feathers and a more rounded, floppy-wingtipped flight profile.' },
+  { q: 'Are Rooks bigger than crows?', a: 'Rooks are roughly similar in size to Carrion Crows (44–47 cm), slightly smaller and more slender-billed. Neither approaches the raven in size.' },
+];
+---
+
+<BaseLayout title={title} description={description} path={path} ogType="article"
+  datePublished="2026-11-07" dateModified="2026-11-07"
+  breadcrumbs={breadcrumbs} faq={faq} pageType="Article">
+
+<article class="cmp-page">
+  <nav class="cmp-breadcrumb" aria-label="Breadcrumb">
+    <ol>
+      {breadcrumbs.map((b, i) => (
+        <li>
+          {i < breadcrumbs.length - 1
+            ? <><a href={b.url}>{b.name}</a><span aria-hidden="true"> › </span></>
+            : <span aria-current="page">{b.name}</span>}
+        </li>
+      ))}
+    </ol>
+  </nav>
+  <header class="cmp-header">
+    <p class="cmp-pillar">Comparison · Field Guide</p>
+    <h1>Raven vs Rook</h1>
+  </header>
+  <section class="cmp-snippet" aria-label="Quick answer">
+    <p><strong class="claim-science">[science]</strong> Key marks: Rooks have a <strong>pale, bare face</strong> and grey bill base (adults). Ravens have an entirely black face and heavy dark bill. Size: ravens are much larger. Flight: Rooks have notably floppy, "fingered" wingtips; ravens soar on flatter wings. Voice: Rook is a "kaah", raven is a deep croak.</p>
+  </section>
+
+  <section class="cmp-table-section">
+    <h2>Side-by-Side</h2>
+    <div class="cmp-table-wrap">
+      <table class="cmp-table">
+        <thead>
+          <tr><th>Feature</th><th>Common Raven<br/><em>Corvus corax</em></th><th>Rook<br/><em>Corvus frugilegus</em></th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Length</td><td>56–69 cm</td><td>44–47 cm</td></tr>
+          <tr><td>Wingspan</td><td>120–150 cm</td><td>81–99 cm</td></tr>
+          <tr><td>Weight</td><td>689–1,625 g</td><td>280–490 g</td></tr>
+          <tr class="cmp-highlight"><td><strong>Face / bill</strong></td><td><strong>All black; heavy arched bill</strong></td><td><strong>Pale bare face; grey bill base (adult)</strong></td></tr>
+          <tr><td>Tail</td><td>Wedge-shaped</td><td>Rounded</td></tr>
+          <tr><td>Thigh feathers</td><td>Smooth</td><td>Loose, baggy ("plus-fours")</td></tr>
+          <tr class="cmp-highlight"><td><strong>Voice</strong></td><td><strong>Deep croak "kronk"</strong></td><td><strong>Raucous "kaah"</strong></td></tr>
+          <tr><td>Breeding</td><td>Solitary pairs</td><td>Colonial (rookeries in tall trees)</td></tr>
+          <tr><td>Habitat</td><td>Upland, coast, wild country</td><td>Lowland farmland, parkland, village edges</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="cmp-src-note">Source: Madge & Burn (1994).<sup><a href="#src-1">1</a></sup></p>
+  </section>
+
+  <section class="cmp-section">
+    <h2>The Easiest Distinguishing Mark</h2>
+    <p>An adult Rook seen up close is unmistakeable: the bare pale skin around the base of the bill and the greyish bill base are unlike anything on a raven. Even in poor light at distance, a Rook's proportions — slimmer build, rounder tail, floppy wingtips — differ from the raven's solid, broad-winged shape.</p>
+  </section>
+
+  <section class="cmp-faq cmp-section" aria-labelledby="faq-h2">
+    <h2 id="faq-h2">Frequently Asked Questions</h2>
+    {faq.map(item => (
+      <details class="cmp-faq-item">
+        <summary class="cmp-faq-q">{item.q}</summary>
+        <p class="cmp-faq-a">{item.a}</p>
+      </details>
+    ))}
+  </section>
+
+  <section class="cmp-sources cmp-section" aria-labelledby="src-h2">
+    <h2 id="src-h2">Sources</h2>
+    <ol class="cmp-src-list">
+      <li id="src-1">Madge, S. & Burn, H. (1994). <em>Crows and Jays</em>. Christopher Helm. — all measurements and field marks.</li>
+    </ol>
+    <p class="cmp-claim-note"><strong class="claim-science">[science]</strong> field-guide data</p>
+  </section>
+</article>
+</BaseLayout>
+
+<style>
+  .cmp-page { max-width: 860px; margin: 0 auto; padding: 2rem 1.25rem 4rem; color: var(--iron-ink, #e8e4d8); font-family: 'Inter', sans-serif; line-height: 1.72; }
+  .cmp-breadcrumb ol { display: flex; flex-wrap: wrap; gap: .25rem; list-style: none; padding: 0; margin: 0 0 2rem; font-size: .8rem; color: var(--ink-soft, #8a8070); }
+  .cmp-breadcrumb a { color: var(--gold-500, #d4ae5a); text-decoration: none; }
+  .cmp-pillar { font-size: .72rem; letter-spacing: .12em; text-transform: uppercase; color: var(--gold-500, #d4ae5a); margin: 0 0 .4rem; }
+  .cmp-page h1 { font-family: 'Cormorant Garamond', serif; font-size: clamp(2rem, 5vw, 3rem); font-weight: 700; color: #fff; margin: 0 0 2rem; line-height: 1.1; }
+  .cmp-snippet { background: rgba(212,174,90,.08); border-left: 3px solid var(--gold-500, #d4ae5a); border-radius: 0 6px 6px 0; padding: 1rem 1.25rem; margin-bottom: 2.5rem; font-size: 1.03rem; }
+  .cmp-section, .cmp-table-section { margin-bottom: 2.5rem; }
+  .cmp-section h2, .cmp-table-section h2 { font-family: 'Cormorant Garamond', serif; font-size: 1.5rem; font-weight: 600; color: #fff; margin: 0 0 .9rem; border-bottom: 1px solid rgba(212,174,90,.2); padding-bottom: .4rem; }
+  .cmp-section p { margin: 0 0 1rem; font-size: .97rem; }
+  .cmp-table-wrap { overflow-x: auto; }
+  .cmp-table { width: 100%; border-collapse: collapse; font-size: .88rem; }
+  .cmp-table th { background: rgba(212,174,90,.12); color: var(--gold-500, #d4ae5a); padding: .6rem .9rem; text-align: left; font-size: .75rem; letter-spacing: .06em; text-transform: uppercase; }
+  .cmp-table td { padding: .6rem .9rem; border-bottom: 1px solid rgba(255,255,255,.06); vertical-align: top; font-size: .9rem; }
+  .cmp-table tr:last-child td { border-bottom: none; }
+  .cmp-highlight td { background: rgba(212,174,90,.05); font-weight: 500; }
+  .cmp-src-note { font-size: .78rem; color: var(--ink-soft, #8a8070); margin-top: .5rem; }
+  .claim-science { color: #7ab9e0; font-style: normal; font-size: .78rem; }
+  a[href] { color: var(--gold-500, #d4ae5a); }
+  .cmp-faq-item { border-bottom: 1px solid rgba(255,255,255,.07); }
+  .cmp-faq-q { cursor: pointer; padding: .9rem 0; font-size: .97rem; font-weight: 500; color: #fff; list-style: none; }
+  .cmp-faq-q::before { content: '+ '; color: var(--gold-500, #d4ae5a); font-weight: 700; }
+  details[open] .cmp-faq-q::before { content: '− '; }
+  .cmp-faq-a { margin: 0 0 1rem; line-height: 1.7; font-size: .93rem; color: var(--ink-soft, #c8c0b0); }
+  .cmp-src-list { padding-left: 1.25rem; margin: 0 0 1rem; }
+  .cmp-src-list li { margin-bottom: .6rem; font-size: .82rem; color: var(--ink-soft, #8a8070); line-height: 1.6; }
+  .cmp-claim-note { font-size: .78rem; color: var(--ink-soft, #605848); border-top: 1px solid rgba(255,255,255,.06); padding-top: .75rem; }
+</style>

@@ -1,0 +1,129 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const title       = 'Why Are Ravens Associated With Death?';
+const description = 'Ravens are associated with death because they are carrion birds — they eat the dead and historically gathered at battlefields. This page explains the ecological basis and the cultural traditions it inspired.';
+const path        = '/questions/why-are-ravens-associated-with-death/';
+
+const breadcrumbs = [
+  { name: 'Home',      url: '/' },
+  { name: 'Questions', url: '/questions/' },
+  { name: 'Why Are Ravens Associated With Death?', url: path },
+];
+
+const faq = [
+  { q: 'Did ravens really appear at Viking battlefields?', a: 'Yes — ravens are attracted to large carcasses and would have gathered at battlefields throughout history. This is documented behaviour: ravens follow wolves and other predators to access kills, and historically followed armies. The Viking "beasts of battle" motif in Old Norse poetry reflects genuine observation.' },
+  { q: 'Are ravens death omens in all cultures?', a: 'No. The death-omen association is strongest in certain European traditions. In Norse mythology, ravens were signs of Odin\'s presence and wisdom, not simply death. In several Pacific Northwest Indigenous traditions, the Raven is a creator figure. The death association is real in some cultures but far from universal.' },
+];
+---
+
+<BaseLayout title={title} description={description} path={path} ogType="article"
+  datePublished="2026-11-07" dateModified="2026-11-07"
+  breadcrumbs={breadcrumbs} faq={faq} pageType="Article">
+
+<article class="qa-page">
+  <nav class="qa-breadcrumb" aria-label="Breadcrumb">
+    <ol>
+      {breadcrumbs.map((b, i) => (
+        <li>
+          {i < breadcrumbs.length - 1
+            ? <><a href={b.url}>{b.name}</a><span aria-hidden="true"> › </span></>
+            : <span aria-current="page">{b.name}</span>}
+        </li>
+      ))}
+    </ol>
+  </nav>
+
+  <header class="qa-header">
+    <p class="qa-pillar">Question · Culture & Biology</p>
+    <h1>Why Are Ravens Associated With Death?</h1>
+  </header>
+
+  <section class="qa-snippet" aria-label="Direct answer">
+    <p><strong class="claim-science">[science]</strong> The core reason is ecological: ravens are carrion birds that eat the dead and historically gathered wherever large animals — including humans — were killed. This made them a constant presence at battlefields, executions, and places of death. <strong class="claim-lore">[lore]</strong> Different cultures then built symbolic frameworks around this observable fact, interpreting it as prophecy, divine presence, or omen depending on their traditions.</p>
+  </section>
+
+  <section class="qa-section">
+    <h2>The Ecological Basis</h2>
+    <p><strong class="claim-science">[science]</strong> Common Ravens are generalist omnivores for whom carrion is a major food source, especially in winter. They detect carcasses from a distance — probably by watching other scavengers and by smell as well as sight — and will gather in large numbers at significant food sources including dead livestock, roadkill, and human refuse.<sup><a href="#src-1">1</a></sup></p>
+    <p><strong class="claim-science">[science]</strong> Before modern sanitation, human death was much more visible: bodies on battlefields, executed criminals left exposed, plague pits. Ravens would have been a regular sight in these contexts. The association between ravens and human death is therefore a direct consequence of real raven behaviour, not superstition.<sup><a href="#src-1">1</a></sup></p>
+  </section>
+
+  <section class="qa-section">
+    <h2>The Cultural Traditions</h2>
+
+    <h3>Norse mythology — ravens as Odin's messengers</h3>
+    <p><strong class="claim-lore">[lore]</strong> In Norse mythology, ravens were primarily associated with Odin — god of wisdom, war, and the dead — through his ravens Huginn and Muninn. The battlefield was Odin's domain, and ravens gathering there was read as his presence. The <em>beasts of battle</em> motif in Old Norse poetry depicts ravens, wolves, and eagles anticipating the slain — a literary convention grounded in real observation.<sup><a href="#src-2">2</a></sup></p>
+
+    <h3>Biblical associations</h3>
+    <p><strong class="claim-lore">[lore]</strong> Ravens appear in the Bible in ambivalent roles: as an unclean bird in Leviticus 11:15; as the bird Noah sent out first (which did not return); but also as God's servants who fed the prophet Elijah (1 Kings 17:4–6). The "unclean" label contributed to negative associations in Christian European tradition, while the Elijah passage is notably positive.<sup><a href="#src-3">3</a></sup></p>
+
+    <h3>European folklore</h3>
+    <p><strong class="claim-lore">[lore]</strong> In various European folklore traditions, a raven perching on a house or croaking near a home was interpreted as presaging death. These beliefs are documented across Germany, Scandinavia, the British Isles, and France from medieval sources onwards. They are consistent with the broader pattern: a bird that appears at death must predict it.</p>
+
+    <h3>The colour contribution</h3>
+    <p><strong class="claim-lore">[lore]</strong> Ravens are entirely black — in many European symbolic systems, black was associated with mourning, darkness, and death. This colour-based association compounded the ecological one, reinforcing the raven's connection to death in visual culture and heraldry.</p>
+  </section>
+
+  <section class="qa-section">
+    <h2>What This Association Is Not</h2>
+    <p>The raven does not predict death. It detects death that has already occurred, or follows large groups of mammals (including human armies) that may produce carcasses. The causal arrow runs: death → ravens arrive, not: ravens arrive → death follows.</p>
+    <p>Many cultures that have ravens in their traditions do not associate them primarily with death. The death-omen tradition is culturally specific, not a universal human response to ravens.</p>
+  </section>
+
+  <section class="qa-section">
+    <h2>Related Pages</h2>
+    <ul>
+      <li><a href="/myths/are-ravens-bad-luck/">Myth: "Ravens are bad luck" — verdict</a></li>
+      <li><a href="/lore/norse/huginn-and-muninn/">Huginn and Muninn — Odin's ravens</a></li>
+      <li><a href="/questions/what-do-ravens-eat/">What do ravens eat?</a></li>
+    </ul>
+  </section>
+
+  <section class="qa-faq qa-section" aria-labelledby="faq-h2">
+    <h2 id="faq-h2">Frequently Asked Questions</h2>
+    {faq.map(item => (
+      <details class="qa-faq-item">
+        <summary class="qa-faq-q">{item.q}</summary>
+        <p class="qa-faq-a">{item.a}</p>
+      </details>
+    ))}
+  </section>
+
+  <section class="qa-sources qa-section" aria-labelledby="src-h2">
+    <h2 id="src-h2">Sources</h2>
+    <ol class="qa-src-list">
+      <li id="src-1">Boarman, W.I. & Heinrich, B. (1999). Common Raven (<em>Corvus corax</em>). <em>Birds of the World</em>. Cornell Lab. — carrion-feeding behaviour.</li>
+      <li id="src-2">McKinnell, J. (2005). <em>Both One and Many</em>. Philologia. — beasts of battle motif, Odin and ravens.</li>
+      <li id="src-3">The Bible, Leviticus 11:15; 1 Kings 17:4–6. (Public domain.) — biblical raven passages.</li>
+    </ol>
+    <p class="qa-claim-note"><strong class="claim-science">[science]</strong> peer-reviewed/field-guide · <strong class="claim-lore">[lore]</strong> named cultural/historical source</p>
+  </section>
+</article>
+</BaseLayout>
+
+<style>
+  .qa-page { max-width: 820px; margin: 0 auto; padding: 2rem 1.25rem 4rem; color: var(--iron-ink, #e8e4d8); font-family: 'Inter', sans-serif; line-height: 1.72; }
+  .qa-breadcrumb ol { display: flex; flex-wrap: wrap; gap: .25rem; list-style: none; padding: 0; margin: 0 0 2rem; font-size: .8rem; color: var(--ink-soft, #8a8070); }
+  .qa-breadcrumb a { color: var(--gold-500, #d4ae5a); text-decoration: none; }
+  .qa-pillar { font-size: .72rem; letter-spacing: .12em; text-transform: uppercase; color: var(--gold-500, #d4ae5a); margin: 0 0 .4rem; }
+  .qa-page h1 { font-family: 'Cormorant Garamond', serif; font-size: clamp(2rem, 5vw, 3rem); font-weight: 700; color: #fff; margin: 0 0 2rem; line-height: 1.1; }
+  .qa-snippet { background: rgba(212,174,90,.08); border-left: 3px solid var(--gold-500, #d4ae5a); border-radius: 0 6px 6px 0; padding: 1rem 1.25rem; margin-bottom: 2.5rem; font-size: 1.03rem; }
+  .qa-section { margin-bottom: 2.5rem; }
+  .qa-section h2 { font-family: 'Cormorant Garamond', serif; font-size: 1.5rem; font-weight: 600; color: #fff; margin: 0 0 .9rem; border-bottom: 1px solid rgba(212,174,90,.2); padding-bottom: .4rem; }
+  .qa-section h3 { font-size: 1rem; font-weight: 600; color: var(--gold-500, #d4ae5a); margin: 1.25rem 0 .5rem; }
+  .qa-section p { margin: 0 0 1rem; font-size: .97rem; }
+  .qa-section ul { padding-left: 1.25rem; margin: 0 0 1rem; }
+  .qa-section li { margin-bottom: .4rem; font-size: .95rem; }
+  .claim-science { color: #7ab9e0; font-style: normal; font-size: .78rem; }
+  .claim-lore    { color: #c8a46a; font-style: normal; font-size: .78rem; }
+  a[href] { color: var(--gold-500, #d4ae5a); }
+  .qa-faq-item { border-bottom: 1px solid rgba(255,255,255,.07); }
+  .qa-faq-q { cursor: pointer; padding: .9rem 0; font-size: .97rem; font-weight: 500; color: #fff; list-style: none; }
+  .qa-faq-q::before { content: '+ '; color: var(--gold-500, #d4ae5a); font-weight: 700; }
+  details[open] .qa-faq-q::before { content: '− '; }
+  .qa-faq-a { margin: 0 0 1rem; line-height: 1.7; font-size: .93rem; color: var(--ink-soft, #c8c0b0); }
+  .qa-src-list { padding-left: 1.25rem; margin: 0 0 1rem; }
+  .qa-src-list li { margin-bottom: .6rem; font-size: .82rem; color: var(--ink-soft, #8a8070); line-height: 1.6; }
+  .qa-claim-note { font-size: .78rem; color: var(--ink-soft, #605848); border-top: 1px solid rgba(255,255,255,.06); padding-top: .75rem; }
+</style>

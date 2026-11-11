@@ -1,0 +1,159 @@
+---
+/**
+ * Behaviour — Raven juveniles and learning
+ * BEH·30
+ * Primary keyword: raven juvenile behaviour
+ * Secondary: young raven behaviour, raven fledgling, raven juvenile dispersal
+ */
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const title       = 'Raven Juveniles and Learning: Life Before a Territory';
+const description = 'Young ravens spend years in a non-breeding "floater" period before establishing territories and pair bonds. This chapter examines juvenile raven behaviour from fledging to independent life, the social dynamics of non-breeding flocks, and how ravens eventually transition from floater to territorial breeder.';
+const path        = '/behaviour/raven-juveniles-and-learning/';
+
+const breadcrumbs = [
+  { name: 'Home',      url: '/' },
+  { name: 'Behaviour', url: '/behaviour/' },
+  { name: 'Raven Juveniles and Learning', url: path },
+];
+
+const faq = [
+  { q: 'When do young ravens leave their parents?', a: 'Raven chicks fledge (take their first flight) at approximately 35–42 days after hatching — typically in May or June in temperate North America and Europe. After fledging, the young ravens remain dependent on their parents for a further 4–6 weeks, learning foraging skills and gradually increasing their independence. By late summer (August–September), young ravens from that year\'s brood are largely independent, though they may remain in the loose vicinity of the natal territory for several months. By autumn, they typically join non-breeding flocks of other juveniles and subadults.' },
+  { q: 'How long do ravens take to reach breeding age?', a: 'Common Ravens do not breed until they are 3–4 years old on average, though some individuals begin breeding at 2 years old in productive habitats where territories become available. The delay to first breeding reflects the difficulty of obtaining a territory — established breeding pairs hold territories for years, and new breeders can only enter the system when a territory becomes vacant through the death or disappearance of an established bird. The years between fledging and first breeding are spent in non-breeding flocks, developing skills and social knowledge while searching for breeding opportunities.' },
+  { q: 'What do young ravens do before they breed?', a: 'Non-breeding young ravens (floaters) form loose flocks with other juveniles and subadults, particularly in winter. These flocks gather at large food sources — carrion, refuse sites, agricultural operations — and form communal roosts at night. The floater period is not merely a waiting period: it is when ravens develop and refine the social and cognitive skills that will serve them as breeding adults. Floaters monitor breeding territories in their area, alert to any vacancy. Some floaters establish brief "trial" pair bonds before obtaining a territory. The skills developed in floater social life — reading other ravens\' behaviour, managing competitive relationships, learning landscape-scale food locations — are directly relevant to later breeding success.' },
+];
+---
+
+<BaseLayout title={title} description={description} path={path} ogType="article"
+  datePublished="2026-11-09" dateModified="2026-11-09"
+  breadcrumbs={breadcrumbs} faq={faq} pageType="Article">
+
+<article class="qa-page">
+
+  <nav class="qa-breadcrumb" aria-label="Breadcrumb">
+    <ol>
+      {breadcrumbs.map((b, i) => (
+        <li>
+          {i < breadcrumbs.length - 1
+            ? <><a href={b.url}>{b.name}</a><span aria-hidden="true"> › </span></>
+            : <span aria-current="page">{b.name}</span>}
+        </li>
+      ))}
+    </ol>
+  </nav>
+
+  <header class="qa-header">
+    <p class="qa-pillar">Behaviour · BEH·30</p>
+    <h1>Raven Juveniles and Learning: Life Before a Territory</h1>
+  </header>
+
+  <section class="qa-snippet" aria-label="Direct answer">
+    <p><strong class="claim-science">[science]</strong> Young ravens spend 2–4 years as non-breeding floaters before establishing territories — forming large communal flocks, roosting together, and developing the social skills and landscape knowledge they will need as breeding adults. This extended juvenile phase is not delay but preparation: the cognitive and social complexity of raven life requires a substantial apprenticeship before independent breeding.</p>
+  </section>
+
+  <section class="qa-section">
+    <h2>Fledging and Early Independence</h2>
+    <p><strong class="claim-science">[science]</strong> The transition from nest-bound chick to independent juvenile is gradual:<sup><a href="#src-1">1</a></sup></p>
+    <ul>
+      <li><strong>Fledging (days 35–42):</strong> young ravens take their first flights while remaining near the nest. First flights are clumsy — the wing musculature continues developing for several weeks after fledging.</li>
+      <li><strong>Post-fledging dependence (4–6 weeks):</strong> fledglings follow parents, begging for food and gradually learning to forage independently. During this period they learn from parental behaviour: which food items are safe, how to handle different food types, where food is typically found in the territory.</li>
+      <li><strong>Independence (by late summer):</strong> by approximately 3 months of age, young ravens are physically capable of independent foraging and begin separating from parents. Some families remain loosely associated into autumn; most young ravens are independent by October.</li>
+    </ul>
+  </section>
+
+  <section class="qa-section">
+    <h2>Juvenile Dispersal</h2>
+    <p><strong class="claim-science">[science]</strong> After independence, young ravens typically disperse from their natal territory — moving away from the area where they were raised. Dispersal in ravens:<sup><a href="#src-1">1</a></sup><sup><a href="#src-2">2</a></sup></p>
+    <ul>
+      <li>Can cover substantial distances — ring and tag recoveries show juvenile ravens dispersing 100–500km from natal territories in some cases, though many remain within 50–100km.</li>
+      <li>Is not directional (not migration) — dispersal direction is largely random with respect to compass bearing, determined by habitat quality and food availability.</li>
+      <li>Results in juveniles joining non-breeding flocks in areas with concentrated food resources. Large landfills, fish processing facilities, agricultural areas with carrion access, and wilderness areas with high ungulate density attract juvenile flocks.</li>
+    </ul>
+  </section>
+
+  <section class="qa-section">
+    <h2>The Floater Flock: Social Learning</h2>
+    <p><strong class="claim-science">[science]</strong> Non-breeding raven flocks (floater populations) are dynamic social environments that shape cognitive development:<sup><a href="#src-2">2</a></sup></p>
+    <ul>
+      <li><strong>Social hierarchies:</strong> within a floater flock, individuals compete for access to food and social partners. Dominant birds get earlier and better access to food; subordinate birds develop strategies — deception, coalition-forming, strategic timing — to access food despite lower rank.</li>
+      <li><strong>Social learning:</strong> juveniles learn where food is in the landscape by following other, more experienced birds — particularly at winter carcasses. The information-centre function of communal roosts (where followers observe successful foragers leaving and follow them) was first documented in raven floater populations by Bernd Heinrich in Maine.</li>
+      <li><strong>Pair formation:</strong> floater flocks are where ravens form their eventual pair bonds. Young ravens engage in extensive social testing — grooming, play, food-sharing, following — that gradually distinguishes preferred social partners from flock members.</li>
+    </ul>
+  </section>
+
+  <section class="qa-section">
+    <h2>Transition to Breeding Status</h2>
+    <p><strong class="claim-science">[science]</strong> The transition from floater to territorial breeder is abrupt and opportunity-dependent:<sup><a href="#src-1">1</a></sup></p>
+    <ul>
+      <li>When an established breeder dies, its territory and nest site become available. Floaters in the area converge rapidly — sometimes within days — with pairs competing to establish occupancy.</li>
+      <li>Established pairs defend their territories strongly against intrusion by floaters, who probe territory boundaries continuously.</li>
+      <li>First-year breeders have significantly lower productivity than experienced pairs — breeding success typically improves with experience over the first 3–5 years of a pair bond.</li>
+    </ul>
+  </section>
+
+  <section class="qa-section">
+    <h2>Play and Cognitive Development in Juveniles</h2>
+    <p><strong class="claim-science">[science]</strong> Juvenile ravens show higher rates of play behaviour than adults — a pattern seen across many cognitively sophisticated animals. Raven juvenile play includes:<sup><a href="#src-2">2</a></sup></p>
+    <ul>
+      <li>Aerial acrobatics — rolls, tumbles, steep dives — that appear to have no foraging function but may develop flight skills and strength.</li>
+      <li>Object manipulation and toy play — carrying, dropping, and investigating objects in ways that parallel adult problem-solving behaviour.</li>
+      <li>Social play — chasing, wrestling, mock-fighting — that develops the social assessment and manipulation skills relevant to competition within the floater hierarchy.</li>
+    </ul>
+    <p>The extended juvenile period in ravens may function partly as a protected time for cognitive development — a period when the costs of play and experimentation are lower than they would be for a breeding adult with chicks to feed.</p>
+  </section>
+
+  <section class="qa-section">
+    <h2>Related Pages</h2>
+    <ul>
+      <li><a href="/behaviour/raven-social-structure/">Raven social structure</a></li>
+      <li><a href="/behaviour/raven-play/">Raven play behaviour</a></li>
+      <li><a href="/behaviour/raven-nesting/">Raven nesting</a></li>
+      <li><a href="/questions/how-long-do-ravens-live/">How long do ravens live?</a></li>
+    </ul>
+  </section>
+
+  <section class="qa-faq qa-section" aria-labelledby="faq-h2">
+    <h2 id="faq-h2">Frequently Asked Questions</h2>
+    {faq.map(item => (
+      <details class="qa-faq-item">
+        <summary class="qa-faq-q">{item.q}</summary>
+        <p class="qa-faq-a">{item.a}</p>
+      </details>
+    ))}
+  </section>
+
+  <section class="qa-sources qa-section" aria-labelledby="src-h2">
+    <h2 id="src-h2">Sources</h2>
+    <ol class="qa-src-list">
+      <li id="src-1">Boarman, W.I. & Heinrich, B. (1999). Common Raven (<em>Corvus corax</em>). In Poole, A. (ed.), <em>The Birds of North America</em>, No. 476. Cornell Lab of Ornithology. — fledging timelines, dispersal distances, floater population structure, transition to breeding.</li>
+      <li id="src-2">Heinrich, B. (1989). <em>Ravens in Winter</em>. Summit Books. — floater flock dynamics, information-centre hypothesis, social learning, juvenile play, pair formation in non-breeding flocks.</li>
+    </ol>
+    <p class="qa-claim-note"><strong class="claim-science">[science]</strong> peer-reviewed data</p>
+  </section>
+
+</article>
+</BaseLayout>
+
+<style>
+  .qa-page { max-width: 820px; margin: 0 auto; padding: 2rem 1.25rem 4rem; color: var(--iron-ink, #e8e4d8); font-family: 'Inter', sans-serif; line-height: 1.72; }
+  .qa-breadcrumb ol { display: flex; flex-wrap: wrap; gap: .25rem; list-style: none; padding: 0; margin: 0 0 2rem; font-size: .8rem; color: var(--ink-soft, #8a8070); }
+  .qa-breadcrumb a { color: var(--gold-500, #d4ae5a); text-decoration: none; }
+  .qa-pillar { font-size: .72rem; letter-spacing: .12em; text-transform: uppercase; color: var(--gold-500, #d4ae5a); margin: 0 0 .4rem; }
+  .qa-page h1 { font-family: 'Cormorant Garamond', serif; font-size: clamp(2rem, 5vw, 3rem); font-weight: 700; color: #fff; margin: 0 0 2rem; line-height: 1.1; }
+  .qa-snippet { background: rgba(212,174,90,.08); border-left: 3px solid var(--gold-500, #d4ae5a); border-radius: 0 6px 6px 0; padding: 1rem 1.25rem; margin-bottom: 2.5rem; font-size: 1.03rem; }
+  .qa-section { margin-bottom: 2.5rem; }
+  .qa-section h2 { font-family: 'Cormorant Garamond', serif; font-size: 1.5rem; font-weight: 600; color: #fff; margin: 0 0 .9rem; border-bottom: 1px solid rgba(212,174,90,.2); padding-bottom: .4rem; }
+  .qa-section p { margin: 0 0 1rem; font-size: .97rem; }
+  .qa-section ul { padding-left: 1.25rem; margin: 0 0 1rem; }
+  .qa-section li { margin-bottom: .4rem; font-size: .95rem; }
+  .claim-science { color: #7ab9e0; font-style: normal; font-size: .78rem; }
+  a[href] { color: var(--gold-500, #d4ae5a); }
+  .qa-faq-item { border-bottom: 1px solid rgba(255,255,255,.07); }
+  .qa-faq-q { cursor: pointer; padding: .9rem 0; font-size: .97rem; font-weight: 500; color: #fff; list-style: none; }
+  .qa-faq-q::before { content: '+ '; color: var(--gold-500, #d4ae5a); font-weight: 700; }
+  details[open] .qa-faq-q::before { content: '− '; }
+  .qa-faq-a { margin: 0 0 1rem; line-height: 1.7; font-size: .93rem; color: var(--ink-soft, #c8c0b0); }
+  .qa-src-list { padding-left: 1.25rem; margin: 0 0 1rem; }
+  .qa-src-list li { margin-bottom: .6rem; font-size: .82rem; color: var(--ink-soft, #8a8070); line-height: 1.6; }
+  .qa-claim-note { font-size: .78rem; color: var(--ink-soft, #605848); border-top: 1px solid rgba(255,255,255,.06); padding-top: .75rem; }
+</style>

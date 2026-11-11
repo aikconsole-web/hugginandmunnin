@@ -1,0 +1,138 @@
+---
+/**
+ * Places — Ravens in Yellowstone
+ * PLC·03
+ * Primary keyword: ravens in yellowstone
+ * Secondary: yellowstone raven, ravens wolves yellowstone, common raven yellowstone
+ */
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const title       = 'Ravens in Yellowstone: Wolf-Following and Winter Survival';
+const description = 'Yellowstone National Park has one of the best-studied raven populations in North America. Ravens here are famous for following wolves to carcasses — a relationship studied by Daniel Stahler and others. Full guide to Yellowstone ravens.';
+const path        = '/places/ravens-in-yellowstone/';
+
+const breadcrumbs = [
+  { name: 'Home',   url: '/' },
+  { name: 'Places', url: '/places/' },
+  { name: 'Ravens in Yellowstone', url: path },
+];
+
+const faq = [
+  { q: 'Are there ravens in Yellowstone National Park?', a: 'Yes — Common Ravens are year-round residents throughout Yellowstone. They are one of the most visible large birds in the park, particularly in winter when they congregate at wolf and predator kills. The park\'s extensive wildlife population (elk, bison, wolves, bears) provides abundant carrion, supporting a thriving resident raven population and attracting wintering non-breeding flocks.' },
+  { q: 'Do Yellowstone ravens follow wolves?', a: 'Yes. The relationship between Yellowstone ravens and wolves is one of the most studied raven–predator interactions in North America. Research by Stahler, Heinrich, and Crabtree (2002) documented that ravens follow and harass hunting wolves, attend kills within minutes of the first wolf feeding, and obtain significant quantities of food from wolf kills — particularly from elk. Ravens also appear to play — engaging in aerial acrobatics and object-dropping near wolves and sometimes landing near resting packs without apparent fear.' },
+  { q: 'How many ravens are in Yellowstone?', a: 'No precise census of Yellowstone ravens exists, but population estimates based on survey data suggest hundreds of resident birds year-round, with significant influxes of wintering non-breeding birds. The reintroduction of wolves to Yellowstone in 1995 is widely believed to have benefited the raven population by increasing the availability of large carrion — wolf kills provide accessible food for ravens that would not be available from natural ungulate mortality alone.' },
+];
+---
+
+<BaseLayout title={title} description={description} path={path} ogType="article"
+  datePublished="2026-11-07" dateModified="2026-11-07"
+  breadcrumbs={breadcrumbs} faq={faq} pageType="Article">
+
+<article class="qa-page">
+
+  <nav class="qa-breadcrumb" aria-label="Breadcrumb">
+    <ol>
+      {breadcrumbs.map((b, i) => (
+        <li>
+          {i < breadcrumbs.length - 1
+            ? <><a href={b.url}>{b.name}</a><span aria-hidden="true"> › </span></>
+            : <span aria-current="page">{b.name}</span>}
+        </li>
+      ))}
+    </ol>
+  </nav>
+
+  <header class="qa-header">
+    <p class="qa-pillar">Places · PLC·03</p>
+    <h1>Ravens in Yellowstone: Wolf-Following and Winter Survival</h1>
+  </header>
+
+  <section class="qa-snippet" aria-label="Direct answer">
+    <p><strong class="claim-science">[science]</strong> Yellowstone National Park hosts one of North America's best-studied raven populations. Ravens here are closely associated with the park's wolf packs — following hunts, arriving at kills within minutes, and obtaining substantial food from wolf-killed elk and bison. The wolf reintroduction in 1995 is believed to have increased carrion availability and benefited the resident raven population.</p>
+  </section>
+
+  <section class="qa-section">
+    <h2>The Raven–Wolf Relationship in Yellowstone</h2>
+    <p><strong class="claim-science">[science]</strong> The most scientifically important aspect of Yellowstone's raven ecology is the documented relationship with grey wolves. Stahler, Heinrich, and Crabtree (2002) studied this relationship systematically in Yellowstone and found:<sup><a href="#src-1">1</a></sup></p>
+    <ul>
+      <li>Ravens followed wolves during hunts, waiting at a distance during the chase and kill.</li>
+      <li>Ravens arrived at fresh wolf kills typically within 10–30 minutes of wolves beginning to feed.</li>
+      <li>At large ungulate kills (elk, bison), raven numbers could reach 20–30+ birds within hours.</li>
+      <li>Ravens obtained a significant proportion of their winter food from wolf kills — estimated to consume 15–30% of kill biomass at some carcasses.</li>
+      <li>Ravens showed play behaviour near wolves — aerial acrobatics, object-dropping, and occasionally landing in the vicinity of resting packs, apparently without predator–prey tension.</li>
+    </ul>
+    <p>This relationship benefits ravens directly (reliable access to large carcasses opened by wolves) and may benefit wolves indirectly (ravens act as early-warning systems alerting wolves to competing scavengers at kills).</p>
+  </section>
+
+  <section class="qa-section">
+    <h2>Yellowstone Ravens in Winter</h2>
+    <p><strong class="claim-science">[science]</strong> Winter is the ecologically critical season for Yellowstone ravens. The cold, snow-covered conditions reduce invertebrate availability, making large carrion the dominant food source. The wolf reintroduction in 1995 significantly changed the winter food landscape: prior to wolves, large ungulate mortality was lower and more randomly distributed. With wolves killing elk and bison regularly through winter, ravens gained a more consistent and predictable carrion supply.<sup><a href="#src-1">1</a></sup></p>
+    <p>Non-breeding raven flocks arrive in Yellowstone in autumn and winter, boosting the resident population. These wintering birds exploit the same carcass resources as residents and participate in the information-centre dynamics described by Heinrich — following other ravens from communal roost sites to productive kill sites each morning.</p>
+  </section>
+
+  <section class="qa-section">
+    <h2>Other Yellowstone Raven Food Sources</h2>
+    <p><strong class="claim-science">[science]</strong> While wolf kills are the most studied food source, Yellowstone ravens exploit multiple resources:<sup><a href="#src-1">1</a></sup></p>
+    <ul>
+      <li>Bear kills and grizzly bear scavenging (ravens follow grizzlies as well as wolves).</li>
+      <li>Natural ungulate mortality — animals dying from cold, starvation, and disease.</li>
+      <li>Geothermal areas — Yellowstone's hot springs and thermal zones concentrate arthropods in winter; ravens forage at these warm patches.</li>
+      <li>Visitor facilities — park campgrounds, roadsides, picnic areas.</li>
+      <li>Rodents and other small mammals during the summer season.</li>
+    </ul>
+  </section>
+
+  <section class="qa-section">
+    <h2>Related Pages</h2>
+    <ul>
+      <li><a href="/questions/why-do-ravens-follow-wolves/">Why do ravens follow wolves?</a></li>
+      <li><a href="/behaviour/raven-scavenging-strategies/">Raven scavenging strategies</a></li>
+      <li><a href="/species/common-raven/">Common Raven — species profile</a></li>
+      <li><a href="/places/ravens-in-iceland/">Ravens in Iceland</a></li>
+    </ul>
+  </section>
+
+  <section class="qa-faq qa-section" aria-labelledby="faq-h2">
+    <h2 id="faq-h2">Frequently Asked Questions</h2>
+    {faq.map(item => (
+      <details class="qa-faq-item">
+        <summary class="qa-faq-q">{item.q}</summary>
+        <p class="qa-faq-a">{item.a}</p>
+      </details>
+    ))}
+  </section>
+
+  <section class="qa-sources qa-section" aria-labelledby="src-h2">
+    <h2 id="src-h2">Sources</h2>
+    <ol class="qa-src-list">
+      <li id="src-1">Stahler, D., Heinrich, B. & Smith, D. (2002). Common Ravens, <em>Corvus corax</em>, preferentially associate with grey wolves, <em>Canis lupus</em>, as a foraging strategy in winter. <em>Animal Behaviour</em>, 64(2), 283–290. — raven–wolf association in Yellowstone; kill attendance, food intake.</li>
+    </ol>
+    <p class="qa-claim-note"><strong class="claim-science">[science]</strong> peer-reviewed study</p>
+  </section>
+
+</article>
+</BaseLayout>
+
+<style>
+  .qa-page { max-width: 820px; margin: 0 auto; padding: 2rem 1.25rem 4rem; color: var(--iron-ink, #e8e4d8); font-family: 'Inter', sans-serif; line-height: 1.72; }
+  .qa-breadcrumb ol { display: flex; flex-wrap: wrap; gap: .25rem; list-style: none; padding: 0; margin: 0 0 2rem; font-size: .8rem; color: var(--ink-soft, #8a8070); }
+  .qa-breadcrumb a { color: var(--gold-500, #d4ae5a); text-decoration: none; }
+  .qa-pillar { font-size: .72rem; letter-spacing: .12em; text-transform: uppercase; color: var(--gold-500, #d4ae5a); margin: 0 0 .4rem; }
+  .qa-page h1 { font-family: 'Cormorant Garamond', serif; font-size: clamp(2rem, 5vw, 3rem); font-weight: 700; color: #fff; margin: 0 0 2rem; line-height: 1.1; }
+  .qa-snippet { background: rgba(212,174,90,.08); border-left: 3px solid var(--gold-500, #d4ae5a); border-radius: 0 6px 6px 0; padding: 1rem 1.25rem; margin-bottom: 2.5rem; font-size: 1.03rem; }
+  .qa-section { margin-bottom: 2.5rem; }
+  .qa-section h2 { font-family: 'Cormorant Garamond', serif; font-size: 1.5rem; font-weight: 600; color: #fff; margin: 0 0 .9rem; border-bottom: 1px solid rgba(212,174,90,.2); padding-bottom: .4rem; }
+  .qa-section p { margin: 0 0 1rem; font-size: .97rem; }
+  .qa-section ul { padding-left: 1.25rem; margin: 0 0 1rem; }
+  .qa-section li { margin-bottom: .4rem; font-size: .95rem; }
+  .claim-science { color: #7ab9e0; font-style: normal; font-size: .78rem; }
+  a[href] { color: var(--gold-500, #d4ae5a); }
+  .qa-faq-item { border-bottom: 1px solid rgba(255,255,255,.07); }
+  .qa-faq-q { cursor: pointer; padding: .9rem 0; font-size: .97rem; font-weight: 500; color: #fff; list-style: none; }
+  .qa-faq-q::before { content: '+ '; color: var(--gold-500, #d4ae5a); font-weight: 700; }
+  details[open] .qa-faq-q::before { content: '− '; }
+  .qa-faq-a { margin: 0 0 1rem; line-height: 1.7; font-size: .93rem; color: var(--ink-soft, #c8c0b0); }
+  .qa-src-list { padding-left: 1.25rem; margin: 0 0 1rem; }
+  .qa-src-list li { margin-bottom: .6rem; font-size: .82rem; color: var(--ink-soft, #8a8070); line-height: 1.6; }
+  .qa-claim-note { font-size: .78rem; color: var(--ink-soft, #605848); border-top: 1px solid rgba(255,255,255,.06); padding-top: .75rem; }
+</style>

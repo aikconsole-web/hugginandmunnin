@@ -42,8 +42,12 @@
     });
 
     panel.querySelectorAll<HTMLElement>('[data-f]').forEach(el => {
-      const k = el.dataset.f as keyof typeof s;
-      if (k in s) el.textContent = String(s[k]);
+      const k = el.dataset.f as string;
+      if (k === 'href') {
+        (el as HTMLAnchorElement).href = `/species/${s.id}/`;
+      } else if (k in s) {
+        el.textContent = String((s as any)[k]);
+      }
     });
 
     const f = flags(s);

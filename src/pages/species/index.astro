@@ -1,0 +1,107 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { SPECIES_CONTENT } from '../../data/species-content';
+
+const title       = 'The 10 Raven Species of the World — Identification & Facts';
+const description = 'A complete, sourced guide to all 10 living raven species: Common Raven, Thick-billed Raven, White-necked Raven, Chihuahuan Raven, and more. Field marks, range maps, and conservation status.';
+const path        = '/species/';
+
+const breadcrumbs = [
+  { name: 'Home',    url: '/' },
+  { name: 'Species', url: '/species/' },
+];
+
+const faq = [
+  { q: 'How many raven species are there?', a: 'There are 10 recognised raven species in the genus Corvus. The best known is the Common Raven (Corvus corax), which has the widest range, spanning the entire Holarctic.' },
+  { q: 'What is the largest raven species?', a: 'The Thick-billed Raven (Corvus crassirostris), endemic to the Ethiopian Highlands, rivals the Common Raven as the heaviest corvid, reaching up to 1,500 g and 70 cm in length.' },
+  { q: 'Which raven species is found in Australia?', a: 'Three raven species are found in Australia: the Australian Raven (Corvus coronoides), the Forest Raven (Corvus tasmanicus), and the Little Raven (Corvus mellori). The Forest Raven is Tasmania\'s largest corvid.' },
+];
+---
+
+<BaseLayout
+  title={title}
+  description={description}
+  path={path}
+  breadcrumbs={breadcrumbs}
+  faq={faq}
+>
+
+<div class="spidx-page">
+
+  <nav class="spidx-breadcrumb" aria-label="Breadcrumb">
+    <ol>
+      <li><a href="/">Home</a><span aria-hidden="true"> › </span></li>
+      <li><span aria-current="page">Species</span></li>
+    </ol>
+  </nav>
+
+  <header class="spidx-header">
+    <h1>The 10 Raven Species of the World</h1>
+    <p class="spidx-lead">Complete sourced profiles for every recognised raven species — field marks, size, range, voice, and conservation status.</p>
+  </header>
+
+  <ul class="spidx-grid">
+    {SPECIES_CONTENT.map(sp => (
+      <li class="spidx-card">
+        <a href={`/species/${sp.slug}/`} class="spidx-card-link">
+          <div class="spidx-card-top">
+            <span class="spidx-rune" aria-hidden="true">{sp.rune}</span>
+            <span class="spidx-callnum">{sp.callNum}</span>
+          </div>
+          <h2 class="spidx-name">{sp.commonName}</h2>
+          <p class="spidx-latin"><em>{sp.latinName}</em></p>
+          <p class="spidx-region">{sp.region}</p>
+          <p class="spidx-snippet">{sp.snippet.slice(0, 120)}…</p>
+        </a>
+      </li>
+    ))}
+  </ul>
+
+  <section class="spidx-faq" aria-labelledby="spidx-faq-h2">
+    <h2 id="spidx-faq-h2">Frequently Asked Questions</h2>
+    {faq.map(item => (
+      <details class="spidx-faq-item">
+        <summary class="spidx-faq-q">{item.q}</summary>
+        <p class="spidx-faq-a">{item.a}</p>
+      </details>
+    ))}
+  </section>
+
+</div>
+
+</BaseLayout>
+
+<style>
+.spidx-page { max-width: 1000px; margin: 0 auto; padding: 2rem 1.25rem 4rem; color: var(--iron-ink, #e8e4d8); font-family: 'Inter', sans-serif; }
+
+.spidx-breadcrumb ol { display: flex; gap: .25rem; list-style: none; padding: 0; margin: 0 0 2rem; font-size: .8rem; color: var(--ink-soft, #8a8070); }
+.spidx-breadcrumb a { color: var(--gold-500, #d4ae5a); text-decoration: none; }
+
+.spidx-header { margin-bottom: 2.5rem; }
+.spidx-header h1 { font-family: 'Cormorant Garamond', serif; font-size: clamp(2rem, 5vw, 3rem); font-weight: 700; color: #fff; margin: 0 0 .75rem; }
+.spidx-lead { font-size: 1.05rem; color: var(--ink-soft, #c0b89a); margin: 0; line-height: 1.65; max-width: 680px; }
+
+.spidx-grid { list-style: none; padding: 0; margin: 0 0 3rem; display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 1rem; }
+
+.spidx-card { background: rgba(255,255,255,.04); border: 1px solid rgba(255,255,255,.07); border-radius: 8px; transition: border-color .2s, background .2s; }
+.spidx-card:hover { border-color: rgba(212,174,90,.35); background: rgba(212,174,90,.05); }
+.spidx-card-link { display: block; padding: 1.25rem; text-decoration: none; color: inherit; }
+
+.spidx-card-top { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: .5rem; }
+.spidx-rune { font-family: 'Noto Sans Runic', serif; font-size: 1.8rem; color: var(--gold-500, #d4ae5a); opacity: .4; line-height: 1; }
+.spidx-callnum { font-size: .7rem; letter-spacing: .1em; text-transform: uppercase; color: var(--ink-soft, #8a8070); }
+
+.spidx-name { font-family: 'Cormorant Garamond', serif; font-size: 1.3rem; font-weight: 700; color: #fff; margin: 0 0 .2rem; }
+.spidx-latin { font-size: .82rem; color: var(--ink-soft, #8a8070); margin: 0 0 .3rem; }
+.spidx-region { font-size: .78rem; letter-spacing: .04em; text-transform: uppercase; color: var(--gold-500, #d4ae5a); opacity: .7; margin: 0 0 .6rem; }
+.spidx-snippet { font-size: .84rem; color: var(--ink-soft, #a09070); line-height: 1.55; margin: 0; }
+
+/* FAQ */
+.spidx-faq { border-top: 1px solid rgba(255,255,255,.07); padding-top: 2rem; }
+.spidx-faq h2 { font-family: 'Cormorant Garamond', serif; font-size: 1.5rem; color: #fff; margin: 0 0 1rem; }
+.spidx-faq-item { border-bottom: 1px solid rgba(255,255,255,.07); }
+.spidx-faq-q { cursor: pointer; padding: .9rem 0; font-size: .97rem; font-weight: 500; color: #fff; list-style: none; }
+.spidx-faq-q::before { content: '+ '; color: var(--gold-500, #d4ae5a); font-weight: 700; }
+details[open] .spidx-faq-q::before { content: '− '; }
+.spidx-faq-a { margin: 0 0 1rem; line-height: 1.7; font-size: .93rem; color: var(--ink-soft, #c8c0b0); }
+</style>

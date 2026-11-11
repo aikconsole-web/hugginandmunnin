@@ -1,0 +1,151 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const title       = 'Raven Social Structure — Pairs, Flocks, and Dominance';
+const description = 'Common Ravens are socially complex: they form long-term pair bonds, join communal roosts, navigate dominance hierarchies, and cooperate in ways that require tracking individual relationships.';
+const path        = '/behaviour/raven-social-structure/';
+
+const breadcrumbs = [
+  { name: 'Home',      url: '/' },
+  { name: 'Behaviour', url: '/behaviour/' },
+  { name: 'Raven Social Structure', url: path },
+];
+
+const faq = [
+  { q: 'Are ravens social birds?', a: 'Yes. Ravens are socially complex. Breeding pairs defend exclusive territories year-round, while non-breeding individuals — especially younger birds — form large communal roosts of hundreds to thousands of individuals with internal dominance hierarchies. These two social modes (territorial pair vs roost-based flock) coexist in the same population.' },
+  { q: 'Do ravens form dominance hierarchies?', a: 'Yes. In communal roosts and feeding aggregations, ravens maintain a linear dominance hierarchy. Dominant individuals (typically older, established pairs) have priority access to food and roost positions. Subordinate non-breeders use various strategies — coalitions, alliances, deception — to access resources despite their rank.' },
+  { q: 'Do ravens have friends?', a: 'Ravens maintain differentiated long-term social relationships beyond just dominance rank. Marzluff and Angell (2005) report observations of ravens maintaining affiliative relationships with specific individuals over multiple years — engaging in mutual preening, food sharing between affiliates, and coalition formation. These relationships function similarly to what researchers call "friendships" in primates.' },
+];
+---
+
+<BaseLayout title={title} description={description} path={path} ogType="article"
+  datePublished="2026-11-07" dateModified="2026-11-07"
+  breadcrumbs={breadcrumbs} faq={faq} pageType="Article">
+
+<article class="beh-page">
+  <nav class="beh-breadcrumb" aria-label="Breadcrumb">
+    <ol>
+      {breadcrumbs.map((b, i) => (
+        <li>
+          {i < breadcrumbs.length - 1
+            ? <><a href={b.url}>{b.name}</a><span aria-hidden="true"> › </span></>
+            : <span aria-current="page">{b.name}</span>}
+        </li>
+      ))}
+    </ol>
+  </nav>
+  <header class="beh-header">
+    <p class="beh-pillar">Behaviour · BEH·03</p>
+    <h1>Raven Social Structure</h1>
+    <p class="beh-subtitle">Pairs, Roosts, Dominance, and Long-Term Relationships</p>
+  </header>
+
+  <section class="beh-snippet" aria-label="Quick answer">
+    <p><strong class="claim-science">[science]</strong> Common Ravens operate in two distinct social modes: breeding pairs that defend year-round territories, and non-breeding flocks (roosts of hundreds to thousands) with complex dominance hierarchies. Individuals navigate between these modes as they mature. Within both contexts, ravens maintain long-term differentiated relationships — tracking individuals, rank, and alliance partners over multiple years.</p>
+  </section>
+
+  <section class="beh-section">
+    <h2>Breeding Pairs and Territorial Defence</h2>
+    <p><strong class="claim-science">[science]</strong> Established breeding pairs occupy and defend exclusive territories year-round — not just during nesting season. Territory defence involves direct confrontation with intruders, coordinated pair activities, and vocalisation. The pair bond is maintained year-round through mutual preening (allopreening), coordinated flight, and food sharing between mates.<sup><a href="#src-1">1</a></sup></p>
+    <p>Ravens are socially monogamous — pairs mate exclusively with each other in the overwhelming majority of observed cases, though extra-pair copulation has occasionally been recorded. When one partner dies, the surviving bird typically pairs with a new mate. Pair bonds can last the bird's lifetime (10–15+ years in the wild).</p>
+    <p>Territory sizes vary substantially by habitat and food availability. In areas with predictable year-round food (e.g., near human settlements or large ungulate populations), territories may be smaller and more stable. In low-productivity upland habitats, territories are larger.</p>
+  </section>
+
+  <section class="beh-section">
+    <h2>Non-Breeding Flocks and Communal Roosts</h2>
+    <p><strong class="claim-science">[science]</strong> Young ravens (sub-adults, typically 1–3 years old) and unpaired adults do not hold territories. They form communal roosts — large aggregations returning to the same roost site each night. Roost sizes range from dozens to several thousand birds depending on season and location. Heinrich documented roosts of several hundred birds in Maine winter studies.<sup><a href="#src-2">2</a></sup></p>
+    <p>These roosts serve multiple functions:</p>
+    <ul>
+      <li><strong>Warmth:</strong> Communal roosting reduces heat loss in cold climates.</li>
+      <li><strong>Information centre:</strong> Heinrich proposed that roost members follow successful foragers from the roost each morning to food sources — the "information-centre hypothesis." Naive birds observe which roost members leave looking full and follow them. This has empirical support from Heinrich's observations of raven roost departure behaviour.<sup><a href="#src-2">2</a></sup></li>
+      <li><strong>Mate finding:</strong> Roosts provide contact with potential mates that is unavailable to isolated territorial pairs.</li>
+    </ul>
+  </section>
+
+  <section class="beh-section">
+    <h2>Dominance Hierarchies</h2>
+    <p><strong class="claim-science">[science]</strong> Within feeding aggregations, ravens maintain a linear dominance hierarchy. Dominant individuals (typically established breeding pairs, then older non-breeders) have priority access to carcasses and other food sources. Subordinate individuals — particularly young non-breeders — are displaced from food by dominant birds.<sup><a href="#src-1">1</a></sup></p>
+    <p>Dominant pairs at large carcasses can displace non-breeding flocks by sustained aggressive behaviour. However, non-breeders in large numbers can overwhelm territorial pair defences — a "gang" strategy in which the numerical advantage of the flock overrides the pair's status advantage. Heinrich observed non-breeders recruiting other non-breeders to a carcass site, apparently to dilute territorial-pair aggression.</p>
+  </section>
+
+  <section class="beh-section">
+    <h2>Coalitions and Alliances</h2>
+    <p><strong class="claim-science">[science]</strong> Within the non-breeding flock, individuals form coalitions — partnerships in which two or more subordinate ravens cooperate against dominant birds or compete together for resources. Massen et al. (2015) demonstrated that ravens engage in reciprocal cooperation — birds that received help from a partner were more likely to help that partner in return, and less likely to cooperate with non-partners. This reciprocal altruism requires tracking individual relationship histories over time.<sup><a href="#src-3">3</a></sup></p>
+  </section>
+
+  <section class="beh-section">
+    <h2>Transition: From Flock to Pair</h2>
+    <p><strong class="claim-science">[science]</strong> As ravens mature (typically around age 3–4 years), they transition from non-breeding flock membership to pair formation. Pair formation involves a complex courtship process — extended flights, mutual displays, food gifts, and coordinated behaviour. Once established, the pair acquires and defends a territory, breaking their affiliation with the roost. This transition represents a fundamental shift in social strategy: from information-based flock membership to territorial exclusion.</p>
+    <p>Some individuals remain in the non-breeding population for longer, particularly in areas where territories are saturated. These "floaters" continue to roost communally and exploit the information-centre benefits while awaiting a territory vacancy.</p>
+  </section>
+
+  <section class="beh-section">
+    <h2>Individual Recognition</h2>
+    <p><strong class="claim-science">[science]</strong> Maintaining a dominance hierarchy, coalition partnerships, and pair bonds requires individual recognition — the ability to distinguish specific individuals from conspecifics. Ravens recognise individual conspecifics by voice, visual appearance, and behavioural cues. Marzluff and Angell's field research documented ravens responding differently to familiar vs unfamiliar human researchers — suggesting they also recognise individual humans, a finding with implications for the "ravens remember faces" question.<sup><a href="#src-4">4</a></sup></p>
+  </section>
+
+  <section class="beh-section">
+    <h2>Related Pages</h2>
+    <ul>
+      <li><a href="/behaviour/raven-intelligence/">Raven intelligence — full chapter</a></li>
+      <li><a href="/behaviour/raven-food-caching/">Raven food caching</a></li>
+      <li><a href="/questions/do-ravens-mate-for-life/">Do ravens mate for life?</a></li>
+      <li><a href="/questions/what-is-a-group-of-ravens-called/">What is a group of ravens called?</a></li>
+    </ul>
+  </section>
+
+  <section class="beh-faq beh-section" aria-labelledby="faq-h2">
+    <h2 id="faq-h2">Frequently Asked Questions</h2>
+    {faq.map(item => (
+      <details class="beh-faq-item">
+        <summary class="beh-faq-q">{item.q}</summary>
+        <p class="beh-faq-a">{item.a}</p>
+      </details>
+    ))}
+  </section>
+
+  <section class="beh-sources beh-section" aria-labelledby="src-h2">
+    <h2 id="src-h2">Sources</h2>
+    <ol class="beh-src-list">
+      <li id="src-1">Boarman, W.I. &amp; Heinrich, B. (1999). Common Raven (<em>Corvus corax</em>). In Poole, A. &amp; Gill, F. (eds.), <em>The Birds of North America</em>, No. 476. Academy of Natural Sciences / American Ornithologists' Union. — comprehensive species account including social behaviour.</li>
+      <li id="src-2">Heinrich, B. (1989). <em>Ravens in Winter</em>. Summit Books. — roost social dynamics, information-centre hypothesis, and non-breeder strategies.</li>
+      <li id="src-3">Massen, J.J.M., Ritter, C. &amp; Bugnyar, T. (2015). Tolerance and reward equity predict cooperation in ravens (<em>Corvus corax</em>). <em>Scientific Reports</em> 5, 15021. DOI: 10.1038/srep15021 — reciprocal cooperation and partner preference.</li>
+      <li id="src-4">Marzluff, J.M. &amp; Angell, T. (2005). <em>In the Company of Crows and Ravens</em>. Yale University Press. — individual recognition, pair bonds, and human–raven interactions.</li>
+    </ol>
+    <p class="beh-claim-note"><strong class="claim-science">[science]</strong> peer-reviewed studies and field-guide data</p>
+  </section>
+
+  <nav class="beh-nav-bottom">
+    <a href="/behaviour/raven-food-caching/" class="beh-back">← Raven Food Caching</a>
+    <a href="/behaviour/" class="beh-next">All Behaviour Chapters →</a>
+  </nav>
+</article>
+</BaseLayout>
+
+<style>
+  .beh-page { max-width: 820px; margin: 0 auto; padding: 2rem 1.25rem 4rem; color: var(--iron-ink, #e8e4d8); font-family: 'Inter', sans-serif; line-height: 1.72; }
+  .beh-breadcrumb ol { display: flex; flex-wrap: wrap; gap: .25rem; list-style: none; padding: 0; margin: 0 0 2rem; font-size: .8rem; color: var(--ink-soft, #8a8070); }
+  .beh-breadcrumb a { color: var(--gold-500, #d4ae5a); text-decoration: none; }
+  .beh-pillar { font-size: .72rem; letter-spacing: .12em; text-transform: uppercase; color: var(--gold-500, #d4ae5a); margin: 0 0 .4rem; }
+  .beh-page h1 { font-family: 'Cormorant Garamond', serif; font-size: clamp(2rem, 5vw, 3.25rem); font-weight: 700; color: #fff; margin: 0 0 .4rem; line-height: 1.1; }
+  .beh-subtitle { font-size: 1.1rem; color: var(--ink-soft, #c0b89a); margin: 0 0 2rem; }
+  .beh-snippet { background: rgba(212,174,90,.08); border-left: 3px solid var(--gold-500, #d4ae5a); border-radius: 0 6px 6px 0; padding: 1rem 1.25rem; margin-bottom: 2.5rem; font-size: 1.03rem; }
+  .beh-section { margin-bottom: 2.75rem; }
+  .beh-section h2 { font-family: 'Cormorant Garamond', serif; font-size: 1.6rem; font-weight: 600; color: #fff; margin: 0 0 1rem; border-bottom: 1px solid rgba(212,174,90,.2); padding-bottom: .4rem; }
+  .beh-section p { margin: 0 0 1rem; font-size: .97rem; }
+  .beh-section ul { padding-left: 1.25rem; margin: 0 0 1rem; }
+  .beh-section li { margin-bottom: .5rem; font-size: .95rem; }
+  .claim-science { color: #7ab9e0; font-style: normal; font-size: .78rem; }
+  a[href] { color: var(--gold-500, #d4ae5a); }
+  .beh-faq-item { border-bottom: 1px solid rgba(255,255,255,.07); }
+  .beh-faq-q { cursor: pointer; padding: .9rem 0; font-size: .97rem; font-weight: 500; color: #fff; list-style: none; }
+  .beh-faq-q::before { content: '+ '; color: var(--gold-500, #d4ae5a); font-weight: 700; }
+  details[open] .beh-faq-q::before { content: '− '; }
+  .beh-faq-a { margin: 0 0 1rem; line-height: 1.7; font-size: .93rem; color: var(--ink-soft, #c8c0b0); }
+  .beh-src-list { padding-left: 1.25rem; margin: 0 0 1rem; }
+  .beh-src-list li { margin-bottom: .6rem; font-size: .82rem; color: var(--ink-soft, #8a8070); line-height: 1.6; }
+  .beh-claim-note { font-size: .78rem; color: var(--ink-soft, #605848); border-top: 1px solid rgba(255,255,255,.06); padding-top: .75rem; }
+  .beh-nav-bottom { display: flex; justify-content: space-between; padding-top: 2rem; border-top: 1px solid rgba(255,255,255,.07); }
+  .beh-nav-bottom a { font-size: .9rem; text-decoration: none; }
+  .beh-nav-bottom a:hover { text-decoration: underline; }
+</style>

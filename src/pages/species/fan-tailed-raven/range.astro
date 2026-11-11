@@ -1,0 +1,131 @@
+---
+/**
+ * Species sub-page — Fan-tailed Raven range
+ * SPC·10r
+ * Primary keyword: fan-tailed raven range
+ * Secondary: where does the fan-tailed raven live, corvus rhipidurus range, fan-tailed raven habitat
+ */
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+
+const title       = 'Fan-tailed Raven Range: Where This Species Lives';
+const description = 'The Fan-tailed Raven is confined to the arid cliffs and gorges of the Horn of Africa, Red Sea coast, and Arabian Peninsula to the Levant. This page covers its restricted distribution and cliff-dependent ecology.';
+const path        = '/species/fan-tailed-raven/range/';
+
+const breadcrumbs = [
+  { name: 'Home',              url: '/' },
+  { name: 'Species',           url: '/species/' },
+  { name: 'Fan-tailed Raven',  url: '/species/fan-tailed-raven/' },
+  { name: 'Range',             url: path },
+];
+
+const faq = [
+  { q: 'Where does the Fan-tailed Raven live?', a: 'The Fan-tailed Raven (Corvus rhipidurus) is confined to arid rocky habitats from the Horn of Africa and Red Sea coast north through the Arabian Peninsula to the Levant and south-western Asia. Its range includes Somalia, Djibouti, Eritrea, Ethiopia (arid lowlands), Sudan (Red Sea Hills), Saudi Arabia, Yemen, Oman, UAE, Jordan, Israel (Negev, Judean Desert), Sinai, and south-eastern Turkey. It is essentially the cliff-dweller of the arid Red Sea and Arabian zone.' },
+  { q: 'Is the Fan-tailed Raven found in Israel?', a: 'Yes. The Fan-tailed Raven is resident in the Negev Desert and Judean Desert of Israel, particularly around cliff faces and rocky gorges. Mitzpe Ramon and the Ramon Crater area are reliable observation spots. The species co-occurs here with the Brown-necked Raven — which uses flatter terrain — making the Fan-tailed Raven\'s cliff association the key habitat difference between them in this region.' },
+  { q: 'Why is the Fan-tailed Raven so cliff-dependent?', a: 'The Fan-tailed Raven is an obligate cliff-nester throughout its range — it requires steep cliff faces for nesting and roosting. Its strong cliff association is likely driven by: (1) a predation-free nest site (cliff ledges and crevices are inaccessible to most mammalian predators); (2) the cliff micro-habitat supporting thermal updrafts ideal for the Fan-tailed Raven\'s short-tailed, broad-winged soaring flight; and (3) the cliff face providing shelter and cool microclimate in its otherwise brutally hot arid range.' },
+];
+---
+
+<BaseLayout title={title} description={description} path={path} ogType="article"
+  datePublished="2026-11-07" dateModified="2026-11-07"
+  breadcrumbs={breadcrumbs} faq={faq} pageType="Article">
+
+<article class="qa-page">
+
+  <nav class="qa-breadcrumb" aria-label="Breadcrumb">
+    <ol>
+      {breadcrumbs.map((b, i) => (
+        <li>
+          {i < breadcrumbs.length - 1
+            ? <><a href={b.url}>{b.name}</a><span aria-hidden="true"> › </span></>
+            : <span aria-current="page">{b.name}</span>}
+        </li>
+      ))}
+    </ol>
+  </nav>
+
+  <header class="qa-header">
+    <p class="qa-pillar">Species Sub-page · SPC·10r</p>
+    <h1>Fan-tailed Raven Range: Where This Species Lives</h1>
+  </header>
+
+  <section class="qa-snippet" aria-label="Direct answer">
+    <p><strong class="claim-science">[science]</strong> The Fan-tailed Raven (<em>Corvus rhipidurus</em>) is confined to arid cliff habitats from the Horn of Africa and Red Sea coast across the Arabian Peninsula to the Levant and south-western Turkey. It is an obligate cliff-nester, present wherever there are suitable rocky gorges and escarpments in its arid zone range. It is absent from the flat desert interior where it cannot nest.</p>
+  </section>
+
+  <section class="qa-section">
+    <h2>Distribution</h2>
+    <p><strong class="claim-science">[science]</strong> The Fan-tailed Raven's range follows the Red Sea and Arabian zone of cliff habitat:<sup><a href="#src-1">1</a></sup></p>
+    <ul>
+      <li><strong>Horn of Africa:</strong> Somalia (northern highlands and cliff zones), Djibouti, Eritrea, Ethiopia (eastern lowland scarps and Rift Valley cliff zones — lower than the Thick-billed Raven's highland niche).</li>
+      <li><strong>Red Sea coast:</strong> Sudan (Red Sea Hills), Eritrea coastal zone.</li>
+      <li><strong>Arabian Peninsula:</strong> throughout Saudi Arabia (Hejaz Mountains and Asir escarpment especially), Yemen, Oman (Hajar Mountains), UAE (Hajar foothills), and extending to Kuwait and Iraq in the north.</li>
+      <li><strong>Levant:</strong> Jordan, Israel (Negev, Judean Desert, Arava), Sinai Peninsula (Egypt), and reaching south-eastern Turkey in the Euphrates valley area.</li>
+    </ul>
+    <p>The key to its distribution is not the desert itself but the availability of cliff faces within the desert — absent from flat terrain even within its geographic range.</p>
+  </section>
+
+  <section class="qa-section">
+    <h2>Habitat</h2>
+    <p><strong class="claim-science">[science]</strong> Within its range, the Fan-tailed Raven is a cliff specialist:<sup><a href="#src-1">1</a></sup></p>
+    <ul>
+      <li><strong>Nesting:</strong> obligatory cliff-face nester — ledges and crevices on steep escarpments, gorge walls, and rocky outcrops in hot arid terrain.</li>
+      <li><strong>Communal roosting:</strong> cliff faces used for communal roosting outside the breeding season; some roosts number dozens to hundreds of birds.</li>
+      <li><strong>Foraging:</strong> forages away from cliffs in adjacent desert scrub, wadis, and human habitation; exploits food waste from Bedouin camps, urban areas, and rubbish dumps.</li>
+    </ul>
+    <p>Fan-tailed Ravens and Brown-necked Ravens co-occur throughout much of the Arabian Peninsula and Levant. The Fan-tailed Raven's strict cliff association and the Brown-necked Raven's more flexible nest site use (cliff, palm, pylon) is the key ecological difference allowing coexistence.</p>
+  </section>
+
+  <section class="qa-section">
+    <h2>Related Pages</h2>
+    <ul>
+      <li><a href="/species/fan-tailed-raven/">Fan-tailed Raven — species hub</a></li>
+      <li><a href="/species/fan-tailed-raven/identification/">Fan-tailed Raven identification</a></li>
+      <li><a href="/compare/fan-tailed-raven-vs-brown-necked-raven/">Fan-tailed vs Brown-necked Raven</a></li>
+      <li><a href="/species/brown-necked-raven/range/">Brown-necked Raven range</a></li>
+    </ul>
+  </section>
+
+  <section class="qa-faq qa-section" aria-labelledby="faq-h2">
+    <h2 id="faq-h2">Frequently Asked Questions</h2>
+    {faq.map(item => (
+      <details class="qa-faq-item">
+        <summary class="qa-faq-q">{item.q}</summary>
+        <p class="qa-faq-a">{item.a}</p>
+      </details>
+    ))}
+  </section>
+
+  <section class="qa-sources qa-section" aria-labelledby="src-h2">
+    <h2 id="src-h2">Sources</h2>
+    <ol class="qa-src-list">
+      <li id="src-1">del Hoyo, J. et al. (eds., 2009). <em>Handbook of the Birds of the World</em>, vol. 14. Lynx Edicions. — Fan-tailed Raven species account; distribution, habitat, cliff association, range maps.</li>
+    </ol>
+    <p class="qa-claim-note"><strong class="claim-science">[science]</strong> peer-reviewed or field-guide data</p>
+  </section>
+
+</article>
+</BaseLayout>
+
+<style>
+  .qa-page { max-width: 820px; margin: 0 auto; padding: 2rem 1.25rem 4rem; color: var(--iron-ink, #e8e4d8); font-family: 'Inter', sans-serif; line-height: 1.72; }
+  .qa-breadcrumb ol { display: flex; flex-wrap: wrap; gap: .25rem; list-style: none; padding: 0; margin: 0 0 2rem; font-size: .8rem; color: var(--ink-soft, #8a8070); }
+  .qa-breadcrumb a { color: var(--gold-500, #d4ae5a); text-decoration: none; }
+  .qa-pillar { font-size: .72rem; letter-spacing: .12em; text-transform: uppercase; color: var(--gold-500, #d4ae5a); margin: 0 0 .4rem; }
+  .qa-page h1 { font-family: 'Cormorant Garamond', serif; font-size: clamp(2rem, 5vw, 3rem); font-weight: 700; color: #fff; margin: 0 0 2rem; line-height: 1.1; }
+  .qa-snippet { background: rgba(212,174,90,.08); border-left: 3px solid var(--gold-500, #d4ae5a); border-radius: 0 6px 6px 0; padding: 1rem 1.25rem; margin-bottom: 2.5rem; font-size: 1.03rem; }
+  .qa-section { margin-bottom: 2.5rem; }
+  .qa-section h2 { font-family: 'Cormorant Garamond', serif; font-size: 1.5rem; font-weight: 600; color: #fff; margin: 0 0 .9rem; border-bottom: 1px solid rgba(212,174,90,.2); padding-bottom: .4rem; }
+  .qa-section p { margin: 0 0 1rem; font-size: .97rem; }
+  .qa-section ul { padding-left: 1.25rem; margin: 0 0 1rem; }
+  .qa-section li { margin-bottom: .4rem; font-size: .95rem; }
+  .claim-science { color: #7ab9e0; font-style: normal; font-size: .78rem; }
+  a[href] { color: var(--gold-500, #d4ae5a); }
+  .qa-faq-item { border-bottom: 1px solid rgba(255,255,255,.07); }
+  .qa-faq-q { cursor: pointer; padding: .9rem 0; font-size: .97rem; font-weight: 500; color: #fff; list-style: none; }
+  .qa-faq-q::before { content: '+ '; color: var(--gold-500, #d4ae5a); font-weight: 700; }
+  details[open] .qa-faq-q::before { content: '− '; }
+  .qa-faq-a { margin: 0 0 1rem; line-height: 1.7; font-size: .93rem; color: var(--ink-soft, #c8c0b0); }
+  .qa-src-list { padding-left: 1.25rem; margin: 0 0 1rem; }
+  .qa-src-list li { margin-bottom: .6rem; font-size: .82rem; color: var(--ink-soft, #8a8070); line-height: 1.6; }
+  .qa-claim-note { font-size: .78rem; color: var(--ink-soft, #605848); border-top: 1px solid rgba(255,255,255,.06); padding-top: .75rem; }
+</style>

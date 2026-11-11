@@ -2,52 +2,94 @@
 import '../styles/global.css';
 import { SITE, absolute, ORG_ID, SITE_ID } from '../config/site';
 
+interface FAQ { q: string; a: string; }
+interface BreadcrumbItem { name: string; url: string; }
+
 interface Props {
-  title:       string;
-  description?: string;
-  path:        string;
-  noindex?:    boolean;
+  title:         string;
+  description?:  string;
+  path:          string;
+  noindex?:      boolean;
+  ogType?:       'website' | 'article';
+  datePublished?: string;
+  dateModified?:  string;
+  breadcrumbs?:  BreadcrumbItem[];
+  faq?:          FAQ[];
+  pageType?:     string;   // for schema @type override
 }
 
 const {
   title,
   description = SITE.description,
   path,
-  noindex = false,
+  noindex      = false,
+  ogType       = 'website',
+  datePublished,
+  dateModified = SITE.lastmod,
+  breadcrumbs  = [],
+  faq          = [],
+  pageType,
 } = Astro.props;
 
 const canonical = absolute(path);
 const ogImage   = absolute(SITE.ogImage);
 const PAGE_ID   = `${canonical}#webpage`;
 
-const siteJsonLd = {
-  '@context': 'https://schema.org',
-  '@graph': [
-    {
-      '@type': 'Organization',
-      '@id': ORG_ID,
-      name: SITE.name,
-      url: absolute('/'),
-      description: SITE.description,
-    },
-    {
-      '@type': 'WebSite',
-      '@id': SITE_ID,
-      name: `${SITE.name} — ${SITE.tagline}`,
-      url: absolute('/'),
-      description: SITE.description,
-    },
-    {
-      '@type': 'WebPage',
-      '@id': PAGE_ID,
-      url: canonical,
-      name: title,
-      description,
-      inLanguage: 'en',
-      isPartOf: { '@id': SITE_ID },
-    },
-  ],
-};
+const graph: object[] = [
+  {
+    '@type': 'Organization',
+    '@id': ORG_ID,
+    name: SITE.name,
+    url: absolute('/'),
+    description: SITE.description,
+  },
+  {
+    '@type': 'WebSite',
+    '@id': SITE_ID,
+    name: `${SITE.name} — ${SITE.tagline}`,
+    url: absolute('/'),
+    description: SITE.description,
+  },
+  {
+    '@type': pageType ?? (ogType === 'article' ? 'Article' : 'WebPage'),
+    '@id': PAGE_ID,
+    url: canonical,
+    name: title,
+    description,
+    inLanguage: 'en',
+    isPartOf: { '@id': SITE_ID },
+    publisher: { '@id': ORG_ID },
+    ...(datePublished ? { datePublished } : {}),
+    ...(dateModified  ? { dateModified }  : {}),
+  },
+];
+
+if (breadcrumbs.length > 0) {
+  graph.push({
+    '@type': 'BreadcrumbList',
+    '@id': `${canonical}#breadcrumb`,
+    itemListElement: breadcrumbs.map((b, i) => ({
+      '@type': 'ListItem',
+      position: i + 1,
+      name: b.name,
+      item: absolute(b.url),
+    })),
+  });
+}
+
+if (faq.length > 0) {
+  graph.push({
+    '@type': 'FAQPage',
+    '@id': `${canonical}#faq`,
+    mainEntity: faq.map(f => ({
+      '@type': 'Question',
+      name: f.q,
+      acceptedAnswer: { '@type': 'Answer', text: f.a },
+    })),
+  });
+}
+
+const siteJsonLd = { '@context': 'https://schema.org', '@graph': graph };
 ---
 
 <!doctype html>
@@ -87,6 +129,10 @@ const siteJsonLd = {
   />
 
   <script type="application/ld+json" set:html={JSON.stringify(siteJsonLd)}/>
+
+  <!-- Google AdSense -->
+  <meta name="google-adsense-account" content="ca-pub-9994903154267583">
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9994903154267583" crossorigin="anonymous"></script>
 
   <slot name="head"/>
 </head>

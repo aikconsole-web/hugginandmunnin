@@ -1,0 +1,135 @@
+---
+/**
+ * Species sub-page — Forest Raven nesting
+ * SPC·08n
+ * Primary keyword: forest raven nesting
+ * Secondary: forest raven nest, corvus tasmanicus eggs, tasmanian raven breeding
+ */
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+
+const title       = 'Forest Raven Nesting: Breeding and Nest Sites';
+const description = 'The Forest Raven of Tasmania and south-eastern Australia nests in tall eucalypts and breeds July–October. This page covers nest structure, clutch size, incubation, and the breeding season of Corvus tasmanicus.';
+const path        = '/species/forest-raven/nesting/';
+
+const breadcrumbs = [
+  { name: 'Home',          url: '/' },
+  { name: 'Species',       url: '/species/' },
+  { name: 'Forest Raven',  url: '/species/forest-raven/' },
+  { name: 'Nesting',       url: path },
+];
+
+const faq = [
+  { q: 'Where does the Forest Raven nest?', a: 'The Forest Raven nests in tall trees — primarily large eucalypts in tall open forest and montane woodland. In Tasmania, where it is the dominant large corvid, it uses a wide range of forest types. On the mainland (Victoria, New South Wales, South Australia), it is restricted to montane and south-coastal areas where tall wet forest occurs. It places its nest in the fork or on a stout branch, usually high in the tree.' },
+  { q: 'When does the Forest Raven breed?', a: 'Breeding is from approximately July to October. Egg-laying typically peaks in August–September — the Southern Hemisphere late-winter to spring. Fledging occurs from October onward. The pattern closely mirrors that of the Australian Raven, its nearest relative, with slightly variable timing across the latitudinal range.' },
+  { q: 'How many eggs does the Forest Raven lay?', a: 'Clutch size is typically 3–5 eggs — slightly smaller on average than the Australian Raven. Eggs are pale blue-green to greenish-grey, blotched with brown and grey. Incubation is approximately 20 days. Post-fledging dependence lasts several months, with family groups remaining loosely cohesive through autumn.' },
+];
+---
+
+<BaseLayout title={title} description={description} path={path} ogType="article"
+  datePublished="2026-11-07" dateModified="2026-11-07"
+  breadcrumbs={breadcrumbs} faq={faq} pageType="Article">
+
+<article class="qa-page">
+
+  <nav class="qa-breadcrumb" aria-label="Breadcrumb">
+    <ol>
+      {breadcrumbs.map((b, i) => (
+        <li>
+          {i < breadcrumbs.length - 1
+            ? <><a href={b.url}>{b.name}</a><span aria-hidden="true"> › </span></>
+            : <span aria-current="page">{b.name}</span>}
+        </li>
+      ))}
+    </ol>
+  </nav>
+
+  <header class="qa-header">
+    <p class="qa-pillar">Species Sub-page · SPC·08n</p>
+    <h1>Forest Raven Nesting: Breeding and Nest Sites</h1>
+  </header>
+
+  <section class="qa-snippet" aria-label="Direct answer">
+    <p><strong class="claim-science">[science]</strong> The Forest Raven (<em>Corvus tasmanicus</em>) nests in tall eucalypts and other large trees in tall open forest and montane woodland, primarily in Tasmania. Clutch size is typically 3–5 eggs. Breeding season runs approximately July–October (Southern Hemisphere late-winter to spring).</p>
+  </section>
+
+  <section class="qa-section">
+    <h2>Nest Sites</h2>
+    <p><strong class="claim-science">[science]</strong> The Forest Raven uses tall trees across its range:<sup><a href="#src-1">1</a></sup></p>
+    <ul>
+      <li><strong>Primary sites:</strong> fork or stout horizontal branch of a large eucalyptus or other tall tree in tall open forest, montane woodland, and forest edges. In Tasmania it also uses trees in farmland hedgerows and suburban areas.</li>
+      <li><strong>Height:</strong> nests are typically placed high — 15–30 m above ground where large trees allow.</li>
+      <li><strong>Tasmania:</strong> the dominant large corvid on the island, with no competition from the Australian Raven, allowing use of a wider range of habitats including coastal scrub and agricultural areas.</li>
+    </ul>
+    <p>Pairs hold long-term territories and typically return to the same nest site, adding material to an existing nest structure year after year.</p>
+  </section>
+
+  <section class="qa-section">
+    <h2>Nest Structure and Eggs</h2>
+    <p><strong class="claim-science">[science]</strong> The nest is a large platform of sticks lined with bark, wool, hair, and grasses — typical of Australasian corvids. Clutch: typically 3–5 eggs, pale blue-green to greenish-grey with heavy brown and grey blotching. Incubation: approximately 20 days, primarily by the female while the male provisions her. Chicks fledge at approximately 5–6 weeks; family groups remain associated for several months afterward.<sup><a href="#src-1">1</a></sup></p>
+  </section>
+
+  <section class="qa-section">
+    <h2>Breeding Season</h2>
+    <p><strong class="claim-science">[science]</strong> As a Southern Hemisphere species, the Forest Raven breeds in late winter and spring:<sup><a href="#src-1">1</a></sup></p>
+    <ul>
+      <li><strong>Territory reinforcement / nest refurbishment:</strong> June–July.</li>
+      <li><strong>Egg-laying:</strong> August–September (peak).</li>
+      <li><strong>Fledging:</strong> October–November.</li>
+      <li><strong>Post-fledging dependence:</strong> extends through late summer into autumn.</li>
+    </ul>
+  </section>
+
+  <section class="qa-section">
+    <h2>Related Pages</h2>
+    <ul>
+      <li><a href="/species/forest-raven/">Forest Raven — species hub</a></li>
+      <li><a href="/species/forest-raven/diet/">Forest Raven diet</a></li>
+      <li><a href="/species/australian-raven/nesting/">Australian Raven nesting (closest relative)</a></li>
+      <li><a href="/questions/how-many-eggs-do-ravens-lay/">How many eggs do ravens lay?</a></li>
+    </ul>
+  </section>
+
+  <section class="qa-faq qa-section" aria-labelledby="faq-h2">
+    <h2 id="faq-h2">Frequently Asked Questions</h2>
+    {faq.map(item => (
+      <details class="qa-faq-item">
+        <summary class="qa-faq-q">{item.q}</summary>
+        <p class="qa-faq-a">{item.a}</p>
+      </details>
+    ))}
+  </section>
+
+  <section class="qa-sources qa-section" aria-labelledby="src-h2">
+    <h2 id="src-h2">Sources</h2>
+    <ol class="qa-src-list">
+      <li id="src-1">Higgins, P.J., Peter, J.M. & Cowling, S.J. (eds., 2006). <em>Handbook of Australian, New Zealand and Antarctic Birds</em> (HANZAB), vol. 7. Oxford University Press. — Forest Raven species account; nest, eggs, breeding season.</li>
+    </ol>
+    <p class="qa-claim-note"><strong class="claim-science">[science]</strong> peer-reviewed or field-guide data</p>
+  </section>
+
+</article>
+</BaseLayout>
+
+<style>
+  .qa-page { max-width: 820px; margin: 0 auto; padding: 2rem 1.25rem 4rem; color: var(--iron-ink, #e8e4d8); font-family: 'Inter', sans-serif; line-height: 1.72; }
+  .qa-breadcrumb ol { display: flex; flex-wrap: wrap; gap: .25rem; list-style: none; padding: 0; margin: 0 0 2rem; font-size: .8rem; color: var(--ink-soft, #8a8070); }
+  .qa-breadcrumb a { color: var(--gold-500, #d4ae5a); text-decoration: none; }
+  .qa-pillar { font-size: .72rem; letter-spacing: .12em; text-transform: uppercase; color: var(--gold-500, #d4ae5a); margin: 0 0 .4rem; }
+  .qa-page h1 { font-family: 'Cormorant Garamond', serif; font-size: clamp(2rem, 5vw, 3rem); font-weight: 700; color: #fff; margin: 0 0 2rem; line-height: 1.1; }
+  .qa-snippet { background: rgba(212,174,90,.08); border-left: 3px solid var(--gold-500, #d4ae5a); border-radius: 0 6px 6px 0; padding: 1rem 1.25rem; margin-bottom: 2.5rem; font-size: 1.03rem; }
+  .qa-section { margin-bottom: 2.5rem; }
+  .qa-section h2 { font-family: 'Cormorant Garamond', serif; font-size: 1.5rem; font-weight: 600; color: #fff; margin: 0 0 .9rem; border-bottom: 1px solid rgba(212,174,90,.2); padding-bottom: .4rem; }
+  .qa-section p { margin: 0 0 1rem; font-size: .97rem; }
+  .qa-section ul { padding-left: 1.25rem; margin: 0 0 1rem; }
+  .qa-section li { margin-bottom: .4rem; font-size: .95rem; }
+  .claim-science { color: #7ab9e0; font-style: normal; font-size: .78rem; }
+  a[href] { color: var(--gold-500, #d4ae5a); }
+  .qa-faq-item { border-bottom: 1px solid rgba(255,255,255,.07); }
+  .qa-faq-q { cursor: pointer; padding: .9rem 0; font-size: .97rem; font-weight: 500; color: #fff; list-style: none; }
+  .qa-faq-q::before { content: '+ '; color: var(--gold-500, #d4ae5a); font-weight: 700; }
+  details[open] .qa-faq-q::before { content: '− '; }
+  .qa-faq-a { margin: 0 0 1rem; line-height: 1.7; font-size: .93rem; color: var(--ink-soft, #c8c0b0); }
+  .qa-src-list { padding-left: 1.25rem; margin: 0 0 1rem; }
+  .qa-src-list li { margin-bottom: .6rem; font-size: .82rem; color: var(--ink-soft, #8a8070); line-height: 1.6; }
+  .qa-claim-note { font-size: .78rem; color: var(--ink-soft, #605848); border-top: 1px solid rgba(255,255,255,.06); padding-top: .75rem; }
+</style>

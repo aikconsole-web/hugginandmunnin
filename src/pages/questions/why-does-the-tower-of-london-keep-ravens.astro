@@ -1,0 +1,134 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const title       = 'Why Does the Tower of London Keep Ravens?';
+const description = 'The Tower of London keeps at least six ravens by Royal warrant. This page examines the legend\'s actual history, when the tradition began, and what the ravens\' role is today.';
+const path        = '/questions/why-does-the-tower-of-london-keep-ravens/';
+
+const breadcrumbs = [
+  { name: 'Home',      url: '/' },
+  { name: 'Questions', url: '/questions/' },
+  { name: 'Why Does the Tower of London Keep Ravens?', url: path },
+];
+
+const faq = [
+  { q: 'Why does the Tower of London keep ravens?', a: 'The Tower keeps at least six ravens because of a legend that "if the ravens of the Tower of London are lost or fly away, the Crown and the Tower itself will fall." This legend is not documented before the mid-20th century; it is not a medieval tradition. The ravens are maintained today as a cultural and tourist institution by Historic Royal Palaces.' },
+  { q: 'How old is the Tower of London raven tradition?', a: 'The first documentary evidence of Tower of London ravens as a managed tradition dates to around the 1890s. The specific "doom prophecy" (Crown will fall if ravens leave) is not found in any source before the 1940s–1950s. It was likely developed or formalised during or after World War II, possibly with Churchill\'s involvement.' },
+  { q: 'Are the Tower of London ravens wild or captive?', a: 'The Tower ravens have their flight feathers clipped to prevent them leaving the Tower grounds. They are cared for by the Ravenmaster — a Yeoman Warder with this specific responsibility. The ravens are named, have individual personalities, and some have been dismissed for bad behaviour. They are not wild birds.' },
+];
+---
+
+<BaseLayout title={title} description={description} path={path} ogType="article"
+  datePublished="2026-11-07" dateModified="2026-11-07"
+  breadcrumbs={breadcrumbs} faq={faq} pageType="Article">
+
+<article class="qa-page">
+  <nav class="qa-breadcrumb" aria-label="Breadcrumb">
+    <ol>
+      {breadcrumbs.map((b, i) => (
+        <li>
+          {i < breadcrumbs.length - 1
+            ? <><a href={b.url}>{b.name}</a><span aria-hidden="true"> › </span></>
+            : <span aria-current="page">{b.name}</span>}
+        </li>
+      ))}
+    </ol>
+  </nav>
+  <header class="qa-header">
+    <p class="qa-pillar">Question · History / Cultural</p>
+    <h1>Why Does the Tower of London Keep Ravens?</h1>
+  </header>
+  <section class="qa-snippet" aria-label="Direct answer">
+    <p><strong class="claim-lore">[lore]</strong> The Tower of London keeps at least six ravens because of a legend that if the ravens leave, the Crown and Tower will fall. <strong>This prophecy cannot be traced before the mid-20th century</strong> — it is not a medieval tradition. The ravens are managed by a Yeoman Warder called the Ravenmaster, have their flight feathers clipped, and are individually named. The practice is maintained today by Historic Royal Palaces as a cultural institution.</p>
+  </section>
+
+  <section class="qa-section">
+    <h2>The Legend — and Its Actual Age</h2>
+    <p><strong class="claim-lore">[lore]</strong> The claim that "the Crown and the Tower of London will fall if the ravens leave" is widely reported as an ancient legend. However, the historian Boria Sax investigated the historical record and found no documentary evidence for the prophecy before the 20th century. The earliest solid reference to Tower ravens as a managed group appears to date to the 1890s — not to medieval times.<sup><a href="#src-1">1</a></sup></p>
+    <p>Sax found no mention of Tower ravens in any document, chronicle, or account from the medieval or early modern period. The specific doom-prophecy wording appears to have been formalised, or possibly invented, in the 1940s — with some circumstantial evidence pointing to a connection with wartime morale under Churchill.<sup><a href="#src-1">1</a></sup></p>
+    <p>This does not make the tradition worthless — many beloved national traditions have recent origins — but it means the "ancient royal decree" framing found in popular accounts is not supported by the documentary record.</p>
+  </section>
+
+  <section class="qa-section">
+    <h2>The Ravenmaster</h2>
+    <p><strong class="claim-lore">[lore]</strong> The Ravenmaster is a Yeoman Warder (one of the "Beefeaters") at the Tower of London with specific responsibility for the ravens. The role involves feeding the ravens, monitoring their health, and managing their behaviour. The Ravenmaster's responsibilities are documented in the official records of Historic Royal Palaces, the independent charity that manages the Tower.</p>
+    <p>The ravens are individually named (recent ravens have included Merlina, Poppy, Erin, Jubilee, and others). They are domesticated to the extent that they accept handling and interact with staff and visitors. At least one raven — Raven George — was reportedly dismissed from service in 1986 for "conduct unbecoming" (attacking a television aerial).</p>
+  </section>
+
+  <section class="qa-section">
+    <h2>Flight Feathers and the "Captivity" Question</h2>
+    <p><strong class="claim-science">[science]</strong> The Tower ravens have the primary flight feathers on one wing clipped — a standard avicultural practice that makes sustained flight difficult by creating asymmetry. This prevents the ravens from leaving the Tower grounds. The practice is controversial from an animal welfare perspective and has been debated within the institution. The ravens are otherwise kept in reasonable conditions with appropriate food and veterinary care.<sup><a href="#src-2">2</a></sup></p>
+    <p>Wild Common Ravens have been recorded living 10–15 years; captive ravens can live 30+ years. The Tower ravens' lifespans are not independently published in peer-reviewed literature — the ages reported in press releases and the Ravenmaster's book are institutional records, not scientifically verified data.</p>
+  </section>
+
+  <section class="qa-section">
+    <h2>What The Ravens Actually Are</h2>
+    <p><strong class="claim-science">[science]</strong> Common Ravens (<em>Corvus corax</em>) are highly intelligent corvids with strong pair bonds, complex social behaviour, and remarkable cognitive abilities. The Tower ravens' individual personalities, names, and longevity are consistent with what field research on wild and captive ravens predicts. The Ravenmaster's first-hand observations of the Tower ravens align well with the scientific literature on raven cognition and behaviour (Heinrich 2000; Bugnyar et al.).<sup><a href="#src-3">3</a></sup></p>
+  </section>
+
+  <section class="qa-section">
+    <h2>Summary</h2>
+    <ul>
+      <li>The Tower of London keeps ravens because of a legend about the Crown falling if they leave.</li>
+      <li>That legend cannot be traced earlier than approximately the 1890s–1940s — it is not medieval.</li>
+      <li>The ravens are managed, named, wing-clipped birds; not a wild or naturally resident population.</li>
+      <li>The Ravenmaster is a specific Yeoman Warder role created to care for them.</li>
+      <li>The institution is maintained today by Historic Royal Palaces as cultural heritage.</li>
+    </ul>
+  </section>
+
+  <section class="qa-section">
+    <h2>Related Pages</h2>
+    <ul>
+      <li><a href="/questions/how-long-do-ravens-live/">How long do ravens live?</a></li>
+      <li><a href="/myths/are-ravens-bad-luck/">Are ravens bad luck?</a></li>
+      <li><a href="/behaviour/raven-intelligence/">Raven intelligence — full chapter</a></li>
+    </ul>
+  </section>
+
+  <section class="qa-faq qa-section" aria-labelledby="faq-h2">
+    <h2 id="faq-h2">Frequently Asked Questions</h2>
+    {faq.map(item => (
+      <details class="qa-faq-item">
+        <summary class="qa-faq-q">{item.q}</summary>
+        <p class="qa-faq-a">{item.a}</p>
+      </details>
+    ))}
+  </section>
+
+  <section class="qa-sources qa-section" aria-labelledby="src-h2">
+    <h2 id="src-h2">Sources</h2>
+    <ol class="qa-src-list">
+      <li id="src-1">Sax, B. (2007). <em>Crow</em>. Reaktion Books. — historical investigation of the Tower of London raven tradition and the absence of pre-20th-century documentation (pp. 112–119).</li>
+      <li id="src-2">Skaife, C. (2018). <em>The Ravenmaster: My Life with the Ravens at the Tower of London</em>. Fourth Estate. — Ravenmaster's first-person account of raven care, wing clipping, and individual birds. (Institutional records; not peer-reviewed.)</li>
+      <li id="src-3">Heinrich, B. (2000). <em>Mind of the Raven</em>. HarperCollins. — baseline on raven cognition, longevity, and individual personality in wild and captive birds.</li>
+    </ol>
+    <p class="qa-claim-note"><strong class="claim-lore">[lore]</strong> named cultural/historical source · <strong class="claim-science">[science]</strong> peer-reviewed/field-guide</p>
+  </section>
+</article>
+</BaseLayout>
+
+<style>
+  .qa-page { max-width: 820px; margin: 0 auto; padding: 2rem 1.25rem 4rem; color: var(--iron-ink, #e8e4d8); font-family: 'Inter', sans-serif; line-height: 1.72; }
+  .qa-breadcrumb ol { display: flex; flex-wrap: wrap; gap: .25rem; list-style: none; padding: 0; margin: 0 0 2rem; font-size: .8rem; color: var(--ink-soft, #8a8070); }
+  .qa-breadcrumb a { color: var(--gold-500, #d4ae5a); text-decoration: none; }
+  .qa-pillar { font-size: .72rem; letter-spacing: .12em; text-transform: uppercase; color: var(--gold-500, #d4ae5a); margin: 0 0 .4rem; }
+  .qa-page h1 { font-family: 'Cormorant Garamond', serif; font-size: clamp(2rem, 5vw, 3rem); font-weight: 700; color: #fff; margin: 0 0 2rem; line-height: 1.1; }
+  .qa-snippet { background: rgba(212,174,90,.08); border-left: 3px solid var(--gold-500, #d4ae5a); border-radius: 0 6px 6px 0; padding: 1rem 1.25rem; margin-bottom: 2.5rem; font-size: 1.03rem; }
+  .qa-section { margin-bottom: 2.5rem; }
+  .qa-section h2 { font-family: 'Cormorant Garamond', serif; font-size: 1.5rem; font-weight: 600; color: #fff; margin: 0 0 .9rem; border-bottom: 1px solid rgba(212,174,90,.2); padding-bottom: .4rem; }
+  .qa-section p { margin: 0 0 1rem; font-size: .97rem; }
+  .qa-section ul { padding-left: 1.25rem; margin: 0 0 1rem; }
+  .qa-section li { margin-bottom: .4rem; font-size: .95rem; }
+  .claim-science { color: #7ab9e0; font-style: normal; font-size: .78rem; }
+  .claim-lore    { color: #c8a46a; font-style: normal; font-size: .78rem; }
+  a[href] { color: var(--gold-500, #d4ae5a); }
+  .qa-faq-item { border-bottom: 1px solid rgba(255,255,255,.07); }
+  .qa-faq-q { cursor: pointer; padding: .9rem 0; font-size: .97rem; font-weight: 500; color: #fff; list-style: none; }
+  .qa-faq-q::before { content: '+ '; color: var(--gold-500, #d4ae5a); font-weight: 700; }
+  details[open] .qa-faq-q::before { content: '− '; }
+  .qa-faq-a { margin: 0 0 1rem; line-height: 1.7; font-size: .93rem; color: var(--ink-soft, #c8c0b0); }
+  .qa-src-list { padding-left: 1.25rem; margin: 0 0 1rem; }
+  .qa-src-list li { margin-bottom: .6rem; font-size: .82rem; color: var(--ink-soft, #8a8070); line-height: 1.6; }
+  .qa-claim-note { font-size: .78rem; color: var(--ink-soft, #605848); border-top: 1px solid rgba(255,255,255,.06); padding-top: .75rem; }
+</style>

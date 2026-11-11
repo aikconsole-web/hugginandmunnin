@@ -1,0 +1,140 @@
+---
+/**
+ * World Lore — Elijah and the Ravens
+ * MYW·14
+ * Primary keyword: elijah and the ravens
+ * Secondary: ravens fed elijah, 1 kings 17 ravens, ravens bring food to elijah
+ */
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+
+const title       = 'Elijah and the Ravens: The Biblical Story';
+const description = 'In 1 Kings 17, God commands ravens to feed the prophet Elijah bread and meat at the brook Cherith. This page examines the biblical text, what it says and doesn\'t say, and how the story has been interpreted in Christian and Jewish tradition.';
+const path        = '/lore/world/elijah-and-the-ravens/';
+
+const breadcrumbs = [
+  { name: 'Home',       url: '/' },
+  { name: 'World Lore', url: '/lore/world/' },
+  { name: 'Elijah and the Ravens', url: path },
+];
+
+const faq = [
+  { q: 'What does the Bible say about ravens feeding Elijah?', a: '1 Kings 17:4–6 reads: "It shall be that you will drink of the brook, and I have commanded the ravens to provide for you there." Then: "The ravens brought him bread and meat in the morning and bread and meat in the evening, and he drank from the brook." The text states the ravens brought food twice daily, but gives no detail about where the ravens obtained the food or what kind of bread and meat.' },
+  { q: 'Why did God use ravens to feed Elijah?', a: 'The text does not give a reason for the choice of ravens specifically. Rabbinic tradition and Christian commentators have offered various interpretations: ravens are unclean birds (Leviticus 11:15) used by God in a miraculous act to show that he provides even through unexpected means; or the raven was chosen because it is a natural scavenger associated with remote wilderness, fitting the landscape of Elijah\'s hiding. The choice of ravens adds to the miraculous character of the narrative — an impure bird bringing pure food to God\'s prophet.' },
+  { q: 'Is the story of ravens feeding Elijah historical?', a: 'The story is presented in the Hebrew Bible as a historical event. It is not independently corroborated by non-biblical sources, and scholarly opinion on the historicity of the Elijah narratives varies widely. For religious traditions that accept the Bible as sacred history, the feeding is a literal miracle. For historians and biblical scholars, the narrative is studied as religious literature from the 9th century BCE or later, with possible oral tradition behind it.' },
+];
+---
+
+<BaseLayout title={title} description={description} path={path} ogType="article"
+  datePublished="2026-11-07" dateModified="2026-11-07"
+  breadcrumbs={breadcrumbs} faq={faq} pageType="Article">
+
+<article class="qa-page">
+
+  <nav class="qa-breadcrumb" aria-label="Breadcrumb">
+    <ol>
+      {breadcrumbs.map((b, i) => (
+        <li>
+          {i < breadcrumbs.length - 1
+            ? <><a href={b.url}>{b.name}</a><span aria-hidden="true"> › </span></>
+            : <span aria-current="page">{b.name}</span>}
+        </li>
+      ))}
+    </ol>
+  </nav>
+
+  <header class="qa-header">
+    <p class="qa-pillar">World Lore · MYW·14</p>
+    <h1>Elijah and the Ravens: The Biblical Story</h1>
+  </header>
+
+  <section class="qa-snippet" aria-label="Direct answer">
+    <p><strong class="claim-lore">[lore]</strong> In 1 Kings 17:4–6, God tells the prophet Elijah to hide at the brook Cherith, east of the Jordan, and promises that ravens will bring him food. The ravens duly bring bread and meat morning and evening until the brook dries up. It is one of the most memorable raven passages in Western sacred literature and has been interpreted by Jewish and Christian commentators for two millennia.</p>
+  </section>
+
+  <section class="qa-section">
+    <h2>The Biblical Text</h2>
+    <p><strong class="claim-lore">[lore]</strong> The passage falls within the account of Elijah's flight from King Ahab after prophesying a drought. God commands him to the brook Cherith, east of the Jordan River:<sup><a href="#src-1">1</a></sup></p>
+    <blockquote>
+      <p>"And it shall be, that thou shalt drink of the brook; and I have commanded the ravens to feed thee there." (1 Kings 17:4, KJV)</p>
+      <p>"And the ravens brought him bread and flesh in the morning, and bread and flesh in the evening; and he drank of the brook." (1 Kings 17:6, KJV)</p>
+    </blockquote>
+    <p>The feeding continues until the drought dries the brook, at which point God sends Elijah to Zarephath. The narrative is terse: no explanation of how the ravens obtained the food, what kind of bread and meat they brought, or how long the period lasted.</p>
+  </section>
+
+  <section class="qa-section">
+    <h2>The Significance of the Raven</h2>
+    <p><strong class="claim-lore">[lore]</strong> The choice of ravens as divine messengers carries theological weight for the original audience. Under Levitical law (Leviticus 11:15; Deuteronomy 14:14), the raven is an unclean bird — one that Israelites were forbidden to eat. Using an unclean bird to provision a prophet underlines the miraculous nature of the event: God works through unexpected and even ritually impure means to fulfil his purposes.<sup><a href="#src-2">2</a></sup></p>
+    <p>The raven's association with wilderness, scavenging, and remoteness also fits the narrative setting. Elijah is hidden in an isolated place; the raven, a wide-ranging scavenger at home in desert and cliff country, is a plausible inhabitant of that landscape even as a miraculous actor within it.</p>
+  </section>
+
+  <section class="qa-section">
+    <h2>Rabbinic and Patristic Interpretations</h2>
+    <p><strong class="claim-lore">[lore]</strong> The story generated extensive commentary in both Jewish and Christian traditions:<sup><a href="#src-2">2</a></sup></p>
+    <ul>
+      <li><strong>Rabbinic tradition:</strong> the Talmud (Sanhedrin 113a) records debate over what kind of food the ravens brought and whether Elijah ate food provided by an unclean bird. Some traditions suggested the ravens obtained food from the table of wicked Ahab, adding ironic significance: the prophet fed by his enemy's provisions via an impure bird.</li>
+      <li><strong>Some rabbis:</strong> proposed reading <em>orvim</em> (ravens) as a toponym (men of Orbo, or Arab traders) — an interpretation that would explain the food's origin. This reading is a minority view; the standard reading is literal ravens.</li>
+      <li><strong>Christian patristic sources:</strong> writers including Origen and Jerome treated the ravens as a straightforward miracle demonstrating God's providential care for his servants. The raven's natural character (a bird that eats flesh) bringing flesh to the prophet was read as a sign of divine power overcoming nature.</li>
+    </ul>
+  </section>
+
+  <section class="qa-section">
+    <h2>The Raven's Appearance in Jesus's Teaching</h2>
+    <p><strong class="claim-lore">[lore]</strong> The 1 Kings narrative is part of a broader biblical treatment of ravens as creatures under God's providential care. In Luke 12:24, Jesus points to the raven explicitly: "Consider the ravens: They do not sow or reap, they have no storeroom or barn; yet God feeds them." This teaching draws on the raven's reputation as a scavenger without agriculture — and implies God's provision over all creation, connecting to the Elijah episode indirectly by affirming divine care for even this most unlikely of birds.</p>
+  </section>
+
+  <section class="qa-section">
+    <h2>Related Pages</h2>
+    <ul>
+      <li><a href="/lore/world/ravens-in-the-bible/">Ravens in the Bible — all passages</a></li>
+      <li><a href="/questions/why-are-ravens-associated-with-death/">Why are ravens associated with death?</a></li>
+      <li><a href="/lore/world/raven-symbolism/">Raven symbolism across cultures</a></li>
+    </ul>
+  </section>
+
+  <section class="qa-faq qa-section" aria-labelledby="faq-h2">
+    <h2 id="faq-h2">Frequently Asked Questions</h2>
+    {faq.map(item => (
+      <details class="qa-faq-item">
+        <summary class="qa-faq-q">{item.q}</summary>
+        <p class="qa-faq-a">{item.a}</p>
+      </details>
+    ))}
+  </section>
+
+  <section class="qa-sources qa-section" aria-labelledby="src-h2">
+    <h2 id="src-h2">Sources</h2>
+    <ol class="qa-src-list">
+      <li id="src-1"><em>The Holy Bible</em>, New International Version (NIV). Zondervan, 2011. — 1 Kings 17:1–6; Luke 12:24.</li>
+      <li id="src-2">Cansdale, G.S. (1970). <em>Animals of Bible Lands</em>. Paternoster Press. — raven identification, Levitical status, commentary on 1 Kings 17.</li>
+    </ol>
+    <p class="qa-claim-note"><strong class="claim-lore">[lore]</strong> named cultural/historical source</p>
+  </section>
+
+</article>
+</BaseLayout>
+
+<style>
+  .qa-page { max-width: 820px; margin: 0 auto; padding: 2rem 1.25rem 4rem; color: var(--iron-ink, #e8e4d8); font-family: 'Inter', sans-serif; line-height: 1.72; }
+  .qa-breadcrumb ol { display: flex; flex-wrap: wrap; gap: .25rem; list-style: none; padding: 0; margin: 0 0 2rem; font-size: .8rem; color: var(--ink-soft, #8a8070); }
+  .qa-breadcrumb a { color: var(--gold-500, #d4ae5a); text-decoration: none; }
+  .qa-pillar { font-size: .72rem; letter-spacing: .12em; text-transform: uppercase; color: var(--gold-500, #d4ae5a); margin: 0 0 .4rem; }
+  .qa-page h1 { font-family: 'Cormorant Garamond', serif; font-size: clamp(2rem, 5vw, 3rem); font-weight: 700; color: #fff; margin: 0 0 2rem; line-height: 1.1; }
+  .qa-snippet { background: rgba(212,174,90,.08); border-left: 3px solid var(--gold-500, #d4ae5a); border-radius: 0 6px 6px 0; padding: 1rem 1.25rem; margin-bottom: 2.5rem; font-size: 1.03rem; }
+  .qa-section { margin-bottom: 2.5rem; }
+  .qa-section h2 { font-family: 'Cormorant Garamond', serif; font-size: 1.5rem; font-weight: 600; color: #fff; margin: 0 0 .9rem; border-bottom: 1px solid rgba(212,174,90,.2); padding-bottom: .4rem; }
+  .qa-section p, blockquote p { margin: 0 0 1rem; font-size: .97rem; }
+  .qa-section ul { padding-left: 1.25rem; margin: 0 0 1rem; }
+  .qa-section li { margin-bottom: .4rem; font-size: .95rem; }
+  blockquote { border-left: 3px solid rgba(212,174,90,.35); margin: 0 0 1.25rem; padding: .5rem 1rem; background: rgba(255,255,255,.03); }
+  blockquote p { font-style: italic; color: var(--ink-soft, #c8c0b0); }
+  .claim-lore { color: #c4a26a; font-style: normal; font-size: .78rem; }
+  a[href] { color: var(--gold-500, #d4ae5a); }
+  .qa-faq-item { border-bottom: 1px solid rgba(255,255,255,.07); }
+  .qa-faq-q { cursor: pointer; padding: .9rem 0; font-size: .97rem; font-weight: 500; color: #fff; list-style: none; }
+  .qa-faq-q::before { content: '+ '; color: var(--gold-500, #d4ae5a); font-weight: 700; }
+  details[open] .qa-faq-q::before { content: '− '; }
+  .qa-faq-a { margin: 0 0 1rem; line-height: 1.7; font-size: .93rem; color: var(--ink-soft, #c8c0b0); }
+  .qa-src-list { padding-left: 1.25rem; margin: 0 0 1rem; }
+  .qa-src-list li { margin-bottom: .6rem; font-size: .82rem; color: var(--ink-soft, #8a8070); line-height: 1.6; }
+  .qa-claim-note { font-size: .78rem; color: var(--ink-soft, #605848); border-top: 1px solid rgba(255,255,255,.06); padding-top: .75rem; }
+</style>

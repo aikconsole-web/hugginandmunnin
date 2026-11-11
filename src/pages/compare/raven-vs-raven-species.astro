@@ -1,0 +1,217 @@
+---
+/**
+ * Compare — Raven vs raven species (all 8 Corvus ravens compared)
+ * Primary keyword: raven species comparison
+ * Secondary: types of ravens compared, raven species differences, corvus raven identification
+ */
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const title       = 'Raven Species Comparison: How Do All 8 Raven Species Differ?';
+const description = 'Eight species in the genus Corvus are called ravens, ranging from the familiar Common Raven to the little-known Somali Crow. This page compares all eight by size, range, bill shape, habitat, and key identification features.';
+const path        = '/compare/raven-vs-raven-species/';
+
+const breadcrumbs = [
+  { name: 'Home',    url: '/' },
+  { name: 'Compare', url: '/compare/' },
+  { name: 'Raven Species Comparison', url: path },
+];
+
+const faq = [
+  { q: 'How many species of raven are there?', a: 'Eight species in the genus Corvus are conventionally called ravens: the Common Raven (Corvus corax), Thick-billed Raven (C. crassirostris), White-necked Raven (C. albicollis), Chihuahuan Raven (C. cryptoleucus), Brown-necked Raven (C. ruficollis), Fan-tailed Raven (C. rhipidurus), Australian Raven (C. coronoides), and Forest Raven (C. tasmanicus). Some taxonomic authorities also include the Little Raven (C. mellori) as a ninth species; others treat Somali Crow (C. edithae) separately. The classification is not universally agreed, with some sources recognising more or fewer species.' },
+  { q: 'What is the largest raven species?', a: 'The Common Raven (Corvus corax) is the largest raven and the largest passerine bird in the world, reaching 69 cm length and 1,600 g in large northern males. The Thick-billed Raven (C. crassirostris) of the Ethiopian highlands is a close second in bulk, with a massive bill that may exceed the Common Raven in bill volume. The smallest "raven" species are the Fan-tailed Raven and Brown-necked Raven of Africa and the Middle East, which overlap with large crows in size.' },
+  { q: 'What is the rarest raven species?', a: 'The Somali Crow (Corvus edithae, also called Dwarf Raven) has the most restricted range of any raven species — endemic to the Horn of Africa (Somalia, eastern Ethiopia, Djibouti) and very poorly known. The Forest Raven (Corvus tasmanicus) is restricted to Tasmania and small parts of south-eastern Australia and is the rarest of the Australian ravens. The Thick-billed Raven, while locally common in the Ethiopian highlands, has an extremely limited global range.' },
+];
+---
+
+<BaseLayout title={title} description={description} path={path} ogType="article"
+  datePublished="2026-11-08" dateModified="2026-11-08"
+  breadcrumbs={breadcrumbs} faq={faq} pageType="Article">
+
+<article class="qa-page">
+
+  <nav class="qa-breadcrumb" aria-label="Breadcrumb">
+    <ol>
+      {breadcrumbs.map((b, i) => (
+        <li>
+          {i < breadcrumbs.length - 1
+            ? <><a href={b.url}>{b.name}</a><span aria-hidden="true"> › </span></>
+            : <span aria-current="page">{b.name}</span>}
+        </li>
+      ))}
+    </ol>
+  </nav>
+
+  <header class="qa-header">
+    <p class="qa-pillar">Compare</p>
+    <h1>Raven Species Comparison: How Do All 8 Raven Species Differ?</h1>
+  </header>
+
+  <section class="qa-snippet" aria-label="Direct answer">
+    <p><strong class="claim-science">[science]</strong> Eight Corvus species are called ravens, ranging from the cosmopolitan Common Raven (the world's largest passerine) to the range-restricted Somali Crow. They differ substantially in size, bill shape, range, habitat, and social structure — the name "raven" reflects superficial similarity rather than a single monophyletic group within Corvus.</p>
+  </section>
+
+  <section class="qa-section">
+    <h2>At a Glance: The Eight Raven Species</h2>
+    <div style="overflow-x:auto;">
+      <table style="width:100%;border-collapse:collapse;font-size:.87rem;">
+        <thead>
+          <tr style="border-bottom:2px solid rgba(212,174,90,.4);">
+            <th style="text-align:left;padding:.5rem .75rem;color:var(--gold-500,#d4ae5a);">Species</th>
+            <th style="text-align:left;padding:.5rem .75rem;color:var(--gold-500,#d4ae5a);">Length</th>
+            <th style="text-align:left;padding:.5rem .75rem;color:var(--gold-500,#d4ae5a);">Weight</th>
+            <th style="text-align:left;padding:.5rem .75rem;color:var(--gold-500,#d4ae5a);">Range</th>
+            <th style="text-align:left;padding:.5rem .75rem;color:var(--gold-500,#d4ae5a);">Key feature</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr style="border-bottom:1px solid rgba(255,255,255,.07);">
+            <td style="padding:.5rem .75rem;"><a href="/species/common-raven/">Common Raven</a> <em>C. corax</em></td>
+            <td style="padding:.5rem .75rem;">54–67 cm</td>
+            <td style="padding:.5rem .75rem;">690–1,600 g</td>
+            <td style="padding:.5rem .75rem;">Holarctic; widest of all</td>
+            <td style="padding:.5rem .75rem;">Largest passerine; wedge tail; prominent hackles</td>
+          </tr>
+          <tr style="border-bottom:1px solid rgba(255,255,255,.07);">
+            <td style="padding:.5rem .75rem;"><a href="/species/thick-billed-raven/">Thick-billed Raven</a> <em>C. crassirostris</em></td>
+            <td style="padding:.5rem .75rem;">60–65 cm</td>
+            <td style="padding:.5rem .75rem;">900–1,500 g</td>
+            <td style="padding:.5rem .75rem;">Ethiopian highlands</td>
+            <td style="padding:.5rem .75rem;">Massive arched bill; white nape patch</td>
+          </tr>
+          <tr style="border-bottom:1px solid rgba(255,255,255,.07);">
+            <td style="padding:.5rem .75rem;"><a href="/species/white-necked-raven/">White-necked Raven</a> <em>C. albicollis</em></td>
+            <td style="padding:.5rem .75rem;">50–54 cm</td>
+            <td style="padding:.5rem .75rem;">610–850 g</td>
+            <td style="padding:.5rem .75rem;">Eastern & southern Africa</td>
+            <td style="padding:.5rem .75rem;">White collar; deep arched bill</td>
+          </tr>
+          <tr style="border-bottom:1px solid rgba(255,255,255,.07);">
+            <td style="padding:.5rem .75rem;"><a href="/species/chihuahuan-raven/">Chihuahuan Raven</a> <em>C. cryptoleucus</em></td>
+            <td style="padding:.5rem .75rem;">44–51 cm</td>
+            <td style="padding:.5rem .75rem;">430–650 g</td>
+            <td style="padding:.5rem .75rem;">SW USA, N Mexico</td>
+            <td style="padding:.5rem .75rem;">White feather bases on neck; flat grassland specialist</td>
+          </tr>
+          <tr style="border-bottom:1px solid rgba(255,255,255,.07);">
+            <td style="padding:.5rem .75rem;"><a href="/species/brown-necked-raven/">Brown-necked Raven</a> <em>C. ruficollis</em></td>
+            <td style="padding:.5rem .75rem;">46–52 cm</td>
+            <td style="padding:.5rem .75rem;">430–570 g</td>
+            <td style="padding:.5rem .75rem;">N Africa, Middle East to India</td>
+            <td style="padding:.5rem .75rem;">Brown wash on neck and breast; desert specialist</td>
+          </tr>
+          <tr style="border-bottom:1px solid rgba(255,255,255,.07);">
+            <td style="padding:.5rem .75rem;"><a href="/species/fan-tailed-raven/">Fan-tailed Raven</a> <em>C. rhipidurus</em></td>
+            <td style="padding:.5rem .75rem;">46–47 cm</td>
+            <td style="padding:.5rem .75rem;">390–530 g</td>
+            <td style="padding:.5rem .75rem;">NE Africa, Middle East</td>
+            <td style="padding:.5rem .75rem;">Very short, fan-shaped tail; cliff-dwelling</td>
+          </tr>
+          <tr style="border-bottom:1px solid rgba(255,255,255,.07);">
+            <td style="padding:.5rem .75rem;"><a href="/species/australian-raven/">Australian Raven</a> <em>C. coronoides</em></td>
+            <td style="padding:.5rem .75rem;">46–53 cm</td>
+            <td style="padding:.5rem .75rem;">650–900 g</td>
+            <td style="padding:.5rem .75rem;">SE and S Australia</td>
+            <td style="padding:.5rem .75rem;">Long throat hackles; distinctive "wailing" call</td>
+          </tr>
+          <tr>
+            <td style="padding:.5rem .75rem;"><a href="/species/forest-raven/">Forest Raven</a> <em>C. tasmanicus</em></td>
+            <td style="padding:.5rem .75rem;">52–55 cm</td>
+            <td style="padding:.5rem .75rem;">650–820 g</td>
+            <td style="padding:.5rem .75rem;">Tasmania; SE Australia</td>
+            <td style="padding:.5rem .75rem;">Stocky; short tail; heavy bill; forest habitat</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <section class="qa-section">
+    <h2>Bill Shape as a Diagnostic Feature</h2>
+    <p><strong class="claim-science">[science]</strong> Bill morphology is one of the most useful field characters for separating raven species. Within the ravens, bill shape varies from the moderate curves of the Common Raven to the extreme arched bill of the Thick-billed Raven — the most specialised corvid bill known.<sup><a href="#src-1">1</a></sup></p>
+    <ul>
+      <li><strong>Common Raven:</strong> large, moderately arched, with a culmen curve that becomes more pronounced in older individuals.</li>
+      <li><strong>Thick-billed Raven:</strong> massively arched and deep — the bill depth approaches the bill length. Used for prying apart large carcasses; the white ivory-coloured patch at the bill base is diagnostic.</li>
+      <li><strong>White-necked Raven:</strong> deeply arched and relatively long; intermediate between Common and Thick-billed.</li>
+      <li><strong>Fan-tailed Raven:</strong> comparatively short and straight-edged for a raven; the tail shape is a more reliable diagnostic.</li>
+    </ul>
+  </section>
+
+  <section class="qa-section">
+    <h2>Tail Shape</h2>
+    <p><strong class="claim-science">[science]</strong> Tail shape is immediately visible in flight and is one of the best quick-separation characters between raven species and from crows:<sup><a href="#src-1">1</a></sup></p>
+    <ul>
+      <li><strong>Common Raven:</strong> long, distinctly diamond/wedge-shaped — the central tail feathers project beyond the outer ones.</li>
+      <li><strong>Fan-tailed Raven:</strong> short and fan-shaped (rounded), giving the bird a distinctive "compressed" silhouette in flight — the defining field character.</li>
+      <li><strong>Australian Raven / Forest Raven:</strong> rounded to slightly graduated tail, shorter wedge than Common Raven.</li>
+      <li><strong>Chihuahuan / Brown-necked / White-necked Ravens:</strong> wedge-tailed but with intermediate length between Common Raven and large crows.</li>
+    </ul>
+  </section>
+
+  <section class="qa-section">
+    <h2>Habitat Specialisation</h2>
+    <p><strong class="claim-science">[science]</strong> The eight raven species show diverse habitat preferences that largely explain their geographic distributions:<sup><a href="#src-1">1</a></sup></p>
+    <ul>
+      <li><strong>Common Raven:</strong> generalist across habitats — arctic tundra, boreal forest, desert, mountain, agricultural, urban.</li>
+      <li><strong>Thick-billed Raven:</strong> highland specialist; restricted to the Ethiopian Plateau above 2,000 m.</li>
+      <li><strong>Fan-tailed Raven:</strong> cliff specialist in arid zones; forages in open desert and semi-desert but always close to cliff nesting habitat.</li>
+      <li><strong>Brown-necked Raven:</strong> desert and semi-desert specialist across the Sahara, Arabian Peninsula, and into South Asia.</li>
+      <li><strong>Chihuahuan Raven:</strong> short-grass prairie and desert scrub specialist; most colonial of the ravens, nesting in loose groups.</li>
+      <li><strong>Forest Raven:</strong> temperate forest specialist; more arboreal than other Australian corvids.</li>
+    </ul>
+  </section>
+
+  <section class="qa-section">
+    <h2>Related Pages</h2>
+    <ul>
+      <li><a href="/species/">All raven species</a></li>
+      <li><a href="/compare/raven-vs-crow/">Raven vs crow</a></li>
+      <li><a href="/compare/australian-raven-vs-little-raven/">Australian Raven vs Little Raven</a></li>
+      <li><a href="/questions/how-many-types-of-ravens-are-there/">How many types of ravens are there?</a></li>
+    </ul>
+  </section>
+
+  <section class="qa-faq qa-section" aria-labelledby="faq-h2">
+    <h2 id="faq-h2">Frequently Asked Questions</h2>
+    {faq.map(item => (
+      <details class="qa-faq-item">
+        <summary class="qa-faq-q">{item.q}</summary>
+        <p class="qa-faq-a">{item.a}</p>
+      </details>
+    ))}
+  </section>
+
+  <section class="qa-sources qa-section" aria-labelledby="src-h2">
+    <h2 id="src-h2">Sources</h2>
+    <ol class="qa-src-list">
+      <li id="src-1">del Hoyo, J., Elliott, A. & Christie, D.A. (eds.) (2009). <em>Handbook of the Birds of the World</em>, Vol. 14: Bush-shrikes to Old World Sparrows. Lynx Edicions. — all raven species accounts: morphology, range, habitat, bill shape, tail characters, weights.</li>
+    </ol>
+    <p class="qa-claim-note"><strong class="claim-science">[science]</strong> peer-reviewed data</p>
+  </section>
+
+</article>
+</BaseLayout>
+
+<style>
+  .qa-page { max-width: 820px; margin: 0 auto; padding: 2rem 1.25rem 4rem; color: var(--iron-ink, #e8e4d8); font-family: 'Inter', sans-serif; line-height: 1.72; }
+  .qa-breadcrumb ol { display: flex; flex-wrap: wrap; gap: .25rem; list-style: none; padding: 0; margin: 0 0 2rem; font-size: .8rem; color: var(--ink-soft, #8a8070); }
+  .qa-breadcrumb a { color: var(--gold-500, #d4ae5a); text-decoration: none; }
+  .qa-pillar { font-size: .72rem; letter-spacing: .12em; text-transform: uppercase; color: var(--gold-500, #d4ae5a); margin: 0 0 .4rem; }
+  .qa-page h1 { font-family: 'Cormorant Garamond', serif; font-size: clamp(2rem, 5vw, 3rem); font-weight: 700; color: #fff; margin: 0 0 2rem; line-height: 1.1; }
+  .qa-snippet { background: rgba(212,174,90,.08); border-left: 3px solid var(--gold-500, #d4ae5a); border-radius: 0 6px 6px 0; padding: 1rem 1.25rem; margin-bottom: 2.5rem; font-size: 1.03rem; }
+  .qa-section { margin-bottom: 2.5rem; }
+  .qa-section h2 { font-family: 'Cormorant Garamond', serif; font-size: 1.5rem; font-weight: 600; color: #fff; margin: 0 0 .9rem; border-bottom: 1px solid rgba(212,174,90,.2); padding-bottom: .4rem; }
+  .qa-section p { margin: 0 0 1rem; font-size: .97rem; }
+  .qa-section ul { padding-left: 1.25rem; margin: 0 0 1rem; }
+  .qa-section li { margin-bottom: .4rem; font-size: .95rem; }
+  .claim-science { color: #7ab9e0; font-style: normal; font-size: .78rem; }
+  a[href] { color: var(--gold-500, #d4ae5a); }
+  table th, table td { vertical-align: top; }
+  .qa-faq-item { border-bottom: 1px solid rgba(255,255,255,.07); }
+  .qa-faq-q { cursor: pointer; padding: .9rem 0; font-size: .97rem; font-weight: 500; color: #fff; list-style: none; }
+  .qa-faq-q::before { content: '+ '; color: var(--gold-500, #d4ae5a); font-weight: 700; }
+  details[open] .qa-faq-q::before { content: '− '; }
+  .qa-faq-a { margin: 0 0 1rem; line-height: 1.7; font-size: .93rem; color: var(--ink-soft, #c8c0b0); }
+  .qa-src-list { padding-left: 1.25rem; margin: 0 0 1rem; }
+  .qa-src-list li { margin-bottom: .6rem; font-size: .82rem; color: var(--ink-soft, #8a8070); line-height: 1.6; }
+  .qa-claim-note { font-size: .78rem; color: var(--ink-soft, #605848); border-top: 1px solid rgba(255,255,255,.06); padding-top: .75rem; }
+</style>

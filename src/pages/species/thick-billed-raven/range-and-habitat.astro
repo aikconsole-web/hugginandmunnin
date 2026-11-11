@@ -1,0 +1,124 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+
+const title       = 'Thick-billed Raven Range and Habitat — Ethiopian Highlands';
+const description = 'The Thick-billed Raven (Corvus crassirostris) is endemic to the Ethiopian highlands and Horn of Africa. Its range, elevation preferences, and habitat requirements.';
+const path        = '/species/thick-billed-raven/range-and-habitat/';
+
+const breadcrumbs = [
+  { name: 'Home',               url: '/' },
+  { name: 'Species',            url: '/species/' },
+  { name: 'Thick-billed Raven', url: '/species/thick-billed-raven/' },
+  { name: 'Range and Habitat',  url: path },
+];
+
+const faq = [
+  { q: 'Where does the Thick-billed Raven live?', a: 'The Thick-billed Raven is endemic to north-east Africa: Ethiopia (throughout the highlands), Eritrea, and the mountains of the Horn of Africa including parts of Somalia and Djibouti. It is a highland bird, typically found above 1,500 m and common in montane grassland, escarpments, gorges, villages, and towns at altitude.' },
+];
+---
+
+<BaseLayout title={title} description={description} path={path} ogType="article"
+  datePublished="2026-11-07" dateModified="2026-11-07"
+  breadcrumbs={breadcrumbs} faq={faq} pageType="Article">
+
+<article class="id-page">
+  <nav class="id-breadcrumb" aria-label="Breadcrumb">
+    <ol>
+      {breadcrumbs.map((b, i) => (
+        <li>
+          {i < breadcrumbs.length - 1
+            ? <><a href={b.url}>{b.name}</a><span aria-hidden="true"> › </span></>
+            : <span aria-current="page">{b.name}</span>}
+        </li>
+      ))}
+    </ol>
+  </nav>
+  <header class="id-header">
+    <p class="id-pillar">Species · Range and Habitat</p>
+    <h1>Thick-billed Raven — Range and Habitat</h1>
+    <p class="id-subtitle"><em>Corvus crassirostris</em> · Ethiopian Highland Endemic</p>
+  </header>
+
+  <section class="id-snippet" aria-label="Quick answer">
+    <p><strong class="claim-science">[science]</strong> The Thick-billed Raven is endemic to north-east Africa — Ethiopia, Eritrea, and the Horn of Africa. It is a highland specialist found above c. 1,500 m in montane grassland, escarpments, cliffs, gorges, and highland towns. It does not occur outside this region. Conservation status: Least Concern (IUCN).</p>
+  </section>
+
+  <section class="id-section">
+    <h2>Range</h2>
+    <p><strong class="claim-science">[science]</strong> Endemic to north-east Africa:</p>
+    <ul>
+      <li><strong>Ethiopia:</strong> Throughout the Ethiopian Highlands — the most extensive part of its range, from north to south through the highlands, including around Addis Ababa, Lalibela, and the Simien Mountains.</li>
+      <li><strong>Eritrea:</strong> Highland areas of the central and northern Eritrean plateau.</li>
+      <li><strong>Horn of Africa margins:</strong> Parts of Djibouti and the Ogaden highlands of Somalia where montane habitat exists.<sup><a href="#src-1">1</a></sup></li>
+    </ul>
+  </section>
+
+  <section class="id-section">
+    <h2>Habitat</h2>
+    <p><strong class="claim-science">[science]</strong> Highland specialist, typically above 1,500 m:</p>
+    <ul>
+      <li>Open montane grassland and heathland (Afroalpine zone)</li>
+      <li>Rocky escarpments, gorges, and cliff faces (nesting habitat)</li>
+      <li>Highland towns and villages — highly commensal with humans at altitude; a familiar scavenger at rubbish dumps and markets in highland Ethiopian towns</li>
+      <li>Agricultural land at highland altitudes</li>
+    </ul>
+    <p>The Thick-billed Raven does not descend to lowland desert or lowland forest. Its association with highland human settlements makes it one of the most visible birds in Ethiopian highland towns — a large, conspicuous presence at Addis Ababa (elevation ~2,355 m), Gondar, and other highland cities.<sup><a href="#src-1">1</a></sup></p>
+  </section>
+
+  <section class="id-section">
+    <h2>Conservation Status</h2>
+    <p><strong class="claim-science">[science]</strong> <strong>Least Concern</strong> (IUCN Red List). Population appears stable; benefits from association with human settlements at altitude. Not globally threatened.</p>
+  </section>
+
+  <section class="id-faq id-section" aria-labelledby="faq-h2">
+    <h2 id="faq-h2">Frequently Asked Questions</h2>
+    {faq.map(item => (
+      <details class="id-faq-item">
+        <summary class="id-faq-q">{item.q}</summary>
+        <p class="id-faq-a">{item.a}</p>
+      </details>
+    ))}
+  </section>
+
+  <section class="id-sources id-section" aria-labelledby="src-h2">
+    <h2 id="src-h2">Sources</h2>
+    <ol class="id-src-list">
+      <li id="src-1">Madge, S. &amp; Burn, H. (1994). <em>Crows and Jays</em>. Christopher Helm. — range and habitat.</li>
+    </ol>
+    <p class="id-claim-note"><strong class="claim-science">[science]</strong> field-guide data</p>
+  </section>
+
+  <nav class="id-nav-bottom">
+    <a href="/species/thick-billed-raven/identification/" class="id-back">← Identification</a>
+    <a href="/species/thick-billed-raven/" class="id-next">Thick-billed Raven Overview →</a>
+  </nav>
+</article>
+</BaseLayout>
+
+<style>
+  .id-page { max-width: 820px; margin: 0 auto; padding: 2rem 1.25rem 4rem; color: var(--iron-ink, #e8e4d8); font-family: 'Inter', sans-serif; line-height: 1.72; }
+  .id-breadcrumb ol { display: flex; flex-wrap: wrap; gap: .25rem; list-style: none; padding: 0; margin: 0 0 2rem; font-size: .8rem; color: var(--ink-soft, #8a8070); }
+  .id-breadcrumb a { color: var(--gold-500, #d4ae5a); text-decoration: none; }
+  .id-pillar { font-size: .72rem; letter-spacing: .12em; text-transform: uppercase; color: var(--gold-500, #d4ae5a); margin: 0 0 .4rem; }
+  .id-page h1 { font-family: 'Cormorant Garamond', serif; font-size: clamp(2rem, 5vw, 3.25rem); font-weight: 700; color: #fff; margin: 0 0 .2rem; line-height: 1.1; }
+  .id-subtitle { font-size: 1rem; color: var(--ink-soft, #c0b89a); margin: 0 0 2rem; }
+  .id-snippet { background: rgba(212,174,90,.08); border-left: 3px solid var(--gold-500, #d4ae5a); border-radius: 0 6px 6px 0; padding: 1rem 1.25rem; margin-bottom: 2.5rem; font-size: 1.03rem; }
+  .id-section { margin-bottom: 2.75rem; }
+  .id-section h2 { font-family: 'Cormorant Garamond', serif; font-size: 1.6rem; font-weight: 600; color: #fff; margin: 0 0 1rem; border-bottom: 1px solid rgba(212,174,90,.2); padding-bottom: .4rem; }
+  .id-section p { margin: 0 0 1rem; font-size: .97rem; }
+  .id-section ul { padding-left: 1.25rem; margin: 0 0 1rem; }
+  .id-section li { margin-bottom: .4rem; font-size: .95rem; }
+  .claim-science { color: #7ab9e0; font-style: normal; font-size: .78rem; }
+  a[href] { color: var(--gold-500, #d4ae5a); }
+  .id-faq-item { border-bottom: 1px solid rgba(255,255,255,.07); }
+  .id-faq-q { cursor: pointer; padding: .9rem 0; font-size: .97rem; font-weight: 500; color: #fff; list-style: none; }
+  .id-faq-q::before { content: '+ '; color: var(--gold-500, #d4ae5a); font-weight: 700; }
+  details[open] .id-faq-q::before { content: '− '; }
+  .id-faq-a { margin: 0 0 1rem; line-height: 1.7; font-size: .93rem; color: var(--ink-soft, #c8c0b0); }
+  .id-src-list { padding-left: 1.25rem; margin: 0 0 1rem; }
+  .id-src-list li { margin-bottom: .6rem; font-size: .82rem; color: var(--ink-soft, #8a8070); line-height: 1.6; }
+  .id-claim-note { font-size: .78rem; color: var(--ink-soft, #605848); border-top: 1px solid rgba(255,255,255,.06); padding-top: .75rem; }
+  .id-nav-bottom { display: flex; justify-content: space-between; padding-top: 2rem; border-top: 1px solid rgba(255,255,255,.07); }
+  .id-nav-bottom a { font-size: .9rem; text-decoration: none; }
+  .id-nav-bottom a:hover { text-decoration: underline; }
+</style>

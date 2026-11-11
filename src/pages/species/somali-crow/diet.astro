@@ -1,0 +1,122 @@
+---
+/**
+ * Species sub-page — Somali Crow diet
+ * SPC·12d
+ * Primary keyword: somali crow diet
+ * Secondary: what does a somali crow eat, corvus edithae food, dwarf raven diet
+ */
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+
+const title       = 'Somali Crow Diet: What This Species Eats';
+const description = 'The Somali Crow (Dwarf Raven) of the Horn of Africa is a small, poorly studied corvid. What is known of its diet suggests it is a typical omnivore, exploiting invertebrates, carrion, seeds, and food near human settlements.';
+const path        = '/species/somali-crow/diet/';
+
+const breadcrumbs = [
+  { name: 'Home',       url: '/' },
+  { name: 'Species',    url: '/species/' },
+  { name: 'Somali Crow', url: '/species/somali-crow/' },
+  { name: 'Diet',       url: path },
+];
+
+const faq = [
+  { q: 'What does the Somali Crow eat?', a: 'The Somali Crow\'s diet has not been systematically studied. Based on its habitat (arid thorn-scrub and open country in Somalia, Djibouti, and eastern Ethiopia), close relationship to the Brown-necked Raven, and general corvid feeding ecology, it likely eats invertebrates, small vertebrates, carrion, seeds, and food waste from human settlements. Field observations are limited due to the species\' restricted and poorly accessible range.' },
+  { q: 'Is the Somali Crow rare?', a: 'The Somali Crow is classified as Least Concern by IUCN, though it has a restricted range in the Horn of Africa. It is poorly studied due to the political and logistical difficulties of ornithological fieldwork in Somalia. Most knowledge of the species comes from limited museum specimens and brief field sightings. Its ecology and behaviour remain much less documented than other raven species.' },
+  { q: 'Is the Somali Crow the same as the Dwarf Raven?', a: 'Yes. The Somali Crow (<em>Corvus edithae</em>) is also known as the Dwarf Raven — a name reflecting its small size compared to other ravens. It is closely related to the Brown-necked Raven (<em>Corvus ruficollis</em>) and was formerly treated as a subspecies of it. Current taxonomy (IOC) recognises it as a full species based on morphological and distributional differences.' },
+];
+---
+
+<BaseLayout title={title} description={description} path={path} ogType="article"
+  datePublished="2026-11-07" dateModified="2026-11-07"
+  breadcrumbs={breadcrumbs} faq={faq} pageType="Article">
+
+<article class="qa-page">
+
+  <nav class="qa-breadcrumb" aria-label="Breadcrumb">
+    <ol>
+      {breadcrumbs.map((b, i) => (
+        <li>
+          {i < breadcrumbs.length - 1
+            ? <><a href={b.url}>{b.name}</a><span aria-hidden="true"> › </span></>
+            : <span aria-current="page">{b.name}</span>}
+        </li>
+      ))}
+    </ol>
+  </nav>
+
+  <header class="qa-header">
+    <p class="qa-pillar">Species Sub-page · SPC·12d</p>
+    <h1>Somali Crow Diet: What This Species Eats</h1>
+  </header>
+
+  <section class="qa-snippet" aria-label="Direct answer">
+    <p><strong class="claim-science">[science]</strong> The Somali Crow (<em>Corvus edithae</em>), also called the Dwarf Raven, is a poorly studied species restricted to the Horn of Africa. Its diet has not been systematically documented. Based on its habitat, close relationship to the Brown-necked Raven, and general corvid ecology, it is presumed to be an omnivore exploiting invertebrates, small vertebrates, carrion, seeds, and food near human habitations in its arid range.</p>
+  </section>
+
+  <section class="qa-section">
+    <h2>What Is Known About the Diet</h2>
+    <p><strong class="claim-science">[science]</strong> The Somali Crow is one of the least-studied birds in the world. Direct dietary data — stomach content analyses, feeding watches, or foraging studies — are essentially absent from the published literature. What can be inferred comes from:<sup><a href="#src-1">1</a></sup></p>
+    <ul>
+      <li><strong>Habitat:</strong> arid thorn-scrub, dry acacia-commiphora woodland, and open semi-desert in Somalia, Djibouti, and eastern Ethiopia. This habitat is rich in lizards, beetles, termites, and seasonal insects — typical prey of small corvids in arid zones.</li>
+      <li><strong>Morphology:</strong> the Somali Crow has a relatively slender bill for a corvid — consistent with invertebrate and small-prey foraging rather than heavy carrion-opening.</li>
+      <li><strong>Ecology of relatives:</strong> the Brown-necked Raven (<em>C. ruficollis</em>) from the same and adjacent arid zones eats invertebrates, lizards, carrion, seeds, dates, and human food waste. The Somali Crow likely exploits a similar dietary niche.</li>
+    </ul>
+  </section>
+
+  <section class="qa-section">
+    <h2>Research Gaps</h2>
+    <p>The Somali Crow is among the corvids most urgently in need of basic ecological study. Systematic diet data, foraging observations, and habitat use studies are lacking entirely. The political situation in Somalia has made extended fieldwork impossible for decades, leaving the species almost entirely known from museum specimens and very limited field sightings. Any dietary data for this species from future fieldwork would be a valuable contribution to corvid biology.</p>
+  </section>
+
+  <section class="qa-section">
+    <h2>Related Pages</h2>
+    <ul>
+      <li><a href="/species/somali-crow/">Somali Crow — species hub</a></li>
+      <li><a href="/species/brown-necked-raven/diet/">Brown-necked Raven diet (closest relative)</a></li>
+      <li><a href="/questions/how-many-types-of-ravens-are-there/">How many types of ravens are there?</a></li>
+    </ul>
+  </section>
+
+  <section class="qa-faq qa-section" aria-labelledby="faq-h2">
+    <h2 id="faq-h2">Frequently Asked Questions</h2>
+    {faq.map(item => (
+      <details class="qa-faq-item">
+        <summary class="qa-faq-q">{item.q}</summary>
+        <p class="qa-faq-a">{item.a}</p>
+      </details>
+    ))}
+  </section>
+
+  <section class="qa-sources qa-section" aria-labelledby="src-h2">
+    <h2 id="src-h2">Sources</h2>
+    <ol class="qa-src-list">
+      <li id="src-1">del Hoyo, J. et al. (eds., 2009). <em>Handbook of the Birds of the World</em>, vol. 14. Lynx Edicions. — Somali Crow species account; habitat, distribution, morphology.</li>
+    </ol>
+    <p class="qa-claim-note"><strong class="claim-science">[science]</strong> peer-reviewed or field-guide data</p>
+  </section>
+
+</article>
+</BaseLayout>
+
+<style>
+  .qa-page { max-width: 820px; margin: 0 auto; padding: 2rem 1.25rem 4rem; color: var(--iron-ink, #e8e4d8); font-family: 'Inter', sans-serif; line-height: 1.72; }
+  .qa-breadcrumb ol { display: flex; flex-wrap: wrap; gap: .25rem; list-style: none; padding: 0; margin: 0 0 2rem; font-size: .8rem; color: var(--ink-soft, #8a8070); }
+  .qa-breadcrumb a { color: var(--gold-500, #d4ae5a); text-decoration: none; }
+  .qa-pillar { font-size: .72rem; letter-spacing: .12em; text-transform: uppercase; color: var(--gold-500, #d4ae5a); margin: 0 0 .4rem; }
+  .qa-page h1 { font-family: 'Cormorant Garamond', serif; font-size: clamp(2rem, 5vw, 3rem); font-weight: 700; color: #fff; margin: 0 0 2rem; line-height: 1.1; }
+  .qa-snippet { background: rgba(212,174,90,.08); border-left: 3px solid var(--gold-500, #d4ae5a); border-radius: 0 6px 6px 0; padding: 1rem 1.25rem; margin-bottom: 2.5rem; font-size: 1.03rem; }
+  .qa-section { margin-bottom: 2.5rem; }
+  .qa-section h2 { font-family: 'Cormorant Garamond', serif; font-size: 1.5rem; font-weight: 600; color: #fff; margin: 0 0 .9rem; border-bottom: 1px solid rgba(212,174,90,.2); padding-bottom: .4rem; }
+  .qa-section p { margin: 0 0 1rem; font-size: .97rem; }
+  .qa-section ul { padding-left: 1.25rem; margin: 0 0 1rem; }
+  .qa-section li { margin-bottom: .4rem; font-size: .95rem; }
+  .claim-science { color: #7ab9e0; font-style: normal; font-size: .78rem; }
+  a[href] { color: var(--gold-500, #d4ae5a); }
+  .qa-faq-item { border-bottom: 1px solid rgba(255,255,255,.07); }
+  .qa-faq-q { cursor: pointer; padding: .9rem 0; font-size: .97rem; font-weight: 500; color: #fff; list-style: none; }
+  .qa-faq-q::before { content: '+ '; color: var(--gold-500, #d4ae5a); font-weight: 700; }
+  details[open] .qa-faq-q::before { content: '− '; }
+  .qa-faq-a { margin: 0 0 1rem; line-height: 1.7; font-size: .93rem; color: var(--ink-soft, #c8c0b0); }
+  .qa-src-list { padding-left: 1.25rem; margin: 0 0 1rem; }
+  .qa-src-list li { margin-bottom: .6rem; font-size: .82rem; color: var(--ink-soft, #8a8070); line-height: 1.6; }
+  .qa-claim-note { font-size: .78rem; color: var(--ink-soft, #605848); border-top: 1px solid rgba(255,255,255,.06); padding-top: .75rem; }
+</style>

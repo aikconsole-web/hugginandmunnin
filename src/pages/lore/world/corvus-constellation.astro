@@ -1,0 +1,137 @@
+---
+/**
+ * World Lore — Corvus constellation
+ * MYW·13
+ * Primary keyword: corvus constellation raven
+ * Secondary: corvus constellation mythology, raven constellation, apollo raven myth stars
+ */
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+
+const title       = 'Corvus: The Raven Constellation and the Apollo Myth';
+const description = 'Corvus is a small but ancient constellation of the southern sky, identified with the raven in Babylonian, Greek, and Roman astronomy. This page covers the myth, the stars, and what makes Corvus unusual among constellations.';
+const path        = '/lore/world/corvus-constellation/';
+
+const breadcrumbs = [
+  { name: 'Home',       url: '/' },
+  { name: 'World Lore', url: '/lore/world/' },
+  { name: 'Corvus Constellation', url: path },
+];
+
+const faq = [
+  { q: 'Where is the Corvus constellation?', a: 'Corvus lies in the southern sky, bordered by Virgo (to the north), Hydra (to the south and west), and Crater (to the west). It is best seen in spring from the Northern Hemisphere (April–May) and autumn from the Southern Hemisphere. It is a small constellation with no particularly bright stars — its four main stars (Alchiba, Gienah, Kraz, and Algorab) range from magnitude 2.6 to 4.0, forming a distinctive small quadrilateral sometimes called "the Sail."' },
+  { q: 'What is the Greek myth associated with Corvus?', a: 'The most common Greek myth links Corvus to the story of Apollo and the raven. Apollo sent his raven to fetch water in a cup (the constellation Crater). The raven delayed to eat figs from a tree, then returned with a water snake (Hydra) as a false excuse. Apollo, enraged by the deception, placed the raven, the cup, and the snake in the sky — with the raven unable to drink from the cup (Crater) due to the snake (Hydra) guarding it. This explains why three adjacent constellations form a visual unit.' },
+  { q: 'Is Corvus the same as the raven in other mythologies?', a: 'The constellation Corvus is an ancient Near Eastern constellation that predates Greek astronomy — Babylonian records identify a "raven" star-pattern in roughly the same part of the sky. The Greeks and Romans identified it with their own raven myths (Apollo\'s raven). The constellation\'s identification as "the Crow" or "the Raven" (both translate as corvus/korax in Latin/Greek) predates the specific Apollo myth that became attached to it.' },
+];
+---
+
+<BaseLayout title={title} description={description} path={path} ogType="article"
+  datePublished="2026-11-07" dateModified="2026-11-07"
+  breadcrumbs={breadcrumbs} faq={faq} pageType="Article">
+
+<article class="qa-page">
+
+  <nav class="qa-breadcrumb" aria-label="Breadcrumb">
+    <ol>
+      {breadcrumbs.map((b, i) => (
+        <li>
+          {i < breadcrumbs.length - 1
+            ? <><a href={b.url}>{b.name}</a><span aria-hidden="true"> › </span></>
+            : <span aria-current="page">{b.name}</span>}
+        </li>
+      ))}
+    </ol>
+  </nav>
+
+  <header class="qa-header">
+    <p class="qa-pillar">World Lore · MYW·13</p>
+    <h1>Corvus: The Raven Constellation and the Apollo Myth</h1>
+  </header>
+
+  <section class="qa-snippet" aria-label="Direct answer">
+    <p><strong class="claim-lore">[lore]</strong> Corvus (Latin: crow or raven) is one of the 48 constellations listed by Ptolemy in the second century CE and remains one of the 88 modern constellations. It represents Apollo's raven — the bird blamed for bringing bad news about the nymph Coronis and punished by being placed in the sky where it can never drink from the adjacent cup (constellation Crater), perpetually thwarted by the water-snake (Hydra).</p>
+  </section>
+
+  <section class="qa-section">
+    <h2>The Stars of Corvus</h2>
+    <p><strong class="claim-lore">[lore]</strong> Corvus is a small constellation of four main stars forming a compact quadrilateral, sometimes compared to a sail or a small sailing boat. The stars and their names:<sup><a href="#src-1">1</a></sup></p>
+    <ul>
+      <li><strong>Gamma Corvi (Gienah)</strong> — the brightest star in Corvus at magnitude 2.6. The name comes from Arabic <em>janāḥ al-ghurāb</em>, "the wing of the raven."</li>
+      <li><strong>Beta Corvi (Kraz)</strong> — magnitude 2.6; the second brightest. Name of uncertain origin.</li>
+      <li><strong>Delta Corvi (Algorab)</strong> — magnitude 3.0. Name from Arabic <em>al-ghurāb</em>, "the raven."</li>
+      <li><strong>Alpha Corvi (Alchiba)</strong> — magnitude 4.0; the designated alpha star despite not being the brightest. Name from Arabic <em>al-khiba'</em>.</li>
+    </ul>
+    <p>Several Arabic star names in Corvus confirm the raven/crow identification predates Greek astronomy — the Arabic names derive from the pre-Islamic and early Islamic astronomical tradition that preserved and transmitted earlier Near Eastern star lore.</p>
+  </section>
+
+  <section class="qa-section">
+    <h2>The Three-Constellation Myth</h2>
+    <p><strong class="claim-lore">[lore]</strong> Corvus belongs to a visually connected trio of constellations — Corvus (the Raven), Crater (the Cup), and Hydra (the Water Snake) — all lying along or near the ecliptic in the southern sky. The standard myth as recorded by several ancient sources (including Ovid's <em>Fasti</em> and the mythographic compilation attributed to Eratosthenes called the <em>Catasterismi</em>) links all three:<sup><a href="#src-2">2</a></sup></p>
+    <p>Apollo sent his raven to fetch water from a spring in a cup (Crater). The raven, spotting a fig tree, waited for the figs to ripen and then ate his fill. Returning late, he carried a water-snake (Hydra) in his talons and blamed the snake for blocking the spring. Apollo, who could see the deception, placed all three — raven, cup, and snake — in the sky, condemning the raven to thirst forever because Hydra always blocks his access to Crater.</p>
+    <p>This myth is an aetiology (origin story) for the visual grouping of three real star-patterns. See also the fuller account of the Apollo–raven myth at <a href="/lore/world/apollo-and-the-raven/">Apollo and the Raven</a>.</p>
+  </section>
+
+  <section class="qa-section">
+    <h2>Babylonian Origins</h2>
+    <p><strong class="claim-lore">[lore]</strong> The identification of this area of the sky as "the raven" predates Greek astronomy. Babylonian astronomical texts from the second millennium BCE identify a star-pattern in this region as <em>UGA</em> (the raven), and the star now known as Gienah was associated with this bird figure in pre-Greek astronomy. The Greek constellation Corvus is therefore an adaptation of an older Near Eastern tradition, not a Greek invention.<sup><a href="#src-1">1</a></sup></p>
+  </section>
+
+  <section class="qa-section">
+    <h2>The Bird Behind the Myth</h2>
+    <p><strong class="claim-science">[science]</strong> The Latin <em>corvus</em> and Greek <em>korax</em> refer primarily to the Common Raven (<em>Corvus corax</em>), though both words can also be used for large crows. The raven was familiar across the ancient Mediterranean world — a conspicuous, clever bird that would have been a natural choice for a mythological character associated with Apollo's intelligence and the consequences of deception. See <a href="/species/common-raven/">Common Raven</a> for the bird itself.</p>
+  </section>
+
+  <section class="qa-section">
+    <h2>Related Pages</h2>
+    <ul>
+      <li><a href="/lore/world/apollo-and-the-raven/">Apollo and the Raven — the full myth</a></li>
+      <li><a href="/lore/world/raven-symbolism/">Raven symbolism across cultures</a></li>
+      <li><a href="/lore/world/ravens-in-the-bible/">Ravens in the Bible</a></li>
+    </ul>
+  </section>
+
+  <section class="qa-faq qa-section" aria-labelledby="faq-h2">
+    <h2 id="faq-h2">Frequently Asked Questions</h2>
+    {faq.map(item => (
+      <details class="qa-faq-item">
+        <summary class="qa-faq-q">{item.q}</summary>
+        <p class="qa-faq-a">{item.a}</p>
+      </details>
+    ))}
+  </section>
+
+  <section class="qa-sources qa-section" aria-labelledby="src-h2">
+    <h2 id="src-h2">Sources</h2>
+    <ol class="qa-src-list">
+      <li id="src-1">Ridpath, I. (2018). <em>Star Tales</em> (revised ed.). Lutterworth Press. — constellation histories, Babylonian origins.</li>
+      <li id="src-2">Hard, R. (trans., 2015). <em>Eratosthenes and Hyginus: Constellation Myths</em>. Oxford World's Classics. — <em>Catasterismi</em> texts; Apollo-raven-cup myth.</li>
+    </ol>
+    <p class="qa-claim-note"><strong class="claim-lore">[lore]</strong> named cultural/historical source &nbsp;|&nbsp; <strong class="claim-science">[science]</strong> peer-reviewed or field-guide data</p>
+  </section>
+
+</article>
+</BaseLayout>
+
+<style>
+  .qa-page { max-width: 820px; margin: 0 auto; padding: 2rem 1.25rem 4rem; color: var(--iron-ink, #e8e4d8); font-family: 'Inter', sans-serif; line-height: 1.72; }
+  .qa-breadcrumb ol { display: flex; flex-wrap: wrap; gap: .25rem; list-style: none; padding: 0; margin: 0 0 2rem; font-size: .8rem; color: var(--ink-soft, #8a8070); }
+  .qa-breadcrumb a { color: var(--gold-500, #d4ae5a); text-decoration: none; }
+  .qa-pillar { font-size: .72rem; letter-spacing: .12em; text-transform: uppercase; color: var(--gold-500, #d4ae5a); margin: 0 0 .4rem; }
+  .qa-page h1 { font-family: 'Cormorant Garamond', serif; font-size: clamp(2rem, 5vw, 3rem); font-weight: 700; color: #fff; margin: 0 0 2rem; line-height: 1.1; }
+  .qa-snippet { background: rgba(212,174,90,.08); border-left: 3px solid var(--gold-500, #d4ae5a); border-radius: 0 6px 6px 0; padding: 1rem 1.25rem; margin-bottom: 2.5rem; font-size: 1.03rem; }
+  .qa-section { margin-bottom: 2.5rem; }
+  .qa-section h2 { font-family: 'Cormorant Garamond', serif; font-size: 1.5rem; font-weight: 600; color: #fff; margin: 0 0 .9rem; border-bottom: 1px solid rgba(212,174,90,.2); padding-bottom: .4rem; }
+  .qa-section p { margin: 0 0 1rem; font-size: .97rem; }
+  .qa-section ul { padding-left: 1.25rem; margin: 0 0 1rem; }
+  .qa-section li { margin-bottom: .4rem; font-size: .95rem; }
+  .claim-science { color: #7ab9e0; font-style: normal; font-size: .78rem; }
+  .claim-lore { color: #c4a26a; font-style: normal; font-size: .78rem; }
+  a[href] { color: var(--gold-500, #d4ae5a); }
+  .qa-faq-item { border-bottom: 1px solid rgba(255,255,255,.07); }
+  .qa-faq-q { cursor: pointer; padding: .9rem 0; font-size: .97rem; font-weight: 500; color: #fff; list-style: none; }
+  .qa-faq-q::before { content: '+ '; color: var(--gold-500, #d4ae5a); font-weight: 700; }
+  details[open] .qa-faq-q::before { content: '− '; }
+  .qa-faq-a { margin: 0 0 1rem; line-height: 1.7; font-size: .93rem; color: var(--ink-soft, #c8c0b0); }
+  .qa-src-list { padding-left: 1.25rem; margin: 0 0 1rem; }
+  .qa-src-list li { margin-bottom: .6rem; font-size: .82rem; color: var(--ink-soft, #8a8070); line-height: 1.6; }
+  .qa-claim-note { font-size: .78rem; color: var(--ink-soft, #605848); border-top: 1px solid rgba(255,255,255,.06); padding-top: .75rem; }
+</style>

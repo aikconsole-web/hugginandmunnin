@@ -1,0 +1,150 @@
+---
+/**
+ * Myths — Ravens are bad omens of death
+ * MYTH·19
+ * Primary keyword: are ravens bad omens
+ * Secondary: raven death omen, raven bad luck superstition, raven death sign
+ */
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const title       = 'Myth: Ravens Are Bad Omens of Death';
+const description = 'The idea that ravens are universally bad omens of death is a persistent belief — but it is true only within specific cultural traditions, and the same bird is a positive symbol in many others. This page examines the myth, its origins, and the cultural context.';
+const path        = '/myths/ravens-are-bad-omens-of-death/';
+
+const breadcrumbs = [
+  { name: 'Home',   url: '/' },
+  { name: 'Myths',  url: '/myths/' },
+  { name: 'Ravens Are Bad Omens of Death', url: path },
+];
+
+const faq = [
+  { q: 'Is seeing a raven a sign of death?', a: 'In Western folk tradition (British, Irish, continental European), a raven near a home, following a person, or calling persistently was interpreted as a death omen. This tradition is culturally specific — the same raven behaviour is interpreted positively in Norse tradition (Odin\'s attention) and Pacific Northwest Indigenous tradition (Raven as a creator figure). Whether a raven is a sign of death depends entirely on which cultural tradition you apply; there is no universal biological or metaphysical basis for the belief.' },
+  { q: 'Why are ravens associated with death?', a: 'Ravens are associated with death for a concrete biological reason: they are scavengers that reliably appear at large animal corpses, including human battle dead and execution sites. This real-world presence at human death scenes created the association in multiple independent traditions across Eurasia. The raven\'s black plumage, loud call, and intelligent opportunism made it memorable and frightening in this context. The association is not arbitrary superstition but a direct reflection of the raven\'s ecological role as a carrion consumer that gathers where death has occurred.' },
+  { q: 'Are ravens good luck in any culture?', a: 'Yes — in several traditions, ravens are strongly positive symbols. In Norse tradition, ravens are Odin\'s birds — divine messengers and instruments of wisdom; encountering a raven was potentially a sign of the god\'s attention. In Pacific Northwest Indigenous traditions, Raven is the Trickster-Creator who stole light for humanity — a beneficent, if ambiguous, figure. In the Tower of London tradition, ravens protect the kingdom — their presence is essential to Britain\'s safety. In many Indigenous North American and Siberian traditions, ravens are ancestor spirits, clan totems, and helpers. The "bad luck" reading is a specifically Western European folk tradition, not a universal.'
+  },
+];
+---
+
+<BaseLayout title={title} description={description} path={path} ogType="article"
+  datePublished="2026-11-08" dateModified="2026-11-08"
+  breadcrumbs={breadcrumbs} faq={faq} pageType="Article">
+
+<article class="qa-page">
+
+  <nav class="qa-breadcrumb" aria-label="Breadcrumb">
+    <ol>
+      {breadcrumbs.map((b, i) => (
+        <li>
+          {i < breadcrumbs.length - 1
+            ? <><a href={b.url}>{b.name}</a><span aria-hidden="true"> › </span></>
+            : <span aria-current="page">{b.name}</span>}
+        </li>
+      ))}
+    </ol>
+  </nav>
+
+  <header class="qa-header">
+    <p class="qa-pillar">Myth · MYTH·19</p>
+    <h1>Myth: Ravens Are Bad Omens of Death</h1>
+  </header>
+
+  <section class="qa-snippet" aria-label="Direct answer">
+    <p class="verdict verdict-partly-true"><strong>Verdict: Partly True (culturally specific)</strong></p>
+    <p><strong class="claim-lore">[lore]</strong> Ravens are death omens in Western European folk tradition — but the same bird is a divine messenger in Norse tradition, a creator figure in Pacific Northwest Indigenous tradition, and a Quranic teacher in Islamic scripture. The "raven = bad omen" is real as a cultural belief within specific traditions; it is false as a universal claim about what ravens symbolise.</p>
+  </section>
+
+  <section class="qa-section">
+    <h2>Why the Death-Omen Belief Exists</h2>
+    <p><strong class="claim-science">[science]</strong> The raven's association with death is not arbitrary — it reflects real raven ecology. Ravens are scavengers that reliably aggregate at large animal corpses: at battle sites where thousands of human dead lay in the open; at execution grounds; at plague sites; at winter-killed livestock. For a human observer in pre-modern Europe, a gathering of ravens often genuinely predicted, or confirmed, nearby death and decomposition.<sup><a href="#src-1">1</a></sup></p>
+    <p>This ecological reality — ravens gather where death has occurred or is occurring — provided a rational (if incomplete) basis for the death-omen belief. The jump from "ravens appear near death" (true) to "a raven appearing means death is coming" (not reliably true) is the mythologised form of a genuine observation.</p>
+  </section>
+
+  <section class="qa-section">
+    <h2>The Western European Death-Omen Tradition</h2>
+    <p><strong class="claim-lore">[lore]</strong> In British, Irish, and continental European folklore, ravens at a dwelling were widely interpreted as death omens. The tradition appears consistently across:<sup><a href="#src-2">2</a></sup></p>
+    <ul>
+      <li>Medieval bestiaries — which describe the raven as an ill-omened bird and a carrion gatherer.</li>
+      <li>Early modern folklore collections — where a raven at the window, calling persistently, or following a person is listed as a death sign in British, Irish, Welsh, and German traditions.</li>
+      <li>Literary tradition — culminating in Poe's "The Raven" (1845), where the bird's visit is explicitly death-associated (the narrator has lost his beloved Lenore); the poem crystallised and popularised the raven-death association in the anglophone world.</li>
+      <li>Contemporary culture — the death-raven association persists in horror and Gothic literature, film, and video games, keeping the omen tradition culturally active despite its pre-modern origins.</li>
+    </ul>
+  </section>
+
+  <section class="qa-section">
+    <h2>Counter-Traditions: Ravens as Positive Symbols</h2>
+    <p><strong class="claim-lore">[lore]</strong> Multiple major cultural traditions contradict the Western European death-omen interpretation:</p>
+    <ul>
+      <li><strong>Norse:</strong> ravens are Odin's birds — the highest divine companions in a warrior culture's pantheon. Their presence is a mark of divine attention, not simple ill omen.</li>
+      <li><strong>Pacific Northwest Indigenous:</strong> Raven created the world and stole light for humanity. The Raven is a culture hero — ambiguous and tricksterish, but fundamentally generative.</li>
+      <li><strong>Islamic scripture:</strong> the Quranic raven teaches Cain burial rites — a divinely-sent instructor, not an omen of anything bad (Surah 5:31).</li>
+      <li><strong>Siberian shamanism:</strong> ravens are creator figures and shamanic spirit helpers — positive intermediaries between the human and spirit worlds.</li>
+      <li><strong>Tower of London:</strong> in English tradition, ravens <em>protect</em> the kingdom — their presence is essential to national safety, their departure catastrophic.</li>
+    </ul>
+  </section>
+
+  <section class="qa-section">
+    <h2>What "Bad Omen" Actually Means</h2>
+    <p>An omen is a sign interpreted within a belief system — it has no independent existence outside that system. The raven is a bad omen of death in traditions that have constructed it as such, drawing on the genuine observation that ravens gather at death sites. It is not a bad omen in traditions that have constructed different meanings from the same observations and the same bird.</p>
+    <p>The raven's symbolic ambiguity — positive in some traditions, negative in others, complex in most — is a feature of its cultural significance, not a defect. Few birds carry such a diverse symbolic weight across so many independent traditions. This richness reflects the raven's real qualities: intelligence, longevity, presence at human mortality scenes, and apparent purposefulness that invites symbolic projection.</p>
+  </section>
+
+  <section class="qa-section">
+    <h2>Related Pages</h2>
+    <ul>
+      <li><a href="/myths/ravens-bring-death/">Myth: Ravens bring death</a></li>
+      <li><a href="/myths/are-ravens-bad-luck/">Are ravens bad luck?</a></li>
+      <li><a href="/questions/are-ravens-good-or-bad-omens/">Are ravens good or bad omens?</a></li>
+      <li><a href="/questions/why-are-ravens-associated-with-death/">Why are ravens associated with death?</a></li>
+    </ul>
+  </section>
+
+  <section class="qa-faq qa-section" aria-labelledby="faq-h2">
+    <h2 id="faq-h2">Frequently Asked Questions</h2>
+    {faq.map(item => (
+      <details class="qa-faq-item">
+        <summary class="qa-faq-q">{item.q}</summary>
+        <p class="qa-faq-a">{item.a}</p>
+      </details>
+    ))}
+  </section>
+
+  <section class="qa-sources qa-section" aria-labelledby="src-h2">
+    <h2 id="src-h2">Sources</h2>
+    <ol class="qa-src-list">
+      <li id="src-1">Boarman, W.I. & Heinrich, B. (1999). Common Raven (<em>Corvus corax</em>). In Poole, A. (ed.), <em>The Birds of North America</em>, No. 476. Cornell Lab of Ornithology. — raven scavenging ecology; aggregation at carrion; human death-site associations.</li>
+      <li id="src-2">Sax, B. (2003). <em>Crow</em>. Reaktion Books Animal series. — death-omen traditions across European cultures; counter-traditions in Norse, Indigenous, and Islamic frameworks; literary tradition.</li>
+    </ol>
+    <p class="qa-claim-note"><strong class="claim-lore">[lore]</strong> named cultural/historical source · <strong class="claim-science">[science]</strong> peer-reviewed data</p>
+  </section>
+
+</article>
+</BaseLayout>
+
+<style>
+  .qa-page { max-width: 820px; margin: 0 auto; padding: 2rem 1.25rem 4rem; color: var(--iron-ink, #e8e4d8); font-family: 'Inter', sans-serif; line-height: 1.72; }
+  .qa-breadcrumb ol { display: flex; flex-wrap: wrap; gap: .25rem; list-style: none; padding: 0; margin: 0 0 2rem; font-size: .8rem; color: var(--ink-soft, #8a8070); }
+  .qa-breadcrumb a { color: var(--gold-500, #d4ae5a); text-decoration: none; }
+  .qa-pillar { font-size: .72rem; letter-spacing: .12em; text-transform: uppercase; color: var(--gold-500, #d4ae5a); margin: 0 0 .4rem; }
+  .qa-page h1 { font-family: 'Cormorant Garamond', serif; font-size: clamp(2rem, 5vw, 3rem); font-weight: 700; color: #fff; margin: 0 0 2rem; line-height: 1.1; }
+  .qa-snippet { background: rgba(212,174,90,.08); border-left: 3px solid var(--gold-500, #d4ae5a); border-radius: 0 6px 6px 0; padding: 1rem 1.25rem; margin-bottom: 2.5rem; font-size: 1.03rem; }
+  .verdict { display: inline-block; padding: .2rem .6rem; border-radius: 4px; font-size: .82rem; font-weight: 700; letter-spacing: .04em; margin-bottom: .5rem; }
+  .verdict-false { background: rgba(180,60,60,.15); color: #e07070; border: 1px solid rgba(180,60,60,.3); }
+  .verdict-partly-true { background: rgba(180,140,40,.15); color: #d4ae5a; border: 1px solid rgba(180,140,40,.3); }
+  .verdict-true { background: rgba(60,140,80,.15); color: #7ecb8a; border: 1px solid rgba(60,140,80,.3); }
+  .qa-section { margin-bottom: 2.5rem; }
+  .qa-section h2 { font-family: 'Cormorant Garamond', serif; font-size: 1.5rem; font-weight: 600; color: #fff; margin: 0 0 .9rem; border-bottom: 1px solid rgba(212,174,90,.2); padding-bottom: .4rem; }
+  .qa-section p { margin: 0 0 1rem; font-size: .97rem; }
+  .qa-section ul { padding-left: 1.25rem; margin: 0 0 1rem; }
+  .qa-section li { margin-bottom: .4rem; font-size: .95rem; }
+  .claim-science { color: #7ab9e0; font-style: normal; font-size: .78rem; }
+  .claim-lore { color: #c49a3c; font-style: normal; font-size: .78rem; }
+  a[href] { color: var(--gold-500, #d4ae5a); }
+  .qa-faq-item { border-bottom: 1px solid rgba(255,255,255,.07); }
+  .qa-faq-q { cursor: pointer; padding: .9rem 0; font-size: .97rem; font-weight: 500; color: #fff; list-style: none; }
+  .qa-faq-q::before { content: '+ '; color: var(--gold-500, #d4ae5a); font-weight: 700; }
+  details[open] .qa-faq-q::before { content: '− '; }
+  .qa-faq-a { margin: 0 0 1rem; line-height: 1.7; font-size: .93rem; color: var(--ink-soft, #c8c0b0); }
+  .qa-src-list { padding-left: 1.25rem; margin: 0 0 1rem; }
+  .qa-src-list li { margin-bottom: .6rem; font-size: .82rem; color: var(--ink-soft, #8a8070); line-height: 1.6; }
+  .qa-claim-note { font-size: .78rem; color: var(--ink-soft, #605848); border-top: 1px solid rgba(255,255,255,.06); padding-top: .75rem; }
+</style>

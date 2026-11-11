@@ -1,0 +1,149 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const title       = 'Raven Food Caching — How Ravens Store and Protect Food';
+const description = 'Common Ravens cache food in hundreds of locations and protect those caches from thieves using deception. This chapter reviews the behaviour, the evidence, and what it reveals about raven cognition.';
+const path        = '/behaviour/raven-food-caching/';
+
+const breadcrumbs = [
+  { name: 'Home',      url: '/' },
+  { name: 'Behaviour', url: '/behaviour/' },
+  { name: 'Raven Food Caching', url: path },
+];
+
+const faq = [
+  { q: 'Do ravens cache food?', a: 'Yes. Common Ravens cache (hide) food items in hundreds of different locations. They use spatial memory to relocate caches and re-cache food to new locations if they believe they have been watched. This is well documented in controlled experiments (Heinrich 1999; Bugnyar & Heinrich 2005).' },
+  { q: 'How do ravens protect their food caches?', a: 'Ravens use several protective strategies: caching in concealed locations, re-caching food after being observed by a potential thief, performing "false caches" (pretending to cache food without actually doing so), and preferentially re-caching when the observer was in a position to see the cache. These behaviours suggest ravens model the knowledge state of other ravens — a component of theory of mind.' },
+  { q: 'Can ravens remember where they hid food?', a: 'Yes. Experimental evidence shows ravens retrieve caches significantly above chance levels across time intervals of several days to weeks. Their spatial memory for cache locations is comparable to other corvids (scrub-jays, Clark\'s Nutcrackers) known for exceptional spatial memory.' },
+];
+---
+
+<BaseLayout title={title} description={description} path={path} ogType="article"
+  datePublished="2026-11-07" dateModified="2026-11-07"
+  breadcrumbs={breadcrumbs} faq={faq} pageType="Article">
+
+<article class="beh-page">
+  <nav class="beh-breadcrumb" aria-label="Breadcrumb">
+    <ol>
+      {breadcrumbs.map((b, i) => (
+        <li>
+          {i < breadcrumbs.length - 1
+            ? <><a href={b.url}>{b.name}</a><span aria-hidden="true"> › </span></>
+            : <span aria-current="page">{b.name}</span>}
+        </li>
+      ))}
+    </ol>
+  </nav>
+  <header class="beh-header">
+    <p class="beh-pillar">Behaviour · BEH·02</p>
+    <h1>Raven Food Caching</h1>
+    <p class="beh-subtitle">How Ravens Store, Remember, and Protect Their Caches</p>
+  </header>
+
+  <section class="beh-snippet" aria-label="Quick answer">
+    <p><strong class="claim-science">[science]</strong> Common Ravens cache food in hundreds of locations using strong spatial memory, and actively deceive other ravens to protect their caches — re-caching food after being observed, performing false caches, and assessing what a potential thief can see. These behaviours have been documented in controlled laboratory and field experiments and represent some of the strongest evidence for strategic cognition in non-human animals.</p>
+  </section>
+
+  <section class="beh-section">
+    <h2>What Food Caching Is</h2>
+    <p><strong class="claim-science">[science]</strong> Food caching (or food hoarding) is the behaviour of storing surplus food for later retrieval. It is found in many corvid species — jays, nutcrackers, ravens, crows — as well as in some raptors and mammals. For ravens, caching is especially important because food sources (large carcasses, ephemeral surpluses) are unpredictable and highly contested. A raven that can cache excess food and retrieve it later has a significant advantage over one that cannot.<sup><a href="#src-1">1</a></sup></p>
+    <p>Ravens cache a wide variety of foods: meat, cheese, bread, eggs, bones, and other high-value items. They cache in crevices, under snow, in bark, and under rocks or vegetation. A single raven may maintain hundreds of cache sites across its home range.</p>
+  </section>
+
+  <section class="beh-section">
+    <h2>The Evidence: Laboratory Studies</h2>
+    <p><strong class="claim-science">[science]</strong> Bugnyar and Heinrich (2005) conducted a key series of experiments on cache protection in ravens. They found:</p>
+    <ul>
+      <li>When a dominant raven observed a subordinate caching food, the subordinate preferentially re-cached the food when the dominant left — but only if the dominant had been in a position to see the original cache.</li>
+      <li>Subordinates performed "false caches" — appearing to cache food without actually doing so — in front of potential thieves.</li>
+      <li>The deceptive strategies were calibrated to the observer's visual access: ravens distinguished between a potential thief that could see the cache site and one that could not.<sup><a href="#src-2">2</a></sup></li>
+    </ul>
+    <p>This was significant because it suggested ravens represent the knowledge state of other ravens — they model what another individual can see and therefore know. This is a component of what psychologists call "theory of mind."</p>
+  </section>
+
+  <section class="beh-section">
+    <h2>The Peephole Experiment</h2>
+    <p><strong class="claim-science">[science]</strong> Bugnyar et al. (2016) extended this work with a peephole paradigm. Ravens were shown that a competitor in an adjacent enclosure could observe them through a peephole. When the peephole was open (even when no competitor was actually present), ravens cached more quickly and in concealed locations compared to when the peephole was covered. This suggested ravens used the peephole as a cue for potential observation — they behaved as if being watched based on the opportunity for observation rather than confirmed presence of a watcher.<sup><a href="#src-3">3</a></sup></p>
+    <p>The interpretation is that ravens generalise from their own perceptual experience to infer what others might perceive — a cognitively demanding inference.</p>
+  </section>
+
+  <section class="beh-section">
+    <h2>Cache Memory</h2>
+    <p><strong class="claim-science">[science]</strong> Ravens retrieve their own caches at rates significantly above chance across intervals of several days. Their spatial memory for cache sites is comparable to that of Western Scrub-Jays (<em>Aphelocoma californica</em>) — a corvid whose cache memory has been extensively studied by Nicola Clayton's group at Cambridge. Clayton et al. demonstrated that scrub-jays remember not only the location of a cache but also what was cached and when — a form of episodic-like memory. It is not yet established whether ravens have the same episodic-like memory, but their cache retrieval behaviour is consistent with detailed spatial memory.<sup><a href="#src-4">4</a></sup></p>
+  </section>
+
+  <section class="beh-section">
+    <h2>Cache Theft</h2>
+    <p><strong class="claim-science">[science]</strong> Ravens are also effective cache thieves. Heinrich documented extensive cache-raiding behaviour in captive and wild ravens. Dominant birds monitor the caching behaviour of subordinates; non-breeding young ravens in particular attempt to steal from cached food stores. The arms race between caching and cache protection appears to be a major driver of raven cognitive complexity — more complex caching environments select for more sophisticated deception and counter-deception strategies.<sup><a href="#src-1">1</a></sup></p>
+  </section>
+
+  <section class="beh-section">
+    <h2>The Broader Significance</h2>
+    <p><strong class="claim-science">[science]</strong> Raven food caching research has contributed significantly to the debate about animal theory of mind. Prior to the corvid work, the dominant view was that theory of mind was unique to humans and perhaps some great apes. The raven (and scrub-jay) caching studies suggested that strategic social cognition — specifically modelling what others can perceive and know — may have evolved independently in multiple lineages under similar social pressures.</p>
+    <p>These findings do not establish that ravens are conscious or self-aware in a philosophically robust sense. They establish that ravens behave in ways that are most parsimoniously explained by attribution of knowledge states to other individuals.<sup><a href="#src-2">2</a></sup></p>
+  </section>
+
+  <section class="beh-section">
+    <h2>Related Pages</h2>
+    <ul>
+      <li><a href="/behaviour/raven-intelligence/">Raven intelligence — full chapter</a></li>
+      <li><a href="/questions/how-smart-are-ravens/">How smart are ravens?</a></li>
+      <li><a href="/questions/what-do-ravens-eat/">What do ravens eat?</a></li>
+    </ul>
+  </section>
+
+  <section class="beh-faq beh-section" aria-labelledby="faq-h2">
+    <h2 id="faq-h2">Frequently Asked Questions</h2>
+    {faq.map(item => (
+      <details class="beh-faq-item">
+        <summary class="beh-faq-q">{item.q}</summary>
+        <p class="beh-faq-a">{item.a}</p>
+      </details>
+    ))}
+  </section>
+
+  <section class="beh-sources beh-section" aria-labelledby="src-h2">
+    <h2 id="src-h2">Sources</h2>
+    <ol class="beh-src-list">
+      <li id="src-1">Heinrich, B. (1999). <em>Mind of the Raven</em>. HarperCollins. — food caching behaviour in wild and captive ravens (ch. 8–10).</li>
+      <li id="src-2">Bugnyar, T. &amp; Heinrich, B. (2005). Ravens, <em>Corvus corax</em>, differentiate between knowledgeable and ignorant competitors. <em>Proceedings of the Royal Society B</em> 272, 1641–1646. DOI: 10.1098/rspb.2005.3144 — cache protection and knowledge-state attribution.</li>
+      <li id="src-3">Bugnyar, T., Reber, S.A. &amp; Buckner, C. (2016). Ravens attribute visual access to unseen competitors. <em>Nature Communications</em> 7, 10506. DOI: 10.1038/ncomms10506 — peephole paradigm and gaze attribution.</li>
+      <li id="src-4">Clayton, N.S. &amp; Dickinson, A. (1998). Episodic-like memory during cache recovery by scrub jays. <em>Nature</em> 395, 272–274. DOI: 10.1038/26216 — what-where-when memory in corvids (scrub-jay baseline for comparison).</li>
+    </ol>
+    <p class="beh-claim-note"><strong class="claim-science">[science]</strong> peer-reviewed studies</p>
+  </section>
+
+  <nav class="beh-nav-bottom">
+    <a href="/behaviour/raven-intelligence/" class="beh-back">← Raven Intelligence</a>
+    <a href="/behaviour/" class="beh-next">All Behaviour Chapters →</a>
+  </nav>
+</article>
+</BaseLayout>
+
+<style>
+  .beh-page { max-width: 820px; margin: 0 auto; padding: 2rem 1.25rem 4rem; color: var(--iron-ink, #e8e4d8); font-family: 'Inter', sans-serif; line-height: 1.72; }
+  .beh-breadcrumb ol { display: flex; flex-wrap: wrap; gap: .25rem; list-style: none; padding: 0; margin: 0 0 2rem; font-size: .8rem; color: var(--ink-soft, #8a8070); }
+  .beh-breadcrumb a { color: var(--gold-500, #d4ae5a); text-decoration: none; }
+  .beh-pillar { font-size: .72rem; letter-spacing: .12em; text-transform: uppercase; color: var(--gold-500, #d4ae5a); margin: 0 0 .4rem; }
+  .beh-page h1 { font-family: 'Cormorant Garamond', serif; font-size: clamp(2rem, 5vw, 3.25rem); font-weight: 700; color: #fff; margin: 0 0 .4rem; line-height: 1.1; }
+  .beh-subtitle { font-size: 1.1rem; color: var(--ink-soft, #c0b89a); margin: 0 0 2rem; }
+  .beh-snippet { background: rgba(212,174,90,.08); border-left: 3px solid var(--gold-500, #d4ae5a); border-radius: 0 6px 6px 0; padding: 1rem 1.25rem; margin-bottom: 2.5rem; font-size: 1.03rem; }
+  .beh-section { margin-bottom: 2.75rem; }
+  .beh-section h2 { font-family: 'Cormorant Garamond', serif; font-size: 1.6rem; font-weight: 600; color: #fff; margin: 0 0 1rem; border-bottom: 1px solid rgba(212,174,90,.2); padding-bottom: .4rem; }
+  .beh-section p { margin: 0 0 1rem; font-size: .97rem; }
+  .beh-section ul { padding-left: 1.25rem; margin: 0 0 1rem; }
+  .beh-section li { margin-bottom: .5rem; font-size: .95rem; }
+  .claim-science { color: #7ab9e0; font-style: normal; font-size: .78rem; }
+  a[href] { color: var(--gold-500, #d4ae5a); }
+  .beh-faq-item { border-bottom: 1px solid rgba(255,255,255,.07); }
+  .beh-faq-q { cursor: pointer; padding: .9rem 0; font-size: .97rem; font-weight: 500; color: #fff; list-style: none; }
+  .beh-faq-q::before { content: '+ '; color: var(--gold-500, #d4ae5a); font-weight: 700; }
+  details[open] .beh-faq-q::before { content: '− '; }
+  .beh-faq-a { margin: 0 0 1rem; line-height: 1.7; font-size: .93rem; color: var(--ink-soft, #c8c0b0); }
+  .beh-src-list { padding-left: 1.25rem; margin: 0 0 1rem; }
+  .beh-src-list li { margin-bottom: .6rem; font-size: .82rem; color: var(--ink-soft, #8a8070); line-height: 1.6; }
+  .beh-claim-note { font-size: .78rem; color: var(--ink-soft, #605848); border-top: 1px solid rgba(255,255,255,.06); padding-top: .75rem; }
+  .beh-nav-bottom { display: flex; justify-content: space-between; padding-top: 2rem; border-top: 1px solid rgba(255,255,255,.07); }
+  .beh-nav-bottom a { font-size: .9rem; text-decoration: none; }
+  .beh-nav-bottom a:hover { text-decoration: underline; }
+</style>

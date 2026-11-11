@@ -1,0 +1,72 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const title       = 'Raven Myths vs Facts — Common Beliefs Examined';
+const description = 'Common beliefs about ravens examined with evidence: are ravens bad luck, do ravens talk, are ravens smarter than dogs? Every claim is fact-checked and labelled science or lore.';
+const path        = '/myths/';
+
+const breadcrumbs = [
+  { name: 'Home',           url: '/' },
+  { name: 'Myths vs Facts', url: '/myths/' },
+];
+
+const myths = [
+  { slug: 'are-ravens-bad-luck',          title: 'Myth: "Ravens are bad luck"',              verdict: 'Partly True — depends on tradition' },
+  { slug: 'ravens-can-talk',              title: 'Myth: "Ravens can talk like parrots"',      verdict: 'Partly True — they mimic, rarely form words' },
+  { slug: 'ravens-are-crows',             title: 'Myth: "Ravens are just big crows"',          verdict: 'False — different species, different ecology' },
+  { slug: 'ravens-bring-death',           title: 'Myth: "Seeing a raven means someone will die"', verdict: 'False — a cultural belief with no causal basis' },
+  { slug: 'ravens-remember-faces',        title: 'Myth: "Ravens remember faces"',              verdict: 'True — documented in captive studies' },
+  { slug: 'ravens-are-the-smartest-bird', title: 'Myth: "Ravens are the smartest bird"',      verdict: 'Partly True — among the most capable; ranking is complex' },
+  { slug: 'ravens-steal-shiny-objects',   title: 'Myth: "Ravens steal shiny objects"',        verdict: 'False — no evidence for preferential attraction to shiny items' },
+  { slug: 'ravens-bring-death',           title: 'Myth: "Seeing a raven means death"',         verdict: 'False — cultural belief with no causal basis' },
+  { slug: 'ravens-mate-for-life-myth',    title: 'Myth: "Ravens always mate for life"',        verdict: 'Partly True — pairs are long-term but divorce occurs' },
+  { slug: 'ravens-hold-funerals',         title: 'Myth: "Ravens hold funerals"',               verdict: 'Partly True — gatherings at dead conspecifics are documented' },
+  { slug: 'ravens-are-aggressive-birds',  title: 'Myth: "Ravens are aggressive birds"',        verdict: 'Partly True — nest defence only; not generally dangerous' },
+  { slug: 'ravens-only-eat-carrion',      title: 'Myth: "Ravens only eat carrion"',            verdict: 'False — generalist omnivores; carrion is one of many food types' },
+];
+---
+
+<BaseLayout title={title} description={description} path={path} breadcrumbs={breadcrumbs}>
+
+<div class="mythidx-page">
+
+  <nav class="mythidx-breadcrumb" aria-label="Breadcrumb">
+    <ol>
+      <li><a href="/">Home</a><span aria-hidden="true"> › </span></li>
+      <li><span aria-current="page">Myths vs Facts</span></li>
+    </ol>
+  </nav>
+
+  <header class="mythidx-header">
+    <h1>Raven Myths vs Facts</h1>
+    <p class="mythidx-lead">Common beliefs about ravens examined with sourced evidence. Every page shows the belief, the verdict, and the reasoning — with science and lore clearly separated.</p>
+  </header>
+
+  <ul class="mythidx-list">
+    {myths.map(m => (
+      <li class="mythidx-item">
+        <a href={`/myths/${m.slug}/`} class="mythidx-link">
+          <strong class="mythidx-title">{m.title}</strong>
+          <span class="mythidx-verdict">{m.verdict}</span>
+        </a>
+      </li>
+    ))}
+  </ul>
+
+</div>
+
+</BaseLayout>
+
+<style>
+  .mythidx-page { max-width: 760px; margin: 0 auto; padding: 2rem 1.25rem 4rem; color: var(--iron-ink, #e8e4d8); font-family: 'Inter', sans-serif; }
+  .mythidx-breadcrumb ol { display: flex; gap: .25rem; list-style: none; padding: 0; margin: 0 0 2rem; font-size: .8rem; color: var(--ink-soft, #8a8070); }
+  .mythidx-breadcrumb a { color: var(--gold-500, #d4ae5a); text-decoration: none; }
+  .mythidx-header h1 { font-family: 'Cormorant Garamond', serif; font-size: clamp(2rem, 5vw, 2.75rem); font-weight: 700; color: #fff; margin: 0 0 .75rem; }
+  .mythidx-lead { font-size: 1rem; color: var(--ink-soft, #c0b89a); margin: 0 0 2.5rem; line-height: 1.65; }
+  .mythidx-list { list-style: none; padding: 0; margin: 0; }
+  .mythidx-item { border-bottom: 1px solid rgba(255,255,255,.07); }
+  .mythidx-link { display: flex; flex-direction: column; gap: .2rem; padding: 1rem 0; text-decoration: none; color: inherit; }
+  .mythidx-link:hover .mythidx-title { color: var(--gold-500, #d4ae5a); }
+  .mythidx-title { font-size: .97rem; color: #fff; }
+  .mythidx-verdict { font-size: .82rem; color: var(--gold-500, #d4ae5a); opacity: .75; }
+</style>

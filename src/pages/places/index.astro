@@ -1,0 +1,84 @@
+---
+/**
+ * Places index — Ravens around the World
+ */
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const title       = 'Ravens Around the World: Places and Populations';
+const description = 'Explore where ravens live and thrive — from Iceland\'s raven-saturated highlands to Yellowstone\'s wolf-raven relationships and the UK\'s recovering population. Regional guides to raven ecology and culture.';
+const path        = '/places/';
+
+const breadcrumbs = [
+  { name: 'Home',   url: '/' },
+  { name: 'Places', url: path },
+];
+
+const places = [
+  { name: 'Ravens in Iceland', url: '/places/ravens-in-iceland/', desc: 'Iceland may have the highest raven density of any country. The hrafn is woven into Viking culture, place names, and the Raven-Flóki navigation legend.' },
+  { name: 'Ravens in the UK', url: '/places/ravens-in-the-uk/', desc: 'From near-extinction in England to 7,000+ breeding pairs — the raven\'s remarkable recovery in Britain, its legal protection, and the Tower of London tradition.' },
+  { name: 'Ravens in Yellowstone', url: '/places/ravens-in-yellowstone/', desc: 'Yellowstone\'s wolf-following ravens are among the best-studied in North America. Wolf reintroduction transformed carrion availability for the resident raven population.' },
+  { name: 'Ravens in Norway', url: '/places/ravens-in-norway/', desc: 'Norway supports one of Europe\'s densest raven populations (est. 15,000–20,000 pairs). As the Norse cultural heartland, the country\'s connection with the raven runs from Odin\'s Huginn and Muninn to Viking-age raven war banners.' },
+  { name: 'Ravens in Alaska', url: '/places/ravens-in-alaska/', desc: 'Alaska has one of the world\'s highest raven densities, with birds year-round from rainforest to Arctic tundra. The raven (Yéil) is the supreme Trickster-Creator in Tlingit and Haida culture, and the Raven moiety is a fundamental Tlingit social division.' },
+  { name: 'Ravens in the Sonoran Desert', url: '/places/ravens-in-the-sonoran-desert/', desc: 'The Common Raven is a year-round resident of one of North America\'s hottest deserts. This page covers how ravens survive extreme desert heat, their relationship with the saguaro cactus ecosystem, and the raven population increases driven by human development.' },
+  { name: 'Ravens in the Scottish Highlands', url: '/places/ravens-in-the-scottish-highlands/', desc: 'The Scottish Highlands are Britain\'s raven stronghold — with 4,000–5,000+ breeding pairs sustained by red deer carrion and rugged cliff nesting sites. The Highland raven survived persecution that eliminated the bird from most of England.' },
+  { name: 'Ravens in the Alps', url: '/places/ravens-in-the-alps/', desc: 'Common Ravens are year-round Alpine residents from valley floors to above 3,000m. They exploit chamois and ibex carrion on high snowfields, nest on limestone cliff faces, and have adapted to ski-resort food subsidies across Switzerland, Austria, France, and Italy.' },
+  { name: 'Ravens in Scandinavia', url: '/places/ravens-in-scandinavia/', desc: 'Norway, Sweden, Finland, and Denmark host one of the world\'s densest raven populations. The Scandinavian raven is the Norse hrafn — the bird of Odin, the battlefield companion, the winter survivor — in both ecology and deep cultural memory.' },
+  { name: 'Ravens in the Mojave Desert', url: '/places/ravens-in-the-mojave-desert/', desc: 'The Mojave has seen a human-subsidised raven population explosion. The ecological consequence is documented predation of juvenile desert tortoises — a federally threatened species. The clearest case of raven overabundance causing conservation harm.' },
+];
+---
+
+<BaseLayout title={title} description={description} path={path} ogType="website"
+  datePublished="2026-11-07" dateModified="2026-11-07"
+  breadcrumbs={breadcrumbs} pageType="WebPage">
+
+<article class="qa-page">
+
+  <nav class="qa-breadcrumb" aria-label="Breadcrumb">
+    <ol>
+      {breadcrumbs.map((b, i) => (
+        <li>
+          {i < breadcrumbs.length - 1
+            ? <><a href={b.url}>{b.name}</a><span aria-hidden="true"> › </span></>
+            : <span aria-current="page">{b.name}</span>}
+        </li>
+      ))}
+    </ol>
+  </nav>
+
+  <header class="qa-header">
+    <p class="qa-pillar">Places</p>
+    <h1>Ravens Around the World</h1>
+  </header>
+
+  <section class="qa-snippet" aria-label="Overview">
+    <p>The Common Raven is one of the most widely distributed birds on Earth — found from Arctic tundra to Saharan desert, from the Pacific coast of North America to the mountains of East Africa. These regional guides explore raven populations, ecology, and cultural significance in specific places.</p>
+  </section>
+
+  <section class="qa-section">
+    <ul class="place-list">
+      {places.map(p => (
+        <li>
+          <a href={p.url}><strong>{p.name}</strong></a>
+          <p>{p.desc}</p>
+        </li>
+      ))}
+    </ul>
+  </section>
+
+</article>
+</BaseLayout>
+
+<style>
+  .qa-page { max-width: 820px; margin: 0 auto; padding: 2rem 1.25rem 4rem; color: var(--iron-ink, #e8e4d8); font-family: 'Inter', sans-serif; line-height: 1.72; }
+  .qa-breadcrumb ol { display: flex; flex-wrap: wrap; gap: .25rem; list-style: none; padding: 0; margin: 0 0 2rem; font-size: .8rem; color: var(--ink-soft, #8a8070); }
+  .qa-breadcrumb a { color: var(--gold-500, #d4ae5a); text-decoration: none; }
+  .qa-pillar { font-size: .72rem; letter-spacing: .12em; text-transform: uppercase; color: var(--gold-500, #d4ae5a); margin: 0 0 .4rem; }
+  .qa-page h1 { font-family: 'Cormorant Garamond', serif; font-size: clamp(2rem, 5vw, 3rem); font-weight: 700; color: #fff; margin: 0 0 2rem; line-height: 1.1; }
+  .qa-snippet { background: rgba(212,174,90,.08); border-left: 3px solid var(--gold-500, #d4ae5a); border-radius: 0 6px 6px 0; padding: 1rem 1.25rem; margin-bottom: 2.5rem; font-size: 1.03rem; }
+  .qa-section { margin-bottom: 2.5rem; }
+  .place-list { list-style: none; padding: 0; margin: 0; display: grid; gap: 1.5rem; }
+  .place-list li { background: rgba(255,255,255,.03); border: 1px solid rgba(212,174,90,.12); border-radius: 8px; padding: 1.25rem; }
+  .place-list a { color: var(--gold-500, #d4ae5a); text-decoration: none; font-size: 1.05rem; }
+  .place-list p { margin: .5rem 0 0; font-size: .9rem; color: var(--ink-soft, #c8c0b0); }
+  a[href] { color: var(--gold-500, #d4ae5a); }
+</style>

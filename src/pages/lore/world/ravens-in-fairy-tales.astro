@@ -1,0 +1,150 @@
+---
+/**
+ * World lore — Ravens in fairy tales
+ * MYW·19
+ * Primary keyword: ravens in fairy tales
+ * Secondary: raven fairy tale, brothers grimm raven, raven transformation story
+ */
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+
+const title       = 'Ravens in Fairy Tales: Transformation, Enchantment, and Dark Magic';
+const description = 'Ravens appear in European fairy tales as enchanted humans, messengers from the otherworld, and symbols of dark transformation. This page examines raven roles in Brothers Grimm tales, Celtic stories, and other European folk narrative traditions.';
+const path        = '/lore/world/ravens-in-fairy-tales/';
+
+const breadcrumbs = [
+  { name: 'Home',  url: '/' },
+  { name: 'Lore',  url: '/lore/' },
+  { name: 'World', url: '/lore/world/' },
+  { name: 'Ravens in Fairy Tales', url: path },
+];
+
+const faq = [
+  { q: 'What fairy tales feature ravens?', a: 'Several well-known European fairy tales feature ravens prominently: "The Seven Ravens" (Die sieben Raben, Brothers Grimm) in which seven brothers are transformed into ravens and must be rescued by their sister; "The Raven" (Die Rabe, Brothers Grimm) in which a princess is transformed into a raven; and "The Three Ravens" / "The Twa Corbies" — Scottish and English ballads about ravens feasting on a slain knight, with the more sinister "Twa Corbies" (two crows/ravens) version. Other examples appear in Italian (Calvino\'s collections), Slavic, and Scandinavian traditions.' },
+  { q: 'What do ravens symbolise in fairy tales?', a: 'In European fairy tales, ravens consistently appear in connection with transformation (enchanted humans taking raven form), dark magic (witches and sorcerers use ravens), and threshold experiences (ravens appear at moments of death, choice, or crossing into the otherworld). Ravens carry knowledge: in multiple tale types, a raven overheard speaking reveals a secret or provides a solution. This storytelling role reflects the raven\'s real behavioural conspicuousness and apparent intelligence, amplified through narrative tradition.' },
+  { q: 'What is "The Seven Ravens" about?', a: 'In the Brothers Grimm tale "The Seven Ravens" (Die sieben Raben, KHM 25), a father accidentally curses his seven sons, transforming them into ravens. His daughter, born after the transformation, sets out to rescue her brothers. She must travel to the glass mountain, sacrifice a finger as a key, and retrieve a ring to break the enchantment. The tale is classified under ATU 451 (The Maiden Who Seeks Her Brothers) in the Aarne-Thompson-Uther folktale classification index — a type found across European and Middle Eastern traditions.' },
+];
+---
+
+<BaseLayout title={title} description={description} path={path} ogType="article"
+  datePublished="2026-11-07" dateModified="2026-11-07"
+  breadcrumbs={breadcrumbs} faq={faq} pageType="Article">
+
+<article class="qa-page">
+
+  <nav class="qa-breadcrumb" aria-label="Breadcrumb">
+    <ol>
+      {breadcrumbs.map((b, i) => (
+        <li>
+          {i < breadcrumbs.length - 1
+            ? <><a href={b.url}>{b.name}</a><span aria-hidden="true"> › </span></>
+            : <span aria-current="page">{b.name}</span>}
+        </li>
+      ))}
+    </ol>
+  </nav>
+
+  <header class="qa-header">
+    <p class="qa-pillar">World Lore · MYW·19</p>
+    <h1>Ravens in Fairy Tales: Transformation, Enchantment, and Dark Magic</h1>
+  </header>
+
+  <section class="qa-snippet" aria-label="Direct answer">
+    <p><strong class="claim-lore">[lore]</strong> Ravens are recurring figures in European fairy tales, primarily as enchanted humans (humans transformed into ravens as a curse), and as bearers of secret knowledge. The Brothers Grimm's "The Seven Ravens" (KHM 25) and "The Raven" (KHM 93) are the most widely known examples. The raven in folk narrative consistently marks threshold moments — transformation, dark magic, hidden knowledge, and the boundary between the living world and the otherworld.</p>
+  </section>
+
+  <section class="qa-section">
+    <h2>The Seven Ravens (Brothers Grimm)</h2>
+    <p><strong class="claim-lore">[lore]</strong> "Die sieben Raben" (The Seven Ravens, KHM 25) is one of the best-known Grimm tales featuring ravens:<sup><a href="#src-1">1</a></sup></p>
+    <ul>
+      <li>A father with seven sons desperately wants a daughter. When she is finally born, he sends his sons to fetch water for her baptism. They drop the jug in the well; the father, in anger, curses them to become ravens.</li>
+      <li>The daughter, grown, learns she has seven brothers and sets out to rescue them. She travels east of the sun and west of the moon, reaches the glass mountain, and uses a severed finger to open the door (her key was lost).</li>
+      <li>She finds her brothers and breaks the enchantment by her presence and sacrifice. The brothers become human again.</li>
+    </ul>
+    <p>The tale is classified under ATU 451 in the Aarne-Thompson-Uther index — a folktale type distributed across Europe and the Middle East. Variants include the Italian "The Six Ravens," the Norse "East of the Sun and West of the Moon," and "The Wild Swans" (Andersen) where brothers are transformed into swans rather than ravens.</p>
+  </section>
+
+  <section class="qa-section">
+    <h2>The Raven (Brothers Grimm)</h2>
+    <p><strong class="claim-lore">[lore]</strong> "Die Rabe" (The Raven, KHM 93) is a lesser-known Grimm tale with a raven as an enchanted princess:<sup><a href="#src-1">1</a></sup></p>
+    <ul>
+      <li>A queen, angered by her young daughter, wishes aloud that the girl were a raven. The wish takes effect immediately and the girl flies away as a raven.</li>
+      <li>A young man finds the raven-princess in a forest. She tells him how to break the enchantment: he must wait for her at a certain place three times, without sleeping. He fails each time (sleeping through each visit).</li>
+      <li>He undertakes a long quest to find the golden castle of Stromberg where she is now trapped, recovers the ring, and finally rescues her.</li>
+    </ul>
+    <p>This tale type (ATU 400 — the man on a quest for a lost wife/princess) appears widely across European tradition; the raven is specifically the form of enchantment in the Grimm version.</p>
+  </section>
+
+  <section class="qa-section">
+    <h2>The Twa Corbies</h2>
+    <p><strong class="claim-lore">[lore]</strong> "The Twa Corbies" is a traditional Scottish ballad (collected in various 18th–19th century anthologies) featuring two ravens (or crows — the word "corbie" means crow or raven in Scots) discussing a slain knight:<sup><a href="#src-2">2</a></sup></p>
+    <blockquote style="border-left:3px solid var(--gold-500,#d4ae5a);padding:.75rem 1rem;margin:1rem 0;font-style:italic;color:#c8c0b0;font-size:.93rem">
+      "As I was walking all alane, / I heard twa corbies making a mane; / The tane unto the t'other say, / 'Where shall we gang and dine to-day?'"
+    </blockquote>
+    <p>The two ravens note that the knight's hawk, hound, and lady have all abandoned him — they alone know where he lies. They plan to feast on him: "Ye'll sit on his white hause-bane [collar-bone], / And I'll pike out his bonny blue een [eyes]." The ballad is notably darker than its English parallel "The Three Ravens," where the knight's loyal animals guard his body. "The Twa Corbies" presents ravens as knowing, amoral creatures who observe human affairs and exploit the abandoned dead.</p>
+  </section>
+
+  <section class="qa-section">
+    <h2>Ravens as Knowledge-Bearers in Folktales</h2>
+    <p><strong class="claim-lore">[lore]</strong> Across European folk tradition, ravens frequently appear as creatures that possess dangerous or transformative knowledge:<sup><a href="#src-1">1</a></sup></p>
+    <ul>
+      <li>In multiple tale types, a hero overhears ravens speaking and learns a secret — where a treasure is hidden, how to cure a sick princess, or what doom awaits the kingdom.</li>
+      <li>Ravens observe everything — this narrative role mirrors their real behavioural ecology (highly observant, socially intelligent birds that appear to notice and remember events in their environment).</li>
+      <li>In some Germanic and Slavic tale traditions, witches and sorcerers keep ravens as familiars — the raven's association with Odin and prophecy in Norse mythology feeds into the broader European folk belief in the raven as a magical companion or spy.</li>
+    </ul>
+  </section>
+
+  <section class="qa-section">
+    <h2>Related Pages</h2>
+    <ul>
+      <li><a href="/lore/world/raven-symbolism/">Raven symbolism across cultures</a></li>
+      <li><a href="/lore/world/ravens-in-slavic-folklore/">Ravens in Slavic folklore</a></li>
+      <li><a href="/lore/world/bran-the-blessed/">Bran the Blessed — the raven in Welsh myth</a></li>
+      <li><a href="/questions/why-are-ravens-associated-with-death/">Why are ravens associated with death?</a></li>
+    </ul>
+  </section>
+
+  <section class="qa-faq qa-section" aria-labelledby="faq-h2">
+    <h2 id="faq-h2">Frequently Asked Questions</h2>
+    {faq.map(item => (
+      <details class="qa-faq-item">
+        <summary class="qa-faq-q">{item.q}</summary>
+        <p class="qa-faq-a">{item.a}</p>
+      </details>
+    ))}
+  </section>
+
+  <section class="qa-sources qa-section" aria-labelledby="src-h2">
+    <h2 id="src-h2">Sources</h2>
+    <ol class="qa-src-list">
+      <li id="src-1">Grimm, J. & Grimm, W. (1812/1857). <em>Kinder- und Hausmärchen</em> (Children's and Household Tales). — KHM 25 (Die sieben Raben / The Seven Ravens); KHM 93 (Die Rabe / The Raven); ATU classifications via Uther, H.-J. (2004), <em>The Types of International Folktales</em>, FF Communications No. 284–286. Helsinki.</li>
+      <li id="src-2">Child, F.J. (ed., 1882–1898). <em>The English and Scottish Popular Ballads</em>, vol. 1. Boston: Houghton Mifflin. — Child Ballad #26 (The Three Ravens / The Twa Corbies).</li>
+    </ol>
+    <p class="qa-claim-note"><strong class="claim-lore">[lore]</strong> named cultural/historical source</p>
+  </section>
+
+</article>
+</BaseLayout>
+
+<style>
+  .qa-page { max-width: 820px; margin: 0 auto; padding: 2rem 1.25rem 4rem; color: var(--iron-ink, #e8e4d8); font-family: 'Inter', sans-serif; line-height: 1.72; }
+  .qa-breadcrumb ol { display: flex; flex-wrap: wrap; gap: .25rem; list-style: none; padding: 0; margin: 0 0 2rem; font-size: .8rem; color: var(--ink-soft, #8a8070); }
+  .qa-breadcrumb a { color: var(--gold-500, #d4ae5a); text-decoration: none; }
+  .qa-pillar { font-size: .72rem; letter-spacing: .12em; text-transform: uppercase; color: var(--gold-500, #d4ae5a); margin: 0 0 .4rem; }
+  .qa-page h1 { font-family: 'Cormorant Garamond', serif; font-size: clamp(2rem, 5vw, 3rem); font-weight: 700; color: #fff; margin: 0 0 2rem; line-height: 1.1; }
+  .qa-snippet { background: rgba(212,174,90,.08); border-left: 3px solid var(--gold-500, #d4ae5a); border-radius: 0 6px 6px 0; padding: 1rem 1.25rem; margin-bottom: 2.5rem; font-size: 1.03rem; }
+  .qa-section { margin-bottom: 2.5rem; }
+  .qa-section h2 { font-family: 'Cormorant Garamond', serif; font-size: 1.5rem; font-weight: 600; color: #fff; margin: 0 0 .9rem; border-bottom: 1px solid rgba(212,174,90,.2); padding-bottom: .4rem; }
+  .qa-section p { margin: 0 0 1rem; font-size: .97rem; }
+  .qa-section ul { padding-left: 1.25rem; margin: 0 0 1rem; }
+  .qa-section li { margin-bottom: .4rem; font-size: .95rem; }
+  .claim-lore { color: #c4a26a; font-style: normal; font-size: .78rem; }
+  a[href] { color: var(--gold-500, #d4ae5a); }
+  .qa-faq-item { border-bottom: 1px solid rgba(255,255,255,.07); }
+  .qa-faq-q { cursor: pointer; padding: .9rem 0; font-size: .97rem; font-weight: 500; color: #fff; list-style: none; }
+  .qa-faq-q::before { content: '+ '; color: var(--gold-500, #d4ae5a); font-weight: 700; }
+  details[open] .qa-faq-q::before { content: '− '; }
+  .qa-faq-a { margin: 0 0 1rem; line-height: 1.7; font-size: .93rem; color: var(--ink-soft, #c8c0b0); }
+  .qa-src-list { padding-left: 1.25rem; margin: 0 0 1rem; }
+  .qa-src-list li { margin-bottom: .6rem; font-size: .82rem; color: var(--ink-soft, #8a8070); line-height: 1.6; }
+  .qa-claim-note { font-size: .78rem; color: var(--ink-soft, #605848); border-top: 1px solid rgba(255,255,255,.06); padding-top: .75rem; }
+</style>

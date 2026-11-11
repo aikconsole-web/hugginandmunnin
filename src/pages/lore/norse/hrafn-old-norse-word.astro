@@ -1,0 +1,162 @@
+---
+/**
+ * Norse Lore — Hrafn: the Old Norse word for raven
+ * NRS·09
+ * Primary keyword: hrafn meaning norse
+ * Secondary: what does hrafn mean, old norse word for raven, hrafn etymology
+ */
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+
+const title       = 'Hrafn: The Old Norse Word for Raven';
+const description = 'Hrafn (pronounced roughly "HRAHVN") is the Old Norse word for raven. This page covers its etymology, pronunciation, its role in names and place-names, and how it connects to raven mythology.';
+const path        = '/lore/norse/hrafn-old-norse-word/';
+
+const breadcrumbs = [
+  { name: 'Home',       url: '/' },
+  { name: 'Norse Lore', url: '/lore/norse/' },
+  { name: 'Hrafn — the Old Norse Word for Raven', url: path },
+];
+
+const faq = [
+  { q: 'How do you pronounce hrafn?', a: 'The Old Norse pronunciation is approximately "HRAHVN" — a single syllable with a trilled or slightly aspirated initial "h" followed by a short "a" and the consonant cluster "fn" (not quite "fn" as in English; in Old Norse the r is pronounced). The initial cluster "hr-" in Old Norse was a voiceless r, so the full pronunciation approximates "RRAHVN" or "KHRAHVN" depending on dialect. Modern Icelandic "hrafn" is pronounced roughly "HRAPBN" (the "f" becomes a bilabial approximant before "n").' },
+  { q: 'What modern names come from hrafn?', a: 'Many Scandinavian personal names derive from hrafn. Hrafn was itself a common Old Norse personal name. Compounds include: Hrafnkell (raven-kettle; a character in the Hrafnkels saga), Hrafnhildr (raven-battle), and Berthravn/Ravn (raven, in later Scandinavian forms). In English, "Raven" and "Ramiro" have related Proto-Germanic roots. The Norwegian surname Ravn and Icelandic Hrafn still occur.' },
+  { q: 'Are there Icelandic place-names containing hrafn?', a: 'Yes. Hrafnagjá (Raven Gorge), Hrafnseyri (Raven Sandbank), and other Icelandic place-names contain hrafn. In Norway, place-names including "ravn-" (the later Norse form) are found across the country. The abundance of raven place-names across Scandinavia and Iceland reflects both the bird\'s ecological prevalence and its cultural importance.' },
+];
+---
+
+<BaseLayout title={title} description={description} path={path} ogType="article"
+  datePublished="2026-11-07" dateModified="2026-11-07"
+  breadcrumbs={breadcrumbs} faq={faq} pageType="Article">
+
+<article class="qa-page">
+
+  <nav class="qa-breadcrumb" aria-label="Breadcrumb">
+    <ol>
+      {breadcrumbs.map((b, i) => (
+        <li>
+          {i < breadcrumbs.length - 1
+            ? <><a href={b.url}>{b.name}</a><span aria-hidden="true"> › </span></>
+            : <span aria-current="page">{b.name}</span>}
+        </li>
+      ))}
+    </ol>
+  </nav>
+
+  <header class="qa-header">
+    <p class="qa-pillar">Norse Lore · NRS·09</p>
+    <h1>Hrafn: The Old Norse Word for Raven</h1>
+  </header>
+
+  <section class="qa-snippet" aria-label="Direct answer">
+    <p><strong class="claim-lore">[lore]</strong> <em>Hrafn</em> is the Old Norse word for the Common Raven (<em>Corvus corax</em>). It descends from Proto-Germanic *<em>hrabnaz</em>, related to Old English <em>hrǣfn</em> (modern English "raven"), Old High German <em>hraban</em>, and Gothic <em>hrabns</em>. The word appears throughout Old Norse poetry and prose — in the names of Odin's ravens (Huginn and Muninn), in personal names, and in dozens of place-names across Scandinavia and Iceland.</p>
+  </section>
+
+  <section class="qa-section">
+    <h2>Etymology — From Proto-Germanic to Modern Languages</h2>
+    <p><strong class="claim-lore">[lore]</strong> The Proto-Germanic root *<em>hrabnaz</em> (raven) is reconstructed by linguists from the parallel forms found across early Germanic languages:<sup><a href="#src-1">1</a></sup></p>
+    <ul>
+      <li>Old Norse: <em>hrafn</em></li>
+      <li>Old English: <em>hrǣfn</em> → Middle English <em>raven</em> → Modern English "raven"</li>
+      <li>Old High German: <em>hraban</em>, <em>raban</em></li>
+      <li>Old Saxon: <em>hraban</em></li>
+      <li>Gothic: <em>hrabns</em></li>
+    </ul>
+    <p>The word is not etymologically connected to Latin <em>corvus</em> (which gives the scientific genus name <em>Corvus</em>). The Germanic branch and the Latin branch are parallel, not derived from each other.</p>
+    <p>The root is ultimately onomatopoeic — it reflects the deep, croaking call of the raven. Compare the similar principle in Latin <em>corvus</em>, which is likewise derived from the raven's call (from the verb <em>crocire</em>, to croak).</p>
+  </section>
+
+  <section class="qa-section">
+    <h2>Hrafn in Old Norse Poetry and Mythology</h2>
+    <p><strong class="claim-lore">[lore]</strong> The word <em>hrafn</em> appears frequently in Old Norse eddic and skaldic poetry, most famously in the names of Odin's two ravens:<sup><a href="#src-2">2</a></sup></p>
+    <ul>
+      <li><strong>Huginn</strong> (<em>hugr</em> + suffix — "thought/mind") — Odin's raven of thought</li>
+      <li><strong>Muninn</strong> (<em>munr</em> + suffix — "memory/mind") — Odin's raven of memory</li>
+    </ul>
+    <p>See <a href="/lore/norse/huginn-and-muninn/">Huginn and Muninn — full chapter</a> for the complete account.</p>
+    <p>Beyond Huginn and Muninn, the word <em>hrafn</em> serves as the base for a cluster of important kennings (compound metaphors) in skaldic poetry — see <a href="/lore/norse/ravens-in-eddic-kennings/">Ravens in eddic kennings</a>.</p>
+    <p>Odin's title <em>Hrafnaguð</em> ("Raven-God" or "God of the Raven") encapsulates the intimate connection between Odin and the raven in Norse religion — see <a href="/lore/norse/odin-the-raven-god/">Odin the Raven-God</a>.</p>
+  </section>
+
+  <section class="qa-section">
+    <h2>Hrafn as a Personal Name</h2>
+    <p><strong class="claim-lore">[lore]</strong> <em>Hrafn</em> was a common personal name in Old Norse-speaking Scandinavia and Iceland. The <em>Landnámabók</em> (Book of Settlements, recording Iceland's settlement in the 9th–10th centuries) mentions several settlers named Hrafn, and raven-names appear as both primary names and elements of compound names throughout the sagas.<sup><a href="#src-3">3</a></sup></p>
+    <p>Notable saga characters with raven-names include:</p>
+    <ul>
+      <li><strong>Hrafnkell</strong> — the protagonist of <em>Hrafnkels saga Freysgoða</em> (Hrafnkell's Saga), one of the best-known Icelandic sagas. His name means roughly "Raven-Kettle" (the second element <em>-ketill</em> was a common name component).</li>
+      <li><strong>Flóki Vilgerðarson</strong> — known as <em>Hrafna-Flóki</em> (Raven-Flóki), who used ravens to navigate to Iceland. See <a href="/lore/norse/raven-floki-and-iceland/">Raven-Flóki and Iceland</a>.</li>
+    </ul>
+  </section>
+
+  <section class="qa-section">
+    <h2>Place-Names Containing Hrafn</h2>
+    <p><strong class="claim-lore">[lore]</strong> Raven place-names are abundant across the Norse world, reflecting both the bird's ecological importance and its cultural prestige. Examples include:<sup><a href="#src-3">3</a></sup></p>
+    <ul>
+      <li><strong>Iceland:</strong> Hrafnseyri (a farm in the Westfjords where the independence leader Jón Sigurðsson was born); Hrafnagjá (a gorge near Þingvellir)</li>
+      <li><strong>Norway:</strong> numerous <em>Ravn-</em> prefixed farms and geographic features</li>
+      <li><strong>Orkney and Shetland:</strong> <em>Rafn-</em> place-names reflecting Norse settlement</li>
+      <li><strong>England:</strong> place-names with the Old English cognate <em>hrǣfn</em> occur in areas of heavy Norse/Anglo-Saxon presence — Ravensthorpe, Ravenscar, Ravenswood</li>
+    </ul>
+  </section>
+
+  <section class="qa-section">
+    <h2>The Bird Behind the Word</h2>
+    <p><strong class="claim-science">[science]</strong> The Common Raven (<em>Corvus corax</em>) is a year-round resident across Scandinavia and Iceland — ubiquitous on farmland, coast, and mountain alike. Its visibility and behaviour (following hunters, scavenging battlefields, its intelligence and its call) would have made it familiar to Norse-speaking people in a way that shapes the depth of its cultural presence. See <a href="/species/common-raven/">Common Raven — species profile</a>.</p>
+  </section>
+
+  <section class="qa-section">
+    <h2>Related Pages</h2>
+    <ul>
+      <li><a href="/questions/what-is-the-norse-word-for-raven/">What is the Norse word for raven? (Q&A)</a></li>
+      <li><a href="/lore/norse/huginn-and-muninn/">Huginn and Muninn</a></li>
+      <li><a href="/lore/norse/odin-the-raven-god/">Odin the Raven-God</a></li>
+      <li><a href="/lore/norse/ravens-in-eddic-kennings/">Ravens in eddic kennings</a></li>
+    </ul>
+  </section>
+
+  <section class="qa-faq qa-section" aria-labelledby="faq-h2">
+    <h2 id="faq-h2">Frequently Asked Questions</h2>
+    {faq.map(item => (
+      <details class="qa-faq-item">
+        <summary class="qa-faq-q">{item.q}</summary>
+        <p class="qa-faq-a">{item.a}</p>
+      </details>
+    ))}
+  </section>
+
+  <section class="qa-sources qa-section" aria-labelledby="src-h2">
+    <h2 id="src-h2">Sources</h2>
+    <ol class="qa-src-list">
+      <li id="src-1">Ringe, D. (2006). <em>A Linguistic History of English, Vol. I: From Proto-Indo-European to Proto-Germanic</em>. Oxford University Press. — Proto-Germanic *hrabnaz etymology.</li>
+      <li id="src-2">Faulkes, A. (trans., 1987). <em>Edda</em> (Snorri Sturluson). Everyman. — eddic kennings, Huginn and Muninn passages.</li>
+      <li id="src-3">Pálsson, H. & Edwards, P. (trans., 1972). <em>Book of Settlements: Landnámabók</em>. University of Manitoba Press. — Norse personal names and place-names.</li>
+    </ol>
+    <p class="qa-claim-note"><strong class="claim-lore">[lore]</strong> named cultural/historical source</p>
+  </section>
+
+</article>
+</BaseLayout>
+
+<style>
+  .qa-page { max-width: 820px; margin: 0 auto; padding: 2rem 1.25rem 4rem; color: var(--iron-ink, #e8e4d8); font-family: 'Inter', sans-serif; line-height: 1.72; }
+  .qa-breadcrumb ol { display: flex; flex-wrap: wrap; gap: .25rem; list-style: none; padding: 0; margin: 0 0 2rem; font-size: .8rem; color: var(--ink-soft, #8a8070); }
+  .qa-breadcrumb a { color: var(--gold-500, #d4ae5a); text-decoration: none; }
+  .qa-pillar { font-size: .72rem; letter-spacing: .12em; text-transform: uppercase; color: var(--gold-500, #d4ae5a); margin: 0 0 .4rem; }
+  .qa-page h1 { font-family: 'Cormorant Garamond', serif; font-size: clamp(2rem, 5vw, 3rem); font-weight: 700; color: #fff; margin: 0 0 2rem; line-height: 1.1; }
+  .qa-snippet { background: rgba(212,174,90,.08); border-left: 3px solid var(--gold-500, #d4ae5a); border-radius: 0 6px 6px 0; padding: 1rem 1.25rem; margin-bottom: 2.5rem; font-size: 1.03rem; }
+  .qa-section { margin-bottom: 2.5rem; }
+  .qa-section h2 { font-family: 'Cormorant Garamond', serif; font-size: 1.5rem; font-weight: 600; color: #fff; margin: 0 0 .9rem; border-bottom: 1px solid rgba(212,174,90,.2); padding-bottom: .4rem; }
+  .qa-section p { margin: 0 0 1rem; font-size: .97rem; }
+  .qa-section ul { padding-left: 1.25rem; margin: 0 0 1rem; }
+  .qa-section li { margin-bottom: .4rem; font-size: .95rem; }
+  .claim-science { color: #7ab9e0; font-style: normal; font-size: .78rem; }
+  .claim-lore { color: #c4a26a; font-style: normal; font-size: .78rem; }
+  a[href] { color: var(--gold-500, #d4ae5a); }
+  .qa-faq-item { border-bottom: 1px solid rgba(255,255,255,.07); }
+  .qa-faq-q { cursor: pointer; padding: .9rem 0; font-size: .97rem; font-weight: 500; color: #fff; list-style: none; }
+  .qa-faq-q::before { content: '+ '; color: var(--gold-500, #d4ae5a); font-weight: 700; }
+  details[open] .qa-faq-q::before { content: '− '; }
+  .qa-faq-a { margin: 0 0 1rem; line-height: 1.7; font-size: .93rem; color: var(--ink-soft, #c8c0b0); }
+  .qa-src-list { padding-left: 1.25rem; margin: 0 0 1rem; }
+  .qa-src-list li { margin-bottom: .6rem; font-size: .82rem; color: var(--ink-soft, #8a8070); line-height: 1.6; }
+  .qa-claim-note { font-size: .78rem; color: var(--ink-soft, #605848); border-top: 1px solid rgba(255,255,255,.06); padding-top: .75rem; }
+</style>

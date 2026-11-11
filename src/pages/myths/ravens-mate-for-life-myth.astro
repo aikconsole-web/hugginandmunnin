@@ -1,0 +1,138 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const title       = 'Do Ravens Really Mate for Life? Fact Check';
+const description = 'Ravens do typically form long-term pair bonds lasting many years, but "mate for life" oversimplifies. Divorce occurs; widowed birds re-pair. What the evidence shows.';
+const path        = '/myths/ravens-mate-for-life-myth/';
+
+const breadcrumbs = [
+  { name: 'Home',  url: '/' },
+  { name: 'Myths', url: '/myths/' },
+  { name: 'Ravens Mate for Life', url: path },
+];
+
+const faq = [
+  { q: 'Do ravens mate for life?', a: 'Ravens typically form long-term pair bonds that last for many years — often until a partner dies. This is true. However, "mate for life" is an oversimplification: divorce (voluntary pair dissolution while both partners survive) has been documented in ravens, and widowed birds re-pair with new mates. The long-term pair bond is real and behaviorally significant, but it is not unconditional or permanent in all cases.' },
+];
+---
+
+<BaseLayout title={title} description={description} path={path} ogType="article"
+  datePublished="2026-11-07" dateModified="2026-11-07"
+  breadcrumbs={breadcrumbs} faq={faq} pageType="Article">
+
+<article class="id-page">
+  <nav class="id-breadcrumb" aria-label="Breadcrumb">
+    <ol>
+      {breadcrumbs.map((b, i) => (
+        <li>
+          {i < breadcrumbs.length - 1
+            ? <><a href={b.url}>{b.name}</a><span aria-hidden="true"> › </span></>
+            : <span aria-current="page">{b.name}</span>}
+        </li>
+      ))}
+    </ol>
+  </nav>
+  <header class="id-header">
+    <p class="id-pillar">Myths · MYTH·08</p>
+    <h1>Do Ravens Mate for Life?</h1>
+    <div class="id-verdict id-verdict--partly">
+      <span class="id-verdict-label">Verdict: Partly True</span>
+      <p>Ravens form long-term pair bonds, often lasting many years. But divorce occurs, and widowed birds re-pair. "Mate for life" is a simplification.</p>
+    </div>
+  </header>
+
+  <section class="id-snippet" aria-label="Quick answer">
+    <p><strong class="claim-science">[science]</strong> Ravens typically form <strong>long-term pair bonds</strong> that endure for many years — often until a partner dies. The bond is maintained year-round through territorial defence and mutual activity, not just during breeding. However, divorce has been documented (voluntary dissolution while both partners survive), and widowed birds re-pair. "Mate for life" captures the general pattern but overstates the permanence.</p>
+  </section>
+
+  <section class="id-section">
+    <h2>What "Mating for Life" Actually Means in Birds</h2>
+    <p><strong class="claim-science">[science]</strong> Ornithologists use precise language to avoid the ambiguity of popular phrases:</p>
+    <ul>
+      <li><strong>Social monogamy:</strong> A male and female maintain a social pair bond and co-raise offspring — does not imply genetic fidelity</li>
+      <li><strong>Pair bond duration:</strong> How long a social pair persists — session-to-session, year-to-year, or longer</li>
+      <li><strong>Divorce rate:</strong> The rate at which both members of a pair that has previously bred together fail to breed together again (while both are alive)</li>
+    </ul>
+    <p>Ravens are socially monogamous with long pair bonds. The question is about pair bond duration and divorce rate, not genetic fidelity (which is harder to measure).<sup><a href="#src-1">1</a></sup></p>
+  </section>
+
+  <section class="id-section">
+    <h2>What the Evidence Shows</h2>
+    <p><strong class="claim-science">[science]</strong></p>
+    <ul>
+      <li><strong>Long-term bonds are typical:</strong> Pairs observed across multiple breeding seasons in the same territory are common in long-term study populations (UK, Maine, Yellowstone area)</li>
+      <li><strong>Year-round bond maintenance:</strong> Raven pairs defend territories together throughout the year — the bond is not just seasonal</li>
+      <li><strong>Divorce occurs:</strong> Boarman & Heinrich (1999) note that voluntary pair dissolution (both birds surviving, different partners the following year) has been documented, though the rate is not precisely quantified for ravens in most studies</li>
+      <li><strong>Widowhood and re-pairing:</strong> When one partner dies, the surviving bird typically re-pairs with a floater bird from the non-territorial population — often fairly quickly, as territories are valuable and unpaired territory-holding birds attract competitors</li>
+    </ul>
+    <p>The honest summary: ravens show long-term social monogamy with low divorce rates — consistent with popular descriptions of "mating for life" as a generalisation, while not being unconditionally permanent.<sup><a href="#src-1">1</a>,<a href="#src-2">2</a></sup></p>
+  </section>
+
+  <section class="id-section">
+    <h2>Why Long Pair Bonds Evolved</h2>
+    <p><strong class="claim-science">[science]</strong> Long pair bonds are advantageous for ravens for several reasons:</p>
+    <ul>
+      <li><strong>Territory maintenance:</strong> Ravens hold territories year-round; a stable pair defends the territory more effectively than two birds that must re-negotiate annually</li>
+      <li><strong>Breeding experience:</strong> Established pairs that have bred together previously show higher breeding success than new pairs — they have learned each other's foraging ranges and coordination patterns</li>
+      <li><strong>Investment payoff:</strong> Raven chicks require extensive parental investment; a stable pair partnership amortises the cost of that investment over multiple breeding seasons</li>
+    </ul>
+    <p>These are functional explanations, not evidence for emotion or "love" in the human sense — though raven pair bonding does involve extensive mutual grooming, food sharing, and coordinated behaviour that reflect strong social bonds.<sup><a href="#src-2">2</a></sup></p>
+  </section>
+
+  <section class="id-faq id-section" aria-labelledby="faq-h2">
+    <h2 id="faq-h2">Frequently Asked Questions</h2>
+    {faq.map(item => (
+      <details class="id-faq-item">
+        <summary class="id-faq-q">{item.q}</summary>
+        <p class="id-faq-a">{item.a}</p>
+      </details>
+    ))}
+  </section>
+
+  <section class="id-sources id-section" aria-labelledby="src-h2">
+    <h2 id="src-h2">Sources</h2>
+    <ol class="id-src-list">
+      <li id="src-1">Boarman, W. I. &amp; Heinrich, B. (1999). Common Raven (<em>Corvus corax</em>). <em>The Birds of North America</em>, No. 476. — pair bonds, divorce, re-pairing.</li>
+      <li id="src-2">Heinrich, B. (1989). <em>Ravens in Winter</em>. Summit Books. — territorial pairs; non-breeding floaters.</li>
+    </ol>
+    <p class="id-claim-note"><strong class="claim-science">[science]</strong> species-account and field research data</p>
+  </section>
+
+  <nav class="id-nav-bottom">
+    <a href="/questions/do-ravens-mate-for-life/" class="id-back">← Do Ravens Mate for Life? (Q&A)</a>
+    <a href="/behaviour/raven-nesting/" class="id-next">Raven Nesting →</a>
+  </nav>
+</article>
+</BaseLayout>
+
+<style>
+  .id-page { max-width: 820px; margin: 0 auto; padding: 2rem 1.25rem 4rem; color: var(--iron-ink, #e8e4d8); font-family: 'Inter', sans-serif; line-height: 1.72; }
+  .id-breadcrumb ol { display: flex; flex-wrap: wrap; gap: .25rem; list-style: none; padding: 0; margin: 0 0 2rem; font-size: .8rem; color: var(--ink-soft, #8a8070); }
+  .id-breadcrumb a { color: var(--gold-500, #d4ae5a); text-decoration: none; }
+  .id-pillar { font-size: .72rem; letter-spacing: .12em; text-transform: uppercase; color: var(--gold-500, #d4ae5a); margin: 0 0 .4rem; }
+  .id-page h1 { font-family: 'Cormorant Garamond', serif; font-size: clamp(2rem, 5vw, 3.25rem); font-weight: 700; color: #fff; margin: 0 0 .2rem; line-height: 1.1; }
+  .id-subtitle { font-size: 1rem; color: var(--ink-soft, #c0b89a); margin: 0 0 2rem; }
+  .id-verdict { border-radius: 6px; padding: .9rem 1.25rem; margin: 1rem 0 1.5rem; }
+  .id-verdict--partly { background: rgba(212,174,90,.1); border-left: 3px solid var(--gold-500,#d4ae5a); }
+  .id-verdict-label { font-size: .78rem; letter-spacing: .1em; text-transform: uppercase; font-weight: 700; display: block; margin-bottom: .35rem; color: var(--gold-500,#d4ae5a); }
+  .id-verdict p { margin: 0; font-size: .93rem; }
+  .id-snippet { background: rgba(212,174,90,.08); border-left: 3px solid var(--gold-500, #d4ae5a); border-radius: 0 6px 6px 0; padding: 1rem 1.25rem; margin-bottom: 2.5rem; font-size: 1.03rem; }
+  .id-section { margin-bottom: 2.75rem; }
+  .id-section h2 { font-family: 'Cormorant Garamond', serif; font-size: 1.6rem; font-weight: 600; color: #fff; margin: 0 0 1rem; border-bottom: 1px solid rgba(212,174,90,.2); padding-bottom: .4rem; }
+  .id-section p { margin: 0 0 1rem; font-size: .97rem; }
+  .id-section ul { padding-left: 1.25rem; margin: 0 0 1rem; }
+  .id-section li { margin-bottom: .4rem; font-size: .95rem; }
+  .claim-science { color: #7ab9e0; font-style: normal; font-size: .78rem; }
+  a[href] { color: var(--gold-500, #d4ae5a); }
+  .id-faq-item { border-bottom: 1px solid rgba(255,255,255,.07); }
+  .id-faq-q { cursor: pointer; padding: .9rem 0; font-size: .97rem; font-weight: 500; color: #fff; list-style: none; }
+  .id-faq-q::before { content: '+ '; color: var(--gold-500, #d4ae5a); font-weight: 700; }
+  details[open] .id-faq-q::before { content: '− '; }
+  .id-faq-a { margin: 0 0 1rem; line-height: 1.7; font-size: .93rem; color: var(--ink-soft, #c8c0b0); }
+  .id-src-list { padding-left: 1.25rem; margin: 0 0 1rem; }
+  .id-src-list li { margin-bottom: .6rem; font-size: .82rem; color: var(--ink-soft, #8a8070); line-height: 1.6; }
+  .id-claim-note { font-size: .78rem; color: var(--ink-soft, #605848); border-top: 1px solid rgba(255,255,255,.06); padding-top: .75rem; }
+  .id-nav-bottom { display: flex; justify-content: space-between; padding-top: 2rem; border-top: 1px solid rgba(255,255,255,.07); }
+  .id-nav-bottom a { font-size: .9rem; text-decoration: none; }
+  .id-nav-bottom a:hover { text-decoration: underline; }
+</style>

@@ -1,0 +1,135 @@
+---
+/**
+ * Species sub-page — Fan-tailed Raven nesting
+ * SPC·10n
+ * Primary keyword: fan-tailed raven nesting
+ * Secondary: fan-tailed raven nest, corvus rhipidurus eggs, fan-tailed raven breeding
+ */
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+
+const title       = 'Fan-tailed Raven Nesting: Breeding and Nest Sites';
+const description = 'The Fan-tailed Raven of the Horn of Africa and Middle East nests on cliff faces and rocky gorges. This page covers nest structure, clutch size, incubation, and the breeding season of Corvus rhipidurus.';
+const path        = '/species/fan-tailed-raven/nesting/';
+
+const breadcrumbs = [
+  { name: 'Home',              url: '/' },
+  { name: 'Species',           url: '/species/' },
+  { name: 'Fan-tailed Raven',  url: '/species/fan-tailed-raven/' },
+  { name: 'Nesting',           url: path },
+];
+
+const faq = [
+  { q: 'Where does the Fan-tailed Raven nest?', a: 'The Fan-tailed Raven is a cliff-nester throughout its range — the Horn of Africa, Red Sea coast, Arabian Peninsula, and parts of the Middle East. It places its nest on a ledge, in a crevice, or in a cave entrance on a steep cliff face. Its strong association with cliffs and gorges defines its entire ecology, from foraging to roosting to nesting.' },
+  { q: 'When does the Fan-tailed Raven breed?', a: 'Breeding season varies across the Fan-tailed Raven\'s wide range. In the Horn of Africa (Ethiopia, Somalia, Eritrea), breeding is documented from approximately November to April, coinciding with the drier periods. In the Arabian Peninsula, breeding occurs roughly January to April. The timing reflects local climatic patterns rather than a uniform continental calendar.' },
+  { q: 'What makes the Fan-tailed Raven distinctive?', a: 'The Fan-tailed Raven is named for its unusually short, fan-shaped tail — a distinctive feature visible in flight. It is smaller and stockier than the Common Raven. Its short tail and relatively broad wings give it a distinctive silhouette in its cliff-associated habitat. Despite its small size, it is closely related to the Brown-necked Raven of the same arid zones.' },
+];
+---
+
+<BaseLayout title={title} description={description} path={path} ogType="article"
+  datePublished="2026-11-07" dateModified="2026-11-07"
+  breadcrumbs={breadcrumbs} faq={faq} pageType="Article">
+
+<article class="qa-page">
+
+  <nav class="qa-breadcrumb" aria-label="Breadcrumb">
+    <ol>
+      {breadcrumbs.map((b, i) => (
+        <li>
+          {i < breadcrumbs.length - 1
+            ? <><a href={b.url}>{b.name}</a><span aria-hidden="true"> › </span></>
+            : <span aria-current="page">{b.name}</span>}
+        </li>
+      ))}
+    </ol>
+  </nav>
+
+  <header class="qa-header">
+    <p class="qa-pillar">Species Sub-page · SPC·10n</p>
+    <h1>Fan-tailed Raven Nesting: Breeding and Nest Sites</h1>
+  </header>
+
+  <section class="qa-snippet" aria-label="Direct answer">
+    <p><strong class="claim-science">[science]</strong> The Fan-tailed Raven (<em>Corvus rhipidurus</em>) nests on cliff faces and in rocky gorges across the Horn of Africa, Red Sea coast, and Arabian Peninsula. The nest is a stick platform on a ledge or in a crevice. Breeding season varies by region: approximately November–April in the Horn of Africa; January–April in Arabia.</p>
+  </section>
+
+  <section class="qa-section">
+    <h2>Nest Sites</h2>
+    <p><strong class="claim-science">[science]</strong> The Fan-tailed Raven is strongly cliff-associated throughout its range:<sup><a href="#src-1">1</a></sup></p>
+    <ul>
+      <li><strong>Primary sites:</strong> ledges, crevices, and cave entrances on steep cliff faces in rocky gorges, escarpments, and rocky hillsides in arid and semi-arid zones.</li>
+      <li><strong>Range:</strong> Somalia, Ethiopia, Eritrea, Djibouti, Yemen, Oman, Saudi Arabia, Jordan, and Israel — essentially the arid zone from the Horn of Africa to the southern Levant.</li>
+      <li><strong>Communal roosting:</strong> outside the breeding season, Fan-tailed Ravens often roost communally on cliff faces, sometimes in large groups — behaviour linked to their strong cliff fidelity.</li>
+    </ul>
+    <p>Pairs maintain long-term bonds and return to the same cliff and often the same ledge in successive breeding seasons, adding to and enlarging the nest structure each year.</p>
+  </section>
+
+  <section class="qa-section">
+    <h2>Nest Structure and Eggs</h2>
+    <p><strong class="claim-science">[science]</strong> The nest is a platform of sticks and branches on a cliff ledge or in a crevice, lined with softer materials including wool, hair, and plant fibres. Clutch size: typically 3–5 eggs, pale blue-green to greenish-white with brown and grey blotching — typical of large corvids. Incubation: approximately 20–21 days. Post-fledging dependence lasts several weeks; young birds learn cliff foraging behaviour from parents.<sup><a href="#src-1">1</a></sup></p>
+  </section>
+
+  <section class="qa-section">
+    <h2>Breeding Season</h2>
+    <p><strong class="claim-science">[science]</strong> Breeding timing varies across the range:<sup><a href="#src-1">1</a></sup></p>
+    <ul>
+      <li><strong>Horn of Africa (Ethiopia, Somalia, Eritrea):</strong> breeding documented November–April — the drier season in the region.</li>
+      <li><strong>Arabian Peninsula (Yemen, Oman, Saudi Arabia):</strong> January–April, coinciding with the cooler, drier months.</li>
+      <li><strong>Levant (Jordan, Israel):</strong> February–May.</li>
+    </ul>
+    <p>As with other corvids in arid zones, breeding tends to be timed to avoid the hottest and least productive periods of the year.</p>
+  </section>
+
+  <section class="qa-section">
+    <h2>Related Pages</h2>
+    <ul>
+      <li><a href="/species/fan-tailed-raven/">Fan-tailed Raven — species hub</a></li>
+      <li><a href="/species/fan-tailed-raven/diet/">Fan-tailed Raven diet</a></li>
+      <li><a href="/species/brown-necked-raven/nesting/">Brown-necked Raven nesting (related species)</a></li>
+      <li><a href="/questions/how-many-eggs-do-ravens-lay/">How many eggs do ravens lay?</a></li>
+    </ul>
+  </section>
+
+  <section class="qa-faq qa-section" aria-labelledby="faq-h2">
+    <h2 id="faq-h2">Frequently Asked Questions</h2>
+    {faq.map(item => (
+      <details class="qa-faq-item">
+        <summary class="qa-faq-q">{item.q}</summary>
+        <p class="qa-faq-a">{item.a}</p>
+      </details>
+    ))}
+  </section>
+
+  <section class="qa-sources qa-section" aria-labelledby="src-h2">
+    <h2 id="src-h2">Sources</h2>
+    <ol class="qa-src-list">
+      <li id="src-1">del Hoyo, J. et al. (eds., 2009). <em>Handbook of the Birds of the World</em>, vol. 14. Lynx Edicions. — Fan-tailed Raven species account; nest, eggs, breeding season, range.</li>
+    </ol>
+    <p class="qa-claim-note"><strong class="claim-science">[science]</strong> peer-reviewed or field-guide data</p>
+  </section>
+
+</article>
+</BaseLayout>
+
+<style>
+  .qa-page { max-width: 820px; margin: 0 auto; padding: 2rem 1.25rem 4rem; color: var(--iron-ink, #e8e4d8); font-family: 'Inter', sans-serif; line-height: 1.72; }
+  .qa-breadcrumb ol { display: flex; flex-wrap: wrap; gap: .25rem; list-style: none; padding: 0; margin: 0 0 2rem; font-size: .8rem; color: var(--ink-soft, #8a8070); }
+  .qa-breadcrumb a { color: var(--gold-500, #d4ae5a); text-decoration: none; }
+  .qa-pillar { font-size: .72rem; letter-spacing: .12em; text-transform: uppercase; color: var(--gold-500, #d4ae5a); margin: 0 0 .4rem; }
+  .qa-page h1 { font-family: 'Cormorant Garamond', serif; font-size: clamp(2rem, 5vw, 3rem); font-weight: 700; color: #fff; margin: 0 0 2rem; line-height: 1.1; }
+  .qa-snippet { background: rgba(212,174,90,.08); border-left: 3px solid var(--gold-500, #d4ae5a); border-radius: 0 6px 6px 0; padding: 1rem 1.25rem; margin-bottom: 2.5rem; font-size: 1.03rem; }
+  .qa-section { margin-bottom: 2.5rem; }
+  .qa-section h2 { font-family: 'Cormorant Garamond', serif; font-size: 1.5rem; font-weight: 600; color: #fff; margin: 0 0 .9rem; border-bottom: 1px solid rgba(212,174,90,.2); padding-bottom: .4rem; }
+  .qa-section p { margin: 0 0 1rem; font-size: .97rem; }
+  .qa-section ul { padding-left: 1.25rem; margin: 0 0 1rem; }
+  .qa-section li { margin-bottom: .4rem; font-size: .95rem; }
+  .claim-science { color: #7ab9e0; font-style: normal; font-size: .78rem; }
+  a[href] { color: var(--gold-500, #d4ae5a); }
+  .qa-faq-item { border-bottom: 1px solid rgba(255,255,255,.07); }
+  .qa-faq-q { cursor: pointer; padding: .9rem 0; font-size: .97rem; font-weight: 500; color: #fff; list-style: none; }
+  .qa-faq-q::before { content: '+ '; color: var(--gold-500, #d4ae5a); font-weight: 700; }
+  details[open] .qa-faq-q::before { content: '− '; }
+  .qa-faq-a { margin: 0 0 1rem; line-height: 1.7; font-size: .93rem; color: var(--ink-soft, #c8c0b0); }
+  .qa-src-list { padding-left: 1.25rem; margin: 0 0 1rem; }
+  .qa-src-list li { margin-bottom: .6rem; font-size: .82rem; color: var(--ink-soft, #8a8070); line-height: 1.6; }
+  .qa-claim-note { font-size: .78rem; color: var(--ink-soft, #605848); border-top: 1px solid rgba(255,255,255,.06); padding-top: .75rem; }
+</style>

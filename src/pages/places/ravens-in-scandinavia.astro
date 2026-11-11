@@ -1,0 +1,150 @@
+---
+/**
+ * Places — Ravens in Scandinavia
+ * PLC·12
+ * Primary keyword: ravens in scandinavia
+ * Secondary: raven sweden norway finland, scandinavian raven, raven nordic countries
+ */
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const title       = 'Ravens in Scandinavia: Odin\'s Birds in Their Homeland';
+const description = 'Scandinavia is the heartland of raven cultural significance — where Norse mythology was born and where ravens are year-round residents from the Danish lowlands to the high arctic of Svalbard. This page covers raven ecology across Sweden, Norway, Finland, and Denmark, their Norse cultural heritage, and current population status.';
+const path        = '/places/ravens-in-scandinavia/';
+
+const breadcrumbs = [
+  { name: 'Home',   url: '/' },
+  { name: 'Places', url: '/places/' },
+  { name: 'Ravens in Scandinavia', url: path },
+];
+
+const faq = [
+  { q: 'Are ravens common in Scandinavia?', a: 'Common Ravens are present throughout Scandinavia, though their distribution and density vary significantly. In northern Sweden (Norrland), Norway (beyond the Arctic Circle), and Finnish Lapland, ravens are abundant, year-round forest and tundra residents closely associated with reindeer herding culture. In southern Scandinavia — Denmark, Skåne, lowland Sweden — ravens are present but less common, historically persecuted and only gradually recovering. Norway\'s raven population is estimated at approximately 10,000–15,000 breeding pairs. Sweden\'s population is similar in scale, concentrated in the boreal north. Finland has a similar pattern of abundance in the north, relative scarcity in agricultural south.' },
+  { q: 'Do ravens follow reindeer in Scandinavia?', a: 'Yes — the raven-reindeer association is ecologically significant in Scandinavia and Finland. Sámi reindeer herders have documented this relationship for centuries: ravens follow reindeer herds, feeding on carcasses of animals that die naturally in winter, on afterbirth during calving, and on food scraps around herding camps. Ravens are considered both a nuisance (scavenging from stored food, harassing weak animals) and a useful indicator by some herders — their gathering at a location can signal a dead animal. The raven figures prominently in Sámi oral tradition precisely because of this close ecological relationship.' },
+  { q: 'Are ravens protected in Scandinavia?', a: 'Ravens are protected in Sweden, Norway, and Finland under national wildlife protection legislation and the EU Birds Directive. In Norway, historically extensive raven persecution (bounty systems existed until the mid-20th century) has ended, and populations have recovered. Limited depredation licences can be issued in some circumstances for ravens causing documented livestock damage. In Sweden, the raven was classified as a game species historically; it is now fully protected. Denmark has the smallest raven population in Scandinavia, with ongoing monitoring of its limited breeding pairs in Jutland.' },
+];
+---
+
+<BaseLayout title={title} description={description} path={path} ogType="article"
+  datePublished="2026-11-09" dateModified="2026-11-09"
+  breadcrumbs={breadcrumbs} faq={faq} pageType="Article">
+
+<article class="qa-page">
+
+  <nav class="qa-breadcrumb" aria-label="Breadcrumb">
+    <ol>
+      {breadcrumbs.map((b, i) => (
+        <li>
+          {i < breadcrumbs.length - 1
+            ? <><a href={b.url}>{b.name}</a><span aria-hidden="true"> › </span></>
+            : <span aria-current="page">{b.name}</span>}
+        </li>
+      ))}
+    </ol>
+  </nav>
+
+  <header class="qa-header">
+    <p class="qa-pillar">Places · PLC·12</p>
+    <h1>Ravens in Scandinavia: Odin's Birds in Their Homeland</h1>
+  </header>
+
+  <section class="qa-snippet" aria-label="Direct answer">
+    <p><strong class="claim-science">[science]</strong> Ravens are year-round residents across Scandinavia, most abundant in the boreal forests and arctic tundra of northern Sweden, Norway, and Finland. <strong class="claim-lore">[lore]</strong> This is the landscape that generated Norse mythology's Huginn and Muninn — ravens here are both ecologically embedded (following reindeer and wolf) and culturally central in a way that persists from the Viking Age to Sámi oral tradition to contemporary Scandinavian identity.</p>
+  </section>
+
+  <section class="qa-section">
+    <h2>Distribution and Ecology by Country</h2>
+    <p><strong class="claim-science">[science]</strong> Raven populations and status across Scandinavia and Finland:<sup><a href="#src-1">1</a></sup></p>
+    <ul>
+      <li><strong>Norway:</strong> Ravens are found throughout Norway from the southern uplands to Svalbard (the High Arctic archipelago, where ravens scavenge polar bear kills and human refuse at research stations). The core Norwegian population is in the boreal and sub-arctic north, following reindeer herds and exploiting caribou and moose carrion. Estimated 10,000–15,000 breeding pairs nationally.</li>
+      <li><strong>Sweden:</strong> Similar to Norway in distribution — most abundant in Norrland (the northern two-thirds of the country). Raven population has expanded southward since the mid-20th century following cessation of persecution. Ravens now breed in all Swedish counties. The Swedish subspecies is nominate Corvus corax corax.</li>
+      <li><strong>Finland:</strong> Common Ravens breed throughout Finland, most abundantly in Lapland and Oulu provinces. The Finnish population benefits from extensive wilderness, relatively low human density, and large-scale reindeer herding in Lapland providing winter carrion.</li>
+      <li><strong>Denmark:</strong> The smallest Scandinavian raven population — a few tens of breeding pairs concentrated in Jutland's heathlands. Denmark's raven population has been recovering slowly since full protection; ravens were historically rare in lowland agricultural Denmark even before persecution.</li>
+    </ul>
+  </section>
+
+  <section class="qa-section">
+    <h2>The Reindeer-Raven Relationship</h2>
+    <p><strong class="claim-science">[science]</strong> In northern Scandinavia and Finnish Lapland, the raven-reindeer association is the ecological equivalent of the wolf-raven relationship further south:<sup><a href="#src-1">1</a></sup></p>
+    <ul>
+      <li>Large reindeer herds (Sámi and Norwegian semi-domesticated reindeer number approximately 2.5 million across Fennoscandia) provide a reliable winter carrion source — animals die naturally from cold, disease, and predation throughout the winter months.</li>
+      <li>During calving (May–June), ravens exploit afterbirth and occasionally predation on very young calves — a source of protein-rich food at the onset of the breeding season.</li>
+      <li>Ravens follow reindeer migrations, moving between winter lowland pastures and summer highland pastures in a seasonal pattern that tracks the herd's movement.</li>
+    </ul>
+  </section>
+
+  <section class="qa-section">
+    <h2>Sámi Raven Traditions</h2>
+    <p><strong class="claim-lore">[lore]</strong> The Sámi people of northern Scandinavia and Finland have their own raven traditions distinct from (though sometimes parallel to) Norse mythology:<sup><a href="#src-2">2</a></sup></p>
+    <ul>
+      <li>In Northern Sámi, the raven is <em>gámaš</em> (also spelled gamaš). Ravens feature in Sámi oral tradition (joik poetry and narrative) as intelligent, observant presences in the landscape — birds whose behaviour signals information about the state of the wilderness.</li>
+      <li>The raven's ability to find carrion over great distances was interpreted in some Sámi traditions as a form of spiritual sight — the bird seeing through the snow to the dead beneath.</li>
+      <li>The Norse mythology that emerged from the same landscape represents a parallel cultural processing of the same ecological relationship — the raven as the informant who brings news from afar, embodied in Odin's Huginn and Muninn.</li>
+    </ul>
+  </section>
+
+  <section class="qa-section">
+    <h2>Ravens on Svalbard</h2>
+    <p><strong class="claim-science">[science]</strong> Ravens have established breeding populations on Svalbard (78°N), making them among the northernmost-breeding passerines on Earth. Svalbard ravens:<sup><a href="#src-1">1</a></sup></p>
+    <ul>
+      <li>Survive the polar night (approximately October–February above Longyearbyen's latitude) by associating with human settlements — Longyearbyen, Ny-Ålesund, and research stations provide refuse, stored food, and heated waste.</li>
+      <li>In summer, Svalbard ravens exploit polar bear kills, marine mammal carcasses on beaches, and seabird colonies (particularly thick-billed murre eggs and chicks).</li>
+      <li>Svalbard represents the ecological extreme of raven adaptability: surviving arctic winters at latitudes where few other birds attempt year-round residency.</li>
+    </ul>
+  </section>
+
+  <section class="qa-section">
+    <h2>Related Pages</h2>
+    <ul>
+      <li><a href="/places/ravens-in-norway/">Ravens in Norway</a></li>
+      <li><a href="/places/ravens-in-iceland/">Ravens in Iceland</a></li>
+      <li><a href="/lore/norse/huginn-and-muninn/">Huginn and Muninn</a></li>
+      <li><a href="/lore/norse/odin-the-raven-god/">Odin the Raven God</a></li>
+    </ul>
+  </section>
+
+  <section class="qa-faq qa-section" aria-labelledby="faq-h2">
+    <h2 id="faq-h2">Frequently Asked Questions</h2>
+    {faq.map(item => (
+      <details class="qa-faq-item">
+        <summary class="qa-faq-q">{item.q}</summary>
+        <p class="qa-faq-a">{item.a}</p>
+      </details>
+    ))}
+  </section>
+
+  <section class="qa-sources qa-section" aria-labelledby="src-h2">
+    <h2 id="src-h2">Sources</h2>
+    <ol class="qa-src-list">
+      <li id="src-1">del Hoyo, J., Elliott, A. & Christie, D. (eds.) (2009). <em>Handbook of the Birds of the World</em>, Vol. 14. Lynx Edicions. — Scandinavian and Finnish raven populations, subspecies, Svalbard range, reindeer-raven ecology.</li>
+      <li id="src-2">Pentikäinen, J.Y. (1998). <em>Shamanism and Northern Ecology</em>. Mouton de Gruyter. — Sámi raven traditions, spiritual sight, oral tradition, parallels with Norse raven mythology.</li>
+    </ol>
+    <p class="qa-claim-note"><strong class="claim-science">[science]</strong> peer-reviewed data · <strong class="claim-lore">[lore]</strong> named cultural/historical source</p>
+  </section>
+
+</article>
+</BaseLayout>
+
+<style>
+  .qa-page { max-width: 820px; margin: 0 auto; padding: 2rem 1.25rem 4rem; color: var(--iron-ink, #e8e4d8); font-family: 'Inter', sans-serif; line-height: 1.72; }
+  .qa-breadcrumb ol { display: flex; flex-wrap: wrap; gap: .25rem; list-style: none; padding: 0; margin: 0 0 2rem; font-size: .8rem; color: var(--ink-soft, #8a8070); }
+  .qa-breadcrumb a { color: var(--gold-500, #d4ae5a); text-decoration: none; }
+  .qa-pillar { font-size: .72rem; letter-spacing: .12em; text-transform: uppercase; color: var(--gold-500, #d4ae5a); margin: 0 0 .4rem; }
+  .qa-page h1 { font-family: 'Cormorant Garamond', serif; font-size: clamp(2rem, 5vw, 3rem); font-weight: 700; color: #fff; margin: 0 0 2rem; line-height: 1.1; }
+  .qa-snippet { background: rgba(212,174,90,.08); border-left: 3px solid var(--gold-500, #d4ae5a); border-radius: 0 6px 6px 0; padding: 1rem 1.25rem; margin-bottom: 2.5rem; font-size: 1.03rem; }
+  .qa-section { margin-bottom: 2.5rem; }
+  .qa-section h2 { font-family: 'Cormorant Garamond', serif; font-size: 1.5rem; font-weight: 600; color: #fff; margin: 0 0 .9rem; border-bottom: 1px solid rgba(212,174,90,.2); padding-bottom: .4rem; }
+  .qa-section p { margin: 0 0 1rem; font-size: .97rem; }
+  .qa-section ul { padding-left: 1.25rem; margin: 0 0 1rem; }
+  .qa-section li { margin-bottom: .4rem; font-size: .95rem; }
+  .claim-science { color: #7ab9e0; font-style: normal; font-size: .78rem; }
+  .claim-lore { color: #c49a3c; font-style: normal; font-size: .78rem; }
+  a[href] { color: var(--gold-500, #d4ae5a); }
+  .qa-faq-item { border-bottom: 1px solid rgba(255,255,255,.07); }
+  .qa-faq-q { cursor: pointer; padding: .9rem 0; font-size: .97rem; font-weight: 500; color: #fff; list-style: none; }
+  .qa-faq-q::before { content: '+ '; color: var(--gold-500, #d4ae5a); font-weight: 700; }
+  details[open] .qa-faq-q::before { content: '− '; }
+  .qa-faq-a { margin: 0 0 1rem; line-height: 1.7; font-size: .93rem; color: var(--ink-soft, #c8c0b0); }
+  .qa-src-list { padding-left: 1.25rem; margin: 0 0 1rem; }
+  .qa-src-list li { margin-bottom: .6rem; font-size: .82rem; color: var(--ink-soft, #8a8070); line-height: 1.6; }
+  .qa-claim-note { font-size: .78rem; color: var(--ink-soft, #605848); border-top: 1px solid rgba(255,255,255,.06); padding-top: .75rem; }
+</style>

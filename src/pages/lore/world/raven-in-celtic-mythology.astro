@@ -1,0 +1,156 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+
+const title       = 'The Raven in Celtic Mythology — Ireland, Wales, and the Morrígan';
+const description = 'Ravens in Celtic mythology are associated with battle, prophecy, and the Morrígan in Irish tradition. Welsh and Gaulish raven symbolism. What the primary sources actually say.';
+const path        = '/lore/world/raven-in-celtic-mythology/';
+
+const breadcrumbs = [
+  { name: 'Home',         url: '/' },
+  { name: 'Lore',         url: '/lore/world/' },
+  { name: 'Raven in Celtic Mythology', url: path },
+];
+
+const faq = [
+  { q: 'What role do ravens play in Celtic mythology?', a: 'In Irish mythology, ravens are associated with the Morrígan — a shape-shifting goddess linked to battle, fate, and sovereignty. She could take raven or crow form. In Welsh mythology, ravens appear in the Mabinogion associated with the hero Brân (whose name means "raven/crow"). Gaulish deity Nantosuelta is sometimes depicted with ravens. The raven in Celtic tradition is a powerful prophetic bird of battle — not simply negative.' },
+  { q: 'Did the Morrígan turn into a raven?', a: 'The Irish texts describe the Morrígan in bird form — typically a crow or raven. In the Ulster Cycle (particularly Táin Bó Cúailnge), she appears on the shoulder of the dying hero Cú Chulainn as a crow or raven, confirming his death. However, the texts use the terms for crow (feannóg, badb) and raven (fiach) somewhat interchangeably; the Morrígan is a composite figure who can take multiple bird forms.' },
+];
+---
+
+<BaseLayout title={title} description={description} path={path} ogType="article"
+  datePublished="2026-11-07" dateModified="2026-11-07"
+  breadcrumbs={breadcrumbs} faq={faq} pageType="Article">
+
+<article class="id-page">
+  <nav class="id-breadcrumb" aria-label="Breadcrumb">
+    <ol>
+      {breadcrumbs.map((b, i) => (
+        <li>
+          {i < breadcrumbs.length - 1
+            ? <><a href={b.url}>{b.name}</a><span aria-hidden="true"> › </span></>
+            : <span aria-current="page">{b.name}</span>}
+        </li>
+      ))}
+    </ol>
+  </nav>
+  <header class="id-header">
+    <p class="id-pillar">Lore · World · MYW·06</p>
+    <h1>The Raven in Celtic Mythology</h1>
+    <p class="id-subtitle">Ireland, Wales, and the battlefield bird</p>
+  </header>
+
+  <section class="id-snippet" aria-label="Quick answer">
+    <p><strong class="claim-lore">[lore]</strong> In Celtic tradition, the raven is primarily a <strong>battle and prophecy bird</strong>. In Irish mythology, the Morrígan — a goddess of fate, battle, and sovereignty — could take crow or raven form. In Welsh mythology, the hero Brân bears a name meaning "raven/crow." Ravens appear at key moments of death and prophecy in the texts. This is a tradition of power and prophetic force, not simple evil.</p>
+  </section>
+
+  <section class="id-section">
+    <h2>The Morrígan: Ireland's Raven Goddess</h2>
+    <p><strong class="claim-lore">[lore]</strong> The Morrígan (<em>Mór Ríoghain</em>, roughly "great queen" or "phantom queen") is one of the most complex figures in Irish mythology. She is a shape-shifter associated with battle, fate, and the land:</p>
+    <ul>
+      <li>She appears in the Ulster Cycle, the Mythological Cycle, and the Battle of Mag Tuired</li>
+      <li>Her bird form is typically described as a crow or raven (<em>badb, feannóg, fiach</em>)</li>
+      <li>In the Ulster Cycle, she attempts to seduce Cú Chulainn and, when rejected, attacks him in various animal forms including an eel, a heifer, and a wolf</li>
+      <li>At Cú Chulainn's death, she perches on his shoulder in bird form — the raven on the shoulder confirms the hero is truly dead</li>
+    </ul>
+    <p>The Morrígan is sometimes described as a triple goddess (with Badb and Macha or Nemain as her aspects — the collective sometimes called the Badb Catha, "battle crow"). The boundaries between crow and raven, and between the goddesses' individual forms, are not rigidly defined in the texts.<sup><a href="#src-1">1</a>,<a href="#src-2">2</a></sup></p>
+  </section>
+
+  <section class="id-section">
+    <h2>Key Textual Appearances</h2>
+    <p><strong class="claim-lore">[lore]</strong></p>
+    <ul>
+      <li><strong><em>Táin Bó Cúailnge</em> (Ulster Cycle):</strong> The Morrígan in bird form is central to Cú Chulainn's story — both before and at his death. The raven/crow on the shoulder is the signal that the hero has fallen.</li>
+      <li><strong>Second Battle of Mag Tuired (<em>Cath Maige Tuired</em>):</strong> Ravens feature in the battle poetry; the Badb prophesies the battle's outcome in bird-associated imagery.</li>
+      <li><strong><em>Fled Dúin na nGéd</em>:</strong> Ravens as battle omens appear in later Irish saga material.</li>
+    </ul>
+    <p>The core pattern across Irish sources: ravens and crow-like birds appear at decisive battles and deaths. Their presence confirms (rather than predicts or causes) doom — they are witnesses and signals, not agents.<sup><a href="#src-1">1</a></sup></p>
+  </section>
+
+  <section class="id-section">
+    <h2>Wales: Brân and the Raven Name</h2>
+    <p><strong class="claim-lore">[lore]</strong> In Welsh tradition, the raven connection operates differently — through personal names and heraldry rather than shapeshifting goddesses:</p>
+    <ul>
+      <li><strong>Brân Fendigaid</strong> ("Brân the Blessed") in the Mabinogion: Brân is a giant king of Britain; his name means "raven" or "crow" in Welsh (<em>brân</em> = crow/raven)</li>
+      <li>His severed head, buried at the White Mount (traditionally London), is said to protect Britain — this is sometimes connected to the Tower of London raven legend, though that connection is a modern folk etymology, not a medieval source</li>
+      <li>Ravens appear in Welsh heraldry and in Arthurian tradition (King Arthur was said in some Welsh traditions to have been transformed into a raven after death)</li>
+    </ul>
+    <p>The "Arthur as raven" belief is documented in folklore but not in the core Welsh Arthurian texts; it was recorded as a popular belief by writers from the 16th century onward.<sup><a href="#src-3">3</a>,<a href="#src-4">4</a></sup></p>
+  </section>
+
+  <section class="id-section">
+    <h2>Gaulish and Continental Celtic Traditions</h2>
+    <p><strong class="claim-lore">[lore]</strong> Evidence for raven symbolism in Continental Celtic (Gaulish) tradition is more fragmentary:</p>
+    <ul>
+      <li><strong>Nantosuelta:</strong> A Gaulish goddess sometimes depicted with a raven on a pole or staff; associated with prosperity and the domestic sphere — a different register entirely from battlefield ravens</li>
+      <li><strong>Epona:</strong> Horse goddess; ravens appear in some depictions in secondary roles</li>
+      <li>Archaeological corvid deposits at Celtic shrine sites suggest ritual significance of corvids across the Celtic world, though interpretation is contested</li>
+    </ul>
+    <p>Continental Celtic raven symbolism is less well documented than Irish and Welsh material and must be treated with caution; much depends on interpretation of iconography without textual support.<sup><a href="#src-4">4</a></sup></p>
+  </section>
+
+  <section class="id-section">
+    <h2>Crow vs Raven in the Sources</h2>
+    <p><strong class="claim-lore">[lore]</strong> A precision point: Old Irish and medieval Welsh texts do not always clearly distinguish between ravens and crows. The terms:</p>
+    <ul>
+      <li>Old Irish <em>fiach</em> (raven), <em>badb/feannóg</em> (crow, hooded crow)</li>
+      <li>Welsh <em>brân</em> (crow or raven — used for both)</li>
+    </ul>
+    <p>Modern translations sometimes render the battle-bird as "raven" for dramatic effect when the text may say "crow." Both species were present at battlefields and both would have been familiar to audiences. The symbolic function — a black bird of prophetic power at scenes of death — applies to both, and the texts often treat them as a category rather than distinguishing species precisely.<sup><a href="#src-1">1</a></sup></p>
+  </section>
+
+  <section class="id-faq id-section" aria-labelledby="faq-h2">
+    <h2 id="faq-h2">Frequently Asked Questions</h2>
+    {faq.map(item => (
+      <details class="id-faq-item">
+        <summary class="id-faq-q">{item.q}</summary>
+        <p class="id-faq-a">{item.a}</p>
+      </details>
+    ))}
+  </section>
+
+  <section class="id-sources id-section" aria-labelledby="src-h2">
+    <h2 id="src-h2">Sources</h2>
+    <ol class="id-src-list">
+      <li id="src-1">O'Rahilly, C. (Ed. and trans.) (1976). <em>Táin Bó Cúailnge: Recension I</em>. Dublin Institute for Advanced Studies. — Ulster Cycle primary text; Morrígan bird episodes.</li>
+      <li id="src-2">Gray, E. A. (trans.) (1982). <em>Cath Maige Tuired: The Second Battle of Mag Tuired</em>. Irish Texts Society. — primary text for Morrígan battle appearances.</li>
+      <li id="src-3">Gantz, J. (trans.) (1976). <em>The Mabinogion</em>. Penguin. — Welsh source including Brân the Blessed.</li>
+      <li id="src-4">Sax, B. (2007). <em>Crow</em>. Reaktion Books. — survey of Celtic raven and crow symbolism.</li>
+    </ol>
+    <p class="id-claim-note"><strong class="claim-lore">[lore]</strong> named primary and secondary sources; claims labelled accordingly</p>
+  </section>
+
+  <nav class="id-nav-bottom">
+    <a href="/lore/world/raven-symbolism/" class="id-back">← Raven Symbolism Overview</a>
+    <a href="/lore/world/" class="id-next">World Lore →</a>
+  </nav>
+</article>
+</BaseLayout>
+
+<style>
+  .id-page { max-width: 820px; margin: 0 auto; padding: 2rem 1.25rem 4rem; color: var(--iron-ink, #e8e4d8); font-family: 'Inter', sans-serif; line-height: 1.72; }
+  .id-breadcrumb ol { display: flex; flex-wrap: wrap; gap: .25rem; list-style: none; padding: 0; margin: 0 0 2rem; font-size: .8rem; color: var(--ink-soft, #8a8070); }
+  .id-breadcrumb a { color: var(--gold-500, #d4ae5a); text-decoration: none; }
+  .id-pillar { font-size: .72rem; letter-spacing: .12em; text-transform: uppercase; color: var(--gold-500, #d4ae5a); margin: 0 0 .4rem; }
+  .id-page h1 { font-family: 'Cormorant Garamond', serif; font-size: clamp(2rem, 5vw, 3.25rem); font-weight: 700; color: #fff; margin: 0 0 .2rem; line-height: 1.1; }
+  .id-subtitle { font-size: 1rem; color: var(--ink-soft, #c0b89a); margin: 0 0 2rem; }
+  .id-snippet { background: rgba(212,174,90,.08); border-left: 3px solid var(--gold-500, #d4ae5a); border-radius: 0 6px 6px 0; padding: 1rem 1.25rem; margin-bottom: 2.5rem; font-size: 1.03rem; }
+  .id-section { margin-bottom: 2.75rem; }
+  .id-section h2 { font-family: 'Cormorant Garamond', serif; font-size: 1.6rem; font-weight: 600; color: #fff; margin: 0 0 1rem; border-bottom: 1px solid rgba(212,174,90,.2); padding-bottom: .4rem; }
+  .id-section p { margin: 0 0 1rem; font-size: .97rem; }
+  .id-section ul { padding-left: 1.25rem; margin: 0 0 1rem; }
+  .id-section li { margin-bottom: .4rem; font-size: .95rem; }
+  .claim-science { color: #7ab9e0; font-style: normal; font-size: .78rem; }
+  .claim-lore { color: #c8a84b; font-style: normal; font-size: .78rem; }
+  a[href] { color: var(--gold-500, #d4ae5a); }
+  .id-faq-item { border-bottom: 1px solid rgba(255,255,255,.07); }
+  .id-faq-q { cursor: pointer; padding: .9rem 0; font-size: .97rem; font-weight: 500; color: #fff; list-style: none; }
+  .id-faq-q::before { content: '+ '; color: var(--gold-500, #d4ae5a); font-weight: 700; }
+  details[open] .id-faq-q::before { content: '− '; }
+  .id-faq-a { margin: 0 0 1rem; line-height: 1.7; font-size: .93rem; color: var(--ink-soft, #c8c0b0); }
+  .id-src-list { padding-left: 1.25rem; margin: 0 0 1rem; }
+  .id-src-list li { margin-bottom: .6rem; font-size: .82rem; color: var(--ink-soft, #8a8070); line-height: 1.6; }
+  .id-claim-note { font-size: .78rem; color: var(--ink-soft, #605848); border-top: 1px solid rgba(255,255,255,.06); padding-top: .75rem; }
+  .id-nav-bottom { display: flex; justify-content: space-between; padding-top: 2rem; border-top: 1px solid rgba(255,255,255,.07); }
+  .id-nav-bottom a { font-size: .9rem; text-decoration: none; }
+  .id-nav-bottom a:hover { text-decoration: underline; }
+</style>

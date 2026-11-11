@@ -1,0 +1,152 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const title       = 'Do Ravens Bring Death? — The Myth vs the Evidence';
+const description = 'Ravens do not cause or predict death. This page examines where the belief comes from, its ecological basis, and what the evidence actually shows about raven behaviour near death.';
+const path        = '/myths/ravens-bring-death/';
+
+const breadcrumbs = [
+  { name: 'Home',   url: '/' },
+  { name: 'Myths',  url: '/myths/' },
+  { name: 'Do Ravens Bring Death?', url: path },
+];
+
+const faq = [
+  { q: 'Do ravens bring death?', a: 'No. Ravens do not cause or predict death. They are attracted to carrion — dead animals — as a food source. If a raven appears near a dying animal or a human settlement with a death, it is responding to environmental cues (smell, the presence of other scavengers, exposed carcasses) rather than causing or foretelling the event.' },
+  { q: 'Why do people think ravens are connected to death?', a: 'Ravens are carrion birds — they eat dead animals. Before modern sanitation, ravens were common at battlefields, plague pits, public executions, and slaughterhouses. The consistent association of ravens with death-associated places created the cultural link. The raven was a witness to death, not its cause.' },
+  { q: 'Are ravens bad omens?', a: 'Whether ravens are bad omens depends entirely on the cultural tradition. In Norse mythology, Odin\'s ravens are symbols of wisdom and war, not necessarily ill fortune. In some European Christian traditions, ravens became associated with ill omen. In many Indigenous North American traditions, Raven is a creator figure. There is no single cross-cultural verdict.' },
+];
+---
+
+<BaseLayout title={title} description={description} path={path} ogType="article"
+  datePublished="2026-11-07" dateModified="2026-11-07"
+  breadcrumbs={breadcrumbs} faq={faq} pageType="Article">
+
+<article class="myth-page">
+  <nav class="myth-breadcrumb" aria-label="Breadcrumb">
+    <ol>
+      {breadcrumbs.map((b, i) => (
+        <li>
+          {i < breadcrumbs.length - 1
+            ? <><a href={b.url}>{b.name}</a><span aria-hidden="true"> › </span></>
+            : <span aria-current="page">{b.name}</span>}
+        </li>
+      ))}
+    </ol>
+  </nav>
+  <header class="myth-header">
+    <p class="myth-pillar">Myth Check · MYTH·03</p>
+    <h1>Do Ravens Bring Death?</h1>
+    <p class="myth-subtitle">Verdict: <strong class="verdict-false">False</strong> — ravens attend death; they do not cause or predict it</p>
+  </header>
+
+  <section class="myth-snippet" aria-label="Quick answer">
+    <p><strong class="claim-science">[science]</strong> Ravens are obligate and opportunistic scavengers — they locate carrion using sight, smell, and information from other ravens and wolves. They appear at scenes of death because a carcass is a food resource, not because they caused or foretold the death. There is no scientific mechanism by which a raven's presence could cause or predict death in humans or other animals.</p>
+  </section>
+
+  <section class="myth-section">
+    <h2>The Ecological Reality</h2>
+    <p><strong class="claim-science">[science]</strong> Ravens are among the most effective carrion-locating birds in their range. They find carcasses through several mechanisms:</p>
+    <ul>
+      <li><strong>Visual scanning:</strong> Ravens soar at height and scan the landscape. A carcass, a gathering of other scavengers, or the circling of vultures or eagles all signal food.</li>
+      <li><strong>Olfaction:</strong> Ravens can detect the odour of decomposition at distance, though they rely less on smell than vultures.</li>
+      <li><strong>Social information transfer:</strong> Ravens at communal roosts appear to follow successful foragers to food sources — the "information-centre hypothesis" proposed by Peter Ward and later developed for ravens by Bernd Heinrich.<sup><a href="#src-1">1</a></sup></li>
+      <li><strong>Following wolves:</strong> Ravens have a well-documented association with wolves in the northern hemisphere. Where wolves kill, ravens scavenge. Ravens have been observed apparently leading wolves to prey — a mutualistic relationship studied by Heinrich.<sup><a href="#src-1">1</a></sup></li>
+    </ul>
+  </section>
+
+  <section class="myth-section">
+    <h2>Why the Belief Developed</h2>
+    <p><strong class="claim-lore">[lore]</strong> The cultural association of ravens with death has a straightforward ecological origin. Before modern sanitation, the locations where humans most prominently encountered ravens were:</p>
+    <ul>
+      <li>Battlefields, where unburied dead attracted ravens within hours</li>
+      <li>Public execution sites — gallows, gibbets, and places of execution were standard raven foraging locations in medieval Europe</li>
+      <li>Slaughterhouses and tanneries</li>
+      <li>Plague pits and mass burial sites where graves were shallow</li>
+      <li>Coastal fishing communities, where entrails and offal attracted ravens</li>
+    </ul>
+    <p>A medieval European peasant or soldier would reliably see ravens in contexts of death and violence. The inference that ravens <em>bring</em> death rather than <em>attend</em> it is a natural cognitive error — post hoc reasoning from correlation to causation. The error is understandable; the conclusion is false.</p>
+  </section>
+
+  <section class="myth-section">
+    <h2>The Norse Evidence — Ravens and War</h2>
+    <p><strong class="claim-lore">[lore]</strong> Old Norse poetry contains the <em>beasts of battle</em> formula — the conventional trio of raven, eagle, and wolf who await a battlefield. These are not portrayed as omens causing battle; they are portrayed as attending it. Odin sends his ravens Huginn and Muninn to observe the world, returning each day — they are described as wisdom-gathering agents, not death-bringers. The association of ravens with Odin's battlefield role (as god of the slain) connects ravens to war and death, but through the warrior-deity framing rather than as direct death-causers.<sup><a href="#src-2">2</a></sup></p>
+  </section>
+
+  <section class="myth-section">
+    <h2>What the Evidence Shows</h2>
+    <p><strong class="claim-science">[science]</strong> Field studies of Common Ravens confirm consistent arrival at carcasses within hours of death across their range. Studies by Boarman and Heinrich in both North American and European populations document average carcass discovery times and raven arrival patterns. Ravens do not arrive before death — they arrive after it, responding to the same environmental cues (smell, visual signals, other scavengers) that draw any carrion bird.<sup><a href="#src-3">3</a></sup></p>
+    <p>There is no published study suggesting ravens have a predictive or causative relationship with mortality events. The question has not been seriously investigated scientifically, because there is no plausible mechanism for such an effect.</p>
+  </section>
+
+  <section class="myth-verdict myth-section">
+    <h2>Verdict</h2>
+    <p><strong>False.</strong> Ravens do not bring, cause, or predict death. They attend death because they are carrion birds whose food source is dead animals. The cultural belief developed from accurate observation (ravens are common at death-associated locations) combined with a logical error (attributing causation to correlation). The consistent negative association in some European traditions is not universal — Norse, biblical, and many other traditions show ravens as instruments of divine knowledge or provision.</p>
+  </section>
+
+  <section class="myth-section">
+    <h2>Related Pages</h2>
+    <ul>
+      <li><a href="/myths/are-ravens-bad-luck/">Are ravens bad luck?</a></li>
+      <li><a href="/questions/why-are-ravens-associated-with-death/">Why are ravens associated with death?</a></li>
+      <li><a href="/questions/what-do-ravens-eat/">What do ravens eat?</a></li>
+    </ul>
+  </section>
+
+  <section class="myth-faq myth-section" aria-labelledby="faq-h2">
+    <h2 id="faq-h2">Frequently Asked Questions</h2>
+    {faq.map(item => (
+      <details class="myth-faq-item">
+        <summary class="myth-faq-q">{item.q}</summary>
+        <p class="myth-faq-a">{item.a}</p>
+      </details>
+    ))}
+  </section>
+
+  <section class="myth-sources myth-section" aria-labelledby="src-h2">
+    <h2 id="src-h2">Sources</h2>
+    <ol class="myth-src-list">
+      <li id="src-1">Heinrich, B. (1989). <em>Ravens in Winter</em>. Summit Books. — information-centre hypothesis and wolf-raven foraging associations.</li>
+      <li id="src-2">Simek, R. (1993). <em>Dictionary of Northern Mythology</em>. D.S. Brewer. — beasts of battle formula and raven role in Norse martial tradition.</li>
+      <li id="src-3">Boarman, W.I. &amp; Heinrich, B. (1999). Common Raven (<em>Corvus corax</em>). In Poole, A. &amp; Gill, F. (eds.), <em>The Birds of North America</em>, No. 476. — carcass discovery and scavenging behaviour review.</li>
+    </ol>
+    <p class="myth-claim-note"><strong class="claim-lore">[lore]</strong> named cultural/historical source · <strong class="claim-science">[science]</strong> peer-reviewed/field-guide</p>
+  </section>
+
+  <nav class="myth-nav-bottom">
+    <a href="/myths/ravens-can-talk/" class="myth-back">← Can Ravens Talk?</a>
+    <a href="/myths/" class="myth-next">All Myth Checks →</a>
+  </nav>
+</article>
+</BaseLayout>
+
+<style>
+  .myth-page { max-width: 820px; margin: 0 auto; padding: 2rem 1.25rem 4rem; color: var(--iron-ink, #e8e4d8); font-family: 'Inter', sans-serif; line-height: 1.72; }
+  .myth-breadcrumb ol { display: flex; flex-wrap: wrap; gap: .25rem; list-style: none; padding: 0; margin: 0 0 2rem; font-size: .8rem; color: var(--ink-soft, #8a8070); }
+  .myth-breadcrumb a { color: var(--gold-500, #d4ae5a); text-decoration: none; }
+  .myth-pillar { font-size: .72rem; letter-spacing: .12em; text-transform: uppercase; color: var(--gold-500, #d4ae5a); margin: 0 0 .4rem; }
+  .myth-page h1 { font-family: 'Cormorant Garamond', serif; font-size: clamp(2rem, 5vw, 3.25rem); font-weight: 700; color: #fff; margin: 0 0 .4rem; line-height: 1.1; }
+  .myth-subtitle { font-size: 1rem; color: var(--ink-soft, #c0b89a); margin: 0 0 2rem; }
+  .verdict-false { color: #c06060; }
+  .myth-snippet { background: rgba(212,174,90,.08); border-left: 3px solid var(--gold-500, #d4ae5a); border-radius: 0 6px 6px 0; padding: 1rem 1.25rem; margin-bottom: 2.5rem; font-size: 1.03rem; }
+  .myth-section { margin-bottom: 2.75rem; }
+  .myth-section h2 { font-family: 'Cormorant Garamond', serif; font-size: 1.6rem; font-weight: 600; color: #fff; margin: 0 0 1rem; border-bottom: 1px solid rgba(212,174,90,.2); padding-bottom: .4rem; }
+  .myth-section p { margin: 0 0 1rem; font-size: .97rem; }
+  .myth-section ul { padding-left: 1.25rem; margin: 0 0 1rem; }
+  .myth-section li { margin-bottom: .5rem; font-size: .95rem; }
+  .myth-verdict { background: rgba(212,174,90,.06); border: 1px solid rgba(212,174,90,.2); border-radius: 8px; padding: 1.25rem 1.5rem; }
+  .claim-science { color: #7ab9e0; font-style: normal; font-size: .78rem; }
+  .claim-lore    { color: #c8a46a; font-style: normal; font-size: .78rem; }
+  a[href] { color: var(--gold-500, #d4ae5a); }
+  .myth-faq-item { border-bottom: 1px solid rgba(255,255,255,.07); }
+  .myth-faq-q { cursor: pointer; padding: .9rem 0; font-size: .97rem; font-weight: 500; color: #fff; list-style: none; }
+  .myth-faq-q::before { content: '+ '; color: var(--gold-500, #d4ae5a); font-weight: 700; }
+  details[open] .myth-faq-q::before { content: '− '; }
+  .myth-faq-a { margin: 0 0 1rem; line-height: 1.7; font-size: .93rem; color: var(--ink-soft, #c8c0b0); }
+  .myth-src-list { padding-left: 1.25rem; margin: 0 0 1rem; }
+  .myth-src-list li { margin-bottom: .6rem; font-size: .82rem; color: var(--ink-soft, #8a8070); line-height: 1.6; }
+  .myth-claim-note { font-size: .78rem; color: var(--ink-soft, #605848); border-top: 1px solid rgba(255,255,255,.06); padding-top: .75rem; }
+  .myth-nav-bottom { display: flex; justify-content: space-between; padding-top: 2rem; border-top: 1px solid rgba(255,255,255,.07); }
+  .myth-nav-bottom a { font-size: .9rem; text-decoration: none; }
+  .myth-nav-bottom a:hover { text-decoration: underline; }
+</style>

@@ -1,0 +1,135 @@
+---
+/**
+ * Species sub-page — Somali Crow range
+ * SPC·12r
+ * Primary keyword: somali crow range
+ * Secondary: where does the somali crow live, corvus edithae range, dwarf raven range
+ */
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+
+const title       = 'Somali Crow Range: Where This Species Lives';
+const description = 'The Somali Crow (Dwarf Raven) is one of the most restricted-range corvids in the world, confined to the Horn of Africa. This page covers its known distribution, habitat, and the challenges of studying this poorly documented species.';
+const path        = '/species/somali-crow/range/';
+
+const breadcrumbs = [
+  { name: 'Home',       url: '/' },
+  { name: 'Species',    url: '/species/' },
+  { name: 'Somali Crow', url: '/species/somali-crow/' },
+  { name: 'Range',      url: path },
+];
+
+const faq = [
+  { q: 'Where does the Somali Crow live?', a: 'The Somali Crow (Corvus edithae) is confined to a small area in the Horn of Africa — primarily in Somalia, with some records from adjacent Djibouti and eastern Ethiopia (the Ogaden region). It is essentially a Somali endemic. Its range appears to be centred on the arid thorn-scrub and open country of central and northern Somalia, but precise distributional data are extremely limited due to the difficulty of ornithological fieldwork in Somalia.' },
+  { q: 'Is the Somali Crow related to the Brown-necked Raven?', a: 'Yes. The Somali Crow (Corvus edithae) is closely related to the Brown-necked Raven (Corvus ruficollis) and was formerly treated as a subspecies of it. Current taxonomy (IOC World Bird List and HBW) recognises it as a full species based on its smaller size (the "Dwarf Raven" name reflects its notably small body), differences in bill proportions, and its restricted distribution. The two taxa are allopatric — the Somali Crow occupying a core Somali range, the Brown-necked Raven surrounding it to the north, west, and east.' },
+  { q: 'Why is the Somali Crow so poorly studied?', a: 'The Somali Crow is poorly studied because Somalia has been in a state of prolonged civil conflict and institutional instability since the early 1990s, making sustained ornithological fieldwork essentially impossible. Most knowledge of the species comes from museum specimens collected before 1990 and brief field observations by researchers passing through the region. The species may be more widespread than current records suggest, or more restricted — without systematic surveys, it is impossible to know.' },
+];
+---
+
+<BaseLayout title={title} description={description} path={path} ogType="article"
+  datePublished="2026-11-07" dateModified="2026-11-07"
+  breadcrumbs={breadcrumbs} faq={faq} pageType="Article">
+
+<article class="qa-page">
+
+  <nav class="qa-breadcrumb" aria-label="Breadcrumb">
+    <ol>
+      {breadcrumbs.map((b, i) => (
+        <li>
+          {i < breadcrumbs.length - 1
+            ? <><a href={b.url}>{b.name}</a><span aria-hidden="true"> › </span></>
+            : <span aria-current="page">{b.name}</span>}
+        </li>
+      ))}
+    </ol>
+  </nav>
+
+  <header class="qa-header">
+    <p class="qa-pillar">Species Sub-page · SPC·12r</p>
+    <h1>Somali Crow Range: Where This Species Lives</h1>
+  </header>
+
+  <section class="qa-snippet" aria-label="Direct answer">
+    <p><strong class="claim-science">[science]</strong> The Somali Crow (<em>Corvus edithae</em>), also known as the Dwarf Raven, is confined to the Horn of Africa — primarily Somalia, with records from adjacent Djibouti and eastern Ethiopia. It is one of the most restricted-range corvids in the world and one of the least-studied birds globally, due to the prolonged inaccessibility of Somalia to ornithological research.</p>
+  </section>
+
+  <section class="qa-section">
+    <h2>Known Distribution</h2>
+    <p><strong class="claim-science">[science]</strong> The Somali Crow's distribution is based on limited records:<sup><a href="#src-1">1</a></sup></p>
+    <ul>
+      <li><strong>Somalia:</strong> the core of the range. Records are scattered from northern Somalia (Somaliland), central Somalia, and southern Somalia, but density and exact distribution within the country are essentially unknown due to the absence of systematic surveys since the 1980s.</li>
+      <li><strong>Djibouti:</strong> a few records from the arid interior, representing the northwestern edge of the range.</li>
+      <li><strong>Ethiopia (Ogaden/Somali Region):</strong> the Ogaden arid zone — the adjacent area of eastern Ethiopia with similar habitat to Somalia — has records, though these are also sparse.</li>
+    </ul>
+    <p>The limits of the range remain uncertain. The species may extend further into Ethiopia and Eritrea than current records suggest, or its range may be genuinely very small. Without surveys, it is impossible to determine range accurately.</p>
+  </section>
+
+  <section class="qa-section">
+    <h2>Habitat</h2>
+    <p><strong class="claim-science">[science]</strong> Based on the habitat type where most records come from:<sup><a href="#src-1">1</a></sup></p>
+    <ul>
+      <li>Arid thorn-scrub (Acacia-Commiphora woodland and bush), dry acacia scrubland, and open semi-desert terrain.</li>
+      <li>Avoids dense forest and highland habitats — these are occupied by other corvids (the Thick-billed Raven in the Ethiopian Highlands, the Brown-necked Raven in adjacent arid zones).</li>
+      <li>Likely forages in open terrain similar to the Brown-necked Raven — ground foraging for invertebrates, small vertebrates, and scavenging.</li>
+    </ul>
+  </section>
+
+  <section class="qa-section">
+    <h2>Research Gaps</h2>
+    <p>The Somali Crow is among the corvids most urgently in need of basic range surveys. The situation in Somalia has precluded ornithological fieldwork for over three decades. Future surveys in Somaliland (the more accessible self-declared region of northern Somalia), adjacent Djibouti, and the Ethiopian Ogaden could substantially improve knowledge of this species' range, population, and ecology.</p>
+  </section>
+
+  <section class="qa-section">
+    <h2>Related Pages</h2>
+    <ul>
+      <li><a href="/species/somali-crow/">Somali Crow — species hub</a></li>
+      <li><a href="/species/somali-crow/identification/">Somali Crow identification</a></li>
+      <li><a href="/species/somali-crow/diet/">Somali Crow diet</a></li>
+      <li><a href="/species/brown-necked-raven/range/">Brown-necked Raven range (closest relative)</a></li>
+      <li><a href="/questions/how-many-types-of-ravens-are-there/">How many types of ravens are there?</a></li>
+    </ul>
+  </section>
+
+  <section class="qa-faq qa-section" aria-labelledby="faq-h2">
+    <h2 id="faq-h2">Frequently Asked Questions</h2>
+    {faq.map(item => (
+      <details class="qa-faq-item">
+        <summary class="qa-faq-q">{item.q}</summary>
+        <p class="qa-faq-a">{item.a}</p>
+      </details>
+    ))}
+  </section>
+
+  <section class="qa-sources qa-section" aria-labelledby="src-h2">
+    <h2 id="src-h2">Sources</h2>
+    <ol class="qa-src-list">
+      <li id="src-1">del Hoyo, J. et al. (eds., 2009). <em>Handbook of the Birds of the World</em>, vol. 14. Lynx Edicions. — Somali Crow species account; distribution, habitat, taxonomic status.</li>
+    </ol>
+    <p class="qa-claim-note"><strong class="claim-science">[science]</strong> peer-reviewed or field-guide data</p>
+  </section>
+
+</article>
+</BaseLayout>
+
+<style>
+  .qa-page { max-width: 820px; margin: 0 auto; padding: 2rem 1.25rem 4rem; color: var(--iron-ink, #e8e4d8); font-family: 'Inter', sans-serif; line-height: 1.72; }
+  .qa-breadcrumb ol { display: flex; flex-wrap: wrap; gap: .25rem; list-style: none; padding: 0; margin: 0 0 2rem; font-size: .8rem; color: var(--ink-soft, #8a8070); }
+  .qa-breadcrumb a { color: var(--gold-500, #d4ae5a); text-decoration: none; }
+  .qa-pillar { font-size: .72rem; letter-spacing: .12em; text-transform: uppercase; color: var(--gold-500, #d4ae5a); margin: 0 0 .4rem; }
+  .qa-page h1 { font-family: 'Cormorant Garamond', serif; font-size: clamp(2rem, 5vw, 3rem); font-weight: 700; color: #fff; margin: 0 0 2rem; line-height: 1.1; }
+  .qa-snippet { background: rgba(212,174,90,.08); border-left: 3px solid var(--gold-500, #d4ae5a); border-radius: 0 6px 6px 0; padding: 1rem 1.25rem; margin-bottom: 2.5rem; font-size: 1.03rem; }
+  .qa-section { margin-bottom: 2.5rem; }
+  .qa-section h2 { font-family: 'Cormorant Garamond', serif; font-size: 1.5rem; font-weight: 600; color: #fff; margin: 0 0 .9rem; border-bottom: 1px solid rgba(212,174,90,.2); padding-bottom: .4rem; }
+  .qa-section p { margin: 0 0 1rem; font-size: .97rem; }
+  .qa-section ul { padding-left: 1.25rem; margin: 0 0 1rem; }
+  .qa-section li { margin-bottom: .4rem; font-size: .95rem; }
+  .claim-science { color: #7ab9e0; font-style: normal; font-size: .78rem; }
+  a[href] { color: var(--gold-500, #d4ae5a); }
+  .qa-faq-item { border-bottom: 1px solid rgba(255,255,255,.07); }
+  .qa-faq-q { cursor: pointer; padding: .9rem 0; font-size: .97rem; font-weight: 500; color: #fff; list-style: none; }
+  .qa-faq-q::before { content: '+ '; color: var(--gold-500, #d4ae5a); font-weight: 700; }
+  details[open] .qa-faq-q::before { content: '− '; }
+  .qa-faq-a { margin: 0 0 1rem; line-height: 1.7; font-size: .93rem; color: var(--ink-soft, #c8c0b0); }
+  .qa-src-list { padding-left: 1.25rem; margin: 0 0 1rem; }
+  .qa-src-list li { margin-bottom: .6rem; font-size: .82rem; color: var(--ink-soft, #8a8070); line-height: 1.6; }
+  .qa-claim-note { font-size: .78rem; color: var(--ink-soft, #605848); border-top: 1px solid rgba(255,255,255,.06); padding-top: .75rem; }
+</style>

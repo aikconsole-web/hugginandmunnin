@@ -1,0 +1,156 @@
+---
+/**
+ * Q&A — biology/identification
+ * Primary keyword: what does a raven look like
+ * Secondary: raven appearance, raven description, what do ravens look like
+ */
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const title       = 'What Does a Raven Look Like? A Complete Description';
+const description = 'The Common Raven is a large, all-black bird with a heavy arched bill, shaggy throat hackles, a wedge-shaped tail, and long, broad wings. This page describes its appearance in full — size, plumage, bill, tail, and how it compares to crows.';
+const path        = '/questions/what-does-a-raven-look-like/';
+
+const breadcrumbs = [
+  { name: 'Home',      url: '/' },
+  { name: 'Questions', url: '/questions/' },
+  { name: 'What Does a Raven Look Like?', url: path },
+];
+
+const faq = [
+  { q: 'How big is a raven?', a: 'The Common Raven is the largest member of the order Passeriformes (perching birds). Body length is 56–69 cm (22–27 inches); wingspan 115–150 cm (45–59 inches); weight 700–1,600 g (1.5–3.5 lb), with considerable variation across its range. Alaskan and northern European ravens are significantly larger than those from desert populations.' },
+  { q: 'What colour is a raven?', a: 'The Common Raven is all black — but not a flat black. Its plumage shows iridescent blue-green, purple, and violet gloss in good light, particularly on the wings and back. The colour shifts with viewing angle, from dull sooty black in poor light to glossy metallic in direct sun. Juvenile birds have a duller, browner-black plumage with less gloss, gradually acquiring full adult iridescence over 2–3 years.' },
+  { q: 'What is special about a raven\'s tail?', a: 'The Common Raven has a distinctive wedge-shaped or diamond-shaped tail — the central tail feathers are longer than the outer feathers, producing a pointed central projection visible in flight. This is one of the most reliable identification features distinguishing ravens from crows (which have fan-shaped tails with more uniform feather lengths). The wedge tail is visible both when soaring and when the bird is perched and spreads its tail.' },
+];
+---
+
+<BaseLayout title={title} description={description} path={path} ogType="article"
+  datePublished="2026-11-07" dateModified="2026-11-07"
+  breadcrumbs={breadcrumbs} faq={faq} pageType="Article">
+
+<article class="qa-page">
+
+  <nav class="qa-breadcrumb" aria-label="Breadcrumb">
+    <ol>
+      {breadcrumbs.map((b, i) => (
+        <li>
+          {i < breadcrumbs.length - 1
+            ? <><a href={b.url}>{b.name}</a><span aria-hidden="true"> › </span></>
+            : <span aria-current="page">{b.name}</span>}
+        </li>
+      ))}
+    </ol>
+  </nav>
+
+  <header class="qa-header">
+    <p class="qa-pillar">Questions · Identification</p>
+    <h1>What Does a Raven Look Like? A Complete Description</h1>
+  </header>
+
+  <section class="qa-snippet" aria-label="Direct answer">
+    <p><strong class="claim-science">[science]</strong> The Common Raven is a large, entirely black bird with a heavy, arched bill; long, pointed throat hackles (shaggy feathers under the chin); a distinctive wedge-shaped tail visible in flight; and long, broad wings with deeply fingered primaries. In good light its black plumage shows strong blue-violet iridescence. It is roughly twice the size of a crow and unmistakable once the differences are known.</p>
+  </section>
+
+  <section class="qa-section">
+    <h2>Size</h2>
+    <p><strong class="claim-science">[science]</strong> The Common Raven is the largest passerine (perching bird) in the world:<sup><a href="#src-1">1</a></sup></p>
+    <ul>
+      <li><strong>Body length:</strong> 56–69 cm (22–27 inches)</li>
+      <li><strong>Wingspan:</strong> 115–150 cm (45–59 inches)</li>
+      <li><strong>Weight:</strong> 700–1,600 g (1.5–3.5 lb) — with northern populations (Alaska, Siberia) at the high end; desert populations at the lower end</li>
+    </ul>
+    <p>For comparison: the American Crow is 40–53 cm and 300–600 g. A large male raven weighs about three times as much as a large crow.</p>
+  </section>
+
+  <section class="qa-section">
+    <h2>Plumage</h2>
+    <p><strong class="claim-science">[science]</strong> The entire body, wings, and tail are black, but the quality of the black varies with light and feather wear:<sup><a href="#src-1">1</a></sup></p>
+    <ul>
+      <li><strong>Adult iridescence:</strong> in good light, wings and back show strong blue-green, violet, and purple gloss. The iridescence is produced by feather microstructure (thin-film interference), not pigment. The colour shifts visibly as the bird moves.</li>
+      <li><strong>Juvenile plumage:</strong> first-year birds (through their first autumn) are a duller, brown-tinged black with little iridescence. Adult gloss is gradually acquired through successive moults over 2–3 years.</li>
+      <li><strong>Throat hackles:</strong> the loose, elongated feathers of the throat (the hackles) are distinctive — long, pointed, shaggy-looking. When the bird calls or displays, the hackles are raised, dramatically extending the apparent size of the throat. This is very different from crows, which have shorter, more rounded throat feathers.</li>
+    </ul>
+  </section>
+
+  <section class="qa-section">
+    <h2>Bill</h2>
+    <p><strong class="claim-science">[science]</strong> The raven's bill is large and heavy — longer and proportionally deeper than a crow's, with a noticeably curved upper mandible (culmen). The bill is black; the inside of the mouth and gape are pinkish. This heavy bill is a key identification feature at close range: a bird with a truly massive, curved black bill is almost certainly a raven.<sup><a href="#src-1">1</a></sup></p>
+  </section>
+
+  <section class="qa-section">
+    <h2>Tail Shape</h2>
+    <p><strong class="claim-science">[science]</strong> The wedge-shaped tail is the most reliable in-flight identification feature. When a raven soars or glides, the tail forms a clear diamond or wedge — central feathers visibly longer than outer feathers. Crows have a rounded or square-cut tail. This difference is visible at considerable distance in good conditions.<sup><a href="#src-2">2</a></sup></p>
+  </section>
+
+  <section class="qa-section">
+    <h2>Wings and Flight Silhouette</h2>
+    <p><strong class="claim-science">[science]</strong> Ravens have long, broad wings with deeply emarginated (deeply notched) primary feathers producing visible "fingers" at the wingtip in soaring flight. The overall silhouette in soaring is a broad-winged, long-tailed cross, distinctly different from the more compact, shorter-winged crow silhouette. Ravens soar extensively, flapping less than crows in level flight.<sup><a href="#src-1">1</a></sup></p>
+  </section>
+
+  <section class="qa-section">
+    <h2>Key Differences from Crows</h2>
+    <ul>
+      <li>Roughly twice the size</li>
+      <li>Wedge-shaped tail (not rounded)</li>
+      <li>Much larger, curved bill</li>
+      <li>Long, shaggy throat hackles</li>
+      <li>Deep "kronk" voice (not "caw")</li>
+      <li>More frequent soaring flight</li>
+    </ul>
+    <p>See <a href="/compare/raven-vs-crow/">Raven vs Crow</a> for the full comparison.</p>
+  </section>
+
+  <section class="qa-section">
+    <h2>Related Pages</h2>
+    <ul>
+      <li><a href="/compare/raven-vs-crow/">Raven vs Crow</a></li>
+      <li><a href="/questions/how-big-are-ravens/">How big are ravens?</a></li>
+      <li><a href="/questions/how-do-you-tell-a-raven-from-a-crow-in-flight/">How to tell a raven from a crow in flight</a></li>
+      <li><a href="/species/common-raven/">Common Raven — species profile</a></li>
+    </ul>
+  </section>
+
+  <section class="qa-faq qa-section" aria-labelledby="faq-h2">
+    <h2 id="faq-h2">Frequently Asked Questions</h2>
+    {faq.map(item => (
+      <details class="qa-faq-item">
+        <summary class="qa-faq-q">{item.q}</summary>
+        <p class="qa-faq-a">{item.a}</p>
+      </details>
+    ))}
+  </section>
+
+  <section class="qa-sources qa-section" aria-labelledby="src-h2">
+    <h2 id="src-h2">Sources</h2>
+    <ol class="qa-src-list">
+      <li id="src-1">Boarman, W.I. & Heinrich, B. (1999). Common Raven (<em>Corvus corax</em>). In <em>Birds of the World</em> (A.F. Poole, ed.). Cornell Lab of Ornithology. — plumage, bill, size, morphology.</li>
+      <li id="src-2">Madge, S. & Burn, H. (1994). <em>Crows and Jays</em>. Helm Identification Guides. Christopher Helm. — tail shape, field characters, comparison with crows.</li>
+    </ol>
+    <p class="qa-claim-note"><strong class="claim-science">[science]</strong> peer-reviewed study or field-guide data</p>
+  </section>
+
+</article>
+</BaseLayout>
+
+<style>
+  .qa-page { max-width: 820px; margin: 0 auto; padding: 2rem 1.25rem 4rem; color: var(--iron-ink, #e8e4d8); font-family: 'Inter', sans-serif; line-height: 1.72; }
+  .qa-breadcrumb ol { display: flex; flex-wrap: wrap; gap: .25rem; list-style: none; padding: 0; margin: 0 0 2rem; font-size: .8rem; color: var(--ink-soft, #8a8070); }
+  .qa-breadcrumb a { color: var(--gold-500, #d4ae5a); text-decoration: none; }
+  .qa-pillar { font-size: .72rem; letter-spacing: .12em; text-transform: uppercase; color: var(--gold-500, #d4ae5a); margin: 0 0 .4rem; }
+  .qa-page h1 { font-family: 'Cormorant Garamond', serif; font-size: clamp(2rem, 5vw, 3rem); font-weight: 700; color: #fff; margin: 0 0 2rem; line-height: 1.1; }
+  .qa-snippet { background: rgba(212,174,90,.08); border-left: 3px solid var(--gold-500, #d4ae5a); border-radius: 0 6px 6px 0; padding: 1rem 1.25rem; margin-bottom: 2.5rem; font-size: 1.03rem; }
+  .qa-section { margin-bottom: 2.5rem; }
+  .qa-section h2 { font-family: 'Cormorant Garamond', serif; font-size: 1.5rem; font-weight: 600; color: #fff; margin: 0 0 .9rem; border-bottom: 1px solid rgba(212,174,90,.2); padding-bottom: .4rem; }
+  .qa-section p { margin: 0 0 1rem; font-size: .97rem; }
+  .qa-section ul { padding-left: 1.25rem; margin: 0 0 1rem; }
+  .qa-section li { margin-bottom: .4rem; font-size: .95rem; }
+  .claim-science { color: #7ab9e0; font-style: normal; font-size: .78rem; }
+  a[href] { color: var(--gold-500, #d4ae5a); }
+  .qa-faq-item { border-bottom: 1px solid rgba(255,255,255,.07); }
+  .qa-faq-q { cursor: pointer; padding: .9rem 0; font-size: .97rem; font-weight: 500; color: #fff; list-style: none; }
+  .qa-faq-q::before { content: '+ '; color: var(--gold-500, #d4ae5a); font-weight: 700; }
+  details[open] .qa-faq-q::before { content: '− '; }
+  .qa-faq-a { margin: 0 0 1rem; line-height: 1.7; font-size: .93rem; color: var(--ink-soft, #c8c0b0); }
+  .qa-src-list { padding-left: 1.25rem; margin: 0 0 1rem; }
+  .qa-src-list li { margin-bottom: .6rem; font-size: .82rem; color: var(--ink-soft, #8a8070); line-height: 1.6; }
+  .qa-claim-note { font-size: .78rem; color: var(--ink-soft, #605848); border-top: 1px solid rgba(255,255,255,.06); padding-top: .75rem; }
+</style>

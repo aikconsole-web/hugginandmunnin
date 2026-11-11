@@ -1,0 +1,147 @@
+---
+/**
+ * Q&A — mind
+ * Primary keyword: do ravens have feelings
+ * Secondary: raven emotions, do ravens feel empathy, are ravens emotional birds
+ */
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const title       = 'Do Ravens Have Feelings? Raven Emotions and Empathy';
+const description = 'Research on raven cognition and behaviour suggests ravens experience functional emotional states — fear, curiosity, play, apparent grief, and responses that look like empathy. This page examines the evidence carefully.';
+const path        = '/questions/do-ravens-have-feelings/';
+
+const breadcrumbs = [
+  { name: 'Home',      url: '/' },
+  { name: 'Questions', url: '/questions/' },
+  { name: 'Do Ravens Have Feelings?', url: path },
+];
+
+const faq = [
+  { q: 'Do ravens show empathy?', a: 'There is experimental evidence that ravens show behaviour consistent with empathy-like responses. Orlaith Fraser and Thomas Bugnyar (2010, published in PLOS ONE) demonstrated that after conflicts between ravens, bystander ravens approach and affiliate with the loser — behaviours that function to reduce the loser\'s stress and that mirror consolation behaviour documented in great apes. This was the first evidence of consolation behaviour in a non-mammal. Whether this involves subjective empathy or is better described as a functional emotional response is an open scientific question.' },
+  { q: 'Can ravens grieve?', a: 'Ravens show behavioural responses to the deaths of conspecifics that have been described as grief-like: gathering around dead or dying individuals, calling, and remaining near the body. These observations are largely anecdotal in ravens (better-documented in crows — see Swift & Marzluff 2015 on "crow funerals"). Whether these responses involve something comparable to human grief — a subjective experience of loss — cannot be determined from behavioural data alone. What can be said is that ravens register the death of conspecifics as a significant event and respond to it.' },
+  { q: 'Do ravens feel fear?', a: 'Yes — ravens show clear behavioural fear responses. They are highly neophobic (fearful of novel objects) in some contexts, particularly around food. Fear responses in ravens include alarm calls, fleeing, freezing, and prolonged wariness around novel items. Bernd Heinrich\'s work documented ravens repeatedly refusing to approach unfamiliar food items for extended periods, suggesting a strong neophobic fear system. This fear is functionally adaptive — cautious animals survive longer.' },
+];
+---
+
+<BaseLayout title={title} description={description} path={path} ogType="article"
+  datePublished="2026-11-07" dateModified="2026-11-07"
+  breadcrumbs={breadcrumbs} faq={faq} pageType="Article">
+
+<article class="qa-page">
+
+  <nav class="qa-breadcrumb" aria-label="Breadcrumb">
+    <ol>
+      {breadcrumbs.map((b, i) => (
+        <li>
+          {i < breadcrumbs.length - 1
+            ? <><a href={b.url}>{b.name}</a><span aria-hidden="true"> › </span></>
+            : <span aria-current="page">{b.name}</span>}
+        </li>
+      ))}
+    </ol>
+  </nav>
+
+  <header class="qa-header">
+    <p class="qa-pillar">Questions · Mind</p>
+    <h1>Do Ravens Have Feelings? Raven Emotions and Empathy</h1>
+  </header>
+
+  <section class="qa-snippet" aria-label="Direct answer">
+    <p><strong class="claim-science">[science]</strong> Ravens show behavioural signatures of fear, curiosity, play, and what appear to be empathy-like responses to others' distress. Research by Bugnyar, Fraser, and others has documented consolation behaviour in ravens — a pattern previously thought to be confined to mammals. Whether ravens have subjective emotional experience in the way humans do cannot be established from behaviour alone, but the evidence for functional emotional states is substantial.</p>
+  </section>
+
+  <section class="qa-section">
+    <h2>What "Emotions" Means in Animals</h2>
+    <p><strong class="claim-science">[science]</strong> Animal emotion research distinguishes between:<sup><a href="#src-1">1</a></sup></p>
+    <ul>
+      <li><strong>Functional emotional states:</strong> internal states that influence behaviour in predictable ways, analogous to how emotions function in humans — fear increases avoidance; positive states increase approach and play. These are measurable through behaviour and physiology.</li>
+      <li><strong>Subjective emotional experience:</strong> the question of whether there is "something it is like" to be a raven feeling fear or joy — the subjective first-person experience. This cannot be directly measured from outside the animal and remains a philosophical open question.</li>
+    </ul>
+    <p>The scientific evidence addresses functional emotional states in ravens; claims about subjective experience go beyond what current methods can establish.</p>
+  </section>
+
+  <section class="qa-section">
+    <h2>Consolation and Empathy-Like Behaviour</h2>
+    <p><strong class="claim-science">[science]</strong> The most striking evidence for raven emotional responsiveness comes from work on consolation behaviour. Fraser and Bugnyar (2010) observed that after aggressive conflicts between ravens, bystanders — ravens not involved in the fight — preferentially approached and affiliated with the loser. This behaviour:<sup><a href="#src-2">2</a></sup></p>
+    <ul>
+      <li>Was directed at the loser, not the winner or uninvolved birds.</li>
+      <li>Involved preening, touching, and proximity — behaviours associated with affiliation and stress reduction.</li>
+      <li>Correlated with the relationship quality between bystander and loser — closer social partners consoled more reliably.</li>
+    </ul>
+    <p>This was the first published evidence of consolation behaviour in a non-mammal. It suggests ravens track the emotional states of others and respond in ways that function to alleviate distress — a core component of what we call empathy.</p>
+  </section>
+
+  <section class="qa-section">
+    <h2>Fear and Neophobia</h2>
+    <p><strong class="claim-science">[science]</strong> Ravens are strongly neophobic — they treat novel objects with intense wariness, particularly around food. Bernd Heinrich documented wild ravens repeatedly refusing to approach unfamiliar objects near food items for days at a time, even when hungry. This fear system appears highly adaptive: a cautious raven is less likely to be trapped, poisoned, or injured by unfamiliar dangers. Fear responses in ravens include alarm calling, retreating, freezing, and intense watchfulness.<sup><a href="#src-3">3</a></sup></p>
+  </section>
+
+  <section class="qa-section">
+    <h2>Play and Positive States</h2>
+    <p><strong class="claim-science">[science]</strong> Ravens engage in extensive play — aerial acrobatics, object manipulation, social play — that appears intrinsically motivated. Play is widely accepted as an indicator of positive emotional states in animals: animals play when they are safe, well-fed, and not stressed. Ravens play even in cold conditions when energetically it is costly to do so, suggesting strong positive motivation. Play vocalisation (a distinct call associated with play contexts in corvids) has been described in both ravens and other corvids, paralleling play vocalisation that signals positive affect in mammals.<sup><a href="#src-1">1</a></sup></p>
+  </section>
+
+  <section class="qa-section">
+    <h2>What We Cannot Conclude</h2>
+    <ul>
+      <li>Whether any raven experience involves subjective suffering or subjective joy — this is a genuinely open question.</li>
+      <li>Whether raven emotional states are neurologically similar to mammalian emotions or represent a convergently evolved functional analogue.</li>
+      <li>The full range and depth of raven emotional life — research covers a limited set of contexts.</li>
+    </ul>
+  </section>
+
+  <section class="qa-section">
+    <h2>Related Pages</h2>
+    <ul>
+      <li><a href="/questions/how-smart-are-ravens/">How smart are ravens?</a></li>
+      <li><a href="/behaviour/raven-social-life-and-roosts/">Raven social life and roosts</a></li>
+      <li><a href="/questions/why-do-ravens-play/">Why do ravens play?</a></li>
+    </ul>
+  </section>
+
+  <section class="qa-faq qa-section" aria-labelledby="faq-h2">
+    <h2 id="faq-h2">Frequently Asked Questions</h2>
+    {faq.map(item => (
+      <details class="qa-faq-item">
+        <summary class="qa-faq-q">{item.q}</summary>
+        <p class="qa-faq-a">{item.a}</p>
+      </details>
+    ))}
+  </section>
+
+  <section class="qa-sources qa-section" aria-labelledby="src-h2">
+    <h2 id="src-h2">Sources</h2>
+    <ol class="qa-src-list">
+      <li id="src-1">Panksepp, J. & Biven, L. (2012). <em>The Archaeology of Mind: Neuroevolutionary Origins of Human Emotions</em>. W.W. Norton. — functional emotional states in vertebrates; play and positive affect.</li>
+      <li id="src-2">Fraser, O.N. & Bugnyar, T. (2010). Do ravens show consolation? Responses to distressed others. <em>PLOS ONE</em>, 5(5): e10605. — consolation behaviour evidence in ravens.</li>
+      <li id="src-3">Heinrich, B. (1989). <em>Ravens in Winter</em>. Summit Books. — neophobia, fear responses, foraging behaviour.</li>
+    </ol>
+    <p class="qa-claim-note"><strong class="claim-science">[science]</strong> peer-reviewed study or field-guide data</p>
+  </section>
+
+</article>
+</BaseLayout>
+
+<style>
+  .qa-page { max-width: 820px; margin: 0 auto; padding: 2rem 1.25rem 4rem; color: var(--iron-ink, #e8e4d8); font-family: 'Inter', sans-serif; line-height: 1.72; }
+  .qa-breadcrumb ol { display: flex; flex-wrap: wrap; gap: .25rem; list-style: none; padding: 0; margin: 0 0 2rem; font-size: .8rem; color: var(--ink-soft, #8a8070); }
+  .qa-breadcrumb a { color: var(--gold-500, #d4ae5a); text-decoration: none; }
+  .qa-pillar { font-size: .72rem; letter-spacing: .12em; text-transform: uppercase; color: var(--gold-500, #d4ae5a); margin: 0 0 .4rem; }
+  .qa-page h1 { font-family: 'Cormorant Garamond', serif; font-size: clamp(2rem, 5vw, 3rem); font-weight: 700; color: #fff; margin: 0 0 2rem; line-height: 1.1; }
+  .qa-snippet { background: rgba(212,174,90,.08); border-left: 3px solid var(--gold-500, #d4ae5a); border-radius: 0 6px 6px 0; padding: 1rem 1.25rem; margin-bottom: 2.5rem; font-size: 1.03rem; }
+  .qa-section { margin-bottom: 2.5rem; }
+  .qa-section h2 { font-family: 'Cormorant Garamond', serif; font-size: 1.5rem; font-weight: 600; color: #fff; margin: 0 0 .9rem; border-bottom: 1px solid rgba(212,174,90,.2); padding-bottom: .4rem; }
+  .qa-section p { margin: 0 0 1rem; font-size: .97rem; }
+  .qa-section ul { padding-left: 1.25rem; margin: 0 0 1rem; }
+  .qa-section li { margin-bottom: .4rem; font-size: .95rem; }
+  .claim-science { color: #7ab9e0; font-style: normal; font-size: .78rem; }
+  a[href] { color: var(--gold-500, #d4ae5a); }
+  .qa-faq-item { border-bottom: 1px solid rgba(255,255,255,.07); }
+  .qa-faq-q { cursor: pointer; padding: .9rem 0; font-size: .97rem; font-weight: 500; color: #fff; list-style: none; }
+  .qa-faq-q::before { content: '+ '; color: var(--gold-500, #d4ae5a); font-weight: 700; }
+  details[open] .qa-faq-q::before { content: '− '; }
+  .qa-faq-a { margin: 0 0 1rem; line-height: 1.7; font-size: .93rem; color: var(--ink-soft, #c8c0b0); }
+  .qa-src-list { padding-left: 1.25rem; margin: 0 0 1rem; }
+  .qa-src-list li { margin-bottom: .6rem; font-size: .82rem; color: var(--ink-soft, #8a8070); line-height: 1.6; }
+  .qa-claim-note { font-size: .78rem; color: var(--ink-soft, #605848); border-top: 1px solid rgba(255,255,255,.06); padding-top: .75rem; }
+</style>

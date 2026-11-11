@@ -1,0 +1,136 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+
+const title       = 'Chihuahuan Raven Identification — Field Guide';
+const description = 'How to identify the Chihuahuan Raven (Corvus cryptoleucus): white feather bases on neck and breast, smaller size than Common Raven, nasal bristles, and desert range. Sourced field marks.';
+const path        = '/species/chihuahuan-raven/identification/';
+
+const breadcrumbs = [
+  { name: 'Home',              url: '/' },
+  { name: 'Species',           url: '/species/' },
+  { name: 'Chihuahuan Raven',  url: '/species/chihuahuan-raven/' },
+  { name: 'Identification',    url: path },
+];
+
+const faq = [
+  { q: 'How do I tell a Chihuahuan Raven from a Common Raven?', a: 'Size is the first mark: Chihuahuan Ravens are smaller (44–51 cm) than Common Ravens (56–69 cm) and overlap in size with American Crows. The key mark is the white feather bases on the neck and breast — these are hidden by overlying black feathers normally, but visible when the feathers are ruffled by wind or display. Bill is proportionally smaller and nasal bristles are shorter than Common Raven.' },
+  { q: 'Where are Chihuahuan Ravens found?', a: 'Chihuahuan Ravens are found in arid desert grasslands and shrublands in the southwestern United States (Texas, New Mexico, Arizona, Colorado) and northern Mexico (Chihuahua, Sonora, Coahuila). They are birds of open desert, not mountainous terrain — where Common Ravens prefer cliffs and uplands. In the Texas panhandle and New Mexico, both species can occur together.' },
+];
+---
+
+<BaseLayout title={title} description={description} path={path} ogType="article"
+  datePublished="2026-11-07" dateModified="2026-11-07"
+  breadcrumbs={breadcrumbs} faq={faq} pageType="Article">
+
+<article class="id-page">
+  <nav class="id-breadcrumb" aria-label="Breadcrumb">
+    <ol>
+      {breadcrumbs.map((b, i) => (
+        <li>
+          {i < breadcrumbs.length - 1
+            ? <><a href={b.url}>{b.name}</a><span aria-hidden="true"> › </span></>
+            : <span aria-current="people">{b.name}</span>}
+        </li>
+      ))}
+    </ol>
+  </nav>
+  <header class="id-header">
+    <p class="id-pillar">Species · Field Identification</p>
+    <h1>Chihuahuan Raven — Identification</h1>
+    <p class="id-subtitle"><em>Corvus cryptoleucus</em></p>
+  </header>
+
+  <section class="id-snippet" aria-label="Quick answer">
+    <p><strong class="claim-science">[science]</strong> Key identification features: smaller than Common Raven (44–51 cm vs 56–69 cm), <strong>white feather bases on neck/breast</strong> visible when feathers are ruffled, proportionally shorter nasal bristles, and arid desert grassland habitat. The species name <em>cryptoleucus</em> means "hidden white" — a direct reference to the concealed white bases.</p>
+  </section>
+
+  <section class="id-section">
+    <h2>Measurements</h2>
+    <div class="id-table-wrap">
+      <table class="id-table">
+        <thead><tr><th>Measurement</th><th>Range</th></tr></thead>
+        <tbody>
+          <tr><td>Length</td><td>44–51 cm</td></tr>
+          <tr><td>Wingspan</td><td>99–112 cm</td></tr>
+          <tr><td>Weight</td><td>420–600 g</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="id-src-note">Source: Madge &amp; Burn (1994).<sup><a href="#src-1">1</a></sup></p>
+  </section>
+
+  <section class="id-section">
+    <h2>Key Field Marks</h2>
+
+    <h3>White Feather Bases</h3>
+    <p><strong class="claim-science">[science]</strong> The diagnostic mark of the Chihuahuan Raven is the <strong>white bases of the feathers on the neck and upper breast</strong>, hidden under the overlying black feathers in calm conditions. In wind or during display when feathers are ruffled, the white bases are exposed. This separates Chihuahuan Raven from both Common Raven and American Crow. The name <em>cryptoleucus</em> (hidden white) directly references this mark.<sup><a href="#src-1">1</a></sup></p>
+
+    <h3>Size and Shape</h3>
+    <p><strong class="claim-science">[science]</strong> At 44–51 cm, Chihuahuan Ravens overlap in size with American Crows (40–53 cm) and are substantially smaller than Common Ravens. Proportionally, the bill is less massive than Common Raven's, nasal bristles are shorter and less prominent, and the tail is less pronouncedly wedge-shaped — the wedge is present but subtler.</p>
+
+    <h3>Habitat</h3>
+    <p><strong class="claim-science">[science]</strong> Chihuahuan Ravens are birds of arid desert grasslands, desert scrub, and agricultural areas in the Chihuahuan Desert region. They avoid mountains and forest. Where range overlaps with Common Ravens (which prefer higher elevations and cliff terrain), habitat is a useful additional mark — a raven in flat desert grassland in Texas or New Mexico is much more likely to be Chihuahuan Raven.<sup><a href="#src-1">1</a></sup></p>
+
+    <h3>Social Behaviour</h3>
+    <p><strong class="claim-science">[science]</strong> Chihuahuan Ravens are more colonial than Common Ravens, often nesting in loose groups and forming large winter flocks. Large flocks of ravens in the Texas panhandle in winter are almost certainly Chihuahuan Ravens.</p>
+  </section>
+
+  <section class="id-faq id-section" aria-labelledby="faq-h2">
+    <h2 id="faq-h2">Frequently Asked Questions</h2>
+    {faq.map(item => (
+      <details class="id-faq-item">
+        <summary class="id-faq-q">{item.q}</summary>
+        <p class="id-faq-a">{item.a}</p>
+      </details>
+    ))}
+  </section>
+
+  <section class="id-sources id-section" aria-labelledby="src-h2">
+    <h2 id="src-h2">Sources</h2>
+    <ol class="id-src-list">
+      <li id="src-1">Madge, S. &amp; Burn, H. (1994). <em>Crows and Jays</em>. Christopher Helm. — all measurements and field marks.</li>
+    </ol>
+    <p class="id-claim-note"><strong class="claim-science">[science]</strong> field-guide data</p>
+  </section>
+
+  <nav class="id-nav-bottom">
+    <a href="/species/chihuahuan-raven/" class="id-back">← Chihuahuan Raven Overview</a>
+    <a href="/species/chihuahuan-raven/range-and-habitat/" class="id-next">Range and Habitat →</a>
+  </nav>
+</article>
+</BaseLayout>
+
+<style>
+  .id-page { max-width: 820px; margin: 0 auto; padding: 2rem 1.25rem 4rem; color: var(--iron-ink, #e8e4d8); font-family: 'Inter', sans-serif; line-height: 1.72; }
+  .id-breadcrumb ol { display: flex; flex-wrap: wrap; gap: .25rem; list-style: none; padding: 0; margin: 0 0 2rem; font-size: .8rem; color: var(--ink-soft, #8a8070); }
+  .id-breadcrumb a { color: var(--gold-500, #d4ae5a); text-decoration: none; }
+  .id-pillar { font-size: .72rem; letter-spacing: .12em; text-transform: uppercase; color: var(--gold-500, #d4ae5a); margin: 0 0 .4rem; }
+  .id-page h1 { font-family: 'Cormorant Garamond', serif; font-size: clamp(2rem, 5vw, 3.25rem); font-weight: 700; color: #fff; margin: 0 0 .2rem; line-height: 1.1; }
+  .id-subtitle { font-size: 1rem; color: var(--ink-soft, #c0b89a); margin: 0 0 2rem; }
+  .id-snippet { background: rgba(212,174,90,.08); border-left: 3px solid var(--gold-500, #d4ae5a); border-radius: 0 6px 6px 0; padding: 1rem 1.25rem; margin-bottom: 2.5rem; font-size: 1.03rem; }
+  .id-section { margin-bottom: 2.75rem; }
+  .id-section h2 { font-family: 'Cormorant Garamond', serif; font-size: 1.6rem; font-weight: 600; color: #fff; margin: 0 0 1rem; border-bottom: 1px solid rgba(212,174,90,.2); padding-bottom: .4rem; }
+  .id-section h3 { font-size: 1rem; font-weight: 600; color: var(--gold-500, #d4ae5a); margin: 1.25rem 0 .5rem; }
+  .id-section p { margin: 0 0 1rem; font-size: .97rem; }
+  .id-section ul { padding-left: 1.25rem; margin: 0 0 1rem; }
+  .id-section li { margin-bottom: .4rem; font-size: .95rem; }
+  .id-table-wrap { overflow-x: auto; }
+  .id-table { width: 100%; border-collapse: collapse; font-size: .88rem; margin-bottom: .5rem; }
+  .id-table th { background: rgba(212,174,90,.12); color: var(--gold-500, #d4ae5a); padding: .5rem .9rem; text-align: left; font-size: .75rem; letter-spacing: .06em; text-transform: uppercase; }
+  .id-table td { padding: .5rem .9rem; border-bottom: 1px solid rgba(255,255,255,.06); }
+  .id-table tr:last-child td { border-bottom: none; }
+  .id-src-note { font-size: .78rem; color: var(--ink-soft, #8a8070); }
+  .claim-science { color: #7ab9e0; font-style: normal; font-size: .78rem; }
+  a[href] { color: var(--gold-500, #d4ae5a); }
+  .id-faq-item { border-bottom: 1px solid rgba(255,255,255,.07); }
+  .id-faq-q { cursor: pointer; padding: .9rem 0; font-size: .97rem; font-weight: 500; color: #fff; list-style: none; }
+  .id-faq-q::before { content: '+ '; color: var(--gold-500, #d4ae5a); font-weight: 700; }
+  details[open] .id-faq-q::before { content: '− '; }
+  .id-faq-a { margin: 0 0 1rem; line-height: 1.7; font-size: .93rem; color: var(--ink-soft, #c8c0b0); }
+  .id-src-list { padding-left: 1.25rem; margin: 0 0 1rem; }
+  .id-src-list li { margin-bottom: .6rem; font-size: .82rem; color: var(--ink-soft, #8a8070); line-height: 1.6; }
+  .id-claim-note { font-size: .78rem; color: var(--ink-soft, #605848); border-top: 1px solid rgba(255,255,255,.06); padding-top: .75rem; }
+  .id-nav-bottom { display: flex; justify-content: space-between; padding-top: 2rem; border-top: 1px solid rgba(255,255,255,.07); }
+  .id-nav-bottom a { font-size: .9rem; text-decoration: none; }
+  .id-nav-bottom a:hover { text-decoration: underline; }
+</style>

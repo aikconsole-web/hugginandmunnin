@@ -1,0 +1,162 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+
+const title       = 'Noah and the Raven — the Biblical Text and What Scholars Say';
+const description = 'Genesis 8:7 — the raven Noah released from the ark. The Hebrew text, its scholarly interpretations, and comparisons with the dove narrative that follows.';
+const path        = '/lore/world/noah-and-the-raven/';
+
+const breadcrumbs = [
+  { name: 'Home',       url: '/' },
+  { name: 'World Lore', url: '/lore/world/' },
+  { name: 'Noah and the Raven', url: path },
+];
+
+const faq = [
+  { q: 'What does the Bible say about Noah\'s raven?', a: 'Genesis 8:7 (KJV): "And he sent forth a raven, which went forth to and fro, until the waters were dried up from off the earth." The raven does not return; Noah then sends a dove instead. The raven\'s non-return is ambiguous — the text does not explain why it did not come back.' },
+  { q: 'Why did Noah send a raven first?', a: 'The text does not give a reason. Various Jewish and Christian commentators have offered interpretations: (1) the raven found land or food and did not return; (2) it refused to leave (a later interpretive tradition); (3) it was sent as a preliminary scout before the dove. These are interpretations, not statements in the biblical text.' },
+  { q: 'Is Noah\'s raven a good or bad sign?', a: 'The text is neutral. The raven simply does not return. Later Christian exegesis sometimes cast the raven negatively (as an "unclean bird" per Leviticus 11:15, or as symbolising sinfulness), while some Jewish commentary was more neutral. The negative association with the raven in this passage is an interpretive tradition, not in the original text.' },
+];
+---
+
+<BaseLayout title={title} description={description} path={path} ogType="article"
+  datePublished="2026-11-07" dateModified="2026-11-07"
+  breadcrumbs={breadcrumbs} faq={faq} pageType="Article">
+
+<article class="lore-page">
+  <nav class="lore-breadcrumb" aria-label="Breadcrumb">
+    <ol>
+      {breadcrumbs.map((b, i) => (
+        <li>
+          {i < breadcrumbs.length - 1
+            ? <><a href={b.url}>{b.name}</a><span aria-hidden="true"> › </span></>
+            : <span aria-current="page">{b.name}</span>}
+        </li>
+      ))}
+    </ol>
+  </nav>
+
+  <header class="lore-header">
+    <p class="lore-pillar">World Lore · MYW·03</p>
+    <h1>Noah and the Raven</h1>
+    <p class="lore-subtitle">Genesis 8:7 — the Biblical Text and Its Interpretations</p>
+  </header>
+
+  <section class="lore-snippet" aria-label="Quick answer">
+    <p><strong class="claim-lore">[lore]</strong> In Genesis 8:7, Noah releases a raven from the ark as the floodwaters recede. The raven "went forth to and fro" but did not return. Noah then sends a dove, which does return (and later returns with an olive branch). The raven's non-return is stated without explanation; the negative or positive interpretations come from later commentators, not the text itself.</p>
+  </section>
+
+  <section class="lore-section">
+    <h2>The Biblical Text — Genesis 8:6–12</h2>
+    <p><strong class="claim-lore">[lore]</strong> The passage (King James Version, 1611, public domain):</p>
+    <blockquote class="lore-quote">
+      <p>"And it came to pass at the end of forty days, that Noah opened the window of the ark which he had made: And he sent forth a raven, which went forth to and fro, until the waters were dried up from off the earth. Also he sent forth a dove from him, to see if the waters were abated from off the face of the ground…"</p>
+      <footer>— Genesis 8:6–8, King James Version (1611), public domain<sup><a href="#src-1">1</a></sup></footer>
+    </blockquote>
+    <p>The Hebrew word translated as "raven" is <em>עֹרֵב</em> (<em>orev</em>), the standard Hebrew word for raven (compare the place name in Numbers 31:8). The same word appears in Leviticus 11:15 where ravens are listed among unclean birds — a connection later commentators often made.</p>
+  </section>
+
+  <section class="lore-section">
+    <h2>What the Text Says — and What It Does Not</h2>
+    <p><strong class="claim-lore">[lore]</strong> The text states:</p>
+    <ul>
+      <li>Noah released a raven.</li>
+      <li>The raven "went forth to and fro" (the Hebrew phrase implies repeated back-and-forth flight) until the waters dried.</li>
+      <li>The raven did not return to the ark.</li>
+    </ul>
+    <p>The text does not state:</p>
+    <ul>
+      <li>Why the raven did not return.</li>
+      <li>Whether the raven found land or drowned.</li>
+      <li>Whether this was a good or bad outcome for Noah.</li>
+    </ul>
+    <p>All further meaning comes from interpretation, not from the verse itself.</p>
+  </section>
+
+  <section class="lore-section">
+    <h2>Key Interpretive Traditions</h2>
+
+    <h3>Jewish commentary</h3>
+    <p><strong class="claim-lore">[lore]</strong> The <em>Talmud Bavli</em> (Sanhedrin 108b) records a tradition that the raven refused to leave the ark because it feared Noah might take its mate during its absence. This is an aggadic (narrative/interpretive) tradition, not a biblical statement. It frames the raven negatively — as suspicious and unhelpful.<sup><a href="#src-2">2</a></sup></p>
+
+    <h3>Christian patristic interpretation</h3>
+    <p><strong class="claim-lore">[lore]</strong> Several Church Fathers (including Ambrose and Augustine) interpreted the raven allegorically as representing sinfulness or worldliness — it stayed away from the ark (the Church) and was distracted by earthly things (the floating corpses). This allegorical reading was influential but is a Christian theological interpretation, not a statement in Genesis.<sup><a href="#src-3">3</a></sup></p>
+
+    <h3>A neutral or positive reading</h3>
+    <p><strong class="claim-lore">[lore]</strong> Some modern scholars note that the raven's non-return may simply mean it found dry land first and had no reason to return — it succeeded in its mission. The dove, by contrast, returned because there was no dry land for it. In this reading, the raven was the successful scout. Jon Levenson (<em>Inheriting Abraham</em>, 2012) and other biblical scholars note the verse does not denigrate the raven.<sup><a href="#src-4">4</a></sup></p>
+  </section>
+
+  <section class="lore-section">
+    <h2>Parallel Navigation Traditions</h2>
+    <p><strong class="claim-lore">[lore]</strong> Similar land-finding bird traditions appear in other ancient Near Eastern flood narratives. The <em>Epic of Gilgamesh</em> (Tablet XI) describes Utnapishtim releasing a dove, a swallow, and a raven — in that order — with the raven again the final bird to not return.<sup><a href="#src-5">5</a></sup> The parallel suggests the motif predates the biblical text and was part of a wider ancient Near Eastern literary tradition, not a uniquely Israelite raven-symbolism.</p>
+    <p><strong class="claim-science">[science]</strong> As with Raven-Flóki's navigation (see: <a href="/lore/norse/raven-floki-and-iceland/">Raven-Flóki and Iceland</a>), there is a plausible ecological basis: ravens do not need to return to a ship or ark if they find land, while doves — more cautious birds — will return if they cannot land.<sup><a href="#src-6">6</a></sup></p>
+  </section>
+
+  <section class="lore-section lore-bridge">
+    <h2>The Bird Behind the Story</h2>
+    <p><strong class="claim-science">[science]</strong> Common Ravens do have strong homing tendencies and will not return to a release point if they find a food source or landing site elsewhere. This is consistent with the narrative's outcome: the raven found land (or food) and had no reason to return to the ark.<sup><a href="#src-6">6</a></sup></p>
+    <p><a href="/species/common-raven/" class="lore-species-link">Common Raven — species profile →</a></p>
+  </section>
+
+  <section class="lore-faq lore-section" aria-labelledby="faq-h2">
+    <h2 id="faq-h2">Frequently Asked Questions</h2>
+    {faq.map(item => (
+      <details class="lore-faq-item">
+        <summary class="lore-faq-q">{item.q}</summary>
+        <p class="lore-faq-a">{item.a}</p>
+      </details>
+    ))}
+  </section>
+
+  <section class="lore-sources lore-section" aria-labelledby="src-h2">
+    <h2 id="src-h2">Sources</h2>
+    <ol class="lore-src-list">
+      <li id="src-1">The Bible, Genesis 8:6–12. King James Version (1611). (Public domain.) — primary text.</li>
+      <li id="src-2"><em>Talmud Bavli</em>, Sanhedrin 108b. (Rabbinic compilation, c. 3rd–6th century CE.) — raven refusing to leave tradition.</li>
+      <li id="src-3">Ambrose of Milan (c. 390 CE). <em>De Noe et Arca</em>. — patristic allegorical interpretation.</li>
+      <li id="src-4">Levenson, J.D. (2012). <em>Inheriting Abraham</em>. Princeton University Press. — neutral/positive reading of the raven passage.</li>
+      <li id="src-5">George, A. (trans., 2003). <em>The Epic of Gilgamesh</em>. Penguin. Tablet XI, pp. 90–92. — parallel flood narrative with raven.</li>
+      <li id="src-6">Heinrich, B. (2000). <em>Mind of the Raven</em>. HarperCollins. — raven homing and navigation behaviour.</li>
+    </ol>
+    <p class="lore-claim-note"><strong class="claim-lore">[lore]</strong> named cultural/historical source · <strong class="claim-science">[science]</strong> peer-reviewed/field-guide</p>
+  </section>
+
+  <nav class="lore-nav-bottom">
+    <a href="/lore/world/edgar-allan-poe-the-raven/" class="lore-back">← Poe's "The Raven"</a>
+    <a href="/lore/world/" class="lore-next">All World Lore →</a>
+  </nav>
+</article>
+</BaseLayout>
+
+<style>
+  .lore-page { max-width: 820px; margin: 0 auto; padding: 2rem 1.25rem 4rem; color: var(--iron-ink, #e8e4d8); font-family: 'Inter', sans-serif; line-height: 1.72; }
+  .lore-breadcrumb ol { display: flex; flex-wrap: wrap; gap: .25rem; list-style: none; padding: 0; margin: 0 0 2rem; font-size: .8rem; color: var(--ink-soft, #8a8070); }
+  .lore-breadcrumb a { color: var(--gold-500, #d4ae5a); text-decoration: none; }
+  .lore-pillar { font-size: .72rem; letter-spacing: .12em; text-transform: uppercase; color: var(--gold-500, #d4ae5a); margin: 0 0 .4rem; }
+  .lore-page h1 { font-family: 'Cormorant Garamond', serif; font-size: clamp(2rem, 5vw, 3.25rem); font-weight: 700; color: #fff; margin: 0 0 .4rem; line-height: 1.1; }
+  .lore-subtitle { font-size: 1.1rem; color: var(--ink-soft, #c0b89a); margin: 0 0 2rem; }
+  .lore-snippet { background: rgba(212,174,90,.08); border-left: 3px solid var(--gold-500, #d4ae5a); border-radius: 0 6px 6px 0; padding: 1rem 1.25rem; margin-bottom: 2.5rem; font-size: 1.03rem; }
+  .lore-section { margin-bottom: 2.75rem; }
+  .lore-section h2 { font-family: 'Cormorant Garamond', serif; font-size: 1.6rem; font-weight: 600; color: #fff; margin: 0 0 1rem; border-bottom: 1px solid rgba(212,174,90,.2); padding-bottom: .4rem; }
+  .lore-section h3 { font-size: 1rem; font-weight: 600; color: var(--gold-500, #d4ae5a); margin: 1.25rem 0 .5rem; }
+  .lore-section p { margin: 0 0 1rem; font-size: .97rem; }
+  .lore-section ul { padding-left: 1.25rem; margin: 0 0 1rem; }
+  .lore-section li { margin-bottom: .5rem; font-size: .95rem; }
+  .lore-quote { border-left: 3px solid rgba(212,174,90,.35); margin: 1.25rem 0; padding: .9rem 1.25rem; color: var(--ink-soft, #c8c0b0); font-style: italic; }
+  .lore-quote footer { font-style: normal; font-size: .78rem; margin-top: .5rem; color: var(--ink-soft, #8a8070); }
+  .claim-science { color: #7ab9e0; font-style: normal; font-size: .78rem; }
+  .claim-lore    { color: #c8a46a; font-style: normal; font-size: .78rem; }
+  a[href] { color: var(--gold-500, #d4ae5a); }
+  .lore-bridge { background: rgba(107,45,28,.1); border: 1px solid rgba(107,45,28,.3); border-radius: 8px; padding: 1.25rem 1.5rem; }
+  .lore-species-link { display: inline-block; margin-bottom: .4rem; font-size: .9rem; }
+  .lore-faq-item { border-bottom: 1px solid rgba(255,255,255,.07); }
+  .lore-faq-q { cursor: pointer; padding: .9rem 0; font-size: .97rem; font-weight: 500; color: #fff; list-style: none; }
+  .lore-faq-q::before { content: '+ '; color: var(--gold-500, #d4ae5a); font-weight: 700; }
+  details[open] .lore-faq-q::before { content: '− '; }
+  .lore-faq-a { margin: 0 0 1rem; line-height: 1.7; font-size: .93rem; color: var(--ink-soft, #c8c0b0); }
+  .lore-src-list { padding-left: 1.25rem; margin: 0 0 1rem; }
+  .lore-src-list li { margin-bottom: .6rem; font-size: .82rem; color: var(--ink-soft, #8a8070); line-height: 1.6; }
+  .lore-claim-note { font-size: .78rem; color: var(--ink-soft, #605848); border-top: 1px solid rgba(255,255,255,.06); padding-top: .75rem; }
+  .lore-nav-bottom { display: flex; justify-content: space-between; padding-top: 2rem; border-top: 1px solid rgba(255,255,255,.07); }
+  .lore-nav-bottom a { font-size: .9rem; text-decoration: none; }
+  .lore-nav-bottom a:hover { text-decoration: underline; }
+</style>

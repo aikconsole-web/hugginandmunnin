@@ -1,0 +1,144 @@
+---
+/**
+ * World Lore — Tower of London ravens
+ * MYW·10
+ * Primary keyword: tower of london ravens
+ * Secondary: ravens tower of london legend, why are there ravens at the tower of london
+ */
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+
+const title       = 'The Ravens of the Tower of London';
+const description = 'The Tower of London has kept captive ravens since at least the reign of Charles II. This page examines the history, the legend, and what the evidence actually shows about when and why ravens came to the Tower.';
+const path        = '/lore/world/tower-of-london-ravens/';
+
+const breadcrumbs = [
+  { name: 'Home',         url: '/' },
+  { name: 'World Lore',   url: '/lore/world/' },
+  { name: 'Tower of London Ravens', url: path },
+];
+
+const faq = [
+  { q: 'How many ravens live at the Tower of London?', a: 'The Tower keeps a minimum of six ravens at all times, as required by a Royal Decree — an institutional requirement, not an ancient law. As of recent years, the Tower typically houses seven to nine birds. Each raven has a name and a designated Ravenmaster who cares for them.' },
+  { q: 'Are the Tower of London ravens wild?', a: 'No. The Tower ravens are captive birds, not wild-caught. Their flight feathers on one wing are trimmed (not fully clipped) to limit their ability to fly far, though they can still fly short distances within the Tower grounds. They are fed a daily diet of raw meat, biscuits soaked in blood, and occasional eggs and vitamins.' },
+  { q: 'What happens if the Tower ravens leave?', a: 'The prophecy states that if the ravens of the Tower of London should be lost or fly away, the Crown and Tower will fall. In practice, the Tower\'s management ensures there are always ravens present. During World War II, the raven population fell to a single bird (a raven named Grip); the current Ravenmaster ensures at least seven birds are kept to prevent any shortage.' },
+];
+---
+
+<BaseLayout title={title} description={description} path={path} ogType="article"
+  datePublished="2026-11-07" dateModified="2026-11-07"
+  breadcrumbs={breadcrumbs} faq={faq} pageType="Article">
+
+<article class="qa-page">
+
+  <nav class="qa-breadcrumb" aria-label="Breadcrumb">
+    <ol>
+      {breadcrumbs.map((b, i) => (
+        <li>
+          {i < breadcrumbs.length - 1
+            ? <><a href={b.url}>{b.name}</a><span aria-hidden="true"> › </span></>
+            : <span aria-current="page">{b.name}</span>}
+        </li>
+      ))}
+    </ol>
+  </nav>
+
+  <header class="qa-header">
+    <p class="qa-pillar">World Lore · MYW·10</p>
+    <h1>The Ravens of the Tower of London</h1>
+  </header>
+
+  <section class="qa-snippet" aria-label="Direct answer">
+    <p><strong class="claim-lore">[lore]</strong> The Tower of London maintains captive ravens under a Royal Warrant. The legend — that the kingdom will fall if the Tower ravens are ever lost — cannot be traced before the late nineteenth century. Documentary evidence for ravens being formally kept at the Tower dates from around the reign of Charles II (1660–1685), though some claims push the custom earlier; primary sources for dates before the Victorian era are thin.</p>
+  </section>
+
+  <section class="qa-section">
+    <h2>The Legend</h2>
+    <p><strong class="claim-lore">[lore]</strong> The prophecy associated with the Tower states: "If the Tower of London ravens are lost or fly away, the Crown and the Tower itself will fall." This legend is widely repeated and cited by Historic Royal Palaces (the charity that manages the Tower), but the organisation itself acknowledges that the legend's origins are obscure and that it cannot be traced with certainty before the Victorian period.<sup><a href="#src-1">1</a></sup></p>
+    <p>Some accounts attribute the legend to a command by King Charles II, who allegedly kept ravens at the Tower after they were blamed for interfering with the astronomical instruments of his Royal Observatory (then housed in the Tower). According to this story, the Astronomer Royal John Flamsteed complained about the ravens, but Charles refused to remove them, ordering instead that six should always be kept. This account is repeated in many sources but is not supported by documentary evidence from Charles II's reign itself.</p>
+  </section>
+
+  <section class="qa-section">
+    <h2>What the Historical Record Shows</h2>
+    <p><strong class="claim-lore">[lore]</strong> The historian Geoff Parnell, who served as official historian for the Tower of London, investigated the documentary record of Tower ravens. His findings, cited by Historic Royal Palaces, are that there is no reliable documentary evidence for formally kept Tower ravens before the late nineteenth century — specifically, the earliest clear documentation dates to around the 1880s. The legend may have been created or elaborated during the Victorian enthusiasm for medieval pageantry.<sup><a href="#src-1">1</a></sup><sup><a href="#src-2">2</a></sup></p>
+    <p>This does not mean there were no ravens at the Tower before 1880 — wild ravens would have been common in London for centuries, feeding on the bodies exhibited on Tower Bridge and on waste from the city. But the formal custom of keeping named, captive ravens under a Ravenmaster appears to be a relatively recent institution.</p>
+  </section>
+
+  <section class="qa-section">
+    <h2>The Ravenmaster</h2>
+    <p><strong class="claim-lore">[lore]</strong> The Tower employs a Ravenmaster — a Yeoman Warder (Beefeater) with specific responsibility for the ravens' care. The role involves daily feeding, health monitoring, and managing the birds' living quarters (the ravens roost in a specially built Raven Lodge at night). Recent Ravenmasters have written publicly about the ravens, most notably Christopher Skaife, whose book <em>The Ravenmaster</em> (2018) describes the birds as individuals with distinct personalities and behaviours.<sup><a href="#src-3">3</a></sup></p>
+  </section>
+
+  <section class="qa-section">
+    <h2>The Ravens as Individuals</h2>
+    <p><strong class="claim-lore">[lore]</strong> Current and recent Tower ravens include birds named Merlina, Jubilee, Harris, Gripp, Rocky, Erin, Poppy, and others — each given a name on arrival. Tower records (institutional, not independently verified) claim individual birds have lived into their 20s and beyond; one bird ("Jim Crow") is reported to have reached 44 years, though this is an institutional claim rather than a scientifically verified record.<sup><a href="#src-3">3</a></sup></p>
+    <p>Ravens that have been dismissed from service — usually for pecking at tourists — have included a raven named George, reportedly dismissed for "eating television aerials" in 1986.</p>
+  </section>
+
+  <section class="qa-section">
+    <h2>Ravens and the Tower in Wider Culture</h2>
+    <p><strong class="claim-lore">[lore]</strong> The Tower of London ravens have become one of Britain's best-known cultural symbols. The prophecy is referenced in literature, film, and popular press. However, the connection between ravens and the Tower is relatively thin compared to the deep Norse, Celtic, and biblical raven traditions — it is essentially a Victorian-era or later legend, not a medieval one, however evocative it may be.</p>
+    <p>For comparison with ravens as omens more broadly, see <a href="/lore/world/raven-symbolism/">Raven symbolism across cultures</a>.</p>
+  </section>
+
+  <section class="qa-section">
+    <h2>The Birds Behind the Story</h2>
+    <p><strong class="claim-science">[science]</strong> The Tower ravens are Common Ravens (<em>Corvus corax</em>). Wild Common Ravens were once abundant in London — historical records describe them as street scavengers common in the city until the mid-eighteenth century, when urban development and direct persecution reduced their numbers. By the early nineteenth century they had largely vanished from London. The Tower's captive birds are part of a wider programme; see <a href="/species/common-raven/">Common Raven</a>.</p>
+  </section>
+
+  <section class="qa-section">
+    <h2>Related Pages</h2>
+    <ul>
+      <li><a href="/questions/why-does-the-tower-of-london-keep-ravens/">Why does the Tower of London keep ravens? (Q&A)</a></li>
+      <li><a href="/lore/world/raven-symbolism/">Raven symbolism across cultures</a></li>
+      <li><a href="/questions/raven-lifespan-in-captivity/">How long do captive ravens live?</a></li>
+      <li><a href="/species/common-raven/">Common Raven — species profile</a></li>
+    </ul>
+  </section>
+
+  <section class="qa-faq qa-section" aria-labelledby="faq-h2">
+    <h2 id="faq-h2">Frequently Asked Questions</h2>
+    {faq.map(item => (
+      <details class="qa-faq-item">
+        <summary class="qa-faq-q">{item.q}</summary>
+        <p class="qa-faq-a">{item.a}</p>
+      </details>
+    ))}
+  </section>
+
+  <section class="qa-sources qa-section" aria-labelledby="src-h2">
+    <h2 id="src-h2">Sources</h2>
+    <ol class="qa-src-list">
+      <li id="src-1">Historic Royal Palaces. "Ravens of the Tower." hrp.org.uk — institutional description of the ravens and acknowledgement of the legend's uncertain origins.</li>
+      <li id="src-2">Parnell, G. (1993). <em>The Tower of London</em>. Batsford / English Heritage. — official Tower historian; documentary record of ravens.</li>
+      <li id="src-3">Skaife, C. (2018). <em>The Ravenmaster: My Life with the Ravens at the Tower of London</em>. Fourth Estate. — first-person account by a former Ravenmaster; individual bird profiles.</li>
+    </ol>
+    <p class="qa-claim-note"><strong class="claim-lore">[lore]</strong> named cultural/historical source &nbsp;|&nbsp; <strong class="claim-science">[science]</strong> peer-reviewed or field-guide data</p>
+  </section>
+
+</article>
+</BaseLayout>
+
+<style>
+  .qa-page { max-width: 820px; margin: 0 auto; padding: 2rem 1.25rem 4rem; color: var(--iron-ink, #e8e4d8); font-family: 'Inter', sans-serif; line-height: 1.72; }
+  .qa-breadcrumb ol { display: flex; flex-wrap: wrap; gap: .25rem; list-style: none; padding: 0; margin: 0 0 2rem; font-size: .8rem; color: var(--ink-soft, #8a8070); }
+  .qa-breadcrumb a { color: var(--gold-500, #d4ae5a); text-decoration: none; }
+  .qa-pillar { font-size: .72rem; letter-spacing: .12em; text-transform: uppercase; color: var(--gold-500, #d4ae5a); margin: 0 0 .4rem; }
+  .qa-page h1 { font-family: 'Cormorant Garamond', serif; font-size: clamp(2rem, 5vw, 3rem); font-weight: 700; color: #fff; margin: 0 0 2rem; line-height: 1.1; }
+  .qa-snippet { background: rgba(212,174,90,.08); border-left: 3px solid var(--gold-500, #d4ae5a); border-radius: 0 6px 6px 0; padding: 1rem 1.25rem; margin-bottom: 2.5rem; font-size: 1.03rem; }
+  .qa-section { margin-bottom: 2.5rem; }
+  .qa-section h2 { font-family: 'Cormorant Garamond', serif; font-size: 1.5rem; font-weight: 600; color: #fff; margin: 0 0 .9rem; border-bottom: 1px solid rgba(212,174,90,.2); padding-bottom: .4rem; }
+  .qa-section p { margin: 0 0 1rem; font-size: .97rem; }
+  .qa-section ul { padding-left: 1.25rem; margin: 0 0 1rem; }
+  .qa-section li { margin-bottom: .4rem; font-size: .95rem; }
+  .claim-science { color: #7ab9e0; font-style: normal; font-size: .78rem; }
+  .claim-lore { color: #c4a26a; font-style: normal; font-size: .78rem; }
+  a[href] { color: var(--gold-500, #d4ae5a); }
+  .qa-faq-item { border-bottom: 1px solid rgba(255,255,255,.07); }
+  .qa-faq-q { cursor: pointer; padding: .9rem 0; font-size: .97rem; font-weight: 500; color: #fff; list-style: none; }
+  .qa-faq-q::before { content: '+ '; color: var(--gold-500, #d4ae5a); font-weight: 700; }
+  details[open] .qa-faq-q::before { content: '− '; }
+  .qa-faq-a { margin: 0 0 1rem; line-height: 1.7; font-size: .93rem; color: var(--ink-soft, #c8c0b0); }
+  .qa-src-list { padding-left: 1.25rem; margin: 0 0 1rem; }
+  .qa-src-list li { margin-bottom: .6rem; font-size: .82rem; color: var(--ink-soft, #8a8070); line-height: 1.6; }
+  .qa-claim-note { font-size: .78rem; color: var(--ink-soft, #605848); border-top: 1px solid rgba(255,255,255,.06); padding-top: .75rem; }
+</style>

@@ -1,0 +1,152 @@
+---
+/**
+ * Myth — Ravens are aggressive birds
+ * MYTH·20
+ * Primary keyword: are ravens aggressive
+ * Secondary: raven aggression, do ravens attack humans, raven dangerous
+ */
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const title       = 'Are Ravens Aggressive? Separating Myth from Raven Reality';
+const description = 'Ravens can be defensive near nests and bold around food, but aggression toward humans is rare and contextual. This page examines the evidence for raven aggression, what actually triggers it, and why the \'dangerous bird\' reputation is largely unwarranted.';
+const path        = '/myths/ravens-are-aggressive-birds/';
+
+const breadcrumbs = [
+  { name: 'Home',   url: '/' },
+  { name: 'Myths',  url: '/myths/' },
+  { name: 'Are Ravens Aggressive?', url: path },
+];
+
+const faq = [
+  { q: 'Will a raven attack a human?', a: 'Wild ravens will occasionally dive-bomb humans who approach their nest during breeding season (March–June), but actual physical contact is rare. The display is intimidatory: low, fast passes designed to drive the intruder away from the nest without direct confrontation. Outside nesting season, ravens rarely exhibit aggression toward humans. Habituated urban ravens (at campsites, landfills, tourist sites) may become bold around food — snatching items from hands or bags — but this is opportunism, not aggression in the predatory or defensive sense.' },
+  { q: 'Are ravens dangerous?', a: 'Ravens are not dangerous to humans in any meaningful sense. A large raven weighs 800–1,600g — it is physically incapable of causing serious injury even in a worst-case nest-defence encounter. Their bill is powerful enough to cause a painful peck if grabbed, but ravens rarely make physical contact during nest-defence dives. The \'dangerous raven\' reputation comes from their size, black plumage, and historical cultural association with death rather than from documented harm to humans. In contrast, corvids much smaller than ravens (magpies, Australian magpies) are responsible for more documented human injuries during nesting season.' },
+  { q: 'Are ravens aggressive to other birds?', a: 'Ravens are aggressively territorial toward other ravens in their breeding territory and will mob aerial predators (eagles, owls, buzzards) well away from the nest — an effective defensive strategy that also makes them useful early-warning systems for other birds. Ravens are dominant over most other species at carrion and food sources, displacing them through posture and size rather than active attack. Toward much larger animals (wolves, bears, humans), ravens use vocal alarm and dive-bombing rather than direct aggression. Among corvids, crows and jackdaws in groups may successfully mob individual ravens away from food.' },
+];
+---
+
+<BaseLayout title={title} description={description} path={path} ogType="article"
+  datePublished="2026-11-09" dateModified="2026-11-09"
+  breadcrumbs={breadcrumbs} faq={faq} pageType="Article">
+
+<article class="qa-page">
+
+  <nav class="qa-breadcrumb" aria-label="Breadcrumb">
+    <ol>
+      {breadcrumbs.map((b, i) => (
+        <li>
+          {i < breadcrumbs.length - 1
+            ? <><a href={b.url}>{b.name}</a><span aria-hidden="true"> › </span></>
+            : <span aria-current="page">{b.name}</span>}
+        </li>
+      ))}
+    </ol>
+  </nav>
+
+  <header class="qa-header">
+    <p class="qa-pillar">Myth · MYTH·20</p>
+    <h1>Are Ravens Aggressive? Separating Myth from Raven Reality</h1>
+  </header>
+
+  <section class="qa-snippet" aria-label="Direct answer">
+    <div class="verdict verdict-partly-true">Verdict: Partly True — in context</div>
+    <p><strong class="claim-science">[science]</strong> Ravens show nest-defence aggression (dive-bombing intruders near the nest during breeding) and dominance behaviour at food sources, but serious aggression toward humans is rare and contextual. The 'aggressive raven' reputation significantly exceeds the actual documented risk. Ravens are cognitively sophisticated birds that assess threat carefully rather than attacking indiscriminately.</p>
+  </section>
+
+  <section class="qa-section">
+    <h2>What Raven Aggression Actually Looks Like</h2>
+    <p><strong class="claim-science">[science]</strong> Ravens have a well-developed repertoire of threat and aggressive displays that follow a clear escalation sequence:<sup><a href="#src-1">1</a></sup></p>
+    <ul>
+      <li><strong>Alarm calling:</strong> loud, rapid calls alert the pair and neighbouring birds to a perceived threat. This is the first response to any intruder near the nest territory.</li>
+      <li><strong>Mobbing flight:</strong> one or both birds fly repeatedly near the intruder — circling at decreasing distance — without making contact. This is effective against aerial predators and is the primary response to approaching humans during breeding season.</li>
+      <li><strong>Dive-bombing:</strong> low, fast passes close over the intruder's head — designed to intimidate and drive away. Physical contact during dive-bombing is rare; it is primarily a visual and acoustic threat display.</li>
+      <li><strong>Hackle raising:</strong> the throat feathers (hackles) are erected during aggressive encounters with other ravens, making the bird appear larger. This is primarily an intraspecific dominance signal.</li>
+      <li><strong>Bill clapping and vocalisation:</strong> bill clapping and specific aggressive calls are used in direct confrontations with other ravens over food or mates.</li>
+    </ul>
+  </section>
+
+  <section class="qa-section">
+    <h2>Nest Defence: When Ravens Are at Their Most Assertive</h2>
+    <p><strong class="claim-science">[science]</strong> The period when ravens most reliably approach humans aggressively is nest defence, from egg-laying through to fledging (approximately February to June). Raven nest sites are defended vigorously by both parents:<sup><a href="#src-1">1</a></sup><sup><a href="#src-2">2</a></sup></p>
+    <ul>
+      <li>Rock climbers approaching cliff nest sites trigger the most intense defence responses — the ravens treat the approach vector as directly threatening to the nest.</li>
+      <li>Hikers walking below cliff nesting sites may experience dive-bombing if they inadvertently approach within the defended zone (typically 100–200m of the nest, though this varies by individual pair and disturbance history).</li>
+      <li>The intensity of nest defence correlates with stage of the breeding cycle: ravens are most aggressive during incubation and chick-rearing and calmer before eggs are laid or after fledging.</li>
+    </ul>
+    <p>Some nest sites are protected by seasonal restrictions in the UK (Natural England licensing) precisely because raven nest disturbance by climbers causes breeding failure — but the risk to the climber from an aggressive raven is minimal.</p>
+  </section>
+
+  <section class="qa-section">
+    <h2>Dominance at Food and Interspecific Interactions</h2>
+    <p><strong class="claim-science">[science]</strong> At carrion and concentrated food sources, ravens use their size and assertive behaviour to dominate smaller birds. This is better described as competitive dominance than aggression:<sup><a href="#src-1">1</a></sup></p>
+    <ul>
+      <li>Ravens displace most other corvid species at carrion through posture — adopting an upright, hackle-raised stance that most smaller birds yield to without direct conflict.</li>
+      <li>At large carcasses, raven groups use numerical advantage: a group of ravens can displace a single golden eagle from a carcass through coordinated harassment.</li>
+      <li>Toward wolves and bears — large animals that ravens cannot physically challenge — the response is vocal harassment from safe distance rather than approach.</li>
+    </ul>
+  </section>
+
+  <section class="qa-section">
+    <h2>The Mythology of the Dangerous Raven</h2>
+    <p><strong class="claim-lore">[lore]</strong> The cultural association of ravens with danger and death has significantly inflated their reputation for aggression. Ravens' black plumage, large size, powerful bill, and historical association with battlefields and carrion create an image of menace that their actual behaviour rarely supports. In medieval bestiary tradition, ravens were described as omens of death and destruction — an association that persisted in popular culture well past the period when most people had direct raven experience. The reality of raven behaviour — cautious, curious, socially sophisticated, rarely physically aggressive — is quite different from the ominous death-bird of folk tradition.</p>
+  </section>
+
+  <section class="qa-section">
+    <h2>Related Pages</h2>
+    <ul>
+      <li><a href="/myths/ravens-bring-death/">Myth: Ravens bring death</a></li>
+      <li><a href="/myths/ravens-are-bad-omens-of-death/">Myth: Ravens are bad omens of death</a></li>
+      <li><a href="/behaviour/raven-vocalisation/">Raven vocalisation</a></li>
+      <li><a href="/behaviour/raven-social-structure/">Raven social structure</a></li>
+    </ul>
+  </section>
+
+  <section class="qa-faq qa-section" aria-labelledby="faq-h2">
+    <h2 id="faq-h2">Frequently Asked Questions</h2>
+    {faq.map(item => (
+      <details class="qa-faq-item">
+        <summary class="qa-faq-q">{item.q}</summary>
+        <p class="qa-faq-a">{item.a}</p>
+      </details>
+    ))}
+  </section>
+
+  <section class="qa-sources qa-section" aria-labelledby="src-h2">
+    <h2 id="src-h2">Sources</h2>
+    <ol class="qa-src-list">
+      <li id="src-1">Boarman, W.I. & Heinrich, B. (1999). Common Raven (<em>Corvus corax</em>). In Poole, A. (ed.), <em>The Birds of North America</em>, No. 476. Cornell Lab of Ornithology. — threat displays, nest defence, interspecific dominance, mobbing behaviour.</li>
+      <li id="src-2">Marzluff, J.M. & Angell, T. (2005). <em>In the Company of Crows and Ravens</em>. Yale University Press. — raven responses to humans, habituation, food-site dominance.</li>
+    </ol>
+    <p class="qa-claim-note"><strong class="claim-science">[science]</strong> peer-reviewed data · <strong class="claim-lore">[lore]</strong> named cultural/historical source</p>
+  </section>
+
+</article>
+</BaseLayout>
+
+<style>
+  .qa-page { max-width: 820px; margin: 0 auto; padding: 2rem 1.25rem 4rem; color: var(--iron-ink, #e8e4d8); font-family: 'Inter', sans-serif; line-height: 1.72; }
+  .qa-breadcrumb ol { display: flex; flex-wrap: wrap; gap: .25rem; list-style: none; padding: 0; margin: 0 0 2rem; font-size: .8rem; color: var(--ink-soft, #8a8070); }
+  .qa-breadcrumb a { color: var(--gold-500, #d4ae5a); text-decoration: none; }
+  .qa-pillar { font-size: .72rem; letter-spacing: .12em; text-transform: uppercase; color: var(--gold-500, #d4ae5a); margin: 0 0 .4rem; }
+  .qa-page h1 { font-family: 'Cormorant Garamond', serif; font-size: clamp(2rem, 5vw, 3rem); font-weight: 700; color: #fff; margin: 0 0 2rem; line-height: 1.1; }
+  .qa-snippet { background: rgba(212,174,90,.08); border-left: 3px solid var(--gold-500, #d4ae5a); border-radius: 0 6px 6px 0; padding: 1rem 1.25rem; margin-bottom: 2.5rem; font-size: 1.03rem; }
+  .verdict { display: inline-block; padding: .25rem .75rem; border-radius: 4px; font-size: .78rem; font-weight: 700; letter-spacing: .06em; text-transform: uppercase; margin-bottom: .75rem; }
+  .verdict-partly-true { background: rgba(212,174,90,.15); color: var(--gold-500, #d4ae5a); border: 1px solid rgba(212,174,90,.35); }
+  .verdict-false { background: rgba(180,60,60,.15); color: #e08080; border: 1px solid rgba(180,60,60,.35); }
+  .verdict-true { background: rgba(60,180,100,.15); color: #70c888; border: 1px solid rgba(60,180,100,.35); }
+  .qa-section { margin-bottom: 2.5rem; }
+  .qa-section h2 { font-family: 'Cormorant Garamond', serif; font-size: 1.5rem; font-weight: 600; color: #fff; margin: 0 0 .9rem; border-bottom: 1px solid rgba(212,174,90,.2); padding-bottom: .4rem; }
+  .qa-section p { margin: 0 0 1rem; font-size: .97rem; }
+  .qa-section ul { padding-left: 1.25rem; margin: 0 0 1rem; }
+  .qa-section li { margin-bottom: .4rem; font-size: .95rem; }
+  .claim-science { color: #7ab9e0; font-style: normal; font-size: .78rem; }
+  .claim-lore { color: #c49a3c; font-style: normal; font-size: .78rem; }
+  a[href] { color: var(--gold-500, #d4ae5a); }
+  .qa-faq-item { border-bottom: 1px solid rgba(255,255,255,.07); }
+  .qa-faq-q { cursor: pointer; padding: .9rem 0; font-size: .97rem; font-weight: 500; color: #fff; list-style: none; }
+  .qa-faq-q::before { content: '+ '; color: var(--gold-500, #d4ae5a); font-weight: 700; }
+  details[open] .qa-faq-q::before { content: '− '; }
+  .qa-faq-a { margin: 0 0 1rem; line-height: 1.7; font-size: .93rem; color: var(--ink-soft, #c8c0b0); }
+  .qa-src-list { padding-left: 1.25rem; margin: 0 0 1rem; }
+  .qa-src-list li { margin-bottom: .6rem; font-size: .82rem; color: var(--ink-soft, #8a8070); line-height: 1.6; }
+  .qa-claim-note { font-size: .78rem; color: var(--ink-soft, #605848); border-top: 1px solid rgba(255,255,255,.06); padding-top: .75rem; }
+</style>

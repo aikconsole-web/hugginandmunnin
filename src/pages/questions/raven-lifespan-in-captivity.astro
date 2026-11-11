@@ -1,0 +1,145 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const title       = 'How Long Do Ravens Live in Captivity vs the Wild?';
+const description = 'Common Ravens live 10–15 years in the wild on average, with wild survival records to 23 years. In captivity, ravens can live 40+ years. What determines lifespan and the captivity vs wild comparison.';
+const path        = '/questions/raven-lifespan-in-captivity/';
+
+const breadcrumbs = [
+  { name: 'Home',      url: '/' },
+  { name: 'Questions', url: '/questions/' },
+  { name: 'Raven lifespan in captivity', url: path },
+];
+
+const faq = [
+  { q: 'How long do ravens live in captivity?', a: 'Common Ravens in captivity can live 40+ years — the longest verified records exceed 44 years. This is substantially longer than wild life expectancy (average 10–15 years; maximum wild records around 23 years from banding studies). Captive ravens avoid the main causes of wild mortality: predation, food shortage in winter, human persecution, and accident. The captive lifespan record is not a typical outcome but represents the physiological maximum under ideal conditions.' },
+  { q: 'How long do ravens live in the wild?', a: 'Wild Common Ravens face high first-year mortality — estimates suggest 50–60% of birds die before age 2. Adults that survive to establish territories have much better survival rates. Mean adult lifespan in long-term studies is approximately 10–15 years; the maximum banding recovery record is approximately 23 years. The Tower of London ravens (institutionally claimed to be long-lived) are discussed separately.' },
+];
+---
+
+<BaseLayout title={title} description={description} path={path} ogType="article"
+  datePublished="2026-11-07" dateModified="2026-11-07"
+  breadcrumbs={breadcrumbs} faq={faq} pageType="Article">
+
+<article class="id-page">
+  <nav class="id-breadcrumb" aria-label="Breadcrumb">
+    <ol>
+      {breadcrumbs.map((b, i) => (
+        <li>
+          {i < breadcrumbs.length - 1
+            ? <><a href={b.url}>{b.name}</a><span aria-hidden="true"> › </span></>
+            : <span aria-current="page">{b.name}</span>}
+        </li>
+      ))}
+    </ol>
+  </nav>
+  <header class="id-header">
+    <p class="id-pillar">Questions · Biology</p>
+    <h1>How Long Do Ravens Live in Captivity vs the Wild?</h1>
+    <p class="id-subtitle">Wild lifespan, captive records, and what limits survival</p>
+  </header>
+
+  <section class="id-snippet" aria-label="Quick answer">
+    <p><strong class="claim-science">[science]</strong> Wild Common Ravens average <strong>10–15 years</strong> as adults; maximum confirmed banding records reach ~23 years. In captivity, ravens can live <strong>40+ years</strong>. The difference reflects the elimination of the main wild mortality causes: food shortage, predation, persecution, and accident. First-year wild mortality is very high (estimated 50–60%).</p>
+  </section>
+
+  <section class="id-section">
+    <h2>Wild Lifespan</h2>
+    <p><strong class="claim-science">[science]</strong></p>
+    <ul>
+      <li><strong>First-year mortality:</strong> High — estimated 50–60% of young ravens die before age 2 (food shortage, predation, inexperience)</li>
+      <li><strong>Adult survival rate:</strong> Once territorial adults survive the first years, annual survival rates are much higher — approximately 70–90% per year in stable populations</li>
+      <li><strong>Mean adult lifespan:</strong> Approximately 10–15 years in well-studied populations</li>
+      <li><strong>Maximum wild record:</strong> Approximately 23 years based on banding recoveries (Boarman & Heinrich 1999)</li>
+    </ul>
+    <p>The key distinction is between juvenile and adult survival — mortality is front-loaded in the first years of life. Adults that establish territories have significantly longer expected lifespans than juveniles.<sup><a href="#src-1">1</a></sup></p>
+  </section>
+
+  <section class="id-section">
+    <h2>Captive Lifespan</h2>
+    <p><strong class="claim-science">[science]</strong></p>
+    <ul>
+      <li>Well-cared-for captive Common Ravens routinely live 20–30 years</li>
+      <li>Maximum captive records exceed 40 years; some sources cite individual records of 44+ years</li>
+      <li>The captive lifespan represents the physiological potential of the species under conditions where food is reliable, predators absent, and medical care available</li>
+    </ul>
+    <p>Note on the Tower of London ravens: the Tower of London's Ravenmaster has stated that ravens there live to 10–15 years on average with some reaching higher ages; institutional records are not independently peer-reviewed. Specific age claims for named Tower ravens should be treated as institutional data, not verified scientific records.<sup><a href="#src-2">2</a></sup></p>
+  </section>
+
+  <section class="id-section">
+    <h2>What Kills Wild Ravens</h2>
+    <p><strong class="claim-science">[science]</strong> The main causes of wild raven mortality:</p>
+    <ul>
+      <li><strong>Starvation in winter:</strong> The most significant cause for juveniles; food finding is a learned skill and young birds are less efficient</li>
+      <li><strong>Predation:</strong> Great Horned Owls (North America) and Eagle Owls (Europe) take ravens at roosts; Goshawks; Golden Eagles in some areas</li>
+      <li><strong>Human persecution:</strong> Illegal shooting, poisoning (at gamekeeping estates); historically the primary limiting factor across much of Europe</li>
+      <li><strong>Collision with vehicles and structures:</strong> Roadkill feeding ravens and power line collisions</li>
+      <li><strong>Disease:</strong> West Nile virus (North America); other corvid diseases</li>
+    </ul>
+  </section>
+
+  <section class="id-section">
+    <h2>Lifespan vs Life Expectancy</h2>
+    <p><strong class="claim-science">[science]</strong> An important precision: "maximum lifespan" (what the longest-lived individual achieved) vs "life expectancy" (the average age at death) are very different:</p>
+    <ul>
+      <li>Maximum captive lifespan: 40+ years</li>
+      <li>Maximum wild lifespan (banding records): ~23 years</li>
+      <li>Mean wild adult life expectancy: 10–15 years</li>
+      <li>Life expectancy from birth (including juvenile mortality): much lower — perhaps 3–5 years for a newly hatched raven</li>
+    </ul>
+    <p>Figures like "ravens can live 40 years" are technically true (in captivity) but can mislead if presented without context.<sup><a href="#src-1">1</a></sup></p>
+  </section>
+
+  <section class="id-faq id-section" aria-labelledby="faq-h2">
+    <h2 id="faq-h2">Frequently Asked Questions</h2>
+    {faq.map(item => (
+      <details class="id-faq-item">
+        <summary class="id-faq-q">{item.q}</summary>
+        <p class="id-faq-a">{item.a}</p>
+      </details>
+    ))}
+  </section>
+
+  <section class="id-sources id-section" aria-labelledby="src-h2">
+    <h2 id="src-h2">Sources</h2>
+    <ol class="id-src-list">
+      <li id="src-1">Boarman, W. I. &amp; Heinrich, B. (1999). Common Raven (<em>Corvus corax</em>). <em>The Birds of North America</em>, No. 476. — lifespan data, mortality causes, banding records.</li>
+      <li id="src-2">Skaife, C. (2018). <em>The Ravenmaster</em>. Fourth Estate. — Tower of London raven ages (institutional records; not independently peer-reviewed).</li>
+    </ol>
+    <p class="id-claim-note"><strong class="claim-science">[science]</strong> species-account data; Tower ages labelled as institutional records</p>
+  </section>
+
+  <nav class="id-nav-bottom">
+    <a href="/questions/how-long-do-ravens-live/" class="id-back">← How Long Do Ravens Live?</a>
+    <a href="/species/common-raven/" class="id-next">Common Raven Overview →</a>
+  </nav>
+</article>
+</BaseLayout>
+
+<style>
+  .id-page { max-width: 820px; margin: 0 auto; padding: 2rem 1.25rem 4rem; color: var(--iron-ink, #e8e4d8); font-family: 'Inter', sans-serif; line-height: 1.72; }
+  .id-breadcrumb ol { display: flex; flex-wrap: wrap; gap: .25rem; list-style: none; padding: 0; margin: 0 0 2rem; font-size: .8rem; color: var(--ink-soft, #8a8070); }
+  .id-breadcrumb a { color: var(--gold-500, #d4ae5a); text-decoration: none; }
+  .id-pillar { font-size: .72rem; letter-spacing: .12em; text-transform: uppercase; color: var(--gold-500, #d4ae5a); margin: 0 0 .4rem; }
+  .id-page h1 { font-family: 'Cormorant Garamond', serif; font-size: clamp(2rem, 5vw, 3.25rem); font-weight: 700; color: #fff; margin: 0 0 .2rem; line-height: 1.1; }
+  .id-subtitle { font-size: 1rem; color: var(--ink-soft, #c0b89a); margin: 0 0 2rem; }
+  .id-snippet { background: rgba(212,174,90,.08); border-left: 3px solid var(--gold-500, #d4ae5a); border-radius: 0 6px 6px 0; padding: 1rem 1.25rem; margin-bottom: 2.5rem; font-size: 1.03rem; }
+  .id-section { margin-bottom: 2.75rem; }
+  .id-section h2 { font-family: 'Cormorant Garamond', serif; font-size: 1.6rem; font-weight: 600; color: #fff; margin: 0 0 1rem; border-bottom: 1px solid rgba(212,174,90,.2); padding-bottom: .4rem; }
+  .id-section p { margin: 0 0 1rem; font-size: .97rem; }
+  .id-section ul { padding-left: 1.25rem; margin: 0 0 1rem; }
+  .id-section li { margin-bottom: .4rem; font-size: .95rem; }
+  .claim-science { color: #7ab9e0; font-style: normal; font-size: .78rem; }
+  a[href] { color: var(--gold-500, #d4ae5a); }
+  .id-faq-item { border-bottom: 1px solid rgba(255,255,255,.07); }
+  .id-faq-q { cursor: pointer; padding: .9rem 0; font-size: .97rem; font-weight: 500; color: #fff; list-style: none; }
+  .id-faq-q::before { content: '+ '; color: var(--gold-500, #d4ae5a); font-weight: 700; }
+  details[open] .id-faq-q::before { content: '− '; }
+  .id-faq-a { margin: 0 0 1rem; line-height: 1.7; font-size: .93rem; color: var(--ink-soft, #c8c0b0); }
+  .id-src-list { padding-left: 1.25rem; margin: 0 0 1rem; }
+  .id-src-list li { margin-bottom: .6rem; font-size: .82rem; color: var(--ink-soft, #8a8070); line-height: 1.6; }
+  .id-claim-note { font-size: .78rem; color: var(--ink-soft, #605848); border-top: 1px solid rgba(255,255,255,.06); padding-top: .75rem; }
+  .id-nav-bottom { display: flex; justify-content: space-between; padding-top: 2rem; border-top: 1px solid rgba(255,255,255,.07); }
+  .id-nav-bottom a { font-size: .9rem; text-decoration: none; }
+  .id-nav-bottom a:hover { text-decoration: underline; }
+</style>

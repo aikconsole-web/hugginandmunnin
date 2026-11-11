@@ -1,0 +1,128 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const title       = 'Common Raven vs American Crow — Field Identification Guide';
+const description = 'How to tell a Common Raven from an American Crow in North America: size, tail, bill, voice, flight, and habitat. Side-by-side measurements with sourced data.';
+const path        = '/compare/common-raven-vs-american-crow/';
+
+const breadcrumbs = [
+  { name: 'Home',    url: '/' },
+  { name: 'Compare', url: '/compare/' },
+  { name: 'Common Raven vs American Crow', url: path },
+];
+
+const faq = [
+  { q: 'What is the easiest way to tell a raven from an American Crow?', a: 'Tail shape is the fastest mark: wedge-shaped on a raven, fan-shaped on a crow. Size is also dramatic — ravens are roughly twice the weight of American Crows. Voice: ravens croak deeply ("kronk"), crows caw sharply. All three marks together make identification straightforward in most cases.' },
+  { q: 'Can ravens and American Crows live in the same area?', a: 'Yes — their ranges overlap across much of North America, particularly in the Pacific Coast states, the Intermountain West, and the northeastern US. Where they occur together, the size difference is immediately apparent.' },
+  { q: 'Are American Crows and ravens in the same genus?', a: 'Yes — both are in the genus Corvus (family Corvidae). The Common Raven is Corvus corax; the American Crow is Corvus brachyrhynchos. They are closely related but are distinct species that do not hybridise.' },
+];
+---
+
+<BaseLayout title={title} description={description} path={path} ogType="article"
+  datePublished="2026-11-07" dateModified="2026-11-07"
+  breadcrumbs={breadcrumbs} faq={faq} pageType="Article">
+
+<article class="cmp-page">
+  <nav class="cmp-breadcrumb" aria-label="Breadcrumb">
+    <ol>
+      {breadcrumbs.map((b, i) => (
+        <li>
+          {i < breadcrumbs.length - 1
+            ? <><a href={b.url}>{b.name}</a><span aria-hidden="true"> › </span></>
+            : <span aria-current="page">{b.name}</span>}
+        </li>
+      ))}
+    </ol>
+  </nav>
+  <header class="cmp-header">
+    <p class="cmp-pillar">Comparison · Field Guide · North America</p>
+    <h1>Common Raven vs American Crow</h1>
+  </header>
+  <section class="cmp-snippet" aria-label="Quick answer">
+    <p><strong class="claim-science">[science]</strong> Key marks: <strong>tail</strong> (wedge vs fan), <strong>size</strong> (raven ~twice the weight), <strong>voice</strong> (raven croaks deeply, crow caws sharply), <strong>hackles</strong> (raven has shaggy throat feathers, crow does not). In open country with both present, the size difference alone is diagnostic.</p>
+  </section>
+
+  <section class="cmp-table-section">
+    <h2>Side-by-Side Measurements</h2>
+    <div class="cmp-table-wrap">
+      <table class="cmp-table">
+        <thead>
+          <tr><th>Feature</th><th>Common Raven<br/><em>Corvus corax</em></th><th>American Crow<br/><em>Corvus brachyrhynchos</em></th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Length</td><td>56–69 cm</td><td>40–53 cm</td></tr>
+          <tr><td>Wingspan</td><td>120–150 cm</td><td>85–100 cm</td></tr>
+          <tr><td>Weight</td><td>689–1,625 g</td><td>316–620 g</td></tr>
+          <tr class="cmp-highlight"><td><strong>Tail shape</strong></td><td><strong>Wedge-shaped</strong></td><td><strong>Fan-shaped (rounded)</strong></td></tr>
+          <tr><td>Bill</td><td>Heavy, arched, deep</td><td>Moderate, slightly curved</td></tr>
+          <tr><td>Throat feathers</td><td>Shaggy hackles</td><td>Smooth, no hackles</td></tr>
+          <tr class="cmp-highlight"><td><strong>Voice</strong></td><td><strong>Deep croak "kronk/pruk"</strong></td><td><strong>"Caw" — higher, nasal</strong></td></tr>
+          <tr><td>Flight</td><td>Soars frequently; plays aerially</td><td>Direct flapping; occasional glide</td></tr>
+          <tr><td>Habitat preference</td><td>Wild country, coasts, mountains, some urban</td><td>Wide tolerance — suburbs, farmland, forests</td></tr>
+          <tr><td>IUCN</td><td>Least Concern (LC)</td><td>Least Concern (LC)</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="cmp-src-note">Sources: Madge & Burn (1994); Verbeek & Caffrey (2002).<sup><a href="#src-1">1</a><a href="#src-2">2</a></sup></p>
+  </section>
+
+  <section class="cmp-section">
+    <h2>Key Identification Tips for North America</h2>
+    <ul>
+      <li><strong>Flying overhead:</strong> check tail shape first — wedge vs fan. Then look at wing length: ravens have longer, narrower wings with more pronounced "fingers" at the tips.</li>
+      <li><strong>Perched bird:</strong> size, bill profile (heavy vs moderate), and throat (shaggy vs smooth).</li>
+      <li><strong>By ear:</strong> a deep "kronk" or "pruk" is a raven; any caw-like call is a crow. With experience, voice is one of the most reliable marks.</li>
+      <li><strong>Habitat context:</strong> in a city park or suburban garden, it is almost certainly a crow. On a coastal cliff or mountain ridge, it is more likely a raven.</li>
+    </ul>
+  </section>
+
+  <section class="cmp-faq cmp-section" aria-labelledby="faq-h2">
+    <h2 id="faq-h2">Frequently Asked Questions</h2>
+    {faq.map(item => (
+      <details class="cmp-faq-item">
+        <summary class="cmp-faq-q">{item.q}</summary>
+        <p class="cmp-faq-a">{item.a}</p>
+      </details>
+    ))}
+  </section>
+
+  <section class="cmp-sources cmp-section" aria-labelledby="src-h2">
+    <h2 id="src-h2">Sources</h2>
+    <ol class="cmp-src-list">
+      <li id="src-1">Madge, S. & Burn, H. (1994). <em>Crows and Jays</em>. Christopher Helm. — raven measurements.</li>
+      <li id="src-2">Verbeek, N.A.M. & Caffrey, C. (2002). American Crow (<em>Corvus brachyrhynchos</em>). <em>Birds of the World</em>. Cornell Lab. — crow measurements, voice.</li>
+    </ol>
+    <p class="cmp-claim-note"><strong class="claim-science">[science]</strong> peer-reviewed/field-guide data</p>
+  </section>
+</article>
+</BaseLayout>
+
+<style>
+  .cmp-page { max-width: 860px; margin: 0 auto; padding: 2rem 1.25rem 4rem; color: var(--iron-ink, #e8e4d8); font-family: 'Inter', sans-serif; line-height: 1.72; }
+  .cmp-breadcrumb ol { display: flex; flex-wrap: wrap; gap: .25rem; list-style: none; padding: 0; margin: 0 0 2rem; font-size: .8rem; color: var(--ink-soft, #8a8070); }
+  .cmp-breadcrumb a { color: var(--gold-500, #d4ae5a); text-decoration: none; }
+  .cmp-pillar { font-size: .72rem; letter-spacing: .12em; text-transform: uppercase; color: var(--gold-500, #d4ae5a); margin: 0 0 .4rem; }
+  .cmp-page h1 { font-family: 'Cormorant Garamond', serif; font-size: clamp(2rem, 5vw, 3rem); font-weight: 700; color: #fff; margin: 0 0 2rem; line-height: 1.1; }
+  .cmp-snippet { background: rgba(212,174,90,.08); border-left: 3px solid var(--gold-500, #d4ae5a); border-radius: 0 6px 6px 0; padding: 1rem 1.25rem; margin-bottom: 2.5rem; font-size: 1.03rem; }
+  .cmp-section, .cmp-table-section { margin-bottom: 2.5rem; }
+  .cmp-section h2, .cmp-table-section h2 { font-family: 'Cormorant Garamond', serif; font-size: 1.5rem; font-weight: 600; color: #fff; margin: 0 0 .9rem; border-bottom: 1px solid rgba(212,174,90,.2); padding-bottom: .4rem; }
+  .cmp-section p, .cmp-section ul { margin: 0 0 1rem; }
+  .cmp-section li { margin-bottom: .5rem; font-size: .95rem; }
+  .cmp-table-wrap { overflow-x: auto; }
+  .cmp-table { width: 100%; border-collapse: collapse; font-size: .88rem; }
+  .cmp-table th { background: rgba(212,174,90,.12); color: var(--gold-500, #d4ae5a); padding: .6rem .9rem; text-align: left; font-size: .75rem; letter-spacing: .06em; text-transform: uppercase; }
+  .cmp-table td { padding: .6rem .9rem; border-bottom: 1px solid rgba(255,255,255,.06); vertical-align: top; font-size: .9rem; }
+  .cmp-table tr:last-child td { border-bottom: none; }
+  .cmp-highlight td { background: rgba(212,174,90,.05); font-weight: 500; }
+  .cmp-src-note { font-size: .78rem; color: var(--ink-soft, #8a8070); margin-top: .5rem; }
+  .claim-science { color: #7ab9e0; font-style: normal; font-size: .78rem; }
+  a[href] { color: var(--gold-500, #d4ae5a); }
+  .cmp-faq-item { border-bottom: 1px solid rgba(255,255,255,.07); }
+  .cmp-faq-q { cursor: pointer; padding: .9rem 0; font-size: .97rem; font-weight: 500; color: #fff; list-style: none; }
+  .cmp-faq-q::before { content: '+ '; color: var(--gold-500, #d4ae5a); font-weight: 700; }
+  details[open] .cmp-faq-q::before { content: '− '; }
+  .cmp-faq-a { margin: 0 0 1rem; line-height: 1.7; font-size: .93rem; color: var(--ink-soft, #c8c0b0); }
+  .cmp-src-list { padding-left: 1.25rem; margin: 0 0 1rem; }
+  .cmp-src-list li { margin-bottom: .6rem; font-size: .82rem; color: var(--ink-soft, #8a8070); line-height: 1.6; }
+  .cmp-claim-note { font-size: .78rem; color: var(--ink-soft, #605848); border-top: 1px solid rgba(255,255,255,.06); padding-top: .75rem; }
+</style>

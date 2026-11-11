@@ -1,0 +1,143 @@
+---
+/**
+ * World Lore — Ravens in Celtic warrior tradition
+ * MYW·28
+ * Primary keyword: raven celtic warrior
+ * Secondary: celtic raven symbolism, raven battle celtic, raven goddess celtic
+ */
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const title       = 'Ravens in Celtic Warrior Tradition: Battle-Birds, the Mórrígan, and Sovereignty';
+const description = 'In Celtic cultures, the raven was inseparable from war, sovereignty, and death. From the Mórrígan\'s battle cries to the ravens of Bran the Blessed, this page examines the raven\'s central place in Celtic warrior tradition and how it shaped the symbolism of kingship in medieval Ireland and Wales.';
+const path        = '/lore/world/ravens-in-celtic-warrior-tradition/';
+
+const breadcrumbs = [
+  { name: 'Home',       url: '/' },
+  { name: 'World Lore', url: '/lore/world/' },
+  { name: 'Ravens in Celtic Warrior Tradition', url: path },
+];
+
+const faq = [
+  { q: 'What did ravens symbolise to the Celts?', a: 'To the Celts (particularly the Irish and Welsh), the raven symbolised war, death, prophecy, and sovereignty. Ravens were the birds of the battlefield — real ravens fed on the slain — and this real-world presence was invested with supernatural meaning. The raven was the form taken by battle goddesses (the Mórrígan, Badb, Nemain in Irish tradition) who shaped the outcome of fights and gathered the dead. Ravens were also associated with kingship through Bran the Blessed (whose name means "raven/crow" in Welsh) and with prophetic wisdom in multiple Celtic traditions.' },
+  { q: 'Who is the Celtic raven goddess?', a: 'The primary Celtic raven goddess is the Mórrígan — an Irish sovereignty and battle goddess who appears in raven form throughout the Ulster Cycle. She prophesies battle outcomes, transforms into a crow or raven to fly over battlefields, and harries warriors she opposes. The Mórrígan is part of a triad of Irish war goddesses: she is associated with Badb (specifically identified with the battle-crow/raven) and Nemain (panic and battle-fury). These three aspects of the battle goddess are all associated with corvid form.' },
+  { q: 'What is the connection between ravens and Celtic kingship?', a: 'The connection between ravens and Celtic kingship operates through several interlocking themes: the raven as the battle-goddess\'s bird (victory in battle = legitimate kingship); the raven as a prophetic bird whose calls foretold the outcome of wars affecting kings; and the figure of Bran the Blessed (Welsh: "raven/crow"), whose severed head continued to prophesy after death and whose ravens are still believed, in English folklore, to protect the Tower of London. This link between the raven, prophecy, death, and legitimate sovereignty is a consistent feature of Celtic warrior kingship.' },
+];
+---
+
+<BaseLayout title={title} description={description} path={path} ogType="article"
+  datePublished="2026-11-08" dateModified="2026-11-08"
+  breadcrumbs={breadcrumbs} faq={faq} pageType="Article">
+
+<article class="qa-page">
+
+  <nav class="qa-breadcrumb" aria-label="Breadcrumb">
+    <ol>
+      {breadcrumbs.map((b, i) => (
+        <li>
+          {i < breadcrumbs.length - 1
+            ? <><a href={b.url}>{b.name}</a><span aria-hidden="true"> › </span></>
+            : <span aria-current="page">{b.name}</span>}
+        </li>
+      ))}
+    </ol>
+  </nav>
+
+  <header class="qa-header">
+    <p class="qa-pillar">World Lore · MYW·28</p>
+    <h1>Ravens in Celtic Warrior Tradition: Battle-Birds, the Mórrígan, and Sovereignty</h1>
+  </header>
+
+  <section class="qa-snippet" aria-label="Direct answer">
+    <p><strong class="claim-lore">[lore]</strong> The raven was the battle-bird par excellence in Celtic tradition. Irish war goddesses — the Mórrígan, Badb, Nemain — took raven or crow form above battlefields, prophesying death and shaping outcomes. Welsh tradition linked the raven to Bran the Blessed, the giant king whose severed head guarded Britain, whose very name means "raven" or "crow". In Celtic warrior culture, the raven was not merely an omen but an active participant in the supernatural economy of war and sovereignty.</p>
+  </section>
+
+  <section class="qa-section">
+    <h2>The Mórrígan: Goddess of Battle in Raven Form</h2>
+    <p><strong class="claim-lore">[lore]</strong> The Mórrígan (Old Irish: "great queen" or "phantom queen") is the central figure in Irish raven-battle mythology. She appears throughout the Ulster Cycle — particularly in the <em>Táin Bó Cúailnge</em> (The Cattle Raid of Cooley) — as a shape-shifting battle goddess whose corvid form is her most characteristic transformation.<sup><a href="#src-1">1</a></sup></p>
+    <p>The Mórrígan's raven/crow functions in multiple ways:</p>
+    <ul>
+      <li><strong>Prophecy:</strong> she predicts the death of warriors; her cawing above an army foretells its fate.</li>
+      <li><strong>Active interference:</strong> unlike a mere omen-bird, the Mórrígan actively attempts to influence battle outcomes, attacking warriors she opposes in bird form and supporting those she favours.</li>
+      <li><strong>Feast of the slain:</strong> after the battle at Mag Tuired (Second Battle), the Mórrígan is described as feasting on the battlefield dead — directly enacting the raven's real-world behaviour as a mythological act.</li>
+      <li><strong>Washerwomen at the ford:</strong> the Mórrígan sometimes appears washing the armour or limbs of warriors before battle — a death omen — before transforming into a raven to observe the fight.</li>
+    </ul>
+  </section>
+
+  <section class="qa-section">
+    <h2>Badb: The Battle-Crow</h2>
+    <p><strong class="claim-lore">[lore]</strong> While the Mórrígan is the most complex of the Irish battle goddesses, Badb (Old Irish: "battle-crow" or "scald-crow") is the most directly corvid. The name means crow or raven, and Badb is frequently described as the raven above the battlefield in its most literal form — the bird whose calls tell warriors whether to advance or retreat, whose presence means death is near.<sup><a href="#src-1">1</a></sup></p>
+    <p>In several Irish texts, Badb appears after battles delivering prophecies of future wars — her voice is explicitly compared to the cawing of a crow. The phrase "Badb's feast" becomes a kenning for "battle" in Irish poetry, paralleling the Norse "raven's feast" for the same concept.</p>
+  </section>
+
+  <section class="qa-section">
+    <h2>Bran the Blessed and the Ravens of Britain</h2>
+    <p><strong class="claim-lore">[lore]</strong> In Welsh mythology, the raven connection to sovereignty takes a different form through the figure of Bendigeidfran (Bran the Blessed), the giant king of Britain whose story appears in the <em>Mabinogi</em>.<sup><a href="#src-2">2</a></sup></p>
+    <p>Bran's name means "crow" or "raven" in Welsh and Breton — he is etymologically the Raven-King. After being mortally wounded in a campaign to rescue his sister Branwen from Ireland, Bran instructs his followers to cut off his head and bury it on the White Mount in London (later the site of the Tower of London) facing France, as a magical guardian of Britain against invasion.</p>
+    <p>This story underlies the folk tradition that the ravens of the Tower of London must never be allowed to leave — if they do, the kingdom will fall. The connection runs: Bran = raven-king → severed head guarding London → Tower of London ravens as guardians. The folk etymology directly links the tower's ravens to the mythological raven-sovereignty tradition.</p>
+  </section>
+
+  <section class="qa-section">
+    <h2>Raven Imagery in Celtic Material Culture</h2>
+    <p><strong class="claim-lore">[lore]</strong> Archaeological evidence confirms the raven's battlefield significance in Celtic cultures beyond the textual record:<sup><a href="#src-1">1</a></sup></p>
+    <ul>
+      <li><strong>Helmet ornaments:</strong> Celtic warriors' helmets sometimes bore raven or corvid ornaments — placing the battle-goddess's bird atop the warrior's head, claiming her protection in physical form.</li>
+      <li><strong>Votive deposits:</strong> raven bones appear in Celtic ritual pits and shaft deposits alongside other animal bones — as offerings or symbolic objects.</li>
+      <li><strong>Coinage:</strong> several Celtic coin series depict corvid forms, including ravens in flight and perching crows associated with warrior imagery.</li>
+    </ul>
+  </section>
+
+  <section class="qa-section">
+    <h2>Related Pages</h2>
+    <ul>
+      <li><a href="/lore/world/the-morrigan/">The Mórrígan in detail</a></li>
+      <li><a href="/lore/world/bran-the-blessed/">Bran the Blessed</a></li>
+      <li><a href="/lore/world/tower-of-london-ravens/">Tower of London ravens</a></li>
+      <li><a href="/questions/what-does-a-raven-symbolise/">What does a raven symbolise?</a></li>
+    </ul>
+  </section>
+
+  <section class="qa-faq qa-section" aria-labelledby="faq-h2">
+    <h2 id="faq-h2">Frequently Asked Questions</h2>
+    {faq.map(item => (
+      <details class="qa-faq-item">
+        <summary class="qa-faq-q">{item.q}</summary>
+        <p class="qa-faq-a">{item.a}</p>
+      </details>
+    ))}
+  </section>
+
+  <section class="qa-sources qa-section" aria-labelledby="src-h2">
+    <h2 id="src-h2">Sources</h2>
+    <ol class="qa-src-list">
+      <li id="src-1">Green, M.J. (1992). <em>Animals in Celtic Life and Myth</em>. Routledge. — raven symbolism in Celtic material culture, the Mórrígan, Badb, corvid archaeology.</li>
+      <li id="src-2">Davies, S. (trans.) (2007). <em>The Mabinogion</em>. Oxford World's Classics. — Bendigeidfran (Bran the Blessed) in Branwen daughter of Llŷr; the severed head; White Mount tradition.</li>
+    </ol>
+    <p class="qa-claim-note"><strong class="claim-lore">[lore]</strong> named cultural/historical source</p>
+  </section>
+
+</article>
+</BaseLayout>
+
+<style>
+  .qa-page { max-width: 820px; margin: 0 auto; padding: 2rem 1.25rem 4rem; color: var(--iron-ink, #e8e4d8); font-family: 'Inter', sans-serif; line-height: 1.72; }
+  .qa-breadcrumb ol { display: flex; flex-wrap: wrap; gap: .25rem; list-style: none; padding: 0; margin: 0 0 2rem; font-size: .8rem; color: var(--ink-soft, #8a8070); }
+  .qa-breadcrumb a { color: var(--gold-500, #d4ae5a); text-decoration: none; }
+  .qa-pillar { font-size: .72rem; letter-spacing: .12em; text-transform: uppercase; color: var(--gold-500, #d4ae5a); margin: 0 0 .4rem; }
+  .qa-page h1 { font-family: 'Cormorant Garamond', serif; font-size: clamp(2rem, 5vw, 3rem); font-weight: 700; color: #fff; margin: 0 0 2rem; line-height: 1.1; }
+  .qa-snippet { background: rgba(212,174,90,.08); border-left: 3px solid var(--gold-500, #d4ae5a); border-radius: 0 6px 6px 0; padding: 1rem 1.25rem; margin-bottom: 2.5rem; font-size: 1.03rem; }
+  .qa-section { margin-bottom: 2.5rem; }
+  .qa-section h2 { font-family: 'Cormorant Garamond', serif; font-size: 1.5rem; font-weight: 600; color: #fff; margin: 0 0 .9rem; border-bottom: 1px solid rgba(212,174,90,.2); padding-bottom: .4rem; }
+  .qa-section p { margin: 0 0 1rem; font-size: .97rem; }
+  .qa-section ul { padding-left: 1.25rem; margin: 0 0 1rem; }
+  .qa-section li { margin-bottom: .4rem; font-size: .95rem; }
+  .claim-lore { color: #c49a3c; font-style: normal; font-size: .78rem; }
+  a[href] { color: var(--gold-500, #d4ae5a); }
+  .qa-faq-item { border-bottom: 1px solid rgba(255,255,255,.07); }
+  .qa-faq-q { cursor: pointer; padding: .9rem 0; font-size: .97rem; font-weight: 500; color: #fff; list-style: none; }
+  .qa-faq-q::before { content: '+ '; color: var(--gold-500, #d4ae5a); font-weight: 700; }
+  details[open] .qa-faq-q::before { content: '− '; }
+  .qa-faq-a { margin: 0 0 1rem; line-height: 1.7; font-size: .93rem; color: var(--ink-soft, #c8c0b0); }
+  .qa-src-list { padding-left: 1.25rem; margin: 0 0 1rem; }
+  .qa-src-list li { margin-bottom: .6rem; font-size: .82rem; color: var(--ink-soft, #8a8070); line-height: 1.6; }
+  .qa-claim-note { font-size: .78rem; color: var(--ink-soft, #605848); border-top: 1px solid rgba(255,255,255,.06); padding-top: .75rem; }
+</style>

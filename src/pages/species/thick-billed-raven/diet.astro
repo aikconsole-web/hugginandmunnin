@@ -1,0 +1,137 @@
+---
+/**
+ * Species sub-page — Thick-billed Raven diet
+ * SPC·06d
+ * Primary keyword: thick-billed raven diet
+ * Secondary: what does a thick-billed raven eat, thick-billed raven food
+ */
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+
+const title       = 'Thick-billed Raven Diet: What This Species Eats';
+const description = 'The Thick-billed Raven of the Ethiopian Highlands is an opportunistic omnivore that uses its enormous bill to open large carcasses, bones, and hard food items unavailable to smaller corvids. Full diet breakdown.';
+const path        = '/species/thick-billed-raven/diet/';
+
+const breadcrumbs = [
+  { name: 'Home',              url: '/' },
+  { name: 'Species',           url: '/species/' },
+  { name: 'Thick-billed Raven', url: '/species/thick-billed-raven/' },
+  { name: 'Diet',              url: path },
+];
+
+const faq = [
+  { q: 'What does the Thick-billed Raven eat?', a: 'The Thick-billed Raven is a broad omnivore. Its diet includes carrion (a major component), invertebrates, grain, fruit, small vertebrates, eggs, and human food waste from villages and urban areas in Ethiopia and Eritrea. Its massive bill gives it access to food items — including bones and tough carcasses — that smaller corvids cannot exploit.' },
+  { q: 'Why does the Thick-billed Raven have such a large bill?', a: 'The Thick-billed Raven has the largest and most robust bill of any corvid. This deep, arched, laterally compressed bill functions as a tool for prying, ripping, and crushing. It allows the bird to access marrow from bones, open large carcasses, force open hard-shelled invertebrates, and manipulate food items that would be inaccessible to birds with smaller bills. The bill is an ecological specialisation for a generalist-forager role in environments where large carcasses are an important resource.' },
+  { q: 'Does the Thick-billed Raven scavenge?', a: 'Yes — carrion is an important part of the Thick-billed Raven\'s diet. The species attends livestock carcasses and large wildlife carcasses in the Ethiopian Highlands and is frequently observed at slaughter sites, rubbish dumps, and abattoirs in and around towns. It is dominant over other corvids and scavenging birds at carcasses due to its large size and bill strength.' },
+];
+---
+
+<BaseLayout title={title} description={description} path={path} ogType="article"
+  datePublished="2026-11-07" dateModified="2026-11-07"
+  breadcrumbs={breadcrumbs} faq={faq} pageType="Article">
+
+<article class="qa-page">
+
+  <nav class="qa-breadcrumb" aria-label="Breadcrumb">
+    <ol>
+      {breadcrumbs.map((b, i) => (
+        <li>
+          {i < breadcrumbs.length - 1
+            ? <><a href={b.url}>{b.name}</a><span aria-hidden="true"> › </span></>
+            : <span aria-current="page">{b.name}</span>}
+        </li>
+      ))}
+    </ol>
+  </nav>
+
+  <header class="qa-header">
+    <p class="qa-pillar">Species Sub-page · SPC·06d</p>
+    <h1>Thick-billed Raven Diet: What This Species Eats</h1>
+  </header>
+
+  <section class="qa-snippet" aria-label="Direct answer">
+    <p><strong class="claim-science">[science]</strong> The Thick-billed Raven (<em>Corvus crassirostris</em>) is a broad omnivore. Carrion is a major dietary component — the species' immense bill is specifically adapted for opening carcasses and bones. The diet also includes invertebrates, grain, fruit, small vertebrates, eggs, and abundant human food waste in and around Ethiopian cities and villages.</p>
+  </section>
+
+  <section class="qa-section">
+    <h2>Primary Food Items</h2>
+    <p><strong class="claim-science">[science]</strong> Based on field observations and species accounts in the <em>Handbook of the Birds of the World</em> (HBW) and published Ethiopian ornithological surveys:<sup><a href="#src-1">1</a></sup></p>
+    <ul>
+      <li><strong>Carrion:</strong> dead livestock (cattle, sheep, goats), roadkill, and large wildlife carcasses. The Thick-billed Raven is often the dominant bird at carcasses in its range, displacing smaller scavengers.</li>
+      <li><strong>Bones and marrow:</strong> the powerful, arched bill can crack bones that are inaccessible to other corvids. Bone-prying behaviour has been observed; the species may carry bones to rocks and drop them (osteophagy) analogous to Lammergeier behaviour, though this is less systematically documented.</li>
+      <li><strong>Invertebrates:</strong> beetles, grasshoppers, caterpillars, earthworms — ground-foraging for invertebrates is common, particularly after rain.</li>
+      <li><strong>Grain and seeds:</strong> cereal grain (teff, wheat, barley) from agricultural fields — the species raids crops and forages in recently ploughed fields.</li>
+      <li><strong>Fruit:</strong> various fruits and berries taken opportunistically; figs recorded.</li>
+      <li><strong>Small vertebrates:</strong> lizards, mice, nestlings and eggs of ground-nesting birds — taken opportunistically.</li>
+      <li><strong>Human food waste:</strong> a major resource in the Ethiopian Highlands. The species is abundant around Addis Ababa, Gondar, Lalibela, and other highland towns, exploiting rubbish tips, abattoirs, market waste, and food scraps.</li>
+    </ul>
+  </section>
+
+  <section class="qa-section">
+    <h2>The Bill as a Foraging Tool</h2>
+    <p><strong class="claim-science">[science]</strong> The Thick-billed Raven's bill is the largest and most massively constructed of any corvid — length 7–8 cm, strongly arched, laterally compressed, and tipped with white. This bill shape provides:<sup><a href="#src-1">1</a></sup></p>
+    <ul>
+      <li><strong>High bite force</strong> — for cracking bones, crushing hard invertebrates, and prying at carcasses.</li>
+      <li><strong>Prying leverage</strong> — for opening carcasses at joints and forcing access to soft tissue inside a carcass that smaller birds cannot reach.</li>
+      <li><strong>Manipulation precision</strong> — the bill tip, though robust, can still handle small food items.</li>
+    </ul>
+    <p>This combination of power and dexterity makes the Thick-billed Raven an ecological generalist with access to food items unavailable to sympatric corvids such as the Fan-tailed Raven (<em>Corvus rhipidurus</em>) and the Pied Crow (<em>Corvus albus</em>).</p>
+  </section>
+
+  <section class="qa-section">
+    <h2>Urban and Agricultural Foraging</h2>
+    <p><strong class="claim-science">[science]</strong> The Thick-billed Raven is a highly synanthropic species (closely associated with human settlements). In the Ethiopian Highlands, it is one of the most visible large birds in highland towns. Rubbish tips and abattoirs around Addis Ababa support large resident populations. Agricultural land — particularly teff and barley fields — is exploited for grain, especially after ploughing and during harvest. The species is considered an agricultural pest in some areas.</p>
+  </section>
+
+  <section class="qa-section">
+    <h2>Related Pages</h2>
+    <ul>
+      <li><a href="/species/thick-billed-raven/">Thick-billed Raven — species hub</a></li>
+      <li><a href="/questions/what-do-ravens-eat/">What do ravens eat?</a></li>
+      <li><a href="/compare/raven-vs-crow/">Raven vs Crow</a></li>
+    </ul>
+  </section>
+
+  <section class="qa-faq qa-section" aria-labelledby="faq-h2">
+    <h2 id="faq-h2">Frequently Asked Questions</h2>
+    {faq.map(item => (
+      <details class="qa-faq-item">
+        <summary class="qa-faq-q">{item.q}</summary>
+        <p class="qa-faq-a">{item.a}</p>
+      </details>
+    ))}
+  </section>
+
+  <section class="qa-sources qa-section" aria-labelledby="src-h2">
+    <h2 id="src-h2">Sources</h2>
+    <ol class="qa-src-list">
+      <li id="src-1">del Hoyo, J. et al. (eds., 2009). <em>Handbook of the Birds of the World</em>, vol. 14. Lynx Edicions. — Thick-billed Raven species account; diet, bill morphology, foraging behaviour.</li>
+    </ol>
+    <p class="qa-claim-note"><strong class="claim-science">[science]</strong> peer-reviewed study or field-guide data</p>
+  </section>
+
+</article>
+</BaseLayout>
+
+<style>
+  .qa-page { max-width: 820px; margin: 0 auto; padding: 2rem 1.25rem 4rem; color: var(--iron-ink, #e8e4d8); font-family: 'Inter', sans-serif; line-height: 1.72; }
+  .qa-breadcrumb ol { display: flex; flex-wrap: wrap; gap: .25rem; list-style: none; padding: 0; margin: 0 0 2rem; font-size: .8rem; color: var(--ink-soft, #8a8070); }
+  .qa-breadcrumb a { color: var(--gold-500, #d4ae5a); text-decoration: none; }
+  .qa-pillar { font-size: .72rem; letter-spacing: .12em; text-transform: uppercase; color: var(--gold-500, #d4ae5a); margin: 0 0 .4rem; }
+  .qa-page h1 { font-family: 'Cormorant Garamond', serif; font-size: clamp(2rem, 5vw, 3rem); font-weight: 700; color: #fff; margin: 0 0 2rem; line-height: 1.1; }
+  .qa-snippet { background: rgba(212,174,90,.08); border-left: 3px solid var(--gold-500, #d4ae5a); border-radius: 0 6px 6px 0; padding: 1rem 1.25rem; margin-bottom: 2.5rem; font-size: 1.03rem; }
+  .qa-section { margin-bottom: 2.5rem; }
+  .qa-section h2 { font-family: 'Cormorant Garamond', serif; font-size: 1.5rem; font-weight: 600; color: #fff; margin: 0 0 .9rem; border-bottom: 1px solid rgba(212,174,90,.2); padding-bottom: .4rem; }
+  .qa-section p { margin: 0 0 1rem; font-size: .97rem; }
+  .qa-section ul { padding-left: 1.25rem; margin: 0 0 1rem; }
+  .qa-section li { margin-bottom: .4rem; font-size: .95rem; }
+  .claim-science { color: #7ab9e0; font-style: normal; font-size: .78rem; }
+  a[href] { color: var(--gold-500, #d4ae5a); }
+  .qa-faq-item { border-bottom: 1px solid rgba(255,255,255,.07); }
+  .qa-faq-q { cursor: pointer; padding: .9rem 0; font-size: .97rem; font-weight: 500; color: #fff; list-style: none; }
+  .qa-faq-q::before { content: '+ '; color: var(--gold-500, #d4ae5a); font-weight: 700; }
+  details[open] .qa-faq-q::before { content: '− '; }
+  .qa-faq-a { margin: 0 0 1rem; line-height: 1.7; font-size: .93rem; color: var(--ink-soft, #c8c0b0); }
+  .qa-src-list { padding-left: 1.25rem; margin: 0 0 1rem; }
+  .qa-src-list li { margin-bottom: .6rem; font-size: .82rem; color: var(--ink-soft, #8a8070); line-height: 1.6; }
+  .qa-claim-note { font-size: .78rem; color: var(--ink-soft, #605848); border-top: 1px solid rgba(255,255,255,.06); padding-top: .75rem; }
+</style>

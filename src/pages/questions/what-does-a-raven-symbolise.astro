@@ -1,0 +1,137 @@
+---
+/**
+ * Q&A — What does a raven symbolise?
+ * Primary keyword: what does a raven symbolise
+ * Secondary: raven symbolism meaning, raven symbol cultures, raven spiritual meaning
+ */
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const title       = 'What Does a Raven Symbolise? Raven Symbolism Across Cultures';
+const description = 'Ravens symbolise wisdom, prophecy, death, transformation, trickery, and creation across cultures worldwide. This page examines what the raven means in Norse, Celtic, Native American, Greek, and other traditions — and why the raven carries such diverse symbolic weight.';
+const path        = '/questions/what-does-a-raven-symbolise/';
+
+const breadcrumbs = [
+  { name: 'Home',      url: '/' },
+  { name: 'Questions', url: '/questions/' },
+  { name: 'What Does a Raven Symbolise?', url: path },
+];
+
+const faq = [
+  { q: 'What does a raven symbolise in different cultures?', a: 'The raven carries different symbolic meanings across cultures, though several themes recur: Wisdom and knowledge (Norse: Odin\'s ravens as instruments of omniscience; Celtic: ravens as oracular birds); Death and the battlefield (Norse, Celtic, Greek: ravens feeding on the slain; Valkyrie associations); Transformation and trickery (Native American: Raven as Trickster-Creator who steals fire/light and reshapes the world); Prophecy and omen (Greek, Roman, Celtic: raven calls as omens); and Creation (Arctic, Pacific Northwest: Raven as creator of the world or bringer of light). The raven\'s intelligence, longevity, black plumage, and association with death through scavenging underlie these diverse but connected symbolic roles.' },
+  { q: 'Is a raven a symbol of good or bad luck?', a: 'Whether a raven is a good or bad omen varies by culture and context. In Norse tradition, ravens are associated with Odin, wisdom, and power — positive associations. In Celtic warrior tradition, the raven (Mórrígan\'s bird) is both a battle omen and a sign of victory. In many Western folk traditions, a raven at the window or calling near a home is an ill omen, associated with death. In Pacific Northwest Indigenous traditions, Raven is a beneficent creator-trickster. The same bird holds positive and negative associations simultaneously in many traditions, reflecting its ambiguous character.' },
+  { q: 'What does it mean when you see a raven?', a: 'What seeing a raven "means" depends on which cultural framework you apply — there is no single universal meaning. Scientifically, seeing a raven means you are in an area with suitable raven habitat and food resources. In traditional omen interpretation, context matters: a raven observed near a sickbed, cemetery, or during a significant life event was more likely to be interpreted as meaningful than a raven sighted during routine travel. Modern spiritual or New Age interpretations often assign personal meanings derived from various cultural traditions. From a sceptical standpoint, the meaning is what you choose to construct from an encounter with a remarkable, intelligent bird.' },
+];
+---
+
+<BaseLayout title={title} description={description} path={path} ogType="article"
+  datePublished="2026-11-08" dateModified="2026-11-08"
+  breadcrumbs={breadcrumbs} faq={faq} pageType="Article">
+
+<article class="qa-page">
+
+  <nav class="qa-breadcrumb" aria-label="Breadcrumb">
+    <ol>
+      {breadcrumbs.map((b, i) => (
+        <li>
+          {i < breadcrumbs.length - 1
+            ? <><a href={b.url}>{b.name}</a><span aria-hidden="true"> › </span></>
+            : <span aria-current="page">{b.name}</span>}
+        </li>
+      ))}
+    </ol>
+  </nav>
+
+  <header class="qa-header">
+    <p class="qa-pillar">Question · Lore</p>
+    <h1>What Does a Raven Symbolise? Raven Symbolism Across Cultures</h1>
+  </header>
+
+  <section class="qa-snippet" aria-label="Direct answer">
+    <p><strong class="claim-lore">[lore]</strong> Ravens symbolise wisdom, prophecy, death, transformation, and trickery across world cultures. The specific meanings vary — Norse tradition links ravens to divine omniscience; Celtic tradition to battle and sovereignty; Native American traditions to creation and trickery; Greek tradition to prophecy and punishment. The raven's intelligence, longevity, black plumage, and ubiquitous presence at death make it a natural carrier of symbolic weight across many human cultures.</p>
+  </section>
+
+  <section class="qa-section">
+    <h2>Why Ravens Carry Symbolic Weight</h2>
+    <p>Several real characteristics of ravens underlie their symbolic roles across cultures:<sup><a href="#src-1">1</a></sup></p>
+    <ul>
+      <li><strong>Intelligence:</strong> ravens visibly plan, manipulate, and problem-solve — they are clearly not operating on simple instinct. This apparent purposefulness makes them feel like agents with intent, lending their behaviour to symbolic interpretation.</li>
+      <li><strong>Black plumage:</strong> black is associated with night, death, and the unknown in many cultures. A large, all-black bird that appears near death and speaks with a human-like voice was bound to attract supernatural interpretation.</li>
+      <li><strong>Longevity:</strong> wild ravens live 10–20+ years; captive ravens to 40+. Long-lived animals appear in many traditions as repositories of accumulated wisdom.</li>
+      <li><strong>Omnivory and scavenging:</strong> ravens are present at death — at battlefields, executions, famine sites. Their real-world presence at human mortality scenes anchors their association with death across cultures.</li>
+      <li><strong>Vocalisation:</strong> ravens have varied, complex calls that can sound like speech, laughter, or commentary. This voice invites projection of communication and meaning.</li>
+    </ul>
+  </section>
+
+  <section class="qa-section">
+    <h2>Key Symbolic Themes by Tradition</h2>
+    <p><strong class="claim-lore">[lore]</strong> Raven symbolism by cultural tradition:<sup><a href="#src-1">1</a></sup></p>
+    <ul>
+      <li><strong>Norse:</strong> Wisdom, omniscience (Huginn and Muninn as extensions of Odin's mind); battle and the slain (the battle-raven); divine power (Odin as Hrafnaguð).</li>
+      <li><strong>Celtic (Irish and Welsh):</strong> Sovereignty and battle (Mórrígan as raven-goddess; Bran the Blessed and the ravens of London); prophecy and foreboding.</li>
+      <li><strong>Greek and Roman:</strong> Prophecy, bad news, punishment (Apollo's cursed raven); augury and divination.</li>
+      <li><strong>Pacific Northwest Indigenous (Tlingit, Haida, etc.):</strong> Creation, trickery, transformation (Raven as Trickster-Creator who steals fire/light and shapes the world); the Raven moiety as a fundamental social category.</li>
+      <li><strong>Arctic Indigenous (Inuit, Yupik):</strong> Creation, trickery, companionship in hunting; the raven as a mediator between the human and spirit worlds.</li>
+      <li><strong>Western literary tradition:</strong> Death, mystery, grief (Poe's "Nevermore"; Gothic literature); the raven as an emblem of melancholy and the unknowable.</li>
+    </ul>
+  </section>
+
+  <section class="qa-section">
+    <h2>The Wisdom-Death Paradox</h2>
+    <p>The raven occupies a distinctive symbolic position: it is simultaneously a symbol of wisdom and of death. This paradox is not accidental — in many traditions, wisdom requires confronting death. Odin sacrifices an eye for wisdom at Mimir's well; his ravens circle the battlefield. Knowledge comes at a cost, and the raven — present at all deaths, observing all — is both the bearer and emblem of that costly knowledge.</p>
+    <p>The Trickster archetype adds another dimension: the raven is not purely wise or purely malevolent, but cunning — using intelligence for self-interested and world-creating ends simultaneously. This ambiguity (helpful or harmful depending on context, perspective, and narrative) may be the most authentically bird-like of all raven symbolisms, reflecting the actual observed behaviour of these intelligent, opportunistic birds.</p>
+  </section>
+
+  <section class="qa-section">
+    <h2>Related Pages</h2>
+    <ul>
+      <li><a href="/lore/world/raven-symbolism/">Raven symbolism worldwide</a></li>
+      <li><a href="/questions/why-are-ravens-associated-with-death/">Why are ravens associated with death?</a></li>
+      <li><a href="/lore/norse/huginn-and-muninn/">Huginn and Muninn</a></li>
+      <li><a href="/lore/world/the-morrigan/">The Mórrígan</a></li>
+    </ul>
+  </section>
+
+  <section class="qa-faq qa-section" aria-labelledby="faq-h2">
+    <h2 id="faq-h2">Frequently Asked Questions</h2>
+    {faq.map(item => (
+      <details class="qa-faq-item">
+        <summary class="qa-faq-q">{item.q}</summary>
+        <p class="qa-faq-a">{item.a}</p>
+      </details>
+    ))}
+  </section>
+
+  <section class="qa-sources qa-section" aria-labelledby="src-h2">
+    <h2 id="src-h2">Sources</h2>
+    <ol class="qa-src-list">
+      <li id="src-1">Sax, B. (2003). <em>Crow</em>. Reaktion Books Animal series. — raven and corvid symbolism across world cultures; death associations, trickster role, prophetic function.</li>
+    </ol>
+    <p class="qa-claim-note"><strong class="claim-lore">[lore]</strong> named cultural/historical source</p>
+  </section>
+
+</article>
+</BaseLayout>
+
+<style>
+  .qa-page { max-width: 820px; margin: 0 auto; padding: 2rem 1.25rem 4rem; color: var(--iron-ink, #e8e4d8); font-family: 'Inter', sans-serif; line-height: 1.72; }
+  .qa-breadcrumb ol { display: flex; flex-wrap: wrap; gap: .25rem; list-style: none; padding: 0; margin: 0 0 2rem; font-size: .8rem; color: var(--ink-soft, #8a8070); }
+  .qa-breadcrumb a { color: var(--gold-500, #d4ae5a); text-decoration: none; }
+  .qa-pillar { font-size: .72rem; letter-spacing: .12em; text-transform: uppercase; color: var(--gold-500, #d4ae5a); margin: 0 0 .4rem; }
+  .qa-page h1 { font-family: 'Cormorant Garamond', serif; font-size: clamp(2rem, 5vw, 3rem); font-weight: 700; color: #fff; margin: 0 0 2rem; line-height: 1.1; }
+  .qa-snippet { background: rgba(212,174,90,.08); border-left: 3px solid var(--gold-500, #d4ae5a); border-radius: 0 6px 6px 0; padding: 1rem 1.25rem; margin-bottom: 2.5rem; font-size: 1.03rem; }
+  .qa-section { margin-bottom: 2.5rem; }
+  .qa-section h2 { font-family: 'Cormorant Garamond', serif; font-size: 1.5rem; font-weight: 600; color: #fff; margin: 0 0 .9rem; border-bottom: 1px solid rgba(212,174,90,.2); padding-bottom: .4rem; }
+  .qa-section p { margin: 0 0 1rem; font-size: .97rem; }
+  .qa-section ul { padding-left: 1.25rem; margin: 0 0 1rem; }
+  .qa-section li { margin-bottom: .4rem; font-size: .95rem; }
+  .claim-lore { color: #c49a3c; font-style: normal; font-size: .78rem; }
+  a[href] { color: var(--gold-500, #d4ae5a); }
+  .qa-faq-item { border-bottom: 1px solid rgba(255,255,255,.07); }
+  .qa-faq-q { cursor: pointer; padding: .9rem 0; font-size: .97rem; font-weight: 500; color: #fff; list-style: none; }
+  .qa-faq-q::before { content: '+ '; color: var(--gold-500, #d4ae5a); font-weight: 700; }
+  details[open] .qa-faq-q::before { content: '− '; }
+  .qa-faq-a { margin: 0 0 1rem; line-height: 1.7; font-size: .93rem; color: var(--ink-soft, #c8c0b0); }
+  .qa-src-list { padding-left: 1.25rem; margin: 0 0 1rem; }
+  .qa-src-list li { margin-bottom: .6rem; font-size: .82rem; color: var(--ink-soft, #8a8070); line-height: 1.6; }
+  .qa-claim-note { font-size: .78rem; color: var(--ink-soft, #605848); border-top: 1px solid rgba(255,255,255,.06); padding-top: .75rem; }
+</style>

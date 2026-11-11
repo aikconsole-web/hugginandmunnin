@@ -1,0 +1,138 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const title       = 'What Is a Murder of Crows? And an Unkindness of Ravens?';
+const description = 'A group of crows is called a murder; a group of ravens is called an unkindness or a conspiracy. These collective nouns come from medieval "terms of venery" and are rarely used in modern ornithology.';
+const path        = '/questions/what-is-a-murder-of-crows-an-unkindness-of-ravens/';
+
+const breadcrumbs = [
+  { name: 'Home',      url: '/' },
+  { name: 'Questions', url: '/questions/' },
+  { name: 'Murder of crows / unkindness of ravens?', url: path },
+];
+
+const faq = [
+  { q: 'What is a group of crows called?', a: 'A group of crows is called a "murder." This collective noun comes from the medieval tradition of "terms of venery" — a large collection of whimsical and poetic names for groups of animals compiled in texts like the Book of Saint Albans (1486). "Murder" is not used in modern ornithology — scientists say "flock of crows."' },
+  { q: 'What is a group of ravens called?', a: 'A group of ravens is called an "unkindness" or a "conspiracy." Like "murder of crows," these terms come from medieval terms of venery, particularly the Book of Saint Albans (1486). They are not standard ornithological terms. In scientific contexts, ravens gather in "flocks" or "roosts." An "unkindness" may reflect the medieval view of ravens as ill-omened birds.' },
+];
+---
+
+<BaseLayout title={title} description={description} path={path} ogType="article"
+  datePublished="2026-11-07" dateModified="2026-11-07"
+  breadcrumbs={breadcrumbs} faq={faq} pageType="Article">
+
+<article class="id-page">
+  <nav class="id-breadcrumb" aria-label="Breadcrumb">
+    <ol>
+      {breadcrumbs.map((b, i) => (
+        <li>
+          {i < breadcrumbs.length - 1
+            ? <><a href={b.url}>{b.name}</a><span aria-hidden="true"> › </span></>
+            : <span aria-current="page">{b.name}</span>}
+        </li>
+      ))}
+    </ol>
+  </nav>
+  <header class="id-header">
+    <p class="id-pillar">Questions · Language and Lore</p>
+    <h1>What Is a Murder of Crows? And an Unkindness of Ravens?</h1>
+    <p class="id-subtitle">Medieval terms of venery — where they came from</p>
+  </header>
+
+  <section class="id-snippet" aria-label="Quick answer">
+    <p><strong class="claim-lore">[lore]</strong> "Murder of crows" and "unkindness of ravens" are <strong>medieval collective nouns</strong> from the tradition of "terms of venery" — poetic group names for animals compiled in texts like the <em>Book of Saint Albans</em> (1486). They are not modern ornithological terms. Scientists simply say "flock" or "roost." The colourful names reflect medieval attitudes toward corvids but are not based in bird behaviour.</p>
+  </section>
+
+  <section class="id-section">
+    <h2>Terms of Venery: The Source</h2>
+    <p><strong class="claim-lore">[lore]</strong> "Terms of venery" (from Latin <em>venatio</em>, hunting) were collective nouns for animals compiled in late medieval England. The most important source is the <em>Book of Saint Albans</em> (1486), attributed to Dame Juliana Berners, which contains the <em>Boke of St Albans</em> — a treatise on hunting, fishing, and heraldry including a large list of animal group names.</p>
+    <p>These terms were partly practical, partly social — knowing them was a mark of education and courtly refinement. Many are fanciful, poetic, or based on folk attitudes rather than animal behaviour. They were always a minority usage; "flock" was the common word for bird groups in everyday speech.<sup><a href="#src-1">1</a></sup></p>
+  </section>
+
+  <section class="id-section">
+    <h2>Murder of Crows</h2>
+    <p><strong class="claim-lore">[lore]</strong> "A murder of crows" appears in later lists of terms of venery; it is not in the 1486 <em>Book of Saint Albans</em> itself, though it circulates widely as if it were. The term became popular in the 20th century, partly through its use in literature and popular culture.</p>
+    <ul>
+      <li>The word "murder" likely reflects medieval associations of crows with death and ill omen — carrion feeders at battlefields and execution sites</li>
+      <li>It may also reflect folk beliefs about crows "judging" and "executing" one of their own (a "crow court" or "crow murder") — behaviour sometimes observed but not reliably documented as a consistent pattern</li>
+      <li>In modern ornithology: a group of crows is simply a "flock"</li>
+    </ul>
+  </section>
+
+  <section class="id-section">
+    <h2>Unkindness of Ravens / Conspiracy of Ravens</h2>
+    <p><strong class="claim-lore">[lore]</strong> "An unkindness of ravens" and "a conspiracy of ravens" are both cited as traditional collective nouns for ravens. The <em>Book of Saint Albans</em> (1486) lists "an unkindness of ravens."</p>
+    <ul>
+      <li>"Unkindness" may reflect the medieval belief that young ravens were callous to their parents (echoing the reference in Psalm 147:9 / Job 38:41 — God feeding the young ravens, perhaps implying the parents do not)</li>
+      <li>"Conspiracy" reflects the mysterious and scheming quality attributed to ravens in medieval thought</li>
+      <li>In modern ornithology: ravens gather in "flocks" or at large food sources in "roosts" or "assemblages"</li>
+    </ul>
+    <p>The existing question <a href="/questions/what-is-a-group-of-ravens-called/">What is a group of ravens called?</a> covers this topic in more detail.<sup><a href="#src-1">1</a>,<a href="#src-2">2</a></sup></p>
+  </section>
+
+  <section class="id-section">
+    <h2>Other Corvid Group Names</h2>
+    <p><strong class="claim-lore">[lore]</strong> For completeness, other corvid terms of venery include:</p>
+    <ul>
+      <li><strong>Rooks:</strong> a "parliament" or "building" of rooks</li>
+      <li><strong>Magpies:</strong> a "tiding" (or "tittering" or "gulp") of magpies</li>
+      <li><strong>Jackdaws:</strong> a "clattering" of jackdaws</li>
+      <li><strong>Jays:</strong> a "party" or "scold" of jays</li>
+    </ul>
+    <p>All these terms have the same medieval origin and are largely unused in scientific contexts. They persist in popular usage, trivia, and writing about nature.<sup><a href="#src-1">1</a></sup></p>
+  </section>
+
+  <section class="id-faq id-section" aria-labelledby="faq-h2">
+    <h2 id="faq-h2">Frequently Asked Questions</h2>
+    {faq.map(item => (
+      <details class="id-faq-item">
+        <summary class="id-faq-q">{item.q}</summary>
+        <p class="id-faq-a">{item.a}</p>
+      </details>
+    ))}
+  </section>
+
+  <section class="id-sources id-section" aria-labelledby="src-h2">
+    <h2 id="src-h2">Sources</h2>
+    <ol class="id-src-list">
+      <li id="src-1">Berners, J. (attributed) (1486). <em>Boke of Saint Albans</em> [Book of Saint Albans]. St Albans: Schoolmaster Printer. — primary source for terms of venery including "unkindness of ravens." (Facsimile editions available; original in British Library.)</li>
+      <li id="src-2">Lipton, J. (1968). <em>An Exaltation of Larks</em>. Viking Press. — modern compilation and popularisation of terms of venery.</li>
+    </ol>
+    <p class="id-claim-note"><strong class="claim-lore">[lore]</strong> historical and literary sources</p>
+  </section>
+
+  <nav class="id-nav-bottom">
+    <a href="/questions/what-is-a-group-of-ravens-called/" class="id-back">← What is a group of ravens called?</a>
+    <a href="/compare/raven-vs-crow/" class="id-next">Raven vs Crow →</a>
+  </nav>
+</article>
+</BaseLayout>
+
+<style>
+  .id-page { max-width: 820px; margin: 0 auto; padding: 2rem 1.25rem 4rem; color: var(--iron-ink, #e8e4d8); font-family: 'Inter', sans-serif; line-height: 1.72; }
+  .id-breadcrumb ol { display: flex; flex-wrap: wrap; gap: .25rem; list-style: none; padding: 0; margin: 0 0 2rem; font-size: .8rem; color: var(--ink-soft, #8a8070); }
+  .id-breadcrumb a { color: var(--gold-500, #d4ae5a); text-decoration: none; }
+  .id-pillar { font-size: .72rem; letter-spacing: .12em; text-transform: uppercase; color: var(--gold-500, #d4ae5a); margin: 0 0 .4rem; }
+  .id-page h1 { font-family: 'Cormorant Garamond', serif; font-size: clamp(2rem, 5vw, 3.25rem); font-weight: 700; color: #fff; margin: 0 0 .2rem; line-height: 1.1; }
+  .id-subtitle { font-size: 1rem; color: var(--ink-soft, #c0b89a); margin: 0 0 2rem; }
+  .id-snippet { background: rgba(212,174,90,.08); border-left: 3px solid var(--gold-500, #d4ae5a); border-radius: 0 6px 6px 0; padding: 1rem 1.25rem; margin-bottom: 2.5rem; font-size: 1.03rem; }
+  .id-section { margin-bottom: 2.75rem; }
+  .id-section h2 { font-family: 'Cormorant Garamond', serif; font-size: 1.6rem; font-weight: 600; color: #fff; margin: 0 0 1rem; border-bottom: 1px solid rgba(212,174,90,.2); padding-bottom: .4rem; }
+  .id-section p { margin: 0 0 1rem; font-size: .97rem; }
+  .id-section ul { padding-left: 1.25rem; margin: 0 0 1rem; }
+  .id-section li { margin-bottom: .4rem; font-size: .95rem; }
+  .claim-science { color: #7ab9e0; font-style: normal; font-size: .78rem; }
+  .claim-lore { color: #c8a84b; font-style: normal; font-size: .78rem; }
+  a[href] { color: var(--gold-500, #d4ae5a); }
+  .id-faq-item { border-bottom: 1px solid rgba(255,255,255,.07); }
+  .id-faq-q { cursor: pointer; padding: .9rem 0; font-size: .97rem; font-weight: 500; color: #fff; list-style: none; }
+  .id-faq-q::before { content: '+ '; color: var(--gold-500, #d4ae5a); font-weight: 700; }
+  details[open] .id-faq-q::before { content: '− '; }
+  .id-faq-a { margin: 0 0 1rem; line-height: 1.7; font-size: .93rem; color: var(--ink-soft, #c8c0b0); }
+  .id-src-list { padding-left: 1.25rem; margin: 0 0 1rem; }
+  .id-src-list li { margin-bottom: .6rem; font-size: .82rem; color: var(--ink-soft, #8a8070); line-height: 1.6; }
+  .id-claim-note { font-size: .78rem; color: var(--ink-soft, #605848); border-top: 1px solid rgba(255,255,255,.06); padding-top: .75rem; }
+  .id-nav-bottom { display: flex; justify-content: space-between; padding-top: 2rem; border-top: 1px solid rgba(255,255,255,.07); }
+  .id-nav-bottom a { font-size: .9rem; text-decoration: none; }
+  .id-nav-bottom a:hover { text-decoration: underline; }
+</style>

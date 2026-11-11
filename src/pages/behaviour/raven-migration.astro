@@ -1,0 +1,143 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const title       = 'Do Ravens Migrate? Movement Patterns and Dispersal';
+const description = 'Most Common Raven populations are resident year-round. Some northern populations make seasonal movements. Juvenile dispersal differs from adult territorial behaviour. What the evidence shows.';
+const path        = '/behaviour/raven-migration/';
+
+const breadcrumbs = [
+  { name: 'Home',      url: '/' },
+  { name: 'Behaviour', url: '/behaviour/' },
+  { name: 'Raven Migration', url: path },
+];
+
+const faq = [
+  { q: 'Do ravens migrate?', a: 'Most Common Raven populations are year-round residents — they do not undergo regular seasonal migration. However, northern populations at the edge of the range (high Arctic Canada, northernmost Scandinavia) make southward movements in winter. Juvenile and non-breeding ravens are significantly more nomadic than established territorial adults — young birds disperse widely before settling. The question on the Q&A page covers this in brief; this behaviour chapter gives full detail.' },
+];
+---
+
+<BaseLayout title={title} description={description} path={path} ogType="article"
+  datePublished="2026-11-07" dateModified="2026-11-07"
+  breadcrumbs={breadcrumbs} faq={faq} pageType="Article">
+
+<article class="id-page">
+  <nav class="id-breadcrumb" aria-label="Breadcrumb">
+    <ol>
+      {breadcrumbs.map((b, i) => (
+        <li>
+          {i < breadcrumbs.length - 1
+            ? <><a href={b.url}>{b.name}</a><span aria-hidden="true"> › </span></>
+            : <span aria-current="page">{b.name}</span>}
+        </li>
+      ))}
+    </ol>
+  </nav>
+  <header class="id-header">
+    <p class="id-pillar">Behaviour · BEH·09</p>
+    <h1>Do Ravens Migrate?</h1>
+    <p class="id-subtitle">Residency, dispersal, and the difference between adults and juveniles</p>
+  </header>
+
+  <section class="id-snippet" aria-label="Quick answer">
+    <p><strong class="claim-science">[science]</strong> <strong>Most Common Ravens do not migrate</strong> — they are year-round residents. However, there are important exceptions and nuances: northern edge-of-range populations make seasonal movements; juvenile ravens are nomadic for 2–4 years before establishing territories; and even resident adults show local movements in response to food availability in winter.</p>
+  </section>
+
+  <section class="id-section">
+    <h2>Year-Round Residency: The Norm</h2>
+    <p><strong class="claim-science">[science]</strong> Across most of the Common Raven's Holarctic range, territorial adult pairs are year-round residents:</p>
+    <ul>
+      <li>They hold and defend territories in all seasons, not just during breeding</li>
+      <li>Established pairs are present in the same area throughout the year</li>
+      <li>This is the norm across the British Isles, Central Europe, North America (excluding far north), and most of the range</li>
+    </ul>
+    <p>Year-round residency makes ecological sense: maintaining a territory and knowing the local food sources through winter is more productive than the energy cost of migration.<sup><a href="#src-1">1</a></sup></p>
+  </section>
+
+  <section class="id-section">
+    <h2>Northern Populations: Partial Migration</h2>
+    <p><strong class="claim-science">[science]</strong> At the northern edge of the range, some populations show southward movements in winter:</p>
+    <ul>
+      <li>High Arctic Canada and northernmost Alaska: ravens move south as prey availability decreases in extreme winter</li>
+      <li>Northern Fennoscandia: some movement southward from high-latitude populations</li>
+      <li>These are partial migrations — not all individuals move; some remain year-round even at high latitude near human settlements (food subsidies from towns and military bases)</li>
+    </ul>
+    <p>The trigger is food availability, not day length alone — ravens in areas with reliable human food sources (military bases, remote communities) may remain year-round at high latitude while birds in adjacent wild areas move south.<sup><a href="#src-1">1</a>,<a href="#src-2">2</a></sup></p>
+  </section>
+
+  <section class="id-section">
+    <h2>Juvenile Dispersal and Nomadism</h2>
+    <p><strong class="claim-science">[science]</strong> The most widespread form of raven "movement" is juvenile dispersal, not seasonal migration:</p>
+    <ul>
+      <li>Young ravens leave their parents' territory at approximately 6 months of age</li>
+      <li>They spend 2–4 years as nomadic non-breeders before establishing a territory</li>
+      <li>During this period they may travel tens to hundreds of kilometres from their natal area</li>
+      <li>They join communal roosts and move with other juveniles in search of food</li>
+      <li>Marked birds from Maine studies have been recovered hundreds of miles from banding locations</li>
+    </ul>
+    <p>This juvenile nomadism is distinct from seasonal migration — it is developmental dispersal, and the birds eventually settle into permanent territories once they can establish one (by inheritance, displacement, or new territory formation).<sup><a href="#src-2">2</a></sup></p>
+  </section>
+
+  <section class="id-section">
+    <h2>Winter Movements of Adults</h2>
+    <p><strong class="claim-science">[science]</strong> Even resident adult ravens may show local movements in response to food availability:</p>
+    <ul>
+      <li>When a large food source appears (a large carcass, an opened landfill, a salmon run), ravens from a wide area may converge and feed for days or weeks before returning to their home territories</li>
+      <li>These movements are opportunistic and food-driven, not migratory in the strict sense</li>
+      <li>At large carcasses in winter, ravens may travel 20–50 km from their territory for a single feeding bout</li>
+    </ul>
+    <p>This flexibility — the combination of year-round residency for adults and nomadism for juveniles — is part of what makes the raven such a successful wide-range generalist.<sup><a href="#src-2">2</a></sup></p>
+  </section>
+
+  <section class="id-faq id-section" aria-labelledby="faq-h2">
+    <h2 id="faq-h2">Frequently Asked Questions</h2>
+    {faq.map(item => (
+      <details class="id-faq-item">
+        <summary class="id-faq-q">{item.q}</summary>
+        <p class="id-faq-a">{item.a}</p>
+      </details>
+    ))}
+  </section>
+
+  <section class="id-sources id-section" aria-labelledby="src-h2">
+    <h2 id="src-h2">Sources</h2>
+    <ol class="id-src-list">
+      <li id="src-1">Madge, S. &amp; Burn, H. (1994). <em>Crows and Jays</em>. Christopher Helm. — movement patterns; northern populations.</li>
+      <li id="src-2">Boarman, W. I. &amp; Heinrich, B. (1999). Common Raven (<em>Corvus corax</em>). <em>The Birds of North America</em>, No. 476. — juvenile dispersal; adult residency; banding recoveries.</li>
+    </ol>
+    <p class="id-claim-note"><strong class="claim-science">[science]</strong> field-guide and species-account data</p>
+  </section>
+
+  <nav class="id-nav-bottom">
+    <a href="/questions/do-ravens-migrate/" class="id-back">← Do Ravens Migrate? (Q&A)</a>
+    <a href="/behaviour/raven-social-structure/" class="id-next">Social Structure →</a>
+  </nav>
+</article>
+</BaseLayout>
+
+<style>
+  .id-page { max-width: 820px; margin: 0 auto; padding: 2rem 1.25rem 4rem; color: var(--iron-ink, #e8e4d8); font-family: 'Inter', sans-serif; line-height: 1.72; }
+  .id-breadcrumb ol { display: flex; flex-wrap: wrap; gap: .25rem; list-style: none; padding: 0; margin: 0 0 2rem; font-size: .8rem; color: var(--ink-soft, #8a8070); }
+  .id-breadcrumb a { color: var(--gold-500, #d4ae5a); text-decoration: none; }
+  .id-pillar { font-size: .72rem; letter-spacing: .12em; text-transform: uppercase; color: var(--gold-500, #d4ae5a); margin: 0 0 .4rem; }
+  .id-page h1 { font-family: 'Cormorant Garamond', serif; font-size: clamp(2rem, 5vw, 3.25rem); font-weight: 700; color: #fff; margin: 0 0 .2rem; line-height: 1.1; }
+  .id-subtitle { font-size: 1rem; color: var(--ink-soft, #c0b89a); margin: 0 0 2rem; }
+  .id-snippet { background: rgba(212,174,90,.08); border-left: 3px solid var(--gold-500, #d4ae5a); border-radius: 0 6px 6px 0; padding: 1rem 1.25rem; margin-bottom: 2.5rem; font-size: 1.03rem; }
+  .id-section { margin-bottom: 2.75rem; }
+  .id-section h2 { font-family: 'Cormorant Garamond', serif; font-size: 1.6rem; font-weight: 600; color: #fff; margin: 0 0 1rem; border-bottom: 1px solid rgba(212,174,90,.2); padding-bottom: .4rem; }
+  .id-section p { margin: 0 0 1rem; font-size: .97rem; }
+  .id-section ul { padding-left: 1.25rem; margin: 0 0 1rem; }
+  .id-section li { margin-bottom: .4rem; font-size: .95rem; }
+  .claim-science { color: #7ab9e0; font-style: normal; font-size: .78rem; }
+  a[href] { color: var(--gold-500, #d4ae5a); }
+  .id-faq-item { border-bottom: 1px solid rgba(255,255,255,.07); }
+  .id-faq-q { cursor: pointer; padding: .9rem 0; font-size: .97rem; font-weight: 500; color: #fff; list-style: none; }
+  .id-faq-q::before { content: '+ '; color: var(--gold-500, #d4ae5a); font-weight: 700; }
+  details[open] .id-faq-q::before { content: '− '; }
+  .id-faq-a { margin: 0 0 1rem; line-height: 1.7; font-size: .93rem; color: var(--ink-soft, #c8c0b0); }
+  .id-src-list { padding-left: 1.25rem; margin: 0 0 1rem; }
+  .id-src-list li { margin-bottom: .6rem; font-size: .82rem; color: var(--ink-soft, #8a8070); line-height: 1.6; }
+  .id-claim-note { font-size: .78rem; color: var(--ink-soft, #605848); border-top: 1px solid rgba(255,255,255,.06); padding-top: .75rem; }
+  .id-nav-bottom { display: flex; justify-content: space-between; padding-top: 2rem; border-top: 1px solid rgba(255,255,255,.07); }
+  .id-nav-bottom a { font-size: .9rem; text-decoration: none; }
+  .id-nav-bottom a:hover { text-decoration: underline; }
+</style>

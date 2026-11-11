@@ -1,0 +1,159 @@
+---
+/**
+ * Behaviour — Raven anatomy and physical adaptations
+ * BEH·26
+ * Primary keyword: raven anatomy
+ * Secondary: raven physical adaptations, raven body, raven bill anatomy
+ */
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const title       = 'Raven Anatomy and Physical Adaptations: Bill, Wings, and Brain';
+const description = 'The common raven\'s body is a precisely adapted tool for a generalist life — from the powerful curved bill to the broad soaring wings to the proportionally large brain. This chapter examines raven anatomy and how each physical feature serves the bird\'s ecological role.';
+const path        = '/behaviour/raven-anatomy-and-physical-adaptations/';
+
+const breadcrumbs = [
+  { name: 'Home',      url: '/' },
+  { name: 'Behaviour', url: '/behaviour/' },
+  { name: 'Raven Anatomy and Physical Adaptations', url: path },
+];
+
+const faq = [
+  { q: 'What is special about a raven\'s bill?', a: 'The common raven\'s bill is large, heavy, and arched — the culmen (upper bill ridge) curves downward toward the tip. This bill shape allows ravens to perform a wide range of tasks: tearing flesh from large carcasses; prying open containers; probing into soil; cracking open shellfish or eggs; manipulating and carrying objects; and communicating threat through bill-gaping displays. The bill\'s size and strength is unusual for a passerine and reflects the raven\'s dietary and ecological generalism — it functions as a multi-tool rather than a specialist instrument.' },
+  { q: 'How large is a raven\'s brain?', a: 'Common ravens have one of the largest brain-to-body ratios of any bird species, comparable to that of great apes relative to body size. The avian brain structure differs from mammalian brain structure, but the pallium (the layer associated with higher cognition) is proportionally very large in corvids. Ravens\' cognitive abilities — planning, social intelligence, problem-solving, memory — correlate with this enlarged forebrain. In absolute terms, a raven\'s brain weighs approximately 15–20 g in adults.' },
+  { q: 'What are raven wings adapted for?', a: 'Raven wings are long and broad with prominent "fingered" primary feathers at the tips — an adaptation for soaring and thermal gliding rather than fast flapping flight. This wing shape suits the raven\'s ecological habits: soaring over open terrain to locate carrion from height; riding thermals for energy-efficient movement; and performing aerial acrobatics (barrel rolls, inverted flight) in play and courtship. The wing shape is intermediate between the pointed wings of fast-flying species (swifts, falcons) and the rounded wings of forest birds — a generalist form for a generalist lifestyle.' },
+];
+---
+
+<BaseLayout title={title} description={description} path={path} ogType="article"
+  datePublished="2026-11-08" dateModified="2026-11-08"
+  breadcrumbs={breadcrumbs} faq={faq} pageType="Article">
+
+<article class="qa-page">
+
+  <nav class="qa-breadcrumb" aria-label="Breadcrumb">
+    <ol>
+      {breadcrumbs.map((b, i) => (
+        <li>
+          {i < breadcrumbs.length - 1
+            ? <><a href={b.url}>{b.name}</a><span aria-hidden="true"> › </span></>
+            : <span aria-current="page">{b.name}</span>}
+        </li>
+      ))}
+    </ol>
+  </nav>
+
+  <header class="qa-header">
+    <p class="qa-pillar">Behaviour · BEH·26</p>
+    <h1>Raven Anatomy and Physical Adaptations: Bill, Wings, and Brain</h1>
+  </header>
+
+  <section class="qa-snippet" aria-label="Direct answer">
+    <p><strong class="claim-science">[science]</strong> The common raven is the world's largest passerine, adapted for generalist omnivory and intelligent problem-solving. Key anatomical features: a large curved bill for multi-purpose manipulation; broad soaring wings with fingered primaries for thermal gliding; proportionally large brain with expanded pallium for cognition; throat hackles for social display; and a wedge-shaped tail diagnostic in flight.</p>
+  </section>
+
+  <section class="qa-section">
+    <h2>Bill: A Multi-Purpose Tool</h2>
+    <p><strong class="claim-science">[science]</strong> The raven's bill is its primary manipulative organ and a defining field character. Key anatomical features:<sup><a href="#src-1">1</a></sup></p>
+    <ul>
+      <li><strong>Size:</strong> bill length 5.7–6.5 cm in Common Ravens — large relative to body size for a passerine. Bill length increases with body size and latitudinal position (northern ravens are larger overall).</li>
+      <li><strong>Curvature:</strong> the culmen (dorsal ridge) curves smoothly toward the tip, giving the bill its characteristic hook. This curvature is an adaptation for tearing into thick-skinned carcasses — the hook functions as a grip point.</li>
+      <li><strong>Strength:</strong> the bill can exert substantial force, sufficient to crack bones of small animals, pry open rigid containers, and tear through frozen carcasses.</li>
+      <li><strong>Nasal bristles:</strong> stiff feathers at the bill base cover the nostrils. Function is debated — may protect nostrils from debris during probing, or may enhance tactile sensitivity near the bill tip.</li>
+    </ul>
+    <p>The bill is also a social display organ. Bill-gaping (opening the bill while head-lowering) is a threat display; bill-touching between partners is an affiliative signal; bill-wiping after feeding is a maintenance behaviour also used as a displacement activity during social tension.</p>
+  </section>
+
+  <section class="qa-section">
+    <h2>Wings and Flight</h2>
+    <p><strong class="claim-science">[science]</strong> Raven wings are optimised for soaring and thermal exploitation — energy-efficient modes of flight suited to covering large areas while searching for food:<sup><a href="#src-1">1</a></sup></p>
+    <ul>
+      <li><strong>Wingspan:</strong> 115–150 cm in Common Ravens (varies with subspecies and sex; males larger).</li>
+      <li><strong>Wing shape:</strong> broad and long with distinctly emarginated ("slotted") primary feathers. These "fingers" at the wingtip reduce induced drag during soaring, allowing the bird to maintain lift at slow speeds — critical for riding thermal updrafts.</li>
+      <li><strong>Wing loading:</strong> relatively low wing loading (body mass / wing area) facilitates soaring and allows slow, controlled flight.</li>
+      <li><strong>Tail:</strong> long, wedge- or diamond-shaped tail — the central rectrices (tail feathers) project beyond the outer ones, creating the distinctive wedge visible in flight. The long tail functions as a steering surface during aerial manoeuvres.</li>
+    </ul>
+  </section>
+
+  <section class="qa-section">
+    <h2>Brain and Nervous System</h2>
+    <p><strong class="claim-science">[science]</strong> Ravens have proportionally large brains for birds — a correlate of their cognitive sophistication. The avian brain is structurally different from the mammalian brain: rather than a neocortex, birds have a pallium divided into distinct nuclei. In corvids, the nidopallium caudolaterale (NCL) — functionally analogous to the mammalian prefrontal cortex — is proportionally large and highly developed, supporting working memory, planning, and flexible decision-making.<sup><a href="#src-2">2</a></sup></p>
+    <p>Key neural features relevant to raven cognition:</p>
+    <ul>
+      <li>Large hippocampus relative to body size — associated with spatial memory and cache location recall.</li>
+      <li>Well-developed song nuclei adapted for vocal learning — ravens acquire calls throughout life.</li>
+      <li>Large optic lobes — supporting the visual processing demands of a visually-oriented species that tracks individual faces, gaze directions, and cache locations.</li>
+    </ul>
+  </section>
+
+  <section class="qa-section">
+    <h2>Throat Hackles</h2>
+    <p><strong class="claim-science">[science]</strong> The throat hackles — long, lanceolate feathers on the throat and upper breast — are a distinctive raven feature with both functional and social significance:<sup><a href="#src-1">1</a></sup></p>
+    <ul>
+      <li>Hackles can be raised or lowered voluntarily, changing the bird's apparent size and facial profile.</li>
+      <li>Raised hackles during territorial or dominance encounters signal aggression — enlarging the bird visually.</li>
+      <li>Fluffed hackles during cold conditions serve thermoregulation.</li>
+      <li>Hackle length varies between subspecies; northern Common Ravens (C. c. principalis) have longer, more pronounced hackles than southern subspecies.</li>
+    </ul>
+  </section>
+
+  <section class="qa-section">
+    <h2>Size and Sexual Dimorphism</h2>
+    <p><strong class="claim-science">[science]</strong> Common Ravens show modest sexual dimorphism — males are approximately 15–20% heavier than females on average. This size difference is smaller than in many raptors but larger than in most other passerines. Both sexes are externally similar in plumage; sex determination in the field is difficult and usually requires direct comparison of a known pair.<sup><a href="#src-1">1</a></sup></p>
+    <p>Body mass ranges: 690–1,600 g (males at upper end; females typically 800–1,100 g in temperate populations). The largest ravens are the northern subspecies (<em>C. c. principalis</em> of North America and <em>C. c. varius</em> of Iceland and Faroe Islands); the smallest are subspecies from warmer, more southern regions.</p>
+  </section>
+
+  <section class="qa-section">
+    <h2>Related Pages</h2>
+    <ul>
+      <li><a href="/questions/how-big-are-ravens/">How big are ravens?</a></li>
+      <li><a href="/questions/what-does-a-raven-look-like/">What does a raven look like?</a></li>
+      <li><a href="/behaviour/raven-feather-care-and-moult/">Raven feather care and moult</a></li>
+      <li><a href="/compare/raven-vs-crow/">Raven vs crow</a></li>
+    </ul>
+  </section>
+
+  <section class="qa-faq qa-section" aria-labelledby="faq-h2">
+    <h2 id="faq-h2">Frequently Asked Questions</h2>
+    {faq.map(item => (
+      <details class="qa-faq-item">
+        <summary class="qa-faq-q">{item.q}</summary>
+        <p class="qa-faq-a">{item.a}</p>
+      </details>
+    ))}
+  </section>
+
+  <section class="qa-sources qa-section" aria-labelledby="src-h2">
+    <h2 id="src-h2">Sources</h2>
+    <ol class="qa-src-list">
+      <li id="src-1">Boarman, W.I. & Heinrich, B. (1999). Common Raven (<em>Corvus corax</em>). In Poole, A. (ed.), <em>The Birds of North America</em>, No. 476. Cornell Lab of Ornithology. — morphology, bill anatomy, wing dimensions, throat hackles, subspecies variation.</li>
+      <li id="src-2">Güntürkün, O. & Bugnyar, T. (2016). Cognition without cortex. <em>Trends in Cognitive Sciences</em>, 20(4), 291–303. — avian brain anatomy, nidopallium caudolaterale, corvid cognitive neuroscience.</li>
+    </ol>
+    <p class="qa-claim-note"><strong class="claim-science">[science]</strong> peer-reviewed data</p>
+  </section>
+
+</article>
+</BaseLayout>
+
+<style>
+  .qa-page { max-width: 820px; margin: 0 auto; padding: 2rem 1.25rem 4rem; color: var(--iron-ink, #e8e4d8); font-family: 'Inter', sans-serif; line-height: 1.72; }
+  .qa-breadcrumb ol { display: flex; flex-wrap: wrap; gap: .25rem; list-style: none; padding: 0; margin: 0 0 2rem; font-size: .8rem; color: var(--ink-soft, #8a8070); }
+  .qa-breadcrumb a { color: var(--gold-500, #d4ae5a); text-decoration: none; }
+  .qa-pillar { font-size: .72rem; letter-spacing: .12em; text-transform: uppercase; color: var(--gold-500, #d4ae5a); margin: 0 0 .4rem; }
+  .qa-page h1 { font-family: 'Cormorant Garamond', serif; font-size: clamp(2rem, 5vw, 3rem); font-weight: 700; color: #fff; margin: 0 0 2rem; line-height: 1.1; }
+  .qa-snippet { background: rgba(212,174,90,.08); border-left: 3px solid var(--gold-500, #d4ae5a); border-radius: 0 6px 6px 0; padding: 1rem 1.25rem; margin-bottom: 2.5rem; font-size: 1.03rem; }
+  .qa-section { margin-bottom: 2.5rem; }
+  .qa-section h2 { font-family: 'Cormorant Garamond', serif; font-size: 1.5rem; font-weight: 600; color: #fff; margin: 0 0 .9rem; border-bottom: 1px solid rgba(212,174,90,.2); padding-bottom: .4rem; }
+  .qa-section p { margin: 0 0 1rem; font-size: .97rem; }
+  .qa-section ul { padding-left: 1.25rem; margin: 0 0 1rem; }
+  .qa-section li { margin-bottom: .4rem; font-size: .95rem; }
+  .claim-science { color: #7ab9e0; font-style: normal; font-size: .78rem; }
+  a[href] { color: var(--gold-500, #d4ae5a); }
+  .qa-faq-item { border-bottom: 1px solid rgba(255,255,255,.07); }
+  .qa-faq-q { cursor: pointer; padding: .9rem 0; font-size: .97rem; font-weight: 500; color: #fff; list-style: none; }
+  .qa-faq-q::before { content: '+ '; color: var(--gold-500, #d4ae5a); font-weight: 700; }
+  details[open] .qa-faq-q::before { content: '− '; }
+  .qa-faq-a { margin: 0 0 1rem; line-height: 1.7; font-size: .93rem; color: var(--ink-soft, #c8c0b0); }
+  .qa-src-list { padding-left: 1.25rem; margin: 0 0 1rem; }
+  .qa-src-list li { margin-bottom: .6rem; font-size: .82rem; color: var(--ink-soft, #8a8070); line-height: 1.6; }
+  .qa-claim-note { font-size: .78rem; color: var(--ink-soft, #605848); border-top: 1px solid rgba(255,255,255,.06); padding-top: .75rem; }
+</style>

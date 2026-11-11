@@ -1,0 +1,143 @@
+---
+/**
+ * Q&A — How many types of ravens are there?
+ * Primary keyword: how many types of ravens are there
+ * Secondary: raven species list, kinds of ravens, raven species
+ */
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const title       = 'How Many Types of Ravens Are There?';
+const description = 'There are eight species of true raven (genus Corvus, commonly called raven) plus two closely related all-black corvids sometimes called ravens. This page lists all ten and explains what makes a raven a raven.';
+const path        = '/questions/how-many-types-of-ravens-are-there/';
+
+const breadcrumbs = [
+  { name: 'Home',      url: '/' },
+  { name: 'Questions', url: '/questions/' },
+  { name: 'How Many Types of Ravens Are There?', url: path },
+];
+
+const faq = [
+  { q: 'Is the Common Raven the only real raven?', a: 'No. While the Common Raven (Corvus corax) is the most widespread and best-studied species, ornithology recognises eight species typically called "raven": Common, Thick-billed, White-necked, Chihuahuan, Australian, Forest, Little, and Fan-tailed Ravens. Brown-necked Raven and Somali Crow are closely related and sometimes included in informal lists.' },
+  { q: 'Are all ravens in the genus Corvus?', a: 'Yes. All species called "raven" belong to the genus Corvus (family Corvidae). However, the genus also includes crows, rooks, jackdaws, and choughs, so "Corvus" does not mean "raven". The boundary between "raven" and "crow" is partly a matter of common naming convention, not a strict phylogenetic division.' },
+  { q: 'Which raven species is the largest?', a: 'The Thick-billed Raven (Corvus crassirostris) of the Ethiopian Highlands is generally considered the largest corvid in the world by body mass, with weights reported up to around 1.5 kg. The Common Raven is the most widespread large raven, with adults typically weighing 0.69–1.63 kg depending on subspecies and sex.' },
+];
+---
+
+<BaseLayout title={title} description={description} path={path} ogType="article"
+  datePublished="2026-11-07" dateModified="2026-11-07"
+  breadcrumbs={breadcrumbs} faq={faq} pageType="Article">
+
+<article class="qa-page">
+
+  <nav class="qa-breadcrumb" aria-label="Breadcrumb">
+    <ol>
+      {breadcrumbs.map((b, i) => (
+        <li>
+          {i < breadcrumbs.length - 1
+            ? <><a href={b.url}>{b.name}</a><span aria-hidden="true"> › </span></>
+            : <span aria-current="page">{b.name}</span>}
+        </li>
+      ))}
+    </ol>
+  </nav>
+
+  <header class="qa-header">
+    <p class="qa-pillar">Question · Biology</p>
+    <h1>How Many Types of Ravens Are There?</h1>
+  </header>
+
+  <section class="qa-snippet" aria-label="Direct answer">
+    <p><strong class="claim-science">[science]</strong> There are eight species of bird whose common name includes the word "raven" — all in the genus <em>Corvus</em>. Two further all-black corvids (Brown-necked Raven and Somali Crow) are closely related and regularly grouped with them, bringing the most commonly cited total to ten species. The exact boundary depends on the taxonomy followed.</p>
+  </section>
+
+  <section class="qa-section">
+    <h2>The Eight Named Ravens</h2>
+    <p><strong class="claim-science">[science]</strong> Following the taxonomy used by the International Ornithological Congress (IOC) and the <em>Handbook of the Birds of the World</em>, the eight species whose standard English name contains "raven" are:<sup><a href="#src-1">1</a></sup><sup><a href="#src-2">2</a></sup></p>
+    <ol>
+      <li><strong><a href="/species/common-raven/">Common Raven</a></strong> (<em>Corvus corax</em>) — circumpolar; the most widespread raven, found across the Northern Hemisphere.</li>
+      <li><strong><a href="/species/thick-billed-raven/">Thick-billed Raven</a></strong> (<em>Corvus crassirostris</em>) — Ethiopian Highlands; the world's heaviest corvid.</li>
+      <li><strong><a href="/species/white-necked-raven/">White-necked Raven</a></strong> (<em>Corvus albicollis</em>) — mountains and gorges of eastern and southern Africa.</li>
+      <li><strong><a href="/species/chihuahuan-raven/">Chihuahuan Raven</a></strong> (<em>Corvus cryptoleucus</em>) — grasslands and desert scrub of the southwestern USA and northern Mexico.</li>
+      <li><strong><a href="/species/australian-raven/">Australian Raven</a></strong> (<em>Corvus coronoides</em>) — forests and open country of southeastern Australia.</li>
+      <li><strong><a href="/species/forest-raven/">Forest Raven</a></strong> (<em>Corvus tasmanicus</em>) — Tasmania and small areas of mainland Australia.</li>
+      <li><strong><a href="/species/little-raven/">Little Raven</a></strong> (<em>Corvus mellori</em>) — southeastern Australia; often flocks, unlike most ravens.</li>
+      <li><strong><a href="/species/fan-tailed-raven/">Fan-tailed Raven</a></strong> (<em>Corvus rhipidurus</em>) — arid regions of northeast Africa and the Middle East.</li>
+    </ol>
+  </section>
+
+  <section class="qa-section">
+    <h2>Two More Closely Related Species</h2>
+    <p><strong class="claim-science">[science]</strong> Two additional species are closely related to the ravens above and are sometimes included in popular "ten ravens" lists, though their common names do not include "raven":<sup><a href="#src-1">1</a></sup></p>
+    <ul>
+      <li><strong><a href="/species/brown-necked-raven/">Brown-necked Raven</a></strong> (<em>Corvus ruficollis</em>) — deserts of North Africa, the Middle East, and western South Asia. Very similar in ecology and appearance to the Fan-tailed Raven.</li>
+      <li><strong><a href="/species/somali-crow/">Somali Crow</a></strong> (<em>Corvus edithae</em>) — Horn of Africa. Sometimes called Dwarf Raven; previously treated as a subspecies of Brown-necked Raven.</li>
+    </ul>
+  </section>
+
+  <section class="qa-section">
+    <h2>What Makes a "Raven"?</h2>
+    <p>The word "raven" has no strict phylogenetic definition — it is a common name applied by convention. Generally, the birds called ravens tend to be: larger than the birds called crows in the same region; all-black (or largely black); and adapted to open, often rugged habitats. But "crow" and "raven" overlap considerably: the Australian Raven is closely related to the Torresian Crow, and some Australian "crows" are larger than some "ravens".</p>
+    <p><strong class="claim-science">[science]</strong> Phylogenetic studies show that the ravens do not form a single evolutionary group (clade) separate from crows — the raven-crow distinction is a naming tradition, not a natural grouping. The Common Raven, for instance, is more closely related to some crows than it is to the Australian Raven.<sup><a href="#src-3">3</a></sup></p>
+  </section>
+
+  <section class="qa-section">
+    <h2>Subspecies — Within the Common Raven</h2>
+    <p><strong class="claim-science">[science]</strong> The Common Raven alone has 11–12 recognised subspecies across its circumpolar range, varying in size (birds from cold climates tend to be larger, following Bergmann's Rule) and bill dimensions. The Californian subspecies <em>C. c. sinuatus</em> and the Himalayan <em>C. c. tibetanus</em> are among the most distinctive. Some ornithologists have argued that certain subspecies (especially <em>principalis</em> of the High Arctic) deserve full species status, but this is not currently accepted by the IOC.<sup><a href="#src-1">1</a></sup></p>
+  </section>
+
+  <section class="qa-section">
+    <h2>Related Questions</h2>
+    <ul>
+      <li><a href="/species/">Species Atlas — all ten ravens</a></li>
+      <li><a href="/questions/are-ravens-related-to-crows/">Are ravens related to crows?</a></li>
+      <li><a href="/compare/raven-vs-crow/">Raven vs crow — how to tell them apart</a></li>
+      <li><a href="/questions/how-big-are-ravens/">How big are ravens?</a></li>
+    </ul>
+  </section>
+
+  <section class="qa-faq qa-section" aria-labelledby="faq-h2">
+    <h2 id="faq-h2">Frequently Asked Questions</h2>
+    {faq.map(item => (
+      <details class="qa-faq-item">
+        <summary class="qa-faq-q">{item.q}</summary>
+        <p class="qa-faq-a">{item.a}</p>
+      </details>
+    ))}
+  </section>
+
+  <section class="qa-sources qa-section" aria-labelledby="src-h2">
+    <h2 id="src-h2">Sources</h2>
+    <ol class="qa-src-list">
+      <li id="src-1">del Hoyo, J. et al. (eds., 2009). <em>Handbook of the Birds of the World</em>, vol. 14. Lynx Edicions. — species accounts and taxonomy.</li>
+      <li id="src-2">Gill, F., Donsker, D. & Rasmussen, P. (eds., 2024). IOC World Bird List v14.1. International Ornithological Congress. — standard English names and species limits.</li>
+      <li id="src-3">Jønsson, K.A. et al. (2012). Accurate and improved dating of the corvoid passerine bird radiation using a breast-feather louse as a secondary calibration point. <em>Systematic Biology</em>, 61(6), 1017–1023. — corvid phylogeny.</li>
+    </ol>
+    <p class="qa-claim-note"><strong class="claim-science">[science]</strong> peer-reviewed study or field-guide data</p>
+  </section>
+
+</article>
+</BaseLayout>
+
+<style>
+  .qa-page { max-width: 820px; margin: 0 auto; padding: 2rem 1.25rem 4rem; color: var(--iron-ink, #e8e4d8); font-family: 'Inter', sans-serif; line-height: 1.72; }
+  .qa-breadcrumb ol { display: flex; flex-wrap: wrap; gap: .25rem; list-style: none; padding: 0; margin: 0 0 2rem; font-size: .8rem; color: var(--ink-soft, #8a8070); }
+  .qa-breadcrumb a { color: var(--gold-500, #d4ae5a); text-decoration: none; }
+  .qa-pillar { font-size: .72rem; letter-spacing: .12em; text-transform: uppercase; color: var(--gold-500, #d4ae5a); margin: 0 0 .4rem; }
+  .qa-page h1 { font-family: 'Cormorant Garamond', serif; font-size: clamp(2rem, 5vw, 3rem); font-weight: 700; color: #fff; margin: 0 0 2rem; line-height: 1.1; }
+  .qa-snippet { background: rgba(212,174,90,.08); border-left: 3px solid var(--gold-500, #d4ae5a); border-radius: 0 6px 6px 0; padding: 1rem 1.25rem; margin-bottom: 2.5rem; font-size: 1.03rem; }
+  .qa-section { margin-bottom: 2.5rem; }
+  .qa-section h2 { font-family: 'Cormorant Garamond', serif; font-size: 1.5rem; font-weight: 600; color: #fff; margin: 0 0 .9rem; border-bottom: 1px solid rgba(212,174,90,.2); padding-bottom: .4rem; }
+  .qa-section p { margin: 0 0 1rem; font-size: .97rem; }
+  .qa-section ol, .qa-section ul { padding-left: 1.25rem; margin: 0 0 1rem; }
+  .qa-section li { margin-bottom: .4rem; font-size: .95rem; }
+  .claim-science { color: #7ab9e0; font-style: normal; font-size: .78rem; }
+  a[href] { color: var(--gold-500, #d4ae5a); }
+  .qa-faq-item { border-bottom: 1px solid rgba(255,255,255,.07); }
+  .qa-faq-q { cursor: pointer; padding: .9rem 0; font-size: .97rem; font-weight: 500; color: #fff; list-style: none; }
+  .qa-faq-q::before { content: '+ '; color: var(--gold-500, #d4ae5a); font-weight: 700; }
+  details[open] .qa-faq-q::before { content: '− '; }
+  .qa-faq-a { margin: 0 0 1rem; line-height: 1.7; font-size: .93rem; color: var(--ink-soft, #c8c0b0); }
+  .qa-src-list { padding-left: 1.25rem; margin: 0 0 1rem; }
+  .qa-src-list li { margin-bottom: .6rem; font-size: .82rem; color: var(--ink-soft, #8a8070); line-height: 1.6; }
+  .qa-claim-note { font-size: .78rem; color: var(--ink-soft, #605848); border-top: 1px solid rgba(255,255,255,.06); padding-top: .75rem; }
+</style>

@@ -1,0 +1,147 @@
+---
+/**
+ * Behaviour — Raven bathing and preening
+ * BEH·20
+ * Primary keyword: raven preening
+ * Secondary: raven bathing behaviour, do ravens bathe, corvid feather maintenance
+ */
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const title       = 'Raven Bathing and Preening: Feather Maintenance Behaviour';
+const description = 'Ravens bathe regularly in water, rain, and snow, and spend significant time preening their feathers. This chapter covers the feather maintenance behaviours of ravens — bathing, preening, anting, sunning, and mutual allopreening.';
+const path        = '/behaviour/raven-bathing-and-preening/';
+
+const breadcrumbs = [
+  { name: 'Home',      url: '/' },
+  { name: 'Behaviour', url: '/behaviour/' },
+  { name: 'Raven Bathing and Preening', url: path },
+];
+
+const faq = [
+  { q: 'Do ravens bathe?', a: 'Yes. Ravens bathe frequently in water — standing in shallow water and dipping their heads and bodies, then ruffling and shaking their feathers. They also bathe in rain (rain-bathing, spreading wings on a perch during rainfall) and roll in snow (snow-bathing). Bathing is a regular, daily or near-daily behaviour in birds with access to water, combined with preening to maintain feather condition.' },
+  { q: 'What is allopreening in ravens?', a: 'Allopreening is mutual preening — one bird preening the head and neck of another. In ravens, allopreening is a social bonding behaviour primarily observed between pair-bonded mates, but also between closely bonded non-mated individuals. The head and neck are regions a bird cannot effectively self-preen; allopreening from a trusted partner keeps these feathers in good condition and reinforces pair bonds. Allopreening occurs year-round in bonded raven pairs.' },
+  { q: 'What is anting in ravens?', a: 'Anting is a behaviour in which birds rub ants (or other arthropods) through their feathers, or lie on ant nests and allow ants to move through their plumage. The formic acid from ants may suppress ectoparasites (feather lice and mites) or have other functions not yet fully understood. Ravens and other corvids (crows, jays) anting behaviour has been documented; active anting (picking up ants and rubbing them on feathers) is the form most commonly reported in corvids.' },
+];
+---
+
+<BaseLayout title={title} description={description} path={path} ogType="article"
+  datePublished="2026-11-07" dateModified="2026-11-07"
+  breadcrumbs={breadcrumbs} faq={faq} pageType="Article">
+
+<article class="qa-page">
+
+  <nav class="qa-breadcrumb" aria-label="Breadcrumb">
+    <ol>
+      {breadcrumbs.map((b, i) => (
+        <li>
+          {i < breadcrumbs.length - 1
+            ? <><a href={b.url}>{b.name}</a><span aria-hidden="true"> › </span></>
+            : <span aria-current="page">{b.name}</span>}
+        </li>
+      ))}
+    </ol>
+  </nav>
+
+  <header class="qa-header">
+    <p class="qa-pillar">Behaviour · BEH·20</p>
+    <h1>Raven Bathing and Preening: Feather Maintenance Behaviour</h1>
+  </header>
+
+  <section class="qa-snippet" aria-label="Direct answer">
+    <p><strong class="claim-science">[science]</strong> Ravens dedicate significant time to feather maintenance — bathing in water, rain, and snow; systematic self-preening using bill and feet; allopreening (mutual preening) with bonded partners; sunning; and occasional anting. These behaviours maintain feather waterproofing, insulation, and aerodynamic function, and in the case of allopreening, serve an important social bonding function.</p>
+  </section>
+
+  <section class="qa-section">
+    <h2>Why Feather Maintenance Matters</h2>
+    <p><strong class="claim-science">[science]</strong> Feathers are the raven's primary interface with the environment — providing insulation against Arctic cold and desert heat, waterproofing against rain, and the aerodynamic surface for flight. A raven's roughly 10,000–12,000 feathers (typical for large passerines) must be kept clean, properly aligned, and free of parasites.<sup><a href="#src-1">1</a></sup></p>
+    <p>Feather degradation from ectoparasites (feather lice, mites) and physical wear reduces insulation and flight performance. Regular preening distributes preen oil from the uropygial gland at the base of the tail — an antimicrobial, antifungal oil that also improves water repellency. Ravens have a large, well-developed uropygial gland.</p>
+  </section>
+
+  <section class="qa-section">
+    <h2>Bathing</h2>
+    <p><strong class="claim-science">[science]</strong> Ravens use several bathing methods:<sup><a href="#src-1">1</a></sup></p>
+    <ul>
+      <li><strong>Water bathing:</strong> wading into shallow water (streams, puddles, rain pools, bird baths), dipping the head, spreading wings, and shaking vigorously. After water bathing, ravens typically move to a perch and preen thoroughly while the feathers dry. Water bathing is most common when ambient temperatures are mild; ravens bathe year-round in temperate regions.</li>
+      <li><strong>Rain-bathing:</strong> standing on an exposed perch during rain with wings spread and ruffled, allowing rain to penetrate the feather layers. Common in both ravens and crows; the bird typically faces into or away from the rain direction to allow thorough wetting.</li>
+      <li><strong>Snow-bathing:</strong> documented in ravens in northern latitudes — rolling in fresh snow, rubbing the belly and breast through it. The abrasive action may help remove debris or parasites; cold snow may also temporarily suppress ectoparasite activity. Heinrich described this behaviour in his captive ravens in Vermont.</li>
+      <li><strong>Dust-bathing:</strong> less documented in ravens than in some other bird families, but corvids will occasionally engage in dust-bathing on dry, loose soil. The fine particles may similarly suppress parasites.</li>
+    </ul>
+  </section>
+
+  <section class="qa-section">
+    <h2>Preening</h2>
+    <p><strong class="claim-science">[science]</strong> Self-preening in ravens involves:<sup><a href="#src-1">1</a></sup></p>
+    <ul>
+      <li>Using the bill to nibble through individual feathers from base to tip (zipping barbules back together), removing debris and ectoparasites.</li>
+      <li>Collecting preen oil from the uropygial gland by rubbing the bill against it, then distributing the oil through the plumage.</li>
+      <li>Using the feet to scratch the head and neck — regions the bill cannot reach directly. Ravens can scratch with both feet and show some preference for scratching over the wing (indirect scratching method common in corvids).</li>
+      <li>Bill-wiping on branches or other hard surfaces after feeding — cleaning the bill and potentially distributing preen oil.</li>
+    </ul>
+    <p>Preening sessions often follow bathing and feeding. A raven may spend 10–30 minutes in a thorough preening session, working systematically from one body region to another.</p>
+  </section>
+
+  <section class="qa-section">
+    <h2>Allopreening</h2>
+    <p><strong class="claim-science">[science]</strong> Allopreening — one raven preening another — is primarily a pair-bond behaviour in Common Ravens. The soliciting bird typically adopts a distinctive posture: crouching, fluffing the head and neck feathers, and holding the head and bill low or to one side. The preening bird responds by nibbling through the feathers of the head, nape, and upper neck — regions inaccessible to self-preening.<sup><a href="#src-1">1</a></sup></p>
+    <p>Allopreening in ravens is not purely maintenance-functional — it occurs year-round including periods when feather condition is good, and its frequency correlates with pair-bond strength. It is therefore understood as a social bonding mechanism as much as a hygienic one. Bugnyar's research group at the Konrad Lorenz Research Centre observed that newly paired ravens engage in extensive allopreening in the early stages of pair formation.</p>
+  </section>
+
+  <section class="qa-section">
+    <h2>Anting and Sunning</h2>
+    <p><strong class="claim-science">[science]</strong> Anting has been documented in corvids including ravens. In active anting, the bird picks up an ant (or crushed ant) and rubs it through its feathers, particularly the wing underfeathers. The formic acid released from crushed ants is thought to act as an antiparasitic agent against feather lice and mites, though the full function remains debated — some researchers suggest sensory stimulation plays a role.<sup><a href="#src-1">1</a></sup></p>
+    <p>Sunning — spreading wings and exposing the dorsal surface to direct sunlight — is common in corvids and probably serves multiple functions: warming in cold weather, activating or redistributing preen oil, and possibly stimulating ectoparasites to move to surfaces where they are more easily preened out. Ravens sunning on cliff ledges or exposed perches is a common observation in populations from cold northern latitudes.</p>
+  </section>
+
+  <section class="qa-section">
+    <h2>Related Pages</h2>
+    <ul>
+      <li><a href="/behaviour/raven-social-life-and-roosts/">Raven social life and roosts</a></li>
+      <li><a href="/behaviour/raven-pair-bonds/">Raven pair bonds</a></li>
+      <li><a href="/behaviour/raven-play/">Raven play behaviour</a></li>
+    </ul>
+  </section>
+
+  <section class="qa-faq qa-section" aria-labelledby="faq-h2">
+    <h2 id="faq-h2">Frequently Asked Questions</h2>
+    {faq.map(item => (
+      <details class="qa-faq-item">
+        <summary class="qa-faq-q">{item.q}</summary>
+        <p class="qa-faq-a">{item.a}</p>
+      </details>
+    ))}
+  </section>
+
+  <section class="qa-sources qa-section" aria-labelledby="src-h2">
+    <h2 id="src-h2">Sources</h2>
+    <ol class="qa-src-list">
+      <li id="src-1">Boarman, W.I. & Heinrich, B. (1999). Common Raven (<em>Corvus corax</em>). In Poole, A. (ed.), <em>The Birds of North America</em>, No. 476. Cornell Lab of Ornithology. — bathing, preening, anting, allopreening in Common Ravens.</li>
+    </ol>
+    <p class="qa-claim-note"><strong class="claim-science">[science]</strong> peer-reviewed or field-guide data</p>
+  </section>
+
+</article>
+</BaseLayout>
+
+<style>
+  .qa-page { max-width: 820px; margin: 0 auto; padding: 2rem 1.25rem 4rem; color: var(--iron-ink, #e8e4d8); font-family: 'Inter', sans-serif; line-height: 1.72; }
+  .qa-breadcrumb ol { display: flex; flex-wrap: wrap; gap: .25rem; list-style: none; padding: 0; margin: 0 0 2rem; font-size: .8rem; color: var(--ink-soft, #8a8070); }
+  .qa-breadcrumb a { color: var(--gold-500, #d4ae5a); text-decoration: none; }
+  .qa-pillar { font-size: .72rem; letter-spacing: .12em; text-transform: uppercase; color: var(--gold-500, #d4ae5a); margin: 0 0 .4rem; }
+  .qa-page h1 { font-family: 'Cormorant Garamond', serif; font-size: clamp(2rem, 5vw, 3rem); font-weight: 700; color: #fff; margin: 0 0 2rem; line-height: 1.1; }
+  .qa-snippet { background: rgba(212,174,90,.08); border-left: 3px solid var(--gold-500, #d4ae5a); border-radius: 0 6px 6px 0; padding: 1rem 1.25rem; margin-bottom: 2.5rem; font-size: 1.03rem; }
+  .qa-section { margin-bottom: 2.5rem; }
+  .qa-section h2 { font-family: 'Cormorant Garamond', serif; font-size: 1.5rem; font-weight: 600; color: #fff; margin: 0 0 .9rem; border-bottom: 1px solid rgba(212,174,90,.2); padding-bottom: .4rem; }
+  .qa-section p { margin: 0 0 1rem; font-size: .97rem; }
+  .qa-section ul { padding-left: 1.25rem; margin: 0 0 1rem; }
+  .qa-section li { margin-bottom: .4rem; font-size: .95rem; }
+  .claim-science { color: #7ab9e0; font-style: normal; font-size: .78rem; }
+  a[href] { color: var(--gold-500, #d4ae5a); }
+  .qa-faq-item { border-bottom: 1px solid rgba(255,255,255,.07); }
+  .qa-faq-q { cursor: pointer; padding: .9rem 0; font-size: .97rem; font-weight: 500; color: #fff; list-style: none; }
+  .qa-faq-q::before { content: '+ '; color: var(--gold-500, #d4ae5a); font-weight: 700; }
+  details[open] .qa-faq-q::before { content: '− '; }
+  .qa-faq-a { margin: 0 0 1rem; line-height: 1.7; font-size: .93rem; color: var(--ink-soft, #c8c0b0); }
+  .qa-src-list { padding-left: 1.25rem; margin: 0 0 1rem; }
+  .qa-src-list li { margin-bottom: .6rem; font-size: .82rem; color: var(--ink-soft, #8a8070); line-height: 1.6; }
+  .qa-claim-note { font-size: .78rem; color: var(--ink-soft, #605848); border-top: 1px solid rgba(255,255,255,.06); padding-top: .75rem; }
+</style>

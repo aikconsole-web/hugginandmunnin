@@ -1,0 +1,142 @@
+---
+/**
+ * Places — Ravens in Iceland
+ * PLC·01
+ * Primary keyword: ravens in iceland
+ * Secondary: common raven iceland, hrafn iceland, iceland raven population
+ */
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const title       = 'Ravens in Iceland: The Most Raven-Saturated Country on Earth';
+const description = 'Iceland may have the highest density of Common Ravens per unit area of any country. The raven (hrafn) is woven into Icelandic culture, place names, and Viking history. This page covers Iceland\'s raven ecology and cultural significance.';
+const path        = '/places/ravens-in-iceland/';
+
+const breadcrumbs = [
+  { name: 'Home',   url: '/' },
+  { name: 'Places', url: '/places/' },
+  { name: 'Ravens in Iceland', url: path },
+];
+
+const faq = [
+  { q: 'Are there many ravens in Iceland?', a: 'Yes — Iceland has an exceptionally high density of Common Ravens relative to its land area, making it one of the most raven-saturated places on Earth. The harsh subarctic climate, abundant coastal and inland carrion (marine animals, sheep, fish waste), and relatively low persecution combine to maintain a thriving raven population. Ravens are visible almost everywhere in Iceland — from city suburbs to remote highland fells.' },
+  { q: 'What is the Icelandic word for raven?', a: 'The Icelandic word for raven is hrafn (pronounced approximately "HRAP-n"). This is the direct descendant of Old Norse hrafn, unchanged over more than a millennium. The word appears widely in Icelandic place names, personal names (Hrafnkell, "Raven-kettle"), and in the name of the settlement narrative Raven-Flóki (Hrafna-Flóki Vilgerðarson), the Norse explorer who used ravens to navigate to Iceland.' },
+  { q: 'Did the Vikings use ravens to navigate to Iceland?', a: 'According to Landnámabók (the Book of Settlements, a medieval Icelandic chronicle), Hrafna-Flóki Vilgerðarson carried ravens on his voyage to find Iceland and released them to determine whether land was nearby. This raven-navigation story has become one of the most famous raven legends associated with Iceland. Whether it is historical or legendary is debated — the technique has real parallels in other medieval navigation traditions, but the story is known only from a source written centuries after the event.' },
+];
+---
+
+<BaseLayout title={title} description={description} path={path} ogType="article"
+  datePublished="2026-11-07" dateModified="2026-11-07"
+  breadcrumbs={breadcrumbs} faq={faq} pageType="Article">
+
+<article class="qa-page">
+
+  <nav class="qa-breadcrumb" aria-label="Breadcrumb">
+    <ol>
+      {breadcrumbs.map((b, i) => (
+        <li>
+          {i < breadcrumbs.length - 1
+            ? <><a href={b.url}>{b.name}</a><span aria-hidden="true"> › </span></>
+            : <span aria-current="page">{b.name}</span>}
+        </li>
+      ))}
+    </ol>
+  </nav>
+
+  <header class="qa-header">
+    <p class="qa-pillar">Places · PLC·01</p>
+    <h1>Ravens in Iceland: The Most Raven-Saturated Country on Earth</h1>
+  </header>
+
+  <section class="qa-snippet" aria-label="Direct answer">
+    <p><strong class="claim-science">[science]</strong> Iceland has one of the world's highest densities of Common Ravens (<em>Corvus corax</em>) per unit area, sustained by abundant food resources (coastal carrion, fish waste, sheep) and relatively low persecution. The raven (<em>hrafn</em>) is embedded in Icelandic culture, place names, and Viking navigation mythology, making Iceland the richest intersection of raven ecology and raven culture anywhere in the world.</p>
+  </section>
+
+  <section class="qa-section">
+    <h2>Raven Ecology in Iceland</h2>
+    <p><strong class="claim-science">[science]</strong> Iceland provides exceptionally favourable conditions for ravens:<sup><a href="#src-1">1</a></sup></p>
+    <ul>
+      <li><strong>Food abundance:</strong> Iceland's coastline provides dead seabirds, fish waste from fishing harbours, and stranded marine animals. Inland, sheep farming provides year-round carrion (dead ewes and lambs) and food waste. These reliable food sources support high raven densities year-round.</li>
+      <li><strong>Nest sites:</strong> Iceland's extensive lava cliffs, sea cliffs, and rocky highlands offer abundant nest sites for a cliff-associated species.</li>
+      <li><strong>Low persecution:</strong> while ravens have been persecuted in Iceland historically (particularly in relation to sheep farming), they are legally protected and persecution has declined significantly. Current legal status under Icelandic wildlife law protects the species.</li>
+      <li><strong>Winter adaptations:</strong> Common Ravens are subarctic specialists well-adapted to Icelandic winters. The absence of competing large corvids (no crows, rooks, or jackdaws in Iceland) means ravens have little inter-species competition.</li>
+    </ul>
+  </section>
+
+  <section class="qa-section">
+    <h2>The Raven in Icelandic Culture and Language</h2>
+    <p><strong class="claim-lore">[lore]</strong> The raven is unusually prominent in Icelandic culture and language:<sup><a href="#src-2">2</a></sup></p>
+    <ul>
+      <li><strong>Hrafn (the word):</strong> Old Norse <em>hrafn</em> → Modern Icelandic <em>hrafn</em> — the word is unchanged over a millennium, a marker of linguistic conservatism. It appears in place names across Iceland: Hrafnabjörg ("Raven Rocks"), Hrafnagil ("Raven Gorge"), and many others.</li>
+      <li><strong>Personal names:</strong> <em>Hrafn</em> was a common Viking-age personal name in Iceland. The saga hero Hrafnkell (literally "Raven-kettle") is the protagonist of Hrafnkels saga Freysgoða, one of the finest Old Icelandic sagas.</li>
+      <li><strong>Odin's ravens:</strong> in Norse religion, Huginn and Muninn — Odin's two ravens — were major mythological figures for the Norse settlers of Iceland. The raven's everyday presence in the Icelandic landscape reinforced its mythological significance.</li>
+    </ul>
+  </section>
+
+  <section class="qa-section">
+    <h2>Raven-Flóki and the Discovery of Iceland</h2>
+    <p><strong class="claim-lore">[lore]</strong> One of the most famous raven stories in Icelandic tradition concerns Hrafna-Flóki Vilgerðarson ("Raven-Flóki"), a Norse explorer credited in the <em>Landnámabók</em> (Book of Settlements, compiled c. 12th–13th century) with deliberately navigating to Iceland using ravens:<sup><a href="#src-2">2</a></sup></p>
+    <p>Flóki is said to have dedicated three ravens before his voyage and released them one by one as he sailed. The first two returned to the ship; the third flew forward — signalling land ahead. Flóki followed the bird to Iceland. The story gave him his nickname and became one of the foundational navigation legends of Viking-age exploration.</p>
+    <p>Whether this story is historical or legendary is unknown — the <em>Landnámabók</em> was compiled centuries after the events it describes. The technique itself (releasing birds to find land) is attested in other early medieval navigation traditions and has some plausibility as a real practice.</p>
+  </section>
+
+  <section class="qa-section">
+    <h2>Ravens in Iceland Today</h2>
+    <p><strong class="claim-science">[science]</strong> Iceland's raven population today is thriving. Ravens are visible in Reykjavík suburbs, in the highlands, on farmland, and along every coast. They are legally protected under Icelandic wildlife legislation. Some conflict with sheep farmers persists — ravens are accused of eye-pecking on weakened ewes and lambs during lambing season — but widespread persecution is no longer legal. The species remains one of the most visible large birds in Iceland and one of the most culturally resonant.</p>
+  </section>
+
+  <section class="qa-section">
+    <h2>Related Pages</h2>
+    <ul>
+      <li><a href="/lore/norse/raven-floki-and-iceland/">Raven-Flóki and Iceland</a></li>
+      <li><a href="/lore/norse/hrafn-old-norse-word/">Hrafn — the Old Norse word for raven</a></li>
+      <li><a href="/species/common-raven/">Common Raven — species profile</a></li>
+      <li><a href="/lore/norse/huginn-and-muninn/">Huginn and Muninn</a></li>
+    </ul>
+  </section>
+
+  <section class="qa-faq qa-section" aria-labelledby="faq-h2">
+    <h2 id="faq-h2">Frequently Asked Questions</h2>
+    {faq.map(item => (
+      <details class="qa-faq-item">
+        <summary class="qa-faq-q">{item.q}</summary>
+        <p class="qa-faq-a">{item.a}</p>
+      </details>
+    ))}
+  </section>
+
+  <section class="qa-sources qa-section" aria-labelledby="src-h2">
+    <h2 id="src-h2">Sources</h2>
+    <ol class="qa-src-list">
+      <li id="src-1">Boarman, W.I. & Heinrich, B. (1999). Common Raven (<em>Corvus corax</em>). In <em>Birds of the World</em> (A.F. Poole, ed.). Cornell Lab of Ornithology. — range, population ecology.</li>
+      <li id="src-2">Pálsson, H. & Edwards, P. (trans., 1972). <em>Book of Settlements: Landnámabók</em>. University of Manitoba Press. — Raven-Flóki passage.</li>
+    </ol>
+    <p class="qa-claim-note"><strong class="claim-science">[science]</strong> peer-reviewed or field-guide data &nbsp;|&nbsp; <strong class="claim-lore">[lore]</strong> named cultural/historical source</p>
+  </section>
+
+</article>
+</BaseLayout>
+
+<style>
+  .qa-page { max-width: 820px; margin: 0 auto; padding: 2rem 1.25rem 4rem; color: var(--iron-ink, #e8e4d8); font-family: 'Inter', sans-serif; line-height: 1.72; }
+  .qa-breadcrumb ol { display: flex; flex-wrap: wrap; gap: .25rem; list-style: none; padding: 0; margin: 0 0 2rem; font-size: .8rem; color: var(--ink-soft, #8a8070); }
+  .qa-breadcrumb a { color: var(--gold-500, #d4ae5a); text-decoration: none; }
+  .qa-pillar { font-size: .72rem; letter-spacing: .12em; text-transform: uppercase; color: var(--gold-500, #d4ae5a); margin: 0 0 .4rem; }
+  .qa-page h1 { font-family: 'Cormorant Garamond', serif; font-size: clamp(2rem, 5vw, 3rem); font-weight: 700; color: #fff; margin: 0 0 2rem; line-height: 1.1; }
+  .qa-snippet { background: rgba(212,174,90,.08); border-left: 3px solid var(--gold-500, #d4ae5a); border-radius: 0 6px 6px 0; padding: 1rem 1.25rem; margin-bottom: 2.5rem; font-size: 1.03rem; }
+  .qa-section { margin-bottom: 2.5rem; }
+  .qa-section h2 { font-family: 'Cormorant Garamond', serif; font-size: 1.5rem; font-weight: 600; color: #fff; margin: 0 0 .9rem; border-bottom: 1px solid rgba(212,174,90,.2); padding-bottom: .4rem; }
+  .qa-section p { margin: 0 0 1rem; font-size: .97rem; }
+  .qa-section ul { padding-left: 1.25rem; margin: 0 0 1rem; }
+  .qa-section li { margin-bottom: .4rem; font-size: .95rem; }
+  .claim-science { color: #7ab9e0; font-style: normal; font-size: .78rem; }
+  .claim-lore { color: #c4a26a; font-style: normal; font-size: .78rem; }
+  a[href] { color: var(--gold-500, #d4ae5a); }
+  .qa-faq-item { border-bottom: 1px solid rgba(255,255,255,.07); }
+  .qa-faq-q { cursor: pointer; padding: .9rem 0; font-size: .97rem; font-weight: 500; color: #fff; list-style: none; }
+  .qa-faq-q::before { content: '+ '; color: var(--gold-500, #d4ae5a); font-weight: 700; }
+  details[open] .qa-faq-q::before { content: '− '; }
+  .qa-faq-a { margin: 0 0 1rem; line-height: 1.7; font-size: .93rem; color: var(--ink-soft, #c8c0b0); }
+  .qa-src-list { padding-left: 1.25rem; margin: 0 0 1rem; }
+  .qa-src-list li { margin-bottom: .6rem; font-size: .82rem; color: var(--ink-soft, #8a8070); line-height: 1.6; }
+  .qa-claim-note { font-size: .78rem; color: var(--ink-soft, #605848); border-top: 1px solid rgba(255,255,255,.06); padding-top: .75rem; }
+</style>

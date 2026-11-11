@@ -1,0 +1,144 @@
+---
+/**
+ * Myths — Ravens only eat carrion
+ * MYTH·21
+ * Primary keyword: do ravens only eat carrion
+ * Secondary: what do ravens eat, ravens omnivore, raven diet myth
+ */
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const title       = 'Do Ravens Only Eat Carrion? The Omnivore Myth Examined';
+const description = 'Ravens are strongly associated with carrion and death, but they are generalist omnivores — their diet spans berries, insects, eggs, small mammals, plant matter, and human food waste. This page examines what ravens actually eat and why the carrion-only myth persists.';
+const path        = '/myths/ravens-only-eat-carrion/';
+
+const breadcrumbs = [
+  { name: 'Home',   url: '/' },
+  { name: 'Myths',  url: '/myths/' },
+  { name: 'Ravens Only Eat Carrion', url: path },
+];
+
+const faq = [
+  { q: 'Do ravens only eat dead animals?', a: 'No. Ravens are generalist omnivores — carrion is an important food source but represents only part of their actual diet. Studies of raven diet from stomach contents, pellet analysis, and direct observation document consumption of: invertebrates (beetles, grasshoppers, earthworms), small vertebrates (voles, mice, lizards), eggs and nestlings of other birds, berries and other plant material, grain, human food waste, and large carrion. The relative contribution of each food type varies seasonally and geographically — carrion is especially important in winter and in upland/arctic habitats where invertebrate prey is scarce.' },
+  { q: 'Are ravens herbivores?', a: 'Ravens are not herbivores — they are omnivores that consume both animal and plant material, with animal matter (invertebrates, vertebrate prey, eggs, carrion) making up the majority of their diet in most habitats. However, plant foods can form a significant fraction of diet seasonally: berries (rowan, blueberry, crowberry) are consumed heavily in late summer and autumn in upland habitats; grain is consumed from agricultural fields; and plant material is documented in pellets and stomach contents from various populations. Ravens are best described as opportunistic omnivores — they eat whatever is available and profitable.' },
+  { q: 'Why are ravens associated with carrion and death?', a: 'Ravens\' cultural association with death derives from their real behaviour: they are attracted to large carcasses, they follow hunters, soldiers, and herders, and they appear wherever dying animals are present. In pre-modern Europe, ravens appeared at battlefields, gibbets, and slaughterhouses — prominent locations that made their carrion-feeding highly visible and culturally memorable. This conspicuous association with death became embedded in literature, heraldry, and folklore, creating an impression that carrion is their primary food — when in fact it is one of several food categories that ravens exploit opportunistically. The death association is real but the exclusivity of the carrion diet is myth.' },
+];
+
+const verdict = 'false';
+---
+
+<BaseLayout title={title} description={description} path={path} ogType="article"
+  datePublished="2026-11-09" dateModified="2026-11-09"
+  breadcrumbs={breadcrumbs} faq={faq} pageType="Article">
+
+<article class="qa-page">
+
+  <nav class="qa-breadcrumb" aria-label="Breadcrumb">
+    <ol>
+      {breadcrumbs.map((b, i) => (
+        <li>
+          {i < breadcrumbs.length - 1
+            ? <><a href={b.url}>{b.name}</a><span aria-hidden="true"> › </span></>
+            : <span aria-current="page">{b.name}</span>}
+        </li>
+      ))}
+    </ol>
+  </nav>
+
+  <header class="qa-header">
+    <p class="qa-pillar">Myths · MYTH·21</p>
+    <h1>Do Ravens Only Eat Carrion? The Omnivore Myth Examined</h1>
+  </header>
+
+  <section class="qa-snippet" aria-label="Direct answer">
+    <div class={`verdict verdict-${verdict}`}>
+      <span class="verdict-label">Verdict: False</span>
+      <p><strong class="claim-science">[science]</strong> Ravens are generalist omnivores, not carrion specialists. Their diet spans invertebrates, small vertebrates, eggs, berries, grain, and human food waste — alongside carrion. Carrion is an important food source, particularly in winter and in open/arctic habitats, but diet studies consistently show it represents a fraction of total intake, not the whole. The myth of the carrion-only raven reflects their cultural association with death rather than their actual feeding ecology.</p>
+    </div>
+  </section>
+
+  <section class="qa-section">
+    <h2>What Ravens Actually Eat</h2>
+    <p><strong class="claim-science">[science]</strong> Diet studies from raven populations across the Holarctic document broad omnivory:<sup><a href="#src-1">1</a></sup><sup><a href="#src-2">2</a></sup></p>
+    <ul>
+      <li><strong>Invertebrates:</strong> beetles, grasshoppers, caterpillars, earthworms, and other invertebrates are taken opportunistically year-round. In summer, invertebrates may dominate diet in some populations — ravens foraging over meadows and open ground actively search for invertebrate prey in a manner similar to rooks or magpies.</li>
+      <li><strong>Small vertebrates:</strong> voles, mice, shrews, lizards, frogs, and small birds are captured and consumed. Ravens are capable hunters of small mammals — they are documented catching voles in direct pursuit and striking birds flushed from vegetation.</li>
+      <li><strong>Eggs and nestlings:</strong> raven predation on seabird colonies (guillemot and puffin eggs), ground-nesting birds (grouse, lapwing), and other species' nests is well documented. Egg predation is a significant seasonal food source in areas with accessible nesting colonies.</li>
+      <li><strong>Plant material:</strong> berries (rowan/Sorbus, blueberry/Vaccinium, crowberry/Empetrum) are consumed heavily in late summer. Grain from agricultural fields contributes to raven diet in lowland farming areas.</li>
+      <li><strong>Carrion:</strong> ungulate, livestock, and road-kill carrion is taken opportunistically and may dominate diet in winter when other prey is scarce. Ravens are adept at locating carcasses and use social information (following other ravens) to find food.</li>
+      <li><strong>Human food waste:</strong> refuse, food scraps, and cached human food represent a significant modern food source in areas with human habitation.</li>
+    </ul>
+  </section>
+
+  <section class="qa-section">
+    <h2>Why the Myth Persists</h2>
+    <p><strong class="claim-science">[science]</strong> Several factors sustain the carrion-only perception:<sup><a href="#src-2">2</a></sup></p>
+    <ul>
+      <li><strong>Cultural visibility:</strong> raven appearances at medieval gallows, battlefields, and slaughterhouses were conspicuous and memorable events. These high-profile encounters with the death-carrion context became emblematic even though they represented a narrow slice of actual raven feeding behaviour.</li>
+      <li><strong>Literary reinforcement:</strong> from the Norse battlefield-raven to Poe's "Nevermore", literary representations of ravens focus almost exclusively on the death and carrion context. This creates a feedback loop — the cultural image selects for the death association and omits the invertebrate-foraging, berry-eating raven entirely.</li>
+      <li><strong>Confusion with vultures:</strong> the raven's association with death leads to confusion with vultures, which are obligate carrion specialists. Ravens share the feeding site with vultures at large carcasses but are taxonomically, ecologically, and behaviourally very different.</li>
+    </ul>
+  </section>
+
+  <section class="qa-section">
+    <h2>Related Pages</h2>
+    <ul>
+      <li><a href="/questions/what-do-ravens-eat/">What do ravens eat?</a></li>
+      <li><a href="/behaviour/raven-scavenging-strategies/">Raven scavenging strategies</a></li>
+      <li><a href="/myths/ravens-bring-death/">Ravens bring death (myth)</a></li>
+      <li><a href="/compare/raven-vs-vulture/">Raven vs vulture</a></li>
+    </ul>
+  </section>
+
+  <section class="qa-faq qa-section" aria-labelledby="faq-h2">
+    <h2 id="faq-h2">Frequently Asked Questions</h2>
+    {faq.map(item => (
+      <details class="qa-faq-item">
+        <summary class="qa-faq-q">{item.q}</summary>
+        <p class="qa-faq-a">{item.a}</p>
+      </details>
+    ))}
+  </section>
+
+  <section class="qa-sources qa-section" aria-labelledby="src-h2">
+    <h2 id="src-h2">Sources</h2>
+    <ol class="qa-src-list">
+      <li id="src-1">Boarman, W.I. & Heinrich, B. (1999). Common Raven (<em>Corvus corax</em>). In Poole, A. (ed.), <em>The Birds of North America</em>, No. 476. Cornell Lab of Ornithology. — diet composition studies, invertebrate prey, plant food, seasonal diet shifts.</li>
+      <li id="src-2">Marzluff, J.M. & Angell, T. (2005). <em>In the Company of Crows and Ravens</em>. Yale University Press. — cultural association with death, omnivory, historical context, human food waste exploitation.</li>
+    </ol>
+    <p class="qa-claim-note"><strong class="claim-science">[science]</strong> peer-reviewed data</p>
+  </section>
+
+</article>
+</BaseLayout>
+
+<style>
+  .qa-page { max-width: 820px; margin: 0 auto; padding: 2rem 1.25rem 4rem; color: var(--iron-ink, #e8e4d8); font-family: 'Inter', sans-serif; line-height: 1.72; }
+  .qa-breadcrumb ol { display: flex; flex-wrap: wrap; gap: .25rem; list-style: none; padding: 0; margin: 0 0 2rem; font-size: .8rem; color: var(--ink-soft, #8a8070); }
+  .qa-breadcrumb a { color: var(--gold-500, #d4ae5a); text-decoration: none; }
+  .qa-pillar { font-size: .72rem; letter-spacing: .12em; text-transform: uppercase; color: var(--gold-500, #d4ae5a); margin: 0 0 .4rem; }
+  .qa-page h1 { font-family: 'Cormorant Garamond', serif; font-size: clamp(2rem, 5vw, 3rem); font-weight: 700; color: #fff; margin: 0 0 2rem; line-height: 1.1; }
+  .qa-snippet { margin-bottom: 2.5rem; }
+  .verdict { border-radius: 6px; padding: 1rem 1.25rem; margin-bottom: 0; font-size: 1.03rem; }
+  .verdict-false { background: rgba(220,80,80,.08); border-left: 3px solid #dc5050; }
+  .verdict-partly-true { background: rgba(212,174,90,.08); border-left: 3px solid var(--gold-500, #d4ae5a); }
+  .verdict-true { background: rgba(80,180,100,.08); border-left: 3px solid #50b464; }
+  .verdict-label { display: block; font-size: .72rem; letter-spacing: .12em; text-transform: uppercase; font-weight: 700; margin-bottom: .4rem; }
+  .verdict-false .verdict-label { color: #dc5050; }
+  .verdict-partly-true .verdict-label { color: var(--gold-500, #d4ae5a); }
+  .verdict-true .verdict-label { color: #50b464; }
+  .qa-section { margin-bottom: 2.5rem; }
+  .qa-section h2 { font-family: 'Cormorant Garamond', serif; font-size: 1.5rem; font-weight: 600; color: #fff; margin: 0 0 .9rem; border-bottom: 1px solid rgba(212,174,90,.2); padding-bottom: .4rem; }
+  .qa-section p { margin: 0 0 1rem; font-size: .97rem; }
+  .qa-section ul { padding-left: 1.25rem; margin: 0 0 1rem; }
+  .qa-section li { margin-bottom: .4rem; font-size: .95rem; }
+  .claim-science { color: #7ab9e0; font-style: normal; font-size: .78rem; }
+  a[href] { color: var(--gold-500, #d4ae5a); }
+  .qa-faq-item { border-bottom: 1px solid rgba(255,255,255,.07); }
+  .qa-faq-q { cursor: pointer; padding: .9rem 0; font-size: .97rem; font-weight: 500; color: #fff; list-style: none; }
+  .qa-faq-q::before { content: '+ '; color: var(--gold-500, #d4ae5a); font-weight: 700; }
+  details[open] .qa-faq-q::before { content: '− '; }
+  .qa-faq-a { margin: 0 0 1rem; line-height: 1.7; font-size: .93rem; color: var(--ink-soft, #c8c0b0); }
+  .qa-src-list { padding-left: 1.25rem; margin: 0 0 1rem; }
+  .qa-src-list li { margin-bottom: .6rem; font-size: .82rem; color: var(--ink-soft, #8a8070); line-height: 1.6; }
+  .qa-claim-note { font-size: .78rem; color: var(--ink-soft, #605848); border-top: 1px solid rgba(255,255,255,.06); padding-top: .75rem; }
+</style>

@@ -1,0 +1,129 @@
+---
+/**
+ * Q&A — Do ravens have a sense of smell?
+ * Primary keyword: do ravens have a sense of smell
+ * Secondary: raven olfaction, can ravens smell, raven smell food
+ */
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const title       = 'Do Ravens Have a Sense of Smell?';
+const description = 'Ravens have a functional sense of smell but rely primarily on vision and hearing to find food. This page examines raven olfaction, how it compares to other birds, and what the evidence says about whether ravens use smell for locating food or other purposes.';
+const path        = '/questions/do-ravens-have-a-sense-of-smell/';
+
+const breadcrumbs = [
+  { name: 'Home',      url: '/' },
+  { name: 'Questions', url: '/questions/' },
+  { name: 'Do Ravens Have a Sense of Smell?', url: path },
+];
+
+const faq = [
+  { q: 'Can ravens smell food?', a: 'Ravens can likely smell, but there is little evidence they use olfaction as a primary food-finding strategy. Their food-finding behaviour is dominated by vision (scanning from height, watching for other animals\' reactions, following other ravens) and social information-gathering. Unlike vultures such as the Turkey Vulture — which are well-documented to locate carrion by smell — corvids appear to rely primarily on visual cues. Some carrion-finding ability via smell is plausible but undemonstrated in controlled studies.' },
+  { q: 'Do birds have a good sense of smell?', a: 'Bird olfactory ability varies enormously by species. Tube-nosed seabirds (petrels, albatrosses) and New World vultures have highly developed olfaction. Songbirds and corvids generally have smaller olfactory bulbs relative to brain size and are considered less olfaction-dependent than those groups. However, emerging research suggests many birds have more functional olfaction than previously assumed — including possible use in navigation, mate selection, and kin recognition.' },
+  { q: 'How do ravens find food if not by smell?', a: 'Ravens are highly visual foragers. They find food primarily through: (1) active visual scanning from elevated perches or during soaring flight; (2) social cue-following — watching the behaviour of other ravens, wolves, and other animals that indicate a carcass or food source; (3) memory — ravens have excellent spatial memory and revisit productive foraging locations; (4) problem-solving and exploration — actively investigating novel objects in their territory. These visual and social strategies are far more important than olfaction for raven food-finding.' },
+];
+---
+
+<BaseLayout title={title} description={description} path={path} ogType="article"
+  datePublished="2026-11-07" dateModified="2026-11-07"
+  breadcrumbs={breadcrumbs} faq={faq} pageType="Article">
+
+<article class="qa-page">
+
+  <nav class="qa-breadcrumb" aria-label="Breadcrumb">
+    <ol>
+      {breadcrumbs.map((b, i) => (
+        <li>
+          {i < breadcrumbs.length - 1
+            ? <><a href={b.url}>{b.name}</a><span aria-hidden="true"> › </span></>
+            : <span aria-current="page">{b.name}</span>}
+        </li>
+      ))}
+    </ol>
+  </nav>
+
+  <header class="qa-header">
+    <p class="qa-pillar">Question · Biology</p>
+    <h1>Do Ravens Have a Sense of Smell?</h1>
+  </header>
+
+  <section class="qa-snippet" aria-label="Direct answer">
+    <p><strong class="claim-science">[science]</strong> Ravens have functional olfactory anatomy, but they are primarily visual foragers. There is no strong experimental evidence that ravens use smell as a primary food-finding strategy. Their food-locating behaviour relies mainly on vision, memory, and social information — following other ravens, wolves, and other animals to carcasses and food sources.</p>
+  </section>
+
+  <section class="qa-section">
+    <h2>Raven Olfactory Anatomy</h2>
+    <p><strong class="claim-science">[science]</strong> Ravens possess olfactory organs — nares (nostrils) and olfactory bulbs in the brain — but these are proportionately smaller relative to overall brain size than in birds known for strong olfaction (such as New World vultures and tube-nosed seabirds). The olfactory bulb ratio (olfactory bulb size relative to total brain size) in corvids is modest, consistent with limited reliance on smell for navigation and foraging.<sup><a href="#src-1">1</a></sup></p>
+    <p>Having functional olfactory anatomy does not mean smell is unimportant to ravens — but current evidence does not support the claim that ravens locate food primarily by smell.</p>
+  </section>
+
+  <section class="qa-section">
+    <h2>How Ravens Actually Find Food</h2>
+    <p><strong class="claim-science">[science]</strong> Ravens use a suite of vision-and-cognition strategies to locate food:<sup><a href="#src-2">2</a></sup></p>
+    <ul>
+      <li><strong>High-altitude scanning:</strong> soaring ravens scan large areas visually. A raven at 500 m altitude can survey several square kilometres.</li>
+      <li><strong>Social information:</strong> ravens follow the gaze and flight directions of other ravens to carcasses — documented experimentally by Heinrich (1989). A raven discovering food may recruit others through calls; others follow.</li>
+      <li><strong>Following carnivores:</strong> ravens follow wolves, bears, and foxes, exploiting their kills. Wolf-raven associations are well-documented in Yellowstone and Scandinavia.</li>
+      <li><strong>Spatial memory:</strong> ravens remember where they cached food and where previous food sources were located — a cognitive rather than olfactory strategy.</li>
+    </ul>
+  </section>
+
+  <section class="qa-section">
+    <h2>Could Ravens Detect Carrion by Smell?</h2>
+    <p><strong class="claim-science">[science]</strong> At close range, some olfactory cue detection is biologically plausible — the volatile compounds released by decomposing tissue are chemically detectable. However, controlled studies demonstrating that ravens actually use olfaction to find hidden food (as Turkey Vultures clearly do) have not been published. Ravens can find hidden food in experiments, but this is explained by memory and searching behaviour rather than olfaction.<sup><a href="#src-1">1</a></sup></p>
+  </section>
+
+  <section class="qa-section">
+    <h2>Related Pages</h2>
+    <ul>
+      <li><a href="/questions/how-do-ravens-find-food/">How do ravens find food?</a></li>
+      <li><a href="/behaviour/raven-scavenging-strategies/">Raven scavenging strategies</a></li>
+      <li><a href="/questions/how-smart-are-ravens/">How smart are ravens?</a></li>
+      <li><a href="/places/ravens-in-yellowstone/">Ravens in Yellowstone</a></li>
+    </ul>
+  </section>
+
+  <section class="qa-faq qa-section" aria-labelledby="faq-h2">
+    <h2 id="faq-h2">Frequently Asked Questions</h2>
+    {faq.map(item => (
+      <details class="qa-faq-item">
+        <summary class="qa-faq-q">{item.q}</summary>
+        <p class="qa-faq-a">{item.a}</p>
+      </details>
+    ))}
+  </section>
+
+  <section class="qa-sources qa-section" aria-labelledby="src-h2">
+    <h2 id="src-h2">Sources</h2>
+    <ol class="qa-src-list">
+      <li id="src-1">Bang, B.G. & Cobb, S. (1968). The size of the olfactory bulb in 108 species of birds. <em>The Auk</em>, 85(1), 55–61. — olfactory bulb ratios across bird species, including corvids.</li>
+      <li id="src-2">Heinrich, B. (1989). <em>Ravens in Winter</em>. Simon & Schuster. — raven food-finding strategies, social information use, visual scanning behaviour.</li>
+    </ol>
+    <p class="qa-claim-note"><strong class="claim-science">[science]</strong> peer-reviewed or field-guide data</p>
+  </section>
+
+</article>
+</BaseLayout>
+
+<style>
+  .qa-page { max-width: 820px; margin: 0 auto; padding: 2rem 1.25rem 4rem; color: var(--iron-ink, #e8e4d8); font-family: 'Inter', sans-serif; line-height: 1.72; }
+  .qa-breadcrumb ol { display: flex; flex-wrap: wrap; gap: .25rem; list-style: none; padding: 0; margin: 0 0 2rem; font-size: .8rem; color: var(--ink-soft, #8a8070); }
+  .qa-breadcrumb a { color: var(--gold-500, #d4ae5a); text-decoration: none; }
+  .qa-pillar { font-size: .72rem; letter-spacing: .12em; text-transform: uppercase; color: var(--gold-500, #d4ae5a); margin: 0 0 .4rem; }
+  .qa-page h1 { font-family: 'Cormorant Garamond', serif; font-size: clamp(2rem, 5vw, 3rem); font-weight: 700; color: #fff; margin: 0 0 2rem; line-height: 1.1; }
+  .qa-snippet { background: rgba(212,174,90,.08); border-left: 3px solid var(--gold-500, #d4ae5a); border-radius: 0 6px 6px 0; padding: 1rem 1.25rem; margin-bottom: 2.5rem; font-size: 1.03rem; }
+  .qa-section { margin-bottom: 2.5rem; }
+  .qa-section h2 { font-family: 'Cormorant Garamond', serif; font-size: 1.5rem; font-weight: 600; color: #fff; margin: 0 0 .9rem; border-bottom: 1px solid rgba(212,174,90,.2); padding-bottom: .4rem; }
+  .qa-section p { margin: 0 0 1rem; font-size: .97rem; }
+  .qa-section ul { padding-left: 1.25rem; margin: 0 0 1rem; }
+  .qa-section li { margin-bottom: .4rem; font-size: .95rem; }
+  .claim-science { color: #7ab9e0; font-style: normal; font-size: .78rem; }
+  a[href] { color: var(--gold-500, #d4ae5a); }
+  .qa-faq-item { border-bottom: 1px solid rgba(255,255,255,.07); }
+  .qa-faq-q { cursor: pointer; padding: .9rem 0; font-size: .97rem; font-weight: 500; color: #fff; list-style: none; }
+  .qa-faq-q::before { content: '+ '; color: var(--gold-500, #d4ae5a); font-weight: 700; }
+  details[open] .qa-faq-q::before { content: '− '; }
+  .qa-faq-a { margin: 0 0 1rem; line-height: 1.7; font-size: .93rem; color: var(--ink-soft, #c8c0b0); }
+  .qa-src-list { padding-left: 1.25rem; margin: 0 0 1rem; }
+  .qa-src-list li { margin-bottom: .6rem; font-size: .82rem; color: var(--ink-soft, #8a8070); line-height: 1.6; }
+  .qa-claim-note { font-size: .78rem; color: var(--ink-soft, #605848); border-top: 1px solid rgba(255,255,255,.06); padding-top: .75rem; }
+</style>

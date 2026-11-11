@@ -1,0 +1,135 @@
+---
+/**
+ * Q&A — Why do ravens hide food?
+ * Primary keyword: why do ravens hide food
+ * Secondary: raven food caching, ravens bury food, raven caching behaviour
+ */
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const title       = 'Why Do Ravens Hide Food?';
+const description = 'Ravens hide — or "cache" — surplus food to eat later when resources are scarce. This page explains the behaviour, the memory behind it, and the deception tactics ravens use to protect their caches.';
+const path        = '/questions/why-do-ravens-hide-food/';
+
+const breadcrumbs = [
+  { name: 'Home',      url: '/' },
+  { name: 'Questions', url: '/questions/' },
+  { name: 'Why Do Ravens Hide Food?', url: path },
+];
+
+const faq = [
+  { q: 'How do ravens remember where they hid food?', a: 'Ravens use spatial memory — encoding the precise location of each cache relative to landmarks — along with memory of what was cached and when (episodic-like memory). Studies show they can relocate caches accurately days to weeks later, distinguish more perishable from less perishable items, and prioritise recovering perishable caches first.' },
+  { q: 'Can other ravens steal hidden food?', a: 'Yes, and this is a major driver of raven caching behaviour. Ravens observe each other and regularly steal caches (called "pilfering"). A raven that sees another caching will return later to steal from that specific location. In response, cachers have developed counter-strategies: re-caching after being watched, caching behind barriers, and using deceptive "false caching" movements.' },
+  { q: 'How many caches does a raven make?', a: 'Individual ravens can make hundreds to thousands of caches over the course of a year. The exact number depends on food availability — a raven at a large carcass in winter may make dozens of caches in a single session. Each cache is typically a single food item buried in the ground or wedged in a crevice.' },
+];
+---
+
+<BaseLayout title={title} description={description} path={path} ogType="article"
+  datePublished="2026-11-07" dateModified="2026-11-07"
+  breadcrumbs={breadcrumbs} faq={faq} pageType="Article">
+
+<article class="qa-page">
+
+  <nav class="qa-breadcrumb" aria-label="Breadcrumb">
+    <ol>
+      {breadcrumbs.map((b, i) => (
+        <li>
+          {i < breadcrumbs.length - 1
+            ? <><a href={b.url}>{b.name}</a><span aria-hidden="true"> › </span></>
+            : <span aria-current="page">{b.name}</span>}
+        </li>
+      ))}
+    </ol>
+  </nav>
+
+  <header class="qa-header">
+    <p class="qa-pillar">Question · Mind</p>
+    <h1>Why Do Ravens Hide Food?</h1>
+  </header>
+
+  <section class="qa-snippet" aria-label="Direct answer">
+    <p><strong class="claim-science">[science]</strong> Ravens hide surplus food — a behaviour called caching — to protect it from competitors and to create a private food store for future use. Food is often unpredictable and competitive in raven environments; caching allows them to bank food when it is plentiful and retrieve it when scarce. The behaviour requires accurate spatial memory, an understanding of time, and — remarkably — an awareness that other ravens can steal caches.</p>
+  </section>
+
+  <section class="qa-section">
+    <h2>What is Food Caching?</h2>
+    <p><strong class="claim-science">[science]</strong> Food caching (also called hoarding) is the act of storing food in a hidden location for later retrieval. Ravens typically carry food in their bill or throat pouch to a concealed spot — a crack in a rock, a patch of moss, a snow-covered hollow — and cover it with leaves, pebbles or other material. The behaviour is opportunistic: ravens cache most intensively when food is abundant (e.g., at large carcasses) or when they need to consume food without other ravens stealing it in the moment.<sup><a href="#src-1">1</a></sup></p>
+  </section>
+
+  <section class="qa-section">
+    <h2>The Memory Behind the Cache</h2>
+    <p><strong class="claim-science">[science]</strong> A series of experiments by Bugnyar, Heinrich, and colleagues demonstrated that ravens have exceptional spatial memory for cache locations and that this memory is episodic-like — encoding not just where but what and when:</p>
+    <ul>
+      <li>Ravens can accurately relocate caches several days after storing them, using landmarks rather than smell.<sup><a href="#src-1">1</a></sup></li>
+      <li>When ravens have cached both perishable and non-perishable items, they preferentially recover the perishable caches first — suggesting memory of the type and timing of each cache (Raby et al., 2007, using jays; comparable raven evidence in Bugnyar & Kotrschal, 2002).<sup><a href="#src-2">2</a></sup></li>
+      <li>Ravens distinguish their own caches from random locations, and from other ravens' caches.<sup><a href="#src-1">1</a></sup></li>
+    </ul>
+  </section>
+
+  <section class="qa-section">
+    <h2>Deception and Counter-Deception</h2>
+    <p><strong class="claim-science">[science]</strong> One of the most remarkable aspects of raven caching is the social arms race it has produced. Because ravens observe each other caching and return to steal from those specific locations, cachers have evolved counter-strategies that imply an awareness of what other ravens know:<sup><a href="#src-3">3</a></sup></p>
+    <ul>
+      <li><strong>Re-caching:</strong> ravens that have been watched while caching often return later to move the cache to a new location, particularly if the observer was a dominant individual.</li>
+      <li><strong>False caching:</strong> ravens perform caching movements — digging, covering — without actually depositing food, apparently to mislead watching birds. This was documented by Bugnyar & Heinrich (2005).</li>
+      <li><strong>Screening:</strong> ravens choose cache sites behind objects that block the line of sight from other ravens.</li>
+      <li><strong>Audience monitoring:</strong> ravens cache in different ways depending on whether they are being watched and by whom — suggesting they track the knowledge states of specific individuals.</li>
+    </ul>
+    <p>These behaviours have been interpreted as evidence that ravens understand that other ravens have knowledge they do not want them to have — a component of theory of mind. This interpretation is debated (see <a href="/behaviour/raven-cognition-theory-of-mind/">Raven theory of mind</a>), but the behaviours themselves are well-documented.</p>
+  </section>
+
+  <section class="qa-section">
+    <h2>Related Questions</h2>
+    <ul>
+      <li><a href="/behaviour/raven-food-caching/">Raven food caching — full chapter</a></li>
+      <li><a href="/questions/how-smart-are-ravens/">How smart are ravens?</a></li>
+      <li><a href="/behaviour/raven-cognition-theory-of-mind/">Theory of mind in ravens</a></li>
+      <li><a href="/questions/do-ravens-remember-faces/">Do ravens remember faces?</a></li>
+    </ul>
+  </section>
+
+  <section class="qa-faq qa-section" aria-labelledby="faq-h2">
+    <h2 id="faq-h2">Frequently Asked Questions</h2>
+    {faq.map(item => (
+      <details class="qa-faq-item">
+        <summary class="qa-faq-q">{item.q}</summary>
+        <p class="qa-faq-a">{item.a}</p>
+      </details>
+    ))}
+  </section>
+
+  <section class="qa-sources qa-section" aria-labelledby="src-h2">
+    <h2 id="src-h2">Sources</h2>
+    <ol class="qa-src-list">
+      <li id="src-1">Bugnyar, T. & Kotrschal, K. (2002). Observational learning and the raiding of food caches in ravens (<em>Corvus corax</em>): is it 'tactical' deception? <em>Animal Behaviour</em>, 64(2), 185–195.</li>
+      <li id="src-2">Raby, C.R., Alexis, D.M., Dickinson, A. & Clayton, N.S. (2007). Planning for the future by western scrub-jays. <em>Nature</em>, 445, 919–921. — episodic-like memory and future planning in corvids (scrub-jay study; raven evidence in Bugnyar & Kotrschal, 2002).</li>
+      <li id="src-3">Bugnyar, T. & Heinrich, B. (2005). Ravens, <em>Corvus corax</em>, differentiate between knowledgeable and ignorant competitors. <em>Proceedings of the Royal Society B</em>, 272, 1641–1646. — false caching and audience monitoring.</li>
+    </ol>
+    <p class="qa-claim-note"><strong class="claim-science">[science]</strong> peer-reviewed study or field-guide data</p>
+  </section>
+
+</article>
+</BaseLayout>
+
+<style>
+  .qa-page { max-width: 820px; margin: 0 auto; padding: 2rem 1.25rem 4rem; color: var(--iron-ink, #e8e4d8); font-family: 'Inter', sans-serif; line-height: 1.72; }
+  .qa-breadcrumb ol { display: flex; flex-wrap: wrap; gap: .25rem; list-style: none; padding: 0; margin: 0 0 2rem; font-size: .8rem; color: var(--ink-soft, #8a8070); }
+  .qa-breadcrumb a { color: var(--gold-500, #d4ae5a); text-decoration: none; }
+  .qa-pillar { font-size: .72rem; letter-spacing: .12em; text-transform: uppercase; color: var(--gold-500, #d4ae5a); margin: 0 0 .4rem; }
+  .qa-page h1 { font-family: 'Cormorant Garamond', serif; font-size: clamp(2rem, 5vw, 3rem); font-weight: 700; color: #fff; margin: 0 0 2rem; line-height: 1.1; }
+  .qa-snippet { background: rgba(212,174,90,.08); border-left: 3px solid var(--gold-500, #d4ae5a); border-radius: 0 6px 6px 0; padding: 1rem 1.25rem; margin-bottom: 2.5rem; font-size: 1.03rem; }
+  .qa-section { margin-bottom: 2.5rem; }
+  .qa-section h2 { font-family: 'Cormorant Garamond', serif; font-size: 1.5rem; font-weight: 600; color: #fff; margin: 0 0 .9rem; border-bottom: 1px solid rgba(212,174,90,.2); padding-bottom: .4rem; }
+  .qa-section p { margin: 0 0 1rem; font-size: .97rem; }
+  .qa-section ul { padding-left: 1.25rem; margin: 0 0 1rem; }
+  .qa-section li { margin-bottom: .4rem; font-size: .95rem; }
+  .claim-science { color: #7ab9e0; font-style: normal; font-size: .78rem; }
+  a[href] { color: var(--gold-500, #d4ae5a); }
+  .qa-faq-item { border-bottom: 1px solid rgba(255,255,255,.07); }
+  .qa-faq-q { cursor: pointer; padding: .9rem 0; font-size: .97rem; font-weight: 500; color: #fff; list-style: none; }
+  .qa-faq-q::before { content: '+ '; color: var(--gold-500, #d4ae5a); font-weight: 700; }
+  details[open] .qa-faq-q::before { content: '− '; }
+  .qa-faq-a { margin: 0 0 1rem; line-height: 1.7; font-size: .93rem; color: var(--ink-soft, #c8c0b0); }
+  .qa-src-list { padding-left: 1.25rem; margin: 0 0 1rem; }
+  .qa-src-list li { margin-bottom: .6rem; font-size: .82rem; color: var(--ink-soft, #8a8070); line-height: 1.6; }
+  .qa-claim-note { font-size: .78rem; color: var(--ink-soft, #605848); border-top: 1px solid rgba(255,255,255,.06); padding-top: .75rem; }
+</style>

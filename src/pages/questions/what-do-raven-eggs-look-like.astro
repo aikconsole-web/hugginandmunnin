@@ -1,0 +1,148 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const title       = 'What Do Raven Eggs Look Like? Size, Colour, and Clutch';
+const description = 'Common Raven eggs are pale blue-green with brown and grey spots, 48–55 mm long, laid in clutches of 3–7. Incubation 20–21 days by the female. Field guide data.';
+const path        = '/questions/what-do-raven-eggs-look-like/';
+
+const breadcrumbs = [
+  { name: 'Home',      url: '/' },
+  { name: 'Questions', url: '/questions/' },
+  { name: 'What do raven eggs look like?', url: path },
+];
+
+const faq = [
+  { q: 'What do raven eggs look like?', a: 'Common Raven eggs are pale blue-green or greenish-grey, heavily spotted and blotched with brown, olive-brown, and grey. They measure approximately 48–55 mm long × 32–38 mm wide. A typical clutch is 3–7 eggs. The female incubates alone for 20–21 days while the male brings food to the nest.' },
+  { q: 'How many eggs do ravens lay?', a: 'Common Ravens typically lay 3–7 eggs per clutch, with 4–6 being most common. They usually raise one brood per year. Incubation lasts 20–21 days; chicks fledge at approximately 35–42 days. Both parents feed the chicks, but only the female incubates.' },
+];
+---
+
+<BaseLayout title={title} description={description} path={path} ogType="article"
+  datePublished="2026-11-07" dateModified="2026-11-07"
+  breadcrumbs={breadcrumbs} faq={faq} pageType="Article">
+
+<article class="id-page">
+  <nav class="id-breadcrumb" aria-label="Breadcrumb">
+    <ol>
+      {breadcrumbs.map((b, i) => (
+        <li>
+          {i < breadcrumbs.length - 1
+            ? <><a href={b.url}>{b.name}</a><span aria-hidden="true"> › </span></>
+            : <span aria-current="page">{b.name}</span>}
+        </li>
+      ))}
+    </ol>
+  </nav>
+  <header class="id-header">
+    <p class="id-pillar">Questions · Biology</p>
+    <h1>What Do Raven Eggs Look Like?</h1>
+    <p class="id-subtitle">Size, colour, clutch size, and nesting biology</p>
+  </header>
+
+  <section class="id-snippet" aria-label="Quick answer">
+    <p><strong class="claim-science">[science]</strong> Common Raven eggs are <strong>pale blue-green to greenish-grey, spotted and blotched with brown and grey</strong>. They measure approximately 48–55 mm × 32–38 mm — roughly the size of a large chicken egg. Clutch size is 3–7 eggs (typically 4–6). The female incubates alone for 20–21 days; the male feeds her on the nest.</p>
+  </section>
+
+  <section class="id-section">
+    <h2>Egg Appearance</h2>
+    <p><strong class="claim-science">[science]</strong> Common Raven (<em>Corvus corax</em>) eggs:</p>
+    <ul>
+      <li><strong>Ground colour:</strong> Pale blue-green, greenish-grey, or occasionally pale green</li>
+      <li><strong>Markings:</strong> Heavily spotted and blotched with brown, olive-brown, and grey — spots variable in size, often concentrated at the broader end</li>
+      <li><strong>Size:</strong> 48–55 mm long × 32–38 mm wide (mean approximately 50 × 33 mm)</li>
+      <li><strong>Shape:</strong> Ovate to slightly elongated</li>
+      <li><strong>Texture:</strong> Smooth, slightly glossy</li>
+    </ul>
+    <p>Egg colouration is variable; some clutches are more heavily marked than others. The spotted pattern is typical of open-cup nesters and may provide camouflage if the nest is partially exposed.<sup><a href="#src-1">1</a></sup></p>
+  </section>
+
+  <section class="id-section">
+    <h2>Clutch Size and Incubation</h2>
+    <p><strong class="claim-science">[science]</strong></p>
+    <ul>
+      <li><strong>Clutch size:</strong> 3–7 eggs; 4–6 most common</li>
+      <li><strong>Incubation period:</strong> 20–21 days</li>
+      <li><strong>Who incubates:</strong> Female only; male brings food to the incubating female</li>
+      <li><strong>Broods per year:</strong> 1 (rarely 2 in favourable conditions)</li>
+      <li><strong>Fledging:</strong> Chicks leave the nest at approximately 35–42 days</li>
+      <li><strong>Post-fledging dependence:</strong> Young ravens remain with parents for several months after fledging</li>
+    </ul>
+  </section>
+
+  <section class="id-section">
+    <h2>Nest</h2>
+    <p><strong class="claim-science">[science]</strong> Ravens typically build large, bulky nests:</p>
+    <ul>
+      <li><strong>Structure:</strong> Large platform of sticks and twigs; lined with wool, hair, bark fibre, grass, and moss</li>
+      <li><strong>Location:</strong> Cliff ledges (preferred), tall trees, pylons, buildings — high, inaccessible sites</li>
+      <li><strong>Size:</strong> Can be 60–120 cm across after years of reuse; ravens often reuse and add to the same nest annually</li>
+      <li><strong>Breeding season:</strong> Eggs laid February–May in the northern hemisphere (varies by latitude); earlier in southern parts of range</li>
+    </ul>
+    <p>Both sexes build the nest, though the female does more of the lining. Nest sites may be used for many years — some sites are known to have been occupied for decades.<sup><a href="#src-1">1</a>,<a href="#src-2">2</a></sup></p>
+  </section>
+
+  <section class="id-section">
+    <h2>Comparison with Similar Species</h2>
+    <p><strong class="claim-science">[science]</strong> For identification context:</p>
+    <ul>
+      <li><strong>Common Raven:</strong> 48–55 mm; pale blue-green, heavily spotted</li>
+      <li><strong>Carrion Crow (<em>Corvus corone</em>):</strong> 44–46 mm; similar pale green-blue with brown spots — difficult to distinguish without exact measurements</li>
+      <li><strong>Rook (<em>Corvus frugilegus</em>):</strong> 40–44 mm; paler, less heavily spotted</li>
+      <li><strong>Jackdaw (<em>Corvus monedula</em>):</strong> 34–36 mm; white to pale blue with brown spots; significantly smaller</li>
+    </ul>
+    <p>In practice, the nest location (cliff vs treetop vs cavity) is a more reliable identification feature than egg colouration alone.<sup><a href="#src-1">1</a></sup></p>
+  </section>
+
+  <section class="id-faq id-section" aria-labelledby="faq-h2">
+    <h2 id="faq-h2">Frequently Asked Questions</h2>
+    {faq.map(item => (
+      <details class="id-faq-item">
+        <summary class="id-faq-q">{item.q}</summary>
+        <p class="id-faq-a">{item.a}</p>
+      </details>
+    ))}
+  </section>
+
+  <section class="id-sources id-section" aria-labelledby="src-h2">
+    <h2 id="src-h2">Sources</h2>
+    <ol class="id-src-list">
+      <li id="src-1">Madge, S. &amp; Burn, H. (1994). <em>Crows and Jays</em>. Christopher Helm. — egg descriptions, clutch size, incubation data.</li>
+      <li id="src-2">Boarman, W. I. &amp; Heinrich, B. (1999). Common Raven (<em>Corvus corax</em>). In A. Poole &amp; F. Gill (Eds.), <em>The Birds of North America</em>, No. 476. — breeding biology.</li>
+    </ol>
+    <p class="id-claim-note"><strong class="claim-science">[science]</strong> field-guide and species-account data</p>
+  </section>
+
+  <nav class="id-nav-bottom">
+    <a href="/questions/do-ravens-mate-for-life/" class="id-back">← Do Ravens Mate for Life?</a>
+    <a href="/species/common-raven/" class="id-next">Common Raven Overview →</a>
+  </nav>
+</article>
+</BaseLayout>
+
+<style>
+  .id-page { max-width: 820px; margin: 0 auto; padding: 2rem 1.25rem 4rem; color: var(--iron-ink, #e8e4d8); font-family: 'Inter', sans-serif; line-height: 1.72; }
+  .id-breadcrumb ol { display: flex; flex-wrap: wrap; gap: .25rem; list-style: none; padding: 0; margin: 0 0 2rem; font-size: .8rem; color: var(--ink-soft, #8a8070); }
+  .id-breadcrumb a { color: var(--gold-500, #d4ae5a); text-decoration: none; }
+  .id-pillar { font-size: .72rem; letter-spacing: .12em; text-transform: uppercase; color: var(--gold-500, #d4ae5a); margin: 0 0 .4rem; }
+  .id-page h1 { font-family: 'Cormorant Garamond', serif; font-size: clamp(2rem, 5vw, 3.25rem); font-weight: 700; color: #fff; margin: 0 0 .2rem; line-height: 1.1; }
+  .id-subtitle { font-size: 1rem; color: var(--ink-soft, #c0b89a); margin: 0 0 2rem; }
+  .id-snippet { background: rgba(212,174,90,.08); border-left: 3px solid var(--gold-500, #d4ae5a); border-radius: 0 6px 6px 0; padding: 1rem 1.25rem; margin-bottom: 2.5rem; font-size: 1.03rem; }
+  .id-section { margin-bottom: 2.75rem; }
+  .id-section h2 { font-family: 'Cormorant Garamond', serif; font-size: 1.6rem; font-weight: 600; color: #fff; margin: 0 0 1rem; border-bottom: 1px solid rgba(212,174,90,.2); padding-bottom: .4rem; }
+  .id-section p { margin: 0 0 1rem; font-size: .97rem; }
+  .id-section ul { padding-left: 1.25rem; margin: 0 0 1rem; }
+  .id-section li { margin-bottom: .4rem; font-size: .95rem; }
+  .claim-science { color: #7ab9e0; font-style: normal; font-size: .78rem; }
+  a[href] { color: var(--gold-500, #d4ae5a); }
+  .id-faq-item { border-bottom: 1px solid rgba(255,255,255,.07); }
+  .id-faq-q { cursor: pointer; padding: .9rem 0; font-size: .97rem; font-weight: 500; color: #fff; list-style: none; }
+  .id-faq-q::before { content: '+ '; color: var(--gold-500, #d4ae5a); font-weight: 700; }
+  details[open] .id-faq-q::before { content: '− '; }
+  .id-faq-a { margin: 0 0 1rem; line-height: 1.7; font-size: .93rem; color: var(--ink-soft, #c8c0b0); }
+  .id-src-list { padding-left: 1.25rem; margin: 0 0 1rem; }
+  .id-src-list li { margin-bottom: .6rem; font-size: .82rem; color: var(--ink-soft, #8a8070); line-height: 1.6; }
+  .id-claim-note { font-size: .78rem; color: var(--ink-soft, #605848); border-top: 1px solid rgba(255,255,255,.06); padding-top: .75rem; }
+  .id-nav-bottom { display: flex; justify-content: space-between; padding-top: 2rem; border-top: 1px solid rgba(255,255,255,.07); }
+  .id-nav-bottom a { font-size: .9rem; text-decoration: none; }
+  .id-nav-bottom a:hover { text-decoration: underline; }
+</style>

@@ -1,0 +1,149 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+
+const title       = 'Apollo and the Raven — the Greek Myth';
+const description = 'The Greek myth of Apollo and the raven: why the raven turned black. The sources in Ovid and Callimachus, the myth\'s meaning, and comparisons with other ancient raven traditions.';
+const path        = '/lore/world/apollo-and-the-raven/';
+
+const breadcrumbs = [
+  { name: 'Home',       url: '/' },
+  { name: 'World Lore', url: '/lore/world/' },
+  { name: 'Apollo and the Raven', url: path },
+];
+
+const faq = [
+  { q: 'What is the Greek myth of Apollo and the raven?', a: 'In Greek mythology, the raven was originally white (or brilliantly coloured) and served as Apollo\'s messenger. When the raven brought Apollo news that his beloved Coronis had been unfaithful, Apollo scorched the raven black in his rage. The myth is an aetiology — it explains why ravens are black. The best-known version is in Ovid\'s Metamorphoses, Book II (c. 2 CE).' },
+  { q: 'Why did Apollo turn the raven black?', a: 'According to Ovid, Apollo was furious at the raven for delivering the news of Coronis\'s infidelity — not at Coronis herself. He scorched the raven\'s plumage black in his anger. This is counterintuitive (the raven was delivering true information) and the myth is often read as a warning: do not be the bearer of bad news, or more specifically, do not gossip.' },
+  { q: 'Was the raven Apollo\'s bird?', a: 'In Greek tradition, yes — the raven (Greek: korax, κόραξ) was associated with Apollo as his messenger and prophetic bird. The constellation Corvus (the crow/raven) was associated with Apollo in ancient astronomy. This solar, positive association contrasts with the death-omen tradition the raven acquired in some later European Christian contexts.' },
+];
+---
+
+<BaseLayout title={title} description={description} path={path} ogType="article"
+  datePublished="2026-11-07" dateModified="2026-11-07"
+  breadcrumbs={breadcrumbs} faq={faq} pageType="Article">
+
+<article class="lore-page">
+  <nav class="lore-breadcrumb" aria-label="Breadcrumb">
+    <ol>
+      {breadcrumbs.map((b, i) => (
+        <li>
+          {i < breadcrumbs.length - 1
+            ? <><a href={b.url}>{b.name}</a><span aria-hidden="true"> › </span></>
+            : <span aria-current="page">{b.name}</span>}
+        </li>
+      ))}
+    </ol>
+  </nav>
+
+  <header class="lore-header">
+    <p class="lore-pillar">World Lore · MYW·05</p>
+    <h1>Apollo and the Raven</h1>
+    <p class="lore-subtitle">The Greek Myth of Why Ravens Are Black</p>
+  </header>
+
+  <section class="lore-snippet" aria-label="Quick answer">
+    <p><strong class="claim-lore">[lore]</strong> In Greek mythology, the raven was originally white — Apollo's messenger and prophetic bird. When the raven reported that Apollo's beloved Coronis had been unfaithful, Apollo turned the raven black in his rage. The myth is recorded most fully in Ovid's <em>Metamorphoses</em> (Book II, c. 2 CE) and alluded to by Callimachus. It is an aetiology — an explanation for why ravens are black — and carries a moral warning against being the bearer of bad news.</p>
+  </section>
+
+  <section class="lore-section">
+    <h2>The Primary Source: Ovid's Metamorphoses</h2>
+    <p><strong class="claim-lore">[lore]</strong> The fullest extant version of the Apollo-raven myth is in Ovid's <em>Metamorphoses</em>, Book II (c. 2 CE), in the story of Coronis and the crow/raven. Ovid's text (public domain in Latin; modern English translations by various hands) gives the following narrative:</p>
+    <ul>
+      <li>Apollo loved Coronis, daughter of Phlegyas.</li>
+      <li>A raven (or crow — Ovid uses <em>cornix</em>, the Latin for crow, in some passages, but the tradition is explicitly about the raven/korax in earlier Greek sources) served Apollo as a messenger.</li>
+      <li>The raven witnessed Coronis meeting another man (Ischys) and reported this to Apollo.</li>
+      <li>Apollo, in rage, shot Coronis with an arrow.</li>
+      <li>Dying, Coronis revealed she was pregnant with Apollo's child — this child would become Asclepius, the god of medicine.</li>
+      <li>Apollo punished the raven for bringing the news by turning its plumage black — the raven, previously white, was scorched dark.<sup><a href="#src-1">1</a></sup></li>
+    </ul>
+  </section>
+
+  <section class="lore-section">
+    <h2>Earlier References: Pindar and Callimachus</h2>
+    <p><strong class="claim-lore">[lore]</strong> The story is older than Ovid. Pindar's <em>Pythian Ode 3</em> (c. 474 BCE) tells the Coronis-Asclepius story without detailing the raven's role but references Apollo's anger. Callimachus (c. 3rd century BCE) in his <em>Hymn to Apollo</em> alludes to the raven as Apollo's prophetic messenger. The blackening of the raven is a Hellenistic elaboration; the association of the raven with Apollo as a prophetic bird is older.<sup><a href="#src-2">2</a></sup></p>
+  </section>
+
+  <section class="lore-section">
+    <h2>The Raven as Apollo's Bird</h2>
+    <p><strong class="claim-lore">[lore]</strong> The association of the raven with Apollo predates the Coronis myth. In ancient Greek religion, the raven (<em>korax</em>, κόραξ) was associated with solar deities and with prophecy. Apollo, as the god of prophecy (his oracle at Delphi), would naturally be associated with a bird perceived as possessing prophetic knowledge.</p>
+    <p>The constellation Corvus — the crow or raven — was placed in the sky in ancient Greek astronomy as a memorial to the raven's role as Apollo's bird. The constellation is located near Crater (the cup) and Hydra (the water-snake) in the southern sky, and ancient astronomical catalogues associated it with the Apollo-raven story.<sup><a href="#src-3">3</a></sup></p>
+  </section>
+
+  <section class="lore-section">
+    <h2>The Myth's Meaning</h2>
+    <p><strong class="claim-lore">[lore]</strong> The Apollo-raven myth is usually read as an aetiological myth — it explains why ravens are black. But it also carries a moral dimension that several ancient commentators noted: the raven was punished for telling the truth. The lesson is ambiguous:</p>
+    <ul>
+      <li><strong>Warning against gossip:</strong> Do not carry tales of others' private affairs.</li>
+      <li><strong>Warning against truthfulness in the wrong moment:</strong> Even true information can cause destruction when delivered at the wrong time.</li>
+      <li><strong>Warning against delivering bad news:</strong> The messenger bears the consequences of the message.</li>
+    </ul>
+    <p>This moral ambiguity — the raven did nothing factually wrong but was punished anyway — distinguishes the Greek myth from other raven traditions where the raven is punished for lying or refusing to cooperate (e.g., some Jewish interpretations of Genesis 8:7).</p>
+  </section>
+
+  <section class="lore-section">
+    <h2>Contrast with Other Traditions</h2>
+    <p><strong class="claim-lore">[lore]</strong> The Greek Apollo-raven tradition is notably different from other ancient raven symbolism:</p>
+    <ul>
+      <li><strong>Norse:</strong> Ravens are dark and associated with death and war, but are positive agents of Odin's wisdom — not punished, not degraded.</li>
+      <li><strong>Biblical:</strong> Ravens are dietary unclean birds but are also agents of divine provision. No myth of original whiteness exists.</li>
+      <li><strong>Greek:</strong> The raven begins as a solar, brilliant, positive bird — its blackness is a punishment, a degradation from an original brilliant state.</li>
+    </ul>
+    <p>The Greek myth participates in a wider pattern of "originally-white bird turned black" aetiologies found in various cultures — the crow in some Buddhist texts, the peacock in some variants — suggesting this is a common mythological template applied to explain dark-coloured birds.</p>
+  </section>
+
+  <section class="lore-faq lore-section" aria-labelledby="faq-h2">
+    <h2 id="faq-h2">Frequently Asked Questions</h2>
+    {faq.map(item => (
+      <details class="lore-faq-item">
+        <summary class="lore-faq-q">{item.q}</summary>
+        <p class="lore-faq-a">{item.a}</p>
+      </details>
+    ))}
+  </section>
+
+  <section class="lore-sources lore-section" aria-labelledby="src-h2">
+    <h2 id="src-h2">Sources</h2>
+    <ol class="lore-src-list">
+      <li id="src-1">Ovid (c. 2 CE). <em>Metamorphoses</em>, Book II, lines 531–632. (Public domain Latin text; trans. A.D. Melville, Oxford University Press, 1986.) — the raven-Coronis myth, the blackening of the raven.</li>
+      <li id="src-2">Pindar (c. 474 BCE). <em>Pythian Ode 3</em>. (Public domain.) — Coronis and Asclepius without full raven detail; see also Callimachus, <em>Hymn to Apollo</em> (c. 3rd century BCE, public domain).</li>
+      <li id="src-3">Allen, R.H. (1899). <em>Star Names: Their Lore and Meaning</em>. G.E. Stechert. — Corvus constellation and Apollo raven mythology (public domain).</li>
+      <li id="src-4">Sax, B. (2007). <em>Crow</em>. Reaktion Books. — survey of raven/crow in Greek and broader classical tradition.</li>
+    </ol>
+    <p class="lore-claim-note"><strong class="claim-lore">[lore]</strong> named cultural/historical source</p>
+  </section>
+
+  <nav class="lore-nav-bottom">
+    <a href="/lore/world/raven-symbolism/" class="lore-back">← Raven Symbolism</a>
+    <a href="/lore/world/" class="lore-next">All World Lore →</a>
+  </nav>
+</article>
+</BaseLayout>
+
+<style>
+  .lore-page { max-width: 820px; margin: 0 auto; padding: 2rem 1.25rem 4rem; color: var(--iron-ink, #e8e4d8); font-family: 'Inter', sans-serif; line-height: 1.72; }
+  .lore-breadcrumb ol { display: flex; flex-wrap: wrap; gap: .25rem; list-style: none; padding: 0; margin: 0 0 2rem; font-size: .8rem; color: var(--ink-soft, #8a8070); }
+  .lore-breadcrumb a { color: var(--gold-500, #d4ae5a); text-decoration: none; }
+  .lore-pillar { font-size: .72rem; letter-spacing: .12em; text-transform: uppercase; color: var(--gold-500, #d4ae5a); margin: 0 0 .4rem; }
+  .lore-page h1 { font-family: 'Cormorant Garamond', serif; font-size: clamp(2rem, 5vw, 3.25rem); font-weight: 700; color: #fff; margin: 0 0 .4rem; line-height: 1.1; }
+  .lore-subtitle { font-size: 1.1rem; color: var(--ink-soft, #c0b89a); margin: 0 0 2rem; }
+  .lore-snippet { background: rgba(212,174,90,.08); border-left: 3px solid var(--gold-500, #d4ae5a); border-radius: 0 6px 6px 0; padding: 1rem 1.25rem; margin-bottom: 2.5rem; font-size: 1.03rem; }
+  .lore-section { margin-bottom: 2.75rem; }
+  .lore-section h2 { font-family: 'Cormorant Garamond', serif; font-size: 1.6rem; font-weight: 600; color: #fff; margin: 0 0 1rem; border-bottom: 1px solid rgba(212,174,90,.2); padding-bottom: .4rem; }
+  .lore-section p { margin: 0 0 1rem; font-size: .97rem; }
+  .lore-section ul, .lore-section ol { padding-left: 1.25rem; margin: 0 0 1rem; }
+  .lore-section li { margin-bottom: .5rem; font-size: .95rem; }
+  .claim-science { color: #7ab9e0; font-style: normal; font-size: .78rem; }
+  .claim-lore    { color: #c8a46a; font-style: normal; font-size: .78rem; }
+  a[href] { color: var(--gold-500, #d4ae5a); }
+  .lore-faq-item { border-bottom: 1px solid rgba(255,255,255,.07); }
+  .lore-faq-q { cursor: pointer; padding: .9rem 0; font-size: .97rem; font-weight: 500; color: #fff; list-style: none; }
+  .lore-faq-q::before { content: '+ '; color: var(--gold-500, #d4ae5a); font-weight: 700; }
+  details[open] .lore-faq-q::before { content: '− '; }
+  .lore-faq-a { margin: 0 0 1rem; line-height: 1.7; font-size: .93rem; color: var(--ink-soft, #c8c0b0); }
+  .lore-src-list { padding-left: 1.25rem; margin: 0 0 1rem; }
+  .lore-src-list li { margin-bottom: .6rem; font-size: .82rem; color: var(--ink-soft, #8a8070); line-height: 1.6; }
+  .lore-claim-note { font-size: .78rem; color: var(--ink-soft, #605848); border-top: 1px solid rgba(255,255,255,.06); padding-top: .75rem; }
+  .lore-nav-bottom { display: flex; justify-content: space-between; padding-top: 2rem; border-top: 1px solid rgba(255,255,255,.07); }
+  .lore-nav-bottom a { font-size: .9rem; text-decoration: none; }
+  .lore-nav-bottom a:hover { text-decoration: underline; }
+</style>

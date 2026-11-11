@@ -1,0 +1,146 @@
+---
+/**
+ * World Lore — The Morrígan
+ * MYW·12
+ * Primary keyword: the morrigan raven
+ * Secondary: morrigan crow or raven, morrigan irish mythology, badb raven
+ */
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+
+const title       = 'The Morrígan and the Raven: Irish War-Goddess and the Crow-Raven';
+const description = 'The Morrígan is the most prominent raven and crow figure in Irish mythology — a goddess of fate, battle, and sovereignty who takes bird form. This page examines the primary sources and the crow-raven question.';
+const path        = '/lore/world/the-morrigan/';
+
+const breadcrumbs = [
+  { name: 'Home',       url: '/' },
+  { name: 'World Lore', url: '/lore/world/' },
+  { name: 'The Morrígan', url: path },
+];
+
+const faq = [
+  { q: 'Is the Morrígan a raven or a crow?', a: 'The Old Irish sources use the word "badb" (which can refer to both crow and raven) and "bran" (crow/raven) for the birds associated with the Morrígan and her aspects. Modern Irish "fiach dubh" means raven; "caróg" means crow. The ancient texts do not always distinguish clearly, and scholars note that the boundary between crow and raven in Old Irish was not drawn as it is in modern ornithology. In practice, the Morrígan is associated with the whole family of large black corvids, with ravens and Hooded Crows both being candidate species in Ireland.' },
+  { q: 'Who are the three aspects of the Morrígan?', a: 'The Morrígan is often described as a triad in later sources: the Morrígan proper, Badb (the screaming war-crow), and either Macha or Nemain (or both). The triple structure is not consistent across all early texts. Badb is most closely associated with the battle-crow — hovering over battlefields, screaming, feeding on the slain. The Morrígan in her role as a shape-shifter specifically transforms into bird form in multiple tales.' },
+  { q: 'What is the Morrígan\'s role in the Táin Bó Cúailnge?', a: 'In the Táin (the great Irish epic of the cattle-raid of Cooley), the Morrígan interacts with the hero Cú Chulainn in several episodes. She offers him love; when he refuses her, she opposes him — transforming into an eel to trip him, a wolf to scatter cattle at him, and a heifer to cause him harm. Later she appears as an old woman milking a cow and gives him three drinks, healing the wounds she caused. Her relationship with Cú Chulainn is complex: enemy, tester, healer. At his death she perches on his shoulder as a crow.' },
+];
+---
+
+<BaseLayout title={title} description={description} path={path} ogType="article"
+  datePublished="2026-11-07" dateModified="2026-11-07"
+  breadcrumbs={breadcrumbs} faq={faq} pageType="Article">
+
+<article class="qa-page">
+
+  <nav class="qa-breadcrumb" aria-label="Breadcrumb">
+    <ol>
+      {breadcrumbs.map((b, i) => (
+        <li>
+          {i < breadcrumbs.length - 1
+            ? <><a href={b.url}>{b.name}</a><span aria-hidden="true"> › </span></>
+            : <span aria-current="page">{b.name}</span>}
+        </li>
+      ))}
+    </ol>
+  </nav>
+
+  <header class="qa-header">
+    <p class="qa-pillar">World Lore · MYW·12</p>
+    <h1>The Morrígan and the Raven: Irish War-Goddess and the Crow-Raven</h1>
+  </header>
+
+  <section class="qa-snippet" aria-label="Direct answer">
+    <p><strong class="claim-lore">[lore]</strong> The Morrígan (<em>Mór Rígan</em> — Great Queen, or Phantom Queen) is an Old Irish goddess associated with fate, war, sovereignty, and death. She transforms into bird form — most often described as a crow or raven (Old Irish <em>badb</em>) — to hover over battlefields, prophesy outcomes, and feed on the slain. She is the most significant corvid figure in the insular Celtic literary tradition.</p>
+  </section>
+
+  <section class="qa-section">
+    <h2>Primary Sources</h2>
+    <p><strong class="claim-lore">[lore]</strong> The Morrígan appears in the Ulster Cycle of Old Irish literature, the Mythological Cycle, and in the Metrical Dindshenchas (place-name poetry). The most important texts are:<sup><a href="#src-1">1</a></sup><sup><a href="#src-2">2</a></sup></p>
+    <ul>
+      <li><strong>Táin Bó Cúailnge</strong> (The Cattle Raid of Cooley) — the central epic of the Ulster Cycle, surviving in manuscripts from the 12th century (Book of the Dun Cow, Book of Leinster) but reflecting an earlier oral tradition. The Morrígan appears as an adversary and eventual presence at Cú Chulainn's death.</li>
+      <li><strong>Cath Maige Tuired</strong> (The Battle of Mag Tuired) — the great battle of the Tuatha Dé Danann against the Fomorians. The Morrígan is a significant war-goddess figure who promises to fight on the side of the Tuatha Dé and delivers a prophecy of the battle's outcome.</li>
+      <li><strong>Fled Bricrenn</strong> (Bricriu's Feast) — another Ulster Cycle text in which an aspect of the Morrígan appears.</li>
+    </ul>
+    <p>All surviving manuscripts post-date the introduction of Christianity to Ireland (5th century CE), and the texts themselves were written by Christian monks. The mythology they record is significantly older, though the precise relationship between the written texts and pre-Christian oral tradition is a subject of ongoing scholarly discussion.</p>
+  </section>
+
+  <section class="qa-section">
+    <h2>The Morrígan in Bird Form</h2>
+    <p><strong class="claim-lore">[lore]</strong> The Morrígan's transformation into bird form is one of her defining characteristics. Key examples from primary sources:<sup><a href="#src-1">1</a></sup></p>
+    <ul>
+      <li>In the <em>Táin</em>, after her conflict with Cú Chulainn, she appears as a crow washing herself in a ford — her wounds revealing her identity to him.</li>
+      <li>At Cú Chulainn's death, she is said to perch on his shoulder as a crow, confirming that he is dead (the hero had tied himself to a standing stone so he would die standing).</li>
+      <li>Badb — either an aspect of the Morrígan or a related goddess — specifically manifests as a battle-crow, screaming over armies and foretelling slaughter.</li>
+    </ul>
+  </section>
+
+  <section class="qa-section">
+    <h2>Crow or Raven? The Old Irish Evidence</h2>
+    <p><strong class="claim-lore">[lore]</strong> The Old Irish words used in connection with the Morrígan include <em>badb</em> (war-crow; also the name of one of her aspects), <em>bran</em> (crow/raven), and <em>caróg</em> (crow). The distinction between crow and raven in Old Irish is not reliably consistent with modern species limits, and scholars note that both Hooded Crow and Common Raven were present in Ireland and both would have been familiar birds on battlefields as scavengers of the dead.<sup><a href="#src-2">2</a></sup></p>
+    <p>In modern retellings, the Morrígan is frequently depicted as a raven — partly because ravens carry greater literary prestige in English and partly because they appear as the dominant "dark corvid" in British and Irish landscapes. The original texts do not necessarily support this — both birds are plausible.</p>
+  </section>
+
+  <section class="qa-section">
+    <h2>What Scholars Say</h2>
+    <p><strong class="claim-lore">[lore]</strong> The Morrígan's association with battle, death, and prophecy has been interpreted variously as: a vestige of a pre-Indo-European sovereignty goddess; a war-deity paralleled in other Indo-European traditions (the Norse valkyries have been compared to Badb — though the parallel is structural, not necessarily a shared origin); and a literary construction by medieval Irish writers drawing on inherited traditions.</p>
+    <p>Academics including Máire West and Muireann Ní Bhrolcháin have analysed the Morrígan's textual history. The complexity of the figure — her triple nature, her ambiguous relationship to heroes, her role in both destroying and legitimising kingship — makes her one of the most studied figures in Old Irish literature.</p>
+  </section>
+
+  <section class="qa-section">
+    <h2>The Bird Behind the Story</h2>
+    <p><strong class="claim-science">[science]</strong> Both Common Raven and Hooded Crow are resident in Ireland year-round. Both are intelligent, conspicuous birds associated with carrion and known to gather near carcasses — including, historically, those of the slain after battles. The ecological basis for a corvid war-deity in Ireland is real. See <a href="/lore/world/raven-in-celtic-mythology/">Ravens in Celtic mythology — wider context</a>.</p>
+  </section>
+
+  <section class="qa-section">
+    <h2>Related Pages</h2>
+    <ul>
+      <li><a href="/lore/world/raven-in-celtic-mythology/">Ravens in Celtic mythology</a></li>
+      <li><a href="/lore/world/raven-symbolism/">Raven symbolism across cultures</a></li>
+      <li><a href="/questions/why-are-ravens-associated-with-death/">Why are ravens associated with death?</a></li>
+    </ul>
+  </section>
+
+  <section class="qa-faq qa-section" aria-labelledby="faq-h2">
+    <h2 id="faq-h2">Frequently Asked Questions</h2>
+    {faq.map(item => (
+      <details class="qa-faq-item">
+        <summary class="qa-faq-q">{item.q}</summary>
+        <p class="qa-faq-a">{item.a}</p>
+      </details>
+    ))}
+  </section>
+
+  <section class="qa-sources qa-section" aria-labelledby="src-h2">
+    <h2 id="src-h2">Sources</h2>
+    <ol class="qa-src-list">
+      <li id="src-1">Kinsella, T. (trans., 1969). <em>The Tain</em> (Táin Bó Cúailnge). Oxford University Press. — standard English translation; Morrígan episodes.</li>
+      <li id="src-2">Ní Bhrolcháin, M. (2009). <em>An Introduction to Early Irish Literature</em>. Four Courts Press. — scholarly overview of Morrígan's role and Old Irish textual tradition.</li>
+    </ol>
+    <p class="qa-claim-note"><strong class="claim-lore">[lore]</strong> named cultural/historical source &nbsp;|&nbsp; <strong class="claim-science">[science]</strong> peer-reviewed or field-guide data</p>
+  </section>
+
+</article>
+</BaseLayout>
+
+<style>
+  .qa-page { max-width: 820px; margin: 0 auto; padding: 2rem 1.25rem 4rem; color: var(--iron-ink, #e8e4d8); font-family: 'Inter', sans-serif; line-height: 1.72; }
+  .qa-breadcrumb ol { display: flex; flex-wrap: wrap; gap: .25rem; list-style: none; padding: 0; margin: 0 0 2rem; font-size: .8rem; color: var(--ink-soft, #8a8070); }
+  .qa-breadcrumb a { color: var(--gold-500, #d4ae5a); text-decoration: none; }
+  .qa-pillar { font-size: .72rem; letter-spacing: .12em; text-transform: uppercase; color: var(--gold-500, #d4ae5a); margin: 0 0 .4rem; }
+  .qa-page h1 { font-family: 'Cormorant Garamond', serif; font-size: clamp(2rem, 5vw, 3rem); font-weight: 700; color: #fff; margin: 0 0 2rem; line-height: 1.1; }
+  .qa-snippet { background: rgba(212,174,90,.08); border-left: 3px solid var(--gold-500, #d4ae5a); border-radius: 0 6px 6px 0; padding: 1rem 1.25rem; margin-bottom: 2.5rem; font-size: 1.03rem; }
+  .qa-section { margin-bottom: 2.5rem; }
+  .qa-section h2 { font-family: 'Cormorant Garamond', serif; font-size: 1.5rem; font-weight: 600; color: #fff; margin: 0 0 .9rem; border-bottom: 1px solid rgba(212,174,90,.2); padding-bottom: .4rem; }
+  .qa-section p { margin: 0 0 1rem; font-size: .97rem; }
+  .qa-section ul { padding-left: 1.25rem; margin: 0 0 1rem; }
+  .qa-section li { margin-bottom: .4rem; font-size: .95rem; }
+  .claim-science { color: #7ab9e0; font-style: normal; font-size: .78rem; }
+  .claim-lore { color: #c4a26a; font-style: normal; font-size: .78rem; }
+  a[href] { color: var(--gold-500, #d4ae5a); }
+  .qa-faq-item { border-bottom: 1px solid rgba(255,255,255,.07); }
+  .qa-faq-q { cursor: pointer; padding: .9rem 0; font-size: .97rem; font-weight: 500; color: #fff; list-style: none; }
+  .qa-faq-q::before { content: '+ '; color: var(--gold-500, #d4ae5a); font-weight: 700; }
+  details[open] .qa-faq-q::before { content: '− '; }
+  .qa-faq-a { margin: 0 0 1rem; line-height: 1.7; font-size: .93rem; color: var(--ink-soft, #c8c0b0); }
+  .qa-src-list { padding-left: 1.25rem; margin: 0 0 1rem; }
+  .qa-src-list li { margin-bottom: .6rem; font-size: .82rem; color: var(--ink-soft, #8a8070); line-height: 1.6; }
+  .qa-claim-note { font-size: .78rem; color: var(--ink-soft, #605848); border-top: 1px solid rgba(255,255,255,.06); padding-top: .75rem; }
+</style>

@@ -1,0 +1,156 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const title       = 'Are Ravens Just Big Crows? — The Myth vs Taxonomy';
+const description = 'Ravens and crows are both in the genus Corvus, but ravens are a distinct species (Corvus corax) — not "big crows." This page explains what the taxonomy actually says.';
+const path        = '/myths/ravens-are-crows/';
+
+const breadcrumbs = [
+  { name: 'Home',   url: '/' },
+  { name: 'Myths',  url: '/myths/' },
+  { name: 'Are Ravens Just Big Crows?', url: path },
+];
+
+const faq = [
+  { q: 'Are ravens just big crows?', a: 'No. Ravens (Corvus corax and related species) and crows (Corvus corone, C. brachyrhynchos, etc.) are distinct species within the genus Corvus. They are related — all are corvids — but they are not the same animal at different sizes. Ravens differ from crows in tail shape, bill size, throat hackles, flight behaviour, calls, habitat, and behaviour.' },
+  { q: 'Are ravens in the crow family?', a: 'Yes. Ravens belong to the family Corvidae (the crow family), genus Corvus. All crows, ravens, jackdaws, rooks, and choughs are corvids. The common name "crow" is imprecise — it is used for several distinct Corvus species, while "raven" refers specifically to Common Raven (Corvus corax) and related large Corvus species.' },
+  { q: 'What is the difference between a raven and a crow?', a: 'Key differences: tail shape (wedge on raven, fan on crow), size (raven roughly twice the weight of Carrion Crow), bill (raven bill heavier with shaggy throat hackles), voice (raven croaks, crow caws), and behaviour (ravens soar and play aerially; crows mostly flap). See the full comparison at the Raven vs Crow page.' },
+];
+---
+
+<BaseLayout title={title} description={description} path={path} ogType="article"
+  datePublished="2026-11-07" dateModified="2026-11-07"
+  breadcrumbs={breadcrumbs} faq={faq} pageType="Article">
+
+<article class="myth-page">
+  <nav class="myth-breadcrumb" aria-label="Breadcrumb">
+    <ol>
+      {breadcrumbs.map((b, i) => (
+        <li>
+          {i < breadcrumbs.length - 1
+            ? <><a href={b.url}>{b.name}</a><span aria-hidden="true"> › </span></>
+            : <span aria-current="page">{b.name}</span>}
+        </li>
+      ))}
+    </ol>
+  </nav>
+  <header class="myth-header">
+    <p class="myth-pillar">Myth Check · MYTH·05</p>
+    <h1>Are Ravens Just Big Crows?</h1>
+    <p class="myth-subtitle">Verdict: <strong class="verdict-false">False</strong> — ravens and crows are distinct species within the same genus</p>
+  </header>
+
+  <section class="myth-snippet" aria-label="Quick answer">
+    <p><strong class="claim-science">[science]</strong> Ravens and crows are related — both are in the genus <em>Corvus</em>, family Corvidae — but they are not the same animal. Common Ravens (<em>Corvus corax</em>) and Carrion Crows (<em>Corvus corone</em>) are distinct species that do not interbreed in the wild. They differ in size, proportions, calls, behaviour, habitat preference, and social structure. Calling a raven "a big crow" is like calling a wolf "a big dog" — related, but taxonomically and behaviourally distinct.</p>
+  </section>
+
+  <section class="myth-section">
+    <h2>The Taxonomy</h2>
+    <p><strong class="claim-science">[science]</strong> Both ravens and crows belong to:</p>
+    <ul>
+      <li>Family: <strong>Corvidae</strong> (the crow family — includes crows, ravens, jays, jackdaws, rooks, choughs, magpies, nutcrackers)</li>
+      <li>Genus: <strong><em>Corvus</em></strong> (the crows and ravens — approximately 45 species globally)</li>
+    </ul>
+    <p>Within <em>Corvus</em>, the Common Raven (<em>Corvus corax</em>) is a full biological species — genetically and behaviourally distinct from crow species. It does not naturally interbreed with Carrion Crow (<em>Corvus corone</em>), American Crow (<em>Corvus brachyrhynchos</em>), or other crow species. The genetic distance between ravens and crows is comparable to the distance between different species in other genera.<sup><a href="#src-1">1</a></sup></p>
+  </section>
+
+  <section class="myth-section">
+    <h2>Key Differences</h2>
+    <p><strong class="claim-science">[science]</strong> Ravens differ from Carrion Crows (the most comparable European crow) in every major identification feature:</p>
+    <ul>
+      <li><strong>Size:</strong> Common Raven 56–69 cm, 689–1,625 g. Carrion Crow 44–51 cm, 370–650 g. Ravens are roughly twice the weight.</li>
+      <li><strong>Tail:</strong> Wedge-shaped or diamond on ravens; fan-shaped on crows.</li>
+      <li><strong>Bill:</strong> Ravens have a heavy, arched, deep-based bill; crows have a moderate, slightly curved bill.</li>
+      <li><strong>Throat:</strong> Ravens have shaggy pointed hackles; crows are smooth.</li>
+      <li><strong>Voice:</strong> Ravens give a deep, hollow "kronk"; crows give a harsh "kaah/caw."</li>
+      <li><strong>Flight:</strong> Ravens soar extensively on flat wings, play aerially, tumble; crows mostly flap with occasional gliding.</li>
+      <li><strong>Habitat:</strong> Ravens prefer upland, wild, coastal habitats; crows are common in farmland, parks, suburbs, cities.<sup><a href="#src-1">1</a></sup></li>
+    </ul>
+  </section>
+
+  <section class="myth-section">
+    <h2>Why the Confusion Arises</h2>
+    <p>The confusion is understandable for several reasons:</p>
+    <ul>
+      <li>Both are large, all-black birds (in the UK/Europe context — many crow species elsewhere are not all-black)</li>
+      <li>The word "crow" is used loosely in English to describe any black corvid — including rooks, jackdaws, and ravens in everyday speech</li>
+      <li>In areas where only crows are common (most of lowland England, urban Europe), people rarely encounter ravens and may assume any large black corvid is "just a big crow"</li>
+      <li>Taxonomically, the genus name <em>Corvus</em> is the Latin word for raven — the relationship is real and acknowledged</li>
+    </ul>
+  </section>
+
+  <section class="myth-section">
+    <h2>The Wolf / Dog Analogy</h2>
+    <p>A useful analogy: wolves and dogs share the same genus (<em>Canis</em>) and are closely related. We do not describe wolves as "big dogs" — the two are distinct animals with different behaviour, ecology, and social structure despite being taxonomically close. Ravens and crows are in an analogous position within <em>Corvus</em>.</p>
+    <p>The relationship is genuine — shared genus, shared family, shared evolutionary history. The distinctness is also genuine — different species, different proportions, different behaviours, different habitats, reproductive isolation in the wild.</p>
+  </section>
+
+  <section class="myth-verdict myth-section">
+    <h2>Verdict</h2>
+    <p><strong>False.</strong> Ravens are not "big crows" — they are a distinct species (<em>Corvus corax</em>) within the same genus as crows. They are related, as wolves are related to dogs, but they are not the same animal at different sizes. The consistent differences in morphology, voice, behaviour, and habitat make ravens as distinct from crows as any two Corvus species.</p>
+  </section>
+
+  <section class="myth-section">
+    <h2>Related Pages</h2>
+    <ul>
+      <li><a href="/compare/raven-vs-crow/">Raven vs Crow — full 7-mark identification guide</a></li>
+      <li><a href="/compare/raven-vs-carrion-crow/">Raven vs Carrion Crow</a></li>
+      <li><a href="/species/common-raven/">Common Raven — species profile</a></li>
+    </ul>
+  </section>
+
+  <section class="myth-faq myth-section" aria-labelledby="faq-h2">
+    <h2 id="faq-h2">Frequently Asked Questions</h2>
+    {faq.map(item => (
+      <details class="myth-faq-item">
+        <summary class="myth-faq-q">{item.q}</summary>
+        <p class="myth-faq-a">{item.a}</p>
+      </details>
+    ))}
+  </section>
+
+  <section class="myth-sources myth-section" aria-labelledby="src-h2">
+    <h2 id="src-h2">Sources</h2>
+    <ol class="myth-src-list">
+      <li id="src-1">Madge, S. &amp; Burn, H. (1994). <em>Crows and Jays</em>. Christopher Helm. — taxonomy, field marks, and species accounts for all Corvus species.</li>
+      <li id="src-2">Boarman, W.I. &amp; Heinrich, B. (1999). Common Raven (<em>Corvus corax</em>). In Poole, A. &amp; Gill, F. (eds.), <em>The Birds of North America</em>, No. 476. — species account: morphology and habitat.</li>
+    </ol>
+    <p class="myth-claim-note"><strong class="claim-science">[science]</strong> field-guide / species account data</p>
+  </section>
+
+  <nav class="myth-nav-bottom">
+    <a href="/myths/ravens-remember-faces/" class="myth-back">← Do Ravens Remember Faces?</a>
+    <a href="/myths/" class="myth-next">All Myth Checks →</a>
+  </nav>
+</article>
+</BaseLayout>
+
+<style>
+  .myth-page { max-width: 820px; margin: 0 auto; padding: 2rem 1.25rem 4rem; color: var(--iron-ink, #e8e4d8); font-family: 'Inter', sans-serif; line-height: 1.72; }
+  .myth-breadcrumb ol { display: flex; flex-wrap: wrap; gap: .25rem; list-style: none; padding: 0; margin: 0 0 2rem; font-size: .8rem; color: var(--ink-soft, #8a8070); }
+  .myth-breadcrumb a { color: var(--gold-500, #d4ae5a); text-decoration: none; }
+  .myth-pillar { font-size: .72rem; letter-spacing: .12em; text-transform: uppercase; color: var(--gold-500, #d4ae5a); margin: 0 0 .4rem; }
+  .myth-page h1 { font-family: 'Cormorant Garamond', serif; font-size: clamp(2rem, 5vw, 3.25rem); font-weight: 700; color: #fff; margin: 0 0 .4rem; line-height: 1.1; }
+  .myth-subtitle { font-size: 1rem; color: var(--ink-soft, #c0b89a); margin: 0 0 2rem; }
+  .verdict-false { color: #c06060; }
+  .myth-snippet { background: rgba(212,174,90,.08); border-left: 3px solid var(--gold-500, #d4ae5a); border-radius: 0 6px 6px 0; padding: 1rem 1.25rem; margin-bottom: 2.5rem; font-size: 1.03rem; }
+  .myth-section { margin-bottom: 2.75rem; }
+  .myth-section h2 { font-family: 'Cormorant Garamond', serif; font-size: 1.6rem; font-weight: 600; color: #fff; margin: 0 0 1rem; border-bottom: 1px solid rgba(212,174,90,.2); padding-bottom: .4rem; }
+  .myth-section p { margin: 0 0 1rem; font-size: .97rem; }
+  .myth-section ul { padding-left: 1.25rem; margin: 0 0 1rem; }
+  .myth-section li { margin-bottom: .5rem; font-size: .95rem; }
+  .myth-verdict { background: rgba(212,174,90,.06); border: 1px solid rgba(212,174,90,.2); border-radius: 8px; padding: 1.25rem 1.5rem; }
+  .claim-science { color: #7ab9e0; font-style: normal; font-size: .78rem; }
+  a[href] { color: var(--gold-500, #d4ae5a); }
+  .myth-faq-item { border-bottom: 1px solid rgba(255,255,255,.07); }
+  .myth-faq-q { cursor: pointer; padding: .9rem 0; font-size: .97rem; font-weight: 500; color: #fff; list-style: none; }
+  .myth-faq-q::before { content: '+ '; color: var(--gold-500, #d4ae5a); font-weight: 700; }
+  details[open] .myth-faq-q::before { content: '− '; }
+  .myth-faq-a { margin: 0 0 1rem; line-height: 1.7; font-size: .93rem; color: var(--ink-soft, #c8c0b0); }
+  .myth-src-list { padding-left: 1.25rem; margin: 0 0 1rem; }
+  .myth-src-list li { margin-bottom: .6rem; font-size: .82rem; color: var(--ink-soft, #8a8070); line-height: 1.6; }
+  .myth-claim-note { font-size: .78rem; color: var(--ink-soft, #605848); border-top: 1px solid rgba(255,255,255,.06); padding-top: .75rem; }
+  .myth-nav-bottom { display: flex; justify-content: space-between; padding-top: 2rem; border-top: 1px solid rgba(255,255,255,.07); }
+  .myth-nav-bottom a { font-size: .9rem; text-decoration: none; }
+  .myth-nav-bottom a:hover { text-decoration: underline; }
+</style>

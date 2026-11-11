@@ -1,0 +1,147 @@
+---
+/**
+ * World Lore — Ravens in Islamic and Arab tradition
+ * MYW·27
+ * Primary keyword: raven in islam
+ * Secondary: raven quran, raven arab tradition, ghurāb
+ */
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const title       = 'Ravens in Islamic and Arab Tradition: The Quranic Raven and Pre-Islamic Omen';
+const description = 'The raven holds a unique place in Islamic scripture and Arab tradition — appearing in the Quran as the bird that teaches Cain burial rites, and in pre-Islamic Arab culture as a potent omen bird (ghurāb al-bayn). This page examines the raven in Quranic narrative and Arabic literary tradition.';
+const path        = '/lore/world/ravens-in-islamic-and-arab-tradition/';
+
+const breadcrumbs = [
+  { name: 'Home',       url: '/' },
+  { name: 'World Lore', url: '/lore/world/' },
+  { name: 'Ravens in Islamic and Arab Tradition', url: path },
+];
+
+const faq = [
+  { q: 'What does the Quran say about the raven?', a: 'The Quran (Surah Al-Ma\'idah 5:31) mentions a raven in the story of Cain and Abel: after Cain kills his brother Abel, he does not know how to dispose of the body. God sends a raven (ghurāb) that scratches the earth — digging — to show Cain how to bury the dead. Cain observes the raven and learns the practice of burial from it. This Quranic passage portrays the raven as a divinely-sent teacher, instructing humanity in a fundamental cultural practice.' },
+  { q: 'What is ghurāb al-bayn in Arabic tradition?', a: 'Ghurāb al-bayn (literally "raven of separation") is the Arabic name for the omen raven of pre-Islamic Arab tradition. The calling of this raven was interpreted as a sign of imminent separation — a loved one leaving, a journey, a parting, or death. This omen raven features extensively in pre-Islamic Arabic poetry (the mu\'allaqāt and other early verse), where the poet hears the ghurāb call and understands that his beloved\'s departure or his own exile is signalled. The ghurāb al-bayn represents the most developed tradition of raven omen interpretation in classical Arabic culture.' },
+  { q: 'Is the raven considered unclean in Islam?', a: 'Classical Islamic jurisprudence (fiqh) classifies the common raven and other corvids among the animals permissible to kill (fawāsiq — harmful animals that may be killed even in sacred territory), which implies they are not suitable for consumption. The Prophet Muhammad is recorded in hadith collections as permitting the killing of crows in certain sacred contexts. This classification relates to practical harm (crop raiding, scavenging) rather than to the raven\'s symbolic or narrative role. The Quranic raven (sent by God to teach burial) holds a positive, instructive function that coexists with the practical prohibition on eating corvids.' },
+];
+---
+
+<BaseLayout title={title} description={description} path={path} ogType="article"
+  datePublished="2026-11-08" dateModified="2026-11-08"
+  breadcrumbs={breadcrumbs} faq={faq} pageType="Article">
+
+<article class="qa-page">
+
+  <nav class="qa-breadcrumb" aria-label="Breadcrumb">
+    <ol>
+      {breadcrumbs.map((b, i) => (
+        <li>
+          {i < breadcrumbs.length - 1
+            ? <><a href={b.url}>{b.name}</a><span aria-hidden="true"> › </span></>
+            : <span aria-current="page">{b.name}</span>}
+        </li>
+      ))}
+    </ol>
+  </nav>
+
+  <header class="qa-header">
+    <p class="qa-pillar">World Lore · MYW·27</p>
+    <h1>Ravens in Islamic and Arab Tradition: The Quranic Raven and Pre-Islamic Omen</h1>
+  </header>
+
+  <section class="qa-snippet" aria-label="Direct answer">
+    <p><strong class="claim-lore">[lore]</strong> The raven (Arabic: <em>ghurāb</em>) appears in Quranic scripture as a divinely-sent teacher: God sends a raven to show Cain how to bury the dead after he kills Abel (Surah Al-Ma'idah 5:31). In pre-Islamic Arab tradition, the <em>ghurāb al-bayn</em> (raven of separation) was an omen bird whose call foretold parting, exile, or death — a figure that pervades early Arabic poetry and persists in later Islamic literature.</p>
+  </section>
+
+  <section class="qa-section">
+    <h2>The Quranic Raven: Teacher of Burial</h2>
+    <p><strong class="claim-lore">[lore]</strong> The raven's most significant appearance in Islamic scripture is in Surah Al-Ma'idah (5:31), in the narrative of Cain and Abel (Qābīl and Hābīl). The passage reads:<sup><a href="#src-1">1</a></sup></p>
+    <blockquote style="border-left:3px solid var(--gold-500,#d4ae5a);padding-left:1rem;margin:1rem 0;color:#c8c0b0;font-style:italic;">
+      "Then God sent a raven, digging in the earth, to show him how to conceal the nakedness of his brother's body. He said: 'Woe to me! Could I not have been like this raven and concealed the nakedness of my brother's body?' — and he became among those who regret."
+    </blockquote>
+    <p>Several elements of this narrative are theologically significant:</p>
+    <ul>
+      <li>God specifically sends the raven as a messenger — the bird is an instrument of divine instruction, not a random natural occurrence.</li>
+      <li>The raven's digging behaviour (burying something) teaches Cain the concept of burial — a fundamental cultural and religious practice.</li>
+      <li>Cain's recognition of the raven's lesson is accompanied by remorse, connecting the raven to penitence and moral understanding.</li>
+    </ul>
+    <p>This Quranic narrative parallels a Midrashic Jewish tradition (Pirkei de-Rabbi Eliezer) in which Adam and Eve, not Cain, learn burial from watching a raven bury another dead raven — suggesting shared exegetical traditions circulating in the Near East.</p>
+  </section>
+
+  <section class="qa-section">
+    <h2>Ghurāb al-Bayn: The Pre-Islamic Omen Raven</h2>
+    <p><strong class="claim-lore">[lore]</strong> Pre-Islamic Arabic poetry (the Jāhiliyya period, before the 7th century CE) makes extensive use of bird omens, and the raven of separation — <em>ghurāb al-bayn</em> — is among the most potent. When this raven calls, parting follows. The convention appears across the mu'allaqāt (the "suspended odes" considered the highest achievement of pre-Islamic Arabic verse) and in the broader corpus of early Arabic poetry.<sup><a href="#src-2">2</a></sup></p>
+    <p>The omen raven in Arabic poetry typically functions as:</p>
+    <ul>
+      <li>A harbinger of the beloved's departure — the raven calls, and the poet knows his love is leaving.</li>
+      <li>A symbol of exile and displacement — hearing the raven, the poet is reminded of his own wandering.</li>
+      <li>An objective correlative of grief — the raven's call externalises interior emotional states, linking natural observation to human feeling.</li>
+    </ul>
+    <p>The Arabic word <em>bayn</em> means both "separation" and "between" — the raven occupies the threshold space between presence and absence, making it a natural vehicle for the poetry of longing that characterises much classical Arabic verse.</p>
+  </section>
+
+  <section class="qa-section">
+    <h2>The Raven in Classical Arabic and Persian Literature</h2>
+    <p><strong class="claim-lore">[lore]</strong> The omen raven tradition persisted into the Islamic period in both Arabic and Persian literature. The 10th-century Arabic anthology <em>Kitāb al-Hayawān</em> (Book of Animals) by al-Jahiz includes substantial discussion of corvid behaviour and their omen status — the most detailed natural history of ravens in the Arabic tradition.<sup><a href="#src-2">2</a></sup></p>
+    <p>In Persian poetry, the raven appears as a symbol of separation and longing parallel to the Arabic tradition. The Shahnameh (Book of Kings, Ferdowsi, c. 1010 CE) uses raven imagery in scenes of battle and death — the battlefield raven consuming the slain is an image shared between Persian, Norse, and Celtic warrior traditions independently.</p>
+  </section>
+
+  <section class="qa-section">
+    <h2>The Raven in Hadith and Islamic Law</h2>
+    <p><strong class="claim-lore">[lore]</strong> The hadith collections record that the Prophet Muhammad permitted the killing of crows (al-ghurāb al-abqa<u>') even during ihram (the state of ritual consecration during Hajj) — classifying them among the </u>fawāsiq (harmful animals). This classification is based on practical grounds (crop and food theft) rather than on the raven's symbolic or narrative role in the Quran.<sup><a href="#src-1">1</a></sup></p>
+    <p>The coexistence of the raven's positive Quranic role (God's teacher of burial) with its classification as a harmful animal in jurisprudence reflects the multi-stranded nature of Islamic raven tradition — the same bird can be a divine instrument in scripture and an agricultural pest in practical law.</p>
+  </section>
+
+  <section class="qa-section">
+    <h2>Related Pages</h2>
+    <ul>
+      <li><a href="/lore/world/ravens-in-the-bible/">Ravens in the Bible</a></li>
+      <li><a href="/lore/world/elijah-and-the-ravens/">Elijah and the ravens</a></li>
+      <li><a href="/questions/what-does-a-raven-symbolise/">What does a raven symbolise?</a></li>
+      <li><a href="/lore/world/raven-symbolism/">Raven symbolism worldwide</a></li>
+    </ul>
+  </section>
+
+  <section class="qa-faq qa-section" aria-labelledby="faq-h2">
+    <h2 id="faq-h2">Frequently Asked Questions</h2>
+    {faq.map(item => (
+      <details class="qa-faq-item">
+        <summary class="qa-faq-q">{item.q}</summary>
+        <p class="qa-faq-a">{item.a}</p>
+      </details>
+    ))}
+  </section>
+
+  <section class="qa-sources qa-section" aria-labelledby="src-h2">
+    <h2 id="src-h2">Sources</h2>
+    <ol class="qa-src-list">
+      <li id="src-1">Nasr, S.H. (ed.) (2015). <em>The Study Quran: A New Translation and Commentary</em>. HarperOne. — Surah Al-Ma'idah 5:31 commentary; raven teaching burial rites; Quranic raven narrative context.</li>
+      <li id="src-2">Meisami, J.S. & Starkey, P. (eds.) (1998). <em>Encyclopedia of Arabic Literature</em>. Routledge. — ghurāb al-bayn in pre-Islamic poetry; bird omens in classical Arabic tradition; al-Jahiz and corvid natural history.</li>
+    </ol>
+    <p class="qa-claim-note"><strong class="claim-lore">[lore]</strong> named cultural/historical source</p>
+  </section>
+
+</article>
+</BaseLayout>
+
+<style>
+  .qa-page { max-width: 820px; margin: 0 auto; padding: 2rem 1.25rem 4rem; color: var(--iron-ink, #e8e4d8); font-family: 'Inter', sans-serif; line-height: 1.72; }
+  .qa-breadcrumb ol { display: flex; flex-wrap: wrap; gap: .25rem; list-style: none; padding: 0; margin: 0 0 2rem; font-size: .8rem; color: var(--ink-soft, #8a8070); }
+  .qa-breadcrumb a { color: var(--gold-500, #d4ae5a); text-decoration: none; }
+  .qa-pillar { font-size: .72rem; letter-spacing: .12em; text-transform: uppercase; color: var(--gold-500, #d4ae5a); margin: 0 0 .4rem; }
+  .qa-page h1 { font-family: 'Cormorant Garamond', serif; font-size: clamp(2rem, 5vw, 3rem); font-weight: 700; color: #fff; margin: 0 0 2rem; line-height: 1.1; }
+  .qa-snippet { background: rgba(212,174,90,.08); border-left: 3px solid var(--gold-500, #d4ae5a); border-radius: 0 6px 6px 0; padding: 1rem 1.25rem; margin-bottom: 2.5rem; font-size: 1.03rem; }
+  .qa-section { margin-bottom: 2.5rem; }
+  .qa-section h2 { font-family: 'Cormorant Garamond', serif; font-size: 1.5rem; font-weight: 600; color: #fff; margin: 0 0 .9rem; border-bottom: 1px solid rgba(212,174,90,.2); padding-bottom: .4rem; }
+  .qa-section p { margin: 0 0 1rem; font-size: .97rem; }
+  .qa-section ul { padding-left: 1.25rem; margin: 0 0 1rem; }
+  .qa-section li { margin-bottom: .4rem; font-size: .95rem; }
+  .claim-lore { color: #c49a3c; font-style: normal; font-size: .78rem; }
+  a[href] { color: var(--gold-500, #d4ae5a); }
+  .qa-faq-item { border-bottom: 1px solid rgba(255,255,255,.07); }
+  .qa-faq-q { cursor: pointer; padding: .9rem 0; font-size: .97rem; font-weight: 500; color: #fff; list-style: none; }
+  .qa-faq-q::before { content: '+ '; color: var(--gold-500, #d4ae5a); font-weight: 700; }
+  details[open] .qa-faq-q::before { content: '− '; }
+  .qa-faq-a { margin: 0 0 1rem; line-height: 1.7; font-size: .93rem; color: var(--ink-soft, #c8c0b0); }
+  .qa-src-list { padding-left: 1.25rem; margin: 0 0 1rem; }
+  .qa-src-list li { margin-bottom: .6rem; font-size: .82rem; color: var(--ink-soft, #8a8070); line-height: 1.6; }
+  .qa-claim-note { font-size: .78rem; color: var(--ink-soft, #605848); border-top: 1px solid rgba(255,255,255,.06); padding-top: .75rem; }
+</style>

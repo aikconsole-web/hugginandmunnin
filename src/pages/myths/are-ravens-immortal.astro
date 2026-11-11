@@ -1,0 +1,137 @@
+---
+/**
+ * Myth — Are ravens immortal?
+ * MYTH·14
+ * Primary keyword: are ravens immortal
+ * Secondary: raven immortality myth, how long do ravens live mythology, immortal raven belief
+ */
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const title       = 'Are Ravens Immortal? The Myth and the Reality of Raven Lifespan';
+const description = 'Folk traditions across many cultures attribute great age or immortality to ravens. This page examines the myth, its cultural origins, and what science actually knows about raven lifespan — which is impressive, but far from immortal.';
+const path        = '/myths/are-ravens-immortal/';
+
+const breadcrumbs = [
+  { name: 'Home',  url: '/' },
+  { name: 'Myths', url: '/myths/' },
+  { name: 'Are Ravens Immortal?', url: path },
+];
+
+const faq = [
+  { q: 'How long do ravens live?', a: 'Wild Common Ravens have documented lifespans of 10–15 years on average, with the oldest wild-banded individuals reaching 21–23 years. Captive ravens can live considerably longer: Odin, a raven at the Tower of London, reportedly lived to around 44 years, though documentation of extreme captive ages is not always rigorous. The raven\'s lifespan is long for a bird of its size, but falls far short of immortality.' },
+  { q: 'Why do people think ravens are immortal?', a: 'The belief in raven immortality or extreme longevity likely derives from several sources: the raven\'s association with gods (Odin\'s ravens Huginn and Muninn are supernatural beings, not ordinary birds); the longevity of well-known captive ravens at sites like the Tower of London; and the raven\'s consistent presence in landscapes across human generations, making it seem as if "the raven" is always there — not distinguishing between individual birds. In Welsh tradition, Bran (whose name means raven) is a giant king with supernatural resilience — another source of raven-immortality associations.' },
+  { q: 'What is the oldest known raven?', a: 'The longest reliably documented lifespan for a wild Common Raven from ringing data is approximately 21–23 years. Captive ravens can live longer: anecdotal records from the Tower of London and zoo collections suggest 30–40+ years in some cases, though early records lacked rigorous documentation. The popular claim of a 44-year-old Tower raven is frequently cited but difficult to verify independently. Scientifically documented maximum lifespans place ravens well below the extreme longevity attributed to them in myth.' },
+];
+---
+
+<BaseLayout title={title} description={description} path={path} ogType="article"
+  datePublished="2026-11-07" dateModified="2026-11-07"
+  breadcrumbs={breadcrumbs} faq={faq} pageType="Article">
+
+<article class="qa-page">
+
+  <nav class="qa-breadcrumb" aria-label="Breadcrumb">
+    <ol>
+      {breadcrumbs.map((b, i) => (
+        <li>
+          {i < breadcrumbs.length - 1
+            ? <><a href={b.url}>{b.name}</a><span aria-hidden="true"> › </span></>
+            : <span aria-current="page">{b.name}</span>}
+        </li>
+      ))}
+    </ol>
+  </nav>
+
+  <header class="qa-header">
+    <p class="qa-pillar">Myths vs Facts · MYTH·14</p>
+    <h1>Are Ravens Immortal? The Myth and the Reality of Raven Lifespan</h1>
+  </header>
+
+  <div class="id-verdict verdict-false" role="note" aria-label="Verdict">
+    <strong>Verdict: False</strong> — Ravens are not immortal. Wild ravens live 10–23 years on average; captive birds can reach 30–40+ years. Their long lifespan relative to similarly sized birds, combined with mythological associations, underlies the immortality belief — but it is not supported by evidence.
+  </div>
+
+  <section class="qa-snippet" aria-label="Direct answer">
+    <p><strong class="claim-science">[science]</strong> Ravens are not immortal. Wild Common Ravens have documented lifespans of 10–15 years on average; the oldest banded wild birds reach approximately 21–23 years. Captive ravens can live 30–40+ years. <strong class="claim-lore">[lore]</strong> The immortality belief derives from the raven's association with immortal gods (Odin, Apollo), the perceived unchanging presence of "the raven" across generations, and accounts of exceptionally long-lived captive birds.</p>
+  </section>
+
+  <section class="qa-section">
+    <h2>What Science Says: Raven Lifespan</h2>
+    <p><strong class="claim-science">[science]</strong> Long-term ringing studies and population monitoring provide good data on raven longevity:<sup><a href="#src-1">1</a></sup></p>
+    <ul>
+      <li><strong>Average wild lifespan:</strong> 10–15 years for birds that survive their first year. First-year mortality is high — estimates suggest 20–40% of juvenile ravens die in their first year from predation, starvation, and accident.</li>
+      <li><strong>Maximum documented wild age:</strong> approximately 21–23 years (from banding records in North America and Europe).</li>
+      <li><strong>Captive lifespan:</strong> 20–40+ years; anecdotal records from Tower of London and zoo populations suggest some individuals exceed 40 years, though documentation becomes unreliable at extreme ages.</li>
+    </ul>
+    <p>For comparison, the European common crow (<em>Corvus corone</em>) has a maximum documented wild age of approximately 20 years — similar to the raven. The raven's lifespan is not dramatically different from other large corvids.</p>
+  </section>
+
+  <section class="qa-section">
+    <h2>Why the Immortality Myth Persists</h2>
+    <p><strong class="claim-lore">[lore]</strong> Multiple cultural and perceptual factors sustain the belief in raven immortality or extreme age:<sup><a href="#src-2">2</a></sup></p>
+    <ul>
+      <li><strong>Divine association:</strong> Odin's ravens Huginn and Muninn are supernatural entities — they cannot die as ordinary birds do. This divine model bleeds into perception of real ravens.</li>
+      <li><strong>Population continuity:</strong> ravens are resident birds that occupy the same territories for many years. To a human observer, "the raven on that cliff" appears to be the same individual year after year — but territory holders are replaced without obvious break.</li>
+      <li><strong>Tower of London myth:</strong> the story that England will fall if the Tower's ravens die (and by implication, that they are essentially immortal guardians) reinforces the idea of extremely long-lived ravens.</li>
+      <li><strong>Welsh: Bran:</strong> Bran fab Llŷr — the raven-king of Welsh mythology — survives decapitation, has his severed head prophesy for 87 years, and is associated with enduring supernatural power. This raven-king-immortality complex directly feeds the belief.</li>
+    </ul>
+  </section>
+
+  <section class="qa-section">
+    <h2>Related Pages</h2>
+    <ul>
+      <li><a href="/questions/how-long-do-ravens-live/">How long do ravens live?</a></li>
+      <li><a href="/questions/raven-lifespan-in-captivity/">Raven lifespan in captivity</a></li>
+      <li><a href="/lore/world/bran-the-blessed/">Bran the Blessed</a></li>
+      <li><a href="/myths/are-ravens-bad-luck/">Are ravens bad luck?</a></li>
+    </ul>
+  </section>
+
+  <section class="qa-faq qa-section" aria-labelledby="faq-h2">
+    <h2 id="faq-h2">Frequently Asked Questions</h2>
+    {faq.map(item => (
+      <details class="qa-faq-item">
+        <summary class="qa-faq-q">{item.q}</summary>
+        <p class="qa-faq-a">{item.a}</p>
+      </details>
+    ))}
+  </section>
+
+  <section class="qa-sources qa-section" aria-labelledby="src-h2">
+    <h2 id="src-h2">Sources</h2>
+    <ol class="qa-src-list">
+      <li id="src-1">Boarman, W.I. & Heinrich, B. (1999). Common Raven (<em>Corvus corax</em>). In Poole, A. (ed.), <em>The Birds of North America</em>, No. 476. Cornell Lab of Ornithology. — lifespan, mortality data, longevity records.</li>
+      <li id="src-2">Davies, S. (trans., 2007). <em>The Mabinogion</em>. Oxford University Press. — Bran fab Llŷr, immortality associations, decapitated head; Tower of London raven tradition discussed in Parnell, G. (1993), <em>The Tower of London</em>. Batsford.</li>
+    </ol>
+    <p class="qa-claim-note"><strong class="claim-science">[science]</strong> peer-reviewed or field-guide data &nbsp;|&nbsp; <strong class="claim-lore">[lore]</strong> named cultural/historical source</p>
+  </section>
+
+</article>
+</BaseLayout>
+
+<style>
+  .qa-page { max-width: 820px; margin: 0 auto; padding: 2rem 1.25rem 4rem; color: var(--iron-ink, #e8e4d8); font-family: 'Inter', sans-serif; line-height: 1.72; }
+  .qa-breadcrumb ol { display: flex; flex-wrap: wrap; gap: .25rem; list-style: none; padding: 0; margin: 0 0 2rem; font-size: .8rem; color: var(--ink-soft, #8a8070); }
+  .qa-breadcrumb a { color: var(--gold-500, #d4ae5a); text-decoration: none; }
+  .qa-pillar { font-size: .72rem; letter-spacing: .12em; text-transform: uppercase; color: var(--gold-500, #d4ae5a); margin: 0 0 .4rem; }
+  .qa-page h1 { font-family: 'Cormorant Garamond', serif; font-size: clamp(2rem, 5vw, 3rem); font-weight: 700; color: #fff; margin: 0 0 2rem; line-height: 1.1; }
+  .id-verdict { border-left: 4px solid; border-radius: 0 6px 6px 0; padding: .9rem 1.25rem; margin-bottom: 2rem; font-size: .95rem; }
+  .verdict-false { border-color: #e07a5f; background: rgba(224,122,95,.08); color: #f0a090; }
+  .qa-snippet { background: rgba(212,174,90,.08); border-left: 3px solid var(--gold-500, #d4ae5a); border-radius: 0 6px 6px 0; padding: 1rem 1.25rem; margin-bottom: 2.5rem; font-size: 1.03rem; }
+  .qa-section { margin-bottom: 2.5rem; }
+  .qa-section h2 { font-family: 'Cormorant Garamond', serif; font-size: 1.5rem; font-weight: 600; color: #fff; margin: 0 0 .9rem; border-bottom: 1px solid rgba(212,174,90,.2); padding-bottom: .4rem; }
+  .qa-section p { margin: 0 0 1rem; font-size: .97rem; }
+  .qa-section ul { padding-left: 1.25rem; margin: 0 0 1rem; }
+  .qa-section li { margin-bottom: .4rem; font-size: .95rem; }
+  .claim-science { color: #7ab9e0; font-style: normal; font-size: .78rem; }
+  .claim-lore { color: #c4a26a; font-style: normal; font-size: .78rem; }
+  a[href] { color: var(--gold-500, #d4ae5a); }
+  .qa-faq-item { border-bottom: 1px solid rgba(255,255,255,.07); }
+  .qa-faq-q { cursor: pointer; padding: .9rem 0; font-size: .97rem; font-weight: 500; color: #fff; list-style: none; }
+  .qa-faq-q::before { content: '+ '; color: var(--gold-500, #d4ae5a); font-weight: 700; }
+  details[open] .qa-faq-q::before { content: '− '; }
+  .qa-faq-a { margin: 0 0 1rem; line-height: 1.7; font-size: .93rem; color: var(--ink-soft, #c8c0b0); }
+  .qa-src-list { padding-left: 1.25rem; margin: 0 0 1rem; }
+  .qa-src-list li { margin-bottom: .6rem; font-size: .82rem; color: var(--ink-soft, #8a8070); line-height: 1.6; }
+  .qa-claim-note { font-size: .78rem; color: var(--ink-soft, #605848); border-top: 1px solid rgba(255,255,255,.06); padding-top: .75rem; }
+</style>

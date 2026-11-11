@@ -1,0 +1,125 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+
+const title       = 'Fan-tailed Raven Range and Habitat — North-East Africa and Middle East';
+const description = 'The Fan-tailed Raven (Corvus rhipidurus) inhabits rocky escarpments and cliffs from north-east Africa through the Arabian Peninsula. Range and cliff-nesting habitat.';
+const path        = '/species/fan-tailed-raven/range-and-habitat/';
+
+const breadcrumbs = [
+  { name: 'Home',            url: '/' },
+  { name: 'Species',         url: '/species/' },
+  { name: 'Fan-tailed Raven', url: '/species/fan-tailed-raven/' },
+  { name: 'Range and Habitat', url: path },
+];
+
+const faq = [
+  { q: 'Where does the Fan-tailed Raven live?', a: 'The Fan-tailed Raven is found in rocky escarpments, gorges, and cliff habitats from north-east Africa (Ethiopia, Eritrea, Somalia, Sudan, Djibouti) north through the Arabian Peninsula (Yemen, Oman, Saudi Arabia) and into the Sinai and Israel/Jordan (Rift Valley cliffs). It is a cliff-specialist and is not found in lowland desert or forest.' },
+];
+---
+
+<BaseLayout title={title} description={description} path={path} ogType="article"
+  datePublished="2026-11-07" dateModified="2026-11-07"
+  breadcrumbs={breadcrumbs} faq={faq} pageType="Article">
+
+<article class="id-page">
+  <nav class="id-breadcrumb" aria-label="Breadcrumb">
+    <ol>
+      {breadcrumbs.map((b, i) => (
+        <li>
+          {i < breadcrumbs.length - 1
+            ? <><a href={b.url}>{b.name}</a><span aria-hidden="true"> › </span></>
+            : <span aria-current="page">{b.name}</span>}
+        </li>
+      ))}
+    </ol>
+  </nav>
+  <header class="id-header">
+    <p class="id-pillar">Species · Range and Habitat</p>
+    <h1>Fan-tailed Raven — Range and Habitat</h1>
+    <p class="id-subtitle"><em>Corvus rhipidurus</em> · Cliff Specialist</p>
+  </header>
+
+  <section class="id-snippet" aria-label="Quick answer">
+    <p><strong class="claim-science">[science]</strong> The Fan-tailed Raven is a cliff and gorge specialist found from north-east Africa through the Arabian Peninsula to the Sinai and Israel/Jordan. It is strongly associated with rocky terrain — escarpments, gorges, and cliff faces — and does not occur in flat desert or forested areas. Conservation status: Least Concern.</p>
+  </section>
+
+  <section class="id-section">
+    <h2>Range</h2>
+    <p><strong class="claim-science">[science]</strong></p>
+    <ul>
+      <li><strong>North-east Africa:</strong> Ethiopia, Eritrea, Somalia (north), Sudan (north-east), Djibouti</li>
+      <li><strong>Arabian Peninsula:</strong> Yemen, Oman, Saudi Arabia (Red Sea coast mountains, Asir), UAE</li>
+      <li><strong>Middle East:</strong> Sinai (Egypt), Israel (Dead Sea cliffs, Negev escarpments), Jordan (Wadi Rum, Rift Valley), Syria (south)<sup><a href="#src-1">1</a></sup></li>
+    </ul>
+  </section>
+
+  <section class="id-section">
+    <h2>Habitat</h2>
+    <p><strong class="claim-science">[science]</strong> Rock and cliff specialist throughout its range:</p>
+    <ul>
+      <li>Cliff faces, gorges, and rocky escarpments — primary nesting habitat</li>
+      <li>Desert mountains and rocky highlands</li>
+      <li>Coastal cliffs (Red Sea coast, Gulf of Aden)</li>
+      <li>Wadi systems with exposed rock faces</li>
+      <li>Avoids: flat desert, lowland areas without rocky terrain, forest</li>
+    </ul>
+    <p>The Fan-tailed Raven soars frequently in thermals above cliff faces. It often co-occurs with Verreaux's Eagle, Egyptian Vulture, and other cliff-associated raptors. The short, fan-shaped tail is well-adapted for manoeuvrability in rocky terrain.<sup><a href="#src-1">1</a></sup></p>
+  </section>
+
+  <section class="id-section">
+    <h2>Conservation Status</h2>
+    <p><strong class="claim-science">[science]</strong> <strong>Least Concern</strong> (IUCN Red List). Population stable; not globally threatened.</p>
+  </section>
+
+  <section class="id-faq id-section" aria-labelledby="faq-h2">
+    <h2 id="faq-h2">Frequently Asked Questions</h2>
+    {faq.map(item => (
+      <details class="id-faq-item">
+        <summary class="id-faq-q">{item.q}</summary>
+        <p class="id-faq-a">{item.a}</p>
+      </details>
+    ))}
+  </section>
+
+  <section class="id-sources id-section" aria-labelledby="src-h2">
+    <h2 id="src-h2">Sources</h2>
+    <ol class="id-src-list">
+      <li id="src-1">Madge, S. &amp; Burn, H. (1994). <em>Crows and Jays</em>. Christopher Helm. — range and habitat.</li>
+    </ol>
+    <p class="id-claim-note"><strong class="claim-science">[science]</strong> field-guide data</p>
+  </section>
+
+  <nav class="id-nav-bottom">
+    <a href="/species/fan-tailed-raven/identification/" class="id-back">← Identification</a>
+    <a href="/species/fan-tailed-raven/" class="id-next">Fan-tailed Raven Overview →</a>
+  </nav>
+</article>
+</BaseLayout>
+
+<style>
+  .id-page { max-width: 820px; margin: 0 auto; padding: 2rem 1.25rem 4rem; color: var(--iron-ink, #e8e4d8); font-family: 'Inter', sans-serif; line-height: 1.72; }
+  .id-breadcrumb ol { display: flex; flex-wrap: wrap; gap: .25rem; list-style: none; padding: 0; margin: 0 0 2rem; font-size: .8rem; color: var(--ink-soft, #8a8070); }
+  .id-breadcrumb a { color: var(--gold-500, #d4ae5a); text-decoration: none; }
+  .id-pillar { font-size: .72rem; letter-spacing: .12em; text-transform: uppercase; color: var(--gold-500, #d4ae5a); margin: 0 0 .4rem; }
+  .id-page h1 { font-family: 'Cormorant Garamond', serif; font-size: clamp(2rem, 5vw, 3.25rem); font-weight: 700; color: #fff; margin: 0 0 .2rem; line-height: 1.1; }
+  .id-subtitle { font-size: 1rem; color: var(--ink-soft, #c0b89a); margin: 0 0 2rem; }
+  .id-snippet { background: rgba(212,174,90,.08); border-left: 3px solid var(--gold-500, #d4ae5a); border-radius: 0 6px 6px 0; padding: 1rem 1.25rem; margin-bottom: 2.5rem; font-size: 1.03rem; }
+  .id-section { margin-bottom: 2.75rem; }
+  .id-section h2 { font-family: 'Cormorant Garamond', serif; font-size: 1.6rem; font-weight: 600; color: #fff; margin: 0 0 1rem; border-bottom: 1px solid rgba(212,174,90,.2); padding-bottom: .4rem; }
+  .id-section p { margin: 0 0 1rem; font-size: .97rem; }
+  .id-section ul { padding-left: 1.25rem; margin: 0 0 1rem; }
+  .id-section li { margin-bottom: .4rem; font-size: .95rem; }
+  .claim-science { color: #7ab9e0; font-style: normal; font-size: .78rem; }
+  a[href] { color: var(--gold-500, #d4ae5a); }
+  .id-faq-item { border-bottom: 1px solid rgba(255,255,255,.07); }
+  .id-faq-q { cursor: pointer; padding: .9rem 0; font-size: .97rem; font-weight: 500; color: #fff; list-style: none; }
+  .id-faq-q::before { content: '+ '; color: var(--gold-500, #d4ae5a); font-weight: 700; }
+  details[open] .id-faq-q::before { content: '− '; }
+  .id-faq-a { margin: 0 0 1rem; line-height: 1.7; font-size: .93rem; color: var(--ink-soft, #c8c0b0); }
+  .id-src-list { padding-left: 1.25rem; margin: 0 0 1rem; }
+  .id-src-list li { margin-bottom: .6rem; font-size: .82rem; color: var(--ink-soft, #8a8070); line-height: 1.6; }
+  .id-claim-note { font-size: .78rem; color: var(--ink-soft, #605848); border-top: 1px solid rgba(255,255,255,.06); padding-top: .75rem; }
+  .id-nav-bottom { display: flex; justify-content: space-between; padding-top: 2rem; border-top: 1px solid rgba(255,255,255,.07); }
+  .id-nav-bottom a { font-size: .9rem; text-decoration: none; }
+  .id-nav-bottom a:hover { text-decoration: underline; }
+</style>

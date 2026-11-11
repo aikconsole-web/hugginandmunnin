@@ -1,0 +1,132 @@
+---
+/**
+ * Species sub-page — Brown-necked Raven range
+ * SPC·11r
+ * Primary keyword: brown-necked raven range
+ * Secondary: where does the brown-necked raven live, corvus ruficollis range, desert raven range
+ */
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+
+const title       = 'Brown-necked Raven Range: Where This Species Lives';
+const description = 'The Brown-necked Raven occupies the arid zones from the Sahara across the Middle East to Central Asia — one of the most extensive desert ranges of any corvid. This page covers its distribution, habitat preferences, and relationship to other arid-zone corvids.';
+const path        = '/species/brown-necked-raven/range/';
+
+const breadcrumbs = [
+  { name: 'Home',                url: '/' },
+  { name: 'Species',             url: '/species/' },
+  { name: 'Brown-necked Raven',  url: '/species/brown-necked-raven/' },
+  { name: 'Range',               url: path },
+];
+
+const faq = [
+  { q: 'Where does the Brown-necked Raven live?', a: 'The Brown-necked Raven (Corvus ruficollis) occupies arid and semi-arid zones across a vast area from the Cape Verde Islands and North Africa east through the Middle East and Arabian Peninsula to Pakistan, India (Sind and Kutch), and Central Asia (Afghanistan, Iran, and neighbouring regions). It is essentially the raven of the desert and steppe zone of the Old World, occupying the habitats too arid for the Common Raven.' },
+  { q: 'Does the Brown-necked Raven overlap with the Common Raven?', a: 'The two species meet at the margins of their ranges. In North Africa, Common Ravens occur in the Atlas Mountains while Brown-necked Ravens occupy the adjacent desert lowlands. In the Canary Islands, both occur on Lanzarote and Fuerteventura — one of the few places where the two species co-exist. In this overlap zone, careful attention to size, bill, and head shape distinguishes them. The Common Raven is larger and heavier-billed; the Brown-necked Raven is slimmer.' },
+  { q: 'Is the Brown-necked Raven found in Israel?', a: 'Yes. The Brown-necked Raven is resident in the arid Negev Desert and Arava Valley of Israel — one of the most accessible locations for Western observers to see the species. It coexists here with the Fan-tailed Raven, which also occurs in the Negev and Judean Desert. Both species can be seen at Mitzpe Ramon and around the cliff faces of the Negev highlands.' },
+];
+---
+
+<BaseLayout title={title} description={description} path={path} ogType="article"
+  datePublished="2026-11-07" dateModified="2026-11-07"
+  breadcrumbs={breadcrumbs} faq={faq} pageType="Article">
+
+<article class="qa-page">
+
+  <nav class="qa-breadcrumb" aria-label="Breadcrumb">
+    <ol>
+      {breadcrumbs.map((b, i) => (
+        <li>
+          {i < breadcrumbs.length - 1
+            ? <><a href={b.url}>{b.name}</a><span aria-hidden="true"> › </span></>
+            : <span aria-current="page">{b.name}</span>}
+        </li>
+      ))}
+    </ol>
+  </nav>
+
+  <header class="qa-header">
+    <p class="qa-pillar">Species Sub-page · SPC·11r</p>
+    <h1>Brown-necked Raven Range: Where This Species Lives</h1>
+  </header>
+
+  <section class="qa-snippet" aria-label="Direct answer">
+    <p><strong class="claim-science">[science]</strong> The Brown-necked Raven (<em>Corvus ruficollis</em>) occupies the arid and semi-arid zones of North Africa (Sahara and sub-Saharan zone), the Middle East, Arabian Peninsula, Horn of Africa, and extending east through Iran and Afghanistan to Pakistan, India, and Central Asia. It is the raven of the Old World desert and steppe belt, essentially replacing the Common Raven in terrain too arid and hot for that species.</p>
+  </section>
+
+  <section class="qa-section">
+    <h2>Distribution</h2>
+    <p><strong class="claim-science">[science]</strong> The Brown-necked Raven's vast range spans desert and semi-desert zones:<sup><a href="#src-1">1</a></sup></p>
+    <ul>
+      <li><strong>Atlantic Islands:</strong> Cape Verde Islands; Canary Islands (Lanzarote, Fuerteventura — where it overlaps with Common Raven).</li>
+      <li><strong>North Africa:</strong> throughout the Sahara from Morocco and Mauritania east to Egypt and Sudan. Also the sub-Saharan Sahel zone (Mali, Niger, Chad, Sudan) in arid shrubland.</li>
+      <li><strong>East Africa:</strong> the arid lowlands of Somalia, Djibouti, Eritrea, and eastern Ethiopia (below the highlands, where the Thick-billed Raven occupies the equivalent highland niche).</li>
+      <li><strong>Middle East:</strong> throughout — Sinai, Israel (Negev), Jordan, Syria, Iraq, Kuwait, Saudi Arabia, Yemen, Oman, UAE.</li>
+      <li><strong>Iran, Afghanistan, Pakistan:</strong> throughout the arid interior plateau zones.</li>
+      <li><strong>India:</strong> restricted to the most arid areas — Rajasthan (Thar Desert), Gujarat (Kutch), and Sindh (Pakistan). Easternmost regular occurrence.</li>
+      <li><strong>Central Asia:</strong> Turkmenistan, Uzbekistan, Tajikistan, and adjacent steppe/desert zones.</li>
+    </ul>
+  </section>
+
+  <section class="qa-section">
+    <h2>Habitat</h2>
+    <p><strong class="claim-science">[science]</strong> Within its range, the Brown-necked Raven occupies arid and semi-arid open habitats:<sup><a href="#src-1">1</a></sup></p>
+    <ul>
+      <li><strong>Primary:</strong> true desert (erg, reg, hammada), semi-desert and steppe with scattered shrubs (Saharan halophytes, Acacia-Commiphora scrub), wadis (dry riverbeds) with cliff faces for nesting.</li>
+      <li><strong>Secondary:</strong> oases, date palm plantations, agricultural land in arid zones, and human settlements — where food subsidies allow penetration into otherwise unsuitable terrain.</li>
+      <li><strong>Tolerance:</strong> one of the most heat- and aridity-tolerant corvids, capable of living in terrain with rainfall below 50 mm/year.</li>
+    </ul>
+  </section>
+
+  <section class="qa-section">
+    <h2>Related Pages</h2>
+    <ul>
+      <li><a href="/species/brown-necked-raven/">Brown-necked Raven — species hub</a></li>
+      <li><a href="/species/brown-necked-raven/identification/">Brown-necked Raven identification</a></li>
+      <li><a href="/species/fan-tailed-raven/range/">Fan-tailed Raven range (overlapping species)</a></li>
+      <li><a href="/compare/fan-tailed-raven-vs-brown-necked-raven/">Fan-tailed Raven vs Brown-necked Raven</a></li>
+    </ul>
+  </section>
+
+  <section class="qa-faq qa-section" aria-labelledby="faq-h2">
+    <h2 id="faq-h2">Frequently Asked Questions</h2>
+    {faq.map(item => (
+      <details class="qa-faq-item">
+        <summary class="qa-faq-q">{item.q}</summary>
+        <p class="qa-faq-a">{item.a}</p>
+      </details>
+    ))}
+  </section>
+
+  <section class="qa-sources qa-section" aria-labelledby="src-h2">
+    <h2 id="src-h2">Sources</h2>
+    <ol class="qa-src-list">
+      <li id="src-1">del Hoyo, J. et al. (eds., 2009). <em>Handbook of the Birds of the World</em>, vol. 14. Lynx Edicions. — Brown-necked Raven species account; distribution, habitat, range maps.</li>
+    </ol>
+    <p class="qa-claim-note"><strong class="claim-science">[science]</strong> peer-reviewed or field-guide data</p>
+  </section>
+
+</article>
+</BaseLayout>
+
+<style>
+  .qa-page { max-width: 820px; margin: 0 auto; padding: 2rem 1.25rem 4rem; color: var(--iron-ink, #e8e4d8); font-family: 'Inter', sans-serif; line-height: 1.72; }
+  .qa-breadcrumb ol { display: flex; flex-wrap: wrap; gap: .25rem; list-style: none; padding: 0; margin: 0 0 2rem; font-size: .8rem; color: var(--ink-soft, #8a8070); }
+  .qa-breadcrumb a { color: var(--gold-500, #d4ae5a); text-decoration: none; }
+  .qa-pillar { font-size: .72rem; letter-spacing: .12em; text-transform: uppercase; color: var(--gold-500, #d4ae5a); margin: 0 0 .4rem; }
+  .qa-page h1 { font-family: 'Cormorant Garamond', serif; font-size: clamp(2rem, 5vw, 3rem); font-weight: 700; color: #fff; margin: 0 0 2rem; line-height: 1.1; }
+  .qa-snippet { background: rgba(212,174,90,.08); border-left: 3px solid var(--gold-500, #d4ae5a); border-radius: 0 6px 6px 0; padding: 1rem 1.25rem; margin-bottom: 2.5rem; font-size: 1.03rem; }
+  .qa-section { margin-bottom: 2.5rem; }
+  .qa-section h2 { font-family: 'Cormorant Garamond', serif; font-size: 1.5rem; font-weight: 600; color: #fff; margin: 0 0 .9rem; border-bottom: 1px solid rgba(212,174,90,.2); padding-bottom: .4rem; }
+  .qa-section p { margin: 0 0 1rem; font-size: .97rem; }
+  .qa-section ul { padding-left: 1.25rem; margin: 0 0 1rem; }
+  .qa-section li { margin-bottom: .4rem; font-size: .95rem; }
+  .claim-science { color: #7ab9e0; font-style: normal; font-size: .78rem; }
+  a[href] { color: var(--gold-500, #d4ae5a); }
+  .qa-faq-item { border-bottom: 1px solid rgba(255,255,255,.07); }
+  .qa-faq-q { cursor: pointer; padding: .9rem 0; font-size: .97rem; font-weight: 500; color: #fff; list-style: none; }
+  .qa-faq-q::before { content: '+ '; color: var(--gold-500, #d4ae5a); font-weight: 700; }
+  details[open] .qa-faq-q::before { content: '− '; }
+  .qa-faq-a { margin: 0 0 1rem; line-height: 1.7; font-size: .93rem; color: var(--ink-soft, #c8c0b0); }
+  .qa-src-list { padding-left: 1.25rem; margin: 0 0 1rem; }
+  .qa-src-list li { margin-bottom: .6rem; font-size: .82rem; color: var(--ink-soft, #8a8070); line-height: 1.6; }
+  .qa-claim-note { font-size: .78rem; color: var(--ink-soft, #605848); border-top: 1px solid rgba(255,255,255,.06); padding-top: .75rem; }
+</style>

@@ -1,0 +1,141 @@
+---
+/**
+ * Q&A — Are ravens smarter than crows?
+ * Primary keyword: are ravens smarter than crows
+ * Secondary: raven vs crow intelligence, raven crow intelligence comparison
+ */
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const title       = 'Are Ravens Smarter Than Crows?';
+const description = 'Ravens and crows are both exceptionally intelligent corvids. This page examines the evidence on each species\' cognitive strengths and whether one is definitively "smarter."';
+const path        = '/questions/are-ravens-smarter-than-crows/';
+
+const breadcrumbs = [
+  { name: 'Home',      url: '/' },
+  { name: 'Questions', url: '/questions/' },
+  { name: 'Are Ravens Smarter Than Crows?', url: path },
+];
+
+const faq = [
+  { q: 'Which is smarter — a raven or an American Crow?', a: 'The question cannot be given a simple answer. Ravens outperform crows in some studies (tool use, future planning, gaze following), while crows — particularly New Caledonian Crows — show more sophisticated physical problem-solving and tool manufacture. American Crows show better-documented facial recognition in controlled experiments. Intelligence is not a single dimension; each species excels in different areas that suit its ecology.' },
+  { q: 'Have ravens and crows been directly compared in the same experiment?', a: 'Direct side-by-side comparisons are uncommon because the species are studied by different research groups in different countries. The Kabadayi & Osvath (2017) planning study compared ravens to great apes but not directly to crows. Cross-species comparisons are methodologically difficult — experimental design, familiarity with researchers, and social context all affect performance.' },
+  { q: 'Do ravens use tools the way New Caledonian Crows do?', a: 'No. New Caledonian Crows are the most sophisticated tool users among birds — they manufacture hooks from leaves and use them to extract prey. Ravens show tool use in experiments (selecting and saving tools) but do not manufacture multi-step tools in the wild. Wild Common Raven tool use, in contrast to the crows, is rare and simple.' },
+];
+---
+
+<BaseLayout title={title} description={description} path={path} ogType="article"
+  datePublished="2026-11-07" dateModified="2026-11-07"
+  breadcrumbs={breadcrumbs} faq={faq} pageType="Article">
+
+<article class="qa-page">
+
+  <nav class="qa-breadcrumb" aria-label="Breadcrumb">
+    <ol>
+      {breadcrumbs.map((b, i) => (
+        <li>
+          {i < breadcrumbs.length - 1
+            ? <><a href={b.url}>{b.name}</a><span aria-hidden="true"> › </span></>
+            : <span aria-current="page">{b.name}</span>}
+        </li>
+      ))}
+    </ol>
+  </nav>
+
+  <header class="qa-header">
+    <p class="qa-pillar">Question · Mind</p>
+    <h1>Are Ravens Smarter Than Crows?</h1>
+  </header>
+
+  <section class="qa-snippet" aria-label="Direct answer">
+    <p><strong class="claim-science">[science]</strong> Both ravens and crows are among the most cognitively capable birds known. Ravens score higher in some domains — future planning, gaze following, social cognition with large networks. Crows (especially New Caledonian Crows) are superior tool manufacturers. American Crows show stronger documented facial recognition. Neither species is definitively "smarter" — they are exceptional in different ways.</p>
+  </section>
+
+  <section class="qa-section">
+    <h2>What Ravens Do Exceptionally Well</h2>
+    <p><strong class="claim-science">[science]</strong> Key cognitive strengths documented specifically in ravens:<sup><a href="#src-1">1</a></sup><sup><a href="#src-2">2</a></sup></p>
+    <ul>
+      <li><strong>Future planning:</strong> Kabadayi & Osvath (2017) showed ravens select and save tools for tasks up to 17 hours in the future — matching great apes in controlled tests.</li>
+      <li><strong>Social cognition:</strong> Ravens live in complex non-breeding flocks where they track individual relationships, alliances, and competitive histories across dozens of conspecifics.</li>
+      <li><strong>Cache protection via theory of mind:</strong> Ravens re-cache food after being watched, perform false caching, and monitor observers' sight lines — suggesting awareness of others' knowledge states (Bugnyar & Heinrich, 2005).</li>
+      <li><strong>Gaze following:</strong> Ravens follow human gaze around opaque barriers — suggesting they understand something about what others can and cannot see (Bugnyar et al., 2004).</li>
+    </ul>
+  </section>
+
+  <section class="qa-section">
+    <h2>What Crows Do Exceptionally Well</h2>
+    <p><strong class="claim-science">[science]</strong> Key cognitive strengths in crows (various species):<sup><a href="#src-3">3</a></sup></p>
+    <ul>
+      <li><strong>Tool manufacture:</strong> New Caledonian Crows (<em>Corvus moneduloides</em>) fashion hook tools from leaves and sticks — the most complex tool manufacture known in birds. They show causal understanding of physical relationships in a way not demonstrated in ravens.</li>
+      <li><strong>Facial recognition (controlled):</strong> American Crows show documented individual human face memory lasting at least 5 years in controlled experiments (Marzluff et al., 2010). No equivalent raven experiment has been published.</li>
+      <li><strong>Urban problem solving:</strong> American and Carrion Crows have been documented using traffic to crack nuts, dropping shellfish onto rocks, and using water to soften food — creative solutions to urban problems.</li>
+    </ul>
+  </section>
+
+  <section class="qa-section">
+    <h2>Why the Comparison Is Difficult</h2>
+    <p><strong class="claim-science">[science]</strong> Comparing "intelligence" between species is methodologically fraught:</p>
+    <ul>
+      <li>Different research groups study different species using different methods — results are not directly comparable.</li>
+      <li>Performance depends on the ecological relevance of the task. Ravens may outperform crows on social cognition tasks because their ecology demands more complex social navigation.</li>
+      <li>Brain size relative to body mass is similar in ravens and large crows — both have relatively large brains for their body size among birds.</li>
+      <li>The same population of ravens can vary substantially in task performance depending on experience, age, and social context.</li>
+    </ul>
+    <p>The honest answer is: they are both remarkable, and the question "which is smarter?" is better rephrased as "what is each species good at, and why?"</p>
+  </section>
+
+  <section class="qa-section">
+    <h2>Related Questions</h2>
+    <ul>
+      <li><a href="/questions/how-smart-are-ravens/">How smart are ravens?</a></li>
+      <li><a href="/compare/raven-vs-crow/">Raven vs crow — comparison</a></li>
+      <li><a href="/behaviour/raven-intelligence/">Raven intelligence — full chapter</a></li>
+      <li><a href="/questions/do-ravens-use-tools/">Do ravens use tools?</a></li>
+    </ul>
+  </section>
+
+  <section class="qa-faq qa-section" aria-labelledby="faq-h2">
+    <h2 id="faq-h2">Frequently Asked Questions</h2>
+    {faq.map(item => (
+      <details class="qa-faq-item">
+        <summary class="qa-faq-q">{item.q}</summary>
+        <p class="qa-faq-a">{item.a}</p>
+      </details>
+    ))}
+  </section>
+
+  <section class="qa-sources qa-section" aria-labelledby="src-h2">
+    <h2 id="src-h2">Sources</h2>
+    <ol class="qa-src-list">
+      <li id="src-1">Kabadayi, C. & Osvath, M. (2017). Ravens parallel great apes in flexible planning for tool-use and bartering. <em>Science</em>, 357(6347), 202–204.</li>
+      <li id="src-2">Bugnyar, T. & Heinrich, B. (2005). Ravens, <em>Corvus corax</em>, differentiate between knowledgeable and ignorant competitors. <em>Proceedings of the Royal Society B</em>, 272, 1641–1646.</li>
+      <li id="src-3">Marzluff, J.M. & Angell, T. (2005). <em>In the Company of Crows and Ravens</em>. Yale University Press. — corvid cognitive comparison.</li>
+    </ol>
+    <p class="qa-claim-note"><strong class="claim-science">[science]</strong> peer-reviewed study or field-guide data</p>
+  </section>
+
+</article>
+</BaseLayout>
+
+<style>
+  .qa-page { max-width: 820px; margin: 0 auto; padding: 2rem 1.25rem 4rem; color: var(--iron-ink, #e8e4d8); font-family: 'Inter', sans-serif; line-height: 1.72; }
+  .qa-breadcrumb ol { display: flex; flex-wrap: wrap; gap: .25rem; list-style: none; padding: 0; margin: 0 0 2rem; font-size: .8rem; color: var(--ink-soft, #8a8070); }
+  .qa-breadcrumb a { color: var(--gold-500, #d4ae5a); text-decoration: none; }
+  .qa-pillar { font-size: .72rem; letter-spacing: .12em; text-transform: uppercase; color: var(--gold-500, #d4ae5a); margin: 0 0 .4rem; }
+  .qa-page h1 { font-family: 'Cormorant Garamond', serif; font-size: clamp(2rem, 5vw, 3rem); font-weight: 700; color: #fff; margin: 0 0 2rem; line-height: 1.1; }
+  .qa-snippet { background: rgba(212,174,90,.08); border-left: 3px solid var(--gold-500, #d4ae5a); border-radius: 0 6px 6px 0; padding: 1rem 1.25rem; margin-bottom: 2.5rem; font-size: 1.03rem; }
+  .qa-section { margin-bottom: 2.5rem; }
+  .qa-section h2 { font-family: 'Cormorant Garamond', serif; font-size: 1.5rem; font-weight: 600; color: #fff; margin: 0 0 .9rem; border-bottom: 1px solid rgba(212,174,90,.2); padding-bottom: .4rem; }
+  .qa-section p { margin: 0 0 1rem; font-size: .97rem; }
+  .qa-section ul { padding-left: 1.25rem; margin: 0 0 1rem; }
+  .qa-section li { margin-bottom: .4rem; font-size: .95rem; }
+  .claim-science { color: #7ab9e0; font-style: normal; font-size: .78rem; }
+  a[href] { color: var(--gold-500, #d4ae5a); }
+  .qa-faq-item { border-bottom: 1px solid rgba(255,255,255,.07); }
+  .qa-faq-q { cursor: pointer; padding: .9rem 0; font-size: .97rem; font-weight: 500; color: #fff; list-style: none; }
+  .qa-faq-q::before { content: '+ '; color: var(--gold-500, #d4ae5a); font-weight: 700; }
+  details[open] .qa-faq-q::before { content: '− '; }
+  .qa-faq-a { margin: 0 0 1rem; line-height: 1.7; font-size: .93rem; color: var(--ink-soft, #c8c0b0); }
+  .qa-src-list { padding-left: 1.25rem; margin: 0 0 1rem; }
+  .qa-src-list li { margin-bottom: .6rem; font-size: .82rem; color: var(--ink-soft, #8a8070); line-height: 1.6; }
+  .qa-claim-note { font-size: .78rem; color: var(--ink-soft, #605848); border-top: 1px solid rgba(255,255,255,.06); padding-top: .75rem; }
+</style>

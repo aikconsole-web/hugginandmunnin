@@ -1,0 +1,143 @@
+---
+/**
+ * Norse lore — Meaning of Huginn
+ * NRS·10
+ * Primary keyword: huginn meaning
+ * Secondary: what does huginn mean, huginn old norse, huginn thought raven
+ */
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+
+const title       = 'Huginn: Meaning, Etymology, and the Raven of Thought';
+const description = 'Huginn is one of Odin\'s two ravens in Norse mythology. The name means "thought" in Old Norse. This page examines the etymology, the primary sources, and what Huginn represents in Norse cosmology.';
+const path        = '/lore/norse/meaning-of-huginn/';
+
+const breadcrumbs = [
+  { name: 'Home',       url: '/' },
+  { name: 'Norse Lore', url: '/lore/norse/' },
+  { name: 'Meaning of Huginn', url: path },
+];
+
+const faq = [
+  { q: 'What does Huginn mean?', a: 'Huginn (Old Norse: <em>Huginn</em>) derives from the Old Norse noun <em>hugr</em>, meaning "thought," "mind," "spirit," or "desire." The name is typically translated as "Thought." <em>Hugr</em> was a broad cognitive and emotional concept in Old Norse — not purely rational thought but the whole interior life of a person. Huginn therefore represents not just cognition but the full range of Odin\'s mental activity that the raven embodies.' },
+  { q: 'Which raven is Huginn — left or right?', a: 'The Eddic sources do not specify whether Huginn sits on Odin\'s left or right shoulder. Grímnismál stanza 20 simply names both ravens and says Odin fears for Huginn more than for Muninn. Later artistic and popular traditions often assign positions (Huginn left, Muninn right, or vice versa), but these are not based on medieval source texts.' },
+  { q: 'Is Huginn a real raven or a symbolic one?', a: 'Within Norse mythological literature, Huginn and Muninn are presented as literal ravens who fly out each morning and return to tell Odin what they have seen. Whether an ancient audience took this literally, allegorically, or somewhere between is debated. Medieval Norse mythology often functions on multiple levels simultaneously — the ravens are real birds in the narrative and also personifications of Odin\'s cognitive capacities. The two readings are not mutually exclusive.' },
+];
+---
+
+<BaseLayout title={title} description={description} path={path} ogType="article"
+  datePublished="2026-11-07" dateModified="2026-11-07"
+  breadcrumbs={breadcrumbs} faq={faq} pageType="Article">
+
+<article class="qa-page">
+
+  <nav class="qa-breadcrumb" aria-label="Breadcrumb">
+    <ol>
+      {breadcrumbs.map((b, i) => (
+        <li>
+          {i < breadcrumbs.length - 1
+            ? <><a href={b.url}>{b.name}</a><span aria-hidden="true"> › </span></>
+            : <span aria-current="page">{b.name}</span>}
+        </li>
+      ))}
+    </ol>
+  </nav>
+
+  <header class="qa-header">
+    <p class="qa-pillar">Norse Lore · NRS·10</p>
+    <h1>Huginn: Meaning, Etymology, and the Raven of Thought</h1>
+  </header>
+
+  <section class="qa-snippet" aria-label="Direct answer">
+    <p><strong class="claim-lore">[lore]</strong> Huginn (Old Norse: <em>Huginn</em>) is one of Odin's two ravens. The name derives from Old Norse <em>hugr</em> — meaning "thought," "mind," or "spirit" — and is standardly translated as "Thought." Together with Muninn ("Memory"), Huginn embodies Odin's capacity to know what passes in all the nine worlds. Huginn is named in Grímnismál stanza 20, the primary Eddic source, alongside Muninn.</p>
+  </section>
+
+  <section class="qa-section">
+    <h2>Etymology: Huginn and Hugr</h2>
+    <p><strong class="claim-lore">[lore]</strong> The name <em>Huginn</em> is a regular Old Norse formation: the noun <em>hugr</em> + the suffix <em>-inn</em> (the definite article as a suffix, giving the sense "the [one characterised by] thought"). Old Norse <em>hugr</em> is cognate with Old English <em>hyge</em> and Old High German <em>hugu</em>, all from Proto-Germanic <em>*hugiz</em> — "thought, mind, spirit." The word encompasses more than just rational cognition:<sup><a href="#src-1">1</a></sup></p>
+    <ul>
+      <li><strong>Rational thought:</strong> deliberation, planning, intention.</li>
+      <li><strong>Desire and mood:</strong> emotional inclination, the direction of will.</li>
+      <li><strong>Spirit and mind:</strong> the inner life of a person, their characteristic way of thinking.</li>
+    </ul>
+    <p><em>Hugr</em> was also important in Old Norse belief as a semi-detachable soul component — the "sending" of one's <em>hugr</em> to distant places was a form of psychic projection attributed to magicians and powerful individuals. Odin's raven Huginn may literalise this concept: the god's thought takes wing and travels the world.</p>
+  </section>
+
+  <section class="qa-section">
+    <h2>The Primary Source: Grímnismál 20</h2>
+    <p><strong class="claim-lore">[lore]</strong> The only direct Eddic stanza naming both ravens is Grímnismál stanza 20, in the <em>Poetic Edda</em> (compiled 13th century, preserving older oral tradition):<sup><a href="#src-2">2</a></sup></p>
+    <blockquote>
+      <p><em>Huginn ok Muninn fljúga hverjan dag / Jörmungrund yfir; / óumk ek of Hugin at hann aftr né komit, / þó sjámk meir of Munin.</em></p>
+      <p>"Huginn and Muninn fly every day / over the great earth; / I fear for Huginn that he may not come back, / though I worry more for Muninn."</p>
+    </blockquote>
+    <p>The stanza establishes: both ravens fly daily over the world; Odin fears for Huginn; but worries <em>more</em> for Muninn. This worry hierarchy is discussed extensively in the scholarship — does it suggest memory is more essential than thought? Or that Odin worries about losing memory more than losing thought? The stanza does not resolve the question.</p>
+  </section>
+
+  <section class="qa-section">
+    <h2>What Huginn Does</h2>
+    <p><strong class="claim-lore">[lore]</strong> The <em>Prose Edda</em> (Snorri Sturluson, c. 1220) elaborates the ravens' function: they "fly all over the world every day, and come back at breakfast time. They tell him [Odin] everything that is happening." In Snorri's telling, the ravens are Odin's intelligence-gathering agents — his means of perceiving what occurs across the nine worlds without physically travelling there.<sup><a href="#src-3">3</a></sup></p>
+    <p>Huginn's role as "Thought" in this framework is Odin's ability to think across distance — to extend his cognition to places he cannot directly observe. The raven makes thought mobile.</p>
+  </section>
+
+  <section class="qa-section">
+    <h2>Huginn in Modern Culture</h2>
+    <p><strong class="claim-lore">[lore]</strong> Huginn and Muninn appear widely in modern culture as symbols of Norse identity — in flags (the Faroe Islands raven flag draws on this tradition), tattoos, coats of arms, sports team names, and fantasy literature. The names are frequently used in Neo-pagan and Ásatrú contexts as symbolising paired cognitive capacities. The raven pair motif has been adopted into many settings without necessarily preserving the original Old Norse theological meaning.</p>
+  </section>
+
+  <section class="qa-section">
+    <h2>Related Pages</h2>
+    <ul>
+      <li><a href="/lore/norse/meaning-of-muninn/">Muninn: meaning and etymology</a></li>
+      <li><a href="/lore/norse/huginn-and-muninn/">Huginn and Muninn — full article</a></li>
+      <li><a href="/lore/norse/grimnismal-stanza-20/">Grímnismál stanza 20 — the primary text</a></li>
+      <li><a href="/lore/norse/odin-the-raven-god/">Odin the Raven God</a></li>
+    </ul>
+  </section>
+
+  <section class="qa-faq qa-section" aria-labelledby="faq-h2">
+    <h2 id="faq-h2">Frequently Asked Questions</h2>
+    {faq.map(item => (
+      <details class="qa-faq-item">
+        <summary class="qa-faq-q">{item.q}</summary>
+        <p class="qa-faq-a">{item.a}</p>
+      </details>
+    ))}
+  </section>
+
+  <section class="qa-sources qa-section" aria-labelledby="src-h2">
+    <h2 id="src-h2">Sources</h2>
+    <ol class="qa-src-list">
+      <li id="src-1">Ringe, D. (2006). <em>A Linguistic History of English, Vol. 1: From Proto-Indo-European to Proto-Germanic</em>. Oxford University Press. — etymology of <em>*hugiz</em>, Proto-Germanic cognates.</li>
+      <li id="src-2">Larrington, C. (trans., 2014). <em>The Poetic Edda</em> (revised ed.). Oxford World's Classics. — Grímnismál stanza 20.</li>
+      <li id="src-3">Faulkes, A. (trans., 1987). <em>Edda</em> (Snorri Sturluson). Everyman Library. — Prose Edda ravens passage.</li>
+    </ol>
+    <p class="qa-claim-note"><strong class="claim-lore">[lore]</strong> named cultural/historical source</p>
+  </section>
+
+</article>
+</BaseLayout>
+
+<style>
+  .qa-page { max-width: 820px; margin: 0 auto; padding: 2rem 1.25rem 4rem; color: var(--iron-ink, #e8e4d8); font-family: 'Inter', sans-serif; line-height: 1.72; }
+  .qa-breadcrumb ol { display: flex; flex-wrap: wrap; gap: .25rem; list-style: none; padding: 0; margin: 0 0 2rem; font-size: .8rem; color: var(--ink-soft, #8a8070); }
+  .qa-breadcrumb a { color: var(--gold-500, #d4ae5a); text-decoration: none; }
+  .qa-pillar { font-size: .72rem; letter-spacing: .12em; text-transform: uppercase; color: var(--gold-500, #d4ae5a); margin: 0 0 .4rem; }
+  .qa-page h1 { font-family: 'Cormorant Garamond', serif; font-size: clamp(2rem, 5vw, 3rem); font-weight: 700; color: #fff; margin: 0 0 2rem; line-height: 1.1; }
+  .qa-snippet { background: rgba(212,174,90,.08); border-left: 3px solid var(--gold-500, #d4ae5a); border-radius: 0 6px 6px 0; padding: 1rem 1.25rem; margin-bottom: 2.5rem; font-size: 1.03rem; }
+  .qa-section { margin-bottom: 2.5rem; }
+  .qa-section h2 { font-family: 'Cormorant Garamond', serif; font-size: 1.5rem; font-weight: 600; color: #fff; margin: 0 0 .9rem; border-bottom: 1px solid rgba(212,174,90,.2); padding-bottom: .4rem; }
+  .qa-section p, blockquote p { margin: 0 0 1rem; font-size: .97rem; }
+  .qa-section ul { padding-left: 1.25rem; margin: 0 0 1rem; }
+  .qa-section li { margin-bottom: .4rem; font-size: .95rem; }
+  blockquote { border-left: 3px solid rgba(212,174,90,.35); margin: 0 0 1.25rem; padding: .5rem 1rem; background: rgba(255,255,255,.03); }
+  blockquote p { font-style: italic; color: var(--ink-soft, #c8c0b0); }
+  .claim-lore { color: #c4a26a; font-style: normal; font-size: .78rem; }
+  a[href] { color: var(--gold-500, #d4ae5a); }
+  .qa-faq-item { border-bottom: 1px solid rgba(255,255,255,.07); }
+  .qa-faq-q { cursor: pointer; padding: .9rem 0; font-size: .97rem; font-weight: 500; color: #fff; list-style: none; }
+  .qa-faq-q::before { content: '+ '; color: var(--gold-500, #d4ae5a); font-weight: 700; }
+  details[open] .qa-faq-q::before { content: '− '; }
+  .qa-faq-a { margin: 0 0 1rem; line-height: 1.7; font-size: .93rem; color: var(--ink-soft, #c8c0b0); }
+  .qa-src-list { padding-left: 1.25rem; margin: 0 0 1rem; }
+  .qa-src-list li { margin-bottom: .6rem; font-size: .82rem; color: var(--ink-soft, #8a8070); line-height: 1.6; }
+  .qa-claim-note { font-size: .78rem; color: var(--ink-soft, #605848); border-top: 1px solid rgba(255,255,255,.06); padding-top: .75rem; }
+</style>

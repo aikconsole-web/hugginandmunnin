@@ -1,0 +1,173 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const title       = 'What Is the Norse Word for Raven?';
+const description = 'The Old Norse word for raven is hrafn (plural hrafnar). This page covers pronunciation, etymology, related place names, and its use in Norse poetry and kennings.';
+const path        = '/questions/what-is-the-norse-word-for-raven/';
+
+const breadcrumbs = [
+  { name: 'Home',      url: '/' },
+  { name: 'Questions', url: '/questions/' },
+  { name: 'What Is the Norse Word for Raven?', url: path },
+];
+
+const faq = [
+  { q: 'What is the Old Norse word for raven?', a: 'The Old Norse word for raven is hrafn (masculine noun). The plural is hrafnar. It is the standard word for the Common Raven (Corvus corax) in Old Norse texts, place names, and personal names. The word is cognate with Old English hræfn and modern German Rabe.' },
+  { q: 'How do you pronounce hrafn in Old Norse?', a: 'Old Norse pronunciation: "HRAHVN" (the h is aspirated before r, so the initial sound is like a strongly breathed-out H followed by R). The vowel is short, and the final -n is a sonorant. Modern Icelandic preserves this as "HRAPBN" (approximate). Many English speakers use a simplified "RAHN" or "HRAVN".' },
+  { q: 'What is the modern Icelandic word for raven?', a: 'Modern Icelandic retains hrafn (singular) and hrafnar (plural), very close to the Old Norse form. Modern Norwegian uses ravn, Swedish uses korp, Danish uses ravn. All are descended from the same Proto-Germanic root.' },
+];
+---
+
+<BaseLayout title={title} description={description} path={path} ogType="article"
+  datePublished="2026-11-07" dateModified="2026-11-07"
+  breadcrumbs={breadcrumbs} faq={faq} pageType="Article">
+
+<article class="qa-page">
+  <nav class="qa-breadcrumb" aria-label="Breadcrumb">
+    <ol>
+      {breadcrumbs.map((b, i) => (
+        <li>
+          {i < breadcrumbs.length - 1
+            ? <><a href={b.url}>{b.name}</a><span aria-hidden="true"> › </span></>
+            : <span aria-current="page">{b.name}</span>}
+        </li>
+      ))}
+    </ol>
+  </nav>
+  <header class="qa-header">
+    <p class="qa-pillar">Question · Language / Norse</p>
+    <h1>What Is the Norse Word for Raven?</h1>
+  </header>
+  <section class="qa-snippet" aria-label="Direct answer">
+    <p><strong class="claim-lore">[lore]</strong> The Old Norse word for raven is <strong><em>hrafn</em></strong> (plural <em>hrafnar</em>). It is a masculine noun of the first declension, cognate with Old English <em>hræfn</em>, Old High German <em>hraban</em>, and modern German <em>Rabe</em>. The word is the source of the name Odin's ravens (<em>Huginn</em> and <em>Muninn</em>), personal names like Hrafnkel, and many Scandinavian and Icelandic place names.</p>
+  </section>
+
+  <section class="qa-section">
+    <h2>The Word: <em>hrafn</em></h2>
+    <p><strong class="claim-lore">[lore]</strong> Old Norse <em>hrafn</em> is recorded in the major reference works for the language. Geir Zoëga's <em>Concise Dictionary of Old Icelandic</em> (1910) gives: <em>hrafn</em>, m. — raven. The plural is <em>hrafnar</em> (nominative), <em>hrafna</em> (genitive plural, as in <em>hrafna-guð</em>, "raven-god" — an Odin byname).<sup><a href="#src-1">1</a></sup></p>
+
+    <table class="qa-table">
+      <thead><tr><th>Form</th><th>Old Norse</th><th>Notes</th></tr></thead>
+      <tbody>
+        <tr><td>Singular nominative</td><td><em>hrafn</em></td><td>Standard form</td></tr>
+        <tr><td>Plural nominative</td><td><em>hrafnar</em></td><td>"the ravens"</td></tr>
+        <tr><td>Genitive plural</td><td><em>hrafna</em></td><td>Used in compounds</td></tr>
+        <tr><td>Genitive singular</td><td><em>hrafns</em></td><td>e.g. in personal names</td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section class="qa-section">
+    <h2>Pronunciation</h2>
+    <p><strong class="claim-lore">[lore]</strong> Old Norse orthography uses <em>hr-</em> to indicate a voiceless (aspirated) r-sound — a sound that no longer exists in modern English. The initial sequence is a strongly breathed H followed immediately by R, then the vowel <em>a</em> (short, as in "father"), then <em>vn</em> (the <em>f</em> in Old Norse was pronounced as a <em>v</em> between vowels and before voiced consonants).</p>
+    <p>A reasonable modern approximation: <strong>HRAVN</strong> (rhymes approximately with "drawn" but with a breathy H-R onset). Modern Icelandic speakers pronounce it closer to <strong>HRAPBN</strong> (the <em>f</em> has become a stop). Many scholars reading aloud use "RAVN" for simplicity.</p>
+  </section>
+
+  <section class="qa-section">
+    <h2>Etymology and Cognates</h2>
+    <p><strong class="claim-lore">[lore]</strong> <em>Hrafn</em> descends from Proto-Germanic <em>*hrabnaz</em>, the reconstructed common ancestor of all the Germanic raven words. The cognates include:<sup><a href="#src-1">1</a></sup></p>
+    <ul>
+      <li>Old English: <em>hræfn</em> (modern English "raven")</li>
+      <li>Old High German: <em>hraban</em> / <em>raban</em> (modern German <em>Rabe</em>)</li>
+      <li>Old Saxon: <em>hraban</em></li>
+      <li>Gothic: <em>*hraban</em> (reconstructed)</li>
+      <li>Modern Icelandic: <em>hrafn</em> (unchanged)</li>
+      <li>Modern Norwegian / Danish: <em>ravn</em></li>
+      <li>Modern Swedish: <em>korp</em> (from a different root — <em>*kruppaz</em>)</li>
+    </ul>
+    <p>The root is likely imitative of the raven's call — a Proto-Indo-European root *ker- / *kor- associated with harsh crying sounds, related to Latin <em>corvus</em> (raven/crow) and Greek <em>korax</em> (raven).</p>
+  </section>
+
+  <section class="qa-section">
+    <h2>Use in Odin's Titles and Names</h2>
+    <p><strong class="claim-lore">[lore]</strong> The word <em>hrafn</em> is central to Odin's raven-associations. His ravens are named <em>Huginn</em> ("Thought") and <em>Muninn</em> ("Memory"), recorded in <em>Grímnismál</em> stanza 20 (Codex Regius). Odin's by-names include:</p>
+    <ul>
+      <li><em>Hrafnaguð</em> — "raven-god" (genitive plural <em>hrafna-</em>)</li>
+      <li><em>Hrafnáss</em> — "raven-Áss" (raven-god of the Æsir)</li>
+      <li><em>Hrafnfreistuðr</em> — "raven-tester/tempter" (a more obscure byname)</li>
+    </ul>
+    <p>These bynames are listed in the <em>Prose Edda</em> (Snorri Sturluson, c. 1220 CE) and in <em>þulur</em> (mnemonic lists of heiti — poetic synonyms) appended to the <em>Skáldskaparmál</em>.<sup><a href="#src-2">2</a></sup></p>
+  </section>
+
+  <section class="qa-section">
+    <h2>Place Names and Personal Names</h2>
+    <p><strong class="claim-lore">[lore]</strong> <em>Hrafn</em> is extremely common in Old Norse place names and personal names, reflecting the raven's prominence in Norse culture:</p>
+    <ul>
+      <li><strong>Personal names:</strong> Hrafnkel (raven-kettle; subject of <em>Hrafnkels saga</em>), Hrafn (a common male name), Hrafnhildr (female name)</li>
+      <li><strong>Icelandic place names:</strong> Hrafnagjá (Raven Gorge), Hrafntinnusker (Raven Obsidian Rock)</li>
+      <li><strong>Norwegian place names:</strong> Ramnes, Ramsberg (from <em>hrafn-</em>)</li>
+      <li><strong>The navigator:</strong> Hrafna-Flóki (Raven-Flóki) — Flóki Vilgerðarson who used ravens to navigate to Iceland, recorded in <em>Landnámabók</em>. See: <a href="/lore/norse/raven-floki-and-iceland/">Raven-Flóki and Iceland</a></li>
+    </ul>
+  </section>
+
+  <section class="qa-section">
+    <h2>In Norse Poetry — Kennings for the Raven</h2>
+    <p><strong class="claim-lore">[lore]</strong> Old Norse skaldic poetry used <em>kennings</em> — compound periphrastic expressions — for the raven. Common raven kennings include:<sup><a href="#src-2">2</a></sup></p>
+    <ul>
+      <li><em>Yggs / Óðins gjóðr</em> — "Odin's hawk/kite"</li>
+      <li><em>valkjósandi</em> — "chooser of the slain" (applied to ravens and also to valkyries)</li>
+      <li><em>svart-fjaðraðr</em> — "black-feathered one"</li>
+      <li><em>blóð-ari</em> — "blood-eagle" is a separate term; ravens in battle poetry are <em>valkyrjur hræs</em> (corpse-valkyries)</li>
+    </ul>
+    <p>The raven also appears in the <em>beasts of battle</em> formula — the conventional trio of raven, eagle, and wolf who await a battlefield — found across Old Norse and Old English poetry. See: <a href="/lore/norse/odin-the-raven-god/">Odin the Raven God</a>.</p>
+  </section>
+
+  <section class="qa-section">
+    <h2>Related Pages</h2>
+    <ul>
+      <li><a href="/questions/what-are-odins-ravens-called/">What are Odin's ravens called?</a></li>
+      <li><a href="/lore/norse/huginn-and-muninn/">Huginn and Muninn — the sources</a></li>
+      <li><a href="/lore/norse/raven-floki-and-iceland/">Raven-Flóki and Iceland</a></li>
+    </ul>
+  </section>
+
+  <section class="qa-faq qa-section" aria-labelledby="faq-h2">
+    <h2 id="faq-h2">Frequently Asked Questions</h2>
+    {faq.map(item => (
+      <details class="qa-faq-item">
+        <summary class="qa-faq-q">{item.q}</summary>
+        <p class="qa-faq-a">{item.a}</p>
+      </details>
+    ))}
+  </section>
+
+  <section class="qa-sources qa-section" aria-labelledby="src-h2">
+    <h2 id="src-h2">Sources</h2>
+    <ol class="qa-src-list">
+      <li id="src-1">Zoëga, G.T. (1910). <em>A Concise Dictionary of Old Icelandic</em>. Clarendon Press. — primary lexical reference for <em>hrafn</em> and declension forms.</li>
+      <li id="src-2">Faulkes, A. (trans., 1987). <em>Edda</em> (Snorri Sturluson). Everyman. — Odin's bynames (<em>Gylfaginning</em> ch. 20) and raven kennings (<em>Skáldskaparmál</em>).</li>
+      <li id="src-3">Simek, R. (1993). <em>Dictionary of Northern Mythology</em>. D.S. Brewer. — by-names and raven symbolism in Old Norse.</li>
+    </ol>
+    <p class="qa-claim-note"><strong class="claim-lore">[lore]</strong> named cultural/historical source</p>
+  </section>
+</article>
+</BaseLayout>
+
+<style>
+  .qa-page { max-width: 820px; margin: 0 auto; padding: 2rem 1.25rem 4rem; color: var(--iron-ink, #e8e4d8); font-family: 'Inter', sans-serif; line-height: 1.72; }
+  .qa-breadcrumb ol { display: flex; flex-wrap: wrap; gap: .25rem; list-style: none; padding: 0; margin: 0 0 2rem; font-size: .8rem; color: var(--ink-soft, #8a8070); }
+  .qa-breadcrumb a { color: var(--gold-500, #d4ae5a); text-decoration: none; }
+  .qa-pillar { font-size: .72rem; letter-spacing: .12em; text-transform: uppercase; color: var(--gold-500, #d4ae5a); margin: 0 0 .4rem; }
+  .qa-page h1 { font-family: 'Cormorant Garamond', serif; font-size: clamp(2rem, 5vw, 3rem); font-weight: 700; color: #fff; margin: 0 0 2rem; line-height: 1.1; }
+  .qa-snippet { background: rgba(212,174,90,.08); border-left: 3px solid var(--gold-500, #d4ae5a); border-radius: 0 6px 6px 0; padding: 1rem 1.25rem; margin-bottom: 2.5rem; font-size: 1.03rem; }
+  .qa-section { margin-bottom: 2.5rem; }
+  .qa-section h2 { font-family: 'Cormorant Garamond', serif; font-size: 1.5rem; font-weight: 600; color: #fff; margin: 0 0 .9rem; border-bottom: 1px solid rgba(212,174,90,.2); padding-bottom: .4rem; }
+  .qa-section p { margin: 0 0 1rem; font-size: .97rem; }
+  .qa-section ul { padding-left: 1.25rem; margin: 0 0 1rem; }
+  .qa-section li { margin-bottom: .4rem; font-size: .95rem; }
+  .qa-table { width: 100%; border-collapse: collapse; font-size: .88rem; margin: 1rem 0 1.5rem; }
+  .qa-table th { background: rgba(212,174,90,.12); color: var(--gold-500, #d4ae5a); padding: .5rem .9rem; text-align: left; font-size: .75rem; letter-spacing: .06em; text-transform: uppercase; }
+  .qa-table td { padding: .5rem .9rem; border-bottom: 1px solid rgba(255,255,255,.06); font-size: .9rem; }
+  .qa-table tr:last-child td { border-bottom: none; }
+  .claim-science { color: #7ab9e0; font-style: normal; font-size: .78rem; }
+  .claim-lore    { color: #c8a46a; font-style: normal; font-size: .78rem; }
+  a[href] { color: var(--gold-500, #d4ae5a); }
+  .qa-faq-item { border-bottom: 1px solid rgba(255,255,255,.07); }
+  .qa-faq-q { cursor: pointer; padding: .9rem 0; font-size: .97rem; font-weight: 500; color: #fff; list-style: none; }
+  .qa-faq-q::before { content: '+ '; color: var(--gold-500, #d4ae5a); font-weight: 700; }
+  details[open] .qa-faq-q::before { content: '− '; }
+  .qa-faq-a { margin: 0 0 1rem; line-height: 1.7; font-size: .93rem; color: var(--ink-soft, #c8c0b0); }
+  .qa-src-list { padding-left: 1.25rem; margin: 0 0 1rem; }
+  .qa-src-list li { margin-bottom: .6rem; font-size: .82rem; color: var(--ink-soft, #8a8070); line-height: 1.6; }
+  .qa-claim-note { font-size: .78rem; color: var(--ink-soft, #605848); border-top: 1px solid rgba(255,255,255,.06); padding-top: .75rem; }
+</style>

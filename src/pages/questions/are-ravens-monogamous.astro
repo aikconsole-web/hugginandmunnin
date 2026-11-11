@@ -1,0 +1,138 @@
+---
+/**
+ * Q&A — Are ravens monogamous?
+ * Primary keyword: are ravens monogamous
+ * Secondary: raven mating system, raven pair bond, do ravens stay together
+ */
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const title       = 'Are Ravens Monogamous?';
+const description = 'Ravens are socially monogamous and usually maintain long-term pair bonds — but are not strictly genetically monogamous. This page examines raven mating systems, pair bond duration, divorce, and what "monogamy" means in raven biology.';
+const path        = '/questions/are-ravens-monogamous/';
+
+const breadcrumbs = [
+  { name: 'Home',      url: '/' },
+  { name: 'Questions', url: '/questions/' },
+  { name: 'Are Ravens Monogamous?', url: path },
+];
+
+const faq = [
+  { q: 'Do ravens stay with the same mate for life?', a: 'Ravens typically maintain long-term pair bonds that often last for many years, and sometimes for the bird\'s entire life — but "mate for life" in the strict sense overstates the case. Pair bonds can be dissolved ("divorce") if breeding repeatedly fails, and mates die, requiring finding a new partner. The question "do ravens mate for life?" is answered more fully at the linked page below, but the short answer is: ravens form long-term bonds, often lasting many years, but not invariably for life.' },
+  { q: 'Are ravens really monogamous?', a: 'Ravens are socially monogamous — they maintain an exclusive pair bond and raise chicks together — but genetic studies of corvids (and birds generally) show extra-pair copulations occur in many supposedly monogamous species. Direct genetic paternity testing of raven broods is limited, but extra-pair paternity has been documented in closely related crows. Social monogamy (one social partner per breeding season) is consistent; strict genetic monogamy (no extra-pair mating) is likely not universal.' },
+  { q: 'How do ravens choose their mates?', a: 'Mate choice in ravens involves a prolonged assessment period. Young ravens (typically 2–3 years old) in non-breeding flocks engage in courtship behaviours including aerial displays (tumbling, soaring together), vocalisation, and mutual preening. Mate quality indicators include territory quality, demonstrated foraging ability, body condition, and willingness to engage in allopreening and food-sharing. Once a pair bond forms, it is maintained through continued affiliative behaviours including allopreening, food-sharing, and coordinated territorial defence.' },
+];
+---
+
+<BaseLayout title={title} description={description} path={path} ogType="article"
+  datePublished="2026-11-07" dateModified="2026-11-07"
+  breadcrumbs={breadcrumbs} faq={faq} pageType="Article">
+
+<article class="qa-page">
+
+  <nav class="qa-breadcrumb" aria-label="Breadcrumb">
+    <ol>
+      {breadcrumbs.map((b, i) => (
+        <li>
+          {i < breadcrumbs.length - 1
+            ? <><a href={b.url}>{b.name}</a><span aria-hidden="true"> › </span></>
+            : <span aria-current="page">{b.name}</span>}
+        </li>
+      ))}
+    </ol>
+  </nav>
+
+  <header class="qa-header">
+    <p class="qa-pillar">Question · Biology</p>
+    <h1>Are Ravens Monogamous?</h1>
+  </header>
+
+  <section class="qa-snippet" aria-label="Direct answer">
+    <p><strong class="claim-science">[science]</strong> Ravens are socially monogamous — they form exclusive pair bonds and raise chicks together, usually with the same partner across multiple breeding seasons. Pair bonds are typically long-term and may last many years. However, "divorce" (bond dissolution) occurs after repeated breeding failures, and genetic monogamy (no extra-pair mating) is not confirmed in ravens, as in most birds.</p>
+  </section>
+
+  <section class="qa-section">
+    <h2>Social Monogamy vs Genetic Monogamy</h2>
+    <p><strong class="claim-science">[science]</strong> Ornithologists distinguish between social monogamy (maintaining an exclusive social bond and raising young together) and genetic monogamy (all offspring sired by the social partner). Ravens are clearly socially monogamous. Whether they are genetically monogamous — with no extra-pair fertilisations — is less certain. DNA-based parentage studies have not been extensively applied to wild raven populations, but extra-pair paternity is common in corvids and in birds generally: about 90% of bird species are socially monogamous, but fewer than 25% appear to be strictly genetically monogamous.<sup><a href="#src-1">1</a></sup></p>
+  </section>
+
+  <section class="qa-section">
+    <h2>Pair Bond Formation</h2>
+    <p><strong class="claim-science">[science]</strong> Raven pair bonds typically form in the second or third year of life. Young ravens in non-breeding flocks begin courtship interactions — characterised by:<sup><a href="#src-1">1</a></sup></p>
+    <ul>
+      <li><strong>Aerial displays:</strong> soaring together, tumbling flights, and synchronised flight manoeuvres.</li>
+      <li><strong>Vocalisation:</strong> soft gurgling calls exchanged between prospective mates; ravens in established pairs have individually distinctive calls that partners recognise.</li>
+      <li><strong>Allopreening:</strong> mutual preening of head and neck feathers — a primary pair-bond maintenance behaviour that begins during courtship and continues throughout the bond.</li>
+      <li><strong>Food sharing:</strong> offering food items to a prospective mate; food sharing is a signal of willingness to provision and is part of mate quality assessment.</li>
+    </ul>
+    <p>Pair formation is not instantaneous — bonds are tested and reinforced over weeks or months before the pair settles on a breeding territory.</p>
+  </section>
+
+  <section class="qa-section">
+    <h2>Pair Bond Duration and "Divorce"</h2>
+    <p><strong class="claim-science">[science]</strong> Established raven pairs typically remain together across multiple breeding seasons. In field studies, the same pair was recorded breeding together at the same site for many consecutive years. However, pair bonds are not guaranteed for life:<sup><a href="#src-1">1</a></sup></p>
+    <ul>
+      <li><strong>Death of a partner:</strong> the surviving bird must find a new mate. In good habitats, widowed territorial ravens typically re-pair relatively quickly, drawing on the pool of non-territorial floaters.</li>
+      <li><strong>"Divorce" after breeding failure:</strong> pairs that repeatedly fail to produce surviving young may dissolve their bond and seek new mates. This pragmatic dissolution of a failed partnership is consistent with evolutionary models of pair bonding based on reproductive benefit.</li>
+      <li><strong>Territorial displacement:</strong> pairs that lose their territory to competitors may also lose their bond in the disruption.</li>
+    </ul>
+  </section>
+
+  <section class="qa-section">
+    <h2>Pair Bond Maintenance</h2>
+    <p><strong class="claim-science">[science]</strong> Established raven pairs maintain their bond year-round through continued affiliative behaviour: roosting together, defending territory jointly, coordinating foraging, and regular allopreening. During the breeding season, the bond intensifies with copulation, nest building, and coordinated chick-rearing. Pair bonding in ravens is a continuous social process, not simply a breeding-season event.<sup><a href="#src-1">1</a></sup></p>
+  </section>
+
+  <section class="qa-section">
+    <h2>Related Pages</h2>
+    <ul>
+      <li><a href="/questions/do-ravens-mate-for-life/">Do ravens mate for life?</a></li>
+      <li><a href="/behaviour/raven-pair-bonds/">Raven pair bonds</a></li>
+      <li><a href="/behaviour/raven-courtship-and-aerial-displays/">Raven courtship and aerial displays</a></li>
+      <li><a href="/myths/ravens-mate-for-life-myth/">Myth: Ravens mate for life</a></li>
+    </ul>
+  </section>
+
+  <section class="qa-faq qa-section" aria-labelledby="faq-h2">
+    <h2 id="faq-h2">Frequently Asked Questions</h2>
+    {faq.map(item => (
+      <details class="qa-faq-item">
+        <summary class="qa-faq-q">{item.q}</summary>
+        <p class="qa-faq-a">{item.a}</p>
+      </details>
+    ))}
+  </section>
+
+  <section class="qa-sources qa-section" aria-labelledby="src-h2">
+    <h2 id="src-h2">Sources</h2>
+    <ol class="qa-src-list">
+      <li id="src-1">Boarman, W.I. & Heinrich, B. (1999). Common Raven (<em>Corvus corax</em>). In Poole, A. (ed.), <em>The Birds of North America</em>, No. 476. Cornell Lab of Ornithology. — pair bond formation, duration, divorce, mate choice, courtship behaviour.</li>
+    </ol>
+    <p class="qa-claim-note"><strong class="claim-science">[science]</strong> peer-reviewed or field-guide data</p>
+  </section>
+
+</article>
+</BaseLayout>
+
+<style>
+  .qa-page { max-width: 820px; margin: 0 auto; padding: 2rem 1.25rem 4rem; color: var(--iron-ink, #e8e4d8); font-family: 'Inter', sans-serif; line-height: 1.72; }
+  .qa-breadcrumb ol { display: flex; flex-wrap: wrap; gap: .25rem; list-style: none; padding: 0; margin: 0 0 2rem; font-size: .8rem; color: var(--ink-soft, #8a8070); }
+  .qa-breadcrumb a { color: var(--gold-500, #d4ae5a); text-decoration: none; }
+  .qa-pillar { font-size: .72rem; letter-spacing: .12em; text-transform: uppercase; color: var(--gold-500, #d4ae5a); margin: 0 0 .4rem; }
+  .qa-page h1 { font-family: 'Cormorant Garamond', serif; font-size: clamp(2rem, 5vw, 3rem); font-weight: 700; color: #fff; margin: 0 0 2rem; line-height: 1.1; }
+  .qa-snippet { background: rgba(212,174,90,.08); border-left: 3px solid var(--gold-500, #d4ae5a); border-radius: 0 6px 6px 0; padding: 1rem 1.25rem; margin-bottom: 2.5rem; font-size: 1.03rem; }
+  .qa-section { margin-bottom: 2.5rem; }
+  .qa-section h2 { font-family: 'Cormorant Garamond', serif; font-size: 1.5rem; font-weight: 600; color: #fff; margin: 0 0 .9rem; border-bottom: 1px solid rgba(212,174,90,.2); padding-bottom: .4rem; }
+  .qa-section p { margin: 0 0 1rem; font-size: .97rem; }
+  .qa-section ul { padding-left: 1.25rem; margin: 0 0 1rem; }
+  .qa-section li { margin-bottom: .4rem; font-size: .95rem; }
+  .claim-science { color: #7ab9e0; font-style: normal; font-size: .78rem; }
+  a[href] { color: var(--gold-500, #d4ae5a); }
+  .qa-faq-item { border-bottom: 1px solid rgba(255,255,255,.07); }
+  .qa-faq-q { cursor: pointer; padding: .9rem 0; font-size: .97rem; font-weight: 500; color: #fff; list-style: none; }
+  .qa-faq-q::before { content: '+ '; color: var(--gold-500, #d4ae5a); font-weight: 700; }
+  details[open] .qa-faq-q::before { content: '− '; }
+  .qa-faq-a { margin: 0 0 1rem; line-height: 1.7; font-size: .93rem; color: var(--ink-soft, #c8c0b0); }
+  .qa-src-list { padding-left: 1.25rem; margin: 0 0 1rem; }
+  .qa-src-list li { margin-bottom: .6rem; font-size: .82rem; color: var(--ink-soft, #8a8070); line-height: 1.6; }
+  .qa-claim-note { font-size: .78rem; color: var(--ink-soft, #605848); border-top: 1px solid rgba(255,255,255,.06); padding-top: .75rem; }
+</style>

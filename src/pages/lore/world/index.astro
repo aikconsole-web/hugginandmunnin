@@ -1,0 +1,75 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+
+const title       = 'Ravens in World Mythology and Culture';
+const description = 'Ravens in world mythology and culture: Greek, Celtic, Jewish, Islamic, Haida and Tlingit traditions, Edgar Allan Poe, and the raven in heraldry and folklore — all sourced.';
+const path        = '/lore/world/';
+
+const breadcrumbs = [
+  { name: 'Home',         url: '/' },
+  { name: 'World Lore',   url: '/lore/world/' },
+];
+
+const pages = [
+  { slug: 'raven-symbolism',              title: 'Raven Symbolism — Culture by Culture',     call: 'MYW·01', desc: 'An honest, sourced survey of how different traditions have regarded the raven.' },
+  { slug: 'edgar-allan-poe-the-raven',    title: 'Edgar Allan Poe\'s "The Raven"',           call: 'MYW·02', desc: 'The 1845 poem, its raven, its sources, and its cultural legacy.' },
+  { slug: 'noah-and-the-raven',           title: 'Noah and the Raven — the Biblical Text',   call: 'MYW·03', desc: 'Genesis 8:7 — what the text says and what scholars make of it.' },
+  { slug: 'apollo-and-the-raven',                    title: 'Apollo and the Raven',                     call: 'MYW·04', desc: 'The raven as Apollo\'s messenger in Ovid\'s Metamorphoses.' },
+  { slug: 'raven-in-celtic-mythology',               title: 'Raven in Celtic Mythology',                call: 'MYW·05', desc: 'The Morrígan, Brân the Blessed, battlefield ravens — the Celtic corvid tradition.' },
+  { slug: 'raven-in-native-american-tradition',      title: 'Raven in Native American Tradition',       call: 'MYW·06', desc: 'Trickster-creator, light-bringer, moiety ancestor — the Pacific Northwest raven.' },
+  { slug: 'ravens-in-japanese-mythology',            title: 'Ravens in Japanese Mythology',             call: 'MYW·07', desc: 'Yatagarasu — the three-legged divine crow sent by Amaterasu.' },
+  { slug: 'ravens-in-russian-folklore',              title: 'Ravens in Russian Folklore',               call: 'MYW·30', desc: 'Voron the death-omen, byliny battlefield formulae, Siberian creator-raven contrast.' },
+  { slug: 'ravens-in-zoroastrian-tradition',         title: 'Ravens in Zoroastrian Tradition',          call: 'MYW·32', desc: 'Tower of Silence corpse disposal, Vendidad khrafstra — the impure bird performing a sacred function.' },
+  { slug: 'ravens-in-korean-mythology',              title: 'Ravens in Korean Mythology',               call: 'MYW·33', desc: 'Samjok-o — the three-legged solar bird of Goguryeo tomb murals.' },
+  { slug: 'ravens-in-slavic-folklore',               title: 'Ravens in Slavic Folklore',                call: 'MYW·28', desc: 'Voron the battlefield prophet, Zhar-Ptitsa contrast, Siberian creation myths.' },
+  { slug: 'ravens-in-islamic-and-arab-tradition',    title: 'Ravens in Islamic and Arab Tradition',     call: 'MYW·25', desc: 'The ghurāb in the Quran, the raven teaching Cain burial, omens in hadith.' },
+  { slug: 'ravens-in-the-bible',                     title: 'Ravens in the Bible',                      call: 'MYW·08', desc: 'Noah\'s raven, Elijah fed by ravens — all Biblical raven passages examined.' },
+  { slug: 'tower-of-london-ravens',                  title: 'Tower of London Ravens',                   call: 'MYW·10', desc: 'The legend, the history, the six ravens — when it began and what is true.' },
+  { slug: 'raven-symbolism',                         title: 'Raven Symbolism — Culture by Culture',     call: 'MYW·01', desc: 'An honest, sourced survey of how different traditions have regarded the raven.' },
+];
+---
+
+<BaseLayout title={title} description={description} path={path} breadcrumbs={breadcrumbs}>
+
+<div class="loreidx-page">
+  <nav class="loreidx-breadcrumb" aria-label="Breadcrumb">
+    <ol>
+      <li><a href="/">Home</a><span aria-hidden="true"> › </span></li>
+      <li><span aria-current="page">World Lore</span></li>
+    </ol>
+  </nav>
+  <header class="loreidx-header">
+    <p class="loreidx-pillar">Pillar III</p>
+    <h1>Ravens in World Mythology and Culture</h1>
+    <p class="loreidx-lead">Every claim sourced from named primary texts or academic sources. Science and lore clearly labelled. No "spiritual meanings" presented as ancient tradition.</p>
+  </header>
+  <ul class="loreidx-grid">
+    {pages.map(p => (
+      <li class="loreidx-card">
+        <a href={`/lore/world/${p.slug}/`} class="loreidx-card-link">
+          <span class="loreidx-call">{p.call}</span>
+          <h2 class="loreidx-name">{p.title}</h2>
+          <p class="loreidx-desc">{p.desc}</p>
+        </a>
+      </li>
+    ))}
+  </ul>
+</div>
+
+</BaseLayout>
+
+<style>
+  .loreidx-page { max-width: 900px; margin: 0 auto; padding: 2rem 1.25rem 4rem; color: var(--iron-ink, #e8e4d8); font-family: 'Inter', sans-serif; }
+  .loreidx-breadcrumb ol { display: flex; gap: .25rem; list-style: none; padding: 0; margin: 0 0 2rem; font-size: .8rem; color: var(--ink-soft, #8a8070); }
+  .loreidx-breadcrumb a { color: var(--gold-500, #d4ae5a); text-decoration: none; }
+  .loreidx-pillar { font-size: .72rem; letter-spacing: .12em; text-transform: uppercase; color: var(--gold-500, #d4ae5a); margin: 0 0 .4rem; }
+  .loreidx-header h1 { font-family: 'Cormorant Garamond', serif; font-size: clamp(2rem, 5vw, 3rem); font-weight: 700; color: #fff; margin: 0 0 .75rem; }
+  .loreidx-lead { font-size: 1rem; color: var(--ink-soft, #c0b89a); max-width: 680px; line-height: 1.65; margin: 0 0 2.5rem; }
+  .loreidx-grid { list-style: none; padding: 0; margin: 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 1rem; }
+  .loreidx-card { background: rgba(255,255,255,.04); border: 1px solid rgba(255,255,255,.07); border-radius: 8px; transition: border-color .2s, background .2s; }
+  .loreidx-card:hover { border-color: rgba(212,174,90,.35); background: rgba(212,174,90,.05); }
+  .loreidx-card-link { display: block; padding: 1.25rem; text-decoration: none; color: inherit; }
+  .loreidx-call { display: block; font-size: .7rem; letter-spacing: .1em; text-transform: uppercase; color: var(--gold-500, #d4ae5a); opacity: .7; margin-bottom: .4rem; }
+  .loreidx-name { font-family: 'Cormorant Garamond', serif; font-size: 1.2rem; font-weight: 700; color: #fff; margin: 0 0 .5rem; }
+  .loreidx-desc { font-size: .84rem; color: var(--ink-soft, #a09070); line-height: 1.55; margin: 0; }
+</style>

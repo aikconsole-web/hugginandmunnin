@@ -1,0 +1,131 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+
+const title       = 'Brown-necked Raven Identification — Field Guide';
+const description = 'How to identify the Brown-necked Raven (Corvus ruficollis): brown-tinged neck and mantle, slender bill, sandy desert habitat. North Africa and Middle East field marks.';
+const path        = '/species/brown-necked-raven/identification/';
+
+const breadcrumbs = [
+  { name: 'Home',              url: '/' },
+  { name: 'Species',           url: '/species/' },
+  { name: 'Brown-necked Raven', url: '/species/brown-necked-raven/' },
+  { name: 'Identification',    url: path },
+];
+
+const faq = [
+  { q: 'How do I identify a Brown-necked Raven?', a: 'The Brown-necked Raven has a distinctive brownish wash on the neck, nape, and mantle (back), contrasting with the blacker wings and tail. The bill is slender compared to Common Raven. It is a desert bird — Sahara, Arabian Peninsula, Middle East — where it is the dominant large corvid. In this range, confusion is mainly with Common Raven where ranges overlap in mountainous areas.' },
+];
+---
+
+<BaseLayout title={title} description={description} path={path} ogType="article"
+  datePublished="2026-11-07" dateModified="2026-11-07"
+  breadcrumbs={breadcrumbs} faq={faq} pageType="Article">
+
+<article class="id-page">
+  <nav class="id-breadcrumb" aria-label="Breadcrumb">
+    <ol>
+      {breadcrumbs.map((b, i) => (
+        <li>
+          {i < breadcrumbs.length - 1
+            ? <><a href={b.url}>{b.name}</a><span aria-hidden="true"> › </span></>
+            : <span aria-current="page">{b.name}</span>}
+        </li>
+      ))}
+    </ol>
+  </nav>
+  <header class="id-header">
+    <p class="id-pillar">Species · Field Identification</p>
+    <h1>Brown-necked Raven — Identification</h1>
+    <p class="id-subtitle"><em>Corvus ruficollis</em></p>
+  </header>
+
+  <section class="id-snippet" aria-label="Quick answer">
+    <p><strong class="claim-science">[science]</strong> Key identification features: <strong>brownish wash on neck, nape, and mantle</strong> contrasting with blacker wings and tail; slender bill compared to Common Raven; sandy desert and arid scrub habitat. Found across the Sahara, Arabian Peninsula, Middle East, and south to the Sahel. The name <em>ruficollis</em> means "reddish-necked."</p>
+  </section>
+
+  <section class="id-section">
+    <h2>Measurements</h2>
+    <div class="id-table-wrap">
+      <table class="id-table">
+        <thead><tr><th>Measurement</th><th>Range</th></tr></thead>
+        <tbody>
+          <tr><td>Length</td><td>50–56 cm</td></tr>
+          <tr><td>Weight</td><td>~500–700 g (approx.)</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="id-src-note">Source: Madge &amp; Burn (1994).<sup><a href="#src-1">1</a></sup></p>
+  </section>
+
+  <section class="id-section">
+    <h2>Key Field Marks</h2>
+
+    <h3>Brown-Washed Neck and Mantle</h3>
+    <p><strong class="claim-science">[science]</strong> In fresh plumage the neck, nape, and mantle (upper back) show a distinctive brown or rufous-brown wash, clearly contrasting with the glossy black wings, tail, and flight feathers. The extent of brown varies with wear — it is most visible in fresh-plumaged birds. The name <em>ruficollis</em> ("reddish-necked") refers to this mark.<sup><a href="#src-1">1</a></sup></p>
+
+    <h3>Bill Shape</h3>
+    <p><strong class="claim-science">[science]</strong> The bill is relatively slender and less arched than Common Raven's heavy bill — an important mark where both species occur in marginal habitats at desert-mountain boundaries.</p>
+
+    <h3>Habitat</h3>
+    <p><strong class="claim-science">[science]</strong> A desert specialist — found in open sandy desert, stony desert (reg), arid scrub, and semi-arid areas from Morocco and Mauritania east through the Sahara, Nile Valley, Arabian Peninsula, Iran, and Pakistan. Where it overlaps with Common Raven (in Sinai, parts of Morocco, Atlas foothills), habitat separation usually applies: Brown-necked prefers true desert; Common Raven uses mountain and cliff habitats.<sup><a href="#src-1">1</a></sup></p>
+  </section>
+
+  <section class="id-faq id-section" aria-labelledby="faq-h2">
+    <h2 id="faq-h2">Frequently Asked Questions</h2>
+    {faq.map(item => (
+      <details class="id-faq-item">
+        <summary class="id-faq-q">{item.q}</summary>
+        <p class="id-faq-a">{item.a}</p>
+      </details>
+    ))}
+  </section>
+
+  <section class="id-sources id-section" aria-labelledby="src-h2">
+    <h2 id="src-h2">Sources</h2>
+    <ol class="id-src-list">
+      <li id="src-1">Madge, S. &amp; Burn, H. (1994). <em>Crows and Jays</em>. Christopher Helm. — all measurements and field marks.</li>
+    </ol>
+    <p class="id-claim-note"><strong class="claim-science">[science]</strong> field-guide data</p>
+  </section>
+
+  <nav class="id-nav-bottom">
+    <a href="/species/brown-necked-raven/" class="id-back">← Brown-necked Raven Overview</a>
+    <a href="/species/brown-necked-raven/range-and-habitat/" class="id-next">Range and Habitat →</a>
+  </nav>
+</article>
+</BaseLayout>
+
+<style>
+  .id-page { max-width: 820px; margin: 0 auto; padding: 2rem 1.25rem 4rem; color: var(--iron-ink, #e8e4d8); font-family: 'Inter', sans-serif; line-height: 1.72; }
+  .id-breadcrumb ol { display: flex; flex-wrap: wrap; gap: .25rem; list-style: none; padding: 0; margin: 0 0 2rem; font-size: .8rem; color: var(--ink-soft, #8a8070); }
+  .id-breadcrumb a { color: var(--gold-500, #d4ae5a); text-decoration: none; }
+  .id-pillar { font-size: .72rem; letter-spacing: .12em; text-transform: uppercase; color: var(--gold-500, #d4ae5a); margin: 0 0 .4rem; }
+  .id-page h1 { font-family: 'Cormorant Garamond', serif; font-size: clamp(2rem, 5vw, 3.25rem); font-weight: 700; color: #fff; margin: 0 0 .2rem; line-height: 1.1; }
+  .id-subtitle { font-size: 1rem; color: var(--ink-soft, #c0b89a); margin: 0 0 2rem; }
+  .id-snippet { background: rgba(212,174,90,.08); border-left: 3px solid var(--gold-500, #d4ae5a); border-radius: 0 6px 6px 0; padding: 1rem 1.25rem; margin-bottom: 2.5rem; font-size: 1.03rem; }
+  .id-section { margin-bottom: 2.75rem; }
+  .id-section h2 { font-family: 'Cormorant Garamond', serif; font-size: 1.6rem; font-weight: 600; color: #fff; margin: 0 0 1rem; border-bottom: 1px solid rgba(212,174,90,.2); padding-bottom: .4rem; }
+  .id-section h3 { font-size: 1rem; font-weight: 600; color: var(--gold-500, #d4ae5a); margin: 1.25rem 0 .5rem; }
+  .id-section p { margin: 0 0 1rem; font-size: .97rem; }
+  .id-section ul { padding-left: 1.25rem; margin: 0 0 1rem; }
+  .id-section li { margin-bottom: .4rem; font-size: .95rem; }
+  .id-table-wrap { overflow-x: auto; }
+  .id-table { width: 100%; border-collapse: collapse; font-size: .88rem; margin-bottom: .5rem; }
+  .id-table th { background: rgba(212,174,90,.12); color: var(--gold-500, #d4ae5a); padding: .5rem .9rem; text-align: left; font-size: .75rem; letter-spacing: .06em; text-transform: uppercase; }
+  .id-table td { padding: .5rem .9rem; border-bottom: 1px solid rgba(255,255,255,.06); }
+  .id-table tr:last-child td { border-bottom: none; }
+  .id-src-note { font-size: .78rem; color: var(--ink-soft, #8a8070); }
+  .claim-science { color: #7ab9e0; font-style: normal; font-size: .78rem; }
+  a[href] { color: var(--gold-500, #d4ae5a); }
+  .id-faq-item { border-bottom: 1px solid rgba(255,255,255,.07); }
+  .id-faq-q { cursor: pointer; padding: .9rem 0; font-size: .97rem; font-weight: 500; color: #fff; list-style: none; }
+  .id-faq-q::before { content: '+ '; color: var(--gold-500, #d4ae5a); font-weight: 700; }
+  details[open] .id-faq-q::before { content: '− '; }
+  .id-faq-a { margin: 0 0 1rem; line-height: 1.7; font-size: .93rem; color: var(--ink-soft, #c8c0b0); }
+  .id-src-list { padding-left: 1.25rem; margin: 0 0 1rem; }
+  .id-src-list li { margin-bottom: .6rem; font-size: .82rem; color: var(--ink-soft, #8a8070); line-height: 1.6; }
+  .id-claim-note { font-size: .78rem; color: var(--ink-soft, #605848); border-top: 1px solid rgba(255,255,255,.06); padding-top: .75rem; }
+  .id-nav-bottom { display: flex; justify-content: space-between; padding-top: 2rem; border-top: 1px solid rgba(255,255,255,.07); }
+  .id-nav-bottom a { font-size: .9rem; text-decoration: none; }
+  .id-nav-bottom a:hover { text-decoration: underline; }
+</style>

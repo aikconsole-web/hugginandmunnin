@@ -1,0 +1,152 @@
+---
+/**
+ * Compare — Raven vs crow size
+ * Primary keyword: raven vs crow size
+ * Secondary: how much bigger is a raven than a crow, raven size compared to crow, raven crow size difference
+ */
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const title       = 'Raven vs Crow Size: How Much Bigger Is a Raven?';
+const description = 'Ravens are significantly larger than crows — a Common Raven is roughly 25% longer and weighs 2–3× as much as an American Crow or Carrion Crow. This page provides exact measurements and practical field tips for using size as an identification criterion.';
+const path        = '/compare/raven-vs-crow-size/';
+
+const breadcrumbs = [
+  { name: 'Home',    url: '/' },
+  { name: 'Compare', url: '/compare/' },
+  { name: 'Raven vs Crow Size', url: path },
+];
+
+const faq = [
+  { q: 'How much bigger is a raven than a crow?', a: 'A Common Raven (Corvus corax) is substantially larger than a Carrion Crow (Corvus corone) or American Crow (Corvus brachyrhynchos). In length: a Common Raven is 60–68cm compared to 44–51cm for a Carrion Crow — approximately 25–35% longer. In weight: a Common Raven weighs 800–1,600g compared to 370–650g for a Carrion Crow — roughly 2–3× heavier. In wingspan: a raven spans 115–150cm compared to 84–100cm for a Carrion Crow. In flight, a raven appears noticeably larger — roughly the size of a Buzzard (Buteo buteo) compared to the crow\'s pigeon-sized silhouette.' },
+  { q: 'Can you tell a raven from a crow by size alone?', a: 'Size is reliable when you have a direct comparison (raven and crow together), but unreliable in isolation without a size reference. A single large crow at close range can appear raven-sized; a single raven at distance can look crow-sized. Birders use a combination of size, tail shape (wedge vs. flat/rounded), bill shape (heavy curved vs. slender straight), vocalisation (deep "kronk" vs. "caw"), and wing silhouette (raven fingered wingtip vs. crow\'s straighter trailing edge) to confirm identification. At close range the size difference is obvious; in flight without a reference point, additional field marks are essential.' },
+  { q: 'Are there any crows as big as ravens?', a: 'The Thick-billed Raven (Corvus crassirostris) of Ethiopia is the largest corvid by some measures — heavier than even the Common Raven at up to 1,500g, with a massive bill. Among true crows (smaller Corvus species), the Torresian Crow and Australian Crow are relatively large but still smaller than Common Ravens. The Large-billed Crow (Corvus macrorhynchos) of Asia approaches raven size in some populations. However, within any single geographical region, ravens are reliably the largest corvid species present.' },
+];
+---
+
+<BaseLayout title={title} description={description} path={path} ogType="article"
+  datePublished="2026-11-09" dateModified="2026-11-09"
+  breadcrumbs={breadcrumbs} faq={faq} pageType="Article">
+
+<article class="qa-page">
+
+  <nav class="qa-breadcrumb" aria-label="Breadcrumb">
+    <ol>
+      {breadcrumbs.map((b, i) => (
+        <li>
+          {i < breadcrumbs.length - 1
+            ? <><a href={b.url}>{b.name}</a><span aria-hidden="true"> › </span></>
+            : <span aria-current="page">{b.name}</span>}
+        </li>
+      ))}
+    </ol>
+  </nav>
+
+  <header class="qa-header">
+    <p class="qa-pillar">Compare · Identification</p>
+    <h1>Raven vs Crow Size: How Much Bigger Is a Raven?</h1>
+  </header>
+
+  <section class="qa-snippet" aria-label="Direct answer">
+    <p><strong class="claim-science">[science]</strong> A Common Raven is approximately 25–35% longer and 2–3× heavier than a Carrion Crow or American Crow. In flight, a raven appears roughly Buzzard-sized — a substantial, broad-winged bird with a wedge-shaped tail — where a crow reads as pigeon-sized with a flat or rounded tail. Size is a reliable field mark in direct comparison but needs supporting field marks when birds are seen alone.</p>
+  </section>
+
+  <section class="qa-section">
+    <h2>Measurements at a Glance</h2>
+    <div class="compare-table-wrap">
+      <table class="compare-table">
+        <thead>
+          <tr><th>Measurement</th><th>Common Raven</th><th>Carrion Crow</th><th>American Crow</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Length (cm)</td><td>60–68</td><td>44–51</td><td>40–53</td></tr>
+          <tr><td>Weight (g)</td><td>800–1,600</td><td>370–650</td><td>316–620</td></tr>
+          <tr><td>Wingspan (cm)</td><td>115–150</td><td>84–100</td><td>85–100</td></tr>
+          <tr><td>Bill length (mm)</td><td>55–70</td><td>35–45</td><td>30–40</td></tr>
+          <tr><td>Tail shape</td><td>Wedge / diamond</td><td>Rounded / squarish</td><td>Rounded</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p>Source: del Hoyo et al. (2009).<sup><a href="#src-1">1</a></sup></p>
+  </section>
+
+  <section class="qa-section">
+    <h2>Using Size as a Field Mark</h2>
+    <p><strong class="claim-science">[science]</strong> Size identification works best in certain conditions and fails in others:<sup><a href="#src-1">1</a></sup><sup><a href="#src-2">2</a></sup></p>
+    <ul>
+      <li><strong>Direct comparison:</strong> raven and crow together in the same field of view — size difference is obvious and diagnostic. Experienced birders often see ravens arrive at a carcass and displace crows, making the size relationship immediately visible.</li>
+      <li><strong>Flight silhouette:</strong> in flight, the raven's size relative to other birds (pigeons, buzzards, gulls) is usually usable. A raven at any distance shows the breadth and length of a large raptor; a crow reads small by comparison.</li>
+      <li><strong>Isolated individual:</strong> without a reference, a single bird at an unfamiliar distance can be misjudged. A large crow flying over open ground with no reference can look raven-sized; a raven in a large landscape can look crow-sized.</li>
+    </ul>
+    <p>Standard birding practice is to use size together with tail shape, bill profile, and vocalisation for a confident identification.</p>
+  </section>
+
+  <section class="qa-section">
+    <h2>Why Are Ravens So Much Larger?</h2>
+    <p><strong class="claim-science">[science]</strong> The size difference between ravens and crows reflects their different ecological niches:<sup><a href="#src-1">1</a></sup></p>
+    <ul>
+      <li>Ravens specialise in large-animal carrion — opening carcasses of ungulates (moose, caribou, deer) requires a powerful bill and body mass. A crow is not strong enough to open a frozen deer carcass; a raven can access it.</li>
+      <li>Ravens occupy more open, elevated habitats — mountains, arctic tundra, sea cliffs — where larger body size provides thermoregulation advantages in cold conditions (Bergmann's Rule).</li>
+      <li>Ravens require larger territories and longer-range flights than crows — their body size supports the sustained soaring and long-distance foraging that crow physiology cannot.</li>
+    </ul>
+  </section>
+
+  <section class="qa-section">
+    <h2>Related Pages</h2>
+    <ul>
+      <li><a href="/compare/raven-vs-crow/">Raven vs crow (full comparison)</a></li>
+      <li><a href="/compare/common-raven-vs-american-crow/">Common raven vs American crow</a></li>
+      <li><a href="/questions/how-big-are-ravens/">How big are ravens?</a></li>
+      <li><a href="/questions/how-do-you-tell-a-raven-from-a-crow-in-flight/">How do you tell a raven from a crow in flight?</a></li>
+    </ul>
+  </section>
+
+  <section class="qa-faq qa-section" aria-labelledby="faq-h2">
+    <h2 id="faq-h2">Frequently Asked Questions</h2>
+    {faq.map(item => (
+      <details class="qa-faq-item">
+        <summary class="qa-faq-q">{item.q}</summary>
+        <p class="qa-faq-a">{item.a}</p>
+      </details>
+    ))}
+  </section>
+
+  <section class="qa-sources qa-section" aria-labelledby="src-h2">
+    <h2 id="src-h2">Sources</h2>
+    <ol class="qa-src-list">
+      <li id="src-1">del Hoyo, J., Elliott, A. & Christie, D. (eds.) (2009). <em>Handbook of the Birds of the World</em>, Vol. 14. Lynx Edicions. — all measurements, tail shape, ecological context.</li>
+      <li id="src-2">Boarman, W.I. & Heinrich, B. (1999). Common Raven (<em>Corvus corax</em>). In Poole, A. (ed.), <em>The Birds of North America</em>, No. 476. Cornell Lab of Ornithology. — size range, bill dimensions, flight silhouette identification.</li>
+    </ol>
+    <p class="qa-claim-note"><strong class="claim-science">[science]</strong> peer-reviewed data</p>
+  </section>
+
+</article>
+</BaseLayout>
+
+<style>
+  .qa-page { max-width: 820px; margin: 0 auto; padding: 2rem 1.25rem 4rem; color: var(--iron-ink, #e8e4d8); font-family: 'Inter', sans-serif; line-height: 1.72; }
+  .qa-breadcrumb ol { display: flex; flex-wrap: wrap; gap: .25rem; list-style: none; padding: 0; margin: 0 0 2rem; font-size: .8rem; color: var(--ink-soft, #8a8070); }
+  .qa-breadcrumb a { color: var(--gold-500, #d4ae5a); text-decoration: none; }
+  .qa-pillar { font-size: .72rem; letter-spacing: .12em; text-transform: uppercase; color: var(--gold-500, #d4ae5a); margin: 0 0 .4rem; }
+  .qa-page h1 { font-family: 'Cormorant Garamond', serif; font-size: clamp(2rem, 5vw, 3rem); font-weight: 700; color: #fff; margin: 0 0 2rem; line-height: 1.1; }
+  .qa-snippet { background: rgba(212,174,90,.08); border-left: 3px solid var(--gold-500, #d4ae5a); border-radius: 0 6px 6px 0; padding: 1rem 1.25rem; margin-bottom: 2.5rem; font-size: 1.03rem; }
+  .qa-section { margin-bottom: 2.5rem; }
+  .qa-section h2 { font-family: 'Cormorant Garamond', serif; font-size: 1.5rem; font-weight: 600; color: #fff; margin: 0 0 .9rem; border-bottom: 1px solid rgba(212,174,90,.2); padding-bottom: .4rem; }
+  .qa-section p { margin: 0 0 1rem; font-size: .97rem; }
+  .qa-section ul { padding-left: 1.25rem; margin: 0 0 1rem; }
+  .qa-section li { margin-bottom: .4rem; font-size: .95rem; }
+  .compare-table-wrap { overflow-x: auto; margin-bottom: 1rem; }
+  .compare-table { width: 100%; border-collapse: collapse; font-size: .88rem; }
+  .compare-table th { background: rgba(212,174,90,.12); color: var(--gold-500, #d4ae5a); padding: .5rem .75rem; text-align: left; border-bottom: 1px solid rgba(212,174,90,.3); font-weight: 600; }
+  .compare-table td { padding: .45rem .75rem; border-bottom: 1px solid rgba(255,255,255,.06); vertical-align: top; }
+  .compare-table tr:hover td { background: rgba(255,255,255,.03); }
+  .claim-science { color: #7ab9e0; font-style: normal; font-size: .78rem; }
+  a[href] { color: var(--gold-500, #d4ae5a); }
+  .qa-faq-item { border-bottom: 1px solid rgba(255,255,255,.07); }
+  .qa-faq-q { cursor: pointer; padding: .9rem 0; font-size: .97rem; font-weight: 500; color: #fff; list-style: none; }
+  .qa-faq-q::before { content: '+ '; color: var(--gold-500, #d4ae5a); font-weight: 700; }
+  details[open] .qa-faq-q::before { content: '− '; }
+  .qa-faq-a { margin: 0 0 1rem; line-height: 1.7; font-size: .93rem; color: var(--ink-soft, #c8c0b0); }
+  .qa-src-list { padding-left: 1.25rem; margin: 0 0 1rem; }
+  .qa-src-list li { margin-bottom: .6rem; font-size: .82rem; color: var(--ink-soft, #8a8070); line-height: 1.6; }
+  .qa-claim-note { font-size: .78rem; color: var(--ink-soft, #605848); border-top: 1px solid rgba(255,255,255,.06); padding-top: .75rem; }
+</style>

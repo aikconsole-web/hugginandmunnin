@@ -1,0 +1,145 @@
+---
+/**
+ * Places — Ravens in the Sonoran Desert
+ * PLC·06
+ * Primary keyword: ravens in the sonoran desert
+ * Secondary: common raven sonoran desert, raven arizona, desert raven usa
+ */
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const title       = 'Ravens in the Sonoran Desert: Ecology and Desert Adaptation';
+const description = 'The Common Raven is a year-round resident of the Sonoran Desert — one of the hottest and most arid environments in North America. This page examines how ravens survive and thrive in the desert, their relationships with other desert species, and their ecological role in this ecosystem.';
+const path        = '/places/ravens-in-the-sonoran-desert/';
+
+const breadcrumbs = [
+  { name: 'Home',   url: '/' },
+  { name: 'Places', url: '/places/' },
+  { name: 'Ravens in the Sonoran Desert', url: path },
+];
+
+const faq = [
+  { q: 'Are ravens common in the Sonoran Desert?', a: 'Yes. The Common Raven (Corvus corax) is a year-round resident throughout the Sonoran Desert — in Arizona, southern California, and the adjacent Mexican states of Sonora and Baja California. Ravens are conspicuous birds in the Sonoran Desert, particularly around human infrastructure (towns, roads, landfills), saguaro cactus habitat, rocky outcrops and cliffs, and anywhere large animal carcasses are available. They have expanded in population since the mid-20th century alongside human development.' },
+  { q: 'How do ravens survive in the desert heat?', a: 'Ravens are well-adapted to desert conditions. Key behavioural and physiological strategies include: reducing activity during the hottest midday hours (shifting foraging to early morning and late afternoon); seeking shade on cliff faces and under saguaro ribs; drinking when water is available and exploiting water from food (especially fruit, cactus pads, and prey); panting (gular flutter) for evaporative cooling; and in extreme heat, raising the feathers on the head and body to allow heat dissipation. Ravens\' black plumage absorbs more radiation than pale-feathered desert birds, but their large size reduces relative surface area and they compensate behaviourally.' },
+  { q: 'What do ravens eat in the Sonoran Desert?', a: 'Sonoran Desert ravens exploit a diverse food base: carrion from deer, cattle, and roadkill; invertebrates (beetles, scorpions, lizards, snakes); saguaro cactus fruit and other cactus fruits when in season; eggs and chicks of ground-nesting birds; small mammals; and human food waste from towns, landfills, and campgrounds. The saguaro cactus (Carnegiea gigantea) is a particularly important seasonal food source — ravens eat both the fruit and the insects that colonise the cactus.' },
+];
+---
+
+<BaseLayout title={title} description={description} path={path} ogType="article"
+  datePublished="2026-11-07" dateModified="2026-11-07"
+  breadcrumbs={breadcrumbs} faq={faq} pageType="Article">
+
+<article class="qa-page">
+
+  <nav class="qa-breadcrumb" aria-label="Breadcrumb">
+    <ol>
+      {breadcrumbs.map((b, i) => (
+        <li>
+          {i < breadcrumbs.length - 1
+            ? <><a href={b.url}>{b.name}</a><span aria-hidden="true"> › </span></>
+            : <span aria-current="page">{b.name}</span>}
+        </li>
+      ))}
+    </ol>
+  </nav>
+
+  <header class="qa-header">
+    <p class="qa-pillar">Places · PLC·06</p>
+    <h1>Ravens in the Sonoran Desert: Ecology and Desert Adaptation</h1>
+  </header>
+
+  <section class="qa-snippet" aria-label="Direct answer">
+    <p><strong class="claim-science">[science]</strong> The Common Raven is a year-round resident of the Sonoran Desert — one of North America's hottest, most biodiverse deserts spanning southern Arizona, south-eastern California, and north-western Mexico. Ravens survive here through behavioural thermoregulation, dietary flexibility (exploiting saguaro fruit, carrion, invertebrates, and human food waste), and cliff nesting sites. Raven populations have increased alongside human development in the desert.</p>
+  </section>
+
+  <section class="qa-section">
+    <h2>The Sonoran Desert Environment</h2>
+    <p><strong class="claim-science">[science]</strong> The Sonoran Desert is the hottest desert in North America and the only place in the world where the saguaro cactus grows wild. It is also among the most biodiverse deserts globally — supporting over 2,000 plant species, 60 mammal species, 350 bird species, and abundant reptile fauna.<sup><a href="#src-1">1</a></sup></p>
+    <p>For ravens, the Sonoran Desert offers: rocky cliffs and canyon walls for nesting; abundant carrion from desert-adapted large mammals (mule deer, pronghorn, cattle on rangelands); seasonal fruit from saguaro and other cacti; a rich invertebrate fauna; and in modern times, the food resources associated with human development (Phoenix metro area, Tucson, tourist facilities, ranches).</p>
+  </section>
+
+  <section class="qa-section">
+    <h2>Desert Survival Strategies</h2>
+    <p><strong class="claim-science">[science]</strong> Ravens in the Sonoran Desert use several strategies to cope with extreme heat:<sup><a href="#src-1">1</a></sup></p>
+    <ul>
+      <li><strong>Temporal activity shifting:</strong> most foraging occurs in early morning (before 10 am) and late afternoon (after 4 pm). Midday is spent resting in shade — cliff overhangs, under saguaro ribs, in tree shade.</li>
+      <li><strong>Gular flutter:</strong> rapid vibration of the gular (throat) pouch increases evaporative water loss from the mouth and throat, cooling the blood supply to the brain — a heat-dissipation mechanism shared with many desert birds.</li>
+      <li><strong>Water from food:</strong> cactus fruit, insects, and fresh carrion provide metabolic water, reducing dependence on open water sources. Ravens will drink when water is available but can go without in cool weather.</li>
+      <li><strong>Black plumage paradox:</strong> black absorbs more solar radiation than white, potentially a disadvantage in desert. However, ravens' large body size, behavioural avoidance, and circulatory adaptations appear to compensate adequately.</li>
+    </ul>
+  </section>
+
+  <section class="qa-section">
+    <h2>Ravens and the Saguaro Ecosystem</h2>
+    <p><strong class="claim-science">[science]</strong> The saguaro cactus is a keystone species of the Sonoran Desert and has a significant relationship with ravens:<sup><a href="#src-1">1</a></sup></p>
+    <ul>
+      <li><strong>Fruit:</strong> saguaro fruits ripen in June–July during the summer monsoon, providing a concentrated, abundant, high-energy food source. Ravens are among the many birds and mammals that exploit the fruit.</li>
+      <li><strong>Nest holes:</strong> woodpeckers excavate cavities in saguaro trunks; these are subsequently used by other cavity-nesting birds. Ravens are too large to use saguaro cavities, but they exploit the saguaro for perching and resting in shade.</li>
+      <li><strong>Insects:</strong> deteriorating saguaro cactus supports rich communities of beetles and other insects that ravens exploit for food.</li>
+    </ul>
+  </section>
+
+  <section class="qa-section">
+    <h2>Human Impacts: Raven Population Increase</h2>
+    <p><strong class="claim-science">[science]</strong> Common Raven populations in the Sonoran Desert and adjacent areas have increased substantially since the mid-20th century, primarily driven by human food subsidies:<sup><a href="#src-1">1</a></sup></p>
+    <ul>
+      <li>Landfills and rubbish dumps provide concentrated, year-round food.</li>
+      <li>Roadkill on the expanding highway network provides predictable carrion.</li>
+      <li>Agricultural operations (feedlots, irrigation) support increased food availability.</li>
+    </ul>
+    <p>This raven population increase has conservation consequences: in the Mojave Desert (immediately north of the Sonoran), increased raven populations are implicated in elevated predation rates on desert tortoise (Gopherus agassizii) eggs and juveniles — a legally protected species.</p>
+  </section>
+
+  <section class="qa-section">
+    <h2>Related Pages</h2>
+    <ul>
+      <li><a href="/places/ravens-in-yellowstone/">Ravens in Yellowstone</a></li>
+      <li><a href="/places/ravens-in-alaska/">Ravens in Alaska</a></li>
+      <li><a href="/species/common-raven/range/">Common Raven range</a></li>
+      <li><a href="/questions/what-do-ravens-eat/">What do ravens eat?</a></li>
+    </ul>
+  </section>
+
+  <section class="qa-faq qa-section" aria-labelledby="faq-h2">
+    <h2 id="faq-h2">Frequently Asked Questions</h2>
+    {faq.map(item => (
+      <details class="qa-faq-item">
+        <summary class="qa-faq-q">{item.q}</summary>
+        <p class="qa-faq-a">{item.a}</p>
+      </details>
+    ))}
+  </section>
+
+  <section class="qa-sources qa-section" aria-labelledby="src-h2">
+    <h2 id="src-h2">Sources</h2>
+    <ol class="qa-src-list">
+      <li id="src-1">Boarman, W.I. & Heinrich, B. (1999). Common Raven (<em>Corvus corax</em>). In Poole, A. (ed.), <em>The Birds of North America</em>, No. 476. Cornell Lab of Ornithology. — desert ecology, food sources, thermoregulation, population increase with human development.</li>
+    </ol>
+    <p class="qa-claim-note"><strong class="claim-science">[science]</strong> peer-reviewed or field-guide data</p>
+  </section>
+
+</article>
+</BaseLayout>
+
+<style>
+  .qa-page { max-width: 820px; margin: 0 auto; padding: 2rem 1.25rem 4rem; color: var(--iron-ink, #e8e4d8); font-family: 'Inter', sans-serif; line-height: 1.72; }
+  .qa-breadcrumb ol { display: flex; flex-wrap: wrap; gap: .25rem; list-style: none; padding: 0; margin: 0 0 2rem; font-size: .8rem; color: var(--ink-soft, #8a8070); }
+  .qa-breadcrumb a { color: var(--gold-500, #d4ae5a); text-decoration: none; }
+  .qa-pillar { font-size: .72rem; letter-spacing: .12em; text-transform: uppercase; color: var(--gold-500, #d4ae5a); margin: 0 0 .4rem; }
+  .qa-page h1 { font-family: 'Cormorant Garamond', serif; font-size: clamp(2rem, 5vw, 3rem); font-weight: 700; color: #fff; margin: 0 0 2rem; line-height: 1.1; }
+  .qa-snippet { background: rgba(212,174,90,.08); border-left: 3px solid var(--gold-500, #d4ae5a); border-radius: 0 6px 6px 0; padding: 1rem 1.25rem; margin-bottom: 2.5rem; font-size: 1.03rem; }
+  .qa-section { margin-bottom: 2.5rem; }
+  .qa-section h2 { font-family: 'Cormorant Garamond', serif; font-size: 1.5rem; font-weight: 600; color: #fff; margin: 0 0 .9rem; border-bottom: 1px solid rgba(212,174,90,.2); padding-bottom: .4rem; }
+  .qa-section p { margin: 0 0 1rem; font-size: .97rem; }
+  .qa-section ul { padding-left: 1.25rem; margin: 0 0 1rem; }
+  .qa-section li { margin-bottom: .4rem; font-size: .95rem; }
+  .claim-science { color: #7ab9e0; font-style: normal; font-size: .78rem; }
+  a[href] { color: var(--gold-500, #d4ae5a); }
+  .qa-faq-item { border-bottom: 1px solid rgba(255,255,255,.07); }
+  .qa-faq-q { cursor: pointer; padding: .9rem 0; font-size: .97rem; font-weight: 500; color: #fff; list-style: none; }
+  .qa-faq-q::before { content: '+ '; color: var(--gold-500, #d4ae5a); font-weight: 700; }
+  details[open] .qa-faq-q::before { content: '− '; }
+  .qa-faq-a { margin: 0 0 1rem; line-height: 1.7; font-size: .93rem; color: var(--ink-soft, #c8c0b0); }
+  .qa-src-list { padding-left: 1.25rem; margin: 0 0 1rem; }
+  .qa-src-list li { margin-bottom: .6rem; font-size: .82rem; color: var(--ink-soft, #8a8070); line-height: 1.6; }
+  .qa-claim-note { font-size: .78rem; color: var(--ink-soft, #605848); border-top: 1px solid rgba(255,255,255,.06); padding-top: .75rem; }
+</style>

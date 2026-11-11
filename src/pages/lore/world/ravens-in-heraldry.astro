@@ -1,0 +1,136 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+
+const title       = 'Ravens in Heraldry — Symbols, Coats of Arms, and History';
+const description = 'Ravens feature in heraldry across Northern Europe — from the Dane Axe raven banner to Welsh and Irish coats of arms. The raven as heraldic charge: symbolism, examples, and primary sources.';
+const path        = '/lore/world/ravens-in-heraldry/';
+
+const breadcrumbs = [
+  { name: 'Home',         url: '/' },
+  { name: 'Lore',         url: '/lore/world/' },
+  { name: 'Ravens in Heraldry', url: path },
+];
+
+const faq = [
+  { q: 'What do ravens symbolise in heraldry?', a: 'In heraldry, ravens typically symbolise warriors, battle prowess, and divine favour in the Norse tradition, or represent specific family and territorial associations in Welsh, Irish, and Cornish heraldry. The raven was associated with Odin and Viking martial culture; the raven banner (hrafnsmerki) was a Norse war standard. In later heraldry (from the 12th century onward), ravens appear as charges in family arms, often deriving from Norse ancestry or territorial associations with places named for ravens.' },
+];
+---
+
+<BaseLayout title={title} description={description} path={path} ogType="article"
+  datePublished="2026-11-07" dateModified="2026-11-07"
+  breadcrumbs={breadcrumbs} faq={faq} pageType="Article">
+
+<article class="id-page">
+  <nav class="id-breadcrumb" aria-label="Breadcrumb">
+    <ol>
+      {breadcrumbs.map((b, i) => (
+        <li>
+          {i < breadcrumbs.length - 1
+            ? <><a href={b.url}>{b.name}</a><span aria-hidden="true"> › </span></>
+            : <span aria-current="page">{b.name}</span>}
+        </li>
+      ))}
+    </ol>
+  </nav>
+  <header class="id-header">
+    <p class="id-pillar">Lore · World · MYW·09</p>
+    <h1>Ravens in Heraldry</h1>
+    <p class="id-subtitle">From the raven banner to coats of arms</p>
+  </header>
+
+  <section class="id-snippet" aria-label="Quick answer">
+    <p><strong class="claim-lore">[lore]</strong> Ravens appear in heraldry across Northern and Western Europe — most prominently in the Norse <strong>raven banner</strong> (<em>hrafnsmerki</em>), a war standard associated with Odin's favour, and in later formal heraldry in Welsh, Irish, and Cornish family arms. As a heraldic charge, the raven typically represents martial prowess, Norse ancestry, or territorial association with raven-named places.</p>
+  </section>
+
+  <section class="id-section">
+    <h2>The Viking Raven Banner</h2>
+    <p><strong class="claim-lore">[lore]</strong> The <em>hrafnsmerki</em> (raven mark/banner) was a Norse war standard. Historical and saga sources attest it:</p>
+    <ul>
+      <li><strong>Anglo-Saxon Chronicle</strong> (878 CE): references a "raven banner" (<em>hræfn</em>) captured from Danish forces at Cynwit; states the banner was woven by daughters of Ragnar Lothbrok and had magical properties — if the raven appeared to flutter, victory was at hand; if it drooped, the army would be defeated</li>
+      <li><strong>Annals of St Neots</strong> (later interpolation): gives a similar account</li>
+      <li>Saga references: raven banners appear in Njáls saga and other Icelandic sagas as prestige war standards</li>
+    </ul>
+    <p>The raven banner combined the raven's association with Odin and battlefield victory into a physical standard. Its magical framing (the raven "moving" in wind as a divine omen) aligns with Norse traditions about divine favour in battle.<sup><a href="#src-1">1</a>,<a href="#src-2">2</a></sup></p>
+  </section>
+
+  <section class="id-section">
+    <h2>The Raven in Formal Heraldry</h2>
+    <p><strong class="claim-lore">[lore]</strong> In the heraldic system that developed from the 12th century onward in Western Europe, ravens appear as charges in arms for several reasons:</p>
+    <ul>
+      <li><strong>Norse ancestry claims:</strong> Families with claimed Norse or Scandinavian descent used raven charges as an allusion to Odin and the raven banner</li>
+      <li><strong>Canting arms (punning):</strong> Families whose names derive from words for raven — <em>bran</em> (Welsh: crow/raven), <em>corby</em> (Norman French: crow/raven from Lat. <em>corvus</em>) — used ravens in their arms as a visual pun on the name</li>
+      <li><strong>Territorial association:</strong> Places named after ravens (many Old Norse or Old English place names contain <em>hrafn</em> or <em>hræfn</em>) generated arms with raven charges for the families associated with those places</li>
+    </ul>
+  </section>
+
+  <section class="id-section">
+    <h2>Notable Examples</h2>
+    <p><strong class="claim-lore">[lore]</strong></p>
+    <ul>
+      <li><strong>Isle of Man:</strong> Three legs of Man (triskelion) is the primary symbol, but Manx heraldry also incorporates raven imagery from the island's Norse history</li>
+      <li><strong>Corbet / Corby families:</strong> English and Scottish families with Norman French <em>corbet</em> (crow/raven) names bore ravens in their arms — a classic canting arms example</li>
+      <li><strong>Welsh families:</strong> Some Welsh armorial bearings derive from the Brân Fendigaid tradition (Brân = raven/crow in Welsh); Arthurian raven associations in Welsh heraldic tradition</li>
+      <li><strong>Danish and Swedish heraldry:</strong> Raven charges appear in arms of families with explicit Norse ancestry claims</li>
+    </ul>
+    <p>The raven is a "sable" (black) charge in heraldry — the colour associated with grief and constancy, adding to its symbolic resonance in a tradition where colour carries meaning.<sup><a href="#src-3">3</a></sup></p>
+  </section>
+
+  <section class="id-section">
+    <h2>Raven vs Crow in Heraldry</h2>
+    <p><strong class="claim-lore">[lore]</strong> Heraldic blazons do not always distinguish ravens from crows — both appear as generic large black birds (<em>corbie</em> or <em>corbeau</em> in Norman French heraldry). The term <em>corbie</em> specifically in Scottish heraldry refers to a crow or raven. Heralds describe the bird's posture (<em>passant</em>, <em>displayed</em>, <em>close</em>) rather than its species in most cases. Identification of a heraldic charge as specifically a raven (vs crow) depends on context and blazon language.<sup><a href="#src-3">3</a></sup></p>
+  </section>
+
+  <section class="id-faq id-section" aria-labelledby="faq-h2">
+    <h2 id="faq-h2">Frequently Asked Questions</h2>
+    {faq.map(item => (
+      <details class="id-faq-item">
+        <summary class="id-faq-q">{item.q}</summary>
+        <p class="id-faq-a">{item.a}</p>
+      </details>
+    ))}
+  </section>
+
+  <section class="id-sources id-section" aria-labelledby="src-h2">
+    <h2 id="src-h2">Sources</h2>
+    <ol class="id-src-list">
+      <li id="src-1">Swanton, M. (trans. &amp; ed.) (1996). <em>The Anglo-Saxon Chronicle</em>. Dent. — 878 CE entry; raven banner at Cynwit.</li>
+      <li id="src-2">Simek, R. (1993). <em>Dictionary of Northern Mythology</em> (trans. A. Hall). D. S. Brewer. — raven banner entry; Norse martial symbolism.</li>
+      <li id="src-3">Fox-Davies, A. C. (1909). <em>A Complete Guide to Heraldry</em>. T. C. &amp; E. C. Jack. — heraldic charges; corbie/raven entries; canting arms examples. (Public domain.)</li>
+    </ol>
+    <p class="id-claim-note"><strong class="claim-lore">[lore]</strong> named primary and secondary sources</p>
+  </section>
+
+  <nav class="id-nav-bottom">
+    <a href="/lore/norse/raven-banners/" class="id-back">← Raven Banners (Norse)</a>
+    <a href="/lore/world/" class="id-next">World Lore →</a>
+  </nav>
+</article>
+</BaseLayout>
+
+<style>
+  .id-page { max-width: 820px; margin: 0 auto; padding: 2rem 1.25rem 4rem; color: var(--iron-ink, #e8e4d8); font-family: 'Inter', sans-serif; line-height: 1.72; }
+  .id-breadcrumb ol { display: flex; flex-wrap: wrap; gap: .25rem; list-style: none; padding: 0; margin: 0 0 2rem; font-size: .8rem; color: var(--ink-soft, #8a8070); }
+  .id-breadcrumb a { color: var(--gold-500, #d4ae5a); text-decoration: none; }
+  .id-pillar { font-size: .72rem; letter-spacing: .12em; text-transform: uppercase; color: var(--gold-500, #d4ae5a); margin: 0 0 .4rem; }
+  .id-page h1 { font-family: 'Cormorant Garamond', serif; font-size: clamp(2rem, 5vw, 3.25rem); font-weight: 700; color: #fff; margin: 0 0 .2rem; line-height: 1.1; }
+  .id-subtitle { font-size: 1rem; color: var(--ink-soft, #c0b89a); margin: 0 0 2rem; }
+  .id-snippet { background: rgba(212,174,90,.08); border-left: 3px solid var(--gold-500, #d4ae5a); border-radius: 0 6px 6px 0; padding: 1rem 1.25rem; margin-bottom: 2.5rem; font-size: 1.03rem; }
+  .id-section { margin-bottom: 2.75rem; }
+  .id-section h2 { font-family: 'Cormorant Garamond', serif; font-size: 1.6rem; font-weight: 600; color: #fff; margin: 0 0 1rem; border-bottom: 1px solid rgba(212,174,90,.2); padding-bottom: .4rem; }
+  .id-section p { margin: 0 0 1rem; font-size: .97rem; }
+  .id-section ul { padding-left: 1.25rem; margin: 0 0 1rem; }
+  .id-section li { margin-bottom: .4rem; font-size: .95rem; }
+  .claim-lore { color: #c8a84b; font-style: normal; font-size: .78rem; }
+  a[href] { color: var(--gold-500, #d4ae5a); }
+  .id-faq-item { border-bottom: 1px solid rgba(255,255,255,.07); }
+  .id-faq-q { cursor: pointer; padding: .9rem 0; font-size: .97rem; font-weight: 500; color: #fff; list-style: none; }
+  .id-faq-q::before { content: '+ '; color: var(--gold-500, #d4ae5a); font-weight: 700; }
+  details[open] .id-faq-q::before { content: '− '; }
+  .id-faq-a { margin: 0 0 1rem; line-height: 1.7; font-size: .93rem; color: var(--ink-soft, #c8c0b0); }
+  .id-src-list { padding-left: 1.25rem; margin: 0 0 1rem; }
+  .id-src-list li { margin-bottom: .6rem; font-size: .82rem; color: var(--ink-soft, #8a8070); line-height: 1.6; }
+  .id-claim-note { font-size: .78rem; color: var(--ink-soft, #605848); border-top: 1px solid rgba(255,255,255,.06); padding-top: .75rem; }
+  .id-nav-bottom { display: flex; justify-content: space-between; padding-top: 2rem; border-top: 1px solid rgba(255,255,255,.07); }
+  .id-nav-bottom a { font-size: .9rem; text-decoration: none; }
+  .id-nav-bottom a:hover { text-decoration: underline; }
+</style>

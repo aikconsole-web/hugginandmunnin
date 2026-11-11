@@ -1,0 +1,72 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const title       = 'Raven Comparisons — How Ravens Differ From Crows and Other Corvids';
+const description = 'Side-by-side comparisons of ravens and crows: field marks, size, voice, habitat, and behaviour. Raven vs crow, raven vs rook, raven vs jackdaw and more.';
+const path        = '/compare/';
+
+const breadcrumbs = [
+  { name: 'Home',    url: '/' },
+  { name: 'Compare', url: '/compare/' },
+];
+
+const pages = [
+  { slug: 'raven-vs-crow',                   title: 'Raven vs Crow',                        desc: 'The 7 fastest field marks — tail, size, bill, voice, flight, hackles, habitat.' },
+  { slug: 'common-raven-vs-american-crow',   title: 'Common Raven vs American Crow',        desc: 'North America: the definitive side-by-side with measurements.' },
+  { slug: 'raven-vs-carrion-crow',           title: 'Raven vs Carrion Crow',                desc: 'UK and European field identification guide.' },
+  { slug: 'raven-vs-rook',                   title: 'Raven vs Rook',                        desc: 'Rooks have a pale face and floppy wingtips — but can still be confused at distance.' },
+  { slug: 'raven-vs-jackdaw',               title: 'Raven vs Jackdaw',                      desc: 'Size alone separates them, but voice and eye colour clinch it.' },
+  { slug: 'raven-vs-hooded-crow',           title: 'Raven vs Hooded Crow',                  desc: 'Hooded Crows are pied (grey body); never confused up close.' },
+  { slug: 'raven-vs-crow-size',             title: 'Raven vs Crow Size',                    desc: 'Ravens are ~25–35% longer and 2–3× heavier than crows — exact measurements and field tips.' },
+  { slug: 'raven-vs-crow-calls',            title: 'Raven vs Crow Calls',                   desc: 'The raven\'s deep "kronk" vs the crow\'s "caw" — acoustic differences and how to use call for identification.' },
+  { slug: 'raven-vs-magpie',               title: 'Raven vs Magpie',                        desc: 'Magpies are pied and long-tailed; unmistakable up close, but can confuse at distance in flight.' },
+  { slug: 'raven-vs-jay',                  title: 'Raven vs Jay',                           desc: 'Eurasian Jays are half the size with vivid blue wing-patch — size and colour separate them instantly.' },
+  { slug: 'raven-vs-vulture',              title: 'Raven vs Vulture',                       desc: 'Both appear at large carcasses, but ravens are passerines — a different evolutionary lineage entirely.' },
+  { slug: 'chihuahuan-raven-vs-common-raven', title: 'Chihuahuan Raven vs Common Raven',   desc: 'The two ravens that share southwestern North America — separated by size, nasal feathers, and habitat.' },
+];
+---
+
+<BaseLayout title={title} description={description} path={path} breadcrumbs={breadcrumbs}>
+
+<div class="cmpidx-page">
+
+  <nav class="cmpidx-breadcrumb" aria-label="Breadcrumb">
+    <ol>
+      <li><a href="/">Home</a><span aria-hidden="true"> › </span></li>
+      <li><span aria-current="page">Compare</span></li>
+    </ol>
+  </nav>
+
+  <header class="cmpidx-header">
+    <h1>Raven Comparisons</h1>
+    <p class="cmpidx-lead">Ravens are often confused with crows and other large corvids. These side-by-side guides give you the fastest, most reliable field marks.</p>
+  </header>
+
+  <ul class="cmpidx-list">
+    {pages.map(p => (
+      <li class="cmpidx-item">
+        <a href={`/compare/${p.slug}/`} class="cmpidx-link">
+          <strong class="cmpidx-title">{p.title}</strong>
+          <span class="cmpidx-desc">{p.desc}</span>
+        </a>
+      </li>
+    ))}
+  </ul>
+
+</div>
+
+</BaseLayout>
+
+<style>
+  .cmpidx-page { max-width: 760px; margin: 0 auto; padding: 2rem 1.25rem 4rem; color: var(--iron-ink, #e8e4d8); font-family: 'Inter', sans-serif; }
+  .cmpidx-breadcrumb ol { display: flex; gap: .25rem; list-style: none; padding: 0; margin: 0 0 2rem; font-size: .8rem; color: var(--ink-soft, #8a8070); }
+  .cmpidx-breadcrumb a { color: var(--gold-500, #d4ae5a); text-decoration: none; }
+  .cmpidx-header h1 { font-family: 'Cormorant Garamond', serif; font-size: clamp(2rem, 5vw, 2.75rem); font-weight: 700; color: #fff; margin: 0 0 .75rem; }
+  .cmpidx-lead { font-size: 1rem; color: var(--ink-soft, #c0b89a); margin: 0 0 2.5rem; line-height: 1.65; }
+  .cmpidx-list { list-style: none; padding: 0; margin: 0; }
+  .cmpidx-item { border-bottom: 1px solid rgba(255,255,255,.07); }
+  .cmpidx-link { display: flex; flex-direction: column; gap: .2rem; padding: 1rem 0; text-decoration: none; color: inherit; }
+  .cmpidx-link:hover .cmpidx-title { color: var(--gold-500, #d4ae5a); }
+  .cmpidx-title { font-size: .97rem; color: #fff; }
+  .cmpidx-desc { font-size: .84rem; color: var(--ink-soft, #8a8070); }
+</style>

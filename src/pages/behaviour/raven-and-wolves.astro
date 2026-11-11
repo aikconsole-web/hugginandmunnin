@@ -1,0 +1,153 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const title       = 'Ravens and Wolves — A Mutualistic Relationship';
+const description = 'Ravens and wolves have a well-documented mutualistic relationship across the Holarctic. Ravens follow wolves to carcasses; wolves may benefit from raven detection. Research on raven-wolf ecology.';
+const path        = '/behaviour/raven-and-wolves/';
+
+const breadcrumbs = [
+  { name: 'Home',      url: '/' },
+  { name: 'Behaviour', url: '/behaviour/' },
+  { name: 'Ravens and Wolves', url: path },
+];
+
+const faq = [
+  { q: 'Why do ravens follow wolves?', a: 'Ravens follow wolves primarily to access the large ungulate carcasses that wolves kill. A single raven cannot tear open a fresh deer or elk carcass — the hide is too thick. By following wolves and attending their kills, ravens gain access to meat they could not otherwise reach. This relationship is widespread across the Holarctic range overlap of ravens and wolves and is one of the most studied inter-species feeding relationships among intelligent animals.' },
+  { q: 'Do wolves and ravens have a special relationship?', a: 'The raven-wolf relationship is well-documented ecologically: ravens follow wolf packs and benefit from their kills. Some researchers (Heinrich, Mech) have suggested the relationship may be partially mutualistic — ravens may alert wolves to carcasses from aerial vantage points, and the two species show unusually tolerant interactions at kills compared to raven interactions with other large predators. However, deliberate mutualism (cooperation for shared benefit) is difficult to prove, and the relationship is primarily one of commensalism (ravens benefit; wolves are largely unaffected).' },
+];
+---
+
+<BaseLayout title={title} description={description} path={path} ogType="article"
+  datePublished="2026-11-07" dateModified="2026-11-07"
+  breadcrumbs={breadcrumbs} faq={faq} pageType="Article">
+
+<article class="id-page">
+  <nav class="id-breadcrumb" aria-label="Breadcrumb">
+    <ol>
+      {breadcrumbs.map((b, i) => (
+        <li>
+          {i < breadcrumbs.length - 1
+            ? <><a href={b.url}>{b.name}</a><span aria-hidden="true"> › </span></>
+            : <span aria-current="page">{b.name}</span>}
+        </li>
+      ))}
+    </ol>
+  </nav>
+  <header class="id-header">
+    <p class="id-pillar">Behaviour · BEH·07</p>
+    <h1>Ravens and Wolves</h1>
+    <p class="id-subtitle">An ancient foraging partnership</p>
+  </header>
+
+  <section class="id-snippet" aria-label="Quick answer">
+    <p><strong class="claim-science">[science]</strong> Ravens and wolves have a well-documented ecological relationship across the Holarctic. Ravens follow wolf packs to access kills, and wolves show unusually tolerant behaviour toward ravens at carcasses compared to other scavengers. The relationship is primarily <strong>commensal</strong> (ravens benefit; wolves are largely unaffected) but may have mutualistic elements in some contexts. This is one of the most extensively observed inter-species feeding relationships in temperate ecosystems.</p>
+  </section>
+
+  <section class="id-section">
+    <h2>Why Ravens Follow Wolves</h2>
+    <p><strong class="claim-science">[science]</strong> The functional explanation is straightforward:</p>
+    <ul>
+      <li>Ravens cannot open fresh large ungulate carcasses (deer, elk, moose, bison) — the hide is too thick for their bill</li>
+      <li>Wolves kill large ungulates and open the carcass, providing access for ravens</li>
+      <li>Ravens learn to follow wolf packs, anticipating kills and attending within minutes of a kill</li>
+      <li>At a wolf kill, ravens may consume 1–2 kg of meat per bird per day — a significant energetic gain in winter</li>
+    </ul>
+    <p>Heinrich (1989) documented that ravens follow wolves in Maine; Mech & Boitani (2003) confirmed the relationship across Yellowstone and other long-term wolf study sites. Ravens learn individual wolf packs' hunting areas and follow them on hunts.<sup><a href="#src-1">1</a>,<a href="#src-2">2</a></sup></p>
+  </section>
+
+  <section class="id-section">
+    <h2>Raven Behaviour at Wolf Kills</h2>
+    <p><strong class="claim-science">[science]</strong> At wolf kill sites, raven behaviour is elaborate:</p>
+    <ul>
+      <li>Large numbers gather quickly — 20–100 ravens at a major elk kill in Yellowstone</li>
+      <li>Ravens feed alongside wolves, often approaching within 1–2 metres of feeding wolves</li>
+      <li>Ravens mob wolves and attempt to steal food — darting in behind feeding wolves, pulling tails</li>
+      <li>Wolves generally tolerate ravens and rarely chase them away; in contrast, they will drive coyotes from kills</li>
+      <li>Ravens watch wolf movements and can track a pack's location over multi-day periods</li>
+    </ul>
+    <p>The "tail-pulling" behaviour — where ravens approach feeding wolves from behind and tug their tails — is widely observed and appears to be a food-displacement technique. It is also seen in play contexts.<sup><a href="#src-1">1</a></sup></p>
+  </section>
+
+  <section class="id-section">
+    <h2>Do Ravens Benefit Wolves?</h2>
+    <p><strong class="claim-science">[science]</strong> The question of reciprocal benefit is debated:</p>
+    <ul>
+      <li><strong>Hypothesis 1 (commensalism):</strong> Ravens benefit from wolves; wolves are unaffected. This is the simplest explanation and accounts for the data without requiring deliberate cooperation.</li>
+      <li><strong>Hypothesis 2 (partial mutualism):</strong> Ravens, soaring above the landscape, may detect and lead wolves to carcasses they would not otherwise find quickly. Some observers note that ravens will display over or near a carcass in ways that may attract wolves.</li>
+      <li><strong>Hypothesis 3 (sentinel function):</strong> Ravens may alert wolves to approaching dangers — their alarm calls respond to humans and large predators, which could incidentally benefit wolves at a kill.</li>
+    </ul>
+    <p>Proving mutualism requires demonstrating that wolf foraging success is higher in the presence of ravens than without. This is difficult to test experimentally. The current consensus favours commensalism with possible incidental mutual benefits.<sup><a href="#src-2">2</a></sup></p>
+  </section>
+
+  <section class="id-section">
+    <h2>Play Between Ravens and Wolves</h2>
+    <p><strong class="claim-science">[science]</strong> One of the most striking observations in the raven-wolf literature is inter-species play:</p>
+    <ul>
+      <li>Young wolves and young ravens engage in play interactions at kill sites — chasing, mock-pecking, object play with bones</li>
+      <li>Heinrich (2000) documented juveniles of both species playing together in Maine</li>
+      <li>This inter-species play is unusual and may reflect the long co-evolutionary association between the two species across the Holarctic</li>
+    </ul>
+    <p>Play between species typically occurs between young animals and disappears as adults, though tolerant interactions persist at kills throughout life.<sup><a href="#src-3">3</a></sup></p>
+  </section>
+
+  <section class="id-section">
+    <h2>The Relationship in Norse Mythology</h2>
+    <p><strong class="claim-lore">[lore]</strong> The raven-wolf pairing has deep roots in Norse culture — both are Odin's animals. Odin's ravens (Huginn and Muninn) and wolves (Geri and Freki) are paired in the same mythological framework. This pairing almost certainly reflects the ecological reality that the Norse peoples observed — ravens and wolves together at kills — elevated into the symbolic system of a warrior god who oversees battle, death, and the intelligence of his scouts.<sup><a href="#src-4">4</a></sup></p>
+  </section>
+
+  <section class="id-faq id-section" aria-labelledby="faq-h2">
+    <h2 id="faq-h2">Frequently Asked Questions</h2>
+    {faq.map(item => (
+      <details class="id-faq-item">
+        <summary class="id-faq-q">{item.q}</summary>
+        <p class="id-faq-a">{item.a}</p>
+      </details>
+    ))}
+  </section>
+
+  <section class="id-sources id-section" aria-labelledby="src-h2">
+    <h2 id="src-h2">Sources</h2>
+    <ol class="id-src-list">
+      <li id="src-1">Heinrich, B. (1989). <em>Ravens in Winter</em>. Summit Books. — wolf following, kill attendance, tail-pulling, inter-species play.</li>
+      <li id="src-2">Mech, L. D. &amp; Boitani, L. (Eds.) (2003). <em>Wolves: Behavior, Ecology, and Conservation</em>. University of Chicago Press. — raven-wolf interactions at Yellowstone and other sites.</li>
+      <li id="src-3">Heinrich, B. (2000). <em>Mind of the Raven</em>. Harper Perennial. — inter-species play; raven behaviour at wolf kills.</li>
+      <li id="src-4">Simek, R. (1993). <em>Dictionary of Northern Mythology</em> (trans. A. Hall). D. S. Brewer. — Geri, Freki, Huginn, Muninn — Odin's paired animals.</li>
+    </ol>
+    <p class="id-claim-note"><strong class="claim-science">[science]</strong> field research and species accounts; <strong class="claim-lore">[lore]</strong> named mythological source</p>
+  </section>
+
+  <nav class="id-nav-bottom">
+    <a href="/behaviour/raven-social-structure/" class="id-back">← Social Structure</a>
+    <a href="/behaviour/raven-food-caching/" class="id-next">Food Caching →</a>
+  </nav>
+</article>
+</BaseLayout>
+
+<style>
+  .id-page { max-width: 820px; margin: 0 auto; padding: 2rem 1.25rem 4rem; color: var(--iron-ink, #e8e4d8); font-family: 'Inter', sans-serif; line-height: 1.72; }
+  .id-breadcrumb ol { display: flex; flex-wrap: wrap; gap: .25rem; list-style: none; padding: 0; margin: 0 0 2rem; font-size: .8rem; color: var(--ink-soft, #8a8070); }
+  .id-breadcrumb a { color: var(--gold-500, #d4ae5a); text-decoration: none; }
+  .id-pillar { font-size: .72rem; letter-spacing: .12em; text-transform: uppercase; color: var(--gold-500, #d4ae5a); margin: 0 0 .4rem; }
+  .id-page h1 { font-family: 'Cormorant Garamond', serif; font-size: clamp(2rem, 5vw, 3.25rem); font-weight: 700; color: #fff; margin: 0 0 .2rem; line-height: 1.1; }
+  .id-subtitle { font-size: 1rem; color: var(--ink-soft, #c0b89a); margin: 0 0 2rem; }
+  .id-snippet { background: rgba(212,174,90,.08); border-left: 3px solid var(--gold-500, #d4ae5a); border-radius: 0 6px 6px 0; padding: 1rem 1.25rem; margin-bottom: 2.5rem; font-size: 1.03rem; }
+  .id-section { margin-bottom: 2.75rem; }
+  .id-section h2 { font-family: 'Cormorant Garamond', serif; font-size: 1.6rem; font-weight: 600; color: #fff; margin: 0 0 1rem; border-bottom: 1px solid rgba(212,174,90,.2); padding-bottom: .4rem; }
+  .id-section p { margin: 0 0 1rem; font-size: .97rem; }
+  .id-section ul { padding-left: 1.25rem; margin: 0 0 1rem; }
+  .id-section li { margin-bottom: .4rem; font-size: .95rem; }
+  .claim-science { color: #7ab9e0; font-style: normal; font-size: .78rem; }
+  .claim-lore { color: #c8a84b; font-style: normal; font-size: .78rem; }
+  a[href] { color: var(--gold-500, #d4ae5a); }
+  .id-faq-item { border-bottom: 1px solid rgba(255,255,255,.07); }
+  .id-faq-q { cursor: pointer; padding: .9rem 0; font-size: .97rem; font-weight: 500; color: #fff; list-style: none; }
+  .id-faq-q::before { content: '+ '; color: var(--gold-500, #d4ae5a); font-weight: 700; }
+  details[open] .id-faq-q::before { content: '− '; }
+  .id-faq-a { margin: 0 0 1rem; line-height: 1.7; font-size: .93rem; color: var(--ink-soft, #c8c0b0); }
+  .id-src-list { padding-left: 1.25rem; margin: 0 0 1rem; }
+  .id-src-list li { margin-bottom: .6rem; font-size: .82rem; color: var(--ink-soft, #8a8070); line-height: 1.6; }
+  .id-claim-note { font-size: .78rem; color: var(--ink-soft, #605848); border-top: 1px solid rgba(255,255,255,.06); padding-top: .75rem; }
+  .id-nav-bottom { display: flex; justify-content: space-between; padding-top: 2rem; border-top: 1px solid rgba(255,255,255,.07); }
+  .id-nav-bottom a { font-size: .9rem; text-decoration: none; }
+  .id-nav-bottom a:hover { text-decoration: underline; }
+</style>

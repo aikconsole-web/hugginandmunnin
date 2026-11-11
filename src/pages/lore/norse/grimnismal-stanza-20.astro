@@ -1,0 +1,178 @@
+---
+/**
+ * NOR·03 — Grímnismál Stanza 20
+ * Primary keyword: grimnismal stanza 20
+ * Secondary: huginn muninn poem, odin ravens verse, grimnismal huginn
+ */
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+
+const title       = 'Grímnismál Stanza 20 — The Raven Verse Explained';
+const description = 'A complete close reading of Grímnismál stanza 20 — the only surviving Old Norse verse that names Huginn and Muninn together. Old Norse text, word-by-word gloss, translation, and scholarly commentary.';
+const path        = '/lore/norse/grimnismal-stanza-20/';
+
+const breadcrumbs = [
+  { name: 'Home',              url: '/' },
+  { name: 'Norse Lore',        url: '/lore/norse/' },
+  { name: 'Grímnismál Stanza 20', url: path },
+];
+
+const faq = [
+  { q: 'What does Grímnismál stanza 20 say?', a: 'Stanza 20 says that Huginn and Muninn fly every day over the entire earth; Odin fears for Huginn that he may not return, but fears more for Muninn. It is the only stanza in the surviving Eddas that names both ravens together.' },
+  { q: 'What is Jörmungrund in Grímnismál 20?', a: 'Jörmungrund (Old Norse: "the great/vast ground/earth") is a poetic name for the whole world — all of space and the nine worlds. It emphasises the total scope of the ravens\' daily reconnaissance.' },
+  { q: 'Why does Odin fear for Muninn more than Huginn?', a: 'The text states the fact but not the reason. The most cited scholarly interpretation (Simek 1993, Ellis Davidson 1964) is that Memory (Muninn) is harder to recover than Thought (Huginn): a lost memory cannot be regained, whereas thought can begin again.' },
+];
+---
+
+<BaseLayout title={title} description={description} path={path} ogType="article"
+  datePublished="2026-11-06" dateModified="2026-11-06"
+  breadcrumbs={breadcrumbs} faq={faq} pageType="Article">
+
+<article class="lore-page">
+
+  <nav class="lore-breadcrumb" aria-label="Breadcrumb">
+    <ol>
+      {breadcrumbs.map((b, i) => (
+        <li>
+          {i < breadcrumbs.length - 1
+            ? <><a href={b.url}>{b.name}</a><span aria-hidden="true"> › </span></>
+            : <span aria-current="page">{b.name}</span>}
+        </li>
+      ))}
+    </ol>
+  </nav>
+
+  <header class="lore-header">
+    <p class="lore-pillar">Norse Lore · NOR·03</p>
+    <h1>Grímnismál Stanza 20</h1>
+    <p class="lore-subtitle">The Only Verse That Names Huginn and Muninn</p>
+  </header>
+
+  <section class="lore-snippet" aria-label="Quick answer">
+    <p><em>Grímnismál</em> stanza 20 is the sole surviving Old Norse verse to name both of Odin's ravens together. It survives in the <em>Codex Regius</em> (c. 1270 CE) and reads: "Huginn and Muninn fly every day over the vast earth; I fear for Huginn that he may not return, yet I fear more for Muninn."</p>
+  </section>
+
+  <section class="lore-section">
+    <h2>The Manuscript and Poem</h2>
+    <p><strong class="claim-lore">[lore]</strong> <em>Grímnismál</em> ("The Sayings of Grímnir") is an Eddic poem preserved in the <em>Codex Regius</em> (GkS 2365 4°), an Icelandic manuscript dated to around 1270 CE, now held at the Árni Magnússon Institute in Reykjavík.<sup><a href="#src-1">1</a></sup> The poem is universally considered older than the manuscript; most scholars date its composition to before 1000 CE, though the exact date is unknown.<sup><a href="#src-2">2</a></sup></p>
+    <p>In the poem, Odin is captured and tortured by King Geirröðr, who does not recognise him. Disguised as "Grímnir" (the Masked One), Odin reveals cosmological secrets to the king's young son Agnarr — the stanzas that form the bulk of the poem. Stanza 20 falls in this sequence of cosmic revelation.</p>
+  </section>
+
+  <section class="lore-section">
+    <h2>The Old Norse Text</h2>
+    <p><strong class="claim-lore">[lore]</strong> The stanza as it appears in the <em>Codex Regius</em>:<sup><a href="#src-1">1</a></sup></p>
+    <blockquote class="lore-quote lore-quote--old-norse">
+      <p lang="non">
+        Huginn ok Muninn<br/>
+        fljúga hverjan dag<br/>
+        Jörmungrund yfir;<br/>
+        óumk ek of Hugin,<br/>
+        at hann aftr né komi-t,<br/>
+        þó sjámk meir of Munin.
+      </p>
+      <footer>— <em>Grímnismál</em>, stanza 20, <em>Codex Regius</em> GkS 2365 4°</footer>
+    </blockquote>
+  </section>
+
+  <section class="lore-section">
+    <h2>Word-by-Word Gloss</h2>
+    <p>Each phrase explained (Hrafn's own glossing, following standard Old Norse lexicography):<sup><a href="#src-3">3</a></sup></p>
+    <table class="lore-gloss-table">
+      <thead>
+        <tr><th>Old Norse</th><th>Literal meaning</th><th>Notes</th></tr>
+      </thead>
+      <tbody>
+        <tr><td lang="non">Huginn ok Muninn</td><td>Huginn and Muninn</td><td>"Thought" and "Memory/Mind"</td></tr>
+        <tr><td lang="non">fljúga hverjan dag</td><td>fly every day</td><td><em>fljúga</em> = to fly (infinitive after modal); <em>hverjan dag</em> = "every day" (accusative)</td></tr>
+        <tr><td lang="non">Jörmungrund yfir</td><td>over the vast earth</td><td><em>Jörmun-</em> = "vast/mighty" (cf. <em>Jörmungandr</em>); <em>grund</em> = earth, ground; <em>yfir</em> = over (postposition)</td></tr>
+        <tr><td lang="non">óumk ek of Hugin</td><td>I am afraid for Huginn</td><td><em>óask</em> = to fear (middle voice); <em>of</em> = concerning</td></tr>
+        <tr><td lang="non">at hann aftr né komi-t</td><td>that he may not come back</td><td>subjunctive <em>komi</em> + enclitic <em>-t</em> (negation); <em>aftr</em> = back, again</td></tr>
+        <tr><td lang="non">þó sjámk meir of Munin</td><td>yet I fear more for Muninn</td><td><em>þó</em> = yet/still; <em>sjámk</em> = "I see/fear" (here idiom for anxiety); <em>meir</em> = more</td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section class="lore-section">
+    <h2>Translation and Commentary</h2>
+    <p>A close prose translation (Hrafn's own, following Larrington 1996 and Faulkes 1987):</p>
+    <blockquote class="lore-quote">
+      <p>"Huginn and Muninn fly every day over the vast earth; I fear for Huginn that he may not return, yet I fear more for Muninn."</p>
+    </blockquote>
+    <p><strong class="claim-lore">[lore]</strong> The stanza is metrically in <em>ljóðaháttr</em> ("song metre"), the form typically used for gnomically weighty statements in Eddic poetry. Its brevity — six lines — belies its density: the stanza establishes the ravens' daily range, their role as observers, and Odin's dependency on them, all in a few words.<sup><a href="#src-2">2</a></sup></p>
+    <p>The anxiety about Muninn is the stanza's most discussed element. Carolyne Larrington notes in her commentary (1996) that memory in Norse thought was not simply recollection but carried connotations of "desire" and "intention" — which makes Muninn's loss more catastrophic than Huginn's.<sup><a href="#src-4">4</a></sup></p>
+  </section>
+
+  <section class="lore-section lore-bridge">
+    <h2>The Birds Behind the Story</h2>
+    <p><strong class="claim-science">[science]</strong> Common Ravens range widely — often many kilometres in a day — in search of food, and their intelligence, pair-bonding, and apparent curiosity about human activity would have been familiar to anyone living in Scandinavia or Iceland.<sup><a href="#src-5">5</a></sup> The poem's claim that Huginn and Muninn "fly every day over the vast earth" maps onto the raven's real behaviour: wide daily ranging across open country.</p>
+    <p><a href="/species/common-raven/" class="lore-species-link">Common Raven — species profile →</a></p>
+    <p><a href="/lore/norse/huginn-and-muninn/" class="lore-species-link">Huginn and Muninn — full analysis →</a></p>
+  </section>
+
+  <section class="lore-faq lore-section" aria-labelledby="faq-h2">
+    <h2 id="faq-h2">Frequently Asked Questions</h2>
+    {faq.map(item => (
+      <details class="lore-faq-item">
+        <summary class="lore-faq-q">{item.q}</summary>
+        <p class="lore-faq-a">{item.a}</p>
+      </details>
+    ))}
+  </section>
+
+  <section class="lore-sources lore-section" aria-labelledby="src-h2">
+    <h2 id="src-h2">Sources</h2>
+    <ol class="lore-src-list">
+      <li id="src-1">The <em>Codex Regius</em> (GkS 2365 4°), c. 1270 CE. Árni Magnússon Institute, Reykjavík. — primary manuscript.</li>
+      <li id="src-2">Dronke, U. (ed., 1997). <em>The Poetic Edda, vol. II: Mythological Poems</em>. Oxford University Press. — scholarly edition with <em>Grímnismál</em> introduction and commentary.</li>
+      <li id="src-3">Zoëga, G.T. (1910). <em>A Concise Dictionary of Old Icelandic</em>. Oxford. (Public domain.) — word glosses.</li>
+      <li id="src-4">Larrington, C. (1996). <em>The Poetic Edda</em> (trans.). Oxford University Press. p. 56. — translation and commentary on stanza 20.</li>
+      <li id="src-5">Boarman, W.I. & Heinrich, B. (1999). Common Raven (<em>Corvus corax</em>). <em>Birds of the World</em>. Cornell Lab. — raven daily range and behaviour.</li>
+    </ol>
+    <p class="lore-claim-note"><strong class="claim-science">[science]</strong> peer-reviewed/field-guide · <strong class="claim-lore">[lore]</strong> named cultural/historical source</p>
+  </section>
+
+  <nav class="lore-nav-bottom">
+    <a href="/lore/norse/odin-the-raven-god/" class="lore-back">← Odin: the Raven-God</a>
+    <a href="/lore/norse/ravens-in-the-prose-edda/" class="lore-next">Ravens in the Prose Edda →</a>
+  </nav>
+
+</article>
+</BaseLayout>
+
+<style>
+  .lore-page { max-width: 820px; margin: 0 auto; padding: 2rem 1.25rem 4rem; color: var(--iron-ink, #e8e4d8); font-family: 'Inter', sans-serif; line-height: 1.72; }
+  .lore-breadcrumb ol { display: flex; flex-wrap: wrap; gap: .25rem; list-style: none; padding: 0; margin: 0 0 2rem; font-size: .8rem; color: var(--ink-soft, #8a8070); }
+  .lore-breadcrumb a { color: var(--gold-500, #d4ae5a); text-decoration: none; }
+  .lore-pillar { font-size: .72rem; letter-spacing: .12em; text-transform: uppercase; color: var(--gold-500, #d4ae5a); margin: 0 0 .4rem; }
+  .lore-page h1 { font-family: 'Cormorant Garamond', serif; font-size: clamp(2rem, 5vw, 3.25rem); font-weight: 700; color: #fff; margin: 0 0 .4rem; line-height: 1.1; }
+  .lore-subtitle { font-size: 1.1rem; color: var(--ink-soft, #c0b89a); margin: 0 0 2rem; }
+  .lore-snippet { background: rgba(212,174,90,.08); border-left: 3px solid var(--gold-500, #d4ae5a); border-radius: 0 6px 6px 0; padding: 1rem 1.25rem; margin-bottom: 2.5rem; font-size: 1.03rem; }
+  .lore-section { margin-bottom: 2.75rem; }
+  .lore-section h2 { font-family: 'Cormorant Garamond', serif; font-size: 1.6rem; font-weight: 600; color: #fff; margin: 0 0 1rem; border-bottom: 1px solid rgba(212,174,90,.2); padding-bottom: .4rem; }
+  .lore-section p { margin: 0 0 1rem; font-size: .97rem; }
+  .lore-section ul { padding-left: 1.25rem; margin: 0 0 1rem; }
+  .lore-section li { margin-bottom: .5rem; font-size: .95rem; }
+  .lore-quote { border-left: 3px solid rgba(212,174,90,.35); margin: 1.25rem 0; padding: .9rem 1.25rem; color: var(--ink-soft, #c8c0b0); font-style: italic; }
+  .lore-quote--old-norse { font-family: 'Cormorant Garamond', serif; font-size: 1.1rem; }
+  .lore-quote footer { font-style: normal; font-size: .78rem; margin-top: .5rem; color: var(--ink-soft, #8a8070); }
+  .claim-science { color: #7ab9e0; font-style: normal; font-size: .78rem; }
+  .claim-lore    { color: #c8a46a; font-style: normal; font-size: .78rem; }
+  a[href] { color: var(--gold-500, #d4ae5a); }
+  /* Gloss table */
+  .lore-gloss-table { width: 100%; border-collapse: collapse; font-size: .86rem; margin: 1rem 0; }
+  .lore-gloss-table th { text-align: left; padding: .5rem .75rem; background: rgba(255,255,255,.06); color: var(--gold-500, #d4ae5a); font-size: .75rem; letter-spacing: .08em; text-transform: uppercase; }
+  .lore-gloss-table td { padding: .5rem .75rem; border-bottom: 1px solid rgba(255,255,255,.06); vertical-align: top; }
+  .lore-gloss-table tr:last-child td { border-bottom: none; }
+  .lore-bridge { background: rgba(107,45,28,.1); border: 1px solid rgba(107,45,28,.3); border-radius: 8px; padding: 1.25rem 1.5rem; }
+  .lore-species-link { display: inline-block; margin-bottom: .4rem; font-size: .9rem; }
+  .lore-faq-item { border-bottom: 1px solid rgba(255,255,255,.07); }
+  .lore-faq-q { cursor: pointer; padding: .9rem 0; font-size: .97rem; font-weight: 500; color: #fff; list-style: none; }
+  .lore-faq-q::before { content: '+ '; color: var(--gold-500, #d4ae5a); font-weight: 700; }
+  details[open] .lore-faq-q::before { content: '− '; }
+  .lore-faq-a { margin: 0 0 1rem; line-height: 1.7; font-size: .93rem; color: var(--ink-soft, #c8c0b0); }
+  .lore-src-list { padding-left: 1.25rem; margin: 0 0 1rem; }
+  .lore-src-list li { margin-bottom: .6rem; font-size: .82rem; color: var(--ink-soft, #8a8070); line-height: 1.6; }
+  .lore-claim-note { font-size: .78rem; color: var(--ink-soft, #605848); border-top: 1px solid rgba(255,255,255,.06); padding-top: .75rem; }
+  .lore-nav-bottom { display: flex; justify-content: space-between; padding-top: 2rem; border-top: 1px solid rgba(255,255,255,.07); }
+  .lore-nav-bottom a { font-size: .9rem; text-decoration: none; }
+  .lore-nav-bottom a:hover { text-decoration: underline; }
+</style>

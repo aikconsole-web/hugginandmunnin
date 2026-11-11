@@ -1,0 +1,138 @@
+---
+/**
+ * World Lore — Ravens in Zoroastrian tradition (standalone)
+ * MYW·32
+ * Primary keyword: raven zoroastrian
+ * Secondary: raven persia ancient, raven avesta, corvid ancient persian
+ */
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const title       = 'Ravens in Zoroastrian Tradition: The Bird of Ahura Mazda and Corpse-Bearer';
+const description = 'In ancient Persian and Zoroastrian tradition, corvids — particularly ravens and crows — occupy a complex dual role: associated with the disposal of the dead in the dakhma (Towers of Silence) and yet also appearing as sacred birds in Zoroastrian cosmological texts. This page examines the raven\'s place in Zoroastrian cosmology and Persian folklore.';
+const path        = '/lore/world/ravens-in-zoroastrian-tradition/';
+
+const breadcrumbs = [
+  { name: 'Home',       url: '/' },
+  { name: 'World Lore', url: '/lore/world/' },
+  { name: 'Ravens in Zoroastrian Tradition', url: path },
+];
+
+const faq = [
+  { q: 'What role do ravens play in Zoroastrianism?', a: 'In Zoroastrian tradition and practice, corvids (ravens, crows, and vultures) play a practical and ritual role at the dakhma (Tower of Silence) — the elevated platforms on which the Zoroastrian dead were traditionally exposed for birds to consume, preventing pollution of earth, fire, and water by a human corpse. Birds consuming the corpse were thus agents of ritual purification. However, Zoroastrian texts also classify some birds as sacred to Ahura Mazda and others as associated with Ahriman (the evil principle). The classification of ravens varies across texts and periods, with some sources viewing them as impure carrion-eaters and others as functional participants in the purification process.' },
+  { q: 'Are ravens in the Avesta?', a: 'Corvids appear in Zoroastrian textual tradition, though the specific identification of "raven" versus "crow" in ancient Persian texts requires care — ancient languages did not always distinguish the species we separate today. The Avesta (the primary Zoroastrian scriptural collection) includes lists of pure and impure animals; the classification of corvids as associated with corpse-eating places them in an ambiguous category. In later Pahlavi literature (Sassanid-era Zoroastrian texts, 3rd–7th century CE), birds connected with the dead and darkness are more fully categorised as associated with the dark principle Ahriman.' },
+  { q: 'What do ravens symbolise in Persian folklore?', a: 'In Persian folk tradition influenced by Zoroastrian and Islamic heritage, the raven (Farsi: zaghak or kalāgh-e sia, "black crow") carries primarily negative associations: a bird of ill omen, associated with death and disaster. The separation motif is particularly associated with the ghurāb (raven/crow) in classical Persian poetry — the bird whose cry signals permanent separation and loss. The Persian expression "zabān-e zaghak" (the tongue of a raven/crow) means foul language or bad speech. These associations parallel the negative strand of raven symbolism found across the wider Islamic world, where the ghurāb also bears death-omen connotations.' },
+];
+---
+
+<BaseLayout title={title} description={description} path={path} ogType="article"
+  datePublished="2026-11-09" dateModified="2026-11-09"
+  breadcrumbs={breadcrumbs} faq={faq} pageType="Article">
+
+<article class="qa-page">
+
+  <nav class="qa-breadcrumb" aria-label="Breadcrumb">
+    <ol>
+      {breadcrumbs.map((b, i) => (
+        <li>
+          {i < breadcrumbs.length - 1
+            ? <><a href={b.url}>{b.name}</a><span aria-hidden="true"> › </span></>
+            : <span aria-current="page">{b.name}</span>}
+        </li>
+      ))}
+    </ol>
+  </nav>
+
+  <header class="qa-header">
+    <p class="qa-pillar">World Lore · MYW·32</p>
+    <h1>Ravens in Zoroastrian Tradition: Corpse-Bearer and Cosmic Symbol</h1>
+  </header>
+
+  <section class="qa-snippet" aria-label="Direct answer">
+    <p><strong class="claim-lore">[lore]</strong> In Zoroastrian tradition, corvids (including ravens) are practically essential to the funeral rite — consuming the dead on the Tower of Silence prevents corpse-pollution. Yet the same birds are textually categorised as associated with darkness and Ahriman. This paradox — the impure bird performing a purifying function — illustrates the complex position ravens occupy at the boundary of life and death across cultures where that boundary is ritually managed.</p>
+  </section>
+
+  <section class="qa-section">
+    <h2>The Tower of Silence and Avian Agents</h2>
+    <p><strong class="claim-lore">[lore]</strong> Zoroastrian funerary practice centres on the principle that a human corpse is a source of extreme ritual pollution (nasa) that must not contaminate the sacred elements: earth, fire, and water. The traditional Zoroastrian solution is sky burial — exposing the dead on a dakhma (Tower of Silence), a circular elevated platform, for birds to consume:<sup><a href="#src-1">1</a></sup></p>
+    <ul>
+      <li>Vultures are the primary consumers of the exposed dead at Towers of Silence. Ravens and crows also attend these sites, consuming smaller remains and acting as secondary consumers alongside vultures.</li>
+      <li>The speed with which birds consume a corpse was interpreted as an indicator of the deceased's spiritual state — a body consumed rapidly indicated a pure soul; a body left unconsumed was a negative sign requiring priestly ritual attention.</li>
+      <li>Birds that perform this function are participating in a purification process, not merely scavenging. The theological framing transforms the corvid's natural behaviour (feeding on carrion) into a sacred service.</li>
+    </ul>
+  </section>
+
+  <section class="qa-section">
+    <h2>Ravens in Avestan and Pahlavi Texts</h2>
+    <p><strong class="claim-lore">[lore]</strong> Zoroastrian texts present a complex taxonomy of birds as pure and impure, good (associated with Ahura Mazda) and evil (associated with Ahriman):<sup><a href="#src-1">1</a></sup><sup><a href="#src-2">2</a></sup></p>
+    <ul>
+      <li>The Vendidad (a section of the Avesta dealing with purity laws) classifies creatures that eat corpses in the category of khrafstra — creatures associated with Ahriman's creation that are ritually impure. Corvids eating carrion would fall into this category.</li>
+      <li>Pahlavi texts (Sassanid-era) expand on this, associating night-flying and corpse-eating birds with the dark forces. The raven's black colour reinforces this association in a cosmology where darkness = Ahriman.</li>
+      <li>The practical necessity of birds at the Tower of Silence creates a theological tension: the birds are impure but their function is ritually essential. Zoroastrian theology resolves this by treating the birds as instruments of purification despite their own impurity — the corpse's pollution is transferred to the birds, who can bear it.</li>
+    </ul>
+  </section>
+
+  <section class="qa-section">
+    <h2>Ravens in Classical Persian Poetry</h2>
+    <p><strong class="claim-lore">[lore]</strong> In the Persian literary tradition of the Islamic period (Rumi, Hafez, Ferdowsi), the black crow/raven figure (kalāgh/zaghak) carries consistent metaphorical weight:<sup><a href="#src-2">2</a></sup></p>
+    <ul>
+      <li><strong>Separation and loss:</strong> the crow's harsh cry is associated in Persian poetry with the moment of separation — from a beloved, from home, from life. The crow becomes the voice of permanent parting.</li>
+      <li><strong>Autumn and death:</strong> the crow appears in Persian poetry as an autumn bird, its black plumage evoking the dying of the year. This seasonal association parallels the raven's death-omen function in Western tradition.</li>
+      <li><strong>Contrast with the nightingale:</strong> Persian poetry frequently contrasts the ugly-voiced, dark-feathered crow with the beautiful nightingale (bulbul) — placing the corvid at the negative pole of a bird taxonomy that maps closely onto beauty/ugliness, joy/grief, presence/absence.</li>
+    </ul>
+  </section>
+
+  <section class="qa-section">
+    <h2>Related Pages</h2>
+    <ul>
+      <li><a href="/lore/world/ravens-in-islamic-and-arab-tradition/">Ravens in Islamic and Arab tradition</a></li>
+      <li><a href="/lore/world/ravens-in-slavic-folklore/">Ravens in Slavic folklore</a></li>
+      <li><a href="/lore/world/raven-symbolism/">Raven symbolism</a></li>
+      <li><a href="/questions/what-does-a-raven-symbolise/">What does a raven symbolise?</a></li>
+    </ul>
+  </section>
+
+  <section class="qa-faq qa-section" aria-labelledby="faq-h2">
+    <h2 id="faq-h2">Frequently Asked Questions</h2>
+    {faq.map(item => (
+      <details class="qa-faq-item">
+        <summary class="qa-faq-q">{item.q}</summary>
+        <p class="qa-faq-a">{item.a}</p>
+      </details>
+    ))}
+  </section>
+
+  <section class="qa-sources qa-section" aria-labelledby="src-h2">
+    <h2 id="src-h2">Sources</h2>
+    <ol class="qa-src-list">
+      <li id="src-1">Boyce, M. (1975). <em>A History of Zoroastrianism</em>, Vol. 1. Brill. — dakhma practice, bird classification in Avestan tradition, Vendidad purity laws, corpse-pollution theology.</li>
+      <li id="src-2">Meisami, J.S. & Starkey, P. (eds.) (1998). <em>Encyclopedia of Arabic Literature</em>. Routledge. — Persian crow/raven symbolism, classical poetry associations, ghurāb in Persian tradition.</li>
+    </ol>
+    <p class="qa-claim-note"><strong class="claim-lore">[lore]</strong> named cultural/historical source</p>
+  </section>
+
+</article>
+</BaseLayout>
+
+<style>
+  .qa-page { max-width: 820px; margin: 0 auto; padding: 2rem 1.25rem 4rem; color: var(--iron-ink, #e8e4d8); font-family: 'Inter', sans-serif; line-height: 1.72; }
+  .qa-breadcrumb ol { display: flex; flex-wrap: wrap; gap: .25rem; list-style: none; padding: 0; margin: 0 0 2rem; font-size: .8rem; color: var(--ink-soft, #8a8070); }
+  .qa-breadcrumb a { color: var(--gold-500, #d4ae5a); text-decoration: none; }
+  .qa-pillar { font-size: .72rem; letter-spacing: .12em; text-transform: uppercase; color: var(--gold-500, #d4ae5a); margin: 0 0 .4rem; }
+  .qa-page h1 { font-family: 'Cormorant Garamond', serif; font-size: clamp(2rem, 5vw, 3rem); font-weight: 700; color: #fff; margin: 0 0 2rem; line-height: 1.1; }
+  .qa-snippet { background: rgba(212,174,90,.08); border-left: 3px solid var(--gold-500, #d4ae5a); border-radius: 0 6px 6px 0; padding: 1rem 1.25rem; margin-bottom: 2.5rem; font-size: 1.03rem; }
+  .qa-section { margin-bottom: 2.5rem; }
+  .qa-section h2 { font-family: 'Cormorant Garamond', serif; font-size: 1.5rem; font-weight: 600; color: #fff; margin: 0 0 .9rem; border-bottom: 1px solid rgba(212,174,90,.2); padding-bottom: .4rem; }
+  .qa-section p { margin: 0 0 1rem; font-size: .97rem; }
+  .qa-section ul { padding-left: 1.25rem; margin: 0 0 1rem; }
+  .qa-section li { margin-bottom: .4rem; font-size: .95rem; }
+  .claim-lore { color: #c49a3c; font-style: normal; font-size: .78rem; }
+  a[href] { color: var(--gold-500, #d4ae5a); }
+  .qa-faq-item { border-bottom: 1px solid rgba(255,255,255,.07); }
+  .qa-faq-q { cursor: pointer; padding: .9rem 0; font-size: .97rem; font-weight: 500; color: #fff; list-style: none; }
+  .qa-faq-q::before { content: '+ '; color: var(--gold-500, #d4ae5a); font-weight: 700; }
+  details[open] .qa-faq-q::before { content: '− '; }
+  .qa-faq-a { margin: 0 0 1rem; line-height: 1.7; font-size: .93rem; color: var(--ink-soft, #c8c0b0); }
+  .qa-src-list { padding-left: 1.25rem; margin: 0 0 1rem; }
+  .qa-src-list li { margin-bottom: .6rem; font-size: .82rem; color: var(--ink-soft, #8a8070); line-height: 1.6; }
+  .qa-claim-note { font-size: .78rem; color: var(--ink-soft, #605848); border-top: 1px solid rgba(255,255,255,.06); padding-top: .75rem; }
+</style>

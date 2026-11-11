@@ -1,0 +1,143 @@
+---
+/**
+ * Q&A — What are Odin's ravens called?
+ * Primary keyword: what are odin's ravens called
+ * Secondary: odin ravens names, huginn and muninn names
+ */
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const title       = 'What Are Odin\'s Ravens Called?';
+const description = 'Odin\'s two ravens are called Huginn ("Thought") and Muninn ("Memory"). Their names appear in the Old Norse poem Grímnismál, stanza 20. This page answers directly with the textual evidence.';
+const path        = '/questions/what-are-odins-ravens-called/';
+
+const breadcrumbs = [
+  { name: 'Home',      url: '/' },
+  { name: 'Questions', url: '/questions/' },
+  { name: "What Are Odin's Ravens Called?", url: path },
+];
+
+const faq = [
+  { q: 'What do Huginn and Muninn mean in English?', a: 'Huginn means "Thought" in Old Norse (from hugr, "thought/mind"). Muninn means "Memory" (from muna, "to remember"), though some scholars also translate it as "desire" or "mind". The names appear in Grímnismál stanza 20, the only surviving verse that names both ravens.' },
+  { q: 'Which raven is Huginn and which is Muninn?', a: 'No primary source assigns specific roles to each raven individually — they appear as a pair that together gather news. Grímnismál stanza 20 mentions Odin\'s greater fear for Muninn\'s return, but does not specify which raven handles which type of information.' },
+  { q: 'Did Odin have more than two ravens?', a: 'No primary source gives Odin more than two ravens. Grímnismál stanza 20 names Huginn and Muninn as a pair, and Gylfaginning ch. 38 confirms two ravens. No other named ravens are attributed to Odin in the surviving Eddas.' },
+];
+---
+
+<BaseLayout title={title} description={description} path={path} ogType="article"
+  datePublished="2026-11-06" dateModified="2026-11-06"
+  breadcrumbs={breadcrumbs} faq={faq} pageType="Article">
+
+<article class="qa-page">
+
+  <nav class="qa-breadcrumb" aria-label="Breadcrumb">
+    <ol>
+      {breadcrumbs.map((b, i) => (
+        <li>
+          {i < breadcrumbs.length - 1
+            ? <><a href={b.url}>{b.name}</a><span aria-hidden="true"> › </span></>
+            : <span aria-current="page">{b.name}</span>}
+        </li>
+      ))}
+    </ol>
+  </nav>
+
+  <header class="qa-header">
+    <p class="qa-pillar">Question · Norse Lore</p>
+    <h1>What Are Odin's Ravens Called?</h1>
+  </header>
+
+  <section class="qa-snippet" aria-label="Direct answer">
+    <p><strong class="claim-lore">[lore]</strong> Odin's two ravens are called <strong>Huginn</strong> (Old Norse: <em>Huginn</em>, meaning "Thought") and <strong>Muninn</strong> (Old Norse: <em>Muninn</em>, meaning "Memory"). Their names are given in <em>Grímnismál</em>, stanza 20 — the only surviving Old Norse verse that names both ravens together. The poem is preserved in the <em>Codex Regius</em> (c. 1270 CE).</p>
+  </section>
+
+  <section class="qa-section">
+    <h2>The Source: Grímnismál Stanza 20</h2>
+    <p><strong class="claim-lore">[lore]</strong> The names Huginn and Muninn appear in the Old Norse Eddic poem <em>Grímnismál</em> ("The Sayings of Grímnir"), stanza 20:</p>
+    <blockquote class="qa-quote">
+      <p lang="non">"Huginn ok Muninn / fljúga hverjan dag / Jörmungrund yfir…"</p>
+      <footer>"Huginn and Muninn fly every day over the vast earth…" — <em>Grímnismál</em> st. 20, Codex Regius</footer>
+    </blockquote>
+    <p>Snorri Sturluson's <em>Prose Edda</em> (c. 1220 CE), <em>Gylfaginning</em> chapter 38, confirms the names and adds that the ravens sit on Odin's shoulders and return each morning with news of the world.</p>
+  </section>
+
+  <section class="qa-section">
+    <h2>What the Names Mean</h2>
+    <dl class="qa-dl">
+      <div>
+        <dt><strong>Huginn</strong></dt>
+        <dd>From Old Norse <em>hugr</em> = "thought", "mind", or "intention". Universally translated as "Thought".</dd>
+      </div>
+      <div>
+        <dt><strong>Muninn</strong></dt>
+        <dd>From Old Norse <em>muna</em> = "to remember" or <em>munr</em> = "mind/memory/desire". Most often translated as "Memory", but some scholars (including Anthony Faulkes) note "desire" or "longing" as alternate meanings.</dd>
+      </div>
+    </dl>
+  </section>
+
+  <section class="qa-section">
+    <h2>Odin's Fear for Muninn</h2>
+    <p><strong class="claim-lore">[lore]</strong> The stanza continues: "I fear for Huginn that he may not return, yet I fear more for Muninn." This line has fascinated scholars — why does Odin fear more for Memory than for Thought? The most cited interpretation is that memory, once lost, cannot be regained: thought can begin again, but memory is irreplaceable. See: <a href="/lore/norse/grimnismal-stanza-20/">Grímnismál Stanza 20 — full analysis</a>.</p>
+  </section>
+
+  <section class="qa-section">
+    <h2>Further Reading</h2>
+    <ul>
+      <li><a href="/lore/norse/huginn-and-muninn/">Huginn and Muninn — full analysis of the texts</a></li>
+      <li><a href="/lore/norse/odin-the-raven-god/">Odin: the Raven-God (Hrafnaguð)</a></li>
+      <li><a href="/lore/norse/grimnismal-stanza-20/">Grímnismál Stanza 20 — Old Norse text with gloss</a></li>
+      <li><a href="/species/common-raven/">Common Raven — the bird behind the myth</a></li>
+    </ul>
+  </section>
+
+  <section class="qa-faq qa-section" aria-labelledby="faq-h2">
+    <h2 id="faq-h2">Frequently Asked Questions</h2>
+    {faq.map(item => (
+      <details class="qa-faq-item">
+        <summary class="qa-faq-q">{item.q}</summary>
+        <p class="qa-faq-a">{item.a}</p>
+      </details>
+    ))}
+  </section>
+
+  <section class="qa-sources qa-section" aria-labelledby="src-h2">
+    <h2 id="src-h2">Sources</h2>
+    <ol class="qa-src-list">
+      <li>The <em>Codex Regius</em> (GkS 2365 4°), c. 1270 CE. — primary manuscript; <em>Grímnismál</em> stanza 20.</li>
+      <li>Larrington, C. (1996). <em>The Poetic Edda</em> (trans.). Oxford University Press. p. 56. — translation.</li>
+      <li>Faulkes, A. (ed., 1987). <em>Edda</em>. Everyman. p. 33. — Prose Edda; name etymology note.</li>
+      <li>Simek, R. (1993). <em>Dictionary of Northern Mythology</em>. D.S. Brewer. p. 160. — name meanings.</li>
+    </ol>
+    <p class="qa-claim-note"><strong class="claim-lore">[lore]</strong> named cultural/historical source</p>
+  </section>
+
+</article>
+</BaseLayout>
+
+<style>
+  .qa-page { max-width: 820px; margin: 0 auto; padding: 2rem 1.25rem 4rem; color: var(--iron-ink, #e8e4d8); font-family: 'Inter', sans-serif; line-height: 1.72; }
+  .qa-breadcrumb ol { display: flex; flex-wrap: wrap; gap: .25rem; list-style: none; padding: 0; margin: 0 0 2rem; font-size: .8rem; color: var(--ink-soft, #8a8070); }
+  .qa-breadcrumb a { color: var(--gold-500, #d4ae5a); text-decoration: none; }
+  .qa-pillar { font-size: .72rem; letter-spacing: .12em; text-transform: uppercase; color: var(--gold-500, #d4ae5a); margin: 0 0 .4rem; }
+  .qa-page h1 { font-family: 'Cormorant Garamond', serif; font-size: clamp(2rem, 5vw, 3rem); font-weight: 700; color: #fff; margin: 0 0 2rem; line-height: 1.1; }
+  .qa-snippet { background: rgba(212,174,90,.08); border-left: 3px solid var(--gold-500, #d4ae5a); border-radius: 0 6px 6px 0; padding: 1rem 1.25rem; margin-bottom: 2.5rem; font-size: 1.03rem; }
+  .qa-section { margin-bottom: 2.5rem; }
+  .qa-section h2 { font-family: 'Cormorant Garamond', serif; font-size: 1.5rem; font-weight: 600; color: #fff; margin: 0 0 .9rem; border-bottom: 1px solid rgba(212,174,90,.2); padding-bottom: .4rem; }
+  .qa-section p { margin: 0 0 1rem; font-size: .97rem; }
+  .qa-section ul { padding-left: 1.25rem; margin: 0 0 1rem; }
+  .qa-section li { margin-bottom: .4rem; font-size: .95rem; }
+  .qa-quote { border-left: 3px solid rgba(212,174,90,.35); margin: 1rem 0; padding: .9rem 1.25rem; color: var(--ink-soft, #c8c0b0); font-style: italic; }
+  .qa-quote footer { font-style: normal; font-size: .78rem; margin-top: .4rem; color: var(--ink-soft, #8a8070); }
+  .qa-dl > div { margin-bottom: 1rem; }
+  .qa-dl dt { font-weight: 600; color: #fff; margin-bottom: .2rem; }
+  .qa-dl dd { margin: 0; font-size: .95rem; color: var(--ink-soft, #c0b89a); }
+  .claim-lore { color: #c8a46a; font-style: normal; font-size: .78rem; }
+  a[href] { color: var(--gold-500, #d4ae5a); }
+  .qa-faq-item { border-bottom: 1px solid rgba(255,255,255,.07); }
+  .qa-faq-q { cursor: pointer; padding: .9rem 0; font-size: .97rem; font-weight: 500; color: #fff; list-style: none; }
+  .qa-faq-q::before { content: '+ '; color: var(--gold-500, #d4ae5a); font-weight: 700; }
+  details[open] .qa-faq-q::before { content: '− '; }
+  .qa-faq-a { margin: 0 0 1rem; line-height: 1.7; font-size: .93rem; color: var(--ink-soft, #c8c0b0); }
+  .qa-src-list { padding-left: 1.25rem; margin: 0 0 1rem; }
+  .qa-src-list li { margin-bottom: .6rem; font-size: .82rem; color: var(--ink-soft, #8a8070); line-height: 1.6; }
+  .qa-claim-note { font-size: .78rem; color: var(--ink-soft, #605848); border-top: 1px solid rgba(255,255,255,.06); padding-top: .75rem; }
+</style>

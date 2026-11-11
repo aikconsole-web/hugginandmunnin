@@ -1,0 +1,162 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const title       = 'Do Ravens Steal Shiny Objects? Myth vs Evidence';
+const description = 'The idea that ravens (and magpies) are attracted to and steal shiny objects is widely believed but poorly supported by experimental evidence. What research actually shows.';
+const path        = '/myths/ravens-steal-shiny-objects/';
+
+const breadcrumbs = [
+  { name: 'Home',   url: '/' },
+  { name: 'Myths',  url: '/myths/' },
+  { name: 'Ravens Steal Shiny Objects', url: path },
+];
+
+const faq = [
+  { q: 'Do ravens steal shiny objects?', a: 'The claim that ravens (and corvids in general) are strongly attracted to and steal shiny objects is a popular belief but is not supported by controlled experimental evidence. A 2014 study by Shephard et al. (University of Exeter) tested magpies — the bird most associated with this belief — and found they showed no preference for shiny objects, and were actually more cautious around novel shiny items. Ravens do manipulate and cache objects, but attraction to shininess specifically has not been demonstrated experimentally.' },
+];
+---
+
+<BaseLayout title={title} description={description} path={path} ogType="article"
+  datePublished="2026-11-07" dateModified="2026-11-07"
+  breadcrumbs={breadcrumbs} faq={faq} pageType="Article">
+
+<article class="id-page">
+  <nav class="id-breadcrumb" aria-label="Breadcrumb">
+    <ol>
+      {breadcrumbs.map((b, i) => (
+        <li>
+          {i < breadcrumbs.length - 1
+            ? <><a href={b.url}>{b.name}</a><span aria-hidden="true"> › </span></>
+            : <span aria-current="page">{b.name}</span>}
+        </li>
+      ))}
+    </ol>
+  </nav>
+  <header class="id-header">
+    <p class="id-pillar">Myths · MYTH·07</p>
+    <h1>Do Ravens Steal Shiny Objects?</h1>
+    <div class="id-verdict id-verdict--false">
+      <span class="id-verdict-label">Verdict: Mostly False</span>
+      <p>Not supported by experimental evidence. Ravens manipulate objects, but attraction to shininess specifically has not been demonstrated.</p>
+    </div>
+  </header>
+
+  <section class="id-snippet" aria-label="Quick answer">
+    <p><strong class="claim-science">[science]</strong> The "corvids steal shiny objects" belief is widespread but experimentally unsupported. Shephard et al. (2014) found that magpies — the bird most associated with this belief — showed <strong>no attraction to shiny objects</strong> and were actually more cautious around novel shiny items. Ravens do collect and cache objects, but no controlled study has demonstrated a specific attraction to shininess. The belief likely persists because corvid object manipulation is real and highly visible.</p>
+  </section>
+
+  <section class="id-section">
+    <h2>What the Research Shows</h2>
+    <p><strong class="claim-science">[science]</strong> The key experimental test of the "magpie/corvid attracted to shiny objects" claim:</p>
+    <ul>
+      <li><strong>Shephard et al. (2014)</strong>, University of Exeter: Wild magpies were offered food near both shiny objects (foil squares, rings) and dull versions. Result: <strong>magpies showed no preference for shiny objects</strong>, and were actually more cautious (neophobic) around novel shiny items than around equivalent dull items.</li>
+      <li>The study found no evidence that magpies are attracted to shiny objects — the opposite of the folk belief.</li>
+    </ul>
+    <p>This study specifically tested magpies (<em>Pica pica</em>), not ravens. No equivalent controlled study has been published specifically on Common Ravens and shininess as of 2026.<sup><a href="#src-1">1</a></sup></p>
+  </section>
+
+  <section class="id-section">
+    <h2>What Ravens Actually Do with Objects</h2>
+    <p><strong class="claim-science">[science]</strong> Ravens do interact extensively with objects — but for different reasons than attraction to shine:</p>
+    <ul>
+      <li><strong>Play:</strong> Ravens manipulate, carry, and drop objects in play — particularly juveniles. This is generalised object exploration, not shiny-object preference.</li>
+      <li><strong>Caching:</strong> Ravens cache food and may cache non-food objects in some contexts. Bugnyar & Heinrich (2005) documented sophisticated food caching; object caching for non-food items is less studied.</li>
+      <li><strong>Tool investigation:</strong> Ravens investigate novel objects as potential resources — a neophilic tendency that co-exists with caution around genuinely novel items.</li>
+      <li><strong>Pair bonding gifts:</strong> Pika & Bugnyar (2011) documented ravens presenting objects to partners as gestures — objects chosen for social significance, not material properties.</li>
+    </ul>
+    <p>None of these documented behaviours are specific to shininess.<sup><a href="#src-2">2</a>,<a href="#src-3">3</a></sup></p>
+  </section>
+
+  <section class="id-section">
+    <h2>Where the Belief Comes From</h2>
+    <p><strong class="claim-lore">[lore]</strong> The "thieving magpie" and "corvids steal shiny objects" tropes have deep cultural roots:</p>
+    <ul>
+      <li>Gioacchino Rossini's opera <em>La Gazza Ladra</em> (The Thieving Magpie, 1817) popularised a plot in which a servant girl is wrongly accused of theft while a magpie is the real culprit</li>
+      <li>Anecdotal accounts of corvids picking up objects — including occasionally metallic items — are real and have been told and retold</li>
+      <li>The general fact of corvid neophilia (interest in novel objects) and object manipulation is correctly observed, even if the "attracted to shine specifically" detail is not accurate</li>
+      <li>Confirmation bias: people remember the times a corvid picked up something shiny; they don't record the many times corvids ignore shiny objects</li>
+    </ul>
+    <p>The belief may also conflate corvid neophilia with specific shiny-object attraction — the former is documented, the latter is not.<sup><a href="#src-1">1</a>,<a href="#src-4">4</a></sup></p>
+  </section>
+
+  <section class="id-section">
+    <h2>Captive Ravens and Anecdote</h2>
+    <p><strong class="claim-science">[science]</strong> Captive ravens are known to manipulate shiny objects in human care settings — keys, coins, foil — but captive environments are highly artificial. Objects become interesting through novelty and human attention, not necessarily because of intrinsic shininess. Anecdotes from keepers of captive ravens are plentiful but do not constitute controlled experimental evidence. Captive behaviour also differs substantially from wild behaviour.<sup><a href="#src-2">2</a></sup></p>
+  </section>
+
+  <section class="id-section">
+    <h2>Summary: What Is and Is Not True</h2>
+    <ul>
+      <li><strong>True:</strong> Ravens manipulate and explore objects extensively</li>
+      <li><strong>True:</strong> Ravens (and corvids generally) are neophilic — interested in novel items</li>
+      <li><strong>True:</strong> Ravens cache objects (food primarily; occasionally others)</li>
+      <li><strong>Not supported:</strong> Ravens (or corvids generally) have a specific attraction to shininess</li>
+      <li><strong>Not supported:</strong> Ravens preferentially steal shiny items over equivalent dull items</li>
+    </ul>
+  </section>
+
+  <section class="id-faq id-section" aria-labelledby="faq-h2">
+    <h2 id="faq-h2">Frequently Asked Questions</h2>
+    {faq.map(item => (
+      <details class="id-faq-item">
+        <summary class="id-faq-q">{item.q}</summary>
+        <p class="id-faq-a">{item.a}</p>
+      </details>
+    ))}
+  </section>
+
+  <section class="id-sources id-section" aria-labelledby="src-h2">
+    <h2 id="src-h2">Sources</h2>
+    <ol class="id-src-list">
+      <li id="src-1">Shephard, T. V., Lea, S. E. G. &amp; Hempel de Ibarra, N. (2014). "The thieving magpie"? No evidence for attraction to shiny objects. <em>Animal Cognition</em>, 18, 393–397. DOI: 10.1007/s10071-014-0794-4 — controlled test of shiny-object attraction in wild magpies; negative result.</li>
+      <li id="src-2">Heinrich, B. (2000). <em>Mind of the Raven</em>. Harper Perennial. — object manipulation and play in ravens.</li>
+      <li id="src-3">Bugnyar, T. &amp; Heinrich, B. (2005). Ravens, <em>Corvus corax</em>, differentiate between knowledgeable and ignorant competitors. <em>Proceedings of the Royal Society B</em>, 272, 1641–1646.</li>
+      <li id="src-4">Sax, B. (2007). <em>Crow</em>. Reaktion Books. — cultural history of corvid beliefs.</li>
+    </ol>
+    <p class="id-claim-note"><strong class="claim-science">[science]</strong> peer-reviewed studies</p>
+  </section>
+
+  <nav class="id-nav-bottom">
+    <a href="/myths/" class="id-back">← Myths Overview</a>
+    <a href="/behaviour/raven-play/" class="id-next">Raven Play Behaviour →</a>
+  </nav>
+</article>
+</BaseLayout>
+
+<style>
+  .id-page { max-width: 820px; margin: 0 auto; padding: 2rem 1.25rem 4rem; color: var(--iron-ink, #e8e4d8); font-family: 'Inter', sans-serif; line-height: 1.72; }
+  .id-breadcrumb ol { display: flex; flex-wrap: wrap; gap: .25rem; list-style: none; padding: 0; margin: 0 0 2rem; font-size: .8rem; color: var(--ink-soft, #8a8070); }
+  .id-breadcrumb a { color: var(--gold-500, #d4ae5a); text-decoration: none; }
+  .id-pillar { font-size: .72rem; letter-spacing: .12em; text-transform: uppercase; color: var(--gold-500, #d4ae5a); margin: 0 0 .4rem; }
+  .id-page h1 { font-family: 'Cormorant Garamond', serif; font-size: clamp(2rem, 5vw, 3.25rem); font-weight: 700; color: #fff; margin: 0 0 .2rem; line-height: 1.1; }
+  .id-subtitle { font-size: 1rem; color: var(--ink-soft, #c0b89a); margin: 0 0 2rem; }
+  .id-verdict { border-radius: 6px; padding: .9rem 1.25rem; margin: 1rem 0 1.5rem; }
+  .id-verdict--false { background: rgba(220,80,80,.1); border-left: 3px solid #dc5050; }
+  .id-verdict--true { background: rgba(80,180,80,.1); border-left: 3px solid #50b450; }
+  .id-verdict--partly { background: rgba(212,174,90,.1); border-left: 3px solid var(--gold-500,#d4ae5a); }
+  .id-verdict-label { font-size: .78rem; letter-spacing: .1em; text-transform: uppercase; font-weight: 700; display: block; margin-bottom: .35rem; }
+  .id-verdict--false .id-verdict-label { color: #dc5050; }
+  .id-verdict--true .id-verdict-label { color: #50b450; }
+  .id-verdict--partly .id-verdict-label { color: var(--gold-500,#d4ae5a); }
+  .id-verdict p { margin: 0; font-size: .93rem; }
+  .id-snippet { background: rgba(212,174,90,.08); border-left: 3px solid var(--gold-500, #d4ae5a); border-radius: 0 6px 6px 0; padding: 1rem 1.25rem; margin-bottom: 2.5rem; font-size: 1.03rem; }
+  .id-section { margin-bottom: 2.75rem; }
+  .id-section h2 { font-family: 'Cormorant Garamond', serif; font-size: 1.6rem; font-weight: 600; color: #fff; margin: 0 0 1rem; border-bottom: 1px solid rgba(212,174,90,.2); padding-bottom: .4rem; }
+  .id-section p { margin: 0 0 1rem; font-size: .97rem; }
+  .id-section ul { padding-left: 1.25rem; margin: 0 0 1rem; }
+  .id-section li { margin-bottom: .4rem; font-size: .95rem; }
+  .claim-science { color: #7ab9e0; font-style: normal; font-size: .78rem; }
+  .claim-lore { color: #c8a84b; font-style: normal; font-size: .78rem; }
+  a[href] { color: var(--gold-500, #d4ae5a); }
+  .id-faq-item { border-bottom: 1px solid rgba(255,255,255,.07); }
+  .id-faq-q { cursor: pointer; padding: .9rem 0; font-size: .97rem; font-weight: 500; color: #fff; list-style: none; }
+  .id-faq-q::before { content: '+ '; color: var(--gold-500, #d4ae5a); font-weight: 700; }
+  details[open] .id-faq-q::before { content: '− '; }
+  .id-faq-a { margin: 0 0 1rem; line-height: 1.7; font-size: .93rem; color: var(--ink-soft, #c8c0b0); }
+  .id-src-list { padding-left: 1.25rem; margin: 0 0 1rem; }
+  .id-src-list li { margin-bottom: .6rem; font-size: .82rem; color: var(--ink-soft, #8a8070); line-height: 1.6; }
+  .id-claim-note { font-size: .78rem; color: var(--ink-soft, #605848); border-top: 1px solid rgba(255,255,255,.06); padding-top: .75rem; }
+  .id-nav-bottom { display: flex; justify-content: space-between; padding-top: 2rem; border-top: 1px solid rgba(255,255,255,.07); }
+  .id-nav-bottom a { font-size: .9rem; text-decoration: none; }
+  .id-nav-bottom a:hover { text-decoration: underline; }
+</style>

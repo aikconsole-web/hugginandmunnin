@@ -1,0 +1,144 @@
+---
+/**
+ * Q&A — Do ravens have predators?
+ * Primary keyword: do ravens have predators
+ * Secondary: raven predators, what preys on ravens, raven natural enemies
+ */
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const title       = 'Do Ravens Have Predators? Natural Enemies of the Raven';
+const description = 'Ravens do have predators — raptors, large owls, martens, and sometimes wolves and foxes take ravens. This page covers what preys on ravens, how ravens defend themselves, and whether ravens face significant predation pressure.';
+const path        = '/questions/do-ravens-have-predators/';
+
+const breadcrumbs = [
+  { name: 'Home',      url: '/' },
+  { name: 'Questions', url: '/questions/' },
+  { name: 'Do Ravens Have Predators?', url: path },
+];
+
+const faq = [
+  { q: 'What are the main predators of ravens?', a: 'Ravens are preyed upon by large raptors — particularly Golden Eagles (Aquila chrysaetos), Red-tailed Hawks (Buteo jamaicensis), and other large hawks. Great Horned Owls (Bubo virginianus) are significant nocturnal predators of roosting ravens. Ground predators including Red Foxes, martens, and weasels can take eggs, nestlings, and occasionally adults at the nest. Wolves occasionally kill ravens, though the raven-wolf relationship is complex and largely mutualistic. Ravens are rarely preyed upon relative to their size, owing to vigilance, group defence, and mobbing behaviour.' },
+  { q: 'How do ravens protect themselves from predators?', a: 'Ravens use several antipredator strategies: group mobbing of raptors and owls (harassing them until they leave); alarm calling to alert conspecifics; nest placement on inaccessible cliff ledges or in tall trees; vigilance — ravens almost always have one or more individuals watching for threats in a group; and their own large size and powerful bill, which makes them capable of physical defence against smaller predators. In communal roosts, the many-eyes effect improves early detection.' },
+  { q: 'Are ravens afraid of anything?', a: 'Ravens show wariness toward: large raptors (especially eagles and large hawks), large owls, humans with threatening behaviour or guns, and novel objects in their environment (neophobia). Wild ravens are also wary of traps and unfamiliar objects near food sources — a wariness exploited in research but also a persistent challenge for pest-control operations targeting ravens. Ravens\' caution is not simple fear but involves risk assessment — they will approach danger when reward is sufficient (e.g. food near a carcass where a wolf is feeding).' },
+];
+---
+
+<BaseLayout title={title} description={description} path={path} ogType="article"
+  datePublished="2026-11-07" dateModified="2026-11-07"
+  breadcrumbs={breadcrumbs} faq={faq} pageType="Article">
+
+<article class="qa-page">
+
+  <nav class="qa-breadcrumb" aria-label="Breadcrumb">
+    <ol>
+      {breadcrumbs.map((b, i) => (
+        <li>
+          {i < breadcrumbs.length - 1
+            ? <><a href={b.url}>{b.name}</a><span aria-hidden="true"> › </span></>
+            : <span aria-current="page">{b.name}</span>}
+        </li>
+      ))}
+    </ol>
+  </nav>
+
+  <header class="qa-header">
+    <p class="qa-pillar">Question · Biology</p>
+    <h1>Do Ravens Have Predators? Natural Enemies of the Raven</h1>
+  </header>
+
+  <section class="qa-snippet" aria-label="Direct answer">
+    <p><strong class="claim-science">[science]</strong> Yes — ravens have natural predators, primarily large raptors (Golden Eagles, Red-tailed Hawks), Great Horned Owls, and mammalian nest predators (foxes, martens). Adults are rarely taken relative to their size; their intelligence, group vigilance, and mobbing behaviour make them difficult prey. Nest predation is the more significant threat.</p>
+  </section>
+
+  <section class="qa-section">
+    <h2>Avian Predators</h2>
+    <p><strong class="claim-science">[science]</strong> The most significant avian predators of ravens are:<sup><a href="#src-1">1</a></sup></p>
+    <ul>
+      <li><strong>Golden Eagle (<em>Aquila chrysaetos</em>):</strong> large enough to take adult ravens in flight or at the nest. The raven-eagle relationship is antagonistic — ravens mob eagles persistently, and recorded kills of adult ravens by Golden Eagles occur but are uncommon. In areas where both are abundant (Alaska, western USA), eagles represent the dominant aerial threat.</li>
+      <li><strong>Red-tailed Hawk (<em>Buteo jamaicensis</em>) and other large Buteos:</strong> capable of taking young or small adult ravens; also harassed by ravens and mobbed persistently, suggesting ravens assess them as genuine threats.</li>
+      <li><strong>Peregrine Falcon (<em>Falco peregrinus</em>):</strong> fast enough to pursue ravens; recorded attacking ravens in territory defence and opportunistic predation. Adult ravens can evade most Peregrine stoops by manoeuvring, but juveniles are more vulnerable.</li>
+    </ul>
+  </section>
+
+  <section class="qa-section">
+    <h2>Owl Predation</h2>
+    <p><strong class="claim-science">[science]</strong> The Great Horned Owl (<em>Bubo virginianus</em>) in North America is a significant predator of roosting corvids at night. Ravens communally roost, and owls can take individuals from roosts in darkness when the ravens' visual vigilance is compromised. Studies of raven roost sites in North America have found evidence of owl predation, and raven mobbing responses to Great Horned Owls are strong — suggesting evolutionary significance of this predator.<sup><a href="#src-1">1</a></sup></p>
+    <p>In Eurasia, the Eagle Owl (<em>Bubo bubo</em>) — the largest owl in the world — is similarly capable of taking adult ravens. Great Grey Owls and other large Strix owls are less significant but can take young ravens.</p>
+  </section>
+
+  <section class="qa-section">
+    <h2>Mammalian Predators</h2>
+    <p><strong class="claim-science">[science]</strong> Ground and arboreal mammals pose a greater threat to nests than to adult ravens:<sup><a href="#src-1">1</a></sup></p>
+    <ul>
+      <li><strong>Red Fox (<em>Vulpes vulpes</em>):</strong> can access low nests in trees; will take raven eggs and nestlings if the nest is reachable. Raven nest placement on high cliff ledges or in the crown of tall trees is in part an anti-predator strategy against foxes and similar mammals.</li>
+      <li><strong>Pine Marten (<em>Martes martes</em>) and American Marten (<em>Martes americana</em>):</strong> agile tree-climbers capable of reaching tree nests inaccessible to foxes. Marten predation on corvid nests is documented in boreal forest environments.</li>
+      <li><strong>Wolves (<em>Canis lupus</em>):</strong> occasionally kill ravens opportunistically, but the relationship is primarily mutualistic — ravens follow wolves to access carrion. Wolf kills of ravens are recorded but rare, usually involving a raven that lands too close to a feeding wolf.</li>
+      <li><strong>Brown/Grizzly Bear (<em>Ursus arctos</em>):</strong> will eat raven eggs and nestlings from cliff nests if accessible; not a significant source of raven mortality owing to nest inaccessibility.</li>
+    </ul>
+  </section>
+
+  <section class="qa-section">
+    <h2>Raven Anti-Predator Behaviour</h2>
+    <p><strong class="claim-science">[science]</strong> Ravens have evolved several effective anti-predator strategies:<sup><a href="#src-1">1</a></sup></p>
+    <ul>
+      <li><strong>Mobbing:</strong> groups of ravens harass raptors and owls in coordinated attacks, calling loudly and diving at the predator until it retreats. Mobbing recruits additional ravens and is effective at displacing most raptors.</li>
+      <li><strong>Nest site selection:</strong> cliff ledges and tall tree crowns reduce access by most mammalian predators. The Common Raven's preference for cliff nesting is in part an anti-predator adaptation.</li>
+      <li><strong>Communal roosting:</strong> large winter roosts (hundreds to thousands of ravens) provide many-eyes vigilance. Any individual's alarm call triggers immediate flight by all birds.</li>
+      <li><strong>Alarm calls:</strong> ravens have specific vocalisations for aerial predators (eliciting crouching/hiding) versus ground predators (eliciting elevation and alarm scanning). Call specificity suggests evolved referential signalling for predators.</li>
+    </ul>
+  </section>
+
+  <section class="qa-section">
+    <h2>Related Pages</h2>
+    <ul>
+      <li><a href="/questions/what-eats-ravens/">What eats ravens?</a></li>
+      <li><a href="/behaviour/raven-and-wolves/">Ravens and wolves</a></li>
+      <li><a href="/questions/how-long-do-ravens-live/">How long do ravens live?</a></li>
+      <li><a href="/behaviour/raven-social-life-and-roosts/">Raven social life and roosts</a></li>
+    </ul>
+  </section>
+
+  <section class="qa-faq qa-section" aria-labelledby="faq-h2">
+    <h2 id="faq-h2">Frequently Asked Questions</h2>
+    {faq.map(item => (
+      <details class="qa-faq-item">
+        <summary class="qa-faq-q">{item.q}</summary>
+        <p class="qa-faq-a">{item.a}</p>
+      </details>
+    ))}
+  </section>
+
+  <section class="qa-sources qa-section" aria-labelledby="src-h2">
+    <h2 id="src-h2">Sources</h2>
+    <ol class="qa-src-list">
+      <li id="src-1">Boarman, W.I. & Heinrich, B. (1999). Common Raven (<em>Corvus corax</em>). In Poole, A. (ed.), <em>The Birds of North America</em>, No. 476. Cornell Lab of Ornithology. — predators, anti-predator behaviour, mobbing, nest site selection.</li>
+    </ol>
+    <p class="qa-claim-note"><strong class="claim-science">[science]</strong> peer-reviewed or field-guide data</p>
+  </section>
+
+</article>
+</BaseLayout>
+
+<style>
+  .qa-page { max-width: 820px; margin: 0 auto; padding: 2rem 1.25rem 4rem; color: var(--iron-ink, #e8e4d8); font-family: 'Inter', sans-serif; line-height: 1.72; }
+  .qa-breadcrumb ol { display: flex; flex-wrap: wrap; gap: .25rem; list-style: none; padding: 0; margin: 0 0 2rem; font-size: .8rem; color: var(--ink-soft, #8a8070); }
+  .qa-breadcrumb a { color: var(--gold-500, #d4ae5a); text-decoration: none; }
+  .qa-pillar { font-size: .72rem; letter-spacing: .12em; text-transform: uppercase; color: var(--gold-500, #d4ae5a); margin: 0 0 .4rem; }
+  .qa-page h1 { font-family: 'Cormorant Garamond', serif; font-size: clamp(2rem, 5vw, 3rem); font-weight: 700; color: #fff; margin: 0 0 2rem; line-height: 1.1; }
+  .qa-snippet { background: rgba(212,174,90,.08); border-left: 3px solid var(--gold-500, #d4ae5a); border-radius: 0 6px 6px 0; padding: 1rem 1.25rem; margin-bottom: 2.5rem; font-size: 1.03rem; }
+  .qa-section { margin-bottom: 2.5rem; }
+  .qa-section h2 { font-family: 'Cormorant Garamond', serif; font-size: 1.5rem; font-weight: 600; color: #fff; margin: 0 0 .9rem; border-bottom: 1px solid rgba(212,174,90,.2); padding-bottom: .4rem; }
+  .qa-section p { margin: 0 0 1rem; font-size: .97rem; }
+  .qa-section ul { padding-left: 1.25rem; margin: 0 0 1rem; }
+  .qa-section li { margin-bottom: .4rem; font-size: .95rem; }
+  .claim-science { color: #7ab9e0; font-style: normal; font-size: .78rem; }
+  a[href] { color: var(--gold-500, #d4ae5a); }
+  .qa-faq-item { border-bottom: 1px solid rgba(255,255,255,.07); }
+  .qa-faq-q { cursor: pointer; padding: .9rem 0; font-size: .97rem; font-weight: 500; color: #fff; list-style: none; }
+  .qa-faq-q::before { content: '+ '; color: var(--gold-500, #d4ae5a); font-weight: 700; }
+  details[open] .qa-faq-q::before { content: '− '; }
+  .qa-faq-a { margin: 0 0 1rem; line-height: 1.7; font-size: .93rem; color: var(--ink-soft, #c8c0b0); }
+  .qa-src-list { padding-left: 1.25rem; margin: 0 0 1rem; }
+  .qa-src-list li { margin-bottom: .6rem; font-size: .82rem; color: var(--ink-soft, #8a8070); line-height: 1.6; }
+  .qa-claim-note { font-size: .78rem; color: var(--ink-soft, #605848); border-top: 1px solid rgba(255,255,255,.06); padding-top: .75rem; }
+</style>

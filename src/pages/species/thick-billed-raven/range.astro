@@ -1,0 +1,130 @@
+---
+/**
+ * Species sub-page — Thick-billed Raven range
+ * SPC·06r
+ * Primary keyword: thick-billed raven range
+ * Secondary: where does the thick-billed raven live, corvus crassirostris range, ethiopian raven
+ */
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+
+const title       = 'Thick-billed Raven Range: Where This Species Lives';
+const description = 'The Thick-billed Raven is endemic to the Ethiopian Highlands and is the largest corvid in Africa. This page covers its distribution, habitat preferences, and what makes it a near-endemic to Ethiopia and Eritrea.';
+const path        = '/species/thick-billed-raven/range/';
+
+const breadcrumbs = [
+  { name: 'Home',              url: '/' },
+  { name: 'Species',           url: '/species/' },
+  { name: 'Thick-billed Raven', url: '/species/thick-billed-raven/' },
+  { name: 'Range',             url: path },
+];
+
+const faq = [
+  { q: 'Where does the Thick-billed Raven live?', a: 'The Thick-billed Raven (Corvus crassirostris) is essentially endemic to Ethiopia, with range extensions into adjacent Eritrea, Somalia (northern highlands), and Djibouti. It is confined almost entirely to the Ethiopian Highlands — the high plateaus, gorges, and escarpments above approximately 1,500 m elevation. It is the dominant large corvid in its range and is essentially not found outside Ethiopia and Eritrea.' },
+  { q: 'Is the Thick-billed Raven the largest raven in the world?', a: 'The Thick-billed Raven is the largest corvid in Africa and one of the largest corvids in the world by body mass. Adult birds weigh 1,000–1,500 g, with the largest individuals comparable to the largest Common Ravens. By wing length and total bulk, Thick-billed Ravens are substantial birds — the extreme bill alone adds to the impression of size. The Common Raven (Corvus corax) is similar in mass, and the two species are approximately equal in size overall.' },
+  { q: 'Can you see Thick-billed Ravens as a tourist in Ethiopia?', a: 'Yes. The Thick-billed Raven is a conspicuous bird in Addis Ababa and throughout the Ethiopian Highlands — it is not shy and is regularly encountered in towns, around markets, on building rooftops, and on cliffs in the highlands. The Simien Mountains National Park (a UNESCO World Heritage Site) offers particularly good views, with ravens visible soaring over the Simien escarpment. They are also common at highland towns like Lalibela, Gondar, and Bahir Dar.' },
+];
+---
+
+<BaseLayout title={title} description={description} path={path} ogType="article"
+  datePublished="2026-11-07" dateModified="2026-11-07"
+  breadcrumbs={breadcrumbs} faq={faq} pageType="Article">
+
+<article class="qa-page">
+
+  <nav class="qa-breadcrumb" aria-label="Breadcrumb">
+    <ol>
+      {breadcrumbs.map((b, i) => (
+        <li>
+          {i < breadcrumbs.length - 1
+            ? <><a href={b.url}>{b.name}</a><span aria-hidden="true"> › </span></>
+            : <span aria-current="page">{b.name}</span>}
+        </li>
+      ))}
+    </ol>
+  </nav>
+
+  <header class="qa-header">
+    <p class="qa-pillar">Species Sub-page · SPC·06r</p>
+    <h1>Thick-billed Raven Range: Where This Species Lives</h1>
+  </header>
+
+  <section class="qa-snippet" aria-label="Direct answer">
+    <p><strong class="claim-science">[science]</strong> The Thick-billed Raven (<em>Corvus crassirostris</em>) is essentially endemic to the Ethiopian Highlands, with range extensions into Eritrea, northern Somalia, and Djibouti. It is confined to highland and montane habitats above approximately 1,500 m and is the dominant large corvid throughout Ethiopia. It is one of the most restricted-range ravens — essentially a Highland Ethiopian bird.</p>
+  </section>
+
+  <section class="qa-section">
+    <h2>Distribution</h2>
+    <p><strong class="claim-science">[science]</strong> The Thick-billed Raven's range is tightly centred on the Ethiopian Highlands:<sup><a href="#src-1">1</a></sup></p>
+    <ul>
+      <li><strong>Ethiopia:</strong> present throughout the highlands — both the northern highlands (Tigray, Amhara, Afar highlands) and the southern highlands (Oromia, SNNPR). Common in highland cities (Addis Ababa, Gondar, Bahir Dar, Lalibela) and rural highland areas. Abundant in the Simien and Bale Mountain ranges.</li>
+      <li><strong>Eritrea:</strong> present in the highland plateau regions of central Eritrea (around Asmara and the escarpment) — the northern extension of the Ethiopian Highlands.</li>
+      <li><strong>Somalia (northern) and Djibouti:</strong> the northern Somali highlands (around Hargeisa, in Somaliland) have some records, as does Djibouti in upland areas — these represent the southeastern fringe of the range.</li>
+      <li><strong>Elevation:</strong> primarily 1,500–4,000 m. Most abundant at 2,000–3,500 m — the highland plateau zone.</li>
+    </ul>
+    <p>The species is essentially absent from lowland Ethiopia (Afar Depression, Ogaden, Omo lowlands) and from all countries outside the Ethiopian/Eritrean highlands.</p>
+  </section>
+
+  <section class="qa-section">
+    <h2>Habitat</h2>
+    <p><strong class="claim-science">[science]</strong> Within its highland range, the Thick-billed Raven uses a variety of open and semi-open habitats:<sup><a href="#src-1">1</a></sup></p>
+    <ul>
+      <li><strong>Cliffs and gorges:</strong> the primary nest habitat — steep basaltic cliff faces in highland gorges (the Blue Nile/Abbay gorge, the Rift Valley escarpment, the Simien escarpment) provide nesting sites.</li>
+      <li><strong>Open highland:</strong> moorland, highland grassland, Afroalpine heathland at higher elevations; forages extensively in open terrain.</li>
+      <li><strong>Agricultural and urban:</strong> very tolerant of human presence; common on highland farms, roadsides, rubbish dumps, and in towns. This adaptability has made it a familiar bird throughout settled highland Ethiopia.</li>
+    </ul>
+  </section>
+
+  <section class="qa-section">
+    <h2>Related Pages</h2>
+    <ul>
+      <li><a href="/species/thick-billed-raven/">Thick-billed Raven — species hub</a></li>
+      <li><a href="/species/thick-billed-raven/identification/">Thick-billed Raven identification</a></li>
+      <li><a href="/species/thick-billed-raven/diet/">Thick-billed Raven diet</a></li>
+      <li><a href="/species/thick-billed-raven/nesting/">Thick-billed Raven nesting</a></li>
+    </ul>
+  </section>
+
+  <section class="qa-faq qa-section" aria-labelledby="faq-h2">
+    <h2 id="faq-h2">Frequently Asked Questions</h2>
+    {faq.map(item => (
+      <details class="qa-faq-item">
+        <summary class="qa-faq-q">{item.q}</summary>
+        <p class="qa-faq-a">{item.a}</p>
+      </details>
+    ))}
+  </section>
+
+  <section class="qa-sources qa-section" aria-labelledby="src-h2">
+    <h2 id="src-h2">Sources</h2>
+    <ol class="qa-src-list">
+      <li id="src-1">del Hoyo, J. et al. (eds., 2009). <em>Handbook of the Birds of the World</em>, vol. 14. Lynx Edicions. — Thick-billed Raven species account; distribution, habitat, elevation range.</li>
+    </ol>
+    <p class="qa-claim-note"><strong class="claim-science">[science]</strong> peer-reviewed or field-guide data</p>
+  </section>
+
+</article>
+</BaseLayout>
+
+<style>
+  .qa-page { max-width: 820px; margin: 0 auto; padding: 2rem 1.25rem 4rem; color: var(--iron-ink, #e8e4d8); font-family: 'Inter', sans-serif; line-height: 1.72; }
+  .qa-breadcrumb ol { display: flex; flex-wrap: wrap; gap: .25rem; list-style: none; padding: 0; margin: 0 0 2rem; font-size: .8rem; color: var(--ink-soft, #8a8070); }
+  .qa-breadcrumb a { color: var(--gold-500, #d4ae5a); text-decoration: none; }
+  .qa-pillar { font-size: .72rem; letter-spacing: .12em; text-transform: uppercase; color: var(--gold-500, #d4ae5a); margin: 0 0 .4rem; }
+  .qa-page h1 { font-family: 'Cormorant Garamond', serif; font-size: clamp(2rem, 5vw, 3rem); font-weight: 700; color: #fff; margin: 0 0 2rem; line-height: 1.1; }
+  .qa-snippet { background: rgba(212,174,90,.08); border-left: 3px solid var(--gold-500, #d4ae5a); border-radius: 0 6px 6px 0; padding: 1rem 1.25rem; margin-bottom: 2.5rem; font-size: 1.03rem; }
+  .qa-section { margin-bottom: 2.5rem; }
+  .qa-section h2 { font-family: 'Cormorant Garamond', serif; font-size: 1.5rem; font-weight: 600; color: #fff; margin: 0 0 .9rem; border-bottom: 1px solid rgba(212,174,90,.2); padding-bottom: .4rem; }
+  .qa-section p { margin: 0 0 1rem; font-size: .97rem; }
+  .qa-section ul { padding-left: 1.25rem; margin: 0 0 1rem; }
+  .qa-section li { margin-bottom: .4rem; font-size: .95rem; }
+  .claim-science { color: #7ab9e0; font-style: normal; font-size: .78rem; }
+  a[href] { color: var(--gold-500, #d4ae5a); }
+  .qa-faq-item { border-bottom: 1px solid rgba(255,255,255,.07); }
+  .qa-faq-q { cursor: pointer; padding: .9rem 0; font-size: .97rem; font-weight: 500; color: #fff; list-style: none; }
+  .qa-faq-q::before { content: '+ '; color: var(--gold-500, #d4ae5a); font-weight: 700; }
+  details[open] .qa-faq-q::before { content: '− '; }
+  .qa-faq-a { margin: 0 0 1rem; line-height: 1.7; font-size: .93rem; color: var(--ink-soft, #c8c0b0); }
+  .qa-src-list { padding-left: 1.25rem; margin: 0 0 1rem; }
+  .qa-src-list li { margin-bottom: .6rem; font-size: .82rem; color: var(--ink-soft, #8a8070); line-height: 1.6; }
+  .qa-claim-note { font-size: .78rem; color: var(--ink-soft, #605848); border-top: 1px solid rgba(255,255,255,.06); padding-top: .75rem; }
+</style>

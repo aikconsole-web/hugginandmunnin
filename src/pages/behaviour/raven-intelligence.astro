@@ -1,0 +1,146 @@
+---
+/**
+ * BEH·01 — Raven Intelligence
+ * Primary keyword: raven intelligence
+ * Secondary: how smart are ravens, raven cognitive abilities, raven problem solving
+ */
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const title       = 'Raven Intelligence — The Science of What Ravens Can Do';
+const description = 'A comprehensive, sourced guide to raven cognitive abilities: future planning, theory of mind, cooperation, tool use, and social learning. Every claim from peer-reviewed research.';
+const path        = '/behaviour/raven-intelligence/';
+
+const breadcrumbs = [
+  { name: 'Home',      url: '/' },
+  { name: 'Behaviour', url: '/behaviour/' },
+  { name: 'Raven Intelligence', url: path },
+];
+
+const faq = [
+  { q: 'Have ravens been shown to plan for the future?', a: 'Yes. Kabadayi and Osvath (2017, Science) showed that ravens chose a tool they would need in 17 hours rather than immediately available food — a planning task previously used only with great apes. Ravens performed as well as or better than apes on the same test.' },
+  { q: 'Can ravens use tools?', a: 'Common Ravens do not use tools in the wild as reliably as New Caledonian Crows do. However, in experimental settings, ravens have used tools to access food, and wild ravens use objects manipulatively (rolling rocks, using sticks). They are capable of tool use but it is not their primary foraging strategy.' },
+  { q: 'Are ravens more intelligent than chimpanzees?', a: 'Ravens outperform chimpanzees on some specific tasks — particularly the Kabadayi/Osvath 2017 planning test. On other tasks (fine manual dexterity, imitation), chimpanzees perform better. Intelligence is task-specific; ranking species overall is not scientifically meaningful.' },
+];
+---
+
+<BaseLayout title={title} description={description} path={path} ogType="article"
+  datePublished="2026-11-07" dateModified="2026-11-07"
+  breadcrumbs={breadcrumbs} faq={faq} pageType="Article">
+
+<article class="beh-page">
+  <nav class="beh-breadcrumb" aria-label="Breadcrumb">
+    <ol>
+      {breadcrumbs.map((b, i) => (
+        <li>
+          {i < breadcrumbs.length - 1
+            ? <><a href={b.url}>{b.name}</a><span aria-hidden="true"> › </span></>
+            : <span aria-current="page">{b.name}</span>}
+        </li>
+      ))}
+    </ol>
+  </nav>
+
+  <header class="beh-header">
+    <p class="beh-pillar">Behaviour · BEH·01</p>
+    <h1>Raven Intelligence</h1>
+    <p class="beh-subtitle">The Science of What Ravens Can Do</p>
+  </header>
+
+  <section class="beh-snippet" aria-label="Quick answer">
+    <p><strong class="claim-science">[science]</strong> Common Ravens show cognitive abilities that rival great apes on specific tasks: future planning (Kabadayi & Osvath, 2017), understanding others' knowledge states (Bugnyar et al., 2016), cooperation and trade (Massen et al., 2015), and social learning. Their large brain-to-body ratio and complex social environment are thought to have driven this exceptional cognitive evolution.</p>
+  </section>
+
+  <section class="beh-section">
+    <h2>Future Planning</h2>
+    <p><strong class="claim-science">[science]</strong> In 2017, Kabadayi and Osvath published a landmark study in <em>Science</em> showing ravens planned for a future need. Ravens were shown a tool that opened a food box. After the box was removed, they were offered a tray of objects — including the tool — without the box present. After a delay of up to 17 hours, they were given the box again. Most ravens selected the correct tool and used it to get the food.</p>
+    <p>Crucially, the study used the exact same experimental protocol previously used with great apes — allowing direct comparison. Ravens performed comparably to orangutans and bonobos. The study attracted wide attention because "planning for the future" had been considered a uniquely human or near-human cognitive ability.<sup><a href="#src-1">1</a></sup></p>
+  </section>
+
+  <section class="beh-section">
+    <h2>Theory of Mind — Knowing What Others Know</h2>
+    <p><strong class="claim-science">[science]</strong> Ravens re-hide cached food when they suspect a competitor has watched them cache it. Bugnyar and Heinrich (2005) showed this is not a simple response to being watched — it involves the caching bird assessing whether the observer could have seen the caching event, based on the observer's position relative to the cache.<sup><a href="#src-2">2</a></sup></p>
+    <p><strong class="claim-science">[science]</strong> A subsequent study (Bugnyar et al., 2016) tested whether ravens understand gaze. Ravens caching in a room would re-cache if a sound suggested a competitor was present and a peephole was open — even when no competitor was visible. They behaved as if they understood that an open peephole enabled vision. This is consistent with a rudimentary theory of mind.<sup><a href="#src-3">3</a></sup></p>
+  </section>
+
+  <section class="beh-section">
+    <h2>Cooperation and Fairness</h2>
+    <p><strong class="claim-science">[science]</strong> Ravens cooperate on tasks requiring simultaneous action. Massen et al. (2015) showed ravens will coordinate with a partner to pull both ends of a rope simultaneously to obtain food. More remarkably, they adjust their cooperation based on reward equity — they are less willing to cooperate when their partner receives a better reward for the same effort, suggesting sensitivity to fairness.<sup><a href="#src-4">4</a></sup></p>
+  </section>
+
+  <section class="beh-section">
+    <h2>Social Learning</h2>
+    <p><strong class="claim-science">[science]</strong> Ravens learn from each other. When one raven discovers a novel method of obtaining food, others in the group learn the technique faster than they would by trial and error alone. This social transmission of information has been documented in captive groups and inferred from wild populations.<sup><a href="#src-5">5</a></sup></p>
+    <p>Social learning is thought to be one of the key drivers of corvid intelligence generally — living in complex social groups with long-term relationships selects for the ability to track others' knowledge, intentions, and reliability.</p>
+  </section>
+
+  <section class="beh-section">
+    <h2>What Drives Raven Intelligence?</h2>
+    <p><strong class="claim-science">[science]</strong> Ravens have one of the highest brain-to-body ratios among birds. Their social system — involving long-term pair bonds, complex non-breeding flocks, competition over caches, and cooperation with predators — creates a cognitive "social arms race" that may have selected for increasingly sophisticated mental abilities. The same hypothesis is used to explain high intelligence in great apes and humans.<sup><a href="#src-5">5</a></sup></p>
+  </section>
+
+  <section class="beh-section">
+    <h2>What Ravens Cannot Do (Known Limits)</h2>
+    <ul>
+      <li>Ravens do not use tools reliably in the wild (unlike New Caledonian Crows).</li>
+      <li>Ravens do not appear to understand the symbolic or semantic content of human words they mimic (unlike some trained African Grey Parrots).</li>
+      <li>Ravens show social learning but it is not clear they can innovate at the same rate as some parrot species in certain task types.</li>
+    </ul>
+    <p>These are not criticisms — they are simply the current limits of what has been tested. The raven cognitive literature is growing rapidly and new abilities are regularly documented.</p>
+  </section>
+
+  <section class="beh-faq beh-section" aria-labelledby="faq-h2">
+    <h2 id="faq-h2">Frequently Asked Questions</h2>
+    {faq.map(item => (
+      <details class="beh-faq-item">
+        <summary class="beh-faq-q">{item.q}</summary>
+        <p class="beh-faq-a">{item.a}</p>
+      </details>
+    ))}
+  </section>
+
+  <section class="beh-sources beh-section" aria-labelledby="src-h2">
+    <h2 id="src-h2">Sources</h2>
+    <ol class="beh-src-list">
+      <li id="src-1">Kabadayi, C. & Osvath, M. (2017). Ravens parallel great apes in flexible planning for tool-use and bartering. <em>Science</em> 357(6347), 202–204. DOI: 10.1126/science.aam8138.</li>
+      <li id="src-2">Bugnyar, T. & Heinrich, B. (2005). Ravens differentiate between knowledgeable and ignorant competitors. <em>Proceedings of the Royal Society B</em> 272, 1641–46. DOI: 10.1098/rspb.2005.3144.</li>
+      <li id="src-3">Bugnyar, T., Reber, S.A. & Buckner, C. (2016). Ravens attribute visual access to unseen competitors. <em>Nature Communications</em> 7, 10506. DOI: 10.1038/ncomms10506.</li>
+      <li id="src-4">Massen, J.J.M. et al. (2015). Tolerance and reward equity predict cooperation in ravens. <em>Scientific Reports</em> 5, 15021. DOI: 10.1038/srep15021.</li>
+      <li id="src-5">Heinrich, B. (2000). <em>Mind of the Raven</em>. HarperCollins. — social learning, cognitive evolution.</li>
+    </ol>
+    <p class="beh-claim-note"><strong class="claim-science">[science]</strong> peer-reviewed study or field-guide data</p>
+  </section>
+
+  <nav class="beh-nav-bottom">
+    <a href="/behaviour/" class="beh-back">← All Behaviour Chapters</a>
+    <a href="/questions/how-smart-are-ravens/" class="beh-next">Quick Answer: How Smart Are Ravens? →</a>
+  </nav>
+</article>
+</BaseLayout>
+
+<style>
+  .beh-page { max-width: 820px; margin: 0 auto; padding: 2rem 1.25rem 4rem; color: var(--iron-ink, #e8e4d8); font-family: 'Inter', sans-serif; line-height: 1.72; }
+  .beh-breadcrumb ol { display: flex; flex-wrap: wrap; gap: .25rem; list-style: none; padding: 0; margin: 0 0 2rem; font-size: .8rem; color: var(--ink-soft, #8a8070); }
+  .beh-breadcrumb a { color: var(--gold-500, #d4ae5a); text-decoration: none; }
+  .beh-pillar { font-size: .72rem; letter-spacing: .12em; text-transform: uppercase; color: var(--gold-500, #d4ae5a); margin: 0 0 .4rem; }
+  .beh-page h1 { font-family: 'Cormorant Garamond', serif; font-size: clamp(2rem, 5vw, 3.25rem); font-weight: 700; color: #fff; margin: 0 0 .4rem; line-height: 1.1; }
+  .beh-subtitle { font-size: 1.1rem; color: var(--ink-soft, #c0b89a); margin: 0 0 2rem; }
+  .beh-snippet { background: rgba(212,174,90,.08); border-left: 3px solid var(--gold-500, #d4ae5a); border-radius: 0 6px 6px 0; padding: 1rem 1.25rem; margin-bottom: 2.5rem; font-size: 1.03rem; }
+  .beh-section { margin-bottom: 2.5rem; }
+  .beh-section h2 { font-family: 'Cormorant Garamond', serif; font-size: 1.5rem; font-weight: 600; color: #fff; margin: 0 0 .9rem; border-bottom: 1px solid rgba(212,174,90,.2); padding-bottom: .4rem; }
+  .beh-section p { margin: 0 0 1rem; font-size: .97rem; }
+  .beh-section ul { padding-left: 1.25rem; margin: 0 0 1rem; }
+  .beh-section li { margin-bottom: .4rem; font-size: .95rem; }
+  .claim-science { color: #7ab9e0; font-style: normal; font-size: .78rem; }
+  a[href] { color: var(--gold-500, #d4ae5a); }
+  .beh-faq-item { border-bottom: 1px solid rgba(255,255,255,.07); }
+  .beh-faq-q { cursor: pointer; padding: .9rem 0; font-size: .97rem; font-weight: 500; color: #fff; list-style: none; }
+  .beh-faq-q::before { content: '+ '; color: var(--gold-500, #d4ae5a); font-weight: 700; }
+  details[open] .beh-faq-q::before { content: '− '; }
+  .beh-faq-a { margin: 0 0 1rem; line-height: 1.7; font-size: .93rem; color: var(--ink-soft, #c8c0b0); }
+  .beh-src-list { padding-left: 1.25rem; margin: 0 0 1rem; }
+  .beh-src-list li { margin-bottom: .6rem; font-size: .82rem; color: var(--ink-soft, #8a8070); line-height: 1.6; }
+  .beh-claim-note { font-size: .78rem; color: var(--ink-soft, #605848); border-top: 1px solid rgba(255,255,255,.06); padding-top: .75rem; }
+  .beh-nav-bottom { display: flex; justify-content: space-between; padding-top: 2rem; border-top: 1px solid rgba(255,255,255,.07); flex-wrap: wrap; gap: .5rem; }
+  .beh-nav-bottom a { font-size: .9rem; text-decoration: none; }
+  .beh-nav-bottom a:hover { text-decoration: underline; }
+</style>

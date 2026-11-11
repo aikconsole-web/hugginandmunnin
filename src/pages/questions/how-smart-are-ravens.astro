@@ -1,0 +1,145 @@
+---
+/**
+ * Q&A — How smart are ravens?
+ * Primary keyword: how smart are ravens
+ * Secondary: raven intelligence, raven iq, are ravens the smartest birds
+ */
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const title       = 'How Smart Are Ravens? — The Science of Raven Intelligence';
+const description = 'Ravens (Corvus corax) are among the most cognitively capable animals studied. This page reviews the controlled experiments that demonstrate future planning, theory of mind, and social intelligence in ravens.';
+const path        = '/questions/how-smart-are-ravens/';
+
+const breadcrumbs = [
+  { name: 'Home',      url: '/' },
+  { name: 'Questions', url: '/questions/' },
+  { name: 'How Smart Are Ravens?', url: path },
+];
+
+const faq = [
+  { q: 'Are ravens smarter than dogs?', a: 'Direct comparison is difficult because intelligence is task-specific. Ravens outperform dogs on certain physical cognition tasks — for example, understanding that a human pointing to a container means food is inside. Studies by Miklósi (2003) and others show dogs excel at reading human social cues, while ravens show broader physical problem-solving. Neither species is "smarter" overall.' },
+  { q: 'Are ravens smarter than crows?', a: 'Common Ravens and American Crows score similarly on most cognitive tasks. Ravens have shown slightly more flexible planning in some experiments; crows show more sophisticated tool use in others (the New Caledonian Crow especially). Both are exceptionally intelligent birds; the difference between them is small compared with the gap between corvids and most other birds.' },
+  { q: 'Can ravens recognise human faces?', a: 'Yes. Captive ravens have been shown to remember and distinguish individual human faces and to treat differently people who have previously deceived or helped them. This is consistent with their documented long-term memory in social contexts.' },
+  { q: 'What is the raven\'s IQ?', a: 'IQ is a human-specific construct and cannot be applied to ravens. What scientists measure instead are specific cognitive abilities: future planning, causal reasoning, understanding others\' knowledge states, and tool use. Ravens score highly on all of these. See the main text for specific experiments.' },
+];
+---
+
+<BaseLayout title={title} description={description} path={path} ogType="article"
+  datePublished="2026-11-06" dateModified="2026-11-06"
+  breadcrumbs={breadcrumbs} faq={faq} pageType="Article">
+
+<article class="qa-page">
+
+  <nav class="qa-breadcrumb" aria-label="Breadcrumb">
+    <ol>
+      {breadcrumbs.map((b, i) => (
+        <li>
+          {i < breadcrumbs.length - 1
+            ? <><a href={b.url}>{b.name}</a><span aria-hidden="true"> › </span></>
+            : <span aria-current="page">{b.name}</span>}
+        </li>
+      ))}
+    </ol>
+  </nav>
+
+  <header class="qa-header">
+    <p class="qa-pillar">Question · Biology</p>
+    <h1>How Smart Are Ravens?</h1>
+  </header>
+
+  <!-- ── Snippet answer ─────────────────────────────────────────────── -->
+  <section class="qa-snippet" aria-label="Direct answer">
+    <p><strong class="claim-science">[science]</strong> Common Ravens are among the most cognitively capable birds yet studied. Controlled experiments have shown they can plan for the future, understand what other animals can and cannot see, trade objects for food, and remember individual humans for years. Their cognitive abilities rival those of great apes on several specific tasks.</p>
+  </section>
+
+  <!-- ── The longer answer ──────────────────────────────────────────── -->
+  <section class="qa-section">
+    <h2>Future Planning</h2>
+    <p><strong class="claim-science">[science]</strong> Can can ravens plan for a future state rather than just acting on immediate need? A landmark study by Kabadayi and Osvath (2017, published in <em>Science</em>) tested ravens using a "tool-use planning" design borrowed from great ape research.<sup><a href="#src-1">1</a></sup></p>
+    <p>Ravens were shown a tool that opened a puzzle box containing food. The box was then removed. After a delay (up to 17 hours), when offered a tray of objects including the original tool and distractors, most ravens selected the tool — then used it to open the box when it was presented again. They chose the tool when no immediate reward was possible, demonstrating planning for a future state.</p>
+    <p>This was remarkable because such planning had previously been demonstrated only in great apes, children over age 4, and a few other species. The study used the same experimental protocol as previous ape studies for direct comparison.</p>
+  </section>
+
+  <section class="qa-section">
+    <h2>Theory of Mind — Understanding What Others Know</h2>
+    <p><strong class="claim-science">[science]</strong> Ravens cache food (hide it for later). When another raven watches a caching bird, the cacher will often wait until it thinks it is unobserved, then dig up and re-hide the food elsewhere. This "re-caching" in response to observation was documented by Bugnyar and Heinrich (2005).<sup><a href="#src-2">2</a></sup></p>
+    <p>More specifically: ravens re-cache food when they have previously stolen food from others (they know that others do what they do), but not when they have never been thieves. This suggests they model others' likely behaviour based on their own experience — a rudimentary theory of mind.</p>
+    <p><strong class="claim-science">[science]</strong> A further test by Bugnyar et al. (2016) asked whether ravens understand gaze direction. Peepholes were created in an observation barrier. Ravens caching in a room would re-cache food if they heard a sound suggesting a competitor was present and a peephole was open — even when no competitor was actually visible. They behaved as if they understood that an open peephole enabled vision, even without seeing anyone looking.<sup><a href="#src-3">3</a></sup></p>
+  </section>
+
+  <section class="qa-section">
+    <h2>Cooperation and Trade</h2>
+    <p><strong class="claim-science">[science]</strong> Ravens have been shown to cooperate on tasks that require simultaneous pulling of two ends of a rope (Massen et al., 2015). More strikingly, they can trade: when given tokens and shown that a human partner will exchange tokens for food, ravens learn to exchange tokens — they understand a future transaction.<sup><a href="#src-4">4</a></sup></p>
+    <p>Ravens also barter tokens for food from strangers and from familiar partners differentially — they appear to track the reliability of trading partners, another socially complex skill.</p>
+  </section>
+
+  <section class="qa-section">
+    <h2>Social Learning and Problem-Solving</h2>
+    <p><strong class="claim-science">[science]</strong> Wild ravens have been observed and filmed opening complex containers — including zippers on backpacks, latches on bins, and wire closures on cages — without prior training. They solve multi-step physical problems and transmit solutions socially: a technique learned by one raven spreads through a group faster than the same technique can be learned independently.<sup><a href="#src-5">5</a></sup></p>
+  </section>
+
+  <section class="qa-section">
+    <h2>What "Smart" Means Here — a Note on Interpretation</h2>
+    <p>Cognitive scientists are careful not to anthropomorphise. "Planning", "theory of mind", and "understanding" are operational definitions based on what an animal does in a controlled test — not claims about what it experiences consciously. The experiments are carefully controlled; the interpretations are those of the peer-reviewed literature, not popular speculation.</p>
+    <p>Ravens are not "as smart as humans". They score highly on specific cognitive tasks that happen to overlap with abilities we associate with high intelligence. This makes them exceptionally interesting to study; it does not make them human-equivalent.</p>
+  </section>
+
+  <section class="qa-section">
+    <h2>Related Questions</h2>
+    <ul>
+      <li><a href="/questions/how-long-do-ravens-live/">How long do ravens live?</a></li>
+      <li><a href="/questions/do-ravens-mate-for-life/">Do ravens mate for life?</a></li>
+      <li><a href="/questions/what-do-ravens-eat/">What do ravens eat?</a></li>
+      <li><a href="/compare/raven-vs-crow/">Raven vs crow — what's the difference?</a></li>
+    </ul>
+  </section>
+
+  <section class="qa-faq qa-section" aria-labelledby="faq-h2">
+    <h2 id="faq-h2">Frequently Asked Questions</h2>
+    {faq.map(item => (
+      <details class="qa-faq-item">
+        <summary class="qa-faq-q">{item.q}</summary>
+        <p class="qa-faq-a">{item.a}</p>
+      </details>
+    ))}
+  </section>
+
+  <section class="qa-sources qa-section" aria-labelledby="src-h2">
+    <h2 id="src-h2">Sources</h2>
+    <ol class="qa-src-list">
+      <li id="src-1">Kabadayi, C. & Osvath, M. (2017). Ravens parallel great apes in flexible planning for tool-use and bartering. <em>Science</em> 357(6347), pp. 202–204. DOI: 10.1126/science.aam8138. — future planning experiment.</li>
+      <li id="src-2">Bugnyar, T. & Heinrich, B. (2005). Ravens, <em>Corvus corax</em>, differentiate between knowledgeable and ignorant competitors. <em>Proceedings of the Royal Society B</em> 272, pp. 1641–46. DOI: 10.1098/rspb.2005.3144. — re-caching in response to observation.</li>
+      <li id="src-3">Bugnyar, T., Reber, S.A. & Buckner, C. (2016). Ravens attribute visual access to unseen competitors. <em>Nature Communications</em> 7, 10506. DOI: 10.1038/ncomms10506. — peephole/gaze understanding.</li>
+      <li id="src-4">Massen, J.J.M. et al. (2015). Tolerance and reward equity predict cooperation in ravens. <em>Scientific Reports</em> 5, 15021. — cooperation and token exchange.</li>
+      <li id="src-5">Heinrich, B. (2000). <em>Mind of the Raven</em>. HarperCollins. — wild raven problem-solving and social learning.</li>
+    </ol>
+    <p class="qa-claim-note"><strong class="claim-science">[science]</strong> peer-reviewed study or field-guide data</p>
+  </section>
+
+</article>
+</BaseLayout>
+
+<style>
+  .qa-page { max-width: 820px; margin: 0 auto; padding: 2rem 1.25rem 4rem; color: var(--iron-ink, #e8e4d8); font-family: 'Inter', sans-serif; line-height: 1.72; }
+  .qa-breadcrumb ol { display: flex; flex-wrap: wrap; gap: .25rem; list-style: none; padding: 0; margin: 0 0 2rem; font-size: .8rem; color: var(--ink-soft, #8a8070); }
+  .qa-breadcrumb a { color: var(--gold-500, #d4ae5a); text-decoration: none; }
+  .qa-pillar { font-size: .72rem; letter-spacing: .12em; text-transform: uppercase; color: var(--gold-500, #d4ae5a); margin: 0 0 .4rem; }
+  .qa-page h1 { font-family: 'Cormorant Garamond', serif; font-size: clamp(2rem, 5vw, 3rem); font-weight: 700; color: #fff; margin: 0 0 2rem; line-height: 1.1; }
+  .qa-snippet { background: rgba(212,174,90,.08); border-left: 3px solid var(--gold-500, #d4ae5a); border-radius: 0 6px 6px 0; padding: 1rem 1.25rem; margin-bottom: 2.5rem; font-size: 1.03rem; }
+  .qa-section { margin-bottom: 2.5rem; }
+  .qa-section h2 { font-family: 'Cormorant Garamond', serif; font-size: 1.5rem; font-weight: 600; color: #fff; margin: 0 0 .9rem; border-bottom: 1px solid rgba(212,174,90,.2); padding-bottom: .4rem; }
+  .qa-section p { margin: 0 0 1rem; font-size: .97rem; }
+  .qa-section ul { padding-left: 1.25rem; margin: 0 0 1rem; }
+  .qa-section li { margin-bottom: .4rem; font-size: .95rem; }
+  .qa-section a { color: var(--gold-500, #d4ae5a); }
+  .claim-science { color: #7ab9e0; font-style: normal; font-size: .78rem; }
+  a[href] { color: var(--gold-500, #d4ae5a); }
+  .qa-faq-item { border-bottom: 1px solid rgba(255,255,255,.07); }
+  .qa-faq-q { cursor: pointer; padding: .9rem 0; font-size: .97rem; font-weight: 500; color: #fff; list-style: none; }
+  .qa-faq-q::before { content: '+ '; color: var(--gold-500, #d4ae5a); font-weight: 700; }
+  details[open] .qa-faq-q::before { content: '− '; }
+  .qa-faq-a { margin: 0 0 1rem; line-height: 1.7; font-size: .93rem; color: var(--ink-soft, #c8c0b0); }
+  .qa-src-list { padding-left: 1.25rem; margin: 0 0 1rem; }
+  .qa-src-list li { margin-bottom: .6rem; font-size: .82rem; color: var(--ink-soft, #8a8070); line-height: 1.6; }
+  .qa-claim-note { font-size: .78rem; color: var(--ink-soft, #605848); border-top: 1px solid rgba(255,255,255,.06); padding-top: .75rem; }
+</style>

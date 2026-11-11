@@ -1,0 +1,148 @@
+---
+/**
+ * Norse Lore — Ravens in the Poetic Edda
+ * NRS·16
+ * Primary keyword: ravens in the poetic edda
+ * Secondary: huginn muninn poetic edda, raven eddic poetry, odin ravens eddic
+ */
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const title       = 'Ravens in the Poetic Edda: Huginn, Muninn, and the Battle-Bird';
+const description = 'The Poetic Edda — the great collection of Old Norse mythological and heroic verse — contains numerous references to ravens as Odin\'s companions, battlefield scavengers, and cosmic symbols. This page traces raven appearances through the major eddic poems.';
+const path        = '/lore/norse/ravens-in-the-poetic-edda/';
+
+const breadcrumbs = [
+  { name: 'Home',       url: '/' },
+  { name: 'Norse Lore', url: '/lore/norse/' },
+  { name: 'Ravens in the Poetic Edda', url: path },
+];
+
+const faq = [
+  { q: 'Which poems in the Poetic Edda mention ravens?', a: 'Ravens appear in multiple Poetic Edda poems. The most important for raven lore are: Grímnismál (stanza 20, naming Huginn and Muninn and describing their daily flight); Völuspá (the seeress describes Odin\'s ravens as part of the mythological world); and various heroic poems where ravens appear in the battlefield-scavenger role (Helgakviða Hundingsbana, Atlakviða, Hamðismál). Huginn and Muninn are most fully characterised in Grímnismál; the battle-raven motif appears in numerous heroic lays.' },
+  { q: 'What do the ravens symbolise in Völuspá?', a: 'In Völuspá (the most famous eddic poem, the "Prophecy of the Seeress"), ravens appear in the context of Odin and the mythological world order. The poem describes the ravens as part of Odin\'s identity — symbols of his knowledge-seeking nature. At Ragnarök, the destruction of the cosmic order is foretold, and Odin\'s ravens are implicitly part of the world that will end. The seeress\'s vision encompasses the ravens along with Yggdrasil, the world tree, and all the other fixtures of the Norse cosmos.' },
+  { q: 'What is the battle-raven in eddic poetry?', a: 'In heroic eddic poetry (the lays dealing with legendary kings and heroes), the raven appears as one of the three "beasts of battle" — alongside the eagle and the wolf — that attend human slaughter. Before battles, warriors are described as feeding the raven, eagle, and wolf; after battles, these creatures feast on the dead. This kenning cluster (the "beasts of battle") is one of the most common formulaic elements of Old Norse (and Old English) heroic poetry, anchoring the raven in the warrior-death nexus of the Norse heroic tradition.' },
+];
+---
+
+<BaseLayout title={title} description={description} path={path} ogType="article"
+  datePublished="2026-11-07" dateModified="2026-11-07"
+  breadcrumbs={breadcrumbs} faq={faq} pageType="Article">
+
+<article class="qa-page">
+
+  <nav class="qa-breadcrumb" aria-label="Breadcrumb">
+    <ol>
+      {breadcrumbs.map((b, i) => (
+        <li>
+          {i < breadcrumbs.length - 1
+            ? <><a href={b.url}>{b.name}</a><span aria-hidden="true"> › </span></>
+            : <span aria-current="page">{b.name}</span>}
+        </li>
+      ))}
+    </ol>
+  </nav>
+
+  <header class="qa-header">
+    <p class="qa-pillar">Norse Lore · NRS·16</p>
+    <h1>Ravens in the Poetic Edda: Huginn, Muninn, and the Battle-Bird</h1>
+  </header>
+
+  <section class="qa-snippet" aria-label="Direct answer">
+    <p><strong class="claim-lore">[lore]</strong> The Poetic Edda — preserved in the Codex Regius manuscript (c. 1270 CE) — contains the primary descriptions of Odin's ravens Huginn and Muninn in Grímnismál (stanza 20), plus widespread use of ravens as battlefield scavengers throughout the heroic lays. The raven's dual role in the Edda — divine messenger and carrion-eater — reflects the bird's centrality to Norse cosmology and warrior culture.</p>
+  </section>
+
+  <section class="qa-section">
+    <h2>The Poetic Edda: An Overview</h2>
+    <p><strong class="claim-lore">[lore]</strong> The Poetic Edda is a collection of Old Norse poems preserved primarily in the <em>Codex Regius</em> (GKS 2365 4°), a manuscript written in Iceland around 1270 CE but containing poems composed over several centuries, some possibly as early as the 9th–10th century CE. The collection divides into mythological poems (dealing with gods and cosmic events) and heroic poems (dealing with legendary human heroes and dynastic conflicts).<sup><a href="#src-1">1</a></sup></p>
+    <p>Ravens appear in both sections — as divine companions in the mythological poems and as battlefield scavengers in the heroic verse.</p>
+  </section>
+
+  <section class="qa-section">
+    <h2>Grímnismál: The Naming of Huginn and Muninn</h2>
+    <p><strong class="claim-lore">[lore]</strong> The fullest description of Huginn and Muninn in eddic verse comes from <em>Grímnismál</em> (The Sayings of Grímnir), stanza 20. Odin, speaking in the guise of Grímnir, describes his ravens:<sup><a href="#src-1">1</a></sup></p>
+    <blockquote>
+      <p><em>Huginn ok Muninn / fljúga hverjan dag / Jörmungrund yfir; / óumk ek of Hugin, / at hann aftr né komit, / þó sjámk meir of Munin.</em></p>
+      <p>"Huginn and Muninn fly every day over the great earth; I fear for Huginn that he may not return, but I am more concerned for Muninn." (Larrington trans.)</p>
+    </blockquote>
+    <p>This stanza provides: the ravens' names; their role (daily flight over the world to gather information); and Odin's concern for Muninn specifically — widely interpreted as reflecting the Norse valuing of memory (<em>muninn</em>) above thought (<em>huginn</em>), since memory preserves the past while thought without memory is fleeting.</p>
+  </section>
+
+  <section class="qa-section">
+    <h2>Völuspá: The Ravens in the Cosmic Vision</h2>
+    <p><strong class="claim-lore">[lore]</strong> <em>Völuspá</em> (The Seeress's Prophecy) is the opening poem of the Codex Regius and the most theologically comprehensive eddic poem — a vision of the creation of the world, the mythological present, and the future destruction and rebirth of Ragnarök. Ravens appear in the poem as markers of Odin's presence and divine nature, consistent with his identity as the raven-god.<sup><a href="#src-1">1</a></sup></p>
+    <p>At the opening of <em>Völuspá</em>, the seeress invokes Odin and all the gods; Odin's ravens are part of his understood identity even without explicit naming in every passage. In the Ragnarök sections, the poem describes the destruction of everything Odin has built — including, implicitly, the cosmic-knowledge network that Huginn and Muninn represent.</p>
+  </section>
+
+  <section class="qa-section">
+    <h2>The Battle-Raven in Heroic Poetry</h2>
+    <p><strong class="claim-lore">[lore]</strong> In the heroic lays of the Poetic Edda — <em>Helgakviða Hundingsbana</em> (The Lay of Helgi Hundingsbane), <em>Atlakviða</em> (The Lay of Atli), <em>Hamðismál</em> (The Lay of Hamðir), and others — ravens appear repeatedly in the "beasts of battle" formula:<sup><a href="#src-1">1</a></sup></p>
+    <ul>
+      <li>Before battle: ravens gather, anticipating slaughter — a standard narrative device signalling imminent violence.</li>
+      <li>During battle: the sounds of ravens and eagles punctuate the fighting.</li>
+      <li>After battle: ravens feast on the corpses, confirming victory and completing the cycle of warrior death.</li>
+    </ul>
+    <p>In <em>Helgakviða Hundingsbana I</em>, warriors going to battle are described as giving the eagle and raven meat to eat — a kenning for killing enemies. In <em>Atlakviða</em>, one of the Eddic poems most likely to reflect archaic Germanic material, ravens attend the slaughter of the Niflungar (Nibelungs) at Atli's hall.</p>
+  </section>
+
+  <section class="qa-section">
+    <h2>The Raven and Odin's Identity</h2>
+    <p><strong class="claim-lore">[lore]</strong> Across the mythological poems, the raven is Odin's symbolic animal — identifying him even when he is in disguise (<em>farmaðr</em>, "Wanderer"). Odin's many names include <em>Hrafnaguð</em> (Raven-God) and <em>Hrafnáss</em> (Raven-God, slightly different form). The raven therefore serves a double function in eddic poetry: as a literal character (Huginn and Muninn as specific birds) and as a metonymic marker for Odin himself.<sup><a href="#src-1">1</a></sup></p>
+  </section>
+
+  <section class="qa-section">
+    <h2>Related Pages</h2>
+    <ul>
+      <li><a href="/lore/norse/huginn-and-muninn/">Huginn and Muninn</a></li>
+      <li><a href="/lore/norse/grimnismal-stanza-20/">Grímnismál stanza 20</a></li>
+      <li><a href="/lore/norse/ravens-in-the-prose-edda/">Ravens in the Prose Edda</a></li>
+      <li><a href="/lore/norse/ravens-in-skaldic-poetry/">Ravens in skaldic poetry</a></li>
+    </ul>
+  </section>
+
+  <section class="qa-faq qa-section" aria-labelledby="faq-h2">
+    <h2 id="faq-h2">Frequently Asked Questions</h2>
+    {faq.map(item => (
+      <details class="qa-faq-item">
+        <summary class="qa-faq-q">{item.q}</summary>
+        <p class="qa-faq-a">{item.a}</p>
+      </details>
+    ))}
+  </section>
+
+  <section class="qa-sources qa-section" aria-labelledby="src-h2">
+    <h2 id="src-h2">Sources</h2>
+    <ol class="qa-src-list">
+      <li id="src-1">Larrington, C. (trans., 2014). <em>The Poetic Edda</em>. Oxford University Press. — Grímnismál stanza 20, Völuspá, heroic lays with raven references; translation and notes.</li>
+    </ol>
+    <p class="qa-claim-note"><strong class="claim-lore">[lore]</strong> named cultural/historical source</p>
+  </section>
+
+</article>
+</BaseLayout>
+
+<style>
+  .qa-page { max-width: 820px; margin: 0 auto; padding: 2rem 1.25rem 4rem; color: var(--iron-ink, #e8e4d8); font-family: 'Inter', sans-serif; line-height: 1.72; }
+  .qa-breadcrumb ol { display: flex; flex-wrap: wrap; gap: .25rem; list-style: none; padding: 0; margin: 0 0 2rem; font-size: .8rem; color: var(--ink-soft, #8a8070); }
+  .qa-breadcrumb a { color: var(--gold-500, #d4ae5a); text-decoration: none; }
+  .qa-pillar { font-size: .72rem; letter-spacing: .12em; text-transform: uppercase; color: var(--gold-500, #d4ae5a); margin: 0 0 .4rem; }
+  .qa-page h1 { font-family: 'Cormorant Garamond', serif; font-size: clamp(2rem, 5vw, 3rem); font-weight: 700; color: #fff; margin: 0 0 2rem; line-height: 1.1; }
+  .qa-snippet { background: rgba(212,174,90,.08); border-left: 3px solid var(--gold-500, #d4ae5a); border-radius: 0 6px 6px 0; padding: 1rem 1.25rem; margin-bottom: 2.5rem; font-size: 1.03rem; }
+  blockquote { border-left: 3px solid rgba(212,174,90,.3); padding: .75rem 1.25rem; margin: 0 0 1rem; background: rgba(255,255,255,.02); border-radius: 0 4px 4px 0; }
+  blockquote p { margin: 0 0 .5rem; font-size: .93rem; }
+  blockquote p:last-child { margin: 0; }
+  .qa-section { margin-bottom: 2.5rem; }
+  .qa-section h2 { font-family: 'Cormorant Garamond', serif; font-size: 1.5rem; font-weight: 600; color: #fff; margin: 0 0 .9rem; border-bottom: 1px solid rgba(212,174,90,.2); padding-bottom: .4rem; }
+  .qa-section p { margin: 0 0 1rem; font-size: .97rem; }
+  .qa-section ul { padding-left: 1.25rem; margin: 0 0 1rem; }
+  .qa-section li { margin-bottom: .4rem; font-size: .95rem; }
+  .claim-lore { color: #c49a3c; font-style: normal; font-size: .78rem; }
+  a[href] { color: var(--gold-500, #d4ae5a); }
+  .qa-faq-item { border-bottom: 1px solid rgba(255,255,255,.07); }
+  .qa-faq-q { cursor: pointer; padding: .9rem 0; font-size: .97rem; font-weight: 500; color: #fff; list-style: none; }
+  .qa-faq-q::before { content: '+ '; color: var(--gold-500, #d4ae5a); font-weight: 700; }
+  details[open] .qa-faq-q::before { content: '− '; }
+  .qa-faq-a { margin: 0 0 1rem; line-height: 1.7; font-size: .93rem; color: var(--ink-soft, #c8c0b0); }
+  .qa-src-list { padding-left: 1.25rem; margin: 0 0 1rem; }
+  .qa-src-list li { margin-bottom: .6rem; font-size: .82rem; color: var(--ink-soft, #8a8070); line-height: 1.6; }
+  .qa-claim-note { font-size: .78rem; color: var(--ink-soft, #605848); border-top: 1px solid rgba(255,255,255,.06); padding-top: .75rem; }
+</style>

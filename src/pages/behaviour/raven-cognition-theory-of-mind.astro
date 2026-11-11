@@ -1,0 +1,138 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const title       = 'Do Ravens Have Theory of Mind? Research and Evidence';
+const description = 'Ravens show behaviours consistent with understanding others\' mental states — knowledge, ignorance, and gaze. Research on raven theory of mind from Bugnyar, Heinrich, and colleagues.';
+const path        = '/behaviour/raven-cognition-theory-of-mind/';
+
+const breadcrumbs = [
+  { name: 'Home',      url: '/' },
+  { name: 'Behaviour', url: '/behaviour/' },
+  { name: 'Theory of Mind in Ravens', url: path },
+];
+
+const faq = [
+  { q: 'Do ravens have theory of mind?', a: 'Ravens show behaviours consistent with attributing mental states to others — specifically, they appear to understand whether a competitor has seen where food is hidden (knowledge vs ignorance). Bugnyar & Heinrich (2005) showed ravens treat "knowledgeable" and "ignorant" competitors differently when caching food. This is consistent with a component of theory of mind (knowledge-state attribution). Full theory of mind — understanding a range of mental states including false beliefs — has not been conclusively demonstrated in ravens.' },
+];
+---
+
+<BaseLayout title={title} description={description} path={path} ogType="article"
+  datePublished="2026-11-07" dateModified="2026-11-07"
+  breadcrumbs={breadcrumbs} faq={faq} pageType="Article">
+
+<article class="id-page">
+  <nav class="id-breadcrumb" aria-label="Breadcrumb">
+    <ol>
+      {breadcrumbs.map((b, i) => (
+        <li>
+          {i < breadcrumbs.length - 1
+            ? <><a href={b.url}>{b.name}</a><span aria-hidden="true"> › </span></>
+            : <span aria-current="page">{b.name}</span>}
+        </li>
+      ))}
+    </ol>
+  </nav>
+  <header class="id-header">
+    <p class="id-pillar">Behaviour · BEH·08</p>
+    <h1>Do Ravens Have Theory of Mind?</h1>
+    <p class="id-subtitle">Knowledge attribution, gaze following, and the evidence</p>
+  </header>
+
+  <section class="id-snippet" aria-label="Quick answer">
+    <p><strong class="claim-science">[science]</strong> Ravens show <strong>knowledge-state attribution</strong> — they treat competitors who witnessed a cache differently from those who did not. Bugnyar & Heinrich (2005) and Bugnyar et al. (2016) provide the core evidence. This is a component of theory of mind but not its full scope. The term "theory of mind" is contested in animal cognition research; the precise question is what mental states ravens represent, and how much of this is genuine mentalising vs learned associative rule-following.</p>
+  </section>
+
+  <section class="id-section">
+    <h2>What "Theory of Mind" Means</h2>
+    <p><strong class="claim-science">[science]</strong> Theory of mind (ToM) is the ability to attribute mental states — beliefs, desires, intentions, knowledge — to others and use those attributions to predict and explain behaviour. It develops in human children around age 3–4.</p>
+    <p>In animal cognition research, ToM is usually tested in components:</p>
+    <ul>
+      <li><strong>Gaze following:</strong> Does the animal follow another's line of sight?</li>
+      <li><strong>Knowledge attribution:</strong> Does the animal distinguish between a knowledgeable and an ignorant competitor?</li>
+      <li><strong>False belief understanding:</strong> Can the animal predict what someone will do based on a belief that is wrong?</li>
+      <li><strong>Perspective-taking:</strong> Does the animal understand what another can see from their vantage point?</li>
+    </ul>
+    <p>Ravens have been tested on several of these components with positive results.<sup><a href="#src-1">1</a></sup></p>
+  </section>
+
+  <section class="id-section">
+    <h2>Key Studies</h2>
+    <p><strong class="claim-science">[science]</strong></p>
+    <ul>
+      <li><strong>Bugnyar &amp; Heinrich (2005)</strong>: Ravens differentiating knowledgeable from ignorant competitors in food caching. A raven that cached food while watched by a dominant competitor would protect the cache differently than when watched by a bird that was absent (ignorant). This suggests the cacher distinguishes the competitor's knowledge state — a component of ToM. <em>Proceedings of the Royal Society B</em>, 272, 1641–1646.</li>
+      <li><strong>Bugnyar et al. (2016)</strong>: The "peephole paradigm" — a raven was able to see a competitor through a small hole, but was tested on its behaviour as if the competitor might have seen it, without direct gaze exchange. Ravens adjusted cache-protection behaviour in response to the mere possibility of being observed. This is a more demanding test. <em>Nature Communications</em>, 7, 10506. DOI: 10.1038/ncomms10506</li>
+      <li><strong>Pika &amp; Bugnyar (2011)</strong>: Referential gestures in ravens — ravens used pointing-like gestures toward objects while monitoring a partner's gaze, suggesting awareness of attentional states. <em>Current Biology</em>, 21(20).</li>
+    </ul>
+  </section>
+
+  <section class="id-section">
+    <h2>Gaze Following</h2>
+    <p><strong class="claim-science">[science]</strong> Ravens follow the gaze of conspecifics and humans — they look in the direction another individual is looking, particularly around barriers. Bugnyar et al. (2004) documented gaze following in ravens, including geometrically correct gaze following around obstacles (looking around a barrier to see what a conspecific is looking at, not just looking in the same direction). This component of perspective-taking is well-established in ravens.<sup><a href="#src-2">2</a></sup></p>
+  </section>
+
+  <section class="id-section">
+    <h2>What Is and Is Not Established</h2>
+    <p><strong class="claim-science">[science]</strong> Honest summary of the evidence:</p>
+    <ul>
+      <li><strong>Well-established:</strong> Ravens follow gaze; ravens distinguish knowledgeable from ignorant competitors; ravens adjust cache-protection behaviour in response to observation</li>
+      <li><strong>Demonstrated but contested:</strong> Whether the peephole paradigm (Bugnyar 2016) demonstrates genuine perspective-taking or a learned rule about "holes → might be watched"</li>
+      <li><strong>Not yet demonstrated:</strong> Full false-belief understanding (Standard ToM test); ravens have not been shown to predict behaviour based on beliefs they know to be false</li>
+      <li><strong>Contested interpretation:</strong> Whether evidence for knowledge attribution reflects genuine mentalising (representing others' mental states) or sophisticated associative learning that mimics mentalising without it</li>
+    </ul>
+    <p>The honest scientific position is that ravens show some components of ToM to a degree not seen in most animals — but whether this constitutes "true" theory of mind in the philosophical sense remains actively debated.<sup><a href="#src-1">1</a>,<a href="#src-3">3</a></sup></p>
+  </section>
+
+  <section class="id-faq id-section" aria-labelledby="faq-h2">
+    <h2 id="faq-h2">Frequently Asked Questions</h2>
+    {faq.map(item => (
+      <details class="id-faq-item">
+        <summary class="id-faq-q">{item.q}</summary>
+        <p class="id-faq-a">{item.a}</p>
+      </details>
+    ))}
+  </section>
+
+  <section class="id-sources id-section" aria-labelledby="src-h2">
+    <h2 id="src-h2">Sources</h2>
+    <ol class="id-src-list">
+      <li id="src-1">Bugnyar, T. &amp; Heinrich, B. (2005). Ravens, <em>Corvus corax</em>, differentiate between knowledgeable and ignorant competitors. <em>Proceedings of the Royal Society B</em>, 272, 1641–1646. DOI: 10.1098/rspb.2005.3144</li>
+      <li id="src-2">Bugnyar, T., Stöwe, M. &amp; Heinrich, B. (2004). Ravens, <em>Corvus corax</em>, follow gaze direction of humans around obstacles. <em>Proceedings of the Royal Society B</em>, 271, 1331–1336. DOI: 10.1098/rspb.2004.2738</li>
+      <li id="src-3">Bugnyar, T., Reber, S. A. &amp; Buckner, C. (2016). Ravens attribute visual access to unseen competitors. <em>Nature Communications</em>, 7, 10506. DOI: 10.1038/ncomms10506</li>
+    </ol>
+    <p class="id-claim-note"><strong class="claim-science">[science]</strong> peer-reviewed studies</p>
+  </section>
+
+  <nav class="id-nav-bottom">
+    <a href="/behaviour/raven-intelligence/" class="id-back">← Raven Intelligence</a>
+    <a href="/behaviour/raven-food-caching/" class="id-next">Food Caching →</a>
+  </nav>
+</article>
+</BaseLayout>
+
+<style>
+  .id-page { max-width: 820px; margin: 0 auto; padding: 2rem 1.25rem 4rem; color: var(--iron-ink, #e8e4d8); font-family: 'Inter', sans-serif; line-height: 1.72; }
+  .id-breadcrumb ol { display: flex; flex-wrap: wrap; gap: .25rem; list-style: none; padding: 0; margin: 0 0 2rem; font-size: .8rem; color: var(--ink-soft, #8a8070); }
+  .id-breadcrumb a { color: var(--gold-500, #d4ae5a); text-decoration: none; }
+  .id-pillar { font-size: .72rem; letter-spacing: .12em; text-transform: uppercase; color: var(--gold-500, #d4ae5a); margin: 0 0 .4rem; }
+  .id-page h1 { font-family: 'Cormorant Garamond', serif; font-size: clamp(2rem, 5vw, 3.25rem); font-weight: 700; color: #fff; margin: 0 0 .2rem; line-height: 1.1; }
+  .id-subtitle { font-size: 1rem; color: var(--ink-soft, #c0b89a); margin: 0 0 2rem; }
+  .id-snippet { background: rgba(212,174,90,.08); border-left: 3px solid var(--gold-500, #d4ae5a); border-radius: 0 6px 6px 0; padding: 1rem 1.25rem; margin-bottom: 2.5rem; font-size: 1.03rem; }
+  .id-section { margin-bottom: 2.75rem; }
+  .id-section h2 { font-family: 'Cormorant Garamond', serif; font-size: 1.6rem; font-weight: 600; color: #fff; margin: 0 0 1rem; border-bottom: 1px solid rgba(212,174,90,.2); padding-bottom: .4rem; }
+  .id-section p { margin: 0 0 1rem; font-size: .97rem; }
+  .id-section ul { padding-left: 1.25rem; margin: 0 0 1rem; }
+  .id-section li { margin-bottom: .4rem; font-size: .95rem; }
+  .claim-science { color: #7ab9e0; font-style: normal; font-size: .78rem; }
+  a[href] { color: var(--gold-500, #d4ae5a); }
+  .id-faq-item { border-bottom: 1px solid rgba(255,255,255,.07); }
+  .id-faq-q { cursor: pointer; padding: .9rem 0; font-size: .97rem; font-weight: 500; color: #fff; list-style: none; }
+  .id-faq-q::before { content: '+ '; color: var(--gold-500, #d4ae5a); font-weight: 700; }
+  details[open] .id-faq-q::before { content: '− '; }
+  .id-faq-a { margin: 0 0 1rem; line-height: 1.7; font-size: .93rem; color: var(--ink-soft, #c8c0b0); }
+  .id-src-list { padding-left: 1.25rem; margin: 0 0 1rem; }
+  .id-src-list li { margin-bottom: .6rem; font-size: .82rem; color: var(--ink-soft, #8a8070); line-height: 1.6; }
+  .id-claim-note { font-size: .78rem; color: var(--ink-soft, #605848); border-top: 1px solid rgba(255,255,255,.06); padding-top: .75rem; }
+  .id-nav-bottom { display: flex; justify-content: space-between; padding-top: 2rem; border-top: 1px solid rgba(255,255,255,.07); }
+  .id-nav-bottom a { font-size: .9rem; text-decoration: none; }
+  .id-nav-bottom a:hover { text-decoration: underline; }
+</style>

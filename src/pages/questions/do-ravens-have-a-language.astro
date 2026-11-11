@@ -1,0 +1,138 @@
+---
+/**
+ * Q&A — Do ravens have a language?
+ * Primary keyword: do ravens have a language
+ * Secondary: raven communication language, raven calls meaning, raven language science
+ */
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const title       = 'Do Ravens Have a Language?';
+const description = 'Ravens have a large and varied repertoire of calls with distinct meanings — but whether this constitutes "language" in a linguistic sense is debated. This page examines what science has found about raven communication, referential calls, and the question of raven language.';
+const path        = '/questions/do-ravens-have-a-language/';
+
+const breadcrumbs = [
+  { name: 'Home',      url: '/' },
+  { name: 'Questions', url: '/questions/' },
+  { name: 'Do Ravens Have a Language?', url: path },
+];
+
+const faq = [
+  { q: 'Can ravens communicate with each other?', a: 'Yes — ravens communicate using a large repertoire of vocalisations (40–80+ distinct call types in Common Ravens) as well as physical gestures (bill-pointing, wing displays). Their calls include alarm calls distinguishing aerial from ground threats, food-recruitment calls, territorial vocalisations, pair-bond maintenance calls, and vocalisations in social conflict. Some calls appear referential — they carry specific information about the type of threat or food present. Ravens also communicate using gaze and gesturing, rare in non-human animals outside of primates.' },
+  { q: 'Do ravens have referential calls?', a: 'Ravens show evidence of referential calls — vocalisations that refer to specific objects or events rather than merely expressing emotional state. Alarm calls differ based on predator type (aerial vs. ground), and naive ravens respond appropriately to recorded alarm calls without having seen the predator. Food calls appear to recruit conspecifics to food sources, with some evidence of specificity. However, raven communication appears to lack two key properties of human language: unlimited productivity (the ability to combine elements to create new meanings) and displacement (the ability to refer to things not present in time or place). Ravens communicate about the present, not the absent or hypothetical.' },
+  { q: 'Can ravens understand human speech?', a: 'Ravens can mimic human speech — reproducing words and phrases with high fidelity. Whether this involves semantic understanding (knowing what the words mean) or is purely acoustic mimicry is uncertain. Some captive ravens respond consistently to specific words (trained associations), but this is Pavlovian conditioning, not linguistic comprehension. Ravens trained to associate a word with a specific object may demonstrate something approaching semantic understanding of that word, but the kind of open-ended comprehension seen in some chimpanzee or dolphin studies has not been demonstrated in ravens.' },
+];
+---
+
+<BaseLayout title={title} description={description} path={path} ogType="article"
+  datePublished="2026-11-07" dateModified="2026-11-07"
+  breadcrumbs={breadcrumbs} faq={faq} pageType="Article">
+
+<article class="qa-page">
+
+  <nav class="qa-breadcrumb" aria-label="Breadcrumb">
+    <ol>
+      {breadcrumbs.map((b, i) => (
+        <li>
+          {i < breadcrumbs.length - 1
+            ? <><a href={b.url}>{b.name}</a><span aria-hidden="true"> › </span></>
+            : <span aria-current="page">{b.name}</span>}
+        </li>
+      ))}
+    </ol>
+  </nav>
+
+  <header class="qa-header">
+    <p class="qa-pillar">Question · Intelligence</p>
+    <h1>Do Ravens Have a Language?</h1>
+  </header>
+
+  <section class="qa-snippet" aria-label="Direct answer">
+    <p><strong class="claim-science">[science]</strong> Ravens have a rich communication system with 40–80+ distinct call types, including referential alarm and food calls, gesture-based communication (pointing and gaze), and speech mimicry. Whether this constitutes "language" depends on definition: it lacks the productivity and displacement of human language, but exceeds simple emotional signalling. It is better described as a sophisticated communication system than a language in the human linguistic sense.</p>
+  </section>
+
+  <section class="qa-section">
+    <h2>The Raven Call Repertoire</h2>
+    <p><strong class="claim-science">[science]</strong> Common Ravens have one of the largest and most varied vocal repertoires among birds. Estimates of distinct call types range from 40 to over 80, depending on how finely calls are categorised. The repertoire includes:<sup><a href="#src-1">1</a></sup><sup><a href="#src-2">2</a></sup></p>
+    <ul>
+      <li><strong>Alarm calls:</strong> differ in structure based on predator type. The knocking alarm call (a series of rapid deep "toks") typically signals aerial predators and elicits crouching; a different call type signals ground predators and elicits elevated watching. This differentiation is functionally referential.</li>
+      <li><strong>Food recruitment calls:</strong> yells produced near food sources that attract other ravens. These calls appear to vary with food quality and quantity in some studies.</li>
+      <li><strong>Territorial calls:</strong> deep resonant "kronk" calls and other lower-frequency vocalisations used in territory advertisement and intraspecific conflict.</li>
+      <li><strong>Pair calls:</strong> soft gurgling, warbling calls used in pair-bond maintenance and allopreening contexts.</li>
+      <li><strong>Mimicry:</strong> imitation of other species' calls, human speech, and mechanical sounds.</li>
+    </ul>
+  </section>
+
+  <section class="qa-section">
+    <h2>Gestural Communication</h2>
+    <p><strong class="claim-science">[science]</strong> Ravens use gestural communication beyond vocalisations — a capacity rare outside of primates. Pika, Wilkinson & Zuberbühler (2012) documented bill-pointing in ravens: a raven would hold up an object in its bill and show it to another raven, orienting its gaze toward the object and toward the other individual. This pointing gesture directed the recipient's attention and appeared to function as an intentional act of showing — analogous to human pointing.<sup><a href="#src-3">3</a></sup></p>
+    <p>Ravens also use gaze direction: they follow another's gaze to find food or social information (gaze following), and they attend to whether others can see them (surveillance awareness — hiding caches only when unobserved). These capacities suggest a theory-of-mind component to raven communication — awareness of others' knowledge states.</p>
+  </section>
+
+  <section class="qa-section">
+    <h2>What "Language" Requires</h2>
+    <p><strong class="claim-science">[science]</strong> Linguists typically define language by several design features, including:<sup><a href="#src-2">2</a></sup></p>
+    <ul>
+      <li><strong>Productivity/recursion:</strong> combining finite elements to create infinite novel messages.</li>
+      <li><strong>Displacement:</strong> referring to things absent in time or space.</li>
+      <li><strong>Arbitrariness:</strong> the signal form is arbitrary, not iconic.</li>
+      <li><strong>Cultural transmission:</strong> learned, not purely genetic.</li>
+    </ul>
+    <p>Raven communication is culturally transmitted (call repertoires vary regionally and are learned) and shows some arbitrariness. But it lacks demonstrable productivity (no evidence of recursive combination of signals) and displacement (ravens communicate about present stimuli, not absent ones). By these criteria, raven communication is an advanced animal communication system but not a language in the full linguistic sense.</p>
+  </section>
+
+  <section class="qa-section">
+    <h2>Related Pages</h2>
+    <ul>
+      <li><a href="/behaviour/raven-vocalisation/">Raven vocalisation</a></li>
+      <li><a href="/behaviour/raven-mimicry-and-talking/">Raven mimicry and talking</a></li>
+      <li><a href="/questions/what-sound-does-a-raven-make/">What sound does a raven make?</a></li>
+      <li><a href="/questions/how-do-ravens-communicate/">How do ravens communicate?</a></li>
+    </ul>
+  </section>
+
+  <section class="qa-faq qa-section" aria-labelledby="faq-h2">
+    <h2 id="faq-h2">Frequently Asked Questions</h2>
+    {faq.map(item => (
+      <details class="qa-faq-item">
+        <summary class="qa-faq-q">{item.q}</summary>
+        <p class="qa-faq-a">{item.a}</p>
+      </details>
+    ))}
+  </section>
+
+  <section class="qa-sources qa-section" aria-labelledby="src-h2">
+    <h2 id="src-h2">Sources</h2>
+    <ol class="qa-src-list">
+      <li id="src-1">Boarman, W.I. & Heinrich, B. (1999). Common Raven (<em>Corvus corax</em>). In Poole, A. (ed.), <em>The Birds of North America</em>, No. 476. Cornell Lab of Ornithology. — raven vocalisation repertoire, call types, food calls.</li>
+      <li id="src-2">Heinrich, B. (1989). <em>Ravens in Winter</em>. Simon & Schuster. — detailed field observations of raven communication, food recruitment, alarm calls.</li>
+      <li id="src-3">Pika, S., Wilkinson, R., Kendrick, K.H. & Zuberbühler, K. (2012). A Raven's Gaze: Navigating Visual Attention. <em>PLOS ONE</em>, 7(11), e48736. — gestural communication in ravens, bill-pointing, gaze following.</li>
+    </ol>
+    <p class="qa-claim-note"><strong class="claim-science">[science]</strong> peer-reviewed data</p>
+  </section>
+
+</article>
+</BaseLayout>
+
+<style>
+  .qa-page { max-width: 820px; margin: 0 auto; padding: 2rem 1.25rem 4rem; color: var(--iron-ink, #e8e4d8); font-family: 'Inter', sans-serif; line-height: 1.72; }
+  .qa-breadcrumb ol { display: flex; flex-wrap: wrap; gap: .25rem; list-style: none; padding: 0; margin: 0 0 2rem; font-size: .8rem; color: var(--ink-soft, #8a8070); }
+  .qa-breadcrumb a { color: var(--gold-500, #d4ae5a); text-decoration: none; }
+  .qa-pillar { font-size: .72rem; letter-spacing: .12em; text-transform: uppercase; color: var(--gold-500, #d4ae5a); margin: 0 0 .4rem; }
+  .qa-page h1 { font-family: 'Cormorant Garamond', serif; font-size: clamp(2rem, 5vw, 3rem); font-weight: 700; color: #fff; margin: 0 0 2rem; line-height: 1.1; }
+  .qa-snippet { background: rgba(212,174,90,.08); border-left: 3px solid var(--gold-500, #d4ae5a); border-radius: 0 6px 6px 0; padding: 1rem 1.25rem; margin-bottom: 2.5rem; font-size: 1.03rem; }
+  .qa-section { margin-bottom: 2.5rem; }
+  .qa-section h2 { font-family: 'Cormorant Garamond', serif; font-size: 1.5rem; font-weight: 600; color: #fff; margin: 0 0 .9rem; border-bottom: 1px solid rgba(212,174,90,.2); padding-bottom: .4rem; }
+  .qa-section p { margin: 0 0 1rem; font-size: .97rem; }
+  .qa-section ul { padding-left: 1.25rem; margin: 0 0 1rem; }
+  .qa-section li { margin-bottom: .4rem; font-size: .95rem; }
+  .claim-science { color: #7ab9e0; font-style: normal; font-size: .78rem; }
+  a[href] { color: var(--gold-500, #d4ae5a); }
+  .qa-faq-item { border-bottom: 1px solid rgba(255,255,255,.07); }
+  .qa-faq-q { cursor: pointer; padding: .9rem 0; font-size: .97rem; font-weight: 500; color: #fff; list-style: none; }
+  .qa-faq-q::before { content: '+ '; color: var(--gold-500, #d4ae5a); font-weight: 700; }
+  details[open] .qa-faq-q::before { content: '− '; }
+  .qa-faq-a { margin: 0 0 1rem; line-height: 1.7; font-size: .93rem; color: var(--ink-soft, #c8c0b0); }
+  .qa-src-list { padding-left: 1.25rem; margin: 0 0 1rem; }
+  .qa-src-list li { margin-bottom: .6rem; font-size: .82rem; color: var(--ink-soft, #8a8070); line-height: 1.6; }
+  .qa-claim-note { font-size: .78rem; color: var(--ink-soft, #605848); border-top: 1px solid rgba(255,255,255,.06); padding-top: .75rem; }
+</style>

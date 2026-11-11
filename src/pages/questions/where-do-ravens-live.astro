@@ -1,0 +1,126 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const title       = 'Where Do Ravens Live? — Range and Habitat of All 10 Species';
+const description = 'Where ravens live: Common Ravens span the Holarctic, while other species are confined to Africa, Australia, or the Middle East. This page covers the range and habitat of all 10 raven species.';
+const path        = '/questions/where-do-ravens-live/';
+
+const breadcrumbs = [
+  { name: 'Home',      url: '/' },
+  { name: 'Questions', url: '/questions/' },
+  { name: 'Where Do Ravens Live?', url: path },
+];
+
+const faq = [
+  { q: 'Are ravens found in Australia?', a: 'Yes — three raven species are native to Australia: the Australian Raven (Corvus coronoides) across the mainland, the Forest Raven (Corvus tasmanicus) in Tasmania and parts of SE Australia, and the Little Raven (Corvus mellori) in SE Australia. No Common Raven occurs in Australia.' },
+  { q: 'Do ravens live in cities?', a: 'Common Ravens increasingly use cities and suburbs, particularly where food is available from human waste. In some regions — Yellowknife (Canada), parts of the US Southwest, Israel — urban raven populations have expanded significantly. Most raven species still prefer open, wild country.' },
+  { q: 'Are there ravens in the UK?', a: 'Yes. The Common Raven (Corvus corax) is a resident breeding bird in Wales, Scotland, Ireland, and upland areas of northern England. It was extirpated from lowland England by centuries of persecution but has recolonised steadily since legal protection in the 20th century.' },
+];
+---
+
+<BaseLayout title={title} description={description} path={path} ogType="article"
+  datePublished="2026-11-07" dateModified="2026-11-07"
+  breadcrumbs={breadcrumbs} faq={faq} pageType="Article">
+
+<article class="qa-page">
+  <nav class="qa-breadcrumb" aria-label="Breadcrumb">
+    <ol>
+      {breadcrumbs.map((b, i) => (
+        <li>
+          {i < breadcrumbs.length - 1
+            ? <><a href={b.url}>{b.name}</a><span aria-hidden="true"> › </span></>
+            : <span aria-current="page">{b.name}</span>}
+        </li>
+      ))}
+    </ol>
+  </nav>
+
+  <header class="qa-header">
+    <p class="qa-pillar">Question · Biology</p>
+    <h1>Where Do Ravens Live?</h1>
+  </header>
+
+  <section class="qa-snippet" aria-label="Direct answer">
+    <p><strong class="claim-science">[science]</strong> The Common Raven (<em>Corvus corax</em>) has the widest range of any raven — the entire Holarctic: North America from Alaska to Central America, all of Europe, and across Asia to Japan. Other raven species have much smaller ranges: the Thick-billed Raven is confined to the Ethiopian Highlands; Australian ravens to Australasia. In total, 10 raven species are found across four continents.</p>
+  </section>
+
+  <section class="qa-section">
+    <h2>The 10 Raven Species and Where They Live</h2>
+    <ul>
+      <li><a href="/species/common-raven/"><strong>Common Raven</strong></a> (<em>Corvus corax</em>) — Holarctic: North America, Europe, Asia, North Africa. The most widespread.</li>
+      <li><a href="/species/thick-billed-raven/"><strong>Thick-billed Raven</strong></a> (<em>Corvus crassirostris</em>) — Ethiopian Highlands (Ethiopia, Eritrea, N Somalia). Above 1,500 m.</li>
+      <li><a href="/species/white-necked-raven/"><strong>White-necked Raven</strong></a> (<em>Corvus albicollis</em>) — Eastern and southern Africa. Cliffs, highlands, savanna edges.</li>
+      <li><a href="/species/chihuahuan-raven/"><strong>Chihuahuan Raven</strong></a> (<em>Corvus cryptoleucus</em>) — US Southwest and northern Mexico. Arid grassland and desert.</li>
+      <li><a href="/species/brown-necked-raven/"><strong>Brown-necked Raven</strong></a> (<em>Corvus ruficollis</em>) — Sahara, Middle East, Central Asia deserts.</li>
+      <li><a href="/species/fan-tailed-raven/"><strong>Fan-tailed Raven</strong></a> (<em>Corvus rhipidurus</em>) — Middle East and Horn of Africa. Cliffs and gorges.</li>
+      <li><a href="/species/somali-crow/"><strong>Somali Crow</strong></a> (<em>Corvus edithae</em>) — Horn of Africa (Somalia, NE Kenya, SE Ethiopia).</li>
+      <li><a href="/species/australian-raven/"><strong>Australian Raven</strong></a> (<em>Corvus coronoides</em>) — Mainland Australia. The most widespread Australian corvid.</li>
+      <li><a href="/species/forest-raven/"><strong>Forest Raven</strong></a> (<em>Corvus tasmanicus</em>) — Tasmania; small SE mainland Australia population.</li>
+      <li><a href="/species/little-raven/"><strong>Little Raven</strong></a> (<em>Corvus mellori</em>) — SE Australia. Open country and alpine zones.</li>
+    </ul>
+  </section>
+
+  <section class="qa-section">
+    <h2>Common Raven Habitat Tolerance</h2>
+    <p><strong class="claim-science">[science]</strong> The Common Raven is the most habitat-tolerant of all ravens. It breeds in Arctic tundra, boreal forest, temperate woodland, Mediterranean scrub, desert, coastal cliffs, alpine zones, farmland, and increasingly urban and suburban areas. No other raven species approaches this ecological breadth.<sup><a href="#src-1">1</a></sup></p>
+    <p>The key requirements are: a reliable food source (carrion, refuse, or invertebrates), nesting sites (cliff ledges, tall trees, structures), and sufficient territory. Ravens are highly adaptable to changes in these resources.</p>
+  </section>
+
+  <section class="qa-section">
+    <h2>Range Changes — Expansion and Contraction</h2>
+    <p><strong class="claim-science">[science]</strong> Common Raven populations in Western Europe were severely reduced by persecution (shooting, poisoning) during the 18th–20th centuries. Following legal protection in Britain (Wildlife and Countryside Act 1981) and equivalent legislation elsewhere in Europe, ravens have steadily recolonised their former range. They are now breeding in Lowland England for the first time in centuries.<sup><a href="#src-2">2</a></sup></p>
+    <p><strong class="claim-science">[science]</strong> In contrast, some raven populations in the US Southwest have expanded dramatically due to increased food from human waste — a subject of active management concern in areas where ravens prey on the nests of endangered desert tortoises and other sensitive species.<sup><a href="#src-1">1</a></sup></p>
+  </section>
+
+  <section class="qa-section">
+    <h2>Related Pages</h2>
+    <ul>
+      <li><a href="/species/">All 10 raven species — profiles and ranges</a></li>
+      <li><a href="/compare/raven-vs-crow/">Raven vs crow — how to tell them apart</a></li>
+    </ul>
+  </section>
+
+  <section class="qa-faq qa-section" aria-labelledby="faq-h2">
+    <h2 id="faq-h2">Frequently Asked Questions</h2>
+    {faq.map(item => (
+      <details class="qa-faq-item">
+        <summary class="qa-faq-q">{item.q}</summary>
+        <p class="qa-faq-a">{item.a}</p>
+      </details>
+    ))}
+  </section>
+
+  <section class="qa-sources qa-section" aria-labelledby="src-h2">
+    <h2 id="src-h2">Sources</h2>
+    <ol class="qa-src-list">
+      <li id="src-1">Boarman, W.I. & Heinrich, B. (1999). Common Raven (<em>Corvus corax</em>). <em>Birds of the World</em>. Cornell Lab. — range, habitat, urban expansion.</li>
+      <li id="src-2">BirdLife International (2020). <em>Corvus corax</em>. IUCN Red List. — population trend, UK recolonisation.</li>
+    </ol>
+    <p class="qa-claim-note"><strong class="claim-science">[science]</strong> peer-reviewed/field-guide data</p>
+  </section>
+</article>
+</BaseLayout>
+
+<style>
+  .qa-page { max-width: 820px; margin: 0 auto; padding: 2rem 1.25rem 4rem; color: var(--iron-ink, #e8e4d8); font-family: 'Inter', sans-serif; line-height: 1.72; }
+  .qa-breadcrumb ol { display: flex; flex-wrap: wrap; gap: .25rem; list-style: none; padding: 0; margin: 0 0 2rem; font-size: .8rem; color: var(--ink-soft, #8a8070); }
+  .qa-breadcrumb a { color: var(--gold-500, #d4ae5a); text-decoration: none; }
+  .qa-pillar { font-size: .72rem; letter-spacing: .12em; text-transform: uppercase; color: var(--gold-500, #d4ae5a); margin: 0 0 .4rem; }
+  .qa-page h1 { font-family: 'Cormorant Garamond', serif; font-size: clamp(2rem, 5vw, 3rem); font-weight: 700; color: #fff; margin: 0 0 2rem; line-height: 1.1; }
+  .qa-snippet { background: rgba(212,174,90,.08); border-left: 3px solid var(--gold-500, #d4ae5a); border-radius: 0 6px 6px 0; padding: 1rem 1.25rem; margin-bottom: 2.5rem; font-size: 1.03rem; }
+  .qa-section { margin-bottom: 2.5rem; }
+  .qa-section h2 { font-family: 'Cormorant Garamond', serif; font-size: 1.5rem; font-weight: 600; color: #fff; margin: 0 0 .9rem; border-bottom: 1px solid rgba(212,174,90,.2); padding-bottom: .4rem; }
+  .qa-section p { margin: 0 0 1rem; font-size: .97rem; }
+  .qa-section ul { padding-left: 1.25rem; margin: 0 0 1rem; }
+  .qa-section li { margin-bottom: .4rem; font-size: .95rem; }
+  .claim-science { color: #7ab9e0; font-style: normal; font-size: .78rem; }
+  a[href] { color: var(--gold-500, #d4ae5a); }
+  .qa-faq-item { border-bottom: 1px solid rgba(255,255,255,.07); }
+  .qa-faq-q { cursor: pointer; padding: .9rem 0; font-size: .97rem; font-weight: 500; color: #fff; list-style: none; }
+  .qa-faq-q::before { content: '+ '; color: var(--gold-500, #d4ae5a); font-weight: 700; }
+  details[open] .qa-faq-q::before { content: '− '; }
+  .qa-faq-a { margin: 0 0 1rem; line-height: 1.7; font-size: .93rem; color: var(--ink-soft, #c8c0b0); }
+  .qa-src-list { padding-left: 1.25rem; margin: 0 0 1rem; }
+  .qa-src-list li { margin-bottom: .6rem; font-size: .82rem; color: var(--ink-soft, #8a8070); line-height: 1.6; }
+  .qa-claim-note { font-size: .78rem; color: var(--ink-soft, #605848); border-top: 1px solid rgba(255,255,255,.06); padding-top: .75rem; }
+</style>

@@ -1,0 +1,156 @@
+---
+/**
+ * Behaviour chapter — Raven planning ahead
+ * BEH·11
+ * Primary keyword: raven planning ahead
+ * Secondary: ravens plan for the future, raven future planning, corvid planning
+ */
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const title       = 'Do Ravens Plan Ahead? The Evidence for Future Thinking';
+const description = 'A landmark 2017 study showed ravens can plan for future events — selecting and saving tools for tasks they will face an hour later. This chapter explains the experiments and what they mean.';
+const path        = '/behaviour/raven-planning-ahead/';
+
+const breadcrumbs = [
+  { name: 'Home',      url: '/' },
+  { name: 'Behaviour', url: '/behaviour/' },
+  { name: 'Raven Planning Ahead', url: path },
+];
+
+const faq = [
+  { q: 'Which study showed ravens can plan for the future?', a: 'The key study is Kabadayi & Osvath (2017) in Science. Ravens were trained on a "box task" requiring a specific tool. They were then offered the tool among distractors during a free-choice period with no box present, and tested an hour or 17 hours later. Ravens selected and kept the correct tool on 78% of trials, outperforming the great apes in some conditions.' },
+  { q: 'Can ravens delay gratification for a better reward?', a: 'Yes. Kabadayi & Osvath (2017) also tested token exchange — ravens were given a token they could later exchange for food. When offered an immediate food reward of lower value, ravens chose to keep the token for a later, better reward in roughly 73% of trials. This delay of gratification for a future benefit is a hallmark of planning ability.' },
+  { q: 'Does planning ahead require language or abstract thought?', a: 'The philosophical implications are debated. The experimental evidence establishes that ravens can represent future states and act to bring about a desired future outcome — a functional definition of planning. Whether this requires conscious foresight or subjective mental time travel as humans experience it is unanswerable with current methods. The evidence demonstrates capacity without settling the deeper question.' },
+];
+---
+
+<BaseLayout title={title} description={description} path={path} ogType="article"
+  datePublished="2026-11-07" dateModified="2026-11-07"
+  breadcrumbs={breadcrumbs} faq={faq} pageType="Article">
+
+<article class="qa-page">
+
+  <nav class="qa-breadcrumb" aria-label="Breadcrumb">
+    <ol>
+      {breadcrumbs.map((b, i) => (
+        <li>
+          {i < breadcrumbs.length - 1
+            ? <><a href={b.url}>{b.name}</a><span aria-hidden="true"> › </span></>
+            : <span aria-current="page">{b.name}</span>}
+        </li>
+      ))}
+    </ol>
+  </nav>
+
+  <header class="qa-header">
+    <p class="qa-pillar">Behaviour · BEH·11</p>
+    <h1>Do Ravens Plan Ahead? The Evidence for Future Thinking</h1>
+  </header>
+
+  <section class="qa-snippet" aria-label="Direct answer">
+    <p><strong class="claim-science">[science]</strong> A 2017 study in <em>Science</em> showed that ravens can select and save a tool they will need for a task up to 17 hours in the future — outperforming great apes in some trials. Ravens also delayed taking an immediate food reward to exchange a token for a better reward later. This is some of the strongest evidence yet for future planning in a non-human animal.</p>
+  </section>
+
+  <section class="qa-section">
+    <h2>Why Future Planning Matters</h2>
+    <p>The ability to act in the present for the benefit of a future self — planning ahead — was long thought to require capacities unique to humans: language, abstract thought, and "mental time travel". Since the 2000s, evidence from corvids and great apes has challenged this view. For ravens in particular, the evidence is striking.</p>
+    <p><strong class="claim-science">[science]</strong> The concept of mental time travel (Suddendorf & Corballis, 1997) refers to the ability to project oneself mentally into the future. The key experimental test is whether an animal can act now to bring about a state of affairs it will need later — without that state of affairs being present to trigger an immediate response.<sup><a href="#src-1">1</a></sup></p>
+  </section>
+
+  <section class="qa-section">
+    <h2>The Kabadayi & Osvath (2017) Experiments</h2>
+    <p><strong class="claim-science">[science]</strong> Kabadayi & Osvath published a paper in <em>Science</em> in 2017 titled "Ravens parallel great apes in flexible planning for tool-use and bartering." The key experiments:<sup><a href="#src-2">2</a></sup></p>
+
+    <h3 style="font-size:1.1rem;color:#d5d9e0;margin:1.25rem 0 .6rem">Experiment 1: Tool saving for future use</h3>
+    <p>Ravens were first trained to open a puzzle box using a specific stone tool. Then, an hour or 17 hours before being given the box, they were shown the tool among other distractors and allowed to pick one item and keep it (they could not carry an item if it had no use). Ravens selected and saved the correct tool on approximately 78% of trials — well above chance — and successfully used it to open the box later. Performance was similar at 1 hour and 17 hours delay.</p>
+
+    <h3 style="font-size:1.1rem;color:#d5d9e0;margin:1.25rem 0 .6rem">Experiment 2: Delay of gratification (token bartering)</h3>
+    <p>Ravens were trained that a specific token could be exchanged with an experimenter for a food reward. During test trials, they were offered the token along with an immediate, lower-value food item, then given an opportunity to barter the token 15 minutes later. Ravens chose to keep the token (foregoing the immediate food) in about 73% of trials — a successful delay of gratification for a future, better reward.</p>
+
+    <h3 style="font-size:1.1rem;color:#d5d9e0;margin:1.25rem 0 .6rem">Comparison with great apes</h3>
+    <p>Critically, the same experiments had been run with great apes (chimpanzees, bonobos, orangutans) in earlier work. Ravens matched or exceeded the performance of great apes in both tasks — a remarkable finding given the phylogenetic distance between birds and primates and the different brain structures involved.</p>
+  </section>
+
+  <section class="qa-section">
+    <h2>What the Evidence Shows — and Doesn't</h2>
+    <p><strong class="claim-science">[science]</strong> The Kabadayi & Osvath study has been widely cited as strong evidence for future planning in ravens. It is a carefully controlled experiment with clear results. Important caveats:</p>
+    <ul>
+      <li><strong>Small sample:</strong> the study used five ravens in total — a small sample typical of cognitive research with large, expensive-to-maintain animals. Replication with larger samples strengthens any such result.</li>
+      <li><strong>What "planning" means:</strong> the study established that ravens act now to bring about a future state — a functional definition of planning. It does not establish the subjective experience or mechanism underlying this.</li>
+      <li><strong>Captive ravens:</strong> all subjects were captive birds at a research facility. Whether wild ravens engage in analogous planning in natural contexts (beyond food caching) is an open question.</li>
+      <li><strong>Related behaviours:</strong> raven food caching (see <a href="/behaviour/raven-food-caching/">Raven food caching</a>) is itself a form of acting now for future benefit. The 2017 study showed ravens can extend this capacity to novel, trained tasks.</li>
+    </ul>
+  </section>
+
+  <section class="qa-section">
+    <h2>Earlier Evidence: Scrub-Jays and the Episodic Memory Question</h2>
+    <p><strong class="claim-science">[science]</strong> Before the raven study, the strongest corvid future-planning evidence came from western scrub-jays (Raby et al., 2007, <em>Nature</em>). Scrub-jays were allowed to experience alternating breakfast rooms — one where they were always fed in the morning, one where they never were. When given a chance to cache food in the evening, they preferentially cached in the "no-breakfast" room — anticipating the next morning's food scarcity. This was interpreted as planning based on imagining a future episode.<sup><a href="#src-3">3</a></sup></p>
+    <p>The raven results of 2017 built on this framework and extended it to tool use — a cognitively more demanding demonstration.</p>
+  </section>
+
+  <section class="qa-section">
+    <h2>What We Don't Know</h2>
+    <ul>
+      <li>How far into the future ravens can plan — the 17-hour delay was not the ceiling of what was tested.</li>
+      <li>Whether wild ravens show equivalent planning in natural foraging contexts.</li>
+      <li>The neural mechanisms — corvid "planning" is implemented in a brain architecture fundamentally different from the mammalian prefrontal cortex thought to underlie human planning.</li>
+      <li>Whether other raven species (e.g., Australian Raven, Chihuahuan Raven) show equivalent capacity.</li>
+    </ul>
+  </section>
+
+  <section class="qa-section">
+    <h2>Related Pages</h2>
+    <ul>
+      <li><a href="/behaviour/raven-intelligence/">Raven intelligence — overview</a></li>
+      <li><a href="/behaviour/raven-food-caching/">Raven food caching</a></li>
+      <li><a href="/behaviour/raven-cognition-theory-of-mind/">Theory of mind in ravens</a></li>
+      <li><a href="/questions/do-ravens-use-tools/">Do ravens use tools?</a></li>
+    </ul>
+  </section>
+
+  <section class="qa-faq qa-section" aria-labelledby="faq-h2">
+    <h2 id="faq-h2">Frequently Asked Questions</h2>
+    {faq.map(item => (
+      <details class="qa-faq-item">
+        <summary class="qa-faq-q">{item.q}</summary>
+        <p class="qa-faq-a">{item.a}</p>
+      </details>
+    ))}
+  </section>
+
+  <section class="qa-sources qa-section" aria-labelledby="src-h2">
+    <h2 id="src-h2">Sources</h2>
+    <ol class="qa-src-list">
+      <li id="src-1">Suddendorf, T. & Corballis, M.C. (1997). Mental time travel and the evolution of the human mind. <em>Genetic, Social, and General Psychology Monographs</em>, 123(2), 133–167. — mental time travel concept.</li>
+      <li id="src-2">Kabadayi, C. & Osvath, M. (2017). Ravens parallel great apes in flexible planning for tool-use and bartering. <em>Science</em>, 357(6347), 202–204. — the core planning study.</li>
+      <li id="src-3">Raby, C.R., Alexis, D.M., Dickinson, A. & Clayton, N.S. (2007). Planning for the future by western scrub-jays. <em>Nature</em>, 445, 919–921. — corvid future planning in caching context.</li>
+    </ol>
+    <p class="qa-claim-note"><strong class="claim-science">[science]</strong> peer-reviewed study or field-guide data</p>
+  </section>
+
+</article>
+</BaseLayout>
+
+<style>
+  .qa-page { max-width: 820px; margin: 0 auto; padding: 2rem 1.25rem 4rem; color: var(--iron-ink, #e8e4d8); font-family: 'Inter', sans-serif; line-height: 1.72; }
+  .qa-breadcrumb ol { display: flex; flex-wrap: wrap; gap: .25rem; list-style: none; padding: 0; margin: 0 0 2rem; font-size: .8rem; color: var(--ink-soft, #8a8070); }
+  .qa-breadcrumb a { color: var(--gold-500, #d4ae5a); text-decoration: none; }
+  .qa-pillar { font-size: .72rem; letter-spacing: .12em; text-transform: uppercase; color: var(--gold-500, #d4ae5a); margin: 0 0 .4rem; }
+  .qa-page h1 { font-family: 'Cormorant Garamond', serif; font-size: clamp(2rem, 5vw, 3rem); font-weight: 700; color: #fff; margin: 0 0 2rem; line-height: 1.1; }
+  .qa-snippet { background: rgba(212,174,90,.08); border-left: 3px solid var(--gold-500, #d4ae5a); border-radius: 0 6px 6px 0; padding: 1rem 1.25rem; margin-bottom: 2.5rem; font-size: 1.03rem; }
+  .qa-section { margin-bottom: 2.5rem; }
+  .qa-section h2 { font-family: 'Cormorant Garamond', serif; font-size: 1.5rem; font-weight: 600; color: #fff; margin: 0 0 .9rem; border-bottom: 1px solid rgba(212,174,90,.2); padding-bottom: .4rem; }
+  .qa-section p { margin: 0 0 1rem; font-size: .97rem; }
+  .qa-section ul { padding-left: 1.25rem; margin: 0 0 1rem; }
+  .qa-section li { margin-bottom: .4rem; font-size: .95rem; }
+  .claim-science { color: #7ab9e0; font-style: normal; font-size: .78rem; }
+  a[href] { color: var(--gold-500, #d4ae5a); }
+  .qa-faq-item { border-bottom: 1px solid rgba(255,255,255,.07); }
+  .qa-faq-q { cursor: pointer; padding: .9rem 0; font-size: .97rem; font-weight: 500; color: #fff; list-style: none; }
+  .qa-faq-q::before { content: '+ '; color: var(--gold-500, #d4ae5a); font-weight: 700; }
+  details[open] .qa-faq-q::before { content: '− '; }
+  .qa-faq-a { margin: 0 0 1rem; line-height: 1.7; font-size: .93rem; color: var(--ink-soft, #c8c0b0); }
+  .qa-src-list { padding-left: 1.25rem; margin: 0 0 1rem; }
+  .qa-src-list li { margin-bottom: .6rem; font-size: .82rem; color: var(--ink-soft, #8a8070); line-height: 1.6; }
+  .qa-claim-note { font-size: .78rem; color: var(--ink-soft, #605848); border-top: 1px solid rgba(255,255,255,.06); padding-top: .75rem; }
+</style>

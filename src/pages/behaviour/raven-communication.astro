@@ -1,0 +1,157 @@
+---
+/**
+ * Behaviour — Raven communication
+ * BEH·27
+ * Primary keyword: raven communication
+ * Secondary: how do ravens communicate, raven body language, raven vocalisations
+ */
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const title       = 'Raven Communication: Calls, Gestures, and Social Signals';
+const description = 'Ravens communicate through a complex system of vocalisations, body postures, gestures, and facial signals. This chapter examines the full range of raven communicative behaviour — from referential alarm calls to gestural pointing to the subtle plumage signals of dominance.';
+const path        = '/behaviour/raven-communication/';
+
+const breadcrumbs = [
+  { name: 'Home',      url: '/' },
+  { name: 'Behaviour', url: '/behaviour/' },
+  { name: 'Raven Communication', url: path },
+];
+
+const faq = [
+  { q: 'How do ravens communicate with each other?', a: 'Ravens communicate through vocalisations (40–80+ call types with specific social functions), body postures (hackle raising, head orientation, wing spreading), gestures (bill-pointing toward objects, holding up items), and plumage signals (hackle position, tail spreading). Unlike many birds whose communication is primarily vocal, ravens use all these channels simultaneously and in coordination. Research has also suggested ravens can use gaze monitoring to communicate — following and directing the gaze of conspecifics to draw attention to objects or events.' },
+  { q: 'Can ravens point like humans?', a: 'Yes — a 2011 study by Pika and Bugnyar documented ravens using bill-pointing gestures (holding up objects in the bill while orienting toward a partner) and gaze-following in ways functionally similar to pointing in human infants. These gestures appeared to serve communicative functions — drawing a partner\'s attention to objects — rather than purely individual manipulation. Referential gesturing in birds was previously thought to be absent or limited; the raven study was among the first documented cases in a non-primate species.' },
+  { q: 'Do ravens have specific calls for different threats?', a: 'Ravens have referential alarm calls — different calls associated with different threat types. Field studies have documented that ravens produce specific call types in response to aerial predators (hawks, eagles) versus terrestrial predators (foxes, humans), and that conspecifics respond differently to these call types even in the absence of the predator. This functional reference — different signals for different things in the world — parallels the referential calls documented in vervet monkeys and several corvid species.' },
+];
+---
+
+<BaseLayout title={title} description={description} path={path} ogType="article"
+  datePublished="2026-11-08" dateModified="2026-11-08"
+  breadcrumbs={breadcrumbs} faq={faq} pageType="Article">
+
+<article class="qa-page">
+
+  <nav class="qa-breadcrumb" aria-label="Breadcrumb">
+    <ol>
+      {breadcrumbs.map((b, i) => (
+        <li>
+          {i < breadcrumbs.length - 1
+            ? <><a href={b.url}>{b.name}</a><span aria-hidden="true"> › </span></>
+            : <span aria-current="page">{b.name}</span>}
+        </li>
+      ))}
+    </ol>
+  </nav>
+
+  <header class="qa-header">
+    <p class="qa-pillar">Behaviour · BEH·27</p>
+    <h1>Raven Communication: Calls, Gestures, and Social Signals</h1>
+  </header>
+
+  <section class="qa-snippet" aria-label="Direct answer">
+    <p><strong class="claim-science">[science]</strong> Ravens communicate through a multi-channel system: vocalisations (40–80+ call types with specific social meanings), body postures, bill-pointing gestures functionally similar to human pointing, and plumage signals. They have referential alarm calls that distinguish aerial from terrestrial threats, and they use gaze monitoring — following and directing partners' attention — in ways documented in humans and great apes.</p>
+  </section>
+
+  <section class="qa-section">
+    <h2>Vocal Communication</h2>
+    <p><strong class="claim-science">[science]</strong> Ravens have one of the largest vocal repertoires of any bird — estimates range from 40 to over 80 distinct call types in Common Ravens, plus a continuous spectrum of intermediate forms and individual variations. This repertoire is not static — ravens are vocal learners that acquire new calls throughout life and show regional dialects.<sup><a href="#src-1">1</a></sup></p>
+    <p>Major functional categories of raven vocalisations:</p>
+    <ul>
+      <li><strong>Recruitment calls:</strong> yell-like calls that recruit conspecifics to food sources. Heinrich documented that ravens use these calls specifically at large carcasses — apparently recruiting non-territorial floaters to mob territorial pairs away from food.</li>
+      <li><strong>Alarm calls:</strong> alarm calls distinguishing aerial from terrestrial threats. The two categories produce different responses in observers (look up vs. flee to cover).</li>
+      <li><strong>Territorial/aggressive calls:</strong> deep knocking calls and bill-snapping associated with territorial encounters and dominance assertion.</li>
+      <li><strong>Pair bonding calls:</strong> soft gurgling, warbling, and clicking calls exchanged between bonded pairs during allopreening and close contact.</li>
+      <li><strong>Play calls:</strong> associated with object play and social play contexts; softer and more variable than alarm or recruitment calls.</li>
+    </ul>
+  </section>
+
+  <section class="qa-section">
+    <h2>Gestural Communication</h2>
+    <p><strong class="claim-science">[science]</strong> Pika & Bugnyar (2011) documented non-vocal communicative gestures in ravens — specifically, bill-directed gestures toward objects (holding up items or pointing the bill toward them) used in the context of pair interactions. These gestures appeared to function as referential acts — directing a partner's attention to a specific object — rather than as individual manipulation of the object itself.<sup><a href="#src-2">2</a></sup></p>
+    <p>Key findings:</p>
+    <ul>
+      <li>Bill-pointing gestures were directed toward specific objects (moss, bark, pebbles) in the presence of a social partner.</li>
+      <li>The partner responded with gaze-following — looking toward the referenced object.</li>
+      <li>Gestures were more common between opposite-sex individuals during the period preceding breeding — suggesting a role in pair-bond formation or partner assessment.</li>
+      <li>This form of referential gesture was previously documented only in primates; the raven study extended it to non-primate vertebrates.</li>
+    </ul>
+  </section>
+
+  <section class="qa-section">
+    <h2>Body Language and Plumage Signals</h2>
+    <p><strong class="claim-science">[science]</strong> Ravens use body posture and plumage configuration as communicative signals:<sup><a href="#src-1">1</a></sup></p>
+    <ul>
+      <li><strong>Hackle raised:</strong> throat hackles erected signal aggression or high arousal; combined with head lowering = threat.</li>
+      <li><strong>Head lowering with bill-pointing forward:</strong> submissive or appeasing gesture, used by subordinates approaching dominants.</li>
+      <li><strong>Wing spreading:</strong> territorial display or threat toward competitors at food sites.</li>
+      <li><strong>Tail fanning:</strong> spreads the tail feathers, increasing apparent size; used in display contexts.</li>
+      <li><strong>Feather fluffing:</strong> in cold weather = thermoregulation; during pair contact = relaxed affiliation signal.</li>
+    </ul>
+    <p>These signals can be combined with vocalisations in complex sequences — a threatening raven may simultaneously raise hackles, lower head, produce a knocking call, and fan its tail, creating a composite signal that conveys both dominance and willingness to escalate.</p>
+  </section>
+
+  <section class="qa-section">
+    <h2>Gaze Monitoring and Joint Attention</h2>
+    <p><strong class="claim-science">[science]</strong> Ravens monitor the gaze of other ravens and of humans with high precision. Studies have documented:<sup><a href="#src-2">2</a></sup></p>
+    <ul>
+      <li>Ravens follow the gaze direction of a partner to objects or locations outside both birds' immediate view (gaze-following behind barriers).</li>
+      <li>Ravens use another raven's gaze direction as an informational cue about what is worth attending to — a form of joint attention previously documented primarily in primates.</li>
+      <li>When caching food, ravens check whether observers are watching and assess the observer's specific line of sight — not merely presence, but visual access.</li>
+    </ul>
+    <p>Gaze monitoring in ravens is both a communicative act (directing attention) and a defensive one (checking whether one's own actions are observed). This dual function reflects the complex social environment in which raven communication evolved.</p>
+  </section>
+
+  <section class="qa-section">
+    <h2>Related Pages</h2>
+    <ul>
+      <li><a href="/behaviour/raven-vocalisation/">Raven vocalisation in detail</a></li>
+      <li><a href="/questions/do-ravens-have-a-language/">Do ravens have a language?</a></li>
+      <li><a href="/behaviour/raven-mimicry-and-talking/">Raven mimicry and talking</a></li>
+      <li><a href="/behaviour/raven-cognition-theory-of-mind/">Raven theory of mind</a></li>
+    </ul>
+  </section>
+
+  <section class="qa-faq qa-section" aria-labelledby="faq-h2">
+    <h2 id="faq-h2">Frequently Asked Questions</h2>
+    {faq.map(item => (
+      <details class="qa-faq-item">
+        <summary class="qa-faq-q">{item.q}</summary>
+        <p class="qa-faq-a">{item.a}</p>
+      </details>
+    ))}
+  </section>
+
+  <section class="qa-sources qa-section" aria-labelledby="src-h2">
+    <h2 id="src-h2">Sources</h2>
+    <ol class="qa-src-list">
+      <li id="src-1">Boarman, W.I. & Heinrich, B. (1999). Common Raven (<em>Corvus corax</em>). In Poole, A. (ed.), <em>The Birds of North America</em>, No. 476. Cornell Lab of Ornithology. — raven vocal repertoire, body language, hackle signals, alarm calls.</li>
+      <li id="src-2">Pika, S. & Bugnyar, T. (2011). The use of referential gestures in ravens (<em>Corvus corax</em>) in the wild. <em>Nature Communications</em>, 2, 560. — bill-pointing gestures; referential communication; joint attention; gaze-following in ravens.</li>
+    </ol>
+    <p class="qa-claim-note"><strong class="claim-science">[science]</strong> peer-reviewed data</p>
+  </section>
+
+</article>
+</BaseLayout>
+
+<style>
+  .qa-page { max-width: 820px; margin: 0 auto; padding: 2rem 1.25rem 4rem; color: var(--iron-ink, #e8e4d8); font-family: 'Inter', sans-serif; line-height: 1.72; }
+  .qa-breadcrumb ol { display: flex; flex-wrap: wrap; gap: .25rem; list-style: none; padding: 0; margin: 0 0 2rem; font-size: .8rem; color: var(--ink-soft, #8a8070); }
+  .qa-breadcrumb a { color: var(--gold-500, #d4ae5a); text-decoration: none; }
+  .qa-pillar { font-size: .72rem; letter-spacing: .12em; text-transform: uppercase; color: var(--gold-500, #d4ae5a); margin: 0 0 .4rem; }
+  .qa-page h1 { font-family: 'Cormorant Garamond', serif; font-size: clamp(2rem, 5vw, 3rem); font-weight: 700; color: #fff; margin: 0 0 2rem; line-height: 1.1; }
+  .qa-snippet { background: rgba(212,174,90,.08); border-left: 3px solid var(--gold-500, #d4ae5a); border-radius: 0 6px 6px 0; padding: 1rem 1.25rem; margin-bottom: 2.5rem; font-size: 1.03rem; }
+  .qa-section { margin-bottom: 2.5rem; }
+  .qa-section h2 { font-family: 'Cormorant Garamond', serif; font-size: 1.5rem; font-weight: 600; color: #fff; margin: 0 0 .9rem; border-bottom: 1px solid rgba(212,174,90,.2); padding-bottom: .4rem; }
+  .qa-section p { margin: 0 0 1rem; font-size: .97rem; }
+  .qa-section ul { padding-left: 1.25rem; margin: 0 0 1rem; }
+  .qa-section li { margin-bottom: .4rem; font-size: .95rem; }
+  .claim-science { color: #7ab9e0; font-style: normal; font-size: .78rem; }
+  a[href] { color: var(--gold-500, #d4ae5a); }
+  .qa-faq-item { border-bottom: 1px solid rgba(255,255,255,.07); }
+  .qa-faq-q { cursor: pointer; padding: .9rem 0; font-size: .97rem; font-weight: 500; color: #fff; list-style: none; }
+  .qa-faq-q::before { content: '+ '; color: var(--gold-500, #d4ae5a); font-weight: 700; }
+  details[open] .qa-faq-q::before { content: '− '; }
+  .qa-faq-a { margin: 0 0 1rem; line-height: 1.7; font-size: .93rem; color: var(--ink-soft, #c8c0b0); }
+  .qa-src-list { padding-left: 1.25rem; margin: 0 0 1rem; }
+  .qa-src-list li { margin-bottom: .6rem; font-size: .82rem; color: var(--ink-soft, #8a8070); line-height: 1.6; }
+  .qa-claim-note { font-size: .78rem; color: var(--ink-soft, #605848); border-top: 1px solid rgba(255,255,255,.06); padding-top: .75rem; }
+</style>

@@ -1,0 +1,149 @@
+---
+/**
+ * Behaviour — Raven deception and tactical deception
+ * BEH·23
+ * Primary keyword: raven deception
+ * Secondary: do ravens deceive, raven tactical deception, raven manipulation
+ */
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const title       = 'Raven Deception: Tactical Deception and Manipulative Behaviour';
+const description = 'Ravens actively deceive competitors — performing fake cache events, monitoring whether competitors are watching, and creating false impressions to protect food. This chapter examines the evidence for intentional deception in ravens and what it implies about raven cognition.';
+const path        = '/behaviour/raven-deception-and-tactical-deception/';
+
+const breadcrumbs = [
+  { name: 'Home',      url: '/' },
+  { name: 'Behaviour', url: '/behaviour/' },
+  { name: 'Raven Deception', url: path },
+];
+
+const faq = [
+  { q: 'Do ravens deliberately deceive other ravens?', a: 'Yes — ravens perform behaviours that function to create false beliefs in competitors. The clearest examples involve caching: ravens observed caching food will cache it again (recache) elsewhere when they know a competitor has seen the original cache. Some ravens perform fake caching — going through the motions of caching food (digging, covering) without actually placing food — apparently to mislead competitors into wasting time searching a false location. These behaviours suggest ravens model others\' mental states (theory of mind) and act to manipulate those states.' },
+  { q: 'Are ravens more deceptive than crows?', a: 'Deceptive caching and false caching behaviours have been documented in both ravens and in Western Scrub-Jays (now California Scrub-Jays). The scrub-jay research by Clayton\'s group was the first rigorous experimental demonstration; Bugnyar\'s parallel work documented similar behaviours in ravens. It is not established that ravens are more deceptive than crows or jays — all these corvids show evidence of tactical deception in caching contexts, suggesting it is a corvid family-level capability rather than unique to ravens.' },
+  { q: 'What is a "fake cache" in ravens?', a: 'A fake cache (or "false cache", "empty cache") is when a raven goes through the physical motions of caching food — pecking at the ground, pushing substrate over the cache site, adopting the characteristic cache-covering posture — but does not actually deposit any food. The purpose appears to be misdirection: a watching competitor who follows the caching raven will find nothing at the false cache site, while the real food has been hidden elsewhere. This behaviour has been observed in ravens in Bugnyar\'s captive studies and in corvids more broadly.' },
+];
+---
+
+<BaseLayout title={title} description={description} path={path} ogType="article"
+  datePublished="2026-11-07" dateModified="2026-11-07"
+  breadcrumbs={breadcrumbs} faq={faq} pageType="Article">
+
+<article class="qa-page">
+
+  <nav class="qa-breadcrumb" aria-label="Breadcrumb">
+    <ol>
+      {breadcrumbs.map((b, i) => (
+        <li>
+          {i < breadcrumbs.length - 1
+            ? <><a href={b.url}>{b.name}</a><span aria-hidden="true"> › </span></>
+            : <span aria-current="page">{b.name}</span>}
+        </li>
+      ))}
+    </ol>
+  </nav>
+
+  <header class="qa-header">
+    <p class="qa-pillar">Behaviour · BEH·23</p>
+    <h1>Raven Deception: Tactical Deception and Manipulative Behaviour</h1>
+  </header>
+
+  <section class="qa-snippet" aria-label="Direct answer">
+    <p><strong class="claim-science">[science]</strong> Ravens engage in tactical deception — performing fake cache events, recaching when observed, and monitoring whether competitors can see them — to protect food from theft. These behaviours require theory of mind (modelling others' knowledge states) and represent intentional manipulation of a competitor's beliefs. Deceptive caching in corvids is one of the strongest behavioural evidence bases for theory of mind outside great apes.</p>
+  </section>
+
+  <section class="qa-section">
+    <h2>Recaching: Moving Food When Observed</h2>
+    <p><strong class="claim-science">[science]</strong> The foundational demonstration of raven deceptive intelligence is recaching behaviour. When a raven caches food and subsequently discovers that a competitor observed the event, it moves the food to a new location. Key features of this behaviour documented by Bugnyar & Heinrich (2005):<sup><a href="#src-1">1</a></sup></p>
+    <ul>
+      <li>Ravens distinguish between observed and unobserved caching — recaching preferentially when they know they were watched.</li>
+      <li>Ravens distinguish between <em>who</em> saw them cache — recaching more in the presence of dominant competitors than subordinate ones (who present less theft risk).</li>
+      <li>Ravens distinguish between which specific competitor is present and select different cache sites based on what different individuals could have seen.</li>
+    </ul>
+    <p>This selectivity in recaching — based on who was watching rather than simply whether caching occurred — is evidence of individual-specific theory of mind: "X knows where I hid this food, so I should move it; Y was not watching, so Y does not know."</p>
+  </section>
+
+  <section class="qa-section">
+    <h2>False Caching</h2>
+    <p><strong class="claim-science">[science]</strong> Beyond recaching, some ravens perform false (empty) cache events — going through all the physical motions of caching without depositing food. This behaviour has been observed in captive ravens and in closely related California Scrub-Jays (Clayton's group, Cambridge). The false cache appears to function as misdirection: a competitor who follows the apparent cacher to the site finds nothing, wasting time and energy.<sup><a href="#src-1">1</a></sup></p>
+    <p>False caching is a more cognitively demanding behaviour than recaching: recaching requires only monitoring whether one was observed; false caching requires actively constructing a false impression in another's mind — creating a belief one knows to be false. This is the hallmark of deception in human psychology.</p>
+  </section>
+
+  <section class="qa-section">
+    <h2>Monitoring for Observation</h2>
+    <p><strong class="claim-science">[science]</strong> Ravens actively monitor whether competitors can see them before caching:<sup><a href="#src-1">1</a></sup></p>
+    <ul>
+      <li>They turn to face potential observers before caching.</li>
+      <li>They select cache sites where barriers (rocks, vegetation) block competitors' sightlines.</li>
+      <li>They delay caching until a competitor is distracted or has looked away.</li>
+      <li>They move to the far side of a barrier from a potential observer before caching.</li>
+    </ul>
+    <p>All these behaviours require a model of what another individual can and cannot see — a form of perspective-taking that is diagnostic of theory of mind. The raven's ability to reason about another's visual perspective, not just its own, places it in a small elite of species demonstrating this capacity.</p>
+  </section>
+
+  <section class="qa-section">
+    <h2>Implications for Theory of Mind</h2>
+    <p><strong class="claim-science">[science]</strong> "Theory of mind" — understanding that others have mental states (beliefs, desires, knowledge) distinct from one's own — is one of the most intensely debated questions in comparative cognition. The raven evidence for theory of mind is now substantial:<sup><a href="#src-1">1</a></sup><sup><a href="#src-2">2</a></sup></p>
+    <ul>
+      <li>Recaching based on who watched (knowledge attribution to individuals)</li>
+      <li>Gaze following (tracking what others are looking at)</li>
+      <li>False caching (creating false beliefs)</li>
+      <li>Differential behaviour toward dominant vs subordinate individuals (prediction of others' motivations)</li>
+    </ul>
+    <p>Not all researchers accept that these behaviours require a full theory of mind rather than sophisticated associative learning. The debate continues, but ravens represent the strongest non-primate case for theory of mind alongside dolphins and perhaps elephants.</p>
+  </section>
+
+  <section class="qa-section">
+    <h2>Related Pages</h2>
+    <ul>
+      <li><a href="/behaviour/raven-cognition-theory-of-mind/">Raven cognition: theory of mind</a></li>
+      <li><a href="/behaviour/raven-food-caching/">Raven food caching</a></li>
+      <li><a href="/behaviour/raven-insight-problem-solving/">Raven problem solving</a></li>
+      <li><a href="/questions/how-smart-are-ravens/">How smart are ravens?</a></li>
+    </ul>
+  </section>
+
+  <section class="qa-faq qa-section" aria-labelledby="faq-h2">
+    <h2 id="faq-h2">Frequently Asked Questions</h2>
+    {faq.map(item => (
+      <details class="qa-faq-item">
+        <summary class="qa-faq-q">{item.q}</summary>
+        <p class="qa-faq-a">{item.a}</p>
+      </details>
+    ))}
+  </section>
+
+  <section class="qa-sources qa-section" aria-labelledby="src-h2">
+    <h2 id="src-h2">Sources</h2>
+    <ol class="qa-src-list">
+      <li id="src-1">Bugnyar, T. & Heinrich, B. (2005). Ravens, <em>Corvus corax</em>, differentiate between knowledgeable and ignorant competitors. <em>Proceedings of the Royal Society B</em>, 272, 1641–1646. — recaching based on observer identity, perspective-taking in ravens.</li>
+      <li id="src-2">Bugnyar, T. & Kotrschal, K. (2002). Observational learning and the raiding of food caches in ravens (<em>Corvus corax</em>): is it 'tactical' deception? <em>Animal Behaviour</em>, 64(2), 185–195. — false caching, deceptive caching strategies.</li>
+    </ol>
+    <p class="qa-claim-note"><strong class="claim-science">[science]</strong> peer-reviewed data</p>
+  </section>
+
+</article>
+</BaseLayout>
+
+<style>
+  .qa-page { max-width: 820px; margin: 0 auto; padding: 2rem 1.25rem 4rem; color: var(--iron-ink, #e8e4d8); font-family: 'Inter', sans-serif; line-height: 1.72; }
+  .qa-breadcrumb ol { display: flex; flex-wrap: wrap; gap: .25rem; list-style: none; padding: 0; margin: 0 0 2rem; font-size: .8rem; color: var(--ink-soft, #8a8070); }
+  .qa-breadcrumb a { color: var(--gold-500, #d4ae5a); text-decoration: none; }
+  .qa-pillar { font-size: .72rem; letter-spacing: .12em; text-transform: uppercase; color: var(--gold-500, #d4ae5a); margin: 0 0 .4rem; }
+  .qa-page h1 { font-family: 'Cormorant Garamond', serif; font-size: clamp(2rem, 5vw, 3rem); font-weight: 700; color: #fff; margin: 0 0 2rem; line-height: 1.1; }
+  .qa-snippet { background: rgba(212,174,90,.08); border-left: 3px solid var(--gold-500, #d4ae5a); border-radius: 0 6px 6px 0; padding: 1rem 1.25rem; margin-bottom: 2.5rem; font-size: 1.03rem; }
+  .qa-section { margin-bottom: 2.5rem; }
+  .qa-section h2 { font-family: 'Cormorant Garamond', serif; font-size: 1.5rem; font-weight: 600; color: #fff; margin: 0 0 .9rem; border-bottom: 1px solid rgba(212,174,90,.2); padding-bottom: .4rem; }
+  .qa-section p { margin: 0 0 1rem; font-size: .97rem; }
+  .qa-section ul { padding-left: 1.25rem; margin: 0 0 1rem; }
+  .qa-section li { margin-bottom: .4rem; font-size: .95rem; }
+  .claim-science { color: #7ab9e0; font-style: normal; font-size: .78rem; }
+  a[href] { color: var(--gold-500, #d4ae5a); }
+  .qa-faq-item { border-bottom: 1px solid rgba(255,255,255,.07); }
+  .qa-faq-q { cursor: pointer; padding: .9rem 0; font-size: .97rem; font-weight: 500; color: #fff; list-style: none; }
+  .qa-faq-q::before { content: '+ '; color: var(--gold-500, #d4ae5a); font-weight: 700; }
+  details[open] .qa-faq-q::before { content: '− '; }
+  .qa-faq-a { margin: 0 0 1rem; line-height: 1.7; font-size: .93rem; color: var(--ink-soft, #c8c0b0); }
+  .qa-src-list { padding-left: 1.25rem; margin: 0 0 1rem; }
+  .qa-src-list li { margin-bottom: .6rem; font-size: .82rem; color: var(--ink-soft, #8a8070); line-height: 1.6; }
+  .qa-claim-note { font-size: .78rem; color: var(--ink-soft, #605848); border-top: 1px solid rgba(255,255,255,.06); padding-top: .75rem; }
+</style>

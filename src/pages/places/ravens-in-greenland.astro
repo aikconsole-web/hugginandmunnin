@@ -1,0 +1,148 @@
+---
+/**
+ * Places — Ravens in Greenland
+ * PLC·10
+ * Primary keyword: ravens in greenland
+ * Secondary: greenland raven, arctic raven, raven greenland subspecies
+ */
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const title       = 'Ravens in Greenland: Arctic Residents at the World\'s Edge';
+const description = 'Ravens are among the very few passerines that survive year-round in Greenland — one of the world\'s harshest environments. This page examines how Greenland ravens survive the polar winter, their role in Inuit culture, and what their presence at the extreme of their range reveals about raven adaptability.';
+const path        = '/places/ravens-in-greenland/';
+
+const breadcrumbs = [
+  { name: 'Home',   url: '/' },
+  { name: 'Places', url: '/places/' },
+  { name: 'Ravens in Greenland', url: path },
+];
+
+const faq = [
+  { q: 'Are there ravens in Greenland?', a: 'Yes — the common raven (Corvus corax varius in some classifications) is a year-round resident of Greenland, one of the very few passerine birds to overwinter in the country\'s extreme arctic and subarctic climate. Ravens occur along Greenland\'s west coast from the southern tip to well above the Arctic Circle, and are found on the east coast as well. They are most abundant in areas near human settlements — particularly around the dog-sledding communities and food-processing sites that provide reliable food supplementation in winter.' },
+  { q: 'How do ravens survive Greenland winters?', a: 'Greenland ravens survive the polar winter through several key adaptations: communal roosting in sheltered cliffs and buildings (body heat sharing reduces energy expenditure); association with human settlements (traditional Greenlandic communities and modern towns both provide food waste); exploitation of marine mammals — raven presence at polar bear kills and seal carcasses on the sea ice is documented; cache recovery (recovering fat-rich food cached in autumn); and extreme cold tolerance from feather insulation and metabolic adaptation. At the darkest period (winter solstice), Greenland ravens may have only a few hours of twilight, requiring fat-efficient roosting and minimal activity.' },
+  { q: 'What is the raven called in Greenlandic (Kalaallisut)?', a: 'The raven is called tulugaq in Kalaallisut (Greenlandic), the Inuit language spoken in Greenland. This word is cognate with the Inuktitut tulugaq (raven) used across the Canadian Arctic and closely related to words for raven across all Inuit-Yupik languages — reflecting the raven\'s consistent presence and cultural significance across the entire circumpolar Inuit world. The raven appears in Greenlandic stories and oral tradition as a creator figure, a trickster, and a companion of hunters.' },
+];
+---
+
+<BaseLayout title={title} description={description} path={path} ogType="article"
+  datePublished="2026-11-08" dateModified="2026-11-08"
+  breadcrumbs={breadcrumbs} faq={faq} pageType="Article">
+
+<article class="qa-page">
+
+  <nav class="qa-breadcrumb" aria-label="Breadcrumb">
+    <ol>
+      {breadcrumbs.map((b, i) => (
+        <li>
+          {i < breadcrumbs.length - 1
+            ? <><a href={b.url}>{b.name}</a><span aria-hidden="true"> › </span></>
+            : <span aria-current="page">{b.name}</span>}
+        </li>
+      ))}
+    </ol>
+  </nav>
+
+  <header class="qa-header">
+    <p class="qa-pillar">Places · PLC·10</p>
+    <h1>Ravens in Greenland: Arctic Residents at the World's Edge</h1>
+  </header>
+
+  <section class="qa-snippet" aria-label="Direct answer">
+    <p><strong class="claim-science">[science]</strong> Common ravens are year-round residents of Greenland — one of the very few passerines capable of surviving the polar winter. They concentrate near human settlements in winter for food supplementation, exploit marine mammal carcasses on sea ice, and share the tulugaq identity with ravens across the circumpolar Inuit world. Greenland represents the extreme northern limit of raven year-round residency.</p>
+  </section>
+
+  <section class="qa-section">
+    <h2>Range and Subspecies</h2>
+    <p><strong class="claim-science">[science]</strong> Common ravens in Greenland are sometimes assigned to the subspecies <em>Corvus corax varius</em> — a distinctive form historically breeding in Iceland, the Faroe Islands, and Greenland, characterised by occasional pied (black and white) plumage variants (the <em>morpha leucophaeus</em> form, now extremely rare). The normal all-black form dominates Greenland's current population.<sup><a href="#src-1">1</a></sup></p>
+    <p>Ravens occur along both coasts of Greenland:</p>
+    <ul>
+      <li><strong>West Greenland:</strong> the most populated coast, with raven populations from Nanortalik in the south to Qaanaaq (Thule) in the high arctic. Ravens are most abundant around Nuuk (the capital) and larger settlements.</li>
+      <li><strong>East Greenland:</strong> less populated by humans and ravens both; small populations in the southern part of the coast, more sparsely distributed north.</li>
+      <li><strong>Ice sheet interior:</strong> not inhabited by ravens except as occasional overflying individuals; no food resources exist in the polar desert interior.</li>
+    </ul>
+  </section>
+
+  <section class="qa-section">
+    <h2>Winter Survival Strategies</h2>
+    <p><strong class="claim-science">[science]</strong> Surviving a Greenland winter requires extreme energy economy and reliable food access — challenges ravens meet through:<sup><a href="#src-1">1</a></sup></p>
+    <ul>
+      <li><strong>Human association:</strong> traditional Greenlandic hunters left waste from seals, walrus, and marine mammals; modern settlements continue to provide food waste. Ravens have cohabited with Greenlandic humans for millennia, and this association is a primary winter survival mechanism.</li>
+      <li><strong>Sea-ice carrion:</strong> polar bears kill seals and walrus on sea ice, leaving carcass remnants; ravens exploit these kills. The polar bear-raven relationship in the High Arctic parallels the wolf-raven relationship further south.</li>
+      <li><strong>Cache recovery:</strong> autumn food caching and winter recovery is documented in boreal and subarctic populations; Greenland ravens likely cache fat-rich food during the brief productive summer for winter use.</li>
+      <li><strong>Communal roosting:</strong> sheltering together in cliff alcoves, abandoned buildings, or coastal structures reduces heat loss on the coldest nights.</li>
+    </ul>
+  </section>
+
+  <section class="qa-section">
+    <h2>Ravens in Greenlandic Inuit Culture</h2>
+    <p><strong class="claim-lore">[lore]</strong> The raven (tulugaq) in Greenlandic tradition shares the circumpolar character found across Inuit cultures — a figure simultaneously useful, mischievous, and spiritually significant.<sup><a href="#src-2">2</a></sup></p>
+    <p>In Greenlandic oral tradition:</p>
+    <ul>
+      <li>Ravens appear as trickster figures in stories — clever, self-interested, but sometimes beneficent.</li>
+      <li>The raven's ability to find food sources and its habit of following hunters connected it to luck and provision in hunting narratives.</li>
+      <li>Ravens calling near a settlement could be interpreted as a sign of incoming hunters or animals — a practical omen based on the raven's real ability to track and follow human movement.</li>
+      <li>The pied raven variants (<em>varius</em> form) were historically noted by European visitors and may have had specific significance — unusually coloured animals often attract special attention in Indigenous traditions.</li>
+    </ul>
+  </section>
+
+  <section class="qa-section">
+    <h2>Greenland Ravens and Climate Change</h2>
+    <p><strong class="claim-science">[science]</strong> As the Arctic warms and Greenland's ice sheet retreats, the raven's situation in Greenland is shifting. Warmer conditions are expanding the range of potential prey and food sources; reduced sea ice affects the polar bear kills that provide carrion; and changing human settlement patterns alter the food supplementation that is critical for winter survival. Raven population monitoring in Greenland is limited compared to temperate regions, but long-term changes are expected as the ecosystem transforms.<sup><a href="#src-1">1</a></sup></p>
+  </section>
+
+  <section class="qa-section">
+    <h2>Related Pages</h2>
+    <ul>
+      <li><a href="/places/ravens-in-alaska/">Ravens in Alaska</a></li>
+      <li><a href="/places/ravens-in-iceland/">Ravens in Iceland</a></li>
+      <li><a href="/lore/world/the-raven-in-inuit-and-yupik-culture/">Ravens in Inuit and Yupik culture</a></li>
+      <li><a href="/questions/how-do-ravens-survive-winter/">How do ravens survive winter?</a></li>
+    </ul>
+  </section>
+
+  <section class="qa-faq qa-section" aria-labelledby="faq-h2">
+    <h2 id="faq-h2">Frequently Asked Questions</h2>
+    {faq.map(item => (
+      <details class="qa-faq-item">
+        <summary class="qa-faq-q">{item.q}</summary>
+        <p class="qa-faq-a">{item.a}</p>
+      </details>
+    ))}
+  </section>
+
+  <section class="qa-sources qa-section" aria-labelledby="src-h2">
+    <h2 id="src-h2">Sources</h2>
+    <ol class="qa-src-list">
+      <li id="src-1">del Hoyo, J., Elliott, A. & Christie, D.A. (eds.) (2009). <em>Handbook of the Birds of the World</em>, Vol. 14. Lynx Edicions. — common raven subspecies; Greenland range; <em>varius</em> subspecies; arctic population ecology.</li>
+      <li id="src-2">Fitzhugh, W.W. & Kaplan, S.A. (1982). <em>Inua: Spirit World of the Bering Sea Eskimo</em>. Smithsonian Institution Press. — circumpolar Inuit raven tradition; tulugaq mythology; raven and hunter relationship.</li>
+    </ol>
+    <p class="qa-claim-note"><strong class="claim-science">[science]</strong> peer-reviewed data · <strong class="claim-lore">[lore]</strong> named cultural/historical source</p>
+  </section>
+
+</article>
+</BaseLayout>
+
+<style>
+  .qa-page { max-width: 820px; margin: 0 auto; padding: 2rem 1.25rem 4rem; color: var(--iron-ink, #e8e4d8); font-family: 'Inter', sans-serif; line-height: 1.72; }
+  .qa-breadcrumb ol { display: flex; flex-wrap: wrap; gap: .25rem; list-style: none; padding: 0; margin: 0 0 2rem; font-size: .8rem; color: var(--ink-soft, #8a8070); }
+  .qa-breadcrumb a { color: var(--gold-500, #d4ae5a); text-decoration: none; }
+  .qa-pillar { font-size: .72rem; letter-spacing: .12em; text-transform: uppercase; color: var(--gold-500, #d4ae5a); margin: 0 0 .4rem; }
+  .qa-page h1 { font-family: 'Cormorant Garamond', serif; font-size: clamp(2rem, 5vw, 3rem); font-weight: 700; color: #fff; margin: 0 0 2rem; line-height: 1.1; }
+  .qa-snippet { background: rgba(212,174,90,.08); border-left: 3px solid var(--gold-500, #d4ae5a); border-radius: 0 6px 6px 0; padding: 1rem 1.25rem; margin-bottom: 2.5rem; font-size: 1.03rem; }
+  .qa-section { margin-bottom: 2.5rem; }
+  .qa-section h2 { font-family: 'Cormorant Garamond', serif; font-size: 1.5rem; font-weight: 600; color: #fff; margin: 0 0 .9rem; border-bottom: 1px solid rgba(212,174,90,.2); padding-bottom: .4rem; }
+  .qa-section p { margin: 0 0 1rem; font-size: .97rem; }
+  .qa-section ul { padding-left: 1.25rem; margin: 0 0 1rem; }
+  .qa-section li { margin-bottom: .4rem; font-size: .95rem; }
+  .claim-science { color: #7ab9e0; font-style: normal; font-size: .78rem; }
+  .claim-lore { color: #c49a3c; font-style: normal; font-size: .78rem; }
+  a[href] { color: var(--gold-500, #d4ae5a); }
+  .qa-faq-item { border-bottom: 1px solid rgba(255,255,255,.07); }
+  .qa-faq-q { cursor: pointer; padding: .9rem 0; font-size: .97rem; font-weight: 500; color: #fff; list-style: none; }
+  .qa-faq-q::before { content: '+ '; color: var(--gold-500, #d4ae5a); font-weight: 700; }
+  details[open] .qa-faq-q::before { content: '− '; }
+  .qa-faq-a { margin: 0 0 1rem; line-height: 1.7; font-size: .93rem; color: var(--ink-soft, #c8c0b0); }
+  .qa-src-list { padding-left: 1.25rem; margin: 0 0 1rem; }
+  .qa-src-list li { margin-bottom: .6rem; font-size: .82rem; color: var(--ink-soft, #8a8070); line-height: 1.6; }
+  .qa-claim-note { font-size: .78rem; color: var(--ink-soft, #605848); border-top: 1px solid rgba(255,255,255,.06); padding-top: .75rem; }
+</style>

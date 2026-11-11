@@ -1,0 +1,150 @@
+---
+/**
+ * Behaviour — Raven insight and problem solving
+ * BEH·22
+ * Primary keyword: raven problem solving
+ * Secondary: raven insight learning, raven puzzle solving, raven intelligence experiments
+ */
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const title       = 'Raven Problem Solving: Insight, Tools, and Flexible Intelligence';
+const description = 'Ravens solve novel problems through insight — not just trial-and-error. This chapter examines landmark experiments demonstrating raven problem-solving: string-pulling, trap-tube tasks, metatool use, and future planning with physical objects.';
+const path        = '/behaviour/raven-insight-problem-solving/';
+
+const breadcrumbs = [
+  { name: 'Home',      url: '/' },
+  { name: 'Behaviour', url: '/behaviour/' },
+  { name: 'Raven Problem Solving', url: path },
+];
+
+const faq = [
+  { q: 'Can ravens solve problems?', a: 'Yes — ravens demonstrate problem-solving that goes beyond simple trial-and-error learning. In classic string-pulling tasks, ravens retrieve hanging food by pulling up a string in a series of step-hold-step manoeuvres, often succeeding on the first attempt (suggesting some planning rather than purely iterative learning). In trap-tube tasks, they avoid retrieving food through a hole that leads to a trap. In Kabadayi & Osvath (2017) planning studies, ravens selected the correct tool for a future task from an array of objects, showing prospective cognition comparable to great apes.' },
+  { q: 'Have ravens been observed using tools in the wild?', a: 'Direct tool use in wild ravens is not firmly established by experimental standards — unlike New Caledonian Crows, which routinely make and use stick tools to extract invertebrates from wood. However, wild ravens have been observed manipulating sticks, stones, and other objects in ways that could be precursors to tool use, and captive ravens can be trained to use tools. The absence of confirmed wild tool use in ravens probably reflects ecological opportunity rather than cognitive inability — ravens are dietary generalists with less need for the precision extraction tasks that drive crow tool use.' },
+  { q: 'Are ravens better problem solvers than crows?', a: 'Ravens and crows (and corvids generally) perform comparably in most cognitive tests, with performance varying by task type. New Caledonian Crows excel at causal reasoning tasks involving physical manipulation; ravens tend to excel at social cognition tasks (theory of mind, deception detection). The 2020 comparative study by Güntürkün et al. showed raven performance on a cognitive battery matching chimpanzees and orangutans, though direct raven vs. crow comparisons in matched tasks are limited. It is more accurate to say ravens and crows are cognitively comparable but specialised differently, rather than one being "better" overall.' },
+];
+---
+
+<BaseLayout title={title} description={description} path={path} ogType="article"
+  datePublished="2026-11-07" dateModified="2026-11-07"
+  breadcrumbs={breadcrumbs} faq={faq} pageType="Article">
+
+<article class="qa-page">
+
+  <nav class="qa-breadcrumb" aria-label="Breadcrumb">
+    <ol>
+      {breadcrumbs.map((b, i) => (
+        <li>
+          {i < breadcrumbs.length - 1
+            ? <><a href={b.url}>{b.name}</a><span aria-hidden="true"> › </span></>
+            : <span aria-current="page">{b.name}</span>}
+        </li>
+      ))}
+    </ol>
+  </nav>
+
+  <header class="qa-header">
+    <p class="qa-pillar">Behaviour · BEH·22</p>
+    <h1>Raven Problem Solving: Insight, Tools, and Flexible Intelligence</h1>
+  </header>
+
+  <section class="qa-snippet" aria-label="Direct answer">
+    <p><strong class="claim-science">[science]</strong> Ravens demonstrate problem-solving through insight — selecting correct solutions without extended trial-and-error, using tools, understanding causality in physical tasks, and planning for future contingencies. Key experiments include string-pulling (1998+), trap-tube reasoning, metatool use, and prospective tool selection (Kabadayi & Osvath, 2017). Their problem-solving performance is comparable to that of great apes.</p>
+  </section>
+
+  <section class="qa-section">
+    <h2>String Pulling</h2>
+    <p><strong class="claim-science">[science]</strong> String pulling — retrieving food attached to a hanging string by alternately pulling up the string and stepping on it — requires coordination and an understanding of the food-string connection. Heinrich and colleagues first described spontaneous string-pulling by naive ravens in the 1990s. Key findings:<sup><a href="#src-1">1</a></sup></p>
+    <ul>
+      <li>Some ravens solved the string-pulling task on first presentation without prior exposure or trial-and-error.</li>
+      <li>Ravens distinguished between connected and disconnected strings (not pulling unattached strings), demonstrating understanding of the physical relationship.</li>
+      <li>Multi-string variants (food attached to only one of several parallel strings) were solved correctly, showing ravens could select the relevant string rather than pulling any available string.</li>
+    </ul>
+    <p>String-pulling has since been tested in dozens of bird and mammal species; corvids consistently outperform most species including many primates.</p>
+  </section>
+
+  <section class="qa-section">
+    <h2>Trap-Tube and Causal Reasoning</h2>
+    <p><strong class="claim-science">[science]</strong> The trap-tube task presents a horizontal tube with food inside and a trap (hole) in the floor of the tube. The correct solution is to push the food away from the trap, not toward it. Ravens succeed at this task, and importantly, can transfer the solution principle to novel trap configurations — suggesting causal understanding of why the trap is a problem rather than simply memorised responses to specific stimuli.<sup><a href="#src-2">2</a></sup></p>
+    <p>This causal reasoning extends to physical causality more broadly: ravens understand that an opaque container might hide food even when they did not observe the hiding; they predict the trajectory of moving objects; and they use "functional fixedness" — evaluating whether an object can serve a needed function.</p>
+  </section>
+
+  <section class="qa-section">
+    <h2>Future Planning: The Kabadayi & Osvath Study</h2>
+    <p><strong class="claim-science">[science]</strong> The 2017 study by Kabadayi & Osvath in <em>Science</em> demonstrated that ravens can plan for future contingencies in a way comparable to great apes — and potentially exceeding some primate species.<sup><a href="#src-3">3</a></sup></p>
+    <p>In the experiment, ravens were:</p>
+    <ul>
+      <li>Shown a box that could be opened only with a specific tool.</li>
+      <li>Presented with an array of objects including the correct tool but no box.</li>
+      <li>After a delay (up to 17 hours), presented with the box — and they selected the correct tool from the array.</li>
+    </ul>
+    <p>Ravens also traded tokens for food rewards with a human partner — planning a future exchange. These results demonstrated that ravens (like great apes but unlike most other animals tested) can inhibit immediate reward to plan for a future contingency, and select appropriate objects for future use.</p>
+  </section>
+
+  <section class="qa-section">
+    <h2>Insight vs Trial-and-Error</h2>
+    <p><strong class="claim-science">[science]</strong> "Insight" in comparative cognition refers to solving novel problems without extended trial-and-error — suggesting some internal modelling of the problem rather than purely behavioural conditioning. Ravens show several hallmarks of insight learning:<sup><a href="#src-1">1</a></sup></p>
+    <ul>
+      <li>Sudden solution (solving on the first or second attempt, not after many failures).</li>
+      <li>Pausing before action (observing the problem before attempting).</li>
+      <li>Transfer to novel variants of the problem.</li>
+      <li>Resistance to distraction from salient but irrelevant features.</li>
+    </ul>
+    <p>Not all raven problem-solving involves insight — ravens also learn through trial-and-error, social learning, and conditioning. The significance is that ravens possess the additional capacity for insight-based learning, which is rare in the animal kingdom.</p>
+  </section>
+
+  <section class="qa-section">
+    <h2>Related Pages</h2>
+    <ul>
+      <li><a href="/behaviour/raven-cognition-theory-of-mind/">Raven cognition: theory of mind</a></li>
+      <li><a href="/behaviour/raven-planning-ahead/">Raven planning ahead</a></li>
+      <li><a href="/behaviour/raven-food-caching/">Raven food caching</a></li>
+      <li><a href="/questions/how-smart-are-ravens/">How smart are ravens?</a></li>
+    </ul>
+  </section>
+
+  <section class="qa-faq qa-section" aria-labelledby="faq-h2">
+    <h2 id="faq-h2">Frequently Asked Questions</h2>
+    {faq.map(item => (
+      <details class="qa-faq-item">
+        <summary class="qa-faq-q">{item.q}</summary>
+        <p class="qa-faq-a">{item.a}</p>
+      </details>
+    ))}
+  </section>
+
+  <section class="qa-sources qa-section" aria-labelledby="src-h2">
+    <h2 id="src-h2">Sources</h2>
+    <ol class="qa-src-list">
+      <li id="src-1">Heinrich, B. & Bugnyar, T. (2005). Testing problem solving in ravens: string-pulling to obtain food. <em>Ethology</em>, 111(10), 962–976. — string-pulling experiments, insight learning in ravens.</li>
+      <li id="src-2">Seed, A.M., Tebbich, S., Emery, N.J. & Clayton, N.S. (2006). Investigating physical cognition in rooks, <em>Corvus frugilegus</em>. <em>Current Biology</em>, 16(7), 697–701. — trap-tube causal reasoning in corvids (rook study; methodology standard for raven comparisons).</li>
+      <li id="src-3">Kabadayi, C. & Osvath, M. (2017). Ravens parallel great apes in flexible planning for tool-use and barter. <em>Science</em>, 357(6347), 202–204. — prospective tool selection, future planning comparable to great apes.</li>
+    </ol>
+    <p class="qa-claim-note"><strong class="claim-science">[science]</strong> peer-reviewed data</p>
+  </section>
+
+</article>
+</BaseLayout>
+
+<style>
+  .qa-page { max-width: 820px; margin: 0 auto; padding: 2rem 1.25rem 4rem; color: var(--iron-ink, #e8e4d8); font-family: 'Inter', sans-serif; line-height: 1.72; }
+  .qa-breadcrumb ol { display: flex; flex-wrap: wrap; gap: .25rem; list-style: none; padding: 0; margin: 0 0 2rem; font-size: .8rem; color: var(--ink-soft, #8a8070); }
+  .qa-breadcrumb a { color: var(--gold-500, #d4ae5a); text-decoration: none; }
+  .qa-pillar { font-size: .72rem; letter-spacing: .12em; text-transform: uppercase; color: var(--gold-500, #d4ae5a); margin: 0 0 .4rem; }
+  .qa-page h1 { font-family: 'Cormorant Garamond', serif; font-size: clamp(2rem, 5vw, 3rem); font-weight: 700; color: #fff; margin: 0 0 2rem; line-height: 1.1; }
+  .qa-snippet { background: rgba(212,174,90,.08); border-left: 3px solid var(--gold-500, #d4ae5a); border-radius: 0 6px 6px 0; padding: 1rem 1.25rem; margin-bottom: 2.5rem; font-size: 1.03rem; }
+  .qa-section { margin-bottom: 2.5rem; }
+  .qa-section h2 { font-family: 'Cormorant Garamond', serif; font-size: 1.5rem; font-weight: 600; color: #fff; margin: 0 0 .9rem; border-bottom: 1px solid rgba(212,174,90,.2); padding-bottom: .4rem; }
+  .qa-section p { margin: 0 0 1rem; font-size: .97rem; }
+  .qa-section ul { padding-left: 1.25rem; margin: 0 0 1rem; }
+  .qa-section li { margin-bottom: .4rem; font-size: .95rem; }
+  .claim-science { color: #7ab9e0; font-style: normal; font-size: .78rem; }
+  a[href] { color: var(--gold-500, #d4ae5a); }
+  .qa-faq-item { border-bottom: 1px solid rgba(255,255,255,.07); }
+  .qa-faq-q { cursor: pointer; padding: .9rem 0; font-size: .97rem; font-weight: 500; color: #fff; list-style: none; }
+  .qa-faq-q::before { content: '+ '; color: var(--gold-500, #d4ae5a); font-weight: 700; }
+  details[open] .qa-faq-q::before { content: '− '; }
+  .qa-faq-a { margin: 0 0 1rem; line-height: 1.7; font-size: .93rem; color: var(--ink-soft, #c8c0b0); }
+  .qa-src-list { padding-left: 1.25rem; margin: 0 0 1rem; }
+  .qa-src-list li { margin-bottom: .6rem; font-size: .82rem; color: var(--ink-soft, #8a8070); line-height: 1.6; }
+  .qa-claim-note { font-size: .78rem; color: var(--ink-soft, #605848); border-top: 1px solid rgba(255,255,255,.06); padding-top: .75rem; }
+</style>

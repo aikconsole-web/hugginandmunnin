@@ -1,0 +1,150 @@
+---
+/**
+ * Q&A — How do ravens survive winter?
+ * Primary keyword: how do ravens survive winter
+ * Secondary: raven cold weather survival, ravens in winter, raven winter adaptations
+ */
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const title       = 'How Do Ravens Survive Winter? Cold-Weather Adaptations and Strategies';
+const description = 'Ravens are among the few passerines that remain year-round in boreal forests, arctic tundra, and mountain environments. This page examines the physiological and behavioural adaptations that allow ravens to survive conditions that drive most birds south.';
+const path        = '/questions/how-do-ravens-survive-winter/';
+
+const breadcrumbs = [
+  { name: 'Home',      url: '/' },
+  { name: 'Questions', url: '/questions/' },
+  { name: 'How Do Ravens Survive Winter?', url: path },
+];
+
+const faq = [
+  { q: 'How do ravens stay warm in winter?', a: 'Ravens maintain body temperature through several mechanisms: thick insulating plumage (the multiple feather layers trap warm air against the body); reduced activity during the coldest hours (roosting conserves energy); communal roosting (body heat from multiple birds in a sheltered site reduces individual heat loss); and increased metabolic rate in cold conditions (burning more calories to generate heat). Ravens also have feathered legs and bill-bristles that reduce heat loss from exposed extremities — adaptations that differ from tropical corvids that have bare leg scales.' },
+  { q: 'What do ravens eat in winter?', a: 'Ravens are opportunistic omnivores that shift their diet in winter toward whatever is available: primarily carrion (winter-killed ungulates, frozen fish, road-killed animals) supplemented by cached food items, refuse and food waste from human settlements, frozen berries and plant material, and occasional small prey. The winter diet is richer in fat than the summer diet — ravens seek out lipid-rich food (bone marrow, fat deposits, organ tissue) which provides more energy per gram than protein. The wolf-raven relationship is particularly important in winter, when wolf kills provide access to large carcasses that ravens cannot open alone.' },
+  { q: 'Do ravens migrate south for winter?', a: 'Most Common Ravens do not migrate south for winter. They are year-round residents throughout their range, including in boreal forests, alpine zones, and arctic regions where winter conditions are severe. Some far-northern individuals (Greenland, high arctic Canada) may drift southward during the harshest periods, but this is not regular seasonal migration with predictable routes. The raven\'s dietary flexibility — particularly its ability to exploit carrion and human food waste year-round — makes migration unnecessary for a species that can find food in almost any winter environment.' },
+];
+---
+
+<BaseLayout title={title} description={description} path={path} ogType="article"
+  datePublished="2026-11-08" dateModified="2026-11-08"
+  breadcrumbs={breadcrumbs} faq={faq} pageType="Article">
+
+<article class="qa-page">
+
+  <nav class="qa-breadcrumb" aria-label="Breadcrumb">
+    <ol>
+      {breadcrumbs.map((b, i) => (
+        <li>
+          {i < breadcrumbs.length - 1
+            ? <><a href={b.url}>{b.name}</a><span aria-hidden="true"> › </span></>
+            : <span aria-current="page">{b.name}</span>}
+        </li>
+      ))}
+    </ol>
+  </nav>
+
+  <header class="qa-header">
+    <p class="qa-pillar">Question · Biology</p>
+    <h1>How Do Ravens Survive Winter? Cold-Weather Adaptations and Strategies</h1>
+  </header>
+
+  <section class="qa-snippet" aria-label="Direct answer">
+    <p><strong class="claim-science">[science]</strong> Ravens survive winter through insulating plumage, communal roosting to share body heat, dietary flexibility (shifting to carrion, cached food, and human waste), and exploitation of wolf and predator kills for access to large carcasses. They are among the few passerines capable of year-round residency in arctic and alpine environments — a capability built on behavioural adaptability rather than unique physiology.</p>
+  </section>
+
+  <section class="qa-section">
+    <h2>Physiological Adaptations to Cold</h2>
+    <p><strong class="claim-science">[science]</strong> Ravens possess several physiological features that support cold-weather survival:<sup><a href="#src-1">1</a></sup></p>
+    <ul>
+      <li><strong>Thick plumage:</strong> raven feathers are multi-layered — outer contour feathers overlap with dense, insulating down underneath. The air trapped between layers is an effective insulator; well-maintained plumage can reduce heat loss dramatically even at –30°C.</li>
+      <li><strong>Feathered tarsi:</strong> unlike tropical corvids (which have bare leg scales), Common Ravens have feathers extending down the legs, reducing heat loss from the extremities.</li>
+      <li><strong>Nasal countercurrent heat exchange:</strong> the nasal passages warm inhaled cold air before it reaches the lungs, and cool exhaled air recovers heat before it leaves the body — an adaptation for breathing in cold air.</li>
+      <li><strong>Increased metabolic rate:</strong> in cold conditions, ravens increase their resting metabolic rate to generate more heat — requiring more food intake. This is why winter food access is critical: insufficient calories means the bird cannot sustain its cold-weather metabolic needs.</li>
+    </ul>
+  </section>
+
+  <section class="qa-section">
+    <h2>Communal Roosting and Thermal Benefits</h2>
+    <p><strong class="claim-science">[science]</strong> Non-breeding ravens gather in communal roosts in winter — sometimes containing hundreds of birds in a single tree group or cliff alcove. Beyond the information-transfer function (following successful foragers to food), these roosts provide direct thermal benefits:<sup><a href="#src-2">2</a></sup></p>
+    <ul>
+      <li>Multiple birds roosting tightly together in a sheltered site reduce their individual exposed surface area.</li>
+      <li>Sheltered roost sites (dense conifer stands, cliff alcoves, urban buildings) block wind — the main vector of heat loss in exposed environments.</li>
+      <li>Body heat from multiple birds raises the microclimate temperature within the roost cluster above ambient air temperature.</li>
+    </ul>
+    <p>The energetic benefits of communal roosting can be substantial: estimates suggest a bird in a communal roost may save 10–20% of its nightly energy expenditure compared to roosting alone in an exposed site.</p>
+  </section>
+
+  <section class="qa-section">
+    <h2>Winter Food Strategies</h2>
+    <p><strong class="claim-science">[science]</strong> Winter food availability is the primary constraint on raven winter survival. Ravens address this through multiple strategies:<sup><a href="#src-1">1</a></sup></p>
+    <ul>
+      <li><strong>Cache recovery:</strong> ravens cache food in autumn — burying fat-rich items in soil, under bark, in rock crevices. Winter recovery of these caches supplements the diet when other food is scarce.</li>
+      <li><strong>Following predators:</strong> ravens monitor wolf pack movements and converge on kills within hours. In areas without wolves, coyote, cougar, or lynx kills perform the same function.</li>
+      <li><strong>Human association:</strong> landfills, refuse sites, slaughterhouses, fish processing facilities, and settlements provide food supplementation in winter. This resource has expanded as human habitation has spread into raven territory, and may be a key reason for raven population increases in many regions.</li>
+      <li><strong>Fat-seeking:</strong> ravens preferentially seek fat-rich food in winter — organ fat, marrow, suet. Fat provides approximately 2.3× the energy density of protein, making it the most efficient winter fuel.</li>
+    </ul>
+  </section>
+
+  <section class="qa-section">
+    <h2>Winter Breeding: The Paradox of Early Nesting</h2>
+    <p><strong class="claim-science">[science]</strong> One of the most striking features of raven winter ecology is that established breeding pairs begin nesting in late winter — February–March in temperate regions, before snowmelt. This seems counterintuitive but reflects a precise timing strategy:<sup><a href="#src-1">1</a></sup></p>
+    <ul>
+      <li>Early nesting allows fledglings to emerge in late spring/early summer when food is at peak abundance.</li>
+      <li>The female incubates through late-winter cold; the male provides food to her intensively during this period — drawing on the winter carrion resources that ravens specialise in.</li>
+      <li>Early breeders get first access to the best food resources of the spring season, giving their chicks a nutritional advantage.</li>
+    </ul>
+  </section>
+
+  <section class="qa-section">
+    <h2>Related Pages</h2>
+    <ul>
+      <li><a href="/questions/do-ravens-migrate/">Do ravens migrate?</a></li>
+      <li><a href="/behaviour/raven-social-life-and-roosts/">Raven social life and roosts</a></li>
+      <li><a href="/behaviour/raven-food-caching/">Raven food caching</a></li>
+      <li><a href="/places/ravens-in-greenland/">Ravens in Greenland</a></li>
+    </ul>
+  </section>
+
+  <section class="qa-faq qa-section" aria-labelledby="faq-h2">
+    <h2 id="faq-h2">Frequently Asked Questions</h2>
+    {faq.map(item => (
+      <details class="qa-faq-item">
+        <summary class="qa-faq-q">{item.q}</summary>
+        <p class="qa-faq-a">{item.a}</p>
+      </details>
+    ))}
+  </section>
+
+  <section class="qa-sources qa-section" aria-labelledby="src-h2">
+    <h2 id="src-h2">Sources</h2>
+    <ol class="qa-src-list">
+      <li id="src-1">Boarman, W.I. & Heinrich, B. (1999). Common Raven (<em>Corvus corax</em>). In Poole, A. (ed.), <em>The Birds of North America</em>, No. 476. Cornell Lab of Ornithology. — winter ecology, food caching, early breeding biology, cold-weather physiology.</li>
+      <li id="src-2">Heinrich, B. (1989). <em>Ravens in Winter</em>. Summit Books. — communal roosts, winter food strategies, the wolf-raven relationship in cold seasons, raven winter behaviour in Maine.</li>
+    </ol>
+    <p class="qa-claim-note"><strong class="claim-science">[science]</strong> peer-reviewed data</p>
+  </section>
+
+</article>
+</BaseLayout>
+
+<style>
+  .qa-page { max-width: 820px; margin: 0 auto; padding: 2rem 1.25rem 4rem; color: var(--iron-ink, #e8e4d8); font-family: 'Inter', sans-serif; line-height: 1.72; }
+  .qa-breadcrumb ol { display: flex; flex-wrap: wrap; gap: .25rem; list-style: none; padding: 0; margin: 0 0 2rem; font-size: .8rem; color: var(--ink-soft, #8a8070); }
+  .qa-breadcrumb a { color: var(--gold-500, #d4ae5a); text-decoration: none; }
+  .qa-pillar { font-size: .72rem; letter-spacing: .12em; text-transform: uppercase; color: var(--gold-500, #d4ae5a); margin: 0 0 .4rem; }
+  .qa-page h1 { font-family: 'Cormorant Garamond', serif; font-size: clamp(2rem, 5vw, 3rem); font-weight: 700; color: #fff; margin: 0 0 2rem; line-height: 1.1; }
+  .qa-snippet { background: rgba(212,174,90,.08); border-left: 3px solid var(--gold-500, #d4ae5a); border-radius: 0 6px 6px 0; padding: 1rem 1.25rem; margin-bottom: 2.5rem; font-size: 1.03rem; }
+  .qa-section { margin-bottom: 2.5rem; }
+  .qa-section h2 { font-family: 'Cormorant Garamond', serif; font-size: 1.5rem; font-weight: 600; color: #fff; margin: 0 0 .9rem; border-bottom: 1px solid rgba(212,174,90,.2); padding-bottom: .4rem; }
+  .qa-section p { margin: 0 0 1rem; font-size: .97rem; }
+  .qa-section ul { padding-left: 1.25rem; margin: 0 0 1rem; }
+  .qa-section li { margin-bottom: .4rem; font-size: .95rem; }
+  .claim-science { color: #7ab9e0; font-style: normal; font-size: .78rem; }
+  a[href] { color: var(--gold-500, #d4ae5a); }
+  .qa-faq-item { border-bottom: 1px solid rgba(255,255,255,.07); }
+  .qa-faq-q { cursor: pointer; padding: .9rem 0; font-size: .97rem; font-weight: 500; color: #fff; list-style: none; }
+  .qa-faq-q::before { content: '+ '; color: var(--gold-500, #d4ae5a); font-weight: 700; }
+  details[open] .qa-faq-q::before { content: '− '; }
+  .qa-faq-a { margin: 0 0 1rem; line-height: 1.7; font-size: .93rem; color: var(--ink-soft, #c8c0b0); }
+  .qa-src-list { padding-left: 1.25rem; margin: 0 0 1rem; }
+  .qa-src-list li { margin-bottom: .6rem; font-size: .82rem; color: var(--ink-soft, #8a8070); line-height: 1.6; }
+  .qa-claim-note { font-size: .78rem; color: var(--ink-soft, #605848); border-top: 1px solid rgba(255,255,255,.06); padding-top: .75rem; }
+</style>

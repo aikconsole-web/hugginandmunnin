@@ -1,0 +1,152 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const title       = 'Can Ravens Talk? — The Myth vs The Science';
+const description = 'Ravens can mimic human words in captivity and mimic other sounds in the wild. This page examines what ravens actually do with sound and how it compares to parrots and other mimics.';
+const path        = '/myths/ravens-can-talk/';
+
+const breadcrumbs = [
+  { name: 'Home',   url: '/' },
+  { name: 'Myths',  url: '/myths/' },
+  { name: 'Can Ravens Talk?', url: path },
+];
+
+const faq = [
+  { q: 'Can ravens talk like parrots?', a: 'Ravens can produce human words clearly enough to be understood — there are many documented captive ravens that use words consistently. However, ravens are not "talking" in the sense of understanding language: they are vocal mimics, like parrots, mynas, and some other birds. Wild ravens mimic other animals and environmental sounds; word mimicry occurs primarily in birds hand-raised with human contact.' },
+  { q: 'Do wild ravens mimic human speech?', a: 'Wild ravens do occasionally mimic human voices or words if raised in contact with people, but this is not typical wild behaviour. More commonly, wild ravens mimic the calls of wolves, other birds, and environmental sounds — behaviour linked to the information-centre hypothesis and social manipulation.' },
+  { q: 'Which is a better talker — a raven or a parrot?', a: 'African Grey Parrots and some other psittacines produce a larger vocabulary and longer phrases than ravens in controlled experiments. However, Common Ravens are exceptional vocal mimics for a non-psittacine species. Ravens also excel at mimicry of non-human sounds (wolves, wind, tools) in ways parrots typically do not.' },
+];
+---
+
+<BaseLayout title={title} description={description} path={path} ogType="article"
+  datePublished="2026-11-07" dateModified="2026-11-07"
+  breadcrumbs={breadcrumbs} faq={faq} pageType="Article">
+
+<article class="myth-page">
+  <nav class="myth-breadcrumb" aria-label="Breadcrumb">
+    <ol>
+      {breadcrumbs.map((b, i) => (
+        <li>
+          {i < breadcrumbs.length - 1
+            ? <><a href={b.url}>{b.name}</a><span aria-hidden="true"> › </span></>
+            : <span aria-current="page">{b.name}</span>}
+        </li>
+      ))}
+    </ol>
+  </nav>
+  <header class="myth-header">
+    <p class="myth-pillar">Myth Check · MYTH·02</p>
+    <h1>Can Ravens Talk?</h1>
+    <p class="myth-subtitle">Verdict: <strong class="verdict-partial">Partly True</strong> — ravens can mimic human words, but are not using language</p>
+  </header>
+
+  <section class="myth-snippet" aria-label="Quick answer">
+    <p><strong class="claim-science">[science]</strong> Ravens are capable vocal mimics. Captive ravens hand-raised with human contact can and do produce recognisable words. Wild ravens mimic wolves, other birds, and environmental sounds. However, like parrots, ravens are producing learned sounds without linguistic comprehension. The claim that "ravens can talk" is true in the sense of vocal mimicry; false in the sense of language use.</p>
+  </section>
+
+  <section class="myth-section">
+    <h2>What Ravens Actually Do with Sound</h2>
+    <p><strong class="claim-science">[science]</strong> Common Ravens have one of the most complex vocal repertoires of any non-human animal. Bernd Heinrich documented ravens producing:</p>
+    <ul>
+      <li>At least 30 distinct vocalisations with consistent meaning in social contexts</li>
+      <li>Mimicry of other bird species' calls (used in social and foraging contexts)</li>
+      <li>Mimicry of wolf howls (Heinrich observed ravens imitating wolves near carcasses — possibly to attract wolves who open the carcass)</li>
+      <li>Mimicry of human words and phrases in captive birds with human contact</li>
+      <li>Mimicry of environmental sounds: wind, water, tools, vehicles<sup><a href="#src-1">1</a></sup></li>
+    </ul>
+  </section>
+
+  <section class="myth-section">
+    <h2>Historical Examples: Dickens's Grip</h2>
+    <p><strong class="claim-lore">[lore]</strong> Charles Dickens kept a pet raven named Grip who was famous for speaking. Dickens described Grip repeatedly talking and singing, and the bird's death in 1841 prompted a letter from Dickens describing Grip's last hours in which the raven continued to call out "Halloa old girl!" Grip's taxidermied body is in the collection of the Free Library of Philadelphia. Edgar Allan Poe, who reviewed <em>Barnaby Rudge</em> (which features Grip the raven), may have been influenced by Grip when writing "The Raven" (1845).<sup><a href="#src-2">2</a></sup></p>
+  </section>
+
+  <section class="myth-section">
+    <h2>The Science of Vocal Mimicry</h2>
+    <p><strong class="claim-science">[science]</strong> Vocal mimicry in corvids is a form of <em>vocal learning</em> — the ability to modify vocalisations based on auditory experience. Vocal learning is rare in vertebrates: it is found in humans, cetaceans (some), pinnipeds (some), bats (some), parrots, hummingbirds, oscine songbirds (the large group that includes ravens), and a few others. Most animals cannot modify vocalisations through learning.<sup><a href="#src-3">3</a></sup></p>
+    <p>Ravens are oscine passerines ("songbirds" in the technical sense) and therefore have the neural circuitry for vocal learning. This is the same fundamental mechanism that enables parrots to mimic speech — but corvids evolved it independently. Studies of raven brains show well-developed song-control nuclei analogous to those in oscines generally.</p>
+  </section>
+
+  <section class="myth-section">
+    <h2>Ravens vs Parrots</h2>
+    <p><strong class="claim-science">[science]</strong> African Grey Parrots (<em>Psittacus erithacus</em>) produce larger human vocabularies and have demonstrated some understanding of referential context in Irene Pepperberg's decades of research with the parrot Alex. Ravens have not been studied as extensively for language-like behaviour, but controlled studies suggest ravens use vocalisations referentially in some social contexts — warning calls, for example, are discriminated by intensity and appear to convey information about threat level.<sup><a href="#src-1">1</a></sup></p>
+    <p>The key distinction: neither ravens nor parrots "talk" in the full linguistic sense. Both can produce human-sounding words. Neither is using grammar, syntax, or understanding the semantic content of sentences.</p>
+  </section>
+
+  <section class="myth-section">
+    <h2>The Mythology of the Talking Raven</h2>
+    <p><strong class="claim-lore">[lore]</strong> The cultural tradition of ravens as prophetic or speaking birds is ancient. Odin's ravens Huginn and Muninn fly across the world and report what they see — a tradition recorded in <em>Grímnismál</em> (c. 10th century CE). In Poe's "The Raven" (1845), the raven speaks one word: "Nevermore." These literary and mythological traditions pre-date any scientific understanding of vocal mimicry but correctly identified ravens as extraordinary vocalists.</p>
+    <p>The oracle-raven tradition in several cultures likely reflects real-world observation of captive ravens speaking in ways that seemed uncanny to pre-scientific observers.</p>
+  </section>
+
+  <section class="myth-verdict myth-section">
+    <h2>Verdict</h2>
+    <p><strong>Partly True.</strong> Ravens can produce recognisable human words through vocal mimicry — this is documented in captive birds and is consistent with their status as vocal learners. They are not using language in any meaningful sense. Wild ravens use mimicry in functionally significant ways (imitating wolves, alarm calls of other species). The claim "ravens can talk" is true as a description of vocal mimicry and false as a claim about linguistic ability.</p>
+  </section>
+
+  <section class="myth-section">
+    <h2>Related Pages</h2>
+    <ul>
+      <li><a href="/questions/can-ravens-talk/">Can ravens talk? — the Q&amp;A page</a></li>
+      <li><a href="/behaviour/raven-intelligence/">Raven intelligence — full chapter</a></li>
+      <li><a href="/lore/world/edgar-allan-poe-the-raven/">Poe's "The Raven" — the literary tradition</a></li>
+    </ul>
+  </section>
+
+  <section class="myth-faq myth-section" aria-labelledby="faq-h2">
+    <h2 id="faq-h2">Frequently Asked Questions</h2>
+    {faq.map(item => (
+      <details class="myth-faq-item">
+        <summary class="myth-faq-q">{item.q}</summary>
+        <p class="myth-faq-a">{item.a}</p>
+      </details>
+    ))}
+  </section>
+
+  <section class="myth-sources myth-section" aria-labelledby="src-h2">
+    <h2 id="src-h2">Sources</h2>
+    <ol class="myth-src-list">
+      <li id="src-1">Heinrich, B. (2000). <em>Mind of the Raven</em>. HarperCollins. — raven vocalisations, mimicry of wolves and other sounds (ch. 5–6).</li>
+      <li id="src-2">Mabbott, T.O. (ed., 1969). <em>Collected Works of Edgar Allan Poe, Vol. I: Poems</em>. Harvard University Press. — Grip the raven, Dickens correspondence, and the Barnaby Rudge connection.</li>
+      <li id="src-3">Jarvis, E.D. et al. (2005). Avian brains and a new understanding of vertebrate brain evolution. <em>Nature Reviews Neuroscience</em> 6, 151–159. — vocal learning in birds: evolutionary distribution and neural basis.</li>
+    </ol>
+    <p class="myth-claim-note"><strong class="claim-lore">[lore]</strong> named cultural/historical source · <strong class="claim-science">[science]</strong> peer-reviewed/field-guide</p>
+  </section>
+
+  <nav class="myth-nav-bottom">
+    <a href="/myths/are-ravens-bad-luck/" class="myth-back">← Are Ravens Bad Luck?</a>
+    <a href="/myths/" class="myth-next">All Myth Checks →</a>
+  </nav>
+</article>
+</BaseLayout>
+
+<style>
+  .myth-page { max-width: 820px; margin: 0 auto; padding: 2rem 1.25rem 4rem; color: var(--iron-ink, #e8e4d8); font-family: 'Inter', sans-serif; line-height: 1.72; }
+  .myth-breadcrumb ol { display: flex; flex-wrap: wrap; gap: .25rem; list-style: none; padding: 0; margin: 0 0 2rem; font-size: .8rem; color: var(--ink-soft, #8a8070); }
+  .myth-breadcrumb a { color: var(--gold-500, #d4ae5a); text-decoration: none; }
+  .myth-pillar { font-size: .72rem; letter-spacing: .12em; text-transform: uppercase; color: var(--gold-500, #d4ae5a); margin: 0 0 .4rem; }
+  .myth-page h1 { font-family: 'Cormorant Garamond', serif; font-size: clamp(2rem, 5vw, 3.25rem); font-weight: 700; color: #fff; margin: 0 0 .4rem; line-height: 1.1; }
+  .myth-subtitle { font-size: 1rem; color: var(--ink-soft, #c0b89a); margin: 0 0 2rem; }
+  .verdict-partial { color: #d4ae5a; }
+  .myth-snippet { background: rgba(212,174,90,.08); border-left: 3px solid var(--gold-500, #d4ae5a); border-radius: 0 6px 6px 0; padding: 1rem 1.25rem; margin-bottom: 2.5rem; font-size: 1.03rem; }
+  .myth-section { margin-bottom: 2.75rem; }
+  .myth-section h2 { font-family: 'Cormorant Garamond', serif; font-size: 1.6rem; font-weight: 600; color: #fff; margin: 0 0 1rem; border-bottom: 1px solid rgba(212,174,90,.2); padding-bottom: .4rem; }
+  .myth-section p { margin: 0 0 1rem; font-size: .97rem; }
+  .myth-section ul { padding-left: 1.25rem; margin: 0 0 1rem; }
+  .myth-section li { margin-bottom: .5rem; font-size: .95rem; }
+  .myth-verdict { background: rgba(212,174,90,.06); border: 1px solid rgba(212,174,90,.2); border-radius: 8px; padding: 1.25rem 1.5rem; }
+  .claim-science { color: #7ab9e0; font-style: normal; font-size: .78rem; }
+  .claim-lore    { color: #c8a46a; font-style: normal; font-size: .78rem; }
+  a[href] { color: var(--gold-500, #d4ae5a); }
+  .myth-faq-item { border-bottom: 1px solid rgba(255,255,255,.07); }
+  .myth-faq-q { cursor: pointer; padding: .9rem 0; font-size: .97rem; font-weight: 500; color: #fff; list-style: none; }
+  .myth-faq-q::before { content: '+ '; color: var(--gold-500, #d4ae5a); font-weight: 700; }
+  details[open] .myth-faq-q::before { content: '− '; }
+  .myth-faq-a { margin: 0 0 1rem; line-height: 1.7; font-size: .93rem; color: var(--ink-soft, #c8c0b0); }
+  .myth-src-list { padding-left: 1.25rem; margin: 0 0 1rem; }
+  .myth-src-list li { margin-bottom: .6rem; font-size: .82rem; color: var(--ink-soft, #8a8070); line-height: 1.6; }
+  .myth-claim-note { font-size: .78rem; color: var(--ink-soft, #605848); border-top: 1px solid rgba(255,255,255,.06); padding-top: .75rem; }
+  .myth-nav-bottom { display: flex; justify-content: space-between; padding-top: 2rem; border-top: 1px solid rgba(255,255,255,.07); }
+  .myth-nav-bottom a { font-size: .9rem; text-decoration: none; }
+  .myth-nav-bottom a:hover { text-decoration: underline; }
+</style>

@@ -1,0 +1,146 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+
+const title       = 'Common Raven Nesting — Breeding Sites and Biology';
+const description = 'Common Ravens nest on cliff ledges and tall trees from February, building large stick nests reused annually. Clutch 3–7 eggs; incubation 20–21 days. Nesting biology for Corvus corax.';
+const path        = '/species/common-raven/nesting/';
+
+const breadcrumbs = [
+  { name: 'Home',         url: '/' },
+  { name: 'Species',      url: '/species/' },
+  { name: 'Common Raven', url: '/species/common-raven/' },
+  { name: 'Nesting',      url: path },
+];
+
+const faq = [
+  { q: 'Where do Common Ravens nest?', a: 'Common Ravens prefer cliff ledges as nesting sites — high, inaccessible locations with good visibility and protection from predators. They also use tall trees (conifers and large deciduous trees), electricity pylons, bridges, and buildings. The same site is often reused annually for many years, with new material added each season.' },
+  { q: 'When do Common Ravens breed?', a: 'In the northern hemisphere, Common Ravens begin laying eggs from February to April depending on latitude — unusually early for a corvid. Incubation lasts 20–21 days; chicks fledge at approximately 35–42 days. The early breeding season means young birds are independent before the following winter.' },
+];
+---
+
+<BaseLayout title={title} description={description} path={path} ogType="article"
+  datePublished="2026-11-07" dateModified="2026-11-07"
+  breadcrumbs={breadcrumbs} faq={faq} pageType="Article">
+
+<article class="id-page">
+  <nav class="id-breadcrumb" aria-label="Breadcrumb">
+    <ol>
+      {breadcrumbs.map((b, i) => (
+        <li>
+          {i < breadcrumbs.length - 1
+            ? <><a href={b.url}>{b.name}</a><span aria-hidden="true"> › </span></>
+            : <span aria-current="page">{b.name}</span>}
+        </li>
+      ))}
+    </ol>
+  </nav>
+  <header class="id-header">
+    <p class="id-pillar">Species · Nesting</p>
+    <h1>Common Raven — Nesting</h1>
+    <p class="id-subtitle"><em>Corvus corax</em> · Breeding biology</p>
+  </header>
+
+  <section class="id-snippet" aria-label="Quick answer">
+    <p><strong class="claim-science">[science]</strong> Common Ravens nest on <strong>cliff ledges and tall trees</strong> in large stick platforms reused annually. Eggs are laid from <strong>February–April</strong> (latitude-dependent). Clutch: 3–7 eggs. Incubation: 20–21 days (female only, male provisions). Fledging: 35–42 days. Post-fledging dependence: several months. Full nesting biology on the <a href="/behaviour/raven-nesting/">Raven Nesting</a> behaviour chapter.</p>
+  </section>
+
+  <section class="id-section">
+    <h2>Nest Sites</h2>
+    <p><strong class="claim-science">[science]</strong></p>
+    <ul>
+      <li><strong>Cliff ledges (preferred):</strong> High on exposed cliff faces; offers protection from ground predators and stable thermal conditions for soaring access</li>
+      <li><strong>Tall trees:</strong> Conifers preferred in boreal zones; large deciduous trees elsewhere; nest placed in upper canopy</li>
+      <li><strong>Pylons and transmission towers:</strong> Widely used across range; can cause electrical faults; some utility companies manage nests</li>
+      <li><strong>Bridges, buildings, quarry faces:</strong> Opportunistic</li>
+    </ul>
+    <p>Pairs show high site fidelity — the same ledge or tree may be used for decades, with material added annually until some nests reach 60–120 cm diameter. Multiple alternate sites are sometimes maintained within a territory.<sup><a href="#src-1">1</a></sup></p>
+  </section>
+
+  <section class="id-section">
+    <h2>Nest Structure</h2>
+    <p><strong class="claim-science">[science]</strong></p>
+    <ul>
+      <li><strong>Outer structure:</strong> Sticks and branches — large and bulky</li>
+      <li><strong>Inner cup:</strong> Lined with wool, hair, bark fibre, grass, moss, feathers — soft insulating materials</li>
+      <li><strong>Construction:</strong> Both sexes build; female does most lining</li>
+      <li><strong>Time:</strong> 1–3 weeks for a new nest; re-lining of existing nest is quicker</li>
+    </ul>
+  </section>
+
+  <section class="id-section">
+    <h2>Eggs</h2>
+    <p><strong class="claim-science">[science]</strong></p>
+    <ul>
+      <li><strong>Colour:</strong> Pale blue-green to greenish-grey, spotted and blotched with brown and grey</li>
+      <li><strong>Size:</strong> 48–55 mm × 32–38 mm</li>
+      <li><strong>Clutch:</strong> 3–7 eggs; 4–6 typical</li>
+      <li><strong>Incubation:</strong> 20–21 days; female incubates; male brings food to nest</li>
+    </ul>
+    <p>See <a href="/questions/what-do-raven-eggs-look-like/">What do raven eggs look like?</a> for detailed egg description and comparison with similar species.<sup><a href="#src-1">1</a>,<a href="#src-2">2</a></sup></p>
+  </section>
+
+  <section class="id-section">
+    <h2>Chick Development and Fledging</h2>
+    <p><strong class="claim-science">[science]</strong></p>
+    <ul>
+      <li>Chicks hatch altricial — naked, eyes closed, helpless</li>
+      <li>Brooded by female for first 2–3 weeks; male provisions both</li>
+      <li>Fledging at 35–42 days after hatching</li>
+      <li>Family group remains together for 6 months or more post-fledging</li>
+      <li>Age at first breeding: typically 3–4 years</li>
+    </ul>
+  </section>
+
+  <section class="id-faq id-section" aria-labelledby="faq-h2">
+    <h2 id="faq-h2">Frequently Asked Questions</h2>
+    {faq.map(item => (
+      <details class="id-faq-item">
+        <summary class="id-faq-q">{item.q}</summary>
+        <p class="id-faq-a">{item.a}</p>
+      </details>
+    ))}
+  </section>
+
+  <section class="id-sources id-section" aria-labelledby="src-h2">
+    <h2 id="src-h2">Sources</h2>
+    <ol class="id-src-list">
+      <li id="src-1">Madge, S. &amp; Burn, H. (1994). <em>Crows and Jays</em>. Christopher Helm. — nest, eggs, breeding timing.</li>
+      <li id="src-2">Boarman, W. I. &amp; Heinrich, B. (1999). Common Raven (<em>Corvus corax</em>). <em>The Birds of North America</em>, No. 476. — breeding biology.</li>
+    </ol>
+    <p class="id-claim-note"><strong class="claim-science">[science]</strong> field-guide and species-account data</p>
+  </section>
+
+  <nav class="id-nav-bottom">
+    <a href="/species/common-raven/diet/" class="id-back">← Diet</a>
+    <a href="/species/common-raven/range-and-habitat/" class="id-next">Range and Habitat →</a>
+  </nav>
+</article>
+</BaseLayout>
+
+<style>
+  .id-page { max-width: 820px; margin: 0 auto; padding: 2rem 1.25rem 4rem; color: var(--iron-ink, #e8e4d8); font-family: 'Inter', sans-serif; line-height: 1.72; }
+  .id-breadcrumb ol { display: flex; flex-wrap: wrap; gap: .25rem; list-style: none; padding: 0; margin: 0 0 2rem; font-size: .8rem; color: var(--ink-soft, #8a8070); }
+  .id-breadcrumb a { color: var(--gold-500, #d4ae5a); text-decoration: none; }
+  .id-pillar { font-size: .72rem; letter-spacing: .12em; text-transform: uppercase; color: var(--gold-500, #d4ae5a); margin: 0 0 .4rem; }
+  .id-page h1 { font-family: 'Cormorant Garamond', serif; font-size: clamp(2rem, 5vw, 3.25rem); font-weight: 700; color: #fff; margin: 0 0 .2rem; line-height: 1.1; }
+  .id-subtitle { font-size: 1rem; color: var(--ink-soft, #c0b89a); margin: 0 0 2rem; }
+  .id-snippet { background: rgba(212,174,90,.08); border-left: 3px solid var(--gold-500, #d4ae5a); border-radius: 0 6px 6px 0; padding: 1rem 1.25rem; margin-bottom: 2.5rem; font-size: 1.03rem; }
+  .id-section { margin-bottom: 2.75rem; }
+  .id-section h2 { font-family: 'Cormorant Garamond', serif; font-size: 1.6rem; font-weight: 600; color: #fff; margin: 0 0 1rem; border-bottom: 1px solid rgba(212,174,90,.2); padding-bottom: .4rem; }
+  .id-section p { margin: 0 0 1rem; font-size: .97rem; }
+  .id-section ul { padding-left: 1.25rem; margin: 0 0 1rem; }
+  .id-section li { margin-bottom: .4rem; font-size: .95rem; }
+  .claim-science { color: #7ab9e0; font-style: normal; font-size: .78rem; }
+  a[href] { color: var(--gold-500, #d4ae5a); }
+  .id-faq-item { border-bottom: 1px solid rgba(255,255,255,.07); }
+  .id-faq-q { cursor: pointer; padding: .9rem 0; font-size: .97rem; font-weight: 500; color: #fff; list-style: none; }
+  .id-faq-q::before { content: '+ '; color: var(--gold-500, #d4ae5a); font-weight: 700; }
+  details[open] .id-faq-q::before { content: '− '; }
+  .id-faq-a { margin: 0 0 1rem; line-height: 1.7; font-size: .93rem; color: var(--ink-soft, #c8c0b0); }
+  .id-src-list { padding-left: 1.25rem; margin: 0 0 1rem; }
+  .id-src-list li { margin-bottom: .6rem; font-size: .82rem; color: var(--ink-soft, #8a8070); line-height: 1.6; }
+  .id-claim-note { font-size: .78rem; color: var(--ink-soft, #605848); border-top: 1px solid rgba(255,255,255,.06); padding-top: .75rem; }
+  .id-nav-bottom { display: flex; justify-content: space-between; padding-top: 2rem; border-top: 1px solid rgba(255,255,255,.07); }
+  .id-nav-bottom a { font-size: .9rem; text-decoration: none; }
+  .id-nav-bottom a:hover { text-decoration: underline; }
+</style>

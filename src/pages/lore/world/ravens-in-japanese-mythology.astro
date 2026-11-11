@@ -1,0 +1,149 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+
+const title       = 'Ravens in Japanese Mythology — Yatagarasu, the Three-Legged Crow';
+const description = 'Yatagarasu, the three-legged crow or raven of Japanese mythology, is a divine messenger associated with the sun goddess Amaterasu and the founding of Japan. Sources and cultural context.';
+const path        = '/lore/world/ravens-in-japanese-mythology/';
+
+const breadcrumbs = [
+  { name: 'Home',         url: '/' },
+  { name: 'Lore',         url: '/lore/world/' },
+  { name: 'Ravens in Japanese Mythology', url: path },
+];
+
+const faq = [
+  { q: 'What is the raven in Japanese mythology?', a: 'Yatagarasu (八咫烏, "eight-span crow") is a divine three-legged crow or raven in Japanese mythology. It was sent by the sun goddess Amaterasu to guide the legendary Emperor Jimmu (Japan\'s first emperor) through the wilderness to the Yamato region. Yatagarasu appears in the Kojiki (712 CE) and Nihon Shoki (720 CE) — the oldest extant Japanese texts. It is a symbol of divine guidance and is associated with the Japan Football Association as an emblem.' },
+];
+---
+
+<BaseLayout title={title} description={description} path={path} ogType="article"
+  datePublished="2026-11-07" dateModified="2026-11-07"
+  breadcrumbs={breadcrumbs} faq={faq} pageType="Article">
+
+<article class="id-page">
+  <nav class="id-breadcrumb" aria-label="Breadcrumb">
+    <ol>
+      {breadcrumbs.map((b, i) => (
+        <li>
+          {i < breadcrumbs.length - 1
+            ? <><a href={b.url}>{b.name}</a><span aria-hidden="true"> › </span></>
+            : <span aria-current="page">{b.name}</span>}
+        </li>
+      ))}
+    </ol>
+  </nav>
+  <header class="id-header">
+    <p class="id-pillar">Lore · World · MYW·07</p>
+    <h1>Ravens in Japanese Mythology</h1>
+    <p class="id-subtitle">Yatagarasu — the three-legged divine crow</p>
+  </header>
+
+  <section class="id-snippet" aria-label="Quick answer">
+    <p><strong class="claim-lore">[lore]</strong> <strong>Yatagarasu</strong> (八咫烏) is a three-legged divine crow or raven of Japanese mythology, sent by Amaterasu to guide Emperor Jimmu to the Yamato region. It appears in the <em>Kojiki</em> (712 CE) and <em>Nihon Shoki</em> (720 CE) as a symbol of divine will and guidance — a strongly positive corvid figure, opposite to the ominous Western tradition. Its three legs are linked in some interpretations to the three virtues of wisdom, benevolence, and courage.</p>
+  </section>
+
+  <section class="id-section">
+    <h2>Primary Sources</h2>
+    <p><strong class="claim-lore">[lore]</strong> The two oldest extant Japanese chronicles both record Yatagarasu:</p>
+    <ul>
+      <li><strong><em>Kojiki</em></strong> (712 CE, "Record of Ancient Matters"): compiled by Ō no Yasumaro under imperial order; contains the account of Jimmu's expedition to Yamato and the divine crow guide</li>
+      <li><strong><em>Nihon Shoki</em></strong> (720 CE, "Chronicles of Japan"): the second official chronicle; also records the Yatagarasu story with some variation</li>
+    </ul>
+    <p>Both texts were compiled in the 8th century CE but record mythological traditions of uncertain antiquity. The <em>Kojiki</em> is the primary narrative source; the <em>Nihon Shoki</em> provides alternative versions.<sup><a href="#src-1">1</a>,<a href="#src-2">2</a></sup></p>
+  </section>
+
+  <section class="id-section">
+    <h2>The Story of Yatagarasu</h2>
+    <p><strong class="claim-lore">[lore]</strong> In the <em>Kojiki</em> narrative:</p>
+    <ul>
+      <li>Emperor Jimmu, leading his forces from Hyūga (Kyushu) toward the east, became lost in the mountains of Yoshino</li>
+      <li>Amaterasu, the sun goddess, commanded Takemikazuchi-no-kami to guide Jimmu; in some versions, the gods sent Yatagarasu as the guide</li>
+      <li>The great crow led Jimmu's forces through the wilderness to the Yamato region (present-day Nara Prefecture) — the future heartland of the imperial state</li>
+      <li>Yatagarasu's role is as a divine messenger and guide, not an omen of death</li>
+    </ul>
+    <p>The name Yatagarasu: <em>ya</em> (八) = eight; <em>ta</em> (咫) = an old unit of measurement (the width of a spread hand); <em>garasu</em> (烏) = crow/raven. "Eight-span crow" — indicating great size.<sup><a href="#src-1">1</a></sup></p>
+  </section>
+
+  <section class="id-section">
+    <h2>The Three Legs</h2>
+    <p><strong class="claim-lore">[lore]</strong> Yatagarasu is depicted with three legs — a feature shared with the sun-crow (<em>sanzuwu</em> or <em>sānzúwū</em>) of Chinese mythology, which also has three legs and is associated with the sun:</p>
+    <ul>
+      <li>The three-legged crow appears in Chinese sources from at least the Han dynasty (206 BCE–220 CE) — it was thought to live in the sun</li>
+      <li>Japanese and Chinese mythological traditions were in contact through cultural exchange; the three-legged sun-crow may have been adopted and transformed in Japan</li>
+      <li>Various later Japanese interpretations of the three legs include associations with Amaterasu, Tsukuyomi, and Susanoo (the sun, moon, and sea deities); or with wisdom, benevolence, and courage</li>
+    </ul>
+    <p>The connection between the Chinese three-legged sun-crow and Yatagarasu is discussed by scholars but the precise transmission is not fully documented in the sources.<sup><a href="#src-3">3</a></sup></p>
+  </section>
+
+  <section class="id-section">
+    <h2>Yatagarasu in Modern Japan</h2>
+    <p><strong class="claim-lore">[lore]</strong> Yatagarasu remains a living symbol in Japanese culture:</p>
+    <ul>
+      <li>The <strong>Japan Football Association (JFA)</strong> adopted Yatagarasu as its emblem in 1931 — the three-legged crow appears on the national team kit</li>
+      <li>Kumano Grand Shrine (Kumano Taisha) in Wakayama Prefecture is closely associated with Yatagarasu — the region is traditionally linked to the Jimmu expedition, and crow imagery is prominent in Kumano religious contexts</li>
+      <li>Kumano Nachi Taisha also uses a Yatagarasu emblem</li>
+    </ul>
+    <p>The football association connection makes Yatagarasu one of the most globally recognised Japanese mythological figures outside Japan, through the visibility of the Japan national football team.<sup><a href="#src-3">3</a></sup></p>
+  </section>
+
+  <section class="id-section">
+    <h2>Crow or Raven?</h2>
+    <p><strong class="claim-science">[science]</strong> <em>Karasu</em> (烏) is the Japanese word used for both crows and ravens — it does not distinguish between species. The Jungle Crow (<em>Corvus macrorhynchos</em>) is the most familiar large corvid in Japan and is often what Japanese speakers visualise. The Large-billed Crow is a large, impressive bird well-suited to divine messenger imagery. The Common Raven does not occur in Japan's main islands.<sup><a href="#src-4">4</a></sup></p>
+  </section>
+
+  <section class="id-faq id-section" aria-labelledby="faq-h2">
+    <h2 id="faq-h2">Frequently Asked Questions</h2>
+    {faq.map(item => (
+      <details class="id-faq-item">
+        <summary class="id-faq-q">{item.q}</summary>
+        <p class="id-faq-a">{item.a}</p>
+      </details>
+    ))}
+  </section>
+
+  <section class="id-sources id-section" aria-labelledby="src-h2">
+    <h2 id="src-h2">Sources</h2>
+    <ol class="id-src-list">
+      <li id="src-1">Philippi, D. L. (trans.) (1968). <em>Kojiki</em>. University of Tokyo Press. — primary Japanese source; Jimmu and Yatagarasu account.</li>
+      <li id="src-2">Aston, W. G. (trans.) (1896). <em>Nihongi: Chronicles of Japan from the Earliest Times to A.D. 697</em>. Kegan Paul. — Nihon Shoki translation; Yatagarasu parallel account.</li>
+      <li id="src-3">Sax, B. (2007). <em>Crow</em>. Reaktion Books. — Yatagarasu and Chinese three-legged sun-crow in cross-cultural context.</li>
+      <li id="src-4">Madge, S. &amp; Burn, H. (1994). <em>Crows and Jays</em>. Christopher Helm. — corvid species distribution in Japan.</li>
+    </ol>
+    <p class="id-claim-note"><strong class="claim-lore">[lore]</strong> named primary and secondary sources</p>
+  </section>
+
+  <nav class="id-nav-bottom">
+    <a href="/lore/world/raven-in-celtic-mythology/" class="id-back">← Raven in Celtic Mythology</a>
+    <a href="/lore/world/" class="id-next">World Lore →</a>
+  </nav>
+</article>
+</BaseLayout>
+
+<style>
+  .id-page { max-width: 820px; margin: 0 auto; padding: 2rem 1.25rem 4rem; color: var(--iron-ink, #e8e4d8); font-family: 'Inter', sans-serif; line-height: 1.72; }
+  .id-breadcrumb ol { display: flex; flex-wrap: wrap; gap: .25rem; list-style: none; padding: 0; margin: 0 0 2rem; font-size: .8rem; color: var(--ink-soft, #8a8070); }
+  .id-breadcrumb a { color: var(--gold-500, #d4ae5a); text-decoration: none; }
+  .id-pillar { font-size: .72rem; letter-spacing: .12em; text-transform: uppercase; color: var(--gold-500, #d4ae5a); margin: 0 0 .4rem; }
+  .id-page h1 { font-family: 'Cormorant Garamond', serif; font-size: clamp(2rem, 5vw, 3.25rem); font-weight: 700; color: #fff; margin: 0 0 .2rem; line-height: 1.1; }
+  .id-subtitle { font-size: 1rem; color: var(--ink-soft, #c0b89a); margin: 0 0 2rem; }
+  .id-snippet { background: rgba(212,174,90,.08); border-left: 3px solid var(--gold-500, #d4ae5a); border-radius: 0 6px 6px 0; padding: 1rem 1.25rem; margin-bottom: 2.5rem; font-size: 1.03rem; }
+  .id-section { margin-bottom: 2.75rem; }
+  .id-section h2 { font-family: 'Cormorant Garamond', serif; font-size: 1.6rem; font-weight: 600; color: #fff; margin: 0 0 1rem; border-bottom: 1px solid rgba(212,174,90,.2); padding-bottom: .4rem; }
+  .id-section p { margin: 0 0 1rem; font-size: .97rem; }
+  .id-section ul { padding-left: 1.25rem; margin: 0 0 1rem; }
+  .id-section li { margin-bottom: .4rem; font-size: .95rem; }
+  .claim-science { color: #7ab9e0; font-style: normal; font-size: .78rem; }
+  .claim-lore { color: #c8a84b; font-style: normal; font-size: .78rem; }
+  a[href] { color: var(--gold-500, #d4ae5a); }
+  .id-faq-item { border-bottom: 1px solid rgba(255,255,255,.07); }
+  .id-faq-q { cursor: pointer; padding: .9rem 0; font-size: .97rem; font-weight: 500; color: #fff; list-style: none; }
+  .id-faq-q::before { content: '+ '; color: var(--gold-500, #d4ae5a); font-weight: 700; }
+  details[open] .id-faq-q::before { content: '− '; }
+  .id-faq-a { margin: 0 0 1rem; line-height: 1.7; font-size: .93rem; color: var(--ink-soft, #c8c0b0); }
+  .id-src-list { padding-left: 1.25rem; margin: 0 0 1rem; }
+  .id-src-list li { margin-bottom: .6rem; font-size: .82rem; color: var(--ink-soft, #8a8070); line-height: 1.6; }
+  .id-claim-note { font-size: .78rem; color: var(--ink-soft, #605848); border-top: 1px solid rgba(255,255,255,.06); padding-top: .75rem; }
+  .id-nav-bottom { display: flex; justify-content: space-between; padding-top: 2rem; border-top: 1px solid rgba(255,255,255,.07); }
+  .id-nav-bottom a { font-size: .9rem; text-decoration: none; }
+  .id-nav-bottom a:hover { text-decoration: underline; }
+</style>

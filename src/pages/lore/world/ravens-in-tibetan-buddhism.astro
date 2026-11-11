@@ -1,0 +1,137 @@
+---
+/**
+ * World Lore — Ravens in Tibetan Buddhism
+ * MYW·23
+ * Primary keyword: raven tibetan buddhism
+ * Secondary: raven tibet, mahakala raven, tibetan raven bird
+ */
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const title       = 'Ravens in Tibetan Buddhism: Mahakala\'s Bird';
+const description = 'In Tibetan Buddhist tradition, the raven is a manifestation and messenger of Mahakala — the fierce protective deity — and is treated with reverence in some Himalayan communities. This page explores the raven\'s role in Tibetan religion, divination, and folklore.';
+const path        = '/lore/world/ravens-in-tibetan-buddhism/';
+
+const breadcrumbs = [
+  { name: 'Home',       url: '/' },
+  { name: 'World Lore', url: '/lore/world/' },
+  { name: 'Ravens in Tibetan Buddhism', url: path },
+];
+
+const faq = [
+  { q: 'What is the significance of ravens in Tibetan Buddhism?', a: 'In Tibetan Buddhist tradition, the raven (bya rog in Tibetan, though the same word is used for crows) is closely associated with Mahakala (mGon po), one of the most important Dharma-protector deities (dharmapala) in Vajrayana Buddhism. Mahakala in one of his many forms — particularly Brahmarupa Mahakala — has the raven as his mount or manifestation. The raven-crow\'s appearance near a monastery or stupa can be interpreted as the presence of Mahakala, and in some Tibetan communities ravens are not harmed or disturbed as a consequence.' },
+  { q: 'Is the raven considered sacred in Tibet?', a: 'The raven and crow are associated with protective and sometimes wrathful supernatural forces in Tibetan tradition, which creates an attitude of respectful wariness rather than the hostility common in many agricultural societies. In the context of Mahakala as a dharmapala (protector of the Dharma), the birds associated with him are treated as his emanations. Some monasteries in Tibet and Bhutan have traditionally protected ravens nesting on or near the monastery as manifestations of Mahakala\'s presence. This attitude varies regionally and by specific tradition.' },
+  { q: 'Are there raven divination traditions in Tibet?', a: 'Yes. Tibetan corvid divination (using the direction and character of calls from crows and ravens) is part of the broader Tibetan system of divination that blends Bon (pre-Buddhist Tibetan religion) and Buddhist elements. The Bön tradition — Tibet\'s indigenous shamanistic/animistic religion — has rich bird-omen traditions predating Buddhism. The raven\'s call direction, timing, and number of calls are interpreted in some traditional contexts as omens of travel, visitors, or events. This continues in folk belief even where formal Bon ritual practice has declined.' },
+];
+---
+
+<BaseLayout title={title} description={description} path={path} ogType="article"
+  datePublished="2026-11-07" dateModified="2026-11-07"
+  breadcrumbs={breadcrumbs} faq={faq} pageType="Article">
+
+<article class="qa-page">
+
+  <nav class="qa-breadcrumb" aria-label="Breadcrumb">
+    <ol>
+      {breadcrumbs.map((b, i) => (
+        <li>
+          {i < breadcrumbs.length - 1
+            ? <><a href={b.url}>{b.name}</a><span aria-hidden="true"> › </span></>
+            : <span aria-current="page">{b.name}</span>}
+        </li>
+      ))}
+    </ol>
+  </nav>
+
+  <header class="qa-header">
+    <p class="qa-pillar">World Lore · MYW·23</p>
+    <h1>Ravens in Tibetan Buddhism: Mahakala's Bird</h1>
+  </header>
+
+  <section class="qa-snippet" aria-label="Direct answer">
+    <p><strong class="claim-lore">[lore]</strong> In Tibetan Buddhist and Bon tradition, the raven is associated with Mahakala — the principal Dharma-protector deity — appearing as his mount, messenger, or emanation. This association confers on the raven a sacred status in some Himalayan communities, where ravens near monasteries may be interpreted as Mahakala's presence. Bon divination also includes raven and crow omen reading as part of wider bird-omen traditions.</p>
+  </section>
+
+  <section class="qa-section">
+    <h2>Mahakala and the Raven</h2>
+    <p><strong class="claim-lore">[lore]</strong> Mahakala (Tibetan: <em>mGon po</em>, "Great Black One") is one of the most important dharmapala — wrathful protective deities who defend the Buddhist Dharma and practitioners — in Vajrayana (Tibetan) Buddhism. He appears in numerous iconographic forms across different lineages and sects. In one significant form — sometimes called Brahmarupa Mahakala or the "white-clad" Mahakala — his vehicle (vahana) or manifestation is a raven-crow.<sup><a href="#src-1">1</a></sup></p>
+    <p>The iconographic connection between Mahakala and corvids reflects the bird's real ecological role: ravens and crows are found throughout the Himalayas and Tibetan Plateau, often near human settlements and around death and carrion — which connects them naturally to the wrathful, death-associated aspects of Mahakala's symbolism. A deity who governs and protects through wrathful power is appropriately associated with a bird that haunts charnel grounds and battle sites.</p>
+  </section>
+
+  <section class="qa-section">
+    <h2>Ravens in the Himalayas</h2>
+    <p><strong class="claim-science">[science]</strong> The Common Raven (<em>Corvus corax</em>) is a year-round resident of the Himalayas, occurring from the foothills to above 5,000 m elevation on the Tibetan Plateau. The Large-billed Crow (<em>Corvus macrorhynchos</em>) and House Crow (<em>C. splendens</em>) are also present in the lower Himalayan zones. In traditional Tibetan texts, the distinction between raven and crow species is not always made with taxonomic precision; <em>bya rog</em> refers to dark corvids generally.<sup><a href="#src-2">2</a></sup></p>
+    <p>Ravens nesting on Himalayan cliff faces — including monastery cliff faces — are a common feature of the landscape. The association between ravens and monastery cliffs, combined with Mahakala's protective role, reinforces the bird's spiritual significance in these settings.</p>
+  </section>
+
+  <section class="qa-section">
+    <h2>Bon Raven Divination</h2>
+    <p><strong class="claim-lore">[lore]</strong> The Bön tradition — Tibet's pre-Buddhist indigenous religious tradition, which subsequently absorbed and was absorbed by Tibetan Buddhism — has extensive traditions of bird divination. The <em>bya rog</em> (raven-crow) is among the birds whose calls, flight direction, and behavioural signals are read as omens.<sup><a href="#src-1">1</a></sup></p>
+    <p>Specific omen interpretations vary by region and text, but general patterns include:</p>
+    <ul>
+      <li>A raven calling from the north or northeast: often interpreted as an omen of visitors or news arriving from that direction.</li>
+      <li>Repeated calling in the early morning: associated with significant events about to occur.</li>
+      <li>Ravens gathering in unusual numbers: may signal death or major change.</li>
+    </ul>
+    <p>These omen traditions blend Bon animism with later Buddhist interpretations, creating a layered tradition in which the raven is simultaneously a natural bird, a carrier of spiritual messages, and potentially an emanation of a protective deity.</p>
+  </section>
+
+  <section class="qa-section">
+    <h2>The Raven in Himalayan Ecology</h2>
+    <p><strong class="claim-science">[science]</strong> At Himalayan altitudes where ravens live, their ecological role as scavengers connecting human settlements with the wild landscape has practical significance. Ravens are associated with high-altitude routes, following travellers and yak caravans, and attending the sky burial sites (<em>dur khrod</em>) where Tibetan Buddhist funeral practice exposes bodies for consumption by vultures and other scavengers. Their presence at sky burials would naturally reinforce associations with death, the afterlife, and protective deities who govern these transitions.<sup><a href="#src-2">2</a></sup></p>
+  </section>
+
+  <section class="qa-section">
+    <h2>Related Pages</h2>
+    <ul>
+      <li><a href="/lore/world/raven-in-chinese-mythology/">Raven in Chinese mythology</a></li>
+      <li><a href="/lore/world/ravens-in-persian-and-zoroastrian-tradition/">Ravens in Persian and Zoroastrian tradition</a></li>
+      <li><a href="/lore/world/raven-symbolism/">Raven symbolism worldwide</a></li>
+    </ul>
+  </section>
+
+  <section class="qa-faq qa-section" aria-labelledby="faq-h2">
+    <h2 id="faq-h2">Frequently Asked Questions</h2>
+    {faq.map(item => (
+      <details class="qa-faq-item">
+        <summary class="qa-faq-q">{item.q}</summary>
+        <p class="qa-faq-a">{item.a}</p>
+      </details>
+    ))}
+  </section>
+
+  <section class="qa-sources qa-section" aria-labelledby="src-h2">
+    <h2 id="src-h2">Sources</h2>
+    <ol class="qa-src-list">
+      <li id="src-1">Nebesky-Wojkowitz, R. de (1956). <em>Oracles and Demons of Tibet: The Cult and Iconography of the Tibetan Protective Deities</em>. Mouton. — Mahakala iconography, dharmapala bird associations, Bon divination traditions including corvid omens.</li>
+      <li id="src-2">del Hoyo, J. et al. (eds., 2009). <em>Handbook of the Birds of the World</em>, vol. 14. Lynx Edicions. — corvid distribution in the Himalayan region including Common Raven at altitude.</li>
+    </ol>
+    <p class="qa-claim-note"><strong class="claim-lore">[lore]</strong> named cultural/historical source · <strong class="claim-science">[science]</strong> peer-reviewed or field-guide data</p>
+  </section>
+
+</article>
+</BaseLayout>
+
+<style>
+  .qa-page { max-width: 820px; margin: 0 auto; padding: 2rem 1.25rem 4rem; color: var(--iron-ink, #e8e4d8); font-family: 'Inter', sans-serif; line-height: 1.72; }
+  .qa-breadcrumb ol { display: flex; flex-wrap: wrap; gap: .25rem; list-style: none; padding: 0; margin: 0 0 2rem; font-size: .8rem; color: var(--ink-soft, #8a8070); }
+  .qa-breadcrumb a { color: var(--gold-500, #d4ae5a); text-decoration: none; }
+  .qa-pillar { font-size: .72rem; letter-spacing: .12em; text-transform: uppercase; color: var(--gold-500, #d4ae5a); margin: 0 0 .4rem; }
+  .qa-page h1 { font-family: 'Cormorant Garamond', serif; font-size: clamp(2rem, 5vw, 3rem); font-weight: 700; color: #fff; margin: 0 0 2rem; line-height: 1.1; }
+  .qa-snippet { background: rgba(212,174,90,.08); border-left: 3px solid var(--gold-500, #d4ae5a); border-radius: 0 6px 6px 0; padding: 1rem 1.25rem; margin-bottom: 2.5rem; font-size: 1.03rem; }
+  .qa-section { margin-bottom: 2.5rem; }
+  .qa-section h2 { font-family: 'Cormorant Garamond', serif; font-size: 1.5rem; font-weight: 600; color: #fff; margin: 0 0 .9rem; border-bottom: 1px solid rgba(212,174,90,.2); padding-bottom: .4rem; }
+  .qa-section p { margin: 0 0 1rem; font-size: .97rem; }
+  .qa-section ul { padding-left: 1.25rem; margin: 0 0 1rem; }
+  .qa-section li { margin-bottom: .4rem; font-size: .95rem; }
+  .claim-lore { color: #c49a3c; font-style: normal; font-size: .78rem; }
+  .claim-science { color: #7ab9e0; font-style: normal; font-size: .78rem; }
+  a[href] { color: var(--gold-500, #d4ae5a); }
+  .qa-faq-item { border-bottom: 1px solid rgba(255,255,255,.07); }
+  .qa-faq-q { cursor: pointer; padding: .9rem 0; font-size: .97rem; font-weight: 500; color: #fff; list-style: none; }
+  .qa-faq-q::before { content: '+ '; color: var(--gold-500, #d4ae5a); font-weight: 700; }
+  details[open] .qa-faq-q::before { content: '− '; }
+  .qa-faq-a { margin: 0 0 1rem; line-height: 1.7; font-size: .93rem; color: var(--ink-soft, #c8c0b0); }
+  .qa-src-list { padding-left: 1.25rem; margin: 0 0 1rem; }
+  .qa-src-list li { margin-bottom: .6rem; font-size: .82rem; color: var(--ink-soft, #8a8070); line-height: 1.6; }
+  .qa-claim-note { font-size: .78rem; color: var(--ink-soft, #605848); border-top: 1px solid rgba(255,255,255,.06); padding-top: .75rem; }
+</style>

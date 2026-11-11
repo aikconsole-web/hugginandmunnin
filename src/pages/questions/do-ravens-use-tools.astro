@@ -1,0 +1,158 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const title       = 'Do Ravens Use Tools? What the Research Shows';
+const description = 'Ravens show limited tool use compared to New Caledonian Crows, but demonstrate object manipulation and proto-tool behaviours. What peer-reviewed studies say about raven tool use.';
+const path        = '/questions/do-ravens-use-tools/';
+
+const breadcrumbs = [
+  { name: 'Home',      url: '/' },
+  { name: 'Questions', url: '/questions/' },
+  { name: 'Do ravens use tools?', url: path },
+];
+
+const faq = [
+  { q: 'Do ravens use tools?', a: 'Ravens show limited spontaneous tool use compared to New Caledonian Crows — the corvid tool-use champion. Ravens manipulate objects and show proto-tool behaviours (using objects to displace other objects), but have not been documented manufacturing or habitually using tools to extract food in the wild. In experimental settings, ravens have solved multi-step problems but typically prefer non-tool solutions when available.' },
+  { q: 'Which corvid is the best tool user?', a: 'The New Caledonian Crow (Corvus moneduloides) is the corvid tool-use champion — it manufactures hooked tools from pandanus leaves and wire in experiments, and uses tools habitually in the wild to extract grubs from bark. Ravens are highly intelligent but are not habitual tool users. Common Ravens have shown object manipulation and insight problem-solving, but not systematic tool manufacture.' },
+];
+---
+
+<BaseLayout title={title} description={description} path={path} ogType="article"
+  datePublished="2026-11-07" dateModified="2026-11-07"
+  breadcrumbs={breadcrumbs} faq={faq} pageType="Article">
+
+<article class="id-page">
+  <nav class="id-breadcrumb" aria-label="Breadcrumb">
+    <ol>
+      {breadcrumbs.map((b, i) => (
+        <li>
+          {i < breadcrumbs.length - 1
+            ? <><a href={b.url}>{b.name}</a><span aria-hidden="true"> › </span></>
+            : <span aria-current="page">{b.name}</span>}
+        </li>
+      ))}
+    </ol>
+  </nav>
+  <header class="id-header">
+    <p class="id-pillar">Questions · Behaviour</p>
+    <h1>Do Ravens Use Tools?</h1>
+    <p class="id-subtitle">What the research shows — and how ravens compare to New Caledonian Crows</p>
+  </header>
+
+  <section class="id-snippet" aria-label="Quick answer">
+    <p><strong class="claim-science">[science]</strong> Ravens show <strong>object manipulation and proto-tool behaviour</strong> but are not habitual tool users. New Caledonian Crows are the corvid tool-use specialists — they manufacture hooked tools in the wild. Common Ravens solve multi-step problems with insight but typically choose non-tool solutions when available. Studies by Taylor et al. and Heinrich suggest ravens have the cognitive capacity for tool use but do not reliably deploy it.</p>
+  </section>
+
+  <section class="id-section">
+    <h2>What "Tool Use" Means</h2>
+    <p><strong class="claim-science">[science]</strong> Animal behaviourists define tool use strictly: an animal uses an external object to change another object, substance, or organism, where the user holds or carries the tool and the tool is not attached to a substrate. By this definition:</p>
+    <ul>
+      <li><strong>Proto-tool use:</strong> using objects to displace other objects without holding or directing them precisely</li>
+      <li><strong>Tool use:</strong> directing a held/carried object at a target to achieve an effect</li>
+      <li><strong>Tool manufacture:</strong> modifying an object to make it more effective as a tool (the highest level)</li>
+    </ul>
+    <p>New Caledonian Crows operate at all three levels. Ravens have demonstrated proto-tool behaviour but not consistent, habitual tool use or manufacture in the wild.<sup><a href="#src-1">1</a></sup></p>
+  </section>
+
+  <section class="id-section">
+    <h2>What Ravens Have Been Observed Doing</h2>
+    <p><strong class="claim-science">[science]</strong></p>
+    <ul>
+      <li><strong>Object manipulation:</strong> Ravens regularly pick up, carry, and manipulate objects in play contexts — without a food goal</li>
+      <li><strong>Stone dropping:</strong> Anecdotal reports of ravens dropping objects onto intruders (documented by Gwinner 1965; described by Heinrich 2000), but not systematically verified as directed tool use</li>
+      <li><strong>Displacement behaviours:</strong> Moving objects to get to a food reward underneath — proto-tool behaviour</li>
+      <li><strong>Multi-step planning:</strong> Kabadayi & Osvath (2017) showed ravens could plan for a future tool-use task, selecting and saving a tool for later use. This demonstrates prospective cognition but was an experimental analogue, not wild behaviour</li>
+    </ul>
+    <p>Heinrich (2000) documents extensive object manipulation in ravens but notes that in food-getting contexts, ravens almost always solve problems without tools when possible — begging, stealing, or using their bill directly.<sup><a href="#src-2">2</a></sup></p>
+  </section>
+
+  <section class="id-section">
+    <h2>New Caledonian Crow: The Corvid Benchmark</h2>
+    <p><strong class="claim-science">[science]</strong> For context, New Caledonian Crows (<em>Corvus moneduloides</em>) represent the corvid extreme in tool use:</p>
+    <ul>
+      <li>Manufacture hooked tools from pandanus leaf strips in the wild — the only non-human animal known to habitually make hooks</li>
+      <li>Use metal wire to make hooks in lab settings (Weir et al. 2002)</li>
+      <li>Use tools in sequential multi-step tasks (tool A to get tool B to get food)</li>
+      <li>Tool use is widespread across the population and appears to be culturally transmitted</li>
+    </ul>
+    <p>Taylor et al. (2010) compared problem-solving strategies in NCC and found that they approach physical causation problems differently from other corvids — with more systematic causal reasoning about object relationships.<sup><a href="#src-3">3</a></sup></p>
+  </section>
+
+  <section class="id-section">
+    <h2>The Kabadayi & Osvath (2017) Planning Study</h2>
+    <p><strong class="claim-science">[science]</strong> This study (Science, 2017) tested whether ravens could plan for future tool-use tasks — a capacity thought to require "mental time travel" (thinking about a future need now):</p>
+    <ul>
+      <li>Ravens were shown a box that required a specific token to open (the "tool")</li>
+      <li>Tokens were offered at a different time from when the box was accessible</li>
+      <li>Ravens selected and saved the correct token for the future task — above chance, and despite competing temptations (immediate food rewards)</li>
+      <li>Performance was comparable to great apes in equivalent paradigms</li>
+    </ul>
+    <p>Importantly: this tests prospective cognition and planning, not tool manufacture or habitual wild tool use. It shows the cognitive <em>capacity</em> without implying ravens deploy tools in nature.<sup><a href="#src-4">4</a></sup></p>
+  </section>
+
+  <section class="id-section">
+    <h2>Why Ravens May Not Use Tools Habitually</h2>
+    <p><strong class="claim-science">[science]</strong> Researchers offer several explanations:</p>
+    <ul>
+      <li><strong>Ecological niche:</strong> Ravens are generalist scavengers and predators — their beak is powerful enough to access most food without tools; NCC extract grubs from narrow holes, creating a specific selective pressure for tools</li>
+      <li><strong>Social solutions:</strong> Ravens often solve food-access problems socially (recruitment, theft, coalition) rather than mechanically</li>
+      <li><strong>Opportunity costs:</strong> Tool use is energetically costly if non-tool solutions exist; ravens appear to default to the simpler option</li>
+    </ul>
+    <p>Intelligence and tool use are not the same thing. Ravens show high-level cognition in many domains; tool use is simply not the domain in which their cognition is expressed most clearly.<sup><a href="#src-2">2</a></sup></p>
+  </section>
+
+  <section class="id-faq id-section" aria-labelledby="faq-h2">
+    <h2 id="faq-h2">Frequently Asked Questions</h2>
+    {faq.map(item => (
+      <details class="id-faq-item">
+        <summary class="id-faq-q">{item.q}</summary>
+        <p class="id-faq-a">{item.a}</p>
+      </details>
+    ))}
+  </section>
+
+  <section class="id-sources id-section" aria-labelledby="src-h2">
+    <h2 id="src-h2">Sources</h2>
+    <ol class="id-src-list">
+      <li id="src-1">Seed, A. M. &amp; Byrne, R. W. (2010). Animal tool-use. <em>Current Biology</em>, 20(23), R1032–R1039. DOI: 10.1016/j.cub.2010.09.042 — definition and taxonomy of tool use.</li>
+      <li id="src-2">Heinrich, B. (2000). <em>Mind of the Raven</em>. Harper Perennial. — object manipulation, problem-solving, and tool-use observations in Common Ravens.</li>
+      <li id="src-3">Taylor, A. H., Hunt, G. R., Medina, F. S. &amp; Gray, R. D. (2009). Do New Caledonian Crows solve physical problems through causal reasoning? <em>Proceedings of the Royal Society B</em>, 276(1655), 247–254. DOI: 10.1098/rspb.2008.1107</li>
+      <li id="src-4">Kabadayi, C. &amp; Osvath, M. (2017). Ravens parallel great apes in flexible planning for tool-use and bartering. <em>Science</em>, 357(6347), 202–204. DOI: 10.1126/science.aam8138</li>
+    </ol>
+    <p class="id-claim-note"><strong class="claim-science">[science]</strong> peer-reviewed studies</p>
+  </section>
+
+  <nav class="id-nav-bottom">
+    <a href="/questions/how-smart-are-ravens/" class="id-back">← How Smart Are Ravens?</a>
+    <a href="/behaviour/raven-intelligence/" class="id-next">Raven Intelligence (full chapter) →</a>
+  </nav>
+</article>
+</BaseLayout>
+
+<style>
+  .id-page { max-width: 820px; margin: 0 auto; padding: 2rem 1.25rem 4rem; color: var(--iron-ink, #e8e4d8); font-family: 'Inter', sans-serif; line-height: 1.72; }
+  .id-breadcrumb ol { display: flex; flex-wrap: wrap; gap: .25rem; list-style: none; padding: 0; margin: 0 0 2rem; font-size: .8rem; color: var(--ink-soft, #8a8070); }
+  .id-breadcrumb a { color: var(--gold-500, #d4ae5a); text-decoration: none; }
+  .id-pillar { font-size: .72rem; letter-spacing: .12em; text-transform: uppercase; color: var(--gold-500, #d4ae5a); margin: 0 0 .4rem; }
+  .id-page h1 { font-family: 'Cormorant Garamond', serif; font-size: clamp(2rem, 5vw, 3.25rem); font-weight: 700; color: #fff; margin: 0 0 .2rem; line-height: 1.1; }
+  .id-subtitle { font-size: 1rem; color: var(--ink-soft, #c0b89a); margin: 0 0 2rem; }
+  .id-snippet { background: rgba(212,174,90,.08); border-left: 3px solid var(--gold-500, #d4ae5a); border-radius: 0 6px 6px 0; padding: 1rem 1.25rem; margin-bottom: 2.5rem; font-size: 1.03rem; }
+  .id-section { margin-bottom: 2.75rem; }
+  .id-section h2 { font-family: 'Cormorant Garamond', serif; font-size: 1.6rem; font-weight: 600; color: #fff; margin: 0 0 1rem; border-bottom: 1px solid rgba(212,174,90,.2); padding-bottom: .4rem; }
+  .id-section p { margin: 0 0 1rem; font-size: .97rem; }
+  .id-section ul { padding-left: 1.25rem; margin: 0 0 1rem; }
+  .id-section li { margin-bottom: .4rem; font-size: .95rem; }
+  .claim-science { color: #7ab9e0; font-style: normal; font-size: .78rem; }
+  a[href] { color: var(--gold-500, #d4ae5a); }
+  .id-faq-item { border-bottom: 1px solid rgba(255,255,255,.07); }
+  .id-faq-q { cursor: pointer; padding: .9rem 0; font-size: .97rem; font-weight: 500; color: #fff; list-style: none; }
+  .id-faq-q::before { content: '+ '; color: var(--gold-500, #d4ae5a); font-weight: 700; }
+  details[open] .id-faq-q::before { content: '− '; }
+  .id-faq-a { margin: 0 0 1rem; line-height: 1.7; font-size: .93rem; color: var(--ink-soft, #c8c0b0); }
+  .id-src-list { padding-left: 1.25rem; margin: 0 0 1rem; }
+  .id-src-list li { margin-bottom: .6rem; font-size: .82rem; color: var(--ink-soft, #8a8070); line-height: 1.6; }
+  .id-claim-note { font-size: .78rem; color: var(--ink-soft, #605848); border-top: 1px solid rgba(255,255,255,.06); padding-top: .75rem; }
+  .id-nav-bottom { display: flex; justify-content: space-between; padding-top: 2rem; border-top: 1px solid rgba(255,255,255,.07); }
+  .id-nav-bottom a { font-size: .9rem; text-decoration: none; }
+  .id-nav-bottom a:hover { text-decoration: underline; }
+</style>

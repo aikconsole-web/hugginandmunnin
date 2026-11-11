@@ -1,0 +1,147 @@
+---
+/**
+ * Behaviour chapter — Raven mimicry and talking
+ * BEH·12
+ * Primary keyword: can ravens talk
+ * Secondary: raven mimicry, raven talking, do ravens mimic speech
+ */
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const title       = 'Can Ravens Talk? Mimicry, Speech, and What Ravens Actually Do';
+const description = 'Ravens can mimic human speech and many other sounds with striking accuracy. This chapter covers what mimicry is, how good ravens are at it, and what (if anything) they understand about the sounds they make.';
+const path        = '/behaviour/raven-mimicry-and-talking/';
+
+const breadcrumbs = [
+  { name: 'Home',      url: '/' },
+  { name: 'Behaviour', url: '/behaviour/' },
+  { name: 'Raven Mimicry and Talking', url: path },
+];
+
+const faq = [
+  { q: 'What sounds can ravens mimic?', a: 'Ravens are capable of mimicking a wide range of sounds: human words and phrases, other bird calls (including other raven calls they have not heard before), environmental sounds (machinery, water, creaking gates), and mammal calls. Captive ravens in close contact with humans often acquire extensive vocabularies of human speech. Wild ravens mimic other species\' alarm calls and have been documented using the calls of other animals (e.g., mammalian predators) in apparent deception contexts, though this interpretation is debated.' },
+  { q: 'Do ravens understand what they are saying?', a: 'The evidence for semantic understanding (knowing what words mean) in ravens is limited. Some captive ravens use specific sounds in context-appropriate ways — producing a human word when shown the associated object — but this may reflect conditioned association rather than linguistic understanding. Ravens are not known to spontaneously combine words into novel sentences. Their mimicry, while impressive, appears primarily social and contextual rather than linguistic.' },
+  { q: 'Which is a better talker — a raven or a parrot?', a: 'Parrots (especially African Greys and Amazon parrots) generally develop larger human-word vocabularies than ravens and show stronger evidence of contextual word use. Ravens are more famous for their range of non-speech mimicry and for their intelligence in other domains. The comparison is complicated by the different social niches the two groups fill: parrots are flock birds with complex vocal social lives; ravens are pair-living birds whose vocal repertoire serves different functions.' },
+];
+---
+
+<BaseLayout title={title} description={description} path={path} ogType="article"
+  datePublished="2026-11-07" dateModified="2026-11-07"
+  breadcrumbs={breadcrumbs} faq={faq} pageType="Article">
+
+<article class="qa-page">
+
+  <nav class="qa-breadcrumb" aria-label="Breadcrumb">
+    <ol>
+      {breadcrumbs.map((b, i) => (
+        <li>
+          {i < breadcrumbs.length - 1
+            ? <><a href={b.url}>{b.name}</a><span aria-hidden="true"> › </span></>
+            : <span aria-current="page">{b.name}</span>}
+        </li>
+      ))}
+    </ol>
+  </nav>
+
+  <header class="qa-header">
+    <p class="qa-pillar">Behaviour · BEH·12</p>
+    <h1>Can Ravens Talk? Mimicry, Speech, and What Ravens Actually Do</h1>
+  </header>
+
+  <section class="qa-snippet" aria-label="Direct answer">
+    <p><strong class="claim-science">[science]</strong> Yes — ravens can and do mimic human speech, often with striking clarity. Captive ravens in close contact with people regularly acquire words and short phrases. Wild ravens mimic other birds' calls, environmental sounds, and even some human sounds. What they do not appear to do is understand language in a semantic sense: their mimicry is impressive but is not the same as the speech-comprehension shown by some parrots.</p>
+  </section>
+
+  <section class="qa-section">
+    <h2>What Mimicry Is — and Is Not</h2>
+    <p><strong class="claim-science">[science]</strong> Vocal mimicry is the reproduction of sounds not in a species' innate repertoire — especially the sounds of other species. It is not the same as language or communication with meaning. A raven that says "Hello" has learned to produce that acoustic pattern; whether it associates any specific meaning with the sound is a separate and much harder question.<sup><a href="#src-1">1</a></sup></p>
+    <p>Ravens are "open-ended vocal learners" — they can acquire new sounds throughout their lives, not just in an early sensitive period. This is relatively rare among birds (parrots, corvids, hummingbirds, some shorebirds, and oscine songbirds are the main groups with this capacity) and is associated with complex social environments and large brains.</p>
+  </section>
+
+  <section class="qa-section">
+    <h2>What Ravens Mimic</h2>
+    <p><strong class="claim-science">[science]</strong> The range of sounds ravens mimic includes:<sup><a href="#src-1">1</a></sup><sup><a href="#src-2">2</a></sup></p>
+    <ul>
+      <li><strong>Human speech:</strong> captive ravens in contact with people acquire words, phrases, and sometimes longer fragments of human speech. The quality can be very close to the original — ravens can mimic human voices at the pitch and timbre of the individual they have heard, not just a generic human voice.</li>
+      <li><strong>Other bird calls:</strong> ravens have been documented mimicking the calls of eagles and other raptors. Marzluff & Angell (2005) describe wild ravens producing raptor calls apparently to manipulate other ravens' behaviour — causing competitors to disperse while the mimic accesses food. This "deceptive mimicry" interpretation is intriguing but difficult to confirm definitively.</li>
+      <li><strong>Environmental sounds:</strong> captive ravens have been recorded mimicking machinery, closing doors, running water, and other non-biological sounds from their environment.</li>
+      <li><strong>Mammal calls:</strong> calls of wolves, dogs, and other mammals have been reported in raven mimicry accounts.</li>
+    </ul>
+  </section>
+
+  <section class="qa-section">
+    <h2>Historical Accounts</h2>
+    <p><strong class="claim-lore">[lore]</strong> Accounts of talking ravens go back at least to classical antiquity. Pliny the Elder (<em>Natural History</em>, 77 AD) described a raven at Rome that greeted emperors by name, and noted that ravens could be taught to speak. Konrad Lorenz, who kept ravens in the twentieth century, described a raven that accurately reproduced his spoken name. Charles Dickens kept a pet raven named Grip who was reported to say several phrases; Grip inspired Edgar Allan Poe's poem "The Raven" (1845).</p>
+  </section>
+
+  <section class="qa-section">
+    <h2>What Evidence Says About Understanding</h2>
+    <p><strong class="claim-science">[science]</strong> The question of whether ravens understand what they say has not been resolved by controlled experiments. Some observations suggest context-appropriate use: a captive raven producing a food-related phrase specifically when fed, for instance. But the same behaviour can be explained by conditioning (the sound has been reinforced in that context) rather than semantic understanding.<sup><a href="#src-1">1</a></sup></p>
+    <p>African Grey Parrots, in Irene Pepperberg's decades of research, showed stronger evidence of contextual word use — combining colour, shape, and number words in novel combinations. No equivalent series of experiments has been conducted on ravens. The gap in the evidence should not be read as evidence that ravens are less capable; it reflects where researchers have focussed, not necessarily a cognitive ceiling.</p>
+  </section>
+
+  <section class="qa-section">
+    <h2>What We Don't Know</h2>
+    <ul>
+      <li>How common is wild raven mimicry of human speech (as opposed to captive birds)?</li>
+      <li>Is "deceptive" use of raptor calls or other species' calls genuinely intentional, or coincidental?</li>
+      <li>Can ravens learn from hearing humans talk to each other, or only from direct interaction?</li>
+      <li>Is there a maximum vocabulary size for ravens, and how does it compare to parrots?</li>
+    </ul>
+  </section>
+
+  <section class="qa-section">
+    <h2>Related Pages</h2>
+    <ul>
+      <li><a href="/questions/can-ravens-talk/">Can ravens talk? (Q&A)</a></li>
+      <li><a href="/behaviour/raven-vocalisation/">Raven vocalisation — the full repertoire</a></li>
+      <li><a href="/behaviour/raven-intelligence/">Raven intelligence</a></li>
+      <li><a href="/myths/ravens-can-talk/">Myth: Ravens can talk (verdict page)</a></li>
+    </ul>
+  </section>
+
+  <section class="qa-faq qa-section" aria-labelledby="faq-h2">
+    <h2 id="faq-h2">Frequently Asked Questions</h2>
+    {faq.map(item => (
+      <details class="qa-faq-item">
+        <summary class="qa-faq-q">{item.q}</summary>
+        <p class="qa-faq-a">{item.a}</p>
+      </details>
+    ))}
+  </section>
+
+  <section class="qa-sources qa-section" aria-labelledby="src-h2">
+    <h2 id="src-h2">Sources</h2>
+    <ol class="qa-src-list">
+      <li id="src-1">Boarman, W.I. & Heinrich, B. (1999). Common Raven (<em>Corvus corax</em>). In <em>Birds of the World</em> (A.F. Poole, ed.). Cornell Lab of Ornithology. — vocal learning, mimicry.</li>
+      <li id="src-2">Marzluff, J.M. & Angell, T. (2005). <em>In the Company of Crows and Ravens</em>. Yale University Press. — mimicry accounts, deceptive calling, historical references.</li>
+    </ol>
+    <p class="qa-claim-note"><strong class="claim-science">[science]</strong> peer-reviewed study or field-guide data &nbsp;|&nbsp; <strong class="claim-lore">[lore]</strong> named cultural/historical source</p>
+  </section>
+
+</article>
+</BaseLayout>
+
+<style>
+  .qa-page { max-width: 820px; margin: 0 auto; padding: 2rem 1.25rem 4rem; color: var(--iron-ink, #e8e4d8); font-family: 'Inter', sans-serif; line-height: 1.72; }
+  .qa-breadcrumb ol { display: flex; flex-wrap: wrap; gap: .25rem; list-style: none; padding: 0; margin: 0 0 2rem; font-size: .8rem; color: var(--ink-soft, #8a8070); }
+  .qa-breadcrumb a { color: var(--gold-500, #d4ae5a); text-decoration: none; }
+  .qa-pillar { font-size: .72rem; letter-spacing: .12em; text-transform: uppercase; color: var(--gold-500, #d4ae5a); margin: 0 0 .4rem; }
+  .qa-page h1 { font-family: 'Cormorant Garamond', serif; font-size: clamp(2rem, 5vw, 3rem); font-weight: 700; color: #fff; margin: 0 0 2rem; line-height: 1.1; }
+  .qa-snippet { background: rgba(212,174,90,.08); border-left: 3px solid var(--gold-500, #d4ae5a); border-radius: 0 6px 6px 0; padding: 1rem 1.25rem; margin-bottom: 2.5rem; font-size: 1.03rem; }
+  .qa-section { margin-bottom: 2.5rem; }
+  .qa-section h2 { font-family: 'Cormorant Garamond', serif; font-size: 1.5rem; font-weight: 600; color: #fff; margin: 0 0 .9rem; border-bottom: 1px solid rgba(212,174,90,.2); padding-bottom: .4rem; }
+  .qa-section p { margin: 0 0 1rem; font-size: .97rem; }
+  .qa-section ul { padding-left: 1.25rem; margin: 0 0 1rem; }
+  .qa-section li { margin-bottom: .4rem; font-size: .95rem; }
+  .claim-science { color: #7ab9e0; font-style: normal; font-size: .78rem; }
+  .claim-lore { color: #c4a26a; font-style: normal; font-size: .78rem; }
+  a[href] { color: var(--gold-500, #d4ae5a); }
+  .qa-faq-item { border-bottom: 1px solid rgba(255,255,255,.07); }
+  .qa-faq-q { cursor: pointer; padding: .9rem 0; font-size: .97rem; font-weight: 500; color: #fff; list-style: none; }
+  .qa-faq-q::before { content: '+ '; color: var(--gold-500, #d4ae5a); font-weight: 700; }
+  details[open] .qa-faq-q::before { content: '− '; }
+  .qa-faq-a { margin: 0 0 1rem; line-height: 1.7; font-size: .93rem; color: var(--ink-soft, #c8c0b0); }
+  .qa-src-list { padding-left: 1.25rem; margin: 0 0 1rem; }
+  .qa-src-list li { margin-bottom: .6rem; font-size: .82rem; color: var(--ink-soft, #8a8070); line-height: 1.6; }
+  .qa-claim-note { font-size: .78rem; color: var(--ink-soft, #605848); border-top: 1px solid rgba(255,255,255,.06); padding-top: .75rem; }
+</style>

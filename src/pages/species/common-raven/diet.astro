@@ -1,0 +1,161 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+
+const title       = 'Common Raven Diet — What Ravens Eat';
+const description = 'Common Ravens are omnivorous generalist scavengers. Diet includes carrion, small vertebrates, invertebrates, berries, grain, eggs, and refuse. Detailed breakdown of raven food sources and foraging behaviour.';
+const path        = '/species/common-raven/diet/';
+
+const breadcrumbs = [
+  { name: 'Home',          url: '/' },
+  { name: 'Species',       url: '/species/' },
+  { name: 'Common Raven',  url: '/species/common-raven/' },
+  { name: 'Diet',          url: path },
+];
+
+const faq = [
+  { q: 'What do Common Ravens eat?', a: 'Common Ravens are omnivorous generalist scavengers. Their diet includes carrion (a major component, especially in winter), small mammals, birds, eggs, invertebrates, berries and fruits, grain, refuse from human settlements, and cached food. They actively hunt small prey but rely heavily on scavenging large carcasses — particularly ungulates, roadkill, and refuse. Diet varies significantly by season and habitat.' },
+  { q: 'Do ravens hunt live prey?', a: 'Yes. Ravens take live prey including small rodents (voles, mice), young rabbits, birds (especially eggs and nestlings), lizards, frogs, and large invertebrates. However, hunting live vertebrates is a smaller component of diet than scavenging in most populations. They also kleptoparasitise other birds, stealing food from other raptors and corvids.' },
+];
+---
+
+<BaseLayout title={title} description={description} path={path} ogType="article"
+  datePublished="2026-11-07" dateModified="2026-11-07"
+  breadcrumbs={breadcrumbs} faq={faq} pageType="Article">
+
+<article class="id-page">
+  <nav class="id-breadcrumb" aria-label="Breadcrumb">
+    <ol>
+      {breadcrumbs.map((b, i) => (
+        <li>
+          {i < breadcrumbs.length - 1
+            ? <><a href={b.url}>{b.name}</a><span aria-hidden="true"> › </span></>
+            : <span aria-current="page">{b.name}</span>}
+        </li>
+      ))}
+    </ol>
+  </nav>
+  <header class="id-header">
+    <p class="id-pillar">Species · Diet</p>
+    <h1>Common Raven — Diet</h1>
+    <p class="id-subtitle"><em>Corvus corax</em> · Generalist Omnivore</p>
+  </header>
+
+  <section class="id-snippet" aria-label="Quick answer">
+    <p><strong class="claim-science">[science]</strong> Common Ravens are <strong>omnivorous generalist scavengers</strong> — one of the most dietary flexible birds on earth. The core of the diet (especially in winter) is <strong>carrion</strong>; supplemented by small vertebrates, invertebrates, plant material, eggs, and human refuse. Diet composition varies substantially by season, habitat, and individual opportunity.</p>
+  </section>
+
+  <section class="id-section">
+    <h2>Carrion and Scavenging</h2>
+    <p><strong class="claim-science">[science]</strong> Carrion is the most important single food source for many raven populations:</p>
+    <ul>
+      <li>Large ungulate carcasses (deer, elk, moose, sheep) — primary in montane and boreal populations</li>
+      <li>Roadkill — a major food source in modern landscapes</li>
+      <li>Refuse from abattoirs, landfills, and fishing operations</li>
+      <li>Carcasses at or near wolf and coyote kill sites — ravens follow wolves and benefit from their kills; wolves may tolerate ravens as a "partner" that alerts them to carcasses from above</li>
+    </ul>
+    <p>Heinrich (1989) documented the sophisticated information-sharing system ravens use to find and access large carcasses — juveniles recruiting other ravens to dilute the risk from territorial adults at carcasses. This is the primary behaviour studied in the classic winter carcass research.<sup><a href="#src-1">1</a></sup></p>
+  </section>
+
+  <section class="id-section">
+    <h2>Live Prey</h2>
+    <p><strong class="claim-science">[science]</strong></p>
+    <ul>
+      <li><strong>Small mammals:</strong> Voles, mice, shrews, young rabbits; taken on the ground</li>
+      <li><strong>Birds:</strong> Mostly eggs and nestlings; occasionally adult small birds; documented nest robbing across many species including seabirds, waterfowl, and raptors</li>
+      <li><strong>Reptiles and amphibians:</strong> Lizards, frogs, toads — taken opportunistically</li>
+      <li><strong>Large invertebrates:</strong> Beetles, caterpillars, grasshoppers, earthworms — particularly important in summer and for feeding nestlings</li>
+      <li><strong>Intertidal prey:</strong> Coastal populations take crabs, molluscs, starfish, and other marine invertebrates</li>
+    </ul>
+    <p>Ravens are known to drop hard-shelled prey (mussels, tortoises in some areas, bones) from height onto rocks to crack them — a form of object use documented across multiple populations.<sup><a href="#src-2">2</a></sup></p>
+  </section>
+
+  <section class="id-section">
+    <h2>Plant Material</h2>
+    <p><strong class="claim-science">[science]</strong></p>
+    <ul>
+      <li>Berries: bilberry, crowberry, rowan, elder — particularly in summer and autumn</li>
+      <li>Grain: cereal crops — can be locally significant in agricultural areas</li>
+      <li>Fruit and seeds opportunistically</li>
+    </ul>
+    <p>Plant material is typically a minor component of diet compared to animal matter but becomes more important in some seasons and locations.<sup><a href="#src-2">2</a></sup></p>
+  </section>
+
+  <section class="id-section">
+    <h2>Human-Associated Foods</h2>
+    <p><strong class="claim-science">[science]</strong> Ravens are strongly commensal with humans in many parts of their range:</p>
+    <ul>
+      <li>Landfill refuse — ravens exploit landfills heavily where access is possible</li>
+      <li>Campsites and picnic areas — bold individuals steal food directly from humans</li>
+      <li>Fishing harbours and fish-processing areas</li>
+      <li>Military ranges and training areas — common association documented in North America and Europe</li>
+    </ul>
+    <p>In areas with reliable human food sources (landfills, military bases), raven densities may be much higher than the natural carrying capacity of the landscape. This can have negative effects on other species (increased nest predation on desert tortoises and other vulnerable species; extensively studied in the Mojave Desert, USA).<sup><a href="#src-3">3</a></sup></p>
+  </section>
+
+  <section class="id-section">
+    <h2>Food Caching</h2>
+    <p><strong class="claim-science">[science]</strong> Ravens cache food extensively:</p>
+    <ul>
+      <li>They hide food in thousands of locations and can retrieve caches months later</li>
+      <li>They use spatial memory and landmark cues to locate caches</li>
+      <li>They use "deceptive" caching behaviours when watched by other ravens — making false caches or re-caching after a witness departs (Bugnyar & Heinrich 2005)</li>
+      <li>They also pirate other ravens' caches (scrounging)</li>
+    </ul>
+    <p>Food caching and cache protection represent some of the most sophisticated cognition documented in any bird. See the <a href="/behaviour/raven-food-caching/">Raven Food Caching</a> chapter for detailed coverage.<sup><a href="#src-4">4</a></sup></p>
+  </section>
+
+  <section class="id-faq id-section" aria-labelledby="faq-h2">
+    <h2 id="faq-h2">Frequently Asked Questions</h2>
+    {faq.map(item => (
+      <details class="id-faq-item">
+        <summary class="id-faq-q">{item.q}</summary>
+        <p class="id-faq-a">{item.a}</p>
+      </details>
+    ))}
+  </section>
+
+  <section class="id-sources id-section" aria-labelledby="src-h2">
+    <h2 id="src-h2">Sources</h2>
+    <ol class="id-src-list">
+      <li id="src-1">Heinrich, B. (1989). <em>Ravens in Winter</em>. Summit Books. — carcass recruitment, winter diet.</li>
+      <li id="src-2">Madge, S. &amp; Burn, H. (1994). <em>Crows and Jays</em>. Christopher Helm. — diet breadth, plant material, prey types.</li>
+      <li id="src-3">Boarman, W. I. &amp; Heinrich, B. (1999). Common Raven (<em>Corvus corax</em>). <em>The Birds of North America</em>, No. 476. — comprehensive diet data including human-associated foods.</li>
+      <li id="src-4">Bugnyar, T. &amp; Heinrich, B. (2005). Ravens, <em>Corvus corax</em>, differentiate between knowledgeable and ignorant competitors. <em>Proceedings of the Royal Society B</em>, 272, 1641–1646.</li>
+    </ol>
+    <p class="id-claim-note"><strong class="claim-science">[science]</strong> field-guide, species-account, and peer-reviewed data</p>
+  </section>
+
+  <nav class="id-nav-bottom">
+    <a href="/species/common-raven/range-and-habitat/" class="id-back">← Range and Habitat</a>
+    <a href="/questions/what-do-ravens-eat/" class="id-next">What Do Ravens Eat? (Q&A) →</a>
+  </nav>
+</article>
+</BaseLayout>
+
+<style>
+  .id-page { max-width: 820px; margin: 0 auto; padding: 2rem 1.25rem 4rem; color: var(--iron-ink, #e8e4d8); font-family: 'Inter', sans-serif; line-height: 1.72; }
+  .id-breadcrumb ol { display: flex; flex-wrap: wrap; gap: .25rem; list-style: none; padding: 0; margin: 0 0 2rem; font-size: .8rem; color: var(--ink-soft, #8a8070); }
+  .id-breadcrumb a { color: var(--gold-500, #d4ae5a); text-decoration: none; }
+  .id-pillar { font-size: .72rem; letter-spacing: .12em; text-transform: uppercase; color: var(--gold-500, #d4ae5a); margin: 0 0 .4rem; }
+  .id-page h1 { font-family: 'Cormorant Garamond', serif; font-size: clamp(2rem, 5vw, 3.25rem); font-weight: 700; color: #fff; margin: 0 0 .2rem; line-height: 1.1; }
+  .id-subtitle { font-size: 1rem; color: var(--ink-soft, #c0b89a); margin: 0 0 2rem; }
+  .id-snippet { background: rgba(212,174,90,.08); border-left: 3px solid var(--gold-500, #d4ae5a); border-radius: 0 6px 6px 0; padding: 1rem 1.25rem; margin-bottom: 2.5rem; font-size: 1.03rem; }
+  .id-section { margin-bottom: 2.75rem; }
+  .id-section h2 { font-family: 'Cormorant Garamond', serif; font-size: 1.6rem; font-weight: 600; color: #fff; margin: 0 0 1rem; border-bottom: 1px solid rgba(212,174,90,.2); padding-bottom: .4rem; }
+  .id-section p { margin: 0 0 1rem; font-size: .97rem; }
+  .id-section ul { padding-left: 1.25rem; margin: 0 0 1rem; }
+  .id-section li { margin-bottom: .4rem; font-size: .95rem; }
+  .claim-science { color: #7ab9e0; font-style: normal; font-size: .78rem; }
+  a[href] { color: var(--gold-500, #d4ae5a); }
+  .id-faq-item { border-bottom: 1px solid rgba(255,255,255,.07); }
+  .id-faq-q { cursor: pointer; padding: .9rem 0; font-size: .97rem; font-weight: 500; color: #fff; list-style: none; }
+  .id-faq-q::before { content: '+ '; color: var(--gold-500, #d4ae5a); font-weight: 700; }
+  details[open] .id-faq-q::before { content: '− '; }
+  .id-faq-a { margin: 0 0 1rem; line-height: 1.7; font-size: .93rem; color: var(--ink-soft, #c8c0b0); }
+  .id-src-list { padding-left: 1.25rem; margin: 0 0 1rem; }
+  .id-src-list li { margin-bottom: .6rem; font-size: .82rem; color: var(--ink-soft, #8a8070); line-height: 1.6; }
+  .id-claim-note { font-size: .78rem; color: var(--ink-soft, #605848); border-top: 1px solid rgba(255,255,255,.06); padding-top: .75rem; }
+  .id-nav-bottom { display: flex; justify-content: space-between; padding-top: 2rem; border-top: 1px solid rgba(255,255,255,.07); }
+  .id-nav-bottom a { font-size: .9rem; text-decoration: none; }
+  .id-nav-bottom a:hover { text-decoration: underline; }
+</style>

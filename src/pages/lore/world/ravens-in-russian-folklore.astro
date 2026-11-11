@@ -1,0 +1,152 @@
+---
+/**
+ * World Lore — Ravens in Russian folklore
+ * MYW·30
+ * Primary keyword: raven russian folklore
+ * Secondary: voron russian mythology, raven slavic legend, russian raven symbolism
+ */
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const title       = 'Ravens in Russian Folklore: Death-Birds, Prophets, and the Voron';
+const description = 'In Russian folklore, the raven (voron) is a liminal creature: a harbinger of death, a prophet of disaster, and sometimes a trickster-figure who bridges the mortal and spirit worlds. This page examines the voron in byliny, fairy tales, proverbs, and shamanic-influenced traditions from across the Russian cultural sphere.';
+const path        = '/lore/world/ravens-in-russian-folklore/';
+
+const breadcrumbs = [
+  { name: 'Home',       url: '/' },
+  { name: 'World Lore', url: '/lore/world/' },
+  { name: 'Ravens in Russian Folklore', url: path },
+];
+
+const faq = [
+  { q: 'What does a raven symbolise in Russian folklore?', a: 'In Russian folk tradition, the voron (raven) primarily symbolises death, disaster, and prophecy. A raven circling over a house or croaking at a window is a death omen in peasant belief across Slavic regions. Ravens appear in byliny (epic songs) as presences at battlefields and disaster sites, echoing the Norse valraven tradition. In some Russian fairy tales, the raven is a cunning trickster or a transformed human, paralleling the German cursed-soul raven motif. In Siberian-influenced traditions from eastern Russia, the raven retains creator or culture-hero associations similar to those in Evenki and Yakut mythology.' },
+  { q: 'What is the Russian word for raven?', a: 'The Russian word for raven is воро́н (voron, masculine noun). It is distinct from ворона (vorona), which means crow. The raven\'s name in Russian is etymologically cognate with other Slavic raven words (Czech havran, Polish kruk from Proto-Slavic *vornъ). The word appears in numerous Russian proverbs and idioms, most carrying negative associations: "чёрный как воро́н" (black as a raven — a standard description of dark colouring) and "каркать как воро́н" (to croak like a raven — meaning to predict doom or speak of disaster).' },
+  { q: 'Are there raven heroes in Russian fairy tales?', a: 'Yes, though they are less common than raven omens. In some Russian fairy tales (skazki), the voron is a transformed prince or magician who must be freed by a hero\'s actions — paralleling the German cursed-soul tradition. The raven also appears as an informant who reveals the location of hidden treasure or the secret of immortality (Koschei\'s death hidden in the needle, the needle in the egg). The raven as repository of dangerous or hidden knowledge is consistent across Russian, Slavic, and indeed wider European folk traditions.' },
+];
+---
+
+<BaseLayout title={title} description={description} path={path} ogType="article"
+  datePublished="2026-11-09" dateModified="2026-11-09"
+  breadcrumbs={breadcrumbs} faq={faq} pageType="Article">
+
+<article class="qa-page">
+
+  <nav class="qa-breadcrumb" aria-label="Breadcrumb">
+    <ol>
+      {breadcrumbs.map((b, i) => (
+        <li>
+          {i < breadcrumbs.length - 1
+            ? <><a href={b.url}>{b.name}</a><span aria-hidden="true"> › </span></>
+            : <span aria-current="page">{b.name}</span>}
+        </li>
+      ))}
+    </ol>
+  </nav>
+
+  <header class="qa-header">
+    <p class="qa-pillar">World Lore · MYW·30</p>
+    <h1>Ravens in Russian Folklore: Death-Birds, Prophets, and the Voron</h1>
+  </header>
+
+  <section class="qa-snippet" aria-label="Direct answer">
+    <p><strong class="claim-lore">[lore]</strong> The Russian voron is primarily a death-omen bird in peasant belief — circling over battlefields, croaking at windows to announce mortality, attending sites of disaster. This Western Slavic raven figure contrasts with the creator-raven of Siberian traditions from eastern Russia. Russian fairy tales preserve both: the ominous battlefield raven and the transformed-human or keeper-of-secrets raven who appears at the edge of the mortal and spirit worlds.</p>
+  </section>
+
+  <section class="qa-section">
+    <h2>The Voron as Death Omen</h2>
+    <p><strong class="claim-lore">[lore]</strong> In Russian peasant belief documented by 19th-century ethnographers, the raven's call carried death-prophecy. Specific omen traditions included:<sup><a href="#src-1">1</a></sup></p>
+    <ul>
+      <li>A raven landing on a rooftop and croaking three times was a signal of imminent death in the household — a tradition recorded across the central Russian guberniyas.</li>
+      <li>Ravens gathering at a location before a battle or disaster were interpreted as foreknowledge — the birds sensing death before it arrived. This extends the battlefield-raven motif found in Norse and Celtic tradition into the Slavic cultural sphere.</li>
+      <li>The cry of a raven at night was specifically feared — associated not merely with death but with malevolent spirits (ovinnik, dvorovoi) taking raven form to deliver warnings.</li>
+    </ul>
+    <p>The linguistic marker survives: "каркать" (to croak), derived from the raven's call, means in modern Russian to prophesy doom or be a pessimist — the raven as pessimism-bird embedded in the language.</p>
+  </section>
+
+  <section class="qa-section">
+    <h2>The Raven in Byliny and Epic Tradition</h2>
+    <p><strong class="claim-lore">[lore]</strong> In byliny (Russian heroic epic songs), ravens attend battlefield scenes as presences of death and war. The formulaic battlefield description — ravens and wolves gathering over fallen warriors — appears in Slavic epic poetry with the same imagery found in Old English (The Battle of Maldon) and Old Norse poetry: the "beasts of battle" formula crossing cultural boundaries.<sup><a href="#src-1">1</a></sup><sup><a href="#src-2">2</a></sup></p>
+    <p>This parallel suggests either shared Indo-European origin of the formula, or its widespread adoption by warrior cultures who observed raven behaviour at actual battlefields — ravens do indeed gather quickly at large carcasses, and medieval battlefield aftermath would have drawn them reliably.</p>
+  </section>
+
+  <section class="qa-section">
+    <h2>Ravens in Russian Fairy Tales (Skazki)</h2>
+    <p><strong class="claim-lore">[lore]</strong> Russian skazki (wonder tales) employ the raven in several recurring roles:<sup><a href="#src-2">2</a></sup></p>
+    <ul>
+      <li><strong>Transformed human:</strong> a prince or nobleman cursed into raven form, requiring a hero's intervention to break the enchantment — directly parallel to the German "Die sieben Raben" tradition and suggesting pan-European diffusion of the cursed-soul-raven motif.</li>
+      <li><strong>Keeper of hidden knowledge:</strong> in tales involving Koschei the Deathless (the deathless sorcerer-villain), ravens sometimes appear as guardians or revealers of the secret of his immortality — linking the raven to dangerous, liminal knowledge.</li>
+      <li><strong>Three-headed raven:</strong> variant tales feature a многоголовый ворон (many-headed raven) as a monster or challenger for the hero — possibly a distant echo of the raven's connection to the supernatural world.</li>
+    </ul>
+  </section>
+
+  <section class="qa-section">
+    <h2>Eastern Russia: Siberian Raven Traditions</h2>
+    <p><strong class="claim-lore">[lore]</strong> In the traditions of Siberian indigenous peoples incorporated into Russian cultural history — Evenki, Yakut (Sakha), Chukchi, Koryak — the raven takes a radically different form from the death-omen of western Russia:<sup><a href="#src-3">3</a></sup></p>
+    <ul>
+      <li><strong>Creator figure:</strong> in Koryak and Chukchi mythology, Kutkinnaku (Raven) is the creator of the world and the first ancestor — essentially the same creator-raven figure found in Pacific Northwest Native American traditions, reflecting the shared Beringian origin of these cultures.</li>
+      <li><strong>Trickster-transformer:</strong> like his Pacific counterpart, the Siberian raven-creator is a trickster who transforms the world through cunning rather than divine power — stealing the sun, stealing fire, tricking other animals.</li>
+      <li><strong>Shaman's helper:</strong> in Evenki shamanic tradition, the raven appears as a spirit helper (tuurngak) who carries the shaman's soul during spirit journeys.</li>
+    </ul>
+    <p>The coexistence of the death-omen raven (from Indo-European/Slavic tradition) and the creator-raven (from Siberian/Beringian tradition) within the Russian cultural sphere illustrates how the same bird carries radically different symbolic weight depending on cultural inheritance.</p>
+  </section>
+
+  <section class="qa-section">
+    <h2>Pushkin and the Literary Raven</h2>
+    <p><strong class="claim-lore">[lore]</strong> The raven enters Russian literary tradition most notably through Alexander Pushkin. In <em>The Captain's Daughter</em> (Kapitanskaya Dochka, 1836), the Pugachev rebellion opens with an ominous dream featuring an eagle and a raven — the raven representing death and the peasant uprising's violence. Pushkin's raven here draws on folk omen tradition deliberately: the raven as harbinger of the upheaval to come. The raven's death-associations in folk tradition gave it ready literary use as a symbol of disaster and moral darkness throughout 19th-century Russian literature.<sup><a href="#src-1">1</a></sup></p>
+  </section>
+
+  <section class="qa-section">
+    <h2>Related Pages</h2>
+    <ul>
+      <li><a href="/lore/world/ravens-in-slavic-folklore/">Ravens in Slavic folklore</a></li>
+      <li><a href="/lore/world/ravens-in-siberian-shamanism/">Ravens in Siberian shamanism</a></li>
+      <li><a href="/lore/world/ravens-in-german-folklore/">Ravens in German folklore</a></li>
+      <li><a href="/questions/what-does-a-raven-symbolise/">What does a raven symbolise?</a></li>
+    </ul>
+  </section>
+
+  <section class="qa-faq qa-section" aria-labelledby="faq-h2">
+    <h2 id="faq-h2">Frequently Asked Questions</h2>
+    {faq.map(item => (
+      <details class="qa-faq-item">
+        <summary class="qa-faq-q">{item.q}</summary>
+        <p class="qa-faq-a">{item.a}</p>
+      </details>
+    ))}
+  </section>
+
+  <section class="qa-sources qa-section" aria-labelledby="src-h2">
+    <h2 id="src-h2">Sources</h2>
+    <ol class="qa-src-list">
+      <li id="src-1">Ivanits, L.J. (1989). <em>Russian Folk Belief</em>. M.E. Sharpe. — raven omen traditions, peasant belief, death-prophecy, language markers.</li>
+      <li id="src-2">Afanasyev, A.N. (1855–1863). <em>Narodnye russkie skazki</em> (Russian Folk Tales). — fairy tale raven figures, transformed humans, Koschei narratives.</li>
+      <li id="src-3">Fitzhugh, W.W. & Kaplan, S.A. (1982). <em>Inua: Spirit World of the Bering Sea Eskimo</em>. Smithsonian Institution Press. — Siberian and Beringian raven creator traditions, Kutkinnaku, shaman helpers.</li>
+    </ol>
+    <p class="qa-claim-note"><strong class="claim-lore">[lore]</strong> named cultural/historical source</p>
+  </section>
+
+</article>
+</BaseLayout>
+
+<style>
+  .qa-page { max-width: 820px; margin: 0 auto; padding: 2rem 1.25rem 4rem; color: var(--iron-ink, #e8e4d8); font-family: 'Inter', sans-serif; line-height: 1.72; }
+  .qa-breadcrumb ol { display: flex; flex-wrap: wrap; gap: .25rem; list-style: none; padding: 0; margin: 0 0 2rem; font-size: .8rem; color: var(--ink-soft, #8a8070); }
+  .qa-breadcrumb a { color: var(--gold-500, #d4ae5a); text-decoration: none; }
+  .qa-pillar { font-size: .72rem; letter-spacing: .12em; text-transform: uppercase; color: var(--gold-500, #d4ae5a); margin: 0 0 .4rem; }
+  .qa-page h1 { font-family: 'Cormorant Garamond', serif; font-size: clamp(2rem, 5vw, 3rem); font-weight: 700; color: #fff; margin: 0 0 2rem; line-height: 1.1; }
+  .qa-snippet { background: rgba(212,174,90,.08); border-left: 3px solid var(--gold-500, #d4ae5a); border-radius: 0 6px 6px 0; padding: 1rem 1.25rem; margin-bottom: 2.5rem; font-size: 1.03rem; }
+  .qa-section { margin-bottom: 2.5rem; }
+  .qa-section h2 { font-family: 'Cormorant Garamond', serif; font-size: 1.5rem; font-weight: 600; color: #fff; margin: 0 0 .9rem; border-bottom: 1px solid rgba(212,174,90,.2); padding-bottom: .4rem; }
+  .qa-section p { margin: 0 0 1rem; font-size: .97rem; }
+  .qa-section ul { padding-left: 1.25rem; margin: 0 0 1rem; }
+  .qa-section li { margin-bottom: .4rem; font-size: .95rem; }
+  .claim-lore { color: #c49a3c; font-style: normal; font-size: .78rem; }
+  a[href] { color: var(--gold-500, #d4ae5a); }
+  .qa-faq-item { border-bottom: 1px solid rgba(255,255,255,.07); }
+  .qa-faq-q { cursor: pointer; padding: .9rem 0; font-size: .97rem; font-weight: 500; color: #fff; list-style: none; }
+  .qa-faq-q::before { content: '+ '; color: var(--gold-500, #d4ae5a); font-weight: 700; }
+  details[open] .qa-faq-q::before { content: '− '; }
+  .qa-faq-a { margin: 0 0 1rem; line-height: 1.7; font-size: .93rem; color: var(--ink-soft, #c8c0b0); }
+  .qa-src-list { padding-left: 1.25rem; margin: 0 0 1rem; }
+  .qa-src-list li { margin-bottom: .6rem; font-size: .82rem; color: var(--ink-soft, #8a8070); line-height: 1.6; }
+  .qa-claim-note { font-size: .78rem; color: var(--ink-soft, #605848); border-top: 1px solid rgba(255,255,255,.06); padding-top: .75rem; }
+</style>

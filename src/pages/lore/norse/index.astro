@@ -1,0 +1,128 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+
+const title       = 'Ravens in Norse Mythology — Huginn, Muninn & Odin\'s Ravens';
+const description = 'A complete guide to ravens in Norse mythology: Huginn and Muninn, Odin the Raven-God, the Eddas, Viking raven banners, and Raven-Flóki. Every page sourced from primary texts.';
+const path        = '/lore/norse/';
+
+const breadcrumbs = [
+  { name: 'Home',       url: '/' },
+  { name: 'Norse Lore', url: '/lore/norse/' },
+];
+
+const pages = [
+  {
+    slug:  'huginn-and-muninn',
+    title: 'Huginn and Muninn',
+    desc:  'Odin\'s two ravens — their names, roles, and the texts that name them. Primary source: Grímnismál stanza 20.',
+    call:  'NOR·01',
+  },
+  {
+    slug:  'odin-the-raven-god',
+    title: 'Odin: the Raven-God (Hrafnaguð)',
+    desc:  'Why Odin is called the Raven-God, his association with ravens, wolves, and the battlefield.',
+    call:  'NOR·02',
+  },
+  {
+    slug:  'grimnismal-stanza-20',
+    title: 'Grímnismál Stanza 20',
+    desc:  'A close reading of the only surviving verse that names both Huginn and Muninn — with the Old Norse text.',
+    call:  'NOR·03',
+  },
+  {
+    slug:  'ravens-in-the-prose-edda',
+    title: 'Ravens in the Prose Edda',
+    desc:  'All raven passages in Snorri Sturluson\'s 13th-century Prose Edda, with context and commentary.',
+    call:  'NOR·04',
+  },
+  {
+    slug:  'raven-banners',
+    title: 'Viking Raven Banners',
+    desc:  'The Hrafnsmerki — raven war standards carried by Norse and Norse-descended rulers. Sources: annals and sagas.',
+    call:  'NOR·05',
+  },
+  {
+    slug:  'raven-floki-and-iceland',
+    title: 'Raven-Flóki and the Discovery of Iceland',
+    desc:  'How Hrafna-Flóki Vilgerðarson used ravens as navigation aids on his voyage to Iceland.',
+    call:  'NOR·06',
+  },
+];
+
+const faq = [
+  { q: 'What role do ravens play in Norse mythology?', a: 'Ravens are most prominent as Odin\'s companions: Huginn ("Thought") and Muninn ("Memory") fly across the nine worlds each day and report back to him. Ravens also appear in the "beasts of battle" motif — anticipating the slain on the battlefield — and in several sagas as omens and navigation aids.' },
+  { q: 'What are the best sources on Norse raven mythology?', a: 'The primary sources are the Eddic poem Grímnismál (Codex Regius, c. 1270 CE, stanza 20) and Snorri Sturluson\'s Prose Edda (c. 1220 CE, Gylfaginning ch. 38). For modern scholarship, Simek\'s Dictionary of Northern Mythology (1993) and Price\'s The Viking Way (2002) are the most cited references.' },
+];
+---
+
+<BaseLayout
+  title={title}
+  description={description}
+  path={path}
+  breadcrumbs={breadcrumbs}
+  faq={faq}
+>
+
+<div class="loreidx-page">
+
+  <nav class="loreidx-breadcrumb" aria-label="Breadcrumb">
+    <ol>
+      <li><a href="/">Home</a><span aria-hidden="true"> › </span></li>
+      <li><span aria-current="page">Norse Lore</span></li>
+    </ol>
+  </nav>
+
+  <header class="loreidx-header">
+    <p class="loreidx-pillar">Pillar II</p>
+    <h1>Ravens in Norse Mythology</h1>
+    <p class="loreidx-lead">Every claim sourced from named primary texts. Science and lore clearly labelled. No invented translations, no "spiritual meanings" presented as ancient tradition.</p>
+  </header>
+
+  <ul class="loreidx-grid">
+    {pages.map(p => (
+      <li class="loreidx-card">
+        <a href={`/lore/norse/${p.slug}/`} class="loreidx-card-link">
+          <span class="loreidx-call">{p.call}</span>
+          <h2 class="loreidx-name">{p.title}</h2>
+          <p class="loreidx-desc">{p.desc}</p>
+        </a>
+      </li>
+    ))}
+  </ul>
+
+  <section class="loreidx-faq" aria-labelledby="loreidx-faq-h2">
+    <h2 id="loreidx-faq-h2">Frequently Asked Questions</h2>
+    {faq.map(item => (
+      <details class="loreidx-faq-item">
+        <summary class="loreidx-faq-q">{item.q}</summary>
+        <p class="loreidx-faq-a">{item.a}</p>
+      </details>
+    ))}
+  </section>
+
+</div>
+
+</BaseLayout>
+
+<style>
+.loreidx-page { max-width: 900px; margin: 0 auto; padding: 2rem 1.25rem 4rem; color: var(--iron-ink, #e8e4d8); font-family: 'Inter', sans-serif; }
+.loreidx-breadcrumb ol { display: flex; gap: .25rem; list-style: none; padding: 0; margin: 0 0 2rem; font-size: .8rem; color: var(--ink-soft, #8a8070); }
+.loreidx-breadcrumb a { color: var(--gold-500, #d4ae5a); text-decoration: none; }
+.loreidx-pillar { font-size: .72rem; letter-spacing: .12em; text-transform: uppercase; color: var(--gold-500, #d4ae5a); margin: 0 0 .4rem; }
+.loreidx-header h1 { font-family: 'Cormorant Garamond', serif; font-size: clamp(2rem, 5vw, 3rem); font-weight: 700; color: #fff; margin: 0 0 .75rem; }
+.loreidx-lead { font-size: 1rem; color: var(--ink-soft, #c0b89a); max-width: 680px; line-height: 1.65; margin: 0 0 2.5rem; }
+.loreidx-grid { list-style: none; padding: 0; margin: 0 0 3rem; display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 1rem; }
+.loreidx-card { background: rgba(255,255,255,.04); border: 1px solid rgba(255,255,255,.07); border-radius: 8px; transition: border-color .2s, background .2s; }
+.loreidx-card:hover { border-color: rgba(212,174,90,.35); background: rgba(212,174,90,.05); }
+.loreidx-card-link { display: block; padding: 1.25rem; text-decoration: none; color: inherit; }
+.loreidx-call { display: block; font-size: .7rem; letter-spacing: .1em; text-transform: uppercase; color: var(--gold-500, #d4ae5a); opacity: .7; margin-bottom: .4rem; }
+.loreidx-name { font-family: 'Cormorant Garamond', serif; font-size: 1.25rem; font-weight: 700; color: #fff; margin: 0 0 .5rem; }
+.loreidx-desc { font-size: .84rem; color: var(--ink-soft, #a09070); line-height: 1.55; margin: 0; }
+.loreidx-faq { border-top: 1px solid rgba(255,255,255,.07); padding-top: 2rem; }
+.loreidx-faq h2 { font-family: 'Cormorant Garamond', serif; font-size: 1.5rem; color: #fff; margin: 0 0 1rem; }
+.loreidx-faq-item { border-bottom: 1px solid rgba(255,255,255,.07); }
+.loreidx-faq-q { cursor: pointer; padding: .9rem 0; font-size: .95rem; font-weight: 500; color: #fff; list-style: none; }
+.loreidx-faq-q::before { content: '+ '; color: var(--gold-500, #d4ae5a); font-weight: 700; }
+details[open] .loreidx-faq-q::before { content: '− '; }
+.loreidx-faq-a { margin: 0 0 1rem; line-height: 1.7; font-size: .93rem; color: var(--ink-soft, #c8c0b0); }
+</style>

@@ -1,0 +1,132 @@
+---
+/**
+ * Q&A — Are ravens nocturnal?
+ * Primary keyword: are ravens nocturnal
+ * Secondary: do ravens fly at night, raven activity at night, when are ravens active
+ */
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const title       = 'Are Ravens Nocturnal? Raven Activity Patterns';
+const description = 'Ravens are diurnal birds — active during the day — but they maintain communal night roosts and may move at dawn and dusk. This page examines raven daily activity patterns, roosting behaviour, and whether ravens are ever active at night.';
+const path        = '/questions/are-ravens-nocturnal/';
+
+const breadcrumbs = [
+  { name: 'Home',      url: '/' },
+  { name: 'Questions', url: '/questions/' },
+  { name: 'Are Ravens Nocturnal?', url: path },
+];
+
+const faq = [
+  { q: 'Do ravens come out at night?', a: 'Ravens are diurnal (day-active) birds and are not normally active after dark. They roost at communal roosting sites from dusk to dawn. However, ravens do move conspicuously at dawn and dusk — flying to and from roost sites — which may give the impression of night activity. In urban areas with strong artificial lighting, ravens may occasionally forage at dusk or early evening, but this is not typical behaviour. At summer latitudes with very long days (Iceland, Alaska), ravens can be active at "night" because there is no actual darkness.' },
+  { q: 'Where do ravens sleep at night?', a: 'Ravens sleep at roosting sites — often elevated perches in trees, on cliff ledges, or on rocky outcrops. Non-breeding ravens use communal roosts where many birds gather. Breeding pairs may roost separately from large groups, roosting on or near the nest during incubation and brooding, or at an adjacent perch. Communal roost sites are often used repeatedly over many seasons, suggesting site fidelity for roosts as well as nest sites.' },
+  { q: 'Are crows or ravens active at night?', a: 'Neither. Crows and ravens are both diurnal. Owls occupy the nighttime corvid-equivalent niche — Great Horned Owls in North America and Eagle Owls in Eurasia are large, intelligent, visually hunting birds active at night. Interestingly, ravens are themselves preyed upon by Great Horned Owls and Eagle Owls at their roost sites, suggesting the transition from diurnal to nocturnal activity is a vulnerability period.' },
+];
+---
+
+<BaseLayout title={title} description={description} path={path} ogType="article"
+  datePublished="2026-11-07" dateModified="2026-11-07"
+  breadcrumbs={breadcrumbs} faq={faq} pageType="Article">
+
+<article class="qa-page">
+
+  <nav class="qa-breadcrumb" aria-label="Breadcrumb">
+    <ol>
+      {breadcrumbs.map((b, i) => (
+        <li>
+          {i < breadcrumbs.length - 1
+            ? <><a href={b.url}>{b.name}</a><span aria-hidden="true"> › </span></>
+            : <span aria-current="page">{b.name}</span>}
+        </li>
+      ))}
+    </ol>
+  </nav>
+
+  <header class="qa-header">
+    <p class="qa-pillar">Question · Biology</p>
+    <h1>Are Ravens Nocturnal? Raven Activity Patterns</h1>
+  </header>
+
+  <section class="qa-snippet" aria-label="Direct answer">
+    <p><strong class="claim-science">[science]</strong> No — ravens are diurnal (day-active) birds. They are most active from shortly after dawn to late afternoon. At dusk, ravens fly to communal or pair roosts where they spend the night. Visible raven flights at dawn and dusk — the commute to and from roosts — may give an impression of night activity, but actual foraging and social behaviour is confined to daylight hours.</p>
+  </section>
+
+  <section class="qa-section">
+    <h2>Daily Activity Pattern</h2>
+    <p><strong class="claim-science">[science]</strong> Raven activity follows a broadly consistent diurnal pattern:<sup><a href="#src-1">1</a></sup></p>
+    <ul>
+      <li><strong>Pre-dawn to dawn:</strong> birds begin moving from roost, with pre-dawn calling sometimes audible. Departure from communal roosts often occurs as a group, with many birds leaving simultaneously.</li>
+      <li><strong>Morning (dawn to ~10 am):</strong> peak foraging period; corvids are most active early when thermals are building and food has not yet been displaced by competitors. Early-morning flights to known food sources or exploration flights.</li>
+      <li><strong>Midday:</strong> activity reduces, particularly in warm weather. Ravens rest, preen, and socialise. In hot desert environments (Sonoran Desert) midday inactivity is marked.</li>
+      <li><strong>Afternoon:</strong> second foraging peak; ravens may return to cached food or visit new sites discovered in the morning.</li>
+      <li><strong>Evening (before dark):</strong> return flights to roost. Communal roosts may show significant activity — calling, displacing, finding positions — in the hour before full dark.</li>
+      <li><strong>Night:</strong> roosting; inactive. Ravens are vulnerable to owl predation during nighttime roosting.</li>
+    </ul>
+  </section>
+
+  <section class="qa-section">
+    <h2>Roosting Behaviour</h2>
+    <p><strong class="claim-science">[science]</strong> Ravens use two types of roosting arrangements:<sup><a href="#src-1">1</a></sup></p>
+    <ul>
+      <li><strong>Communal roosts:</strong> used primarily by non-breeding floater ravens and sometimes by territorial birds outside the breeding season. These roosts can aggregate dozens to hundreds of birds at a single site. The site may be used night after night for many weeks or months. Communal roosting confers benefits including predator detection (many-eyes) and information sharing about food locations.</li>
+      <li><strong>Pair roosts:</strong> territorial breeding pairs typically roost near the nest during breeding season or at a consistent perch near their territory core outside it. These are quieter and less conspicuous than communal roosts.</li>
+    </ul>
+  </section>
+
+  <section class="qa-section">
+    <h2>Exceptions: Long Summer Days</h2>
+    <p><strong class="claim-science">[science]</strong> At high northern latitudes (Iceland, northern Norway, Alaska), summer days are extremely long — with minimal or no true darkness near the summer solstice. Ravens in these regions are active throughout the light period, which can effectively mean activity for 20+ hours per day in midsummer. This is not nocturnal behaviour but an extension of diurnal activity under unusual light conditions.<sup><a href="#src-1">1</a></sup></p>
+  </section>
+
+  <section class="qa-section">
+    <h2>Related Pages</h2>
+    <ul>
+      <li><a href="/questions/where-do-ravens-sleep/">Where do ravens sleep?</a></li>
+      <li><a href="/behaviour/raven-social-life-and-roosts/">Raven social life and roosts</a></li>
+      <li><a href="/questions/do-ravens-have-predators/">Do ravens have predators?</a></li>
+    </ul>
+  </section>
+
+  <section class="qa-faq qa-section" aria-labelledby="faq-h2">
+    <h2 id="faq-h2">Frequently Asked Questions</h2>
+    {faq.map(item => (
+      <details class="qa-faq-item">
+        <summary class="qa-faq-q">{item.q}</summary>
+        <p class="qa-faq-a">{item.a}</p>
+      </details>
+    ))}
+  </section>
+
+  <section class="qa-sources qa-section" aria-labelledby="src-h2">
+    <h2 id="src-h2">Sources</h2>
+    <ol class="qa-src-list">
+      <li id="src-1">Boarman, W.I. & Heinrich, B. (1999). Common Raven (<em>Corvus corax</em>). In Poole, A. (ed.), <em>The Birds of North America</em>, No. 476. Cornell Lab of Ornithology. — daily activity pattern, roosting behaviour, communal roosts.</li>
+    </ol>
+    <p class="qa-claim-note"><strong class="claim-science">[science]</strong> peer-reviewed or field-guide data</p>
+  </section>
+
+</article>
+</BaseLayout>
+
+<style>
+  .qa-page { max-width: 820px; margin: 0 auto; padding: 2rem 1.25rem 4rem; color: var(--iron-ink, #e8e4d8); font-family: 'Inter', sans-serif; line-height: 1.72; }
+  .qa-breadcrumb ol { display: flex; flex-wrap: wrap; gap: .25rem; list-style: none; padding: 0; margin: 0 0 2rem; font-size: .8rem; color: var(--ink-soft, #8a8070); }
+  .qa-breadcrumb a { color: var(--gold-500, #d4ae5a); text-decoration: none; }
+  .qa-pillar { font-size: .72rem; letter-spacing: .12em; text-transform: uppercase; color: var(--gold-500, #d4ae5a); margin: 0 0 .4rem; }
+  .qa-page h1 { font-family: 'Cormorant Garamond', serif; font-size: clamp(2rem, 5vw, 3rem); font-weight: 700; color: #fff; margin: 0 0 2rem; line-height: 1.1; }
+  .qa-snippet { background: rgba(212,174,90,.08); border-left: 3px solid var(--gold-500, #d4ae5a); border-radius: 0 6px 6px 0; padding: 1rem 1.25rem; margin-bottom: 2.5rem; font-size: 1.03rem; }
+  .qa-section { margin-bottom: 2.5rem; }
+  .qa-section h2 { font-family: 'Cormorant Garamond', serif; font-size: 1.5rem; font-weight: 600; color: #fff; margin: 0 0 .9rem; border-bottom: 1px solid rgba(212,174,90,.2); padding-bottom: .4rem; }
+  .qa-section p { margin: 0 0 1rem; font-size: .97rem; }
+  .qa-section ul { padding-left: 1.25rem; margin: 0 0 1rem; }
+  .qa-section li { margin-bottom: .4rem; font-size: .95rem; }
+  .claim-science { color: #7ab9e0; font-style: normal; font-size: .78rem; }
+  a[href] { color: var(--gold-500, #d4ae5a); }
+  .qa-faq-item { border-bottom: 1px solid rgba(255,255,255,.07); }
+  .qa-faq-q { cursor: pointer; padding: .9rem 0; font-size: .97rem; font-weight: 500; color: #fff; list-style: none; }
+  .qa-faq-q::before { content: '+ '; color: var(--gold-500, #d4ae5a); font-weight: 700; }
+  details[open] .qa-faq-q::before { content: '− '; }
+  .qa-faq-a { margin: 0 0 1rem; line-height: 1.7; font-size: .93rem; color: var(--ink-soft, #c8c0b0); }
+  .qa-src-list { padding-left: 1.25rem; margin: 0 0 1rem; }
+  .qa-src-list li { margin-bottom: .6rem; font-size: .82rem; color: var(--ink-soft, #8a8070); line-height: 1.6; }
+  .qa-claim-note { font-size: .78rem; color: var(--ink-soft, #605848); border-top: 1px solid rgba(255,255,255,.06); padding-top: .75rem; }
+</style>

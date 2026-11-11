@@ -1,0 +1,131 @@
+---
+/**
+ * Species sub-page — Brown-necked Raven diet
+ * SPC·11d
+ * Primary keyword: brown-necked raven diet
+ * Secondary: what does a brown-necked raven eat, corvus ruficollis food
+ */
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+
+const title       = 'Brown-necked Raven Diet: What This Species Eats';
+const description = 'The Brown-necked Raven of the Sahara, Middle East, and Central Asia is a desert omnivore adapted to arid conditions. Its diet includes invertebrates, carrion, lizards, eggs, and food from desert settlements and oases.';
+const path        = '/species/brown-necked-raven/diet/';
+
+const breadcrumbs = [
+  { name: 'Home',              url: '/' },
+  { name: 'Species',           url: '/species/' },
+  { name: 'Brown-necked Raven', url: '/species/brown-necked-raven/' },
+  { name: 'Diet',              url: path },
+];
+
+const faq = [
+  { q: 'What does the Brown-necked Raven eat?', a: 'The Brown-necked Raven is an omnivore adapted to arid and desert habitats. Its diet includes invertebrates (beetles, locusts, termites), lizards and other small reptiles, carrion, eggs, grain, dates, and food waste from oases and settlements. In the Sahara and Arabian deserts, the species can go long periods between food sources — it is an efficient opportunist adapted to the feast-or-famine nature of desert foraging.' },
+  { q: 'How does the Brown-necked Raven survive in the desert?', a: 'The Brown-necked Raven is physiologically and behaviourally adapted to desert conditions. It can tolerate high temperatures and reduced water availability — getting much of its moisture from food rather than standing water. It exploits seasonal food pulses (locust swarms, termite eruptions) when they occur, and relies on carrion and stored invertebrates during leaner periods. It is closely associated with human settlements (oases, villages, roads) which provide reliable supplementary food.' },
+  { q: 'Does the Brown-necked Raven eat dates?', a: 'Yes. Date palms (Phoenix dactylifera) are common in oases across the Brown-necked Raven\'s range, and the species is documented raiding date crops — eating ripe dates and picking through fallen fruit. This can make it an agricultural pest in oasis farming communities. Dates provide energy-rich food during periods when invertebrates and carrion are scarce.' },
+];
+---
+
+<BaseLayout title={title} description={description} path={path} ogType="article"
+  datePublished="2026-11-07" dateModified="2026-11-07"
+  breadcrumbs={breadcrumbs} faq={faq} pageType="Article">
+
+<article class="qa-page">
+
+  <nav class="qa-breadcrumb" aria-label="Breadcrumb">
+    <ol>
+      {breadcrumbs.map((b, i) => (
+        <li>
+          {i < breadcrumbs.length - 1
+            ? <><a href={b.url}>{b.name}</a><span aria-hidden="true"> › </span></>
+            : <span aria-current="page">{b.name}</span>}
+        </li>
+      ))}
+    </ol>
+  </nav>
+
+  <header class="qa-header">
+    <p class="qa-pillar">Species Sub-page · SPC·11d</p>
+    <h1>Brown-necked Raven Diet: What This Species Eats</h1>
+  </header>
+
+  <section class="qa-snippet" aria-label="Direct answer">
+    <p><strong class="claim-science">[science]</strong> The Brown-necked Raven (<em>Corvus ruficollis</em>) is a desert-adapted omnivore. Its diet spans invertebrates (especially beetles and locusts), small reptiles, carrion, eggs, grain, dates, and food from human settlements. The species is well-adapted to the irregular, feast-or-famine food availability of Saharan and Middle Eastern deserts, exploiting seasonal pulses of insects and reliable food near oases and roads.</p>
+  </section>
+
+  <section class="qa-section">
+    <h2>Primary Food Items</h2>
+    <p><strong class="claim-science">[science]</strong> Based on HBW species account and published Saharan ornithological records:<sup><a href="#src-1">1</a></sup></p>
+    <ul>
+      <li><strong>Invertebrates:</strong> beetles (particularly dung beetles and tenebrionids), locusts, grasshoppers, and termites. Locust swarms are an important periodic food source; the species tracks locust eruptions and aggregates around them in large numbers.</li>
+      <li><strong>Lizards and reptiles:</strong> small lizards (particularly skinks and lacertids) are an important protein source in desert habitats where mammal prey is scarce. The species is agile enough to catch lizards in open terrain.</li>
+      <li><strong>Carrion:</strong> roadkill (camels, goats, donkeys) and other carcasses. Roads through the Sahara and Arabian deserts are important foraging corridors for the species.</li>
+      <li><strong>Eggs:</strong> eggs of ground-nesting desert birds — larks, wheatears, sandgrouse.</li>
+      <li><strong>Grain and seeds:</strong> sorghum, millet, and other grains in oasis agricultural settings; native seeds.</li>
+      <li><strong>Fruit:</strong> dates from Phoenix dactylifera and other desert fruits.</li>
+      <li><strong>Human food waste:</strong> oasis settlements, desert roads, military posts — human food waste is reliable and sought out.</li>
+    </ul>
+  </section>
+
+  <section class="qa-section">
+    <h2>Desert Foraging Adaptations</h2>
+    <p><strong class="claim-science">[science]</strong> The Brown-necked Raven's diet reflects specific adaptations to desert foraging conditions:<sup><a href="#src-1">1</a></sup></p>
+    <ul>
+      <li><strong>Water economy:</strong> the species obtains much of its water from prey (lizards, insects, carrion) rather than relying on standing water. This independence from water sources allows it to inhabit areas far from permanent water.</li>
+      <li><strong>Tracking seasonal pulses:</strong> the species shows some nomadic movement to exploit temporary food abundance — locust swarms, rainfall-triggered insect eruptions, termite flights. This mobility is essential in an environment where food is spatially and temporally unpredictable.</li>
+      <li><strong>Road association:</strong> desert roads provide both roadkill and edges where food concentrates. Brown-necked Ravens are frequently seen along roadsides throughout North Africa and the Middle East.</li>
+    </ul>
+  </section>
+
+  <section class="qa-section">
+    <h2>Related Pages</h2>
+    <ul>
+      <li><a href="/species/brown-necked-raven/">Brown-necked Raven — species hub</a></li>
+      <li><a href="/compare/fan-tailed-raven-vs-brown-necked-raven/">Fan-tailed Raven vs Brown-necked Raven</a></li>
+      <li><a href="/questions/what-do-ravens-eat/">What do ravens eat?</a></li>
+    </ul>
+  </section>
+
+  <section class="qa-faq qa-section" aria-labelledby="faq-h2">
+    <h2 id="faq-h2">Frequently Asked Questions</h2>
+    {faq.map(item => (
+      <details class="qa-faq-item">
+        <summary class="qa-faq-q">{item.q}</summary>
+        <p class="qa-faq-a">{item.a}</p>
+      </details>
+    ))}
+  </section>
+
+  <section class="qa-sources qa-section" aria-labelledby="src-h2">
+    <h2 id="src-h2">Sources</h2>
+    <ol class="qa-src-list">
+      <li id="src-1">del Hoyo, J. et al. (eds., 2009). <em>Handbook of the Birds of the World</em>, vol. 14. Lynx Edicions. — Brown-necked Raven species account; diet, desert adaptations, foraging ecology.</li>
+    </ol>
+    <p class="qa-claim-note"><strong class="claim-science">[science]</strong> peer-reviewed study or field-guide data</p>
+  </section>
+
+</article>
+</BaseLayout>
+
+<style>
+  .qa-page { max-width: 820px; margin: 0 auto; padding: 2rem 1.25rem 4rem; color: var(--iron-ink, #e8e4d8); font-family: 'Inter', sans-serif; line-height: 1.72; }
+  .qa-breadcrumb ol { display: flex; flex-wrap: wrap; gap: .25rem; list-style: none; padding: 0; margin: 0 0 2rem; font-size: .8rem; color: var(--ink-soft, #8a8070); }
+  .qa-breadcrumb a { color: var(--gold-500, #d4ae5a); text-decoration: none; }
+  .qa-pillar { font-size: .72rem; letter-spacing: .12em; text-transform: uppercase; color: var(--gold-500, #d4ae5a); margin: 0 0 .4rem; }
+  .qa-page h1 { font-family: 'Cormorant Garamond', serif; font-size: clamp(2rem, 5vw, 3rem); font-weight: 700; color: #fff; margin: 0 0 2rem; line-height: 1.1; }
+  .qa-snippet { background: rgba(212,174,90,.08); border-left: 3px solid var(--gold-500, #d4ae5a); border-radius: 0 6px 6px 0; padding: 1rem 1.25rem; margin-bottom: 2.5rem; font-size: 1.03rem; }
+  .qa-section { margin-bottom: 2.5rem; }
+  .qa-section h2 { font-family: 'Cormorant Garamond', serif; font-size: 1.5rem; font-weight: 600; color: #fff; margin: 0 0 .9rem; border-bottom: 1px solid rgba(212,174,90,.2); padding-bottom: .4rem; }
+  .qa-section p { margin: 0 0 1rem; font-size: .97rem; }
+  .qa-section ul { padding-left: 1.25rem; margin: 0 0 1rem; }
+  .qa-section li { margin-bottom: .4rem; font-size: .95rem; }
+  .claim-science { color: #7ab9e0; font-style: normal; font-size: .78rem; }
+  a[href] { color: var(--gold-500, #d4ae5a); }
+  .qa-faq-item { border-bottom: 1px solid rgba(255,255,255,.07); }
+  .qa-faq-q { cursor: pointer; padding: .9rem 0; font-size: .97rem; font-weight: 500; color: #fff; list-style: none; }
+  .qa-faq-q::before { content: '+ '; color: var(--gold-500, #d4ae5a); font-weight: 700; }
+  details[open] .qa-faq-q::before { content: '− '; }
+  .qa-faq-a { margin: 0 0 1rem; line-height: 1.7; font-size: .93rem; color: var(--ink-soft, #c8c0b0); }
+  .qa-src-list { padding-left: 1.25rem; margin: 0 0 1rem; }
+  .qa-src-list li { margin-bottom: .6rem; font-size: .82rem; color: var(--ink-soft, #8a8070); line-height: 1.6; }
+  .qa-claim-note { font-size: .78rem; color: var(--ink-soft, #605848); border-top: 1px solid rgba(255,255,255,.06); padding-top: .75rem; }
+</style>

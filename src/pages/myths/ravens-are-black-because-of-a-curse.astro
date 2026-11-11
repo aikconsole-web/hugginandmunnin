@@ -1,0 +1,144 @@
+---
+/**
+ * Myths — Ravens are black because of a curse
+ * MYTH·16
+ * Primary keyword: why are ravens black myth
+ * Secondary: raven originally white myth, raven turned black legend, raven colour mythology
+ */
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const title       = 'Myth: Ravens Are Black Because of a Curse';
+const description = 'Many cultures have myths explaining why the raven is black — often involving a "once-white" raven cursed or burned for some transgression. This page examines the raven-colour-change myth across Greek, Aboriginal, Norse, and other traditions, and what science says about raven plumage.';
+const path        = '/myths/ravens-are-black-because-of-a-curse/';
+
+const breadcrumbs = [
+  { name: 'Home',  url: '/' },
+  { name: 'Myths', url: '/myths/' },
+  { name: 'Ravens Are Black Because of a Curse', url: path },
+];
+
+const faq = [
+  { q: 'Was the raven originally white in mythology?', a: 'In several independent mythological traditions, the raven was originally white (or some colour other than black) and was turned black as a consequence of a transgression. The most famous Western version is the Greek myth of Apollo\'s white raven, cursed black for bringing bad news. Aboriginal Australian traditions from southeastern Australia describe Crow turning black after being scorched stealing fire. This "originally white" motif is a widespread narrative explaining the raven\'s conspicuous black colour.' },
+  { q: 'What is the Greek myth about the raven turning black?', a: 'In the Greek tradition recorded by Ovid (Metamorphoses, Book II), Apollo kept a white raven (or crow — the distinction is not always clear in ancient texts) as a messenger. When the bird reported that Apollo\'s beloved Coronis had been unfaithful, Apollo killed Coronis in rage, then in his grief cursed the raven and turned its feathers black — blaming the messenger for bringing him the news of his sorrow. The raven was thereafter black. This myth is an aetiological explanation (an origin story) for the raven\'s colour.' },
+  { q: 'Why are ravens actually black?', a: 'Ravens are black because of melanin — specifically eumelanin, a dark pigment produced by melanocyte cells in the skin and deposited in feather barbules during feather growth. Black plumage in corvids is ancestral; the birds are not "dyed" black by any event but evolved with melanin-rich plumage. Black feathers contain more eumelanin than lighter feathers, making them structurally stronger and more resistant to abrasion and bacterial degradation — a potential functional benefit. The iridescent blue-green-purple sheen of raven feathers in sunlight is produced by the nanostructure of the feather surface interacting with light (structural colour), overlaid on the black base colour.' },
+];
+---
+
+<BaseLayout title={title} description={description} path={path} ogType="article"
+  datePublished="2026-11-07" dateModified="2026-11-07"
+  breadcrumbs={breadcrumbs} faq={faq} pageType="Article">
+
+<article class="qa-page">
+
+  <nav class="qa-breadcrumb" aria-label="Breadcrumb">
+    <ol>
+      {breadcrumbs.map((b, i) => (
+        <li>
+          {i < breadcrumbs.length - 1
+            ? <><a href={b.url}>{b.name}</a><span aria-hidden="true"> › </span></>
+            : <span aria-current="page">{b.name}</span>}
+        </li>
+      ))}
+    </ol>
+  </nav>
+
+  <header class="qa-header">
+    <p class="qa-pillar">Myth · MYTH·16</p>
+    <h1>Myth: Ravens Are Black Because of a Curse</h1>
+  </header>
+
+  <section class="qa-snippet" aria-label="Direct answer">
+    <div class="id-verdict verdict-false">Verdict: False (as biology) · True as mythology</div>
+    <p><strong class="claim-science">[science]</strong> Ravens are black because of eumelanin — a pigment ancestral to the corvid lineage, not the result of any curse or historical event. <strong class="claim-lore">[lore]</strong> However, multiple cultures independently developed myths explaining raven blackness as a punishment — most famously, Apollo's cursing of his white raven messenger in Greek tradition, and the Aboriginal Australian fire-theft story.</p>
+  </section>
+
+  <section class="qa-section">
+    <h2>The Greek Myth: Apollo's Cursed Messenger</h2>
+    <p><strong class="claim-lore">[lore]</strong> The fullest Greek version comes from Ovid's <em>Metamorphoses</em> (Book II, c. 8 CE). Apollo owned a white raven as a faithful companion and messenger. The raven reported to Apollo that his human beloved, Coronis, had been unfaithful with a mortal man. Apollo's response was violent: he killed Coronis (and by some versions, her lover), then in his grief and rage cursed the raven — blaming the bird for bringing him the news that led to Coronis's death.<sup><a href="#src-1">1</a></sup></p>
+    <p>The curse turned the raven's feathers from white to black. From this point forward, ravens and crows were black, bearing the mark of Apollo's anger. The myth also explains why ravens (which are intelligent and observant birds) became associated with ill omens and bad news — the original white raven delivered good news faithfully but was punished anyway, so ravens forever after became associated with unwanted tidings.</p>
+    <p>An alternative Greek version (reported by Apollodorus) features a crow rather than a raven and involves the goddess Athena; the colour-change motif is similar.</p>
+  </section>
+
+  <section class="qa-section">
+    <h2>Aboriginal Australian Fire-Theft</h2>
+    <p><strong class="claim-lore">[lore]</strong> In traditions of the Kulin peoples of southeastern Australia, Crow (the same corvid symbolically associated with the Australian Raven in its territory) was originally a different colour — not necessarily white, but not black. When Crow stole fire from the fire-guardians (the Hawk people) and ran with it, the fire scorched and blackened him, turning him permanently black. This aetiological myth explains both the corvid's black colour and his trickster character — the blackening was the consequence of a daring but transgressive act.<sup><a href="#src-2">2</a></sup></p>
+    <p>Similar colour-change stories involving corvids exist in other Indigenous Australian language groups, though the details vary substantially.</p>
+  </section>
+
+  <section class="qa-section">
+    <h2>Other Traditions</h2>
+    <p><strong class="claim-lore">[lore]</strong> The raven-turned-black motif appears in a looser form in other traditions:</p>
+    <ul>
+      <li><strong>Inuit and Yupik traditions:</strong> in some Northwest Alaska versions of the Raven-Steals-the-Sun myth, Raven is blackened by smoke when he passes through the smokehole of the sky-being's lodge — a plausible burning/blackening transformation.</li>
+      <li><strong>Some variants of the Noah story</strong> (in Jewish midrashic tradition) explain the raven's current behaviour as a consequence of its failure on the Ark — though this does not specifically address its colour.</li>
+    </ul>
+    <p>The cross-cultural prevalence of "once-white, now black" raven myths suggests a widespread human impulse to explain the striking all-black colouration of an intelligent, conspicuous bird. The raven's intelligence made it a natural candidate for a transgressor-figure — an animal smart enough to commit the act that earned it its curse.</p>
+  </section>
+
+  <section class="qa-section">
+    <h2>The Science: Why Ravens Are Actually Black</h2>
+    <p><strong class="claim-science">[science]</strong> Raven black plumage is produced by eumelanin — a brown-to-black pigment produced by melanocyte cells. Eumelanin is abundant in all corvids; the entire Corvidae family is characterised by predominantly black plumage, with white patches in many species (like magpies, jackdaws, and choughs) appearing where melanin production is reduced.<sup><a href="#src-3">3</a></sup></p>
+    <p>Black feathers have documented physical advantages: eumelanin-rich feathers are structurally stronger and more resistant to mechanical abrasion and bacterial degradation (some feather-degrading bacteria break down pheomelanin-rich feathers more readily than eumelanin-rich ones). The iridescent sheen visible on raven plumage in sunlight — shifting blue, green, and purple — is produced by nanostructural interference of light at the feather surface, an effect entirely separate from pigmentation.</p>
+  </section>
+
+  <section class="qa-section">
+    <h2>Related Pages</h2>
+    <ul>
+      <li><a href="/lore/world/apollo-and-the-raven/">Apollo and the raven</a></li>
+      <li><a href="/lore/world/raven-trickster-northwest-coast/">Raven Trickster: Northwest Coast</a></li>
+      <li><a href="/lore/world/ravens-in-australian-aboriginal-culture/">Ravens in Australian Aboriginal culture</a></li>
+      <li><a href="/questions/what-does-a-raven-look-like/">What does a raven look like?</a></li>
+    </ul>
+  </section>
+
+  <section class="qa-faq qa-section" aria-labelledby="faq-h2">
+    <h2 id="faq-h2">Frequently Asked Questions</h2>
+    {faq.map(item => (
+      <details class="qa-faq-item">
+        <summary class="qa-faq-q">{item.q}</summary>
+        <p class="qa-faq-a">{item.a}</p>
+      </details>
+    ))}
+  </section>
+
+  <section class="qa-sources qa-section" aria-labelledby="src-h2">
+    <h2 id="src-h2">Sources</h2>
+    <ol class="qa-src-list">
+      <li id="src-1">Ovid (c. 8 CE). <em>Metamorphoses</em>, Book II. trans. Raeburn, D. (2004). Penguin Classics. — Apollo's white raven, Coronis story, the curse and blackening.</li>
+      <li id="src-2">Maddock, K. (1982). <em>The Australian Aborigines: A Portrait of Their Society</em>. Penguin. — Crow fire-theft narrative, colour-change motif in Kulin traditions.</li>
+      <li id="src-3">Doucet, S.M. & Meadows, M.G. (2009). Iridescence: a functional perspective. <em>Journal of the Royal Society Interface</em>, 6 (Suppl 2), S115–S132. — structural colour in corvid plumage; eumelanin and feather durability.</li>
+    </ol>
+    <p class="qa-claim-note"><strong class="claim-lore">[lore]</strong> named cultural/historical source · <strong class="claim-science">[science]</strong> peer-reviewed data</p>
+  </section>
+
+</article>
+</BaseLayout>
+
+<style>
+  .qa-page { max-width: 820px; margin: 0 auto; padding: 2rem 1.25rem 4rem; color: var(--iron-ink, #e8e4d8); font-family: 'Inter', sans-serif; line-height: 1.72; }
+  .qa-breadcrumb ol { display: flex; flex-wrap: wrap; gap: .25rem; list-style: none; padding: 0; margin: 0 0 2rem; font-size: .8rem; color: var(--ink-soft, #8a8070); }
+  .qa-breadcrumb a { color: var(--gold-500, #d4ae5a); text-decoration: none; }
+  .qa-pillar { font-size: .72rem; letter-spacing: .12em; text-transform: uppercase; color: var(--gold-500, #d4ae5a); margin: 0 0 .4rem; }
+  .qa-page h1 { font-family: 'Cormorant Garamond', serif; font-size: clamp(2rem, 5vw, 3rem); font-weight: 700; color: #fff; margin: 0 0 2rem; line-height: 1.1; }
+  .qa-snippet { background: rgba(212,174,90,.08); border-left: 3px solid var(--gold-500, #d4ae5a); border-radius: 0 6px 6px 0; padding: 1rem 1.25rem; margin-bottom: 2.5rem; font-size: 1.03rem; }
+  .id-verdict { display: inline-block; padding: .25rem .75rem; border-radius: 4px; font-size: .78rem; font-weight: 700; letter-spacing: .06em; text-transform: uppercase; margin-bottom: .75rem; }
+  .verdict-false { background: rgba(180,50,50,.18); color: #e07070; border: 1px solid rgba(180,50,50,.35); }
+  .verdict-partly-true { background: rgba(180,140,30,.18); color: #d4ae5a; border: 1px solid rgba(180,140,30,.35); }
+  .verdict-true { background: rgba(50,140,80,.18); color: #6dbf8a; border: 1px solid rgba(50,140,80,.35); }
+  .qa-section { margin-bottom: 2.5rem; }
+  .qa-section h2 { font-family: 'Cormorant Garamond', serif; font-size: 1.5rem; font-weight: 600; color: #fff; margin: 0 0 .9rem; border-bottom: 1px solid rgba(212,174,90,.2); padding-bottom: .4rem; }
+  .qa-section p { margin: 0 0 1rem; font-size: .97rem; }
+  .qa-section ul { padding-left: 1.25rem; margin: 0 0 1rem; }
+  .qa-section li { margin-bottom: .4rem; font-size: .95rem; }
+  .claim-science { color: #7ab9e0; font-style: normal; font-size: .78rem; }
+  .claim-lore { color: #c49a3c; font-style: normal; font-size: .78rem; }
+  a[href] { color: var(--gold-500, #d4ae5a); }
+  .qa-faq-item { border-bottom: 1px solid rgba(255,255,255,.07); }
+  .qa-faq-q { cursor: pointer; padding: .9rem 0; font-size: .97rem; font-weight: 500; color: #fff; list-style: none; }
+  .qa-faq-q::before { content: '+ '; color: var(--gold-500, #d4ae5a); font-weight: 700; }
+  details[open] .qa-faq-q::before { content: '− '; }
+  .qa-faq-a { margin: 0 0 1rem; line-height: 1.7; font-size: .93rem; color: var(--ink-soft, #c8c0b0); }
+  .qa-src-list { padding-left: 1.25rem; margin: 0 0 1rem; }
+  .qa-src-list li { margin-bottom: .6rem; font-size: .82rem; color: var(--ink-soft, #8a8070); line-height: 1.6; }
+  .qa-claim-note { font-size: .78rem; color: var(--ink-soft, #605848); border-top: 1px solid rgba(255,255,255,.06); padding-top: .75rem; }
+</style>

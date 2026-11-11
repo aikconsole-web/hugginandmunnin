@@ -1,0 +1,262 @@
+---
+/**
+ * CMP·01 — Raven vs Crow
+ * Primary keyword: raven vs crow
+ * Secondary: difference between raven and crow, how to tell a raven from a crow
+ */
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const title       = 'Raven vs Crow — 7 Field Marks That Tell Them Apart';
+const description = 'How to tell a raven from a crow: tail shape, size, bill, voice, flight style, habitat, and behaviour. Illustrated with sourced data for quick, reliable field identification.';
+const path        = '/compare/raven-vs-crow/';
+
+const breadcrumbs = [
+  { name: 'Home',    url: '/' },
+  { name: 'Compare', url: '/compare/' },
+  { name: 'Raven vs Crow', url: path },
+];
+
+const faq = [
+  { q: 'What is the easiest way to tell a raven from a crow?', a: 'The quickest field mark is the tail: a raven\'s tail is wedge-shaped (diamond- or spade-shaped in flight), while a crow\'s tail is fan-shaped (rounded). Check this first. Then size: ravens are noticeably bigger — roughly the size of a Buzzard, compared with a pigeon-to-crow size for most crow species.' },
+  { q: 'Are ravens much bigger than crows?', a: 'Yes. The Common Raven (Corvus corax) is 56–69 cm long with a wingspan of 120–150 cm. The Carrion Crow (C. corone) is 44–51 cm with a wingspan of 93–104 cm. The difference is obvious in the field when both species are present.' },
+  { q: 'Do ravens and crows sound different?', a: 'Yes. Ravens produce a deep, resonant "kronk" or "pruk" — a low, hollow croak. Crows call with a sharper "caw" or "kaah" — higher-pitched and more nasal. With practice, voice is one of the most reliable identification features.' },
+  { q: 'Can ravens and crows interbreed?', a: 'No. Ravens and crows are separate species and do not naturally hybridise. Despite their close relationship within the genus Corvus, there are no documented natural hybrids between Common Ravens and any crow species.' },
+];
+---
+
+<BaseLayout title={title} description={description} path={path} ogType="article"
+  datePublished="2026-11-06" dateModified="2026-11-06"
+  breadcrumbs={breadcrumbs} faq={faq} pageType="Article">
+
+<article class="cmp-page">
+
+  <nav class="cmp-breadcrumb" aria-label="Breadcrumb">
+    <ol>
+      {breadcrumbs.map((b, i) => (
+        <li>
+          {i < breadcrumbs.length - 1
+            ? <><a href={b.url}>{b.name}</a><span aria-hidden="true"> › </span></>
+            : <span aria-current="page">{b.name}</span>}
+        </li>
+      ))}
+    </ol>
+  </nav>
+
+  <header class="cmp-header">
+    <p class="cmp-pillar">Comparison · Field Guide</p>
+    <h1>Raven vs Crow</h1>
+    <p class="cmp-subtitle">7 Field Marks That Tell Them Apart</p>
+  </header>
+
+  <section class="cmp-snippet" aria-label="Quick answer">
+    <p><strong class="claim-science">[science]</strong> The fastest field mark is the <strong>tail</strong>: wedge-shaped on a raven, fan-shaped (rounded) on a crow. After that, check <strong>size</strong>: ravens are noticeably larger — roughly Buzzard-sized. The <strong>voice</strong> is also diagnostic: a raven croaks ("kronk"), a crow caws.</p>
+  </section>
+
+  <!-- ── Side-by-side table ──────────────────────────────────────── -->
+  <section class="cmp-table-section" aria-labelledby="cmp-table-h2">
+    <h2 id="cmp-table-h2">Side-by-Side Comparison</h2>
+    <p>Comparing the Common Raven (<em>Corvus corax</em>) with the Carrion Crow (<em>Corvus corone</em>) — the two most likely to be confused in Europe. Sources: Madge & Burn (1994), Boarman & Heinrich (1999).<sup><a href="#src-1">1</a><a href="#src-2">2</a></sup></p>
+
+    <div class="cmp-table-wrap">
+      <table class="cmp-table">
+        <thead>
+          <tr>
+            <th>Feature</th>
+            <th>Common Raven<br/><em>Corvus corax</em></th>
+            <th>Carrion Crow<br/><em>Corvus corone</em></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Length</td>
+            <td>56–69 cm</td>
+            <td>44–51 cm</td>
+          </tr>
+          <tr>
+            <td>Wingspan</td>
+            <td>120–150 cm</td>
+            <td>93–104 cm</td>
+          </tr>
+          <tr>
+            <td>Weight</td>
+            <td>689–1,625 g</td>
+            <td>370–650 g</td>
+          </tr>
+          <tr class="cmp-highlight">
+            <td><strong>Tail shape</strong></td>
+            <td><strong>Wedge-shaped</strong> (diamond/spade in flight)</td>
+            <td><strong>Fan-shaped</strong> (rounded)</td>
+          </tr>
+          <tr>
+            <td>Bill</td>
+            <td>Heavy, arched, deep at base</td>
+            <td>Moderate, slightly curved</td>
+          </tr>
+          <tr>
+            <td>Throat feathers</td>
+            <td>Shaggy hackles, especially visible when calling</td>
+            <td>Smooth, no hackles</td>
+          </tr>
+          <tr class="cmp-highlight">
+            <td><strong>Voice</strong></td>
+            <td><strong>Deep "kronk" or "pruk"</strong>, hollow croak</td>
+            <td><strong>"Caw" or "kaah"</strong>, sharper and higher</td>
+          </tr>
+          <tr>
+            <td>Wing shape in flight</td>
+            <td>Longer, narrower wings; "fingers" prominent</td>
+            <td>Broader, more rounded wingtips</td>
+          </tr>
+          <tr>
+            <td>Flight style</td>
+            <td>Often soars and glides; rolls and tumbles in play</td>
+            <td>Direct flapping; occasional soar</td>
+          </tr>
+          <tr>
+            <td>Habitat preference</td>
+            <td>Open country, coasts, mountains, forest edges; avoids dense suburbs</td>
+            <td>Farmland, parks, suburbs, woodland edges</td>
+          </tr>
+          <tr>
+            <td>IUCN Status</td>
+            <td>Least Concern (LC)</td>
+            <td>Least Concern (LC)</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <section class="cmp-section">
+    <h2>The 7 Field Marks, Explained</h2>
+
+    <div class="cmp-marks">
+      <div class="cmp-mark">
+        <span class="cmp-mark-num">1</span>
+        <div>
+          <h3>Tail shape</h3>
+          <p><strong class="claim-science">[science]</strong> The clearest in-flight mark. A raven's tail comes to a point (wedge shape), producing a diamond or spade outline. A crow's tail is evenly rounded — a smooth fan. This is visible at distance and is reliable in all lighting conditions.<sup><a href="#src-1">1</a></sup></p>
+        </div>
+      </div>
+      <div class="cmp-mark">
+        <span class="cmp-mark-num">2</span>
+        <div>
+          <h3>Size</h3>
+          <p><strong class="claim-science">[science]</strong> Ravens are roughly 50% heavier than Carrion Crows and noticeably larger in the field — roughly Buzzard-sized. When a raven and crow are seen together, the difference is immediately obvious. When seen alone, estimate size against landscape features.<sup><a href="#src-1">1</a></sup></p>
+        </div>
+      </div>
+      <div class="cmp-mark">
+        <span class="cmp-mark-num">3</span>
+        <div>
+          <h3>Voice</h3>
+          <p><strong class="claim-science">[science]</strong> Ravens produce a deep, hollow "kronk" or "pruk". Crows caw. With practice, you can identify the species by sound alone, often before you see the bird. Ravens also produce a wider range of calls including a gurgling water-drip and wooden-knock sound.<sup><a href="#src-2">2</a></sup></p>
+        </div>
+      </div>
+      <div class="cmp-mark">
+        <span class="cmp-mark-num">4</span>
+        <div>
+          <h3>Bill</h3>
+          <p><strong class="claim-science">[science]</strong> Ravens have a heavier, more arched bill with a deeper base — it looks substantial compared with the more slender crow bill. This is most visible when the bird is perched and seen from the side.<sup><a href="#src-1">1</a></sup></p>
+        </div>
+      </div>
+      <div class="cmp-mark">
+        <span class="cmp-mark-num">5</span>
+        <div>
+          <h3>Throat hackles</h3>
+          <p><strong class="claim-science">[science]</strong> Ravens have elongated throat feathers (hackles) that are visible when the bird calls or displays — they stick out as a shaggy ruff. Crows have smooth, neat throat feathers with no hackles.<sup><a href="#src-1">1</a></sup></p>
+        </div>
+      </div>
+      <div class="cmp-mark">
+        <span class="cmp-mark-num">6</span>
+        <div>
+          <h3>Flight style</h3>
+          <p><strong class="claim-science">[science]</strong> Ravens soar and glide freely, often holding wings in a slight V (dihedral). They also play — rolling, tumbling, and chasing in the air, particularly in pairs. Crows flap more directly and soar less. If you see a large black corvid playing aerially, it is almost certainly a raven.<sup><a href="#src-2">2</a></sup></p>
+        </div>
+      </div>
+      <div class="cmp-mark">
+        <span class="cmp-mark-num">7</span>
+        <div>
+          <h3>Habitat</h3>
+          <p><strong class="claim-science">[science]</strong> While both species can appear in many habitats, ravens strongly prefer open, wild country — coasts, moorland, mountains, and tundra. Crows are more suburban and tolerant of dense human development. If you see a large black corvid in a city park or suburban garden, it is much more likely to be a crow.<sup><a href="#src-1">1</a></sup></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="cmp-section">
+    <h2>What About American Ravens vs American Crows?</h2>
+    <p>In North America, the relevant comparison is Common Raven (<em>Corvus corax</em>) vs American Crow (<em>Corvus brachyrhynchos</em>). The same field marks apply — tail shape, size, voice — but the American Crow is smaller than the Carrion Crow and the size difference with the raven is even more pronounced. See: <a href="/compare/common-raven-vs-american-crow/">Common Raven vs American Crow</a>.</p>
+  </section>
+
+  <section class="cmp-section">
+    <h2>Related Comparisons</h2>
+    <ul>
+      <li><a href="/compare/common-raven-vs-american-crow/">Common Raven vs American Crow</a></li>
+      <li><a href="/compare/raven-vs-carrion-crow/">Raven vs Carrion Crow (UK/Europe)</a></li>
+      <li><a href="/compare/raven-vs-rook/">Raven vs Rook</a></li>
+      <li><a href="/compare/raven-vs-jackdaw/">Raven vs Jackdaw</a></li>
+    </ul>
+  </section>
+
+  <section class="cmp-faq cmp-section" aria-labelledby="faq-h2">
+    <h2 id="faq-h2">Frequently Asked Questions</h2>
+    {faq.map(item => (
+      <details class="cmp-faq-item">
+        <summary class="cmp-faq-q">{item.q}</summary>
+        <p class="cmp-faq-a">{item.a}</p>
+      </details>
+    ))}
+  </section>
+
+  <section class="cmp-sources cmp-section" aria-labelledby="src-h2">
+    <h2 id="src-h2">Sources</h2>
+    <ol class="cmp-src-list">
+      <li id="src-1">Madge, S. & Burn, H. (1994). <em>Crows and Jays</em>. Christopher Helm. — size, field marks, tail shape, bill, hackles, habitat.</li>
+      <li id="src-2">Boarman, W.I. & Heinrich, B. (1999). Common Raven (<em>Corvus corax</em>). <em>Birds of the World</em>. Cornell Lab. — voice, flight style, behaviour.</li>
+    </ol>
+    <p class="cmp-claim-note"><strong class="claim-science">[science]</strong> peer-reviewed study or field-guide data</p>
+  </section>
+
+</article>
+</BaseLayout>
+
+<style>
+  .cmp-page { max-width: 860px; margin: 0 auto; padding: 2rem 1.25rem 4rem; color: var(--iron-ink, #e8e4d8); font-family: 'Inter', sans-serif; line-height: 1.72; }
+  .cmp-breadcrumb ol { display: flex; flex-wrap: wrap; gap: .25rem; list-style: none; padding: 0; margin: 0 0 2rem; font-size: .8rem; color: var(--ink-soft, #8a8070); }
+  .cmp-breadcrumb a { color: var(--gold-500, #d4ae5a); text-decoration: none; }
+  .cmp-pillar { font-size: .72rem; letter-spacing: .12em; text-transform: uppercase; color: var(--gold-500, #d4ae5a); margin: 0 0 .4rem; }
+  .cmp-page h1 { font-family: 'Cormorant Garamond', serif; font-size: clamp(2rem, 5vw, 3rem); font-weight: 700; color: #fff; margin: 0 0 .4rem; line-height: 1.1; }
+  .cmp-subtitle { font-size: 1.1rem; color: var(--ink-soft, #c0b89a); margin: 0 0 2rem; }
+  .cmp-snippet { background: rgba(212,174,90,.08); border-left: 3px solid var(--gold-500, #d4ae5a); border-radius: 0 6px 6px 0; padding: 1rem 1.25rem; margin-bottom: 2.5rem; font-size: 1.03rem; }
+  .cmp-section { margin-bottom: 2.75rem; }
+  .cmp-section h2, .cmp-table-section h2 { font-family: 'Cormorant Garamond', serif; font-size: 1.6rem; font-weight: 600; color: #fff; margin: 0 0 1rem; border-bottom: 1px solid rgba(212,174,90,.2); padding-bottom: .4rem; }
+  .cmp-section p { margin: 0 0 1rem; font-size: .97rem; }
+  .cmp-section ul { padding-left: 1.25rem; margin: 0 0 1rem; }
+  .cmp-section li { margin-bottom: .4rem; font-size: .95rem; }
+  /* Table */
+  .cmp-table-section { margin-bottom: 2.75rem; }
+  .cmp-table-wrap { overflow-x: auto; }
+  .cmp-table { width: 100%; border-collapse: collapse; font-size: .88rem; }
+  .cmp-table th { background: rgba(212,174,90,.12); color: var(--gold-500, #d4ae5a); padding: .6rem .9rem; text-align: left; font-size: .78rem; letter-spacing: .06em; text-transform: uppercase; }
+  .cmp-table td { padding: .6rem .9rem; border-bottom: 1px solid rgba(255,255,255,.06); vertical-align: top; }
+  .cmp-table tr:last-child td { border-bottom: none; }
+  .cmp-highlight td { background: rgba(212,174,90,.05); font-weight: 500; }
+  /* Field marks */
+  .cmp-marks { display: flex; flex-direction: column; gap: 1.25rem; }
+  .cmp-mark { display: flex; gap: 1rem; align-items: flex-start; }
+  .cmp-mark-num { flex-shrink: 0; width: 2rem; height: 2rem; border-radius: 50%; background: rgba(212,174,90,.15); color: var(--gold-500, #d4ae5a); font-weight: 700; font-size: .9rem; display: flex; align-items: center; justify-content: center; margin-top: .2rem; }
+  .cmp-mark h3 { font-size: 1rem; font-weight: 600; color: #fff; margin: 0 0 .4rem; }
+  .cmp-mark p { margin: 0; font-size: .95rem; }
+  .claim-science { color: #7ab9e0; font-style: normal; font-size: .78rem; }
+  a[href] { color: var(--gold-500, #d4ae5a); }
+  /* FAQ */
+  .cmp-faq-item { border-bottom: 1px solid rgba(255,255,255,.07); }
+  .cmp-faq-q { cursor: pointer; padding: .9rem 0; font-size: .97rem; font-weight: 500; color: #fff; list-style: none; }
+  .cmp-faq-q::before { content: '+ '; color: var(--gold-500, #d4ae5a); font-weight: 700; }
+  details[open] .cmp-faq-q::before { content: '− '; }
+  .cmp-faq-a { margin: 0 0 1rem; line-height: 1.7; font-size: .93rem; color: var(--ink-soft, #c8c0b0); }
+  .cmp-src-list { padding-left: 1.25rem; margin: 0 0 1rem; }
+  .cmp-src-list li { margin-bottom: .6rem; font-size: .82rem; color: var(--ink-soft, #8a8070); line-height: 1.6; }
+  .cmp-claim-note { font-size: .78rem; color: var(--ink-soft, #605848); border-top: 1px solid rgba(255,255,255,.06); padding-top: .75rem; }
+  @media (max-width: 540px) { .cmp-mark { flex-direction: column; } }
+</style>

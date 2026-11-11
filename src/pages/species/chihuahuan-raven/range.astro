@@ -1,0 +1,134 @@
+---
+/**
+ * Species sub-page — Chihuahuan Raven range
+ * SPC·03r
+ * Primary keyword: chihuahuan raven range
+ * Secondary: where does the chihuahuan raven live, corvus cryptoleucus range, white-necked raven range usa
+ */
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+
+const title       = 'Chihuahuan Raven Range: Where This Species Lives';
+const description = 'The Chihuahuan Raven is confined to the Chihuahuan Desert and southern Great Plains of the southwestern USA and northern Mexico. This page covers its full distribution, habitat preferences, and population status.';
+const path        = '/species/chihuahuan-raven/range/';
+
+const breadcrumbs = [
+  { name: 'Home',              url: '/' },
+  { name: 'Species',           url: '/species/' },
+  { name: 'Chihuahuan Raven',  url: '/species/chihuahuan-raven/' },
+  { name: 'Range',             url: path },
+];
+
+const faq = [
+  { q: 'Where does the Chihuahuan Raven live?', a: 'The Chihuahuan Raven (Corvus cryptoleucus) is confined to the Chihuahuan Desert and adjacent arid grasslands of the southwestern USA and northern Mexico. Its US range includes south-eastern Colorado, western Kansas, Oklahoma panhandle, the Texas panhandle and Trans-Pecos Texas, New Mexico, and south-eastern Arizona. In Mexico, it is widespread in Chihuahua, Sonora, Coahuila, Zacatecas, and adjacent states. It is entirely absent from Central America and from the more mesic habitats of the eastern US.' },
+  { q: 'Does the Chihuahuan Raven overlap with the Common Raven?', a: 'Yes, in a limited zone. The two species meet in the southern Great Plains (south-eastern Colorado, western Kansas, Oklahoma and Texas panhandles) and in New Mexico and Arizona, where Common Ravens occupy adjacent rocky and montane terrain. Direct overlap in the same habitat is limited because Common Ravens prefer rocky, hilly terrain while Chihuahuan Ravens use open grassland and flat desert. In winter, mixed flocks sometimes occur at food sources in the overlap zone.' },
+  { q: 'Is the Chihuahuan Raven declining?', a: 'Chihuahuan Raven populations have declined in the northern parts of their range (southern Great Plains) due to changes in land use — conversion of native grassland to cultivation and changes in livestock husbandry that reduce carcass availability. Some studies have noted population contractions at the northern range edge. The species is currently classified as Least Concern by IUCN, but North American Breeding Bird Survey data suggest long-term population declines in some regions.' },
+];
+---
+
+<BaseLayout title={title} description={description} path={path} ogType="article"
+  datePublished="2026-11-07" dateModified="2026-11-07"
+  breadcrumbs={breadcrumbs} faq={faq} pageType="Article">
+
+<article class="qa-page">
+
+  <nav class="qa-breadcrumb" aria-label="Breadcrumb">
+    <ol>
+      {breadcrumbs.map((b, i) => (
+        <li>
+          {i < breadcrumbs.length - 1
+            ? <><a href={b.url}>{b.name}</a><span aria-hidden="true"> › </span></>
+            : <span aria-current="page">{b.name}</span>}
+        </li>
+      ))}
+    </ol>
+  </nav>
+
+  <header class="qa-header">
+    <p class="qa-pillar">Species Sub-page · SPC·03r</p>
+    <h1>Chihuahuan Raven Range: Where This Species Lives</h1>
+  </header>
+
+  <section class="qa-snippet" aria-label="Direct answer">
+    <p><strong class="claim-science">[science]</strong> The Chihuahuan Raven (<em>Corvus cryptoleucus</em>) is confined to the Chihuahuan Desert and southern Great Plains — south-eastern Colorado and Kansas south through Texas, New Mexico, Arizona, and into northern and central Mexico. It occupies open, arid grassland, desert scrub, and agricultural land. It does not occur outside North America, and its US range is entirely south and west of the Missouri River.</p>
+  </section>
+
+  <section class="qa-section">
+    <h2>Distribution</h2>
+    <p><strong class="claim-science">[science]</strong> The Chihuahuan Raven's range is centred on the Chihuahuan Desert and adjacent arid grasslands:<sup><a href="#src-1">1</a></sup></p>
+    <ul>
+      <li><strong>United States:</strong> south-eastern Colorado; western Kansas and the Oklahoma panhandle; the Texas panhandle, Trans-Pecos Texas, and south Texas; most of New Mexico; south-eastern Arizona. The northern range boundary roughly follows the 1,000 m elevation contour of the southern Great Plains.</li>
+      <li><strong>Mexico:</strong> widespread in the arid interior — Chihuahua, Sonora, Sinaloa, Durango, Coahuila, Nuevo León, Zacatecas, San Luis Potosí, and extending south to Hidalgo. Mostly absent from tropical coastal lowlands and the dense forests of southern Mexico.</li>
+    </ul>
+    <p>The core of the range — the Chihuahuan Desert itself, covering much of southern New Mexico, Trans-Pecos Texas, and the northern Mexican plateau — has the highest raven densities. The species is essentially endemic to the Chihuahuan biogeographic region.</p>
+  </section>
+
+  <section class="qa-section">
+    <h2>Habitat Preferences</h2>
+    <p><strong class="claim-science">[science]</strong> Within its range, the Chihuahuan Raven uses open habitats:<sup><a href="#src-1">1</a></sup></p>
+    <ul>
+      <li><strong>Primary:</strong> semi-arid grassland (primarily native shortgrass and mixed-grass prairie), desert scrub with scattered shrubs, and open agricultural land — cultivated fields, pasture, and rangeland with a patchy tree or shrub structure.</li>
+      <li><strong>Secondary:</strong> roadsides, landfills, and feed lots in agricultural areas, which provide concentrated food resources.</li>
+      <li><strong>Avoided:</strong> dense woodland, tall-tree forest, rocky terrain and cliffs (which are favoured by the Common Raven in the same region).</li>
+    </ul>
+    <p>The Chihuahuan Raven's near-absence from rocky and montane habitats within its geographic range is a key ecological difference from the sympatric Common Raven — they partition the landscape by terrain type.</p>
+  </section>
+
+  <section class="qa-section">
+    <h2>Range Changes and Population</h2>
+    <p><strong class="claim-science">[science]</strong> There is evidence of range contraction in the northern Great Plains portion of the range, associated with grassland conversion and changes in livestock management. Historical accounts from the 19th century document larger Great Plains populations around bison carcasses — the near-extinction of bison in the 1870s–1880s is thought to have caused a northern range contraction. Current IUCN status is Least Concern, but North American BBS data suggest long-term declines.<sup><a href="#src-1">1</a></sup></p>
+  </section>
+
+  <section class="qa-section">
+    <h2>Related Pages</h2>
+    <ul>
+      <li><a href="/species/chihuahuan-raven/">Chihuahuan Raven — species hub</a></li>
+      <li><a href="/species/chihuahuan-raven/identification/">Chihuahuan Raven identification</a></li>
+      <li><a href="/compare/chihuahuan-raven-vs-common-raven/">Chihuahuan vs Common Raven</a></li>
+      <li><a href="/species/common-raven/range/">Common Raven range</a></li>
+    </ul>
+  </section>
+
+  <section class="qa-faq qa-section" aria-labelledby="faq-h2">
+    <h2 id="faq-h2">Frequently Asked Questions</h2>
+    {faq.map(item => (
+      <details class="qa-faq-item">
+        <summary class="qa-faq-q">{item.q}</summary>
+        <p class="qa-faq-a">{item.a}</p>
+      </details>
+    ))}
+  </section>
+
+  <section class="qa-sources qa-section" aria-labelledby="src-h2">
+    <h2 id="src-h2">Sources</h2>
+    <ol class="qa-src-list">
+      <li id="src-1">Bednarz, J.C. & Raitt, R.J. (1999). Chihuahuan Raven (<em>Corvus cryptoleucus</em>). In Poole, A. (ed.), <em>The Birds of North America</em>, No. 606. Cornell Lab of Ornithology. — range, habitat, population status, historical range changes.</li>
+    </ol>
+    <p class="qa-claim-note"><strong class="claim-science">[science]</strong> peer-reviewed or field-guide data</p>
+  </section>
+
+</article>
+</BaseLayout>
+
+<style>
+  .qa-page { max-width: 820px; margin: 0 auto; padding: 2rem 1.25rem 4rem; color: var(--iron-ink, #e8e4d8); font-family: 'Inter', sans-serif; line-height: 1.72; }
+  .qa-breadcrumb ol { display: flex; flex-wrap: wrap; gap: .25rem; list-style: none; padding: 0; margin: 0 0 2rem; font-size: .8rem; color: var(--ink-soft, #8a8070); }
+  .qa-breadcrumb a { color: var(--gold-500, #d4ae5a); text-decoration: none; }
+  .qa-pillar { font-size: .72rem; letter-spacing: .12em; text-transform: uppercase; color: var(--gold-500, #d4ae5a); margin: 0 0 .4rem; }
+  .qa-page h1 { font-family: 'Cormorant Garamond', serif; font-size: clamp(2rem, 5vw, 3rem); font-weight: 700; color: #fff; margin: 0 0 2rem; line-height: 1.1; }
+  .qa-snippet { background: rgba(212,174,90,.08); border-left: 3px solid var(--gold-500, #d4ae5a); border-radius: 0 6px 6px 0; padding: 1rem 1.25rem; margin-bottom: 2.5rem; font-size: 1.03rem; }
+  .qa-section { margin-bottom: 2.5rem; }
+  .qa-section h2 { font-family: 'Cormorant Garamond', serif; font-size: 1.5rem; font-weight: 600; color: #fff; margin: 0 0 .9rem; border-bottom: 1px solid rgba(212,174,90,.2); padding-bottom: .4rem; }
+  .qa-section p { margin: 0 0 1rem; font-size: .97rem; }
+  .qa-section ul { padding-left: 1.25rem; margin: 0 0 1rem; }
+  .qa-section li { margin-bottom: .4rem; font-size: .95rem; }
+  .claim-science { color: #7ab9e0; font-style: normal; font-size: .78rem; }
+  a[href] { color: var(--gold-500, #d4ae5a); }
+  .qa-faq-item { border-bottom: 1px solid rgba(255,255,255,.07); }
+  .qa-faq-q { cursor: pointer; padding: .9rem 0; font-size: .97rem; font-weight: 500; color: #fff; list-style: none; }
+  .qa-faq-q::before { content: '+ '; color: var(--gold-500, #d4ae5a); font-weight: 700; }
+  details[open] .qa-faq-q::before { content: '− '; }
+  .qa-faq-a { margin: 0 0 1rem; line-height: 1.7; font-size: .93rem; color: var(--ink-soft, #c8c0b0); }
+  .qa-src-list { padding-left: 1.25rem; margin: 0 0 1rem; }
+  .qa-src-list li { margin-bottom: .6rem; font-size: .82rem; color: var(--ink-soft, #8a8070); line-height: 1.6; }
+  .qa-claim-note { font-size: .78rem; color: var(--ink-soft, #605848); border-top: 1px solid rgba(255,255,255,.06); padding-top: .75rem; }
+</style>

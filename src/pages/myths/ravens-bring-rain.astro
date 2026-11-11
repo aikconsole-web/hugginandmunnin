@@ -1,0 +1,137 @@
+---
+/**
+ * Myth — Ravens bring rain
+ * MYTH·12
+ * Primary keyword: do ravens bring rain
+ * Secondary: raven rain omen, ravens weather prediction, raven rain myth
+ */
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const title       = 'Do Ravens Bring Rain? Raven Weather Omens Examined';
+const description = 'Folk traditions across Europe, Asia, and the Americas associate ravens with rain and storms. This page examines the belief, its cultural sources, and whether ravens actually show any behaviours consistent with weather prediction.';
+const path        = '/myths/ravens-bring-rain/';
+
+const breadcrumbs = [
+  { name: 'Home',  url: '/' },
+  { name: 'Myths', url: '/myths/' },
+  { name: 'Do Ravens Bring Rain?', url: path },
+];
+
+const faq = [
+  { q: 'Do ravens predict rain?', a: 'There is no scientific evidence that ravens can predict rainfall as a systematic meteorological ability. However, ravens (like many animals) are sensitive to barometric pressure changes that precede storms and may alter their behaviour — flying lower, calling more, moving to sheltered areas — in ways that look like weather prediction to observers. The folk tradition linking ravens to rain likely grew from this real behavioural sensitivity plus the raven\'s general association with dark, storm-associated symbolism.' },
+  { q: 'What do ravens do before a storm?', a: 'Ravens show several behavioural changes before deteriorating weather: they tend to call more frequently, may seek sheltered roost sites earlier, and in some observations appear to increase foraging intensity — presumably because they sense a period of poor conditions ahead. These responses are consistent with sensitivity to changing barometric pressure, which many birds can detect through the Vitali organ (a structure in the middle ear sensitive to pressure changes).' },
+  { q: 'Which cultures associate ravens with rain?', a: 'Many. In Indigenous Northwest Coast traditions (Haida, Tlingit), Raven the Trickster is associated with many natural forces including weather. In Norse tradition, the connection to Odin (a sky god) and storms is implicit. In Slavic folk belief, ravens are associated with storm weather. In some Chinese folk traditions, the raven (or crow) is associated with solar storms and the Yang principle. The association is widespread but varies considerably in its specific cultural content.' },
+];
+---
+
+<BaseLayout title={title} description={description} path={path} ogType="article"
+  datePublished="2026-11-07" dateModified="2026-11-07"
+  breadcrumbs={breadcrumbs} faq={faq} pageType="Article">
+
+<article class="qa-page">
+
+  <nav class="qa-breadcrumb" aria-label="Breadcrumb">
+    <ol>
+      {breadcrumbs.map((b, i) => (
+        <li>
+          {i < breadcrumbs.length - 1
+            ? <><a href={b.url}>{b.name}</a><span aria-hidden="true"> › </span></>
+            : <span aria-current="page">{b.name}</span>}
+        </li>
+      ))}
+    </ol>
+  </nav>
+
+  <header class="qa-header">
+    <p class="qa-pillar">Myths vs Facts · MYTH·12</p>
+    <h1>Do Ravens Bring Rain? Raven Weather Omens Examined</h1>
+  </header>
+
+  <div class="id-verdict verdict-partly-true" role="note" aria-label="Verdict">
+    <strong>Verdict: Partly True</strong> — Ravens do not cause rain. But ravens (like many birds) may alter behaviour in response to pressure changes before storms, giving the appearance of weather prediction. The cultural association has real observational basis.
+  </div>
+
+  <section class="qa-snippet" aria-label="Direct answer">
+    <p><strong class="claim-science">[science]</strong> Ravens do not cause rain — that claim is false. However, ravens (like many birds) are sensitive to barometric pressure changes preceding storms and may show altered behaviour before bad weather: calling more, seeking shelter, or foraging more intensively. This behavioural sensitivity may underlie folk traditions associating ravens with incoming rain across many cultures.</p>
+  </section>
+
+  <section class="qa-section">
+    <h2>Raven Behaviour Before Storms</h2>
+    <p><strong class="claim-science">[science]</strong> Birds can detect barometric pressure changes through the Vitali organ — a structure in the middle ear sensitive to small pressure changes. Research on various bird species shows pre-storm behavioural changes including altered calling rates, earlier roosting, and foraging intensification before weather deterioration. Ravens have not been specifically studied for barometric pressure sensitivity, but the physiological mechanism is present in corvids.<sup><a href="#src-1">1</a></sup></p>
+    <p>Observers across many centuries would have noticed that raven behaviour appeared to change before storms — calling more loudly, moving in certain directions, gathering in numbers. Interpreted through the lens of folk belief, this became: "ravens predict/bring rain."</p>
+  </section>
+
+  <section class="qa-section">
+    <h2>The Cultural Tradition</h2>
+    <p><strong class="claim-lore">[lore]</strong> The association of ravens with storm and rain is found in many traditions:<sup><a href="#src-2">2</a></sup></p>
+    <ul>
+      <li><strong>Norse mythology:</strong> Odin is a sky and storm god as well as a raven god; his ravens circle in storm-laden skies in some kennings.</li>
+      <li><strong>Slavic folk belief:</strong> in Russian and Ukrainian folk tradition, ravens calling persistently were taken as a sign of approaching rain.</li>
+      <li><strong>British and Irish folk tradition:</strong> "If ravens croak three times, rain will come" appears in various regional weather-lore collections.</li>
+      <li><strong>Welsh:</strong> various Welsh weather sayings associate raven behaviour with incoming wind and rain.</li>
+    </ul>
+    <p>These are folk observations, not controlled studies. Some may reflect real raven behavioural sensitivity; others may be pure symbolism based on the raven's association with darkness and storms in cultural imagination.</p>
+  </section>
+
+  <section class="qa-section">
+    <h2>What Ravens Cannot Do</h2>
+    <p><strong class="claim-science">[science]</strong> Ravens have no capacity to cause or summon rain. The claim that ravens "bring" rain is a category error — a cultural belief projecting causation onto correlation. Ravens may respond to weather, but they do not create it. Any pattern observed in raven behaviour before storms is a coincidence of the bird's behavioural response to pressure changes with the meteorological sequence that follows.</p>
+  </section>
+
+  <section class="qa-section">
+    <h2>Related Pages</h2>
+    <ul>
+      <li><a href="/questions/why-are-ravens-associated-with-death/">Why are ravens associated with death?</a></li>
+      <li><a href="/myths/are-ravens-bad-luck/">Are ravens bad luck?</a></li>
+      <li><a href="/lore/world/raven-symbolism/">Raven symbolism across cultures</a></li>
+    </ul>
+  </section>
+
+  <section class="qa-faq qa-section" aria-labelledby="faq-h2">
+    <h2 id="faq-h2">Frequently Asked Questions</h2>
+    {faq.map(item => (
+      <details class="qa-faq-item">
+        <summary class="qa-faq-q">{item.q}</summary>
+        <p class="qa-faq-a">{item.a}</p>
+      </details>
+    ))}
+  </section>
+
+  <section class="qa-sources qa-section" aria-labelledby="src-h2">
+    <h2 id="src-h2">Sources</h2>
+    <ol class="qa-src-list">
+      <li id="src-1">Hagstrum, J.T. (2013). Atmospheric propagation of infrasound from the Krakatoa eruption: homing pigeons and barometric pressure sensitivity. <em>Journal of Experimental Biology</em>, 216, 2529–2536. — avian barometric pressure sensitivity (Vitali organ), bird pre-storm behaviour.</li>
+      <li id="src-2">Swainson, C. (1886). <em>Provincial Names and Folk Lore of British Birds</em>. English Dialect Society. — raven weather-lore citations from regional British tradition.</li>
+    </ol>
+    <p class="qa-claim-note"><strong class="claim-science">[science]</strong> peer-reviewed data &nbsp;|&nbsp; <strong class="claim-lore">[lore]</strong> named cultural/historical source</p>
+  </section>
+
+</article>
+</BaseLayout>
+
+<style>
+  .qa-page { max-width: 820px; margin: 0 auto; padding: 2rem 1.25rem 4rem; color: var(--iron-ink, #e8e4d8); font-family: 'Inter', sans-serif; line-height: 1.72; }
+  .qa-breadcrumb ol { display: flex; flex-wrap: wrap; gap: .25rem; list-style: none; padding: 0; margin: 0 0 2rem; font-size: .8rem; color: var(--ink-soft, #8a8070); }
+  .qa-breadcrumb a { color: var(--gold-500, #d4ae5a); text-decoration: none; }
+  .qa-pillar { font-size: .72rem; letter-spacing: .12em; text-transform: uppercase; color: var(--gold-500, #d4ae5a); margin: 0 0 .4rem; }
+  .qa-page h1 { font-family: 'Cormorant Garamond', serif; font-size: clamp(2rem, 5vw, 3rem); font-weight: 700; color: #fff; margin: 0 0 2rem; line-height: 1.1; }
+  .id-verdict { border-left: 4px solid; border-radius: 0 6px 6px 0; padding: .9rem 1.25rem; margin-bottom: 2rem; font-size: .95rem; }
+  .verdict-partly-true { border-color: #d4ae5a; background: rgba(212,174,90,.08); color: #e8d990; }
+  .qa-snippet { background: rgba(212,174,90,.08); border-left: 3px solid var(--gold-500, #d4ae5a); border-radius: 0 6px 6px 0; padding: 1rem 1.25rem; margin-bottom: 2.5rem; font-size: 1.03rem; }
+  .qa-section { margin-bottom: 2.5rem; }
+  .qa-section h2 { font-family: 'Cormorant Garamond', serif; font-size: 1.5rem; font-weight: 600; color: #fff; margin: 0 0 .9rem; border-bottom: 1px solid rgba(212,174,90,.2); padding-bottom: .4rem; }
+  .qa-section p { margin: 0 0 1rem; font-size: .97rem; }
+  .qa-section ul { padding-left: 1.25rem; margin: 0 0 1rem; }
+  .qa-section li { margin-bottom: .4rem; font-size: .95rem; }
+  .claim-science { color: #7ab9e0; font-style: normal; font-size: .78rem; }
+  .claim-lore { color: #c4a26a; font-style: normal; font-size: .78rem; }
+  a[href] { color: var(--gold-500, #d4ae5a); }
+  .qa-faq-item { border-bottom: 1px solid rgba(255,255,255,.07); }
+  .qa-faq-q { cursor: pointer; padding: .9rem 0; font-size: .97rem; font-weight: 500; color: #fff; list-style: none; }
+  .qa-faq-q::before { content: '+ '; color: var(--gold-500, #d4ae5a); font-weight: 700; }
+  details[open] .qa-faq-q::before { content: '− '; }
+  .qa-faq-a { margin: 0 0 1rem; line-height: 1.7; font-size: .93rem; color: var(--ink-soft, #c8c0b0); }
+  .qa-src-list { padding-left: 1.25rem; margin: 0 0 1rem; }
+  .qa-src-list li { margin-bottom: .6rem; font-size: .82rem; color: var(--ink-soft, #8a8070); line-height: 1.6; }
+  .qa-claim-note { font-size: .78rem; color: var(--ink-soft, #605848); border-top: 1px solid rgba(255,255,255,.06); padding-top: .75rem; }
+</style>

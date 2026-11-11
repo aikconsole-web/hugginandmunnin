@@ -1,0 +1,148 @@
+---
+/**
+ * Behaviour chapter — Raven social life and roosts
+ * BEH·13
+ * Primary keyword: raven social life
+ * Secondary: raven flock, do ravens live in groups, raven group behaviour
+ */
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const title       = 'Raven Social Life: Pairs, Flocks, and the Non-Breeding Years';
+const description = 'Ravens are both monogamous pair-holders and members of large nomadic flocks — depending on age and status. This chapter explains how raven society works across the full life cycle.';
+const path        = '/behaviour/raven-social-life-and-roosts/';
+
+const breadcrumbs = [
+  { name: 'Home',      url: '/' },
+  { name: 'Behaviour', url: '/behaviour/' },
+  { name: 'Raven Social Life', url: path },
+];
+
+const faq = [
+  { q: 'Are ravens solitary or social birds?', a: 'Both, depending on age and status. Paired territory-holding adults are largely solitary outside the pair bond — defending a territory, raising young, and not participating in communal flocks. Unpaired young ravens (ages 1–4) live in social, nomadic non-breeding flocks that can number in the hundreds. The same bird may move from flock life to pair life as it matures and secures a territory.' },
+  { q: 'What is a group of ravens called?', a: 'A group of ravens has several collective nouns: the most widely used are "an unkindness of ravens" (derived from the Book of Saint Albans, 1486) and "a conspiracy of ravens." In practice, ornithologists simply describe "a flock" or "a roost" of ravens — the terms of venery are literary rather than scientific. See the full page on collective nouns for ravens.' },
+  { q: 'Do ravens form dominance hierarchies?', a: 'Yes. Ravens establish social hierarchies both within pairs (males typically dominant over females in direct encounters, though females have considerable agency) and within flocks. At food sources, dominant birds displace subordinates. Status is not fixed by age or sex alone — individual personality, experience, and alliance partnerships all influence social rank. Research at the Konrad Lorenz Research Station has documented complex, individual-specific hierarchies in captive groups.' },
+];
+---
+
+<BaseLayout title={title} description={description} path={path} ogType="article"
+  datePublished="2026-11-07" dateModified="2026-11-07"
+  breadcrumbs={breadcrumbs} faq={faq} pageType="Article">
+
+<article class="qa-page">
+
+  <nav class="qa-breadcrumb" aria-label="Breadcrumb">
+    <ol>
+      {breadcrumbs.map((b, i) => (
+        <li>
+          {i < breadcrumbs.length - 1
+            ? <><a href={b.url}>{b.name}</a><span aria-hidden="true"> › </span></>
+            : <span aria-current="page">{b.name}</span>}
+        </li>
+      ))}
+    </ol>
+  </nav>
+
+  <header class="qa-header">
+    <p class="qa-pillar">Behaviour · BEH·13</p>
+    <h1>Raven Social Life: Pairs, Flocks, and the Non-Breeding Years</h1>
+  </header>
+
+  <section class="qa-snippet" aria-label="Direct answer">
+    <p><strong class="claim-science">[science]</strong> Raven society has two distinct phases. Breeding adults hold territories as monogamous pairs and are largely solitary outside the pair. Young ravens (1–4 years old) live in nomadic, non-breeding flocks — sometimes hundreds strong — that roost communally, forage widely, and form a dynamic social arena where individuals compete, cooperate, and form lasting relationships before eventually pairing and settling.</p>
+  </section>
+
+  <section class="qa-section">
+    <h2>The Two Social Worlds of a Raven</h2>
+    <p><strong class="claim-science">[science]</strong> A Common Raven may live in two completely different social environments during its lifetime:<sup><a href="#src-1">1</a></sup></p>
+    <ul>
+      <li><strong>Non-breeding flock life (years 1–4+):</strong> after leaving their parents in late summer of their first year, young ravens join non-breeding flocks. These flocks are fluid — composition changes as birds arrive and depart — but individuals form stable relationships within them. Flocks roam widely (sometimes 50–100+ km in a day) in search of food and sleep at communal roost sites.</li>
+      <li><strong>Territorial pair life (year 2–4 onwards):</strong> once a raven pairs and establishes a breeding territory, it withdraws from flock life. The pair defends a year-round territory, breeds annually, and interacts mainly with neighbours and passing floaters rather than with flocks.</li>
+    </ul>
+    <p>Some ravens are still non-breeding floaters at age 4–5 if they have not managed to secure a territory. The transition from flock to pair life depends on the availability of territories and partners.</p>
+  </section>
+
+  <section class="qa-section">
+    <h2>The Non-Breeding Flock in Detail</h2>
+    <p><strong class="claim-science">[science]</strong> Bernd Heinrich's decades of research in New England described the non-breeding flock as a complex social system with individual relationships, hierarchies, and emergent group-level behaviours:<sup><a href="#src-2">2</a></sup></p>
+    <ul>
+      <li><strong>Dominance hierarchies:</strong> dominant birds (usually older, experienced individuals) have priority access to food and roost positions. Status is contested and can change.</li>
+      <li><strong>Alliance partnerships:</strong> young ravens form dyadic partnerships — "best friend" relationships in which two birds preferentially associate, support each other in conflicts, and share food. These partnerships may be precursors to pair bonds.</li>
+      <li><strong>Information sharing:</strong> the communal roost functions as an information centre — birds that found food on a given day are followed to that food the next morning (Heinrich's information-centre hypothesis, supported by field tests).</li>
+      <li><strong>Play and social learning:</strong> flocks are where ravens do most of their social playing and much of their learning — observing experienced foragers, learning new food sources, and testing social tactics.</li>
+    </ul>
+  </section>
+
+  <section class="qa-section">
+    <h2>Territorial Pair Life</h2>
+    <p><strong class="claim-science">[science]</strong> Once established, a breeding pair's territory is defended year-round. Territory size varies enormously by habitat — a few km² in productive lowland areas; much larger in marginal desert or arctic habitats. Pair interactions include:<sup><a href="#src-1">1</a></sup></p>
+    <ul>
+      <li><strong>Joint territory defence:</strong> both birds mob intruders, though the male typically takes the more aggressive role in direct confrontations.</li>
+      <li><strong>Pair coordination:</strong> pairs forage together, build the nest together, and may cooperate in obtaining food from other territory-holders (one bird distracts while the other steals).</li>
+      <li><strong>Tolerance at food:</strong> pairs share food sources without the competitive displacement seen among non-breeding flock members.</li>
+    </ul>
+  </section>
+
+  <section class="qa-section">
+    <h2>What We Don't Know</h2>
+    <ul>
+      <li>The full extent of individual personality variation and how it predicts social success (some preliminary data from captive studies at Konrad Lorenz Research Station).</li>
+      <li>Whether and how raven social relationships influence survival and reproductive outcomes in the long term — long-term marked-individual studies are needed.</li>
+      <li>Social structure in non-Common Raven species — most of what we know comes from <em>C. corax</em>.</li>
+    </ul>
+  </section>
+
+  <section class="qa-section">
+    <h2>Related Pages</h2>
+    <ul>
+      <li><a href="/behaviour/raven-social-structure/">Raven social structure (chapter)</a></li>
+      <li><a href="/questions/where-do-ravens-sleep/">Where do ravens sleep? (roosts)</a></li>
+      <li><a href="/behaviour/raven-pair-bonds/">Raven pair bonds</a></li>
+      <li><a href="/questions/what-is-a-group-of-ravens-called/">What is a group of ravens called?</a></li>
+    </ul>
+  </section>
+
+  <section class="qa-faq qa-section" aria-labelledby="faq-h2">
+    <h2 id="faq-h2">Frequently Asked Questions</h2>
+    {faq.map(item => (
+      <details class="qa-faq-item">
+        <summary class="qa-faq-q">{item.q}</summary>
+        <p class="qa-faq-a">{item.a}</p>
+      </details>
+    ))}
+  </section>
+
+  <section class="qa-sources qa-section" aria-labelledby="src-h2">
+    <h2 id="src-h2">Sources</h2>
+    <ol class="qa-src-list">
+      <li id="src-1">Boarman, W.I. & Heinrich, B. (1999). Common Raven (<em>Corvus corax</em>). In <em>Birds of the World</em> (A.F. Poole, ed.). Cornell Lab of Ornithology. — social system, territory, pair behaviour.</li>
+      <li id="src-2">Heinrich, B. (1989). <em>Ravens in Winter</em>. Summit Books. — non-breeding flock dynamics, information-centre hypothesis.</li>
+    </ol>
+    <p class="qa-claim-note"><strong class="claim-science">[science]</strong> peer-reviewed study or field-guide data</p>
+  </section>
+
+</article>
+</BaseLayout>
+
+<style>
+  .qa-page { max-width: 820px; margin: 0 auto; padding: 2rem 1.25rem 4rem; color: var(--iron-ink, #e8e4d8); font-family: 'Inter', sans-serif; line-height: 1.72; }
+  .qa-breadcrumb ol { display: flex; flex-wrap: wrap; gap: .25rem; list-style: none; padding: 0; margin: 0 0 2rem; font-size: .8rem; color: var(--ink-soft, #8a8070); }
+  .qa-breadcrumb a { color: var(--gold-500, #d4ae5a); text-decoration: none; }
+  .qa-pillar { font-size: .72rem; letter-spacing: .12em; text-transform: uppercase; color: var(--gold-500, #d4ae5a); margin: 0 0 .4rem; }
+  .qa-page h1 { font-family: 'Cormorant Garamond', serif; font-size: clamp(2rem, 5vw, 3rem); font-weight: 700; color: #fff; margin: 0 0 2rem; line-height: 1.1; }
+  .qa-snippet { background: rgba(212,174,90,.08); border-left: 3px solid var(--gold-500, #d4ae5a); border-radius: 0 6px 6px 0; padding: 1rem 1.25rem; margin-bottom: 2.5rem; font-size: 1.03rem; }
+  .qa-section { margin-bottom: 2.5rem; }
+  .qa-section h2 { font-family: 'Cormorant Garamond', serif; font-size: 1.5rem; font-weight: 600; color: #fff; margin: 0 0 .9rem; border-bottom: 1px solid rgba(212,174,90,.2); padding-bottom: .4rem; }
+  .qa-section p { margin: 0 0 1rem; font-size: .97rem; }
+  .qa-section ul { padding-left: 1.25rem; margin: 0 0 1rem; }
+  .qa-section li { margin-bottom: .4rem; font-size: .95rem; }
+  .claim-science { color: #7ab9e0; font-style: normal; font-size: .78rem; }
+  a[href] { color: var(--gold-500, #d4ae5a); }
+  .qa-faq-item { border-bottom: 1px solid rgba(255,255,255,.07); }
+  .qa-faq-q { cursor: pointer; padding: .9rem 0; font-size: .97rem; font-weight: 500; color: #fff; list-style: none; }
+  .qa-faq-q::before { content: '+ '; color: var(--gold-500, #d4ae5a); font-weight: 700; }
+  details[open] .qa-faq-q::before { content: '− '; }
+  .qa-faq-a { margin: 0 0 1rem; line-height: 1.7; font-size: .93rem; color: var(--ink-soft, #c8c0b0); }
+  .qa-src-list { padding-left: 1.25rem; margin: 0 0 1rem; }
+  .qa-src-list li { margin-bottom: .6rem; font-size: .82rem; color: var(--ink-soft, #8a8070); line-height: 1.6; }
+  .qa-claim-note { font-size: .78rem; color: var(--ink-soft, #605848); border-top: 1px solid rgba(255,255,255,.06); padding-top: .75rem; }
+</style>

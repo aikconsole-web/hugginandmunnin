@@ -1,0 +1,63 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const title       = 'Raven Behaviour — Mind, Social Life and Ecology';
+const description = 'In-depth chapters on raven behaviour: intelligence and cognition, food caching, social structure, play, pair bonds, and vocalisation. All sourced from peer-reviewed research.';
+const path        = '/behaviour/';
+
+const breadcrumbs = [
+  { name: 'Home',      url: '/' },
+  { name: 'Behaviour', url: '/behaviour/' },
+];
+
+const chapters = [
+  { slug: 'raven-intelligence',    title: 'Raven Intelligence',           desc: 'Future planning, theory of mind, cooperation and trade — the key experiments.' },
+  { slug: 'raven-food-caching',    title: 'Food Caching and Memory',      desc: 'How ravens hide food, protect caches from thieves, and retrieve them months later.' },
+  { slug: 'raven-social-structure', title: 'Social Structure and Flocks',  desc: 'Pair bonds, non-breeding flocks, dominance hierarchies, and information sharing.' },
+  { slug: 'raven-vocalisation',    title: 'Raven Vocalisation',           desc: 'The most complex bird voice outside parrots — calls, mimicry, and learned sounds.' },
+  { slug: 'raven-play',            title: 'Raven Play',                   desc: 'Aerial acrobatics, object play, and what play behaviour tells us about raven cognition.' },
+];
+---
+
+<BaseLayout title={title} description={description} path={path} breadcrumbs={breadcrumbs}>
+
+<div class="behidx-page">
+  <nav class="behidx-breadcrumb" aria-label="Breadcrumb">
+    <ol>
+      <li><a href="/">Home</a><span aria-hidden="true"> › </span></li>
+      <li><span aria-current="page">Behaviour</span></li>
+    </ol>
+  </nav>
+  <header class="behidx-header">
+    <p class="behidx-pillar">Pillar IV</p>
+    <h1>Raven Behaviour</h1>
+    <p class="behidx-lead">What makes ravens so remarkable — examined chapter by chapter with peer-reviewed evidence.</p>
+  </header>
+  <ul class="behidx-list">
+    {chapters.map(c => (
+      <li class="behidx-item">
+        <a href={`/behaviour/${c.slug}/`} class="behidx-link">
+          <strong class="behidx-title">{c.title}</strong>
+          <span class="behidx-desc">{c.desc}</span>
+        </a>
+      </li>
+    ))}
+  </ul>
+</div>
+
+</BaseLayout>
+
+<style>
+  .behidx-page { max-width: 760px; margin: 0 auto; padding: 2rem 1.25rem 4rem; color: var(--iron-ink, #e8e4d8); font-family: 'Inter', sans-serif; }
+  .behidx-breadcrumb ol { display: flex; gap: .25rem; list-style: none; padding: 0; margin: 0 0 2rem; font-size: .8rem; color: var(--ink-soft, #8a8070); }
+  .behidx-breadcrumb a { color: var(--gold-500, #d4ae5a); text-decoration: none; }
+  .behidx-pillar { font-size: .72rem; letter-spacing: .12em; text-transform: uppercase; color: var(--gold-500, #d4ae5a); margin: 0 0 .4rem; }
+  .behidx-header h1 { font-family: 'Cormorant Garamond', serif; font-size: clamp(2rem, 5vw, 2.75rem); font-weight: 700; color: #fff; margin: 0 0 .75rem; }
+  .behidx-lead { font-size: 1rem; color: var(--ink-soft, #c0b89a); margin: 0 0 2.5rem; line-height: 1.65; }
+  .behidx-list { list-style: none; padding: 0; margin: 0; }
+  .behidx-item { border-bottom: 1px solid rgba(255,255,255,.07); }
+  .behidx-link { display: flex; flex-direction: column; gap: .2rem; padding: 1rem 0; text-decoration: none; color: inherit; }
+  .behidx-link:hover .behidx-title { color: var(--gold-500, #d4ae5a); }
+  .behidx-title { font-size: .97rem; color: #fff; }
+  .behidx-desc { font-size: .84rem; color: var(--ink-soft, #8a8070); }
+</style>

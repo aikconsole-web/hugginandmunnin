@@ -1,0 +1,154 @@
+---
+/**
+ * Comparison — Forest Raven vs Australian Raven
+ * CMP·10
+ * Primary keyword: forest raven vs australian raven
+ * Secondary: how to tell forest raven from australian raven, forest raven identification
+ */
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const title       = 'Forest Raven vs Australian Raven: How to Tell Them Apart';
+const description = 'Forest Raven and Australian Raven overlap in Tasmania and parts of southeast Australia. This page gives the key differences — size, call, throat hackle, wing-flicking — with a side-by-side comparison table.';
+const path        = '/compare/forest-raven-vs-australian-raven/';
+
+const breadcrumbs = [
+  { name: 'Home',    url: '/' },
+  { name: 'Compare', url: '/compare/' },
+  { name: 'Forest Raven vs Australian Raven', url: path },
+];
+
+const faq = [
+  { q: 'Which is bigger — Forest Raven or Australian Raven?', a: 'The Australian Raven is generally considered slightly larger, with a body length of about 52–53 cm compared to the Forest Raven\'s 50–53 cm. In practice the overlap in size means size alone is unreliable as a field mark — especially in Tasmania where both occur. The Australian Raven also has a heavier, deeper chest appearance.' },
+  { q: 'Can you identify Forest Raven and Australian Raven by their calls?', a: 'Yes — the calls are the most reliable separation in the field. The Australian Raven has a distinctive, prolonged, wailing "aah-aah-aaaah" (the last note drawn out and descending), earning it the nickname "the wailing raven." The Forest Raven gives a deeper, shorter "korr-korr-korr" that lacks the drawn-out wail. This call difference is consistent and identifiable with practice.' },
+  { q: 'Do Forest Raven and Australian Raven interbreed?', a: 'No interbreeding has been confirmed. Where the two species overlap in Tasmania and coastal Victoria, they maintain separate territories and appear to be reproductively isolated. Their ecological separation — Forest Raven preferring dense eucalypt forest and highland areas; Australian Raven preferring more open woodland and agricultural land — also helps limit contact.' },
+];
+---
+
+<BaseLayout title={title} description={description} path={path} ogType="article"
+  datePublished="2026-11-07" dateModified="2026-11-07"
+  breadcrumbs={breadcrumbs} faq={faq} pageType="Article">
+
+<article class="qa-page">
+
+  <nav class="qa-breadcrumb" aria-label="Breadcrumb">
+    <ol>
+      {breadcrumbs.map((b, i) => (
+        <li>
+          {i < breadcrumbs.length - 1
+            ? <><a href={b.url}>{b.name}</a><span aria-hidden="true"> › </span></>
+            : <span aria-current="page">{b.name}</span>}
+        </li>
+      ))}
+    </ol>
+  </nav>
+
+  <header class="qa-header">
+    <p class="qa-pillar">Compare · CMP·10</p>
+    <h1>Forest Raven vs Australian Raven: How to Tell Them Apart</h1>
+  </header>
+
+  <section class="qa-snippet" aria-label="Direct answer">
+    <p><strong class="claim-science">[science]</strong> The single most reliable field mark is the call: the Australian Raven gives a prolonged, wailing last note; the Forest Raven gives a shorter, deeper "korr." At rest, the Forest Raven has a comparatively shorter, rounder throat hackle and a stubbier bill. In Tasmania, where both species occur, voice is the go-to separation.</p>
+  </section>
+
+  <section class="qa-section">
+    <h2>Side-by-Side Comparison</h2>
+    <table>
+      <thead>
+        <tr><th>Feature</th><th>Forest Raven</th><th>Australian Raven</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Scientific name</td><td><em>Corvus tasmanicus</em></td><td><em>Corvus coronoides</em></td></tr>
+        <tr><td>Body length</td><td>50–53 cm</td><td>52–53 cm (slightly larger)</td></tr>
+        <tr><td>Call</td><td>Short, deep "korr-korr-korr"</td><td>Prolonged wailing "aah-aah-aaaah" (last note drawn out)</td></tr>
+        <tr><td>Throat hackle</td><td>Shorter, rounder; not strongly pointed</td><td>Long, pointed; often held erect</td></tr>
+        <tr><td>Bill</td><td>Shorter, less deeply curved</td><td>Heavier; more deeply arched</td></tr>
+        <tr><td>Eye colour</td><td>White (adult)</td><td>White (adult)</td></tr>
+        <tr><td>Habitat</td><td>Dense eucalypt forest, highland areas, Tasmania</td><td>Open woodland, farmland, suburbs — wider range</td></tr>
+        <tr><td>Range overlap</td><td>Tasmania; small areas of Victoria and NSW</td><td>SE Australia; widespread</td></tr>
+        <tr><td>IUCN status</td><td>Least Concern</td><td>Least Concern</td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section class="qa-section">
+    <h2>The Call — The Key to Separation</h2>
+    <p><strong class="claim-science">[science]</strong> Both species are large, all-black corvids with white eyes, making visual separation difficult, particularly in flight. The call is the most reliable character and can be used at distance.<sup><a href="#src-1">1</a></sup></p>
+    <p><strong>Australian Raven:</strong> The characteristic call is a wailing "aaah-aaah-aaaah," with the final syllable drawn out and descending in pitch — often described as mournful or "complaining." This wail is unique among Australian corvids and immediately separates it from the Forest Raven.</p>
+    <p><strong>Forest Raven:</strong> The call is a deep, short "korr" or "korr-korr-korr" — powerful and resonant, but lacking the drawn-out wail. It is similar in quality to a Common Raven call, reflecting the Forest Raven's status as the most "raven-like" of the Australian corvids.</p>
+  </section>
+
+  <section class="qa-section">
+    <h2>Plumage and Structure</h2>
+    <p><strong class="claim-science">[science]</strong> Both species are entirely glossy black with a blue-green and purple iridescence. Both have white irises as adults. Structural differences are subtle but useful when good views are obtained:<sup><a href="#src-1">1</a></sup><sup><a href="#src-2">2</a></sup></p>
+    <ul>
+      <li><strong>Throat hackle:</strong> the Australian Raven's hackle is notably long and pointed, often visible as a "beard" when held erect. The Forest Raven's hackle is shorter and less pointed.</li>
+      <li><strong>Bill:</strong> both have heavy corvid bills, but the Australian Raven's tends to be deeper and more strongly arched — a character easier to see in direct comparison than in isolation.</li>
+      <li><strong>Overall build:</strong> the Australian Raven tends to look heavier-bodied and longer-necked; the Forest Raven more compact.</li>
+    </ul>
+  </section>
+
+  <section class="qa-section">
+    <h2>Where They Overlap</h2>
+    <p><strong class="claim-science">[science]</strong> The Forest Raven is primarily a Tasmanian species, with small populations in coastal Victoria (around Wilson's Promontory) and northeast New South Wales. The Australian Raven is widespread across southeast Australia and also occurs in Tasmania. In Tasmania, the two species share the landscape but prefer different habitats: Forest Ravens favour dense, tall eucalypt forest and highland areas; Australian Ravens prefer more open woodland, farmland, and urban edges.<sup><a href="#src-1">1</a></sup></p>
+  </section>
+
+  <section class="qa-section">
+    <h2>Related Pages</h2>
+    <ul>
+      <li><a href="/species/forest-raven/">Forest Raven — species profile</a></li>
+      <li><a href="/species/australian-raven/">Australian Raven — species profile</a></li>
+      <li><a href="/compare/australian-raven-vs-little-raven/">Australian Raven vs Little Raven</a></li>
+      <li><a href="/compare/raven-vs-crow/">Raven vs Crow</a></li>
+    </ul>
+  </section>
+
+  <section class="qa-faq qa-section" aria-labelledby="faq-h2">
+    <h2 id="faq-h2">Frequently Asked Questions</h2>
+    {faq.map(item => (
+      <details class="qa-faq-item">
+        <summary class="qa-faq-q">{item.q}</summary>
+        <p class="qa-faq-a">{item.a}</p>
+      </details>
+    ))}
+  </section>
+
+  <section class="qa-sources qa-section" aria-labelledby="src-h2">
+    <h2 id="src-h2">Sources</h2>
+    <ol class="qa-src-list">
+      <li id="src-1">Higgins, P.J. (ed., 2002). <em>Handbook of Australian, New Zealand and Antarctic Birds</em> (HANZAB), vol. 7. Oxford University Press. — species accounts for Australian and Forest Ravens; calls, plumage, distribution.</li>
+      <li id="src-2">Morcombe, M. (2012). <em>Field Guide to Australian Birds</em>. Steve Parish Publishing. — field identification of Australian corvids.</li>
+    </ol>
+    <p class="qa-claim-note"><strong class="claim-science">[science]</strong> peer-reviewed study or field-guide data</p>
+  </section>
+
+</article>
+</BaseLayout>
+
+<style>
+  .qa-page { max-width: 820px; margin: 0 auto; padding: 2rem 1.25rem 4rem; color: var(--iron-ink, #e8e4d8); font-family: 'Inter', sans-serif; line-height: 1.72; }
+  .qa-breadcrumb ol { display: flex; flex-wrap: wrap; gap: .25rem; list-style: none; padding: 0; margin: 0 0 2rem; font-size: .8rem; color: var(--ink-soft, #8a8070); }
+  .qa-breadcrumb a { color: var(--gold-500, #d4ae5a); text-decoration: none; }
+  .qa-pillar { font-size: .72rem; letter-spacing: .12em; text-transform: uppercase; color: var(--gold-500, #d4ae5a); margin: 0 0 .4rem; }
+  .qa-page h1 { font-family: 'Cormorant Garamond', serif; font-size: clamp(2rem, 5vw, 3rem); font-weight: 700; color: #fff; margin: 0 0 2rem; line-height: 1.1; }
+  .qa-snippet { background: rgba(212,174,90,.08); border-left: 3px solid var(--gold-500, #d4ae5a); border-radius: 0 6px 6px 0; padding: 1rem 1.25rem; margin-bottom: 2.5rem; font-size: 1.03rem; }
+  .qa-section { margin-bottom: 2.5rem; }
+  .qa-section h2 { font-family: 'Cormorant Garamond', serif; font-size: 1.5rem; font-weight: 600; color: #fff; margin: 0 0 .9rem; border-bottom: 1px solid rgba(212,174,90,.2); padding-bottom: .4rem; }
+  .qa-section p { margin: 0 0 1rem; font-size: .97rem; }
+  .qa-section ul { padding-left: 1.25rem; margin: 0 0 1rem; }
+  .qa-section li { margin-bottom: .4rem; font-size: .95rem; }
+  .claim-science { color: #7ab9e0; font-style: normal; font-size: .78rem; }
+  a[href] { color: var(--gold-500, #d4ae5a); }
+  table { width: 100%; border-collapse: collapse; margin: 0 0 1.25rem; font-size: .9rem; }
+  th { text-align: left; padding: .5rem .75rem; background: rgba(212,174,90,.12); color: #d4ae5a; font-weight: 600; font-size: .78rem; letter-spacing: .08em; text-transform: uppercase; }
+  td { padding: .5rem .75rem; border-bottom: 1px solid rgba(255,255,255,.06); vertical-align: top; }
+  tr:last-child td { border-bottom: none; }
+  .qa-faq-item { border-bottom: 1px solid rgba(255,255,255,.07); }
+  .qa-faq-q { cursor: pointer; padding: .9rem 0; font-size: .97rem; font-weight: 500; color: #fff; list-style: none; }
+  .qa-faq-q::before { content: '+ '; color: var(--gold-500, #d4ae5a); font-weight: 700; }
+  details[open] .qa-faq-q::before { content: '− '; }
+  .qa-faq-a { margin: 0 0 1rem; line-height: 1.7; font-size: .93rem; color: var(--ink-soft, #c8c0b0); }
+  .qa-src-list { padding-left: 1.25rem; margin: 0 0 1rem; }
+  .qa-src-list li { margin-bottom: .6rem; font-size: .82rem; color: var(--ink-soft, #8a8070); line-height: 1.6; }
+  .qa-claim-note { font-size: .78rem; color: var(--ink-soft, #605848); border-top: 1px solid rgba(255,255,255,.06); padding-top: .75rem; }
+</style>

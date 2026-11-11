@@ -1,0 +1,155 @@
+---
+/**
+ * World Lore — Ravens in Shakespeare
+ * MYW·17
+ * Primary keyword: ravens in shakespeare
+ * Secondary: shakespeare raven symbolism, raven macbeth, shakespeare raven omen
+ */
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+
+const title       = 'Ravens in Shakespeare: Symbols of Doom and Omen';
+const description = 'Shakespeare uses the raven at key dramatic moments in Macbeth, Othello, Titus Andronicus, and other plays — always as a harbinger of death or malevolent fate. This page collects and analyses all major raven references in Shakespeare\'s works.';
+const path        = '/lore/world/ravens-in-shakespeare/';
+
+const breadcrumbs = [
+  { name: 'Home',       url: '/' },
+  { name: 'World Lore', url: '/lore/world/' },
+  { name: 'Ravens in Shakespeare', url: path },
+];
+
+const faq = [
+  { q: 'What does the raven symbolise in Macbeth?', a: 'In Macbeth Act I, scene v, Lady Macbeth says: "The raven himself is hoarse / That croaks the fatal entrance of Duncan / Under my battlements." The raven announces and portends murder — its croak a sign that death is coming to the castle. This draws on the deep folk tradition of the raven as a death omen, a battlefield scavenger whose presence signals bloodshed. Lady Macbeth invokes the raven as the bird of fate at the moment she steels herself to participate in regicide.' },
+  { q: 'Where else does Shakespeare use ravens?', a: 'Ravens appear in Othello, Titus Andronicus, As You Like It, 3 Henry VI, and other plays. In Othello (Act IV, scene i), Othello says: "O, it comes o\'er my memory, / As doth the raven o\'er the infected house." In Titus Andronicus (Act II, scene iii), a raven is part of the dark forest imagery associated with rape and murder. In each case, the raven is a signal of impending doom rather than a neutral bird.' },
+  { q: 'Did Shakespeare believe ravens were bad omens?', a: 'Whether Shakespeare personally believed in raven omens is not knowable. What is certain is that he used ravens as culturally legible symbols of death and ill-fortune, drawing on beliefs that were widespread in Elizabethan England. The audience would have understood the raven reference immediately without explanation — it was part of the shared symbolic vocabulary of the time, drawing on medieval, biblical, and classical traditions all associating ravens with death, prophecy, and misfortune.' },
+];
+---
+
+<BaseLayout title={title} description={description} path={path} ogType="article"
+  datePublished="2026-11-07" dateModified="2026-11-07"
+  breadcrumbs={breadcrumbs} faq={faq} pageType="Article">
+
+<article class="qa-page">
+
+  <nav class="qa-breadcrumb" aria-label="Breadcrumb">
+    <ol>
+      {breadcrumbs.map((b, i) => (
+        <li>
+          {i < breadcrumbs.length - 1
+            ? <><a href={b.url}>{b.name}</a><span aria-hidden="true"> › </span></>
+            : <span aria-current="page">{b.name}</span>}
+        </li>
+      ))}
+    </ol>
+  </nav>
+
+  <header class="qa-header">
+    <p class="qa-pillar">World Lore · MYW·17</p>
+    <h1>Ravens in Shakespeare: Symbols of Doom and Omen</h1>
+  </header>
+
+  <section class="qa-snippet" aria-label="Direct answer">
+    <p><strong class="claim-lore">[lore]</strong> Shakespeare uses the raven consistently as a symbol of death, doom, and ill omen — most memorably in Lady Macbeth's speech invoking "the raven himself" as the croaker of Duncan's fatal entrance. The raven also appears in Othello, Titus Andronicus, and other plays, always in contexts of darkness, murder, or portent. Shakespeare drew on a centuries-old tradition in English and European culture linking the raven to death and prophecy.</p>
+  </section>
+
+  <section class="qa-section">
+    <h2>The Raven in Macbeth</h2>
+    <p><strong class="claim-lore">[lore]</strong> The most famous raven reference in Shakespeare occurs in <em>Macbeth</em> (c. 1606), Act I, scene v, in Lady Macbeth's soliloquy on reading her husband's letter about the witches' prophecy:<sup><a href="#src-1">1</a></sup></p>
+    <blockquote>
+      <p>"The raven himself is hoarse<br>
+      That croaks the fatal entrance of Duncan<br>
+      Under my battlements. Come, you spirits<br>
+      That tend on mortal thoughts, unsex me here…"</p>
+    </blockquote>
+    <p>The raven, whose croak is traditionally an omen of death, is here imagined as the herald of Duncan's murder — a croaking death-announcement at the castle gate. That the raven himself is "hoarse" (nearly speechless from so much croaking) is a grimly ironic intensification: even the death-bird is exhausted by the scale of what is coming.</p>
+    <p>Lady Macbeth immediately follows the raven reference with an invocation of dark spirits — the raven acts as a symbolic gateway between the natural and supernatural realms, between normal time and the fatal act she is about to commit.</p>
+  </section>
+
+  <section class="qa-section">
+    <h2>The Raven in Othello</h2>
+    <p><strong class="claim-lore">[lore]</strong> In <em>Othello</em> (c. 1603), Act IV, scene i, Othello expresses his jealousy through the image of the raven:<sup><a href="#src-1">1</a></sup></p>
+    <blockquote>
+      <p>"O, it comes o'er my memory,<br>
+      As doth the raven o'er the infected house,<br>
+      Boding to all…"</p>
+    </blockquote>
+    <p>The raven "o'er the infected house" draws on the folk belief that ravens could detect death and disease and gathered above buildings where people were dying — a belief with some empirical basis given the raven's real sensitivity to carrion. For Othello, the raven of jealousy-fuelled suspicion circles over his mind as death circles over a plague house.</p>
+  </section>
+
+  <section class="qa-section">
+    <h2>Ravens in Titus Andronicus</h2>
+    <p><strong class="claim-lore">[lore]</strong> In <em>Titus Andronicus</em> (c. 1592), Act II, scene iii, the dark forest setting is evoked partly through its raven inhabitants — birds whose presence signals the malevolent, death-saturated nature of the place. The play's relentlessly dark imagery uses the raven as one element among many in its atmosphere of impending horror.<sup><a href="#src-1">1</a></sup></p>
+  </section>
+
+  <section class="qa-section">
+    <h2>Other Raven References</h2>
+    <p><strong class="claim-lore">[lore]</strong> Ravens appear in several other Shakespeare plays:<sup><a href="#src-2">2</a></sup></p>
+    <ul>
+      <li><em>3 Henry VI</em> (Act V, scene vi): "The night-crow cried, aboding luckless time" — a broader cluster of dark-bird omens including raven-like figures.</li>
+      <li><em>As You Like It</em> (Act II, scene v): "Ravens feed their young" — a less ominous citation drawing on the biblical tradition of the raven as a bird under divine care.</li>
+      <li><em>The Merchant of Venice</em> references "the woeful croaking of the raven" as a portent — in a list of evil omens.</li>
+    </ul>
+    <p>The pattern is consistent: when Shakespeare needs an image of death-portent or dark fate, the raven is a reliable choice, understood by his audience through a shared symbolic vocabulary rooted in classical, biblical, and folk tradition.</p>
+  </section>
+
+  <section class="qa-section">
+    <h2>The Tradition Shakespeare Drew On</h2>
+    <p><strong class="claim-lore">[lore]</strong> Shakespeare's raven symbolism is not original — it draws on a tradition stretching back through medieval English literature (where ravens appear in battle-poetry as "beasts of battle"), through classical sources (Homer's ravens, Ovid's white-raven-turned-black story), and through biblical uses of the raven as an unclean scavenger and divine messenger. By Shakespeare's time, the raven-as-death-omen was a commonplace of English culture, reinforced by observation of the bird's real behaviour at battlefields and carcasses. See <a href="/lore/world/raven-symbolism/">Raven symbolism across cultures</a>.</p>
+  </section>
+
+  <section class="qa-section">
+    <h2>Related Pages</h2>
+    <ul>
+      <li><a href="/lore/world/raven-symbolism/">Raven symbolism across cultures</a></li>
+      <li><a href="/questions/why-are-ravens-associated-with-death/">Why are ravens associated with death?</a></li>
+      <li><a href="/lore/world/edgar-allan-poe-the-raven/">Edgar Allan Poe — The Raven</a></li>
+      <li><a href="/lore/world/ravens-in-the-bible/">Ravens in the Bible</a></li>
+    </ul>
+  </section>
+
+  <section class="qa-faq qa-section" aria-labelledby="faq-h2">
+    <h2 id="faq-h2">Frequently Asked Questions</h2>
+    {faq.map(item => (
+      <details class="qa-faq-item">
+        <summary class="qa-faq-q">{item.q}</summary>
+        <p class="qa-faq-a">{item.a}</p>
+      </details>
+    ))}
+  </section>
+
+  <section class="qa-sources qa-section" aria-labelledby="src-h2">
+    <h2 id="src-h2">Sources</h2>
+    <ol class="qa-src-list">
+      <li id="src-1">Shakespeare, W. (various dates). Complete Works, ed. S. Wells & G. Taylor (2005). Oxford University Press. — Macbeth I.v; Othello IV.i; Titus Andronicus II.iii.</li>
+      <li id="src-2">Muir, K. (1951). The uncomic pun. <em>Cambridge Journal</em> — raven symbolism in Macbeth; Elizabethan bird-omen conventions.</li>
+    </ol>
+    <p class="qa-claim-note"><strong class="claim-lore">[lore]</strong> named cultural/historical source</p>
+  </section>
+
+</article>
+</BaseLayout>
+
+<style>
+  .qa-page { max-width: 820px; margin: 0 auto; padding: 2rem 1.25rem 4rem; color: var(--iron-ink, #e8e4d8); font-family: 'Inter', sans-serif; line-height: 1.72; }
+  .qa-breadcrumb ol { display: flex; flex-wrap: wrap; gap: .25rem; list-style: none; padding: 0; margin: 0 0 2rem; font-size: .8rem; color: var(--ink-soft, #8a8070); }
+  .qa-breadcrumb a { color: var(--gold-500, #d4ae5a); text-decoration: none; }
+  .qa-pillar { font-size: .72rem; letter-spacing: .12em; text-transform: uppercase; color: var(--gold-500, #d4ae5a); margin: 0 0 .4rem; }
+  .qa-page h1 { font-family: 'Cormorant Garamond', serif; font-size: clamp(2rem, 5vw, 3rem); font-weight: 700; color: #fff; margin: 0 0 2rem; line-height: 1.1; }
+  .qa-snippet { background: rgba(212,174,90,.08); border-left: 3px solid var(--gold-500, #d4ae5a); border-radius: 0 6px 6px 0; padding: 1rem 1.25rem; margin-bottom: 2.5rem; font-size: 1.03rem; }
+  .qa-section { margin-bottom: 2.5rem; }
+  .qa-section h2 { font-family: 'Cormorant Garamond', serif; font-size: 1.5rem; font-weight: 600; color: #fff; margin: 0 0 .9rem; border-bottom: 1px solid rgba(212,174,90,.2); padding-bottom: .4rem; }
+  .qa-section p, blockquote p { margin: 0 0 1rem; font-size: .97rem; }
+  .qa-section ul { padding-left: 1.25rem; margin: 0 0 1rem; }
+  .qa-section li { margin-bottom: .4rem; font-size: .95rem; }
+  blockquote { border-left: 3px solid rgba(212,174,90,.35); margin: 0 0 1.25rem; padding: .5rem 1rem; background: rgba(255,255,255,.03); }
+  blockquote p { font-style: italic; color: var(--ink-soft, #c8c0b0); }
+  .claim-lore { color: #c4a26a; font-style: normal; font-size: .78rem; }
+  a[href] { color: var(--gold-500, #d4ae5a); }
+  .qa-faq-item { border-bottom: 1px solid rgba(255,255,255,.07); }
+  .qa-faq-q { cursor: pointer; padding: .9rem 0; font-size: .97rem; font-weight: 500; color: #fff; list-style: none; }
+  .qa-faq-q::before { content: '+ '; color: var(--gold-500, #d4ae5a); font-weight: 700; }
+  details[open] .qa-faq-q::before { content: '− '; }
+  .qa-faq-a { margin: 0 0 1rem; line-height: 1.7; font-size: .93rem; color: var(--ink-soft, #c8c0b0); }
+  .qa-src-list { padding-left: 1.25rem; margin: 0 0 1rem; }
+  .qa-src-list li { margin-bottom: .6rem; font-size: .82rem; color: var(--ink-soft, #8a8070); line-height: 1.6; }
+  .qa-claim-note { font-size: .78rem; color: var(--ink-soft, #605848); border-top: 1px solid rgba(255,255,255,.06); padding-top: .75rem; }
+</style>

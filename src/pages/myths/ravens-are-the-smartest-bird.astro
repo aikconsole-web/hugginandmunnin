@@ -1,0 +1,157 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const title       = 'Are Ravens the Smartest Bird? — The Myth vs the Evidence';
+const description = 'Ravens are among the most cognitively advanced birds, but "smartest bird" is a simplification. This page examines what intelligence means in birds and how ravens compare.';
+const path        = '/myths/ravens-are-the-smartest-bird/';
+
+const breadcrumbs = [
+  { name: 'Home',   url: '/' },
+  { name: 'Myths',  url: '/myths/' },
+  { name: 'Are Ravens the Smartest Bird?', url: path },
+];
+
+const faq = [
+  { q: 'Are ravens the smartest birds?', a: 'Ravens are among the cognitively most advanced birds, but "smartest bird" is a problematic claim. New Caledonian Crows excel at tool use; African Grey Parrots show strong referential communication; ravens lead on certain planning and social cognition tasks. No single species is best at all cognitive tasks, and intelligence is not a single dimension.' },
+  { q: 'Are ravens smarter than parrots?', a: 'Ravens and parrots (particularly African Greys and keas) are cognitively comparable but differently specialised. Ravens excel at social cognition, planning, and cache protection. African Greys show stronger referential communication. Keas show flexible problem-solving. Neither is simply "smarter."' },
+  { q: 'Are ravens smarter than dogs?', a: 'Ravens outperform dogs on most tasks involving physical causality, planning for the future, and certain social cognition tasks. Dogs outperform ravens on tasks involving reading human communicative cues (pointing, gaze direction). The comparison depends entirely on the task.' },
+];
+---
+
+<BaseLayout title={title} description={description} path={path} ogType="article"
+  datePublished="2026-11-07" dateModified="2026-11-07"
+  breadcrumbs={breadcrumbs} faq={faq} pageType="Article">
+
+<article class="myth-page">
+  <nav class="myth-breadcrumb" aria-label="Breadcrumb">
+    <ol>
+      {breadcrumbs.map((b, i) => (
+        <li>
+          {i < breadcrumbs.length - 1
+            ? <><a href={b.url}>{b.name}</a><span aria-hidden="true"> › </span></>
+            : <span aria-current="page">{b.name}</span>}
+        </li>
+      ))}
+    </ol>
+  </nav>
+  <header class="myth-header">
+    <p class="myth-pillar">Myth Check · MYTH·06</p>
+    <h1>Are Ravens the Smartest Bird?</h1>
+    <p class="myth-subtitle">Verdict: <strong class="verdict-partial">Partly True</strong> — ravens are exceptional, but "smartest" is not a valid category</p>
+  </header>
+
+  <section class="myth-snippet" aria-label="Quick answer">
+    <p><strong class="claim-science">[science]</strong> Ravens are among the cognitively most sophisticated birds studied. A 2017 study (Kabadayi &amp; Osvath) found ravens match or exceed great apes on certain planning tasks. However, New Caledonian Crows surpass ravens at tool use; African Grey Parrots show stronger referential communication; keas show comparable flexible problem-solving. Intelligence is multi-dimensional — there is no single metric on which a "smartest bird" can be identified.</p>
+  </section>
+
+  <section class="myth-section">
+    <h2>What Ravens Are Genuinely Exceptional At</h2>
+    <p><strong class="claim-science">[science]</strong> The experimental evidence for raven cognitive ability is substantial:</p>
+    <ul>
+      <li><strong>Future planning:</strong> Kabadayi &amp; Osvath (2017) used the same test previously used on great apes. Ravens selected a tool for future use, trading away an immediate reward for a tool they could use 15 minutes later to get a larger reward. They performed at or above chimpanzee and orangutan level.<sup><a href="#src-1">1</a></sup></li>
+      <li><strong>Social cognition:</strong> Ravens track the knowledge states of others, perform deceptive cache protection, recognise individual social partners, and engage in reciprocal cooperation (Bugnyar &amp; Heinrich 2005; Massen et al. 2015).</li>
+      <li><strong>Theory of mind components:</strong> The peephole experiment (Bugnyar et al. 2016) showed ravens behave as if attributing visual access to unseen others — a component of theory of mind previously thought to be restricted to humans and great apes.<sup><a href="#src-2">2</a></sup></li>
+      <li><strong>Causal reasoning:</strong> Ravens understand some physical causal relationships and can solve multi-step physical problems.<sup><a href="#src-3">3</a></sup></li>
+    </ul>
+  </section>
+
+  <section class="myth-section">
+    <h2>Where Ravens Are Not the Best</h2>
+    <p><strong class="claim-science">[science]</strong> Several species surpass ravens in specific cognitive domains:</p>
+    <ul>
+      <li><strong>Tool manufacture:</strong> New Caledonian Crows (<em>Corvus moneduloides</em>) manufacture and modify tools in the wild — cutting hooks from plant material — something no raven population does habitually. In multi-step tool use experiments, New Caledonian Crows outperform ravens.<sup><a href="#src-4">4</a></sup></li>
+      <li><strong>Referential communication:</strong> African Grey Parrots (particularly Alex, studied by Irene Pepperberg) demonstrated referential use of abstract concepts (colour, shape, number) at levels not documented in ravens.</li>
+      <li><strong>Human communicative cues:</strong> Dogs (<em>Canis lupus familiaris</em>) outperform ravens (and great apes) on tasks requiring them to read human pointing and gaze direction — a specialisation that developed under domestication.</li>
+    </ul>
+  </section>
+
+  <section class="myth-section">
+    <h2>The Brain Behind It</h2>
+    <p><strong class="claim-science">[science]</strong> Ravens have one of the highest brain-to-body ratios of any bird. However, bird brains differ structurally from mammal brains — ravens lack a neocortex (the mammalian structure associated with complex cognition) and instead use the nidopallium caudolaterale, which serves analogous functions through convergent evolution. The 2005 Avian Brain Nomenclature Consortium revised avian brain nomenclature precisely to reflect this — the pallial areas of bird brains are functionally comparable to mammalian neocortex despite very different structure.<sup><a href="#src-5">5</a></sup></p>
+  </section>
+
+  <section class="myth-section">
+    <h2>Why "Smartest Bird" Is Not a Useful Claim</h2>
+    <p>Intelligence is not a single dimension. It is a cluster of distinct cognitive abilities that evolved in response to specific ecological challenges:</p>
+    <ul>
+      <li>Social intelligence (tracking others, deception, cooperation) — ravens and other corvids excel</li>
+      <li>Tool manufacture — New Caledonian Crows excel</li>
+      <li>Referential communication — African Grey Parrots excel</li>
+      <li>Spatial memory — Clark's Nutcrackers cache 30,000+ pine seeds annually with exceptional retrieval rates</li>
+      <li>Numerical cognition — several corvids, parrots, and pigeons show comparable abilities</li>
+    </ul>
+    <p>Asking which bird is "smartest" is like asking which professional athlete is best at all sports simultaneously. The question does not have a coherent answer.</p>
+  </section>
+
+  <section class="myth-verdict myth-section">
+    <h2>Verdict</h2>
+    <p><strong>Partly True.</strong> Ravens are exceptionally cognitively capable — among the most sophisticated birds studied, with documented abilities in planning, social cognition, and theory-of-mind components that match or exceed great apes on specific tasks. The claim becomes false when it implies ravens are ranked above all other birds on a single intelligence scale — no such scale exists, and other species surpass ravens in specific domains.</p>
+  </section>
+
+  <section class="myth-section">
+    <h2>Related Pages</h2>
+    <ul>
+      <li><a href="/questions/how-smart-are-ravens/">How smart are ravens?</a></li>
+      <li><a href="/questions/raven-vs-crow-intelligence/">Are ravens smarter than crows?</a></li>
+      <li><a href="/behaviour/raven-intelligence/">Raven intelligence — full chapter</a></li>
+    </ul>
+  </section>
+
+  <section class="myth-faq myth-section" aria-labelledby="faq-h2">
+    <h2 id="faq-h2">Frequently Asked Questions</h2>
+    {faq.map(item => (
+      <details class="myth-faq-item">
+        <summary class="myth-faq-q">{item.q}</summary>
+        <p class="myth-faq-a">{item.a}</p>
+      </details>
+    ))}
+  </section>
+
+  <section class="myth-sources myth-section" aria-labelledby="src-h2">
+    <h2 id="src-h2">Sources</h2>
+    <ol class="myth-src-list">
+      <li id="src-1">Kabadayi, C. &amp; Osvath, M. (2017). Ravens parallel great apes in flexible planning for tool-use and bartering. <em>Science</em> 357, 202–204. DOI: 10.1126/science.aam8138 — planning and future-oriented cognition.</li>
+      <li id="src-2">Bugnyar, T., Reber, S.A. &amp; Buckner, C. (2016). Ravens attribute visual access to unseen competitors. <em>Nature Communications</em> 7, 10506. DOI: 10.1038/ncomms10506 — theory of mind components.</li>
+      <li id="src-3">Heinrich, B. (2000). <em>Mind of the Raven</em>. HarperCollins. — causal reasoning, problem-solving, and cognitive overview.</li>
+      <li id="src-4">Taylor, A.H. et al. (2010). New Caledonian crows reason about hidden causal agents. <em>PNAS</em> 107(37), 16381–16386. DOI: 10.1073/pnas.1005429107 — NCC tool use and causal reasoning.</li>
+      <li id="src-5">Jarvis, E.D. et al. (2005). Avian brains and a new understanding of vertebrate brain evolution. <em>Nature Reviews Neuroscience</em> 6, 151–159. DOI: 10.1038/nrn1606 — revised avian brain nomenclature and convergent evolution of pallial cognition.</li>
+    </ol>
+    <p class="myth-claim-note"><strong class="claim-science">[science]</strong> peer-reviewed studies</p>
+  </section>
+
+  <nav class="myth-nav-bottom">
+    <a href="/myths/ravens-remember-faces/" class="myth-back">← Do Ravens Remember Faces?</a>
+    <a href="/myths/" class="myth-next">All Myth Checks →</a>
+  </nav>
+</article>
+</BaseLayout>
+
+<style>
+  .myth-page { max-width: 820px; margin: 0 auto; padding: 2rem 1.25rem 4rem; color: var(--iron-ink, #e8e4d8); font-family: 'Inter', sans-serif; line-height: 1.72; }
+  .myth-breadcrumb ol { display: flex; flex-wrap: wrap; gap: .25rem; list-style: none; padding: 0; margin: 0 0 2rem; font-size: .8rem; color: var(--ink-soft, #8a8070); }
+  .myth-breadcrumb a { color: var(--gold-500, #d4ae5a); text-decoration: none; }
+  .myth-pillar { font-size: .72rem; letter-spacing: .12em; text-transform: uppercase; color: var(--gold-500, #d4ae5a); margin: 0 0 .4rem; }
+  .myth-page h1 { font-family: 'Cormorant Garamond', serif; font-size: clamp(2rem, 5vw, 3.25rem); font-weight: 700; color: #fff; margin: 0 0 .4rem; line-height: 1.1; }
+  .myth-subtitle { font-size: 1rem; color: var(--ink-soft, #c0b89a); margin: 0 0 2rem; }
+  .verdict-partial { color: #d4ae5a; }
+  .myth-snippet { background: rgba(212,174,90,.08); border-left: 3px solid var(--gold-500, #d4ae5a); border-radius: 0 6px 6px 0; padding: 1rem 1.25rem; margin-bottom: 2.5rem; font-size: 1.03rem; }
+  .myth-section { margin-bottom: 2.75rem; }
+  .myth-section h2 { font-family: 'Cormorant Garamond', serif; font-size: 1.6rem; font-weight: 600; color: #fff; margin: 0 0 1rem; border-bottom: 1px solid rgba(212,174,90,.2); padding-bottom: .4rem; }
+  .myth-section p { margin: 0 0 1rem; font-size: .97rem; }
+  .myth-section ul { padding-left: 1.25rem; margin: 0 0 1rem; }
+  .myth-section li { margin-bottom: .5rem; font-size: .95rem; }
+  .myth-verdict { background: rgba(212,174,90,.06); border: 1px solid rgba(212,174,90,.2); border-radius: 8px; padding: 1.25rem 1.5rem; }
+  .claim-science { color: #7ab9e0; font-style: normal; font-size: .78rem; }
+  a[href] { color: var(--gold-500, #d4ae5a); }
+  .myth-faq-item { border-bottom: 1px solid rgba(255,255,255,.07); }
+  .myth-faq-q { cursor: pointer; padding: .9rem 0; font-size: .97rem; font-weight: 500; color: #fff; list-style: none; }
+  .myth-faq-q::before { content: '+ '; color: var(--gold-500, #d4ae5a); font-weight: 700; }
+  details[open] .myth-faq-q::before { content: '− '; }
+  .myth-faq-a { margin: 0 0 1rem; line-height: 1.7; font-size: .93rem; color: var(--ink-soft, #c8c0b0); }
+  .myth-src-list { padding-left: 1.25rem; margin: 0 0 1rem; }
+  .myth-src-list li { margin-bottom: .6rem; font-size: .82rem; color: var(--ink-soft, #8a8070); line-height: 1.6; }
+  .myth-claim-note { font-size: .78rem; color: var(--ink-soft, #605848); border-top: 1px solid rgba(255,255,255,.06); padding-top: .75rem; }
+  .myth-nav-bottom { display: flex; justify-content: space-between; padding-top: 2rem; border-top: 1px solid rgba(255,255,255,.07); }
+  .myth-nav-bottom a { font-size: .9rem; text-decoration: none; }
+  .myth-nav-bottom a:hover { text-decoration: underline; }
+</style>

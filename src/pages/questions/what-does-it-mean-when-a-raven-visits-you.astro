@@ -1,0 +1,143 @@
+---
+/**
+ * Q&A — What does it mean when a raven visits you?
+ * Primary keyword: what does it mean when a raven visits you
+ * Secondary: raven visiting meaning, raven at window meaning, raven omen
+ */
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const title       = 'What Does It Mean When a Raven Visits You? Omens, Symbolism, and Ecology';
+const description = 'A raven visiting your property or approaching you closely has very different meanings depending on whether you approach it scientifically, through traditional folklore, or via modern spiritual interpretation. This page examines all three perspectives honestly.';
+const path        = '/questions/what-does-it-mean-when-a-raven-visits-you/';
+
+const breadcrumbs = [
+  { name: 'Home',      url: '/' },
+  { name: 'Questions', url: '/questions/' },
+  { name: 'What Does It Mean When a Raven Visits You?', url: path },
+];
+
+const faq = [
+  { q: 'Is a raven visiting your house a bad omen?', a: 'In Western folk tradition, a raven landing on a roof, perching at a window, or repeatedly visiting a house was widely interpreted as a death omen — a warning that someone in the household would soon die. This tradition is documented across British, Irish, and continental European folklore and is reflected in Poe\'s "The Raven". However, the same behaviour in other cultural traditions (Norse, Pacific Northwest Indigenous) would be interpreted positively — as a sign of Odin\'s attention or Raven\'s companionship. Scientifically, a raven visiting a house likely reflects habituation to humans, opportunistic food-seeking, or territorial exploration.' },
+  { q: 'Why would a raven come up to you?', a: 'Ravens approach humans for several practical reasons: they may associate humans with food (at parks, campgrounds, or waste sites where they have been fed); they may be young, recently-fledged birds less experienced with the appropriate flight distance from humans; or they may be unusually bold individuals. Wild ravens in areas with high human density (urban areas, national parks, tourist sites) often become remarkably habituated and will approach closely for food. A raven approaching you in a genuinely wild area is unusual and may indicate the bird is ill or habituated to humans through previous contact.' },
+  { q: 'What does a raven symbolise spiritually?', a: 'In spiritual and metaphysical frameworks, the raven is frequently associated with: transformation and change (the raven as a herald of significant transitions); hidden knowledge and wisdom (the raven as a guide to unseen truths, connecting to Odin\'s ravens as instruments of omniscience); death and rebirth (the raven at the threshold between life and death, as in Celtic tradition); and trickery and creativity (the Trickster-Raven of Pacific Northwest and Siberian traditions who creates through deception and cunning). What a raven "means" spiritually to a specific person depends entirely on which tradition they engage with and their personal relationship with the bird.' },
+];
+---
+
+<BaseLayout title={title} description={description} path={path} ogType="article"
+  datePublished="2026-11-08" dateModified="2026-11-08"
+  breadcrumbs={breadcrumbs} faq={faq} pageType="Article">
+
+<article class="qa-page">
+
+  <nav class="qa-breadcrumb" aria-label="Breadcrumb">
+    <ol>
+      {breadcrumbs.map((b, i) => (
+        <li>
+          {i < breadcrumbs.length - 1
+            ? <><a href={b.url}>{b.name}</a><span aria-hidden="true"> › </span></>
+            : <span aria-current="page">{b.name}</span>}
+        </li>
+      ))}
+    </ol>
+  </nav>
+
+  <header class="qa-header">
+    <p class="qa-pillar">Question · Lore</p>
+    <h1>What Does It Mean When a Raven Visits You? Omens, Symbolism, and Ecology</h1>
+  </header>
+
+  <section class="qa-snippet" aria-label="Direct answer">
+    <p><strong class="claim-lore">[lore]</strong> No single universal meaning exists for a raven visiting a person or property. Western folk tradition reads it as a death omen; Norse tradition as a sign of Odin's attention; Pacific Northwest tradition as a Trickster encounter; ecologically, as food-seeking or habituated boldness. The meaning — if any is sought — depends entirely on which interpretive framework you bring to the encounter.</p>
+  </section>
+
+  <section class="qa-section">
+    <h2>The Ecological Explanation</h2>
+    <p><strong class="claim-science">[science]</strong> Before considering symbolism, the ecological reasons a raven might visit a person or property:</p>
+    <ul>
+      <li><strong>Food association:</strong> ravens in areas frequented by humans often associate human presence with food — garbage, compost, pet food, birdfeeders, or deliberate feeding. A raven approaching a house or person is frequently seeking food it has previously found in that location.</li>
+      <li><strong>Territorial mapping:</strong> ravens explore and regularly patrol their home range; a raven "visiting" a property may simply be conducting normal territorial reconnaissance.</li>
+      <li><strong>Habituation:</strong> ravens in national parks, tourist areas, and human-dense environments become remarkably habituated. Such birds lose appropriate flight distance and may approach closely with no supernatural significance whatsoever.</li>
+      <li><strong>Young birds:</strong> recently fledged juveniles are more exploratory and less cautious than adults. An unusually close raven may be a young bird that hasn't yet calibrated its wariness toward humans.</li>
+    </ul>
+  </section>
+
+  <section class="qa-section">
+    <h2>Western Folk Tradition: The Death Omen</h2>
+    <p><strong class="claim-lore">[lore]</strong> In British, Irish, and continental European folk tradition, a raven landing on a house, calling persistently near a window, or following an individual was among the most feared omens — a herald of imminent death or serious misfortune.<sup><a href="#src-1">1</a></sup></p>
+    <p>The omen tradition was strongest when:</p>
+    <ul>
+      <li>The raven appeared near a sick person's dwelling.</li>
+      <li>The raven called persistently and would not be driven away.</li>
+      <li>The raven appeared on the roof or at a window — liminal spaces between inside and outside, life and death.</li>
+    </ul>
+    <p>This tradition is reflected in Poe's "The Raven" (1845), where the bird's repeated "Nevermore" at the narrator's chamber door is a death-omen visit to a grieving man — and in the common European raven proverb "when ravens gather, death is near" (reflecting the birds' genuine habit of aggregating at carcasses).</p>
+  </section>
+
+  <section class="qa-section">
+    <h2>Norse and Germanic Tradition: Odin's Messenger</h2>
+    <p><strong class="claim-lore">[lore]</strong> In Norse tradition, a raven approaching a person or observing them closely could be interpreted as one of Odin's ravens — Huginn (Thought) or Muninn (Memory) — gathering information on behalf of the All-Father. This is not a death omen but a sign of divine attention: the god is watching, through his birds.<sup><a href="#src-1">1</a></sup></p>
+    <p>A raven visiting a Norse warrior before battle was potentially interpreted as Odin acknowledging that warrior — potentially choosing him for valour or for death in his service. The ambiguity of this interpretation (is the god watching to protect or to claim?) mirrors the broader Norse relationship with Odin: a god to be respected, propitiated, and whose attention is not entirely comfortable.</p>
+  </section>
+
+  <section class="qa-section">
+    <h2>Pacific Northwest and Modern Spiritual Interpretation</h2>
+    <p><strong class="claim-lore">[lore]</strong> In Pacific Northwest Indigenous traditions, a close encounter with Raven may be interpreted as an encounter with the Trickster-Creator — an invitation to change perspective, to notice what has been hidden, or to expect the unexpected. Raven encounters are not ominous in this framework but significant — the Trickster arrives when the world is about to shift.<sup><a href="#src-1">1</a></sup></p>
+    <p>Modern spiritual frameworks — drawing eclectically from multiple traditions — often assign the raven as a "power animal" or "totem" associated with transformation, inner wisdom, and magic. A raven visit in this framework is typically read as a prompt to introspection or as confirmation that the person is engaged in meaningful transformation.</p>
+    <p>As with all omen interpretation: the meaning depends on the framework, and the framework depends on what the person brings to the encounter. The raven provides no meaning by itself — it is a large, intelligent, opportunistic bird investigating a potential food source or mapping its territory. The meaning is constructed by the observer.</p>
+  </section>
+
+  <section class="qa-section">
+    <h2>Related Pages</h2>
+    <ul>
+      <li><a href="/questions/what-does-a-raven-symbolise/">What does a raven symbolise?</a></li>
+      <li><a href="/questions/are-ravens-good-or-bad-omens/">Are ravens good or bad omens?</a></li>
+      <li><a href="/myths/ravens-bring-death/">Myth: Ravens bring death</a></li>
+      <li><a href="/lore/norse/huginn-and-muninn/">Huginn and Muninn</a></li>
+    </ul>
+  </section>
+
+  <section class="qa-faq qa-section" aria-labelledby="faq-h2">
+    <h2 id="faq-h2">Frequently Asked Questions</h2>
+    {faq.map(item => (
+      <details class="qa-faq-item">
+        <summary class="qa-faq-q">{item.q}</summary>
+        <p class="qa-faq-a">{item.a}</p>
+      </details>
+    ))}
+  </section>
+
+  <section class="qa-sources qa-section" aria-labelledby="src-h2">
+    <h2 id="src-h2">Sources</h2>
+    <ol class="qa-src-list">
+      <li id="src-1">Sax, B. (2003). <em>Crow</em>. Reaktion Books Animal series. — raven omen traditions across Western, Norse, and Indigenous cultures; death-omen folklore; Odin's ravens; Trickster-Raven symbolism.</li>
+    </ol>
+    <p class="qa-claim-note"><strong class="claim-lore">[lore]</strong> named cultural/historical source</p>
+  </section>
+
+</article>
+</BaseLayout>
+
+<style>
+  .qa-page { max-width: 820px; margin: 0 auto; padding: 2rem 1.25rem 4rem; color: var(--iron-ink, #e8e4d8); font-family: 'Inter', sans-serif; line-height: 1.72; }
+  .qa-breadcrumb ol { display: flex; flex-wrap: wrap; gap: .25rem; list-style: none; padding: 0; margin: 0 0 2rem; font-size: .8rem; color: var(--ink-soft, #8a8070); }
+  .qa-breadcrumb a { color: var(--gold-500, #d4ae5a); text-decoration: none; }
+  .qa-pillar { font-size: .72rem; letter-spacing: .12em; text-transform: uppercase; color: var(--gold-500, #d4ae5a); margin: 0 0 .4rem; }
+  .qa-page h1 { font-family: 'Cormorant Garamond', serif; font-size: clamp(2rem, 5vw, 3rem); font-weight: 700; color: #fff; margin: 0 0 2rem; line-height: 1.1; }
+  .qa-snippet { background: rgba(212,174,90,.08); border-left: 3px solid var(--gold-500, #d4ae5a); border-radius: 0 6px 6px 0; padding: 1rem 1.25rem; margin-bottom: 2.5rem; font-size: 1.03rem; }
+  .qa-section { margin-bottom: 2.5rem; }
+  .qa-section h2 { font-family: 'Cormorant Garamond', serif; font-size: 1.5rem; font-weight: 600; color: #fff; margin: 0 0 .9rem; border-bottom: 1px solid rgba(212,174,90,.2); padding-bottom: .4rem; }
+  .qa-section p { margin: 0 0 1rem; font-size: .97rem; }
+  .qa-section ul { padding-left: 1.25rem; margin: 0 0 1rem; }
+  .qa-section li { margin-bottom: .4rem; font-size: .95rem; }
+  .claim-science { color: #7ab9e0; font-style: normal; font-size: .78rem; }
+  .claim-lore { color: #c49a3c; font-style: normal; font-size: .78rem; }
+  a[href] { color: var(--gold-500, #d4ae5a); }
+  .qa-faq-item { border-bottom: 1px solid rgba(255,255,255,.07); }
+  .qa-faq-q { cursor: pointer; padding: .9rem 0; font-size: .97rem; font-weight: 500; color: #fff; list-style: none; }
+  .qa-faq-q::before { content: '+ '; color: var(--gold-500, #d4ae5a); font-weight: 700; }
+  details[open] .qa-faq-q::before { content: '− '; }
+  .qa-faq-a { margin: 0 0 1rem; line-height: 1.7; font-size: .93rem; color: var(--ink-soft, #c8c0b0); }
+  .qa-src-list { padding-left: 1.25rem; margin: 0 0 1rem; }
+  .qa-src-list li { margin-bottom: .6rem; font-size: .82rem; color: var(--ink-soft, #8a8070); line-height: 1.6; }
+  .qa-claim-note { font-size: .78rem; color: var(--ink-soft, #605848); border-top: 1px solid rgba(255,255,255,.06); padding-top: .75rem; }
+</style>

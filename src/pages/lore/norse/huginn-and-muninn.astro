@@ -1,0 +1,318 @@
+---
+/**
+ * NOR·01 — Huginn and Muninn
+ * Primary keyword: huginn and muninn
+ * Secondary: odin's ravens, what are odin's ravens called, huginn muninn meaning
+ * Page type: lore (Norse)
+ * Sources verified: 2026-11-06
+ * Status: published
+ */
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+
+const title       = 'Huginn and Muninn — Odin\'s Ravens in Norse Mythology';
+const description = 'Huginn ("Thought") and Muninn ("Memory") are Odin\'s two ravens in Norse mythology. Sourced directly from the Eddas — Grímnismál stanza 20 and Gylfaginning — with Old Norse text and scholarly commentary.';
+const path        = '/lore/norse/huginn-and-muninn/';
+
+const breadcrumbs = [
+  { name: 'Home',       url: '/' },
+  { name: 'Norse Lore', url: '/lore/norse/' },
+  { name: 'Huginn and Muninn', url: path },
+];
+
+const faq = [
+  { q: 'What are Odin\'s ravens called?', a: 'Odin\'s two ravens are called Huginn (Old Norse: *Huginn*, meaning "Thought") and Muninn (Old Norse: *Muninn*, meaning "Memory" or "Mind"). Their names are confirmed in the Eddic poem Grímnismál, stanza 20.' },
+  { q: 'What do Huginn and Muninn do?', a: 'Each dawn, Huginn and Muninn fly across the nine worlds, observe everything that happens, and return at breakfast to perch on Odin\'s shoulders and whisper what they have seen and heard. This is described in Grímnismál stanza 20 and Gylfaginning chapter 38.' },
+  { q: 'What do Huginn and Muninn mean?', a: 'Huginn derives from Old Norse *hugr* ("thought", "mind", "intention"). Muninn is typically translated as "memory" or "mind", from *munr* or *muna* ("to remember"). Some scholars, including Anthony Faulkes, translate Muninn as "desire" or "longing".' },
+  { q: 'Why did Odin worry about his ravens?', a: 'In Grímnismál stanza 20, Odin says he fears that Huginn may not return, but he fears for Muninn more. Scholars interpret this as an anxiety about memory, reason, and sanity — the qualities Odin most depends on for his power.' },
+  { q: 'Are Huginn and Muninn Common Ravens?', a: 'The Eddas do not name the species. Modern ornithologists and scholars universally assume the birds are Common Ravens (Corvus corax), the species native to Scandinavia, Iceland, and the wider Norse world.' },
+];
+---
+
+<BaseLayout
+  title={title}
+  description={description}
+  path={path}
+  ogType="article"
+  datePublished="2026-11-06"
+  dateModified="2026-11-06"
+  breadcrumbs={breadcrumbs}
+  faq={faq}
+  pageType="Article"
+>
+
+<article class="lore-page">
+
+  <nav class="lore-breadcrumb" aria-label="Breadcrumb">
+    <ol>
+      {breadcrumbs.map((b, i) => (
+        <li>
+          {i < breadcrumbs.length - 1
+            ? <><a href={b.url}>{b.name}</a><span aria-hidden="true"> › </span></>
+            : <span aria-current="page">{b.name}</span>
+          }
+        </li>
+      ))}
+    </ol>
+  </nav>
+
+  <header class="lore-header">
+    <p class="lore-pillar">Norse Lore · NOR·01</p>
+    <h1>Huginn and Muninn</h1>
+    <p class="lore-subtitle">Odin's Two Ravens in Norse Mythology</p>
+  </header>
+
+  <!-- ── Snippet ───────────────────────────────────────────────────── -->
+  <section class="lore-snippet" aria-label="Quick answer">
+    <p>Huginn ("Thought") and Muninn ("Memory") are Odin's two ravens in Norse mythology. Each dawn they fly across the nine worlds to gather news; each morning they return and whisper what they have seen into Odin's ears. The only surviving verse that names them is <em>Grímnismál</em> stanza 20, composed before 1000 CE.</p>
+  </section>
+
+  <!-- ── Contents ──────────────────────────────────────────────────── -->
+  <nav class="lore-toc" aria-label="Page contents">
+    <h2>Contents</h2>
+    <ol>
+      <li><a href="#sources">The primary sources</a></li>
+      <li><a href="#grimnismal">Grímnismál stanza 20 — the key text</a></li>
+      <li><a href="#gylfaginning">Gylfaginning — Snorri's account</a></li>
+      <li><a href="#names">What the names mean</a></li>
+      <li><a href="#scholars">What scholars say</a></li>
+      <li><a href="#archaeology">Archaeology and imagery</a></li>
+      <li><a href="#birds">The birds behind the story</a></li>
+      <li><a href="#faq">Frequently asked questions</a></li>
+      <li><a href="#sources-list">Sources</a></li>
+    </ol>
+  </nav>
+
+  <!-- ── Primary sources ────────────────────────────────────────────── -->
+  <section id="sources" class="lore-section">
+    <h2>The Primary Sources</h2>
+
+    <p><strong class="claim-lore">[lore]</strong> The story of Huginn and Muninn survives in two main texts, both written down in Iceland in the 13th century CE but reflecting older oral tradition:</p>
+
+    <ul>
+      <li><strong>Grímnismál</strong> ("The Sayings of Grímnir") — an Eddic poem in the <em>Codex Regius</em> (GkS 2365 4°), dated to c. 1270 CE. The poem itself is thought to be considerably older, probably composed before 1000 CE. Stanza 20 is the only surviving verse that names both ravens together and describes their role.<sup><a href="#src-1" class="lore-ref">1</a></sup></li>
+      <li><strong>Gylfaginning</strong> ("The Tricking of Gylfi") — chapter 38 of Snorri Sturluson's <em>Prose Edda</em>, written c. 1220 CE. Snorri quotes and paraphrases Grímnismál and adds further detail, including their daily flight pattern.<sup><a href="#src-2" class="lore-ref">2</a></sup></li>
+    </ul>
+
+    <p>All other mentions of Huginn and Muninn in later sagas, kennings and poetry derive from or echo these two sources. <strong>No earlier written record of their names is known to survive.</strong></p>
+  </section>
+
+  <!-- ── Grímnismál stanza 20 ─────────────────────────────────────── -->
+  <section id="grimnismal" class="lore-section">
+    <h2>Grímnismál Stanza 20 — The Key Text</h2>
+
+    <p>The original Old Norse text of <em>Grímnismál</em> 20, as it appears in the <em>Codex Regius</em>:<sup><a href="#src-1" class="lore-ref">1</a></sup></p>
+
+    <blockquote class="lore-quote lore-quote--old-norse">
+      <p lang="non">
+        Huginn ok Muninn<br/>
+        fljúga hverjan dag<br/>
+        Jörmungrund yfir;<br/>
+        óumk ek of Hugin,<br/>
+        at hann aftr né komi-t,<br/>
+        þó sjámk meir of Munin.
+      </p>
+      <footer>
+        — <em>Grímnismál</em>, stanza 20 (Old Norse, <em>Codex Regius</em>, c. 1270 CE)<sup><a href="#src-1" class="lore-ref">1</a></sup>
+      </footer>
+    </blockquote>
+
+    <p>A close prose translation (Hrafn's own, following Larrington 1996):</p>
+
+    <blockquote class="lore-quote">
+      <p>"Huginn and Muninn fly every day over the vast earth; I fear for Huginn that he may not come back, yet I fear more for Muninn."</p>
+    </blockquote>
+
+    <p><em>Jörmungrund</em> literally means "the great ground" or "the vast earth" — a poetic name for the whole world. <strong class="claim-lore">[lore]</strong> The stanza is spoken by Odin in disguise (as "Grímnir", "the Masked One"), and so its words carry the authority of the god himself within the poem's frame.</p>
+  </section>
+
+  <!-- ── Gylfaginning ───────────────────────────────────────────────── -->
+  <section id="gylfaginning" class="lore-section">
+    <h2>Gylfaginning — Snorri's Account</h2>
+
+    <p><strong class="claim-lore">[lore]</strong> In <em>Gylfaginning</em> chapter 38 of the <em>Prose Edda</em>, Snorri Sturluson gives a fuller account of the ravens' role. The passage is in Old Norse prose; the following is a close paraphrase rather than a modern-translation quote (to respect copyright on modern translations):</p>
+
+    <blockquote class="lore-quote">
+      <p>Odin has two ravens, which sit on his shoulders. Huginn is one and Muninn the other. They fly across the whole world each day and come back at breakfast-time; Odin then has news of everything that has happened in the world. Hence he is called the Raven-God (<em>Hrafnaguð</em>). As it says in <em>Grímnismál</em>: [stanza 20 follows].</p>
+      <footer>— Paraphrase of <em>Gylfaginning</em> ch. 38, <em>Prose Edda</em>, Snorri Sturluson (c. 1220 CE)<sup><a href="#src-2" class="lore-ref">2</a></sup></footer>
+    </blockquote>
+
+    <p>Snorri here introduces the epithet <em>Hrafnaguð</em> ("Raven-God"), connecting Odin's ravens to his identity as a deity of wisdom and knowledge.</p>
+  </section>
+
+  <!-- ── What the names mean ───────────────────────────────────────── -->
+  <section id="names" class="lore-section">
+    <h2>What the Names Mean</h2>
+
+    <dl class="lore-names-dl">
+      <div>
+        <dt><strong>Huginn</strong> <span class="lore-on">(Old Norse: <em>Huginn</em>)</span></dt>
+        <dd>
+          <p>Derived from Old Norse <em>hugr</em>, meaning "thought", "mind", "courage" or "intention". The root is Proto-Germanic <em>*hugaz</em>, related to Old English <em>hyge</em> (also "thought/mind"). <strong class="claim-lore">[lore]</strong> The name is universally translated as "Thought" in modern scholarship.<sup><a href="#src-3" class="lore-ref">3</a></sup></p>
+        </dd>
+      </div>
+      <div>
+        <dt><strong>Muninn</strong> <span class="lore-on">(Old Norse: <em>Muninn</em>)</span></dt>
+        <dd>
+          <p>Most often translated as "Memory", from Old Norse <em>muna</em> ("to remember") or <em>munr</em> ("mind", "memory", "desire"). <strong class="claim-lore">[lore]</strong> Anthony Faulkes' edition of the <em>Prose Edda</em> (1987, p. 33) notes that <em>munr</em> can also mean "desire" or "longing", making the raven's name ambiguous between memory and desire — a tension that some scholars find thematically significant, given Odin's anxiety about Muninn's return.<sup><a href="#src-4" class="lore-ref">4</a></sup></p>
+        </dd>
+      </div>
+    </dl>
+  </section>
+
+  <!-- ── Scholars ───────────────────────────────────────────────────── -->
+  <section id="scholars" class="lore-section">
+    <h2>What Scholars Say</h2>
+
+    <p>The two ravens have attracted substantial scholarly commentary. The main lines of interpretation are:</p>
+
+    <h3>1. Odin's intelligence-gathering function</h3>
+    <p><strong class="claim-lore">[lore]</strong> Rudolf Simek's <em>Dictionary of Northern Mythology</em> (1993, p. 160) summarises the mainstream view: Huginn and Muninn are expressions of Odin's omniscience — his mind and memory flying free across the world while his body sits at Hliðskjálf (his high-seat). The anxiety about Muninn is interpreted as a fear of forgetting, which would cost Odin his power.<sup><a href="#src-3" class="lore-ref">3</a></sup></p>
+
+    <h3>2. Shamanic projection</h3>
+    <p><strong class="claim-lore">[lore]</strong> Hilda Ellis Davidson (<em>Gods and Myths of Northern Europe</em>, 1964, pp. 142–44) placed the ravens in the context of Norse shamanism (<em>seiðr</em>): the ability to send consciousness out of the body to gather information from afar. In this reading, Huginn and Muninn are projections of Odin's mind, not separate beings.<sup><a href="#src-5" class="lore-ref">5</a></sup></p>
+
+    <h3>3. The "beasts of battle" tradition</h3>
+    <p><strong class="claim-lore">[lore]</strong> Both ravens and wolves appear alongside Odin in the "beasts of battle" motif found in Old Norse, Old English and Old High German poetry — a convention in which ravens, wolves and eagles anticipate and feed on the slain. This connects Huginn and Muninn to Odin's role as god of war as well as of wisdom. John McKinnell discusses this in <em>Both One and Many</em> (2005).<sup><a href="#src-6" class="lore-ref">6</a></sup></p>
+
+    <h3>4. What we do not know</h3>
+    <p>The <em>Grímnismál</em> poem gives us one stanza. Everything beyond that — where the ravens nest, whether they speak, what specifically they observed — comes from Snorri writing two centuries after the Viking Age. Scholars treat Snorri as a valuable but secondary source who may have systematised and embellished older, more fragmentary traditions.</p>
+  </section>
+
+  <!-- ── Archaeology ────────────────────────────────────────────────── -->
+  <section id="archaeology" class="lore-section">
+    <h2>Archaeology and Imagery</h2>
+
+    <p><strong class="claim-lore">[lore]</strong> Two birds flanking a human or divine figure appear on a number of Migration Period and Viking Age artefacts. The most discussed examples include:</p>
+
+    <ul>
+      <li>The <strong>Thorsberg chape</strong> (Denmark, c. 200 CE) — a belt fitting showing a figure with two birds, possibly an early precursor to the Odin-raven iconography, though the identification is debated.<sup><a href="#src-7" class="lore-ref">7</a></sup></li>
+      <li>Several <strong>Vendel-period helmet plates</strong> (Sweden, 6th–8th centuries) show a warrior or deity with one or two birds overhead. These predate the written texts by centuries.</li>
+      <li>The <strong>Oseberg tapestry fragments</strong> (Norway, c. 834 CE) include processional scenes with birds that some scholars identify as ravens near a figure interpreted as Odin.<sup><a href="#src-7" class="lore-ref">7</a></sup></li>
+    </ul>
+
+    <p>None of these artefacts names the birds as Huginn or Muninn. The identification rests on analogy with the textual tradition and is a scholarly inference, not a confirmed fact.</p>
+  </section>
+
+  <!-- ── The birds behind the story ────────────────────────────────── -->
+  <section id="birds" class="lore-section lore-bridge">
+    <h2>The Birds Behind the Story</h2>
+    <p><strong class="claim-science">[science]</strong> The Common Raven (<em>Corvus corax</em>) has been native to Scandinavia, Iceland, and the wider Norse cultural world throughout recorded history. <strong class="claim-science">[science]</strong> Ravens are the most cognitively capable birds yet studied: they cache and re-cache food, track the knowledge states of other animals, and form long-term partnerships — behaviours that would naturally invite comparison with concepts of thought and memory.<sup><a href="#src-8" class="lore-ref">8</a></sup></p>
+    <p>The choice of ravens as Odin's spies is therefore not arbitrary: it reflects centuries of close observation of a highly intelligent, wide-ranging scavenger that regularly appeared at battles, executions and human settlements.</p>
+    <p><a href="/species/common-raven/" class="lore-species-link">Common Raven — species profile →</a></p>
+  </section>
+
+  <!-- ── FAQ ────────────────────────────────────────────────────────── -->
+  <section id="faq" class="lore-section lore-faq" aria-labelledby="lore-faq-h2">
+    <h2 id="lore-faq-h2">Frequently Asked Questions</h2>
+    {faq.map(item => (
+      <details class="lore-faq-item">
+        <summary class="lore-faq-q">{item.q}</summary>
+        <p class="lore-faq-a" set:html={item.a.replace(/\*(.*?)\*/g, '<em>$1</em>')} />
+      </details>
+    ))}
+  </section>
+
+  <!-- ── Sources ────────────────────────────────────────────────────── -->
+  <section id="sources-list" class="lore-section lore-sources" aria-labelledby="lore-src-h2">
+    <h2 id="lore-src-h2">Sources</h2>
+    <ol class="lore-src-list">
+      <li id="src-1">The <em>Codex Regius</em> (GkS 2365 4°), c. 1270 CE, Árni Magnússon Institute for Icelandic Studies, Reykjavík. <em>Grímnismál</em> stanza 20. English translation: Larrington, C. (1996). <em>The Poetic Edda</em>. Oxford University Press. — primary source for the stanza text and translation.</li>
+      <li id="src-2">Sturluson, Snorri (c. 1220 CE). <em>Prose Edda</em> — <em>Gylfaginning</em> ch. 38. Edition used: Faulkes, A. (ed. & trans., 1987). <em>Edda</em>. Everyman. — Snorri's account of the ravens' daily flight.</li>
+      <li id="src-3">Simek, R. (1993). <em>Dictionary of Northern Mythology</em> (trans. A. Hall). D.S. Brewer. p. 160. — etymology of Huginn; mainstream scholarly interpretation.</li>
+      <li id="src-4">Faulkes, A. (ed., 1987). <em>Edda</em>. Everyman. p. 33 (note on <em>munr</em>). — translation range for Muninn.</li>
+      <li id="src-5">Ellis Davidson, H.R. (1964). <em>Gods and Myths of Northern Europe</em>. Penguin. pp. 142–44. — shamanic projection interpretation.</li>
+      <li id="src-6">McKinnell, J. (2005). <em>Both One and Many: Essays on Change and Variety in Late Norse Heathenism</em>. Philologia — beasts-of-battle tradition and Odin's ravens.</li>
+      <li id="src-7">Price, N. (2002). <em>The Viking Way: Religion and War in Late Iron Age Scandinavia</em>. Uppsala University. — Migration period artefacts and raven iconography.</li>
+      <li id="src-8">Heinrich, B. (2000). <em>Mind of the Raven: Investigations and Adventures with Wolf-Birds</em>. HarperCollins. — Common Raven intelligence and behaviour; species native range.</li>
+    </ol>
+    <p class="lore-claim-note">All claims on this page are labelled: <strong class="claim-science">[science]</strong> for peer-reviewed or field-guide data; <strong class="claim-lore">[lore]</strong> for statements drawn from named cultural or historical sources. Unlabelled text is contextual explanation.</p>
+  </section>
+
+  <nav class="lore-nav-bottom">
+    <a href="/lore/norse/" class="lore-back">← Norse Lore</a>
+    <a href="/lore/norse/odin-the-raven-god/" class="lore-next">Odin: the Raven-God →</a>
+  </nav>
+
+</article>
+
+</BaseLayout>
+
+<style>
+/* ── Lore page styles ───────────────────────────────────────────── */
+.lore-page {
+  max-width: 820px;
+  margin: 0 auto;
+  padding: 2rem 1.25rem 4rem;
+  color: var(--iron-ink, #e8e4d8);
+  font-family: 'Inter', sans-serif;
+  line-height: 1.72;
+}
+
+/* Breadcrumb */
+.lore-breadcrumb ol { display: flex; flex-wrap: wrap; gap: .25rem; list-style: none; padding: 0; margin: 0 0 2rem; font-size: .8rem; color: var(--ink-soft, #8a8070); }
+.lore-breadcrumb a { color: var(--gold-500, #d4ae5a); text-decoration: none; }
+.lore-breadcrumb a:hover { text-decoration: underline; }
+
+/* Header */
+.lore-pillar { font-size: .72rem; letter-spacing: .12em; text-transform: uppercase; color: var(--gold-500, #d4ae5a); margin: 0 0 .4rem; }
+.lore-page h1 { font-family: 'Cormorant Garamond', serif; font-size: clamp(2rem, 5vw, 3.25rem); font-weight: 700; color: #fff; margin: 0 0 .4rem; line-height: 1.1; }
+.lore-subtitle { font-size: 1.1rem; color: var(--ink-soft, #c0b89a); margin: 0 0 2rem; }
+
+/* Snippet */
+.lore-snippet { background: rgba(212,174,90,.08); border-left: 3px solid var(--gold-500, #d4ae5a); border-radius: 0 6px 6px 0; padding: 1rem 1.25rem; margin-bottom: 2.5rem; font-size: 1.03rem; }
+
+/* TOC */
+.lore-toc { background: rgba(255,255,255,.03); border-radius: 8px; padding: 1.25rem 1.5rem; margin-bottom: 2.5rem; }
+.lore-toc h2 { font-family: 'Cormorant Garamond', serif; font-size: 1.1rem; color: var(--gold-500, #d4ae5a); margin: 0 0 .75rem; }
+.lore-toc ol { margin: 0; padding-left: 1.25rem; }
+.lore-toc li { margin-bottom: .3rem; font-size: .88rem; }
+.lore-toc a { color: var(--gold-500, #d4ae5a); text-decoration: none; }
+.lore-toc a:hover { text-decoration: underline; }
+
+/* Sections */
+.lore-section { margin-bottom: 2.75rem; }
+.lore-section h2 { font-family: 'Cormorant Garamond', serif; font-size: 1.6rem; font-weight: 600; color: #fff; margin: 0 0 1rem; border-bottom: 1px solid rgba(212,174,90,.2); padding-bottom: .4rem; }
+.lore-section h3 { font-family: 'Inter', sans-serif; font-size: 1rem; font-weight: 600; color: var(--gold-500, #d4ae5a); margin: 1.5rem 0 .5rem; }
+.lore-section p { margin: 0 0 1rem; font-size: .97rem; }
+.lore-section ul, .lore-section ol { padding-left: 1.25rem; margin: 0 0 1rem; }
+.lore-section li { margin-bottom: .5rem; font-size: .95rem; }
+
+/* Quotes */
+.lore-quote { border-left: 3px solid rgba(212,174,90,.35); margin: 1.25rem 0; padding: .9rem 1.25rem; color: var(--ink-soft, #c8c0b0); font-style: italic; }
+.lore-quote--old-norse { font-family: 'Cormorant Garamond', serif; font-size: 1.1rem; letter-spacing: .01em; }
+.lore-quote footer { font-style: normal; font-size: .78rem; margin-top: .5rem; color: var(--ink-soft, #8a8070); }
+
+/* Claim labels */
+.claim-science { color: #7ab9e0; font-style: normal; font-size: .78rem; }
+.claim-lore    { color: #c8a46a; font-style: normal; font-size: .78rem; }
+
+/* Source refs */
+.lore-ref { color: var(--gold-500, #d4ae5a); font-size: .75rem; vertical-align: super; text-decoration: none; }
+
+/* Names DL */
+.lore-names-dl > div { margin-bottom: 1.25rem; }
+.lore-names-dl dt { font-size: 1.05rem; font-weight: 600; color: #fff; margin-bottom: .3rem; }
+.lore-on { font-weight: 400; color: var(--ink-soft, #8a8070); font-size: .88rem; }
+
+/* Science bridge */
+.lore-bridge { background: rgba(107,45,28,.1); border: 1px solid rgba(107,45,28,.3); border-radius: 8px; padding: 1.25rem 1.5rem; }
+.lore-bridge h2 { border-bottom-color: rgba(107,45,28,.4); }
+.lore-species-link { color: var(--gold-500, #d4ae5a); font-size: .9rem; }
+
+/* FAQ */
+.lore-faq-item { border-bottom: 1px solid rgba(255,255,255,.07); }
+.lore-faq-q { cursor: pointer; padding: .9rem 0; font-size: .97rem; font-weight: 500; color: #fff; list-style: none; }
+.lore-faq-q::before { content: '+ '; color: var(--gold-500, #d4ae5a); font-weight: 700; }
+details[open] .lore-faq-q::before { content: '− '; }
+.lore-faq-a { margin: 0 0 1rem; line-height: 1.7; font-size: .93rem; color: var(--ink-soft, #c8c0b0); }
+
+/* Sources */
+.lore-src-list { padding-left: 1.25rem; margin: 0 0 1rem; }
+.lore-src-list li { margin-bottom: .6rem; font-size: .82rem; color: var(--ink-soft, #8a8070); line-height: 1.6; }
+.lore-claim-note { font-size: .78rem; color: var(--ink-soft, #605848); border-top: 1px solid rgba(255,255,255,.06); padding-top: .75rem; margin-top: 1rem; }
+
+/* Bottom nav */
+.lore-nav-bottom { display: flex; justify-content: space-between; padding-top: 2rem; border-top: 1px solid rgba(255,255,255,.07); }
+.lore-nav-bottom a { color: var(--gold-500, #d4ae5a); font-size: .9rem; text-decoration: none; }
+.lore-nav-bottom a:hover { text-decoration: underline; }
+</style>

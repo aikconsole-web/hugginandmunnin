@@ -1,0 +1,131 @@
+---
+/**
+ * Species sub-page — Little Raven diet
+ * SPC·09d
+ * Primary keyword: little raven diet
+ * Secondary: what does a little raven eat, little raven food, corvus mellori diet
+ */
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+
+const title       = 'Little Raven Diet: What This Species Eats';
+const description = 'The Little Raven of south-eastern Australia is a highly mobile, flocking omnivore with a diet dominated by invertebrates. It exploits semi-arid grasslands, farmland, and alpine habitats for insects, seeds, carrion, and food waste.';
+const path        = '/species/little-raven/diet/';
+
+const breadcrumbs = [
+  { name: 'Home',         url: '/' },
+  { name: 'Species',      url: '/species/' },
+  { name: 'Little Raven', url: '/species/little-raven/' },
+  { name: 'Diet',         url: path },
+];
+
+const faq = [
+  { q: 'What does the Little Raven eat?', a: 'The Little Raven eats primarily invertebrates — beetles, grasshoppers, caterpillars, and other insects — along with seeds, grain, small vertebrates, carrion, and human food waste. Its diet is similar to that of the Australian Raven and Forest Raven but with a relatively higher emphasis on invertebrates, reflecting its preference for open grassland, semi-arid, and alpine habitats where insects can be very abundant seasonally.' },
+  { q: 'How is the Little Raven different from the Australian Raven in diet?', a: 'The Little Raven is smaller than the Australian Raven and tends to forage in more open, semi-arid, and alpine habitats. Its diet reflects this — a relatively greater proportion of invertebrates and less reliance on carrion compared to the Australian Raven. The Little Raven is also a more highly nomadic, flocking species; its foraging is adapted to moving rapidly between areas of insect abundance, particularly during grasshopper and locust eruptions.' },
+  { q: 'Do Little Ravens eat grain?', a: 'Yes. Little Ravens eat cereal grain (wheat, barley, oats) in agricultural areas, particularly in fields after sowing and during harvest. The species can form large flocks in agricultural regions — both while foraging for insects and when exploiting grain. Flocks following machinery are documented. Its grain consumption is a source of conflict with farmers in some parts of south-eastern Australia.' },
+];
+---
+
+<BaseLayout title={title} description={description} path={path} ogType="article"
+  datePublished="2026-11-07" dateModified="2026-11-07"
+  breadcrumbs={breadcrumbs} faq={faq} pageType="Article">
+
+<article class="qa-page">
+
+  <nav class="qa-breadcrumb" aria-label="Breadcrumb">
+    <ol>
+      {breadcrumbs.map((b, i) => (
+        <li>
+          {i < breadcrumbs.length - 1
+            ? <><a href={b.url}>{b.name}</a><span aria-hidden="true"> › </span></>
+            : <span aria-current="page">{b.name}</span>}
+        </li>
+      ))}
+    </ol>
+  </nav>
+
+  <header class="qa-header">
+    <p class="qa-pillar">Species Sub-page · SPC·09d</p>
+    <h1>Little Raven Diet: What This Species Eats</h1>
+  </header>
+
+  <section class="qa-snippet" aria-label="Direct answer">
+    <p><strong class="claim-science">[science]</strong> The Little Raven (<em>Corvus mellori</em>) is an omnivore with a diet dominated by invertebrates — particularly insects — supplemented by seeds, grain, carrion, small vertebrates, and human food waste. It is a nomadic, flocking species that exploits seasonal insect abundance across south-eastern Australia's grasslands, farmland, and alpine zones.</p>
+  </section>
+
+  <section class="qa-section">
+    <h2>Primary Food Items</h2>
+    <p><strong class="claim-science">[science]</strong> Based on HANZAB species account:<sup><a href="#src-1">1</a></sup></p>
+    <ul>
+      <li><strong>Invertebrates:</strong> beetles, grasshoppers, caterpillars, earthworms, moths, termites — ground-foraging for invertebrates is the primary foraging mode. The Little Raven exploits grasshopper and locust eruptions, moving nomadically to areas of insect abundance.</li>
+      <li><strong>Grain and seeds:</strong> wheat, barley, oats, and native grass seeds — particularly in agricultural areas. The species follows ploughing machines to take exposed grain and invertebrates.</li>
+      <li><strong>Carrion:</strong> roadkill (rabbits, kangaroos, lizards) and dead livestock. Less dominant in the diet than in the larger Australian Raven, but still an important supplement.</li>
+      <li><strong>Small vertebrates:</strong> skinks, mice, small birds and nestlings, frogs — taken opportunistically.</li>
+      <li><strong>Eggs:</strong> eggs of ground-nesting birds.</li>
+      <li><strong>Fruit:</strong> various berries and fruits taken opportunistically.</li>
+      <li><strong>Human food waste:</strong> campsites, rubbish, urban scraps — exploited opportunistically.</li>
+    </ul>
+  </section>
+
+  <section class="qa-section">
+    <h2>Nomadic Foraging and Insect Eruptions</h2>
+    <p><strong class="claim-science">[science]</strong> The Little Raven is the most nomadic of the Australian corvids. Outside the breeding season it forms large flocks (sometimes hundreds of birds) that move across the landscape tracking food resources — particularly insect eruptions. During years of high grasshopper abundance in south-eastern Australia, Little Raven flocks can number in the thousands, exploiting the invertebrate resource across a wide area. This nomadic foraging strategy contrasts with the territorial year-round foraging of breeding Australian Ravens.<sup><a href="#src-1">1</a></sup></p>
+  </section>
+
+  <section class="qa-section">
+    <h2>Alpine and High-Country Foraging</h2>
+    <p><strong class="claim-science">[science]</strong> The Little Raven breeds in montane and alpine habitats of south-eastern Australia and the Australian Alps, where the summer insect season is short but productive. Alpine insects — particularly beetles and moths — are important dietary items during the breeding season in these high-altitude habitats. Post-breeding, flocks descend to lower-altitude farmland and open country for the cooler months.<sup><a href="#src-1">1</a></sup></p>
+  </section>
+
+  <section class="qa-section">
+    <h2>Related Pages</h2>
+    <ul>
+      <li><a href="/species/little-raven/">Little Raven — species hub</a></li>
+      <li><a href="/compare/australian-raven-vs-little-raven/">Australian Raven vs Little Raven</a></li>
+      <li><a href="/questions/what-do-ravens-eat/">What do ravens eat?</a></li>
+    </ul>
+  </section>
+
+  <section class="qa-faq qa-section" aria-labelledby="faq-h2">
+    <h2 id="faq-h2">Frequently Asked Questions</h2>
+    {faq.map(item => (
+      <details class="qa-faq-item">
+        <summary class="qa-faq-q">{item.q}</summary>
+        <p class="qa-faq-a">{item.a}</p>
+      </details>
+    ))}
+  </section>
+
+  <section class="qa-sources qa-section" aria-labelledby="src-h2">
+    <h2 id="src-h2">Sources</h2>
+    <ol class="qa-src-list">
+      <li id="src-1">Higgins, P.J. (ed., 2002). <em>Handbook of Australian, New Zealand and Antarctic Birds</em> (HANZAB), vol. 7. Oxford University Press. — Little Raven species account; diet, nomadism, foraging ecology.</li>
+    </ol>
+    <p class="qa-claim-note"><strong class="claim-science">[science]</strong> peer-reviewed study or field-guide data</p>
+  </section>
+
+</article>
+</BaseLayout>
+
+<style>
+  .qa-page { max-width: 820px; margin: 0 auto; padding: 2rem 1.25rem 4rem; color: var(--iron-ink, #e8e4d8); font-family: 'Inter', sans-serif; line-height: 1.72; }
+  .qa-breadcrumb ol { display: flex; flex-wrap: wrap; gap: .25rem; list-style: none; padding: 0; margin: 0 0 2rem; font-size: .8rem; color: var(--ink-soft, #8a8070); }
+  .qa-breadcrumb a { color: var(--gold-500, #d4ae5a); text-decoration: none; }
+  .qa-pillar { font-size: .72rem; letter-spacing: .12em; text-transform: uppercase; color: var(--gold-500, #d4ae5a); margin: 0 0 .4rem; }
+  .qa-page h1 { font-family: 'Cormorant Garamond', serif; font-size: clamp(2rem, 5vw, 3rem); font-weight: 700; color: #fff; margin: 0 0 2rem; line-height: 1.1; }
+  .qa-snippet { background: rgba(212,174,90,.08); border-left: 3px solid var(--gold-500, #d4ae5a); border-radius: 0 6px 6px 0; padding: 1rem 1.25rem; margin-bottom: 2.5rem; font-size: 1.03rem; }
+  .qa-section { margin-bottom: 2.5rem; }
+  .qa-section h2 { font-family: 'Cormorant Garamond', serif; font-size: 1.5rem; font-weight: 600; color: #fff; margin: 0 0 .9rem; border-bottom: 1px solid rgba(212,174,90,.2); padding-bottom: .4rem; }
+  .qa-section p { margin: 0 0 1rem; font-size: .97rem; }
+  .qa-section ul { padding-left: 1.25rem; margin: 0 0 1rem; }
+  .qa-section li { margin-bottom: .4rem; font-size: .95rem; }
+  .claim-science { color: #7ab9e0; font-style: normal; font-size: .78rem; }
+  a[href] { color: var(--gold-500, #d4ae5a); }
+  .qa-faq-item { border-bottom: 1px solid rgba(255,255,255,.07); }
+  .qa-faq-q { cursor: pointer; padding: .9rem 0; font-size: .97rem; font-weight: 500; color: #fff; list-style: none; }
+  .qa-faq-q::before { content: '+ '; color: var(--gold-500, #d4ae5a); font-weight: 700; }
+  details[open] .qa-faq-q::before { content: '− '; }
+  .qa-faq-a { margin: 0 0 1rem; line-height: 1.7; font-size: .93rem; color: var(--ink-soft, #c8c0b0); }
+  .qa-src-list { padding-left: 1.25rem; margin: 0 0 1rem; }
+  .qa-src-list li { margin-bottom: .6rem; font-size: .82rem; color: var(--ink-soft, #8a8070); line-height: 1.6; }
+  .qa-claim-note { font-size: .78rem; color: var(--ink-soft, #605848); border-top: 1px solid rgba(255,255,255,.06); padding-top: .75rem; }
+</style>

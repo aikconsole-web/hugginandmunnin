@@ -1,0 +1,129 @@
+---
+/**
+ * Species sub-page — Forest Raven range
+ * SPC·08r
+ * Primary keyword: forest raven range
+ * Secondary: where does the forest raven live, corvus tasmanicus range, tasmanian raven
+ */
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+
+const title       = 'Forest Raven Range: Where This Species Lives';
+const description = 'The Forest Raven is the dominant corvid in Tasmania and also occurs in small areas of mainland south-eastern Australia. This page covers its full distribution, habitat, and conservation status.';
+const path        = '/species/forest-raven/range/';
+
+const breadcrumbs = [
+  { name: 'Home',         url: '/' },
+  { name: 'Species',      url: '/species/' },
+  { name: 'Forest Raven', url: '/species/forest-raven/' },
+  { name: 'Range',        url: path },
+];
+
+const faq = [
+  { q: 'Where does the Forest Raven live?', a: 'The Forest Raven (Corvus tasmanicus) has a disjunct range: it is the dominant large corvid on Tasmania (the entire island), and also occurs in small areas of mainland Australia — coastal Victoria (including the Otway ranges and Wilsons Promontory), extreme coastal South Australia (Kangaroo Island and the southern Mt Lofty Ranges), and far south-eastern New South Wales (south coast ranges). On the mainland, its range is fragmented and largely restricted to coastal and montane areas with tall wet forest.' },
+  { q: 'Is the Forest Raven the same as the Tasmanian Raven?', a: 'Sometimes used as an alternative name. "Forest Raven" is the standard English name in HANZAB and most Australian bird references; some older texts use "Tasmanian Raven" emphasising its stronghold on the island. It is not a separate species — Corvus tasmanicus applies to both the Tasmanian and mainland populations. The mainland populations are sometimes treated as a separate subspecies (C. t. boreus) based on slightly larger size.' },
+  { q: 'Is the Forest Raven threatened?', a: 'The Forest Raven is not globally threatened — it is classified as Least Concern by IUCN. The Tasmanian population is robust. However, the mainland Australian populations (coastal Victoria and South Australia) are small and potentially at risk from habitat loss of tall wet forest. The species is relatively sedentary and dependent on tall trees for nesting, making it sensitive to forest clearing in its limited mainland strongholds.' },
+];
+---
+
+<BaseLayout title={title} description={description} path={path} ogType="article"
+  datePublished="2026-11-07" dateModified="2026-11-07"
+  breadcrumbs={breadcrumbs} faq={faq} pageType="Article">
+
+<article class="qa-page">
+
+  <nav class="qa-breadcrumb" aria-label="Breadcrumb">
+    <ol>
+      {breadcrumbs.map((b, i) => (
+        <li>
+          {i < breadcrumbs.length - 1
+            ? <><a href={b.url}>{b.name}</a><span aria-hidden="true"> › </span></>
+            : <span aria-current="page">{b.name}</span>}
+        </li>
+      ))}
+    </ol>
+  </nav>
+
+  <header class="qa-header">
+    <p class="qa-pillar">Species Sub-page · SPC·08r</p>
+    <h1>Forest Raven Range: Where This Species Lives</h1>
+  </header>
+
+  <section class="qa-snippet" aria-label="Direct answer">
+    <p><strong class="claim-science">[science]</strong> The Forest Raven (<em>Corvus tasmanicus</em>) is the dominant corvid on Tasmania (present island-wide) and occurs in disjunct populations on the mainland — coastal Victoria (Otways, Wilsons Promontory), Kangaroo Island and southern South Australia, and south-eastern New South Wales coastal ranges. On the mainland it is restricted to tall wet forest and is far less widespread than the Australian Raven.</p>
+  </section>
+
+  <section class="qa-section">
+    <h2>Distribution</h2>
+    <p><strong class="claim-science">[science]</strong> The Forest Raven's range is centred on Tasmania with small mainland outposts:<sup><a href="#src-1">1</a></sup></p>
+    <ul>
+      <li><strong>Tasmania:</strong> present throughout the island in all major habitat types — tall wet forest (the core habitat), dry sclerophyll woodland, agricultural areas, and even urban Hobart. The only native corvid on Tasmania; the Australian Raven and Little Raven do not reach the island. Population robust and widespread.</li>
+      <li><strong>Victoria (mainland):</strong> coastal Otway Ranges, Wilsons Promontory, and scattered localities in tall wet forest from about Lorne to the South Gippsland ranges. Small, sedentary populations.</li>
+      <li><strong>South Australia:</strong> Kangaroo Island (resident) and southern Mount Lofty Ranges south-east of Adelaide (small population).</li>
+      <li><strong>New South Wales:</strong> far south-east coastal ranges, potentially extending into Nadgee and Mimosa Rocks areas.</li>
+    </ul>
+    <p>The mainland populations are geographically isolated from one another and from the Tasmanian population. They are likely relicts of a formerly more continuous distribution along tall wet forest.</p>
+  </section>
+
+  <section class="qa-section">
+    <h2>Habitat</h2>
+    <p><strong class="claim-science">[science]</strong> The Forest Raven is more habitat-specialist than the Australian Raven on the mainland:<sup><a href="#src-1">1</a></sup></p>
+    <ul>
+      <li><strong>Primary mainland habitat:</strong> tall wet eucalyptus forest (mountain ash, messmate, blue gum associations). Requires tall trees for nesting; strongly associated with intact or near-intact tall forest.</li>
+      <li><strong>Tasmania:</strong> more flexible — uses a wide range of habitats including cleared farmland, urban areas, and alpine moorland, in addition to tall forest. This broader habitat use on Tasmania (without competition from other Australian corvids) explains why it is so widespread there.</li>
+    </ul>
+  </section>
+
+  <section class="qa-section">
+    <h2>Related Pages</h2>
+    <ul>
+      <li><a href="/species/forest-raven/">Forest Raven — species hub</a></li>
+      <li><a href="/species/forest-raven/identification/">Forest Raven identification</a></li>
+      <li><a href="/compare/forest-raven-vs-australian-raven/">Forest Raven vs Australian Raven</a></li>
+      <li><a href="/species/australian-raven/range/">Australian Raven range</a></li>
+    </ul>
+  </section>
+
+  <section class="qa-faq qa-section" aria-labelledby="faq-h2">
+    <h2 id="faq-h2">Frequently Asked Questions</h2>
+    {faq.map(item => (
+      <details class="qa-faq-item">
+        <summary class="qa-faq-q">{item.q}</summary>
+        <p class="qa-faq-a">{item.a}</p>
+      </details>
+    ))}
+  </section>
+
+  <section class="qa-sources qa-section" aria-labelledby="src-h2">
+    <h2 id="src-h2">Sources</h2>
+    <ol class="qa-src-list">
+      <li id="src-1">Higgins, P.J., Peter, J.M. & Cowling, S.J. (eds., 2006). <em>Handbook of Australian, New Zealand and Antarctic Birds</em> (HANZAB), vol. 7. Oxford University Press. — Forest Raven species account; distribution, habitat, subspecies, mainland populations.</li>
+    </ol>
+    <p class="qa-claim-note"><strong class="claim-science">[science]</strong> peer-reviewed or field-guide data</p>
+  </section>
+
+</article>
+</BaseLayout>
+
+<style>
+  .qa-page { max-width: 820px; margin: 0 auto; padding: 2rem 1.25rem 4rem; color: var(--iron-ink, #e8e4d8); font-family: 'Inter', sans-serif; line-height: 1.72; }
+  .qa-breadcrumb ol { display: flex; flex-wrap: wrap; gap: .25rem; list-style: none; padding: 0; margin: 0 0 2rem; font-size: .8rem; color: var(--ink-soft, #8a8070); }
+  .qa-breadcrumb a { color: var(--gold-500, #d4ae5a); text-decoration: none; }
+  .qa-pillar { font-size: .72rem; letter-spacing: .12em; text-transform: uppercase; color: var(--gold-500, #d4ae5a); margin: 0 0 .4rem; }
+  .qa-page h1 { font-family: 'Cormorant Garamond', serif; font-size: clamp(2rem, 5vw, 3rem); font-weight: 700; color: #fff; margin: 0 0 2rem; line-height: 1.1; }
+  .qa-snippet { background: rgba(212,174,90,.08); border-left: 3px solid var(--gold-500, #d4ae5a); border-radius: 0 6px 6px 0; padding: 1rem 1.25rem; margin-bottom: 2.5rem; font-size: 1.03rem; }
+  .qa-section { margin-bottom: 2.5rem; }
+  .qa-section h2 { font-family: 'Cormorant Garamond', serif; font-size: 1.5rem; font-weight: 600; color: #fff; margin: 0 0 .9rem; border-bottom: 1px solid rgba(212,174,90,.2); padding-bottom: .4rem; }
+  .qa-section p { margin: 0 0 1rem; font-size: .97rem; }
+  .qa-section ul { padding-left: 1.25rem; margin: 0 0 1rem; }
+  .qa-section li { margin-bottom: .4rem; font-size: .95rem; }
+  .claim-science { color: #7ab9e0; font-style: normal; font-size: .78rem; }
+  a[href] { color: var(--gold-500, #d4ae5a); }
+  .qa-faq-item { border-bottom: 1px solid rgba(255,255,255,.07); }
+  .qa-faq-q { cursor: pointer; padding: .9rem 0; font-size: .97rem; font-weight: 500; color: #fff; list-style: none; }
+  .qa-faq-q::before { content: '+ '; color: var(--gold-500, #d4ae5a); font-weight: 700; }
+  details[open] .qa-faq-q::before { content: '− '; }
+  .qa-faq-a { margin: 0 0 1rem; line-height: 1.7; font-size: .93rem; color: var(--ink-soft, #c8c0b0); }
+  .qa-src-list { padding-left: 1.25rem; margin: 0 0 1rem; }
+  .qa-src-list li { margin-bottom: .6rem; font-size: .82rem; color: var(--ink-soft, #8a8070); line-height: 1.6; }
+  .qa-claim-note { font-size: .78rem; color: var(--ink-soft, #605848); border-top: 1px solid rgba(255,255,255,.06); padding-top: .75rem; }
+</style>

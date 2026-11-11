@@ -1,0 +1,135 @@
+---
+/**
+ * Norse lore — Raven Banner
+ * NRS·13
+ * Primary keyword: viking raven banner
+ * Secondary: hrafnsmerki, raven flag vikings, landeyda raven banner
+ */
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+
+const title       = 'The Viking Raven Banner: Hrafnsmerki in War and Mythology';
+const description = 'The raven banner (hrafnsmerki) was a war standard used by Viking Age Norse and Danish chieftains. This page examines documented historical uses, the belief that raven banners predicted victory, and the banner\'s connection to Odin\'s ravens Huginn and Muninn.';
+const path        = '/lore/norse/raven-banner/';
+
+const breadcrumbs = [
+  { name: 'Home',  url: '/' },
+  { name: 'Lore',  url: '/lore/' },
+  { name: 'Norse', url: '/lore/norse/' },
+  { name: 'Raven Banner', url: path },
+];
+
+const faq = [
+  { q: 'What was the Viking raven banner?', a: 'The raven banner (Old Norse: hrafnsmerki, also called Hrafn, "raven," or Landeyda, "land-devastator") was a war standard used by Viking Age Scandinavian chieftains and kings in battle. It depicted a raven — the bird of Odin — and was believed by those who carried it to bring victory in battle, provided it was sewn and consecrated correctly. The banner is recorded in several Norse sagas, Anglo-Saxon chronicles, and in Irish annals.' },
+  { q: 'Did the raven banner really exist?', a: 'Yes. The raven banner is attested in multiple independent historical sources as a real military standard used in the Viking Age (c. 793–1066 CE). The Annals of St Neots (c. 10th century) record a raven banner captured from a Danish army at the Battle of Ashdown (871 CE). The Anglo-Saxon Chronicle and Orkneyinga saga also reference raven standards. The design — a raven on a cloth banner — is consistent across sources from different regions and periods.' },
+  { q: 'What did the raven on the Viking banner mean?', a: 'The raven on the banner represented Odin\'s ravens Huginn (Thought) and Muninn (Memory) — symbols of the god\'s all-seeing wisdom and his role as the patron of warriors killed in battle (the einherjar who go to Valhöll). Carrying a raven banner was an invocation of Odin\'s favour. The saga tradition holds that if the banner\'s raven "flew" (the cloth rippled in the wind to suggest wing movement), victory was at hand; if it drooped, defeat was coming. This prophetic interpretation is recorded in the Orkneyinga saga account of Earl Sigurðr Hlöðvisson at the Battle of Clontarf (1014 CE).' },
+];
+---
+
+<BaseLayout title={title} description={description} path={path} ogType="article"
+  datePublished="2026-11-07" dateModified="2026-11-07"
+  breadcrumbs={breadcrumbs} faq={faq} pageType="Article">
+
+<article class="qa-page">
+
+  <nav class="qa-breadcrumb" aria-label="Breadcrumb">
+    <ol>
+      {breadcrumbs.map((b, i) => (
+        <li>
+          {i < breadcrumbs.length - 1
+            ? <><a href={b.url}>{b.name}</a><span aria-hidden="true"> › </span></>
+            : <span aria-current="page">{b.name}</span>}
+        </li>
+      ))}
+    </ol>
+  </nav>
+
+  <header class="qa-header">
+    <p class="qa-pillar">Norse Lore · NRS·13</p>
+    <h1>The Viking Raven Banner: Hrafnsmerki in War and Mythology</h1>
+  </header>
+
+  <section class="qa-snippet" aria-label="Direct answer">
+    <p><strong class="claim-lore">[lore]</strong> The raven banner (Old Norse: hrafnsmerki) was a real Viking Age war standard depicting a raven — the bird of Odin — used by Norse and Danish chieftains and kings. It is attested in multiple historical sources including the Anglo-Saxon Chronicle, the Annals of St Neots (capturing a Danish raven banner at Ashdown, 871 CE), and the Orkneyinga saga account of the Battle of Clontarf (1014 CE). It was believed to predict victory if the raven "flew" (the cloth rippled in wind).</p>
+  </section>
+
+  <section class="qa-section">
+    <h2>Historical Attestations</h2>
+    <p><strong class="claim-lore">[lore]</strong> The raven banner is documented in several independent contemporary and near-contemporary sources:<sup><a href="#src-1">1</a></sup></p>
+    <ul>
+      <li><strong>Annals of St Neots</strong> (c. 10th century CE): records that at the Battle of Ashdown (871 CE), King Æthelred and Alfred defeated the Danes and captured their standard — described as a raven banner said to have been woven by the daughters of Ragnar Loðbrók. The Danes were routed and the banner taken.</li>
+      <li><strong>Anglo-Saxon Chronicle:</strong> multiple entries in the 9th–10th centuries mention raven standards among Danish forces operating in England.</li>
+      <li><strong>Orkneyinga saga</strong> (c. 1230 CE, recording earlier events): Earl Sigurðr Hlöðvisson of Orkney carries the raven banner at the Battle of Clontarf (1014 CE). Three successive banner-carriers are killed; the Earl himself takes the banner and is killed. The saga states that victory follows the banner but death comes to the carrier.</li>
+    </ul>
+  </section>
+
+  <section class="qa-section">
+    <h2>The Raven Banner and Odin</h2>
+    <p><strong class="claim-lore">[lore]</strong> The raven on the battle standard was explicitly connected to Odin's ravens Huginn and Muninn and to Odin's role as the god of battle and death:<sup><a href="#src-2">2</a></sup></p>
+    <ul>
+      <li>Odin was the chooser of the slain — the einherjar killed in battle were taken to Valhöll. A raven standard invoked his attention and favour.</li>
+      <li>Ravens were battlefield birds — they fed on the corpses of the slain. A raven banner in battle was both a symbol of the god and a promise of the bodies the ravens would feast on.</li>
+      <li>The belief that the banner raven "flying" (cloth rippling) predicted victory reflects the bird's role as Odin's messenger: a raven flapping its wings was the god signalling his presence and approval.</li>
+    </ul>
+    <p>The Old Norse kenning <em>hrafnáss</em> (Raven-god) refers to Odin, and raven banners served as a visual proclamation of the army's allegiance to the Allfather.</p>
+  </section>
+
+  <section class="qa-section">
+    <h2>The Banner of Ragnar Loðbrók's Daughters</h2>
+    <p><strong class="claim-lore">[lore]</strong> The Annals of St Neots state that the raven banner captured at Ashdown was woven in a single day by the daughters of Ragnar Loðbrók. The saga tradition adds that the banner had prophetic qualities: it would fly and predict victory when the Danes would triumph; it would droop when they would be defeated. This tradition links the banner to völva (seeress) craft and textile magic — raven imagery woven with prophetic intent.<sup><a href="#src-1">1</a></sup></p>
+  </section>
+
+  <section class="qa-section">
+    <h2>Related Pages</h2>
+    <ul>
+      <li><a href="/lore/norse/huginn-and-muninn/">Huginn and Muninn</a></li>
+      <li><a href="/lore/norse/meaning-of-huginn/">Meaning of Huginn</a></li>
+      <li><a href="/lore/norse/ravens-in-skaldic-poetry/">Ravens in skaldic poetry</a></li>
+      <li><a href="/lore/world/tower-of-london-ravens/">Tower of London ravens</a></li>
+    </ul>
+  </section>
+
+  <section class="qa-faq qa-section" aria-labelledby="faq-h2">
+    <h2 id="faq-h2">Frequently Asked Questions</h2>
+    {faq.map(item => (
+      <details class="qa-faq-item">
+        <summary class="qa-faq-q">{item.q}</summary>
+        <p class="qa-faq-a">{item.a}</p>
+      </details>
+    ))}
+  </section>
+
+  <section class="qa-sources qa-section" aria-labelledby="src-h2">
+    <h2 id="src-h2">Sources</h2>
+    <ol class="qa-src-list">
+      <li id="src-1">Dumville, D.N. & Lapidge, M. (eds., 1985). <em>The Annals of St Neots with Vita Prima Sancti Neoti</em>. Cambridge University Press. — raven banner entry at Battle of Ashdown (871 CE); daughters of Ragnar Loðbrók; prophetic qualities.</li>
+      <li id="src-2">Pálsson, H. & Edwards, P. (trans., 1978). <em>Orkneyinga Saga: The History of the Earls of Orkney</em>. Penguin. — Sigurðr's raven banner at Clontarf (1014 CE); banner-carriers killed; Earl's death.</li>
+    </ol>
+    <p class="qa-claim-note"><strong class="claim-lore">[lore]</strong> named cultural/historical source</p>
+  </section>
+
+</article>
+</BaseLayout>
+
+<style>
+  .qa-page { max-width: 820px; margin: 0 auto; padding: 2rem 1.25rem 4rem; color: var(--iron-ink, #e8e4d8); font-family: 'Inter', sans-serif; line-height: 1.72; }
+  .qa-breadcrumb ol { display: flex; flex-wrap: wrap; gap: .25rem; list-style: none; padding: 0; margin: 0 0 2rem; font-size: .8rem; color: var(--ink-soft, #8a8070); }
+  .qa-breadcrumb a { color: var(--gold-500, #d4ae5a); text-decoration: none; }
+  .qa-pillar { font-size: .72rem; letter-spacing: .12em; text-transform: uppercase; color: var(--gold-500, #d4ae5a); margin: 0 0 .4rem; }
+  .qa-page h1 { font-family: 'Cormorant Garamond', serif; font-size: clamp(2rem, 5vw, 3rem); font-weight: 700; color: #fff; margin: 0 0 2rem; line-height: 1.1; }
+  .qa-snippet { background: rgba(212,174,90,.08); border-left: 3px solid var(--gold-500, #d4ae5a); border-radius: 0 6px 6px 0; padding: 1rem 1.25rem; margin-bottom: 2.5rem; font-size: 1.03rem; }
+  .qa-section { margin-bottom: 2.5rem; }
+  .qa-section h2 { font-family: 'Cormorant Garamond', serif; font-size: 1.5rem; font-weight: 600; color: #fff; margin: 0 0 .9rem; border-bottom: 1px solid rgba(212,174,90,.2); padding-bottom: .4rem; }
+  .qa-section p { margin: 0 0 1rem; font-size: .97rem; }
+  .qa-section ul { padding-left: 1.25rem; margin: 0 0 1rem; }
+  .qa-section li { margin-bottom: .4rem; font-size: .95rem; }
+  .claim-lore { color: #c4a26a; font-style: normal; font-size: .78rem; }
+  a[href] { color: var(--gold-500, #d4ae5a); }
+  .qa-faq-item { border-bottom: 1px solid rgba(255,255,255,.07); }
+  .qa-faq-q { cursor: pointer; padding: .9rem 0; font-size: .97rem; font-weight: 500; color: #fff; list-style: none; }
+  .qa-faq-q::before { content: '+ '; color: var(--gold-500, #d4ae5a); font-weight: 700; }
+  details[open] .qa-faq-q::before { content: '− '; }
+  .qa-faq-a { margin: 0 0 1rem; line-height: 1.7; font-size: .93rem; color: var(--ink-soft, #c8c0b0); }
+  .qa-src-list { padding-left: 1.25rem; margin: 0 0 1rem; }
+  .qa-src-list li { margin-bottom: .6rem; font-size: .82rem; color: var(--ink-soft, #8a8070); line-height: 1.6; }
+  .qa-claim-note { font-size: .78rem; color: var(--ink-soft, #605848); border-top: 1px solid rgba(255,255,255,.06); padding-top: .75rem; }
+</style>

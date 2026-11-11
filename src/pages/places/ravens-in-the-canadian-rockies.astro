@@ -1,0 +1,144 @@
+---
+/**
+ * Places — Ravens in the Canadian Rockies
+ * PLC·09
+ * Primary keyword: ravens in the Canadian Rockies
+ * Secondary: canadian rockies raven, raven banff, raven jasper, raven rocky mountains
+ */
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const title       = 'Ravens in the Canadian Rockies: Year-Round Residents of the Mountain Parks';
+const description = 'The Canadian Rockies — including Banff, Jasper, Yoho, and Kootenay National Parks — support thriving raven populations sustained by tourism infrastructure, wildlife carrion, and pristine montane habitat. This page examines raven life in the Rockies, their winter survival strategies, and their cultural significance to Indigenous peoples of the region.';
+const path        = '/places/ravens-in-the-canadian-rockies/';
+
+const breadcrumbs = [
+  { name: 'Home',   url: '/' },
+  { name: 'Places', url: '/places/' },
+  { name: 'Ravens in the Canadian Rockies', url: path },
+];
+
+const faq = [
+  { q: 'Are ravens common in Banff and Jasper?', a: 'Yes — common ravens are year-round residents throughout Banff, Jasper, Yoho, and Kootenay National Parks. They are among the most reliably visible birds in the mountain parks in all seasons, especially around park townsite centres (Banff, Jasper, Lake Louise) where food availability from tourist facilities, food waste, and wildlife carcasses is high. Ravens have adjusted their behaviour to exploit the year-round human presence in the parks — Banff National Park ravens are notably habituated to humans and can be regularly observed at ski areas, roadsides, and park facilities.' },
+  { q: 'What do ravens eat in the Canadian Rockies?', a: 'Rockies ravens are opportunistic omnivores exploiting diverse food sources across seasons. In winter: elk and deer carrion (elk are the dominant large ungulate; wolf and cougar kills provide important carcass resources); refuse and food scraps at park facilities; and cached food items. In summer: invertebrates; small mammals; bird eggs and nestlings; berries; and supplementary carrion. The wolf reintroduction to Yellowstone (1995) demonstrated the raven-wolf mutualism clearly; the same relationship exists in the Rockies where wolf packs provide raven access to large carcasses year-round.' },
+  { q: 'Do ravens in Banff interact with wolves?', a: 'Yes — the Bow Valley wolf packs and other Rockies wolf populations regularly share carcasses with ravens. Ravens follow wolf packs, monitoring their movements from above and converging on kills within hours or days. The raven-wolf relationship is mutually beneficial: ravens benefit from wolf-killed carcasses they cannot open themselves; wolves may benefit from raven alarm calls alerting them to other predators or human activity. Research in Yellowstone and other Rocky Mountain wolf territories has documented consistent raven attendance at wolf kills — typically 3–10 ravens present at a carcass within 24 hours of the kill.' },
+];
+---
+
+<BaseLayout title={title} description={description} path={path} ogType="article"
+  datePublished="2026-11-08" dateModified="2026-11-08"
+  breadcrumbs={breadcrumbs} faq={faq} pageType="Article">
+
+<article class="qa-page">
+
+  <nav class="qa-breadcrumb" aria-label="Breadcrumb">
+    <ol>
+      {breadcrumbs.map((b, i) => (
+        <li>
+          {i < breadcrumbs.length - 1
+            ? <><a href={b.url}>{b.name}</a><span aria-hidden="true"> › </span></>
+            : <span aria-current="page">{b.name}</span>}
+        </li>
+      ))}
+    </ol>
+  </nav>
+
+  <header class="qa-header">
+    <p class="qa-pillar">Places · PLC·09</p>
+    <h1>Ravens in the Canadian Rockies: Year-Round Residents of the Mountain Parks</h1>
+  </header>
+
+  <section class="qa-snippet" aria-label="Direct answer">
+    <p><strong class="claim-science">[science]</strong> Common ravens are year-round residents of the Canadian Rockies, thriving in Banff, Jasper, and adjacent parks. They exploit wolf and cougar kills for carrion, tourism infrastructure for food supplementation, and montane cliff habitat for nesting. The raven-wolf mutualism is well-documented in Rocky Mountain ecosystems — ravens follow pack movements and are among the first scavengers at ungulate kills.</p>
+  </section>
+
+  <section class="qa-section">
+    <h2>Habitat and Year-Round Residency</h2>
+    <p><strong class="claim-science">[science]</strong> The Canadian Rockies provide diverse raven habitat across a dramatic elevational gradient — from montane valley floors at 1,000–1,500 m to alpine zones above 2,500 m. Ravens occur throughout this range but concentrate in areas where food availability is highest:<sup><a href="#src-1">1</a></sup></p>
+    <ul>
+      <li><strong>Townsites and infrastructure:</strong> Banff, Jasper, and Lake Louise townsites attract large numbers of ravens year-round, particularly near waste facilities, ski areas, and food services. Rockies ravens are highly human-habituated.</li>
+      <li><strong>Valley bottoms:</strong> ungulate concentration areas (elk wintering grounds, wolf territories) provide carrion pulses, especially in late winter when winter-weakened animals die.</li>
+      <li><strong>Cliff habitat:</strong> limestone and quartzite cliff faces throughout the ranges provide nesting ledges for breeding pairs.</li>
+    </ul>
+    <p>Winter ravens in the Rockies can experience temperatures below –30°C. Their survival strategies include communal roosting (reducing heat loss through body-heat sharing), continuous foraging during daylight hours, and exploitation of geothermal features (hot springs near Banff townsite remain snow-free and attract insects year-round).</p>
+  </section>
+
+  <section class="qa-section">
+    <h2>Ravens and the Wolf-Elk-Raven Triangle</h2>
+    <p><strong class="claim-science">[science]</strong> The reintroduction of wolves to Yellowstone (1995) and their subsequent spread through the Rockies has been studied extensively for its ecological effects, including on raven populations. The raven-wolf relationship in Rocky Mountain ecosystems:<sup><a href="#src-2">2</a></sup></p>
+    <ul>
+      <li>Ravens aggregate at wolf kills — research at Yellowstone documented a mean of 5–7 ravens per active wolf kill in winter, with peaks of 30+ birds at large carcasses.</li>
+      <li>Ravens lose significant portions of their carcass access when wolves are absent — without wolves, elk and other large ungulate carcasses are uncommon and ravens must rely on road-killed animals and other supplementary sources.</li>
+      <li>Ravens follow wolf packs during active hunting phases, monitoring from the air — this behaviour has been documented in both Yellowstone and the Bow Valley (Banff) wolf pack territories.</li>
+      <li>The energetics work in both directions: studies estimate that ravens remove 10–35% of the biomass at wolf kills before wolves return for subsequent feeding bouts.</li>
+    </ul>
+  </section>
+
+  <section class="qa-section">
+    <h2>Breeding in the Mountain Parks</h2>
+    <p><strong class="claim-science">[science]</strong> Raven breeding in the Canadian Rockies follows the standard pattern — early nesting (February–March at lower elevations, March–April at higher elevations) on cliff ledges. Some pairs nest on human structures including bridges, power pylons, and building ledges in park townsites — a relatively recent adaptation to the permanent human presence.<sup><a href="#src-1">1</a></sup></p>
+    <p>Clutch size (3–6 eggs) is consistent with raven populations elsewhere. Chick survival in the Rockies is likely influenced by winter severity — late cold snaps in March can challenge incubating females, and early summer snowfall can stress newly fledged young.</p>
+  </section>
+
+  <section class="qa-section">
+    <h2>Ravens in Indigenous Traditions of the Rockies Region</h2>
+    <p><strong class="claim-lore">[lore]</strong> The Canadian Rockies lie within the traditional territories of several First Nations including the Stoney Nakoda, Blackfoot Confederacy (Siksika, Kainai, Piikani), and Ktunaxa, among others. Ravens feature in the oral traditions and spiritual beliefs of these nations, though the specific traditions are not publicly documented in the same detail as the better-known Northwest Coast Raven mythology.<sup><a href="#src-3">3</a></sup></p>
+    <p>The Blackfoot peoples of the eastern Rockies foothills had well-developed bird omens and spirit animal traditions; corvids — including ravens — were considered to carry messages between worlds. The raven's presence at winter kills and its year-round visibility in the mountain landscape made it a consistent presence in the Indigenous relationship with the Rockies ecosystem.</p>
+  </section>
+
+  <section class="qa-section">
+    <h2>Related Pages</h2>
+    <ul>
+      <li><a href="/places/ravens-in-alaska/">Ravens in Alaska</a></li>
+      <li><a href="/places/ravens-in-yellowstone/">Ravens in Yellowstone</a></li>
+      <li><a href="/behaviour/raven-and-wolves/">Ravens and wolves</a></li>
+      <li><a href="/questions/do-ravens-get-along-with-other-animals/">Do ravens get along with other animals?</a></li>
+    </ul>
+  </section>
+
+  <section class="qa-faq qa-section" aria-labelledby="faq-h2">
+    <h2 id="faq-h2">Frequently Asked Questions</h2>
+    {faq.map(item => (
+      <details class="qa-faq-item">
+        <summary class="qa-faq-q">{item.q}</summary>
+        <p class="qa-faq-a">{item.a}</p>
+      </details>
+    ))}
+  </section>
+
+  <section class="qa-sources qa-section" aria-labelledby="src-h2">
+    <h2 id="src-h2">Sources</h2>
+    <ol class="qa-src-list">
+      <li id="src-1">Boarman, W.I. & Heinrich, B. (1999). Common Raven (<em>Corvus corax</em>). In Poole, A. (ed.), <em>The Birds of North America</em>, No. 476. Cornell Lab of Ornithology. — raven ecology, mountain habitat, winter survival, nesting in human structures.</li>
+      <li id="src-2">Heinrich, B. & Marzluff, J. (1991). Do common ravens yell because they want to attract others? <em>Behavioral Ecology and Sociobiology</em>, 28(1), 13–21. — raven-wolf relationship, carcass sharing, recruitment calls; Rockies raven-wolf mutualism context.</li>
+      <li id="src-3">Reeves, B.O.K. & Kennedy, M.A. (eds.) (1993). <em>Kunaitupii: Coming Together on Native Sacred Sites</em>. University of Calgary. — Indigenous peoples and sacred landscape in the Canadian Rockies; general context for Blackfoot and Stoney Nakoda traditions.</li>
+    </ol>
+    <p class="qa-claim-note"><strong class="claim-science">[science]</strong> peer-reviewed data · <strong class="claim-lore">[lore]</strong> named cultural/historical source</p>
+  </section>
+
+</article>
+</BaseLayout>
+
+<style>
+  .qa-page { max-width: 820px; margin: 0 auto; padding: 2rem 1.25rem 4rem; color: var(--iron-ink, #e8e4d8); font-family: 'Inter', sans-serif; line-height: 1.72; }
+  .qa-breadcrumb ol { display: flex; flex-wrap: wrap; gap: .25rem; list-style: none; padding: 0; margin: 0 0 2rem; font-size: .8rem; color: var(--ink-soft, #8a8070); }
+  .qa-breadcrumb a { color: var(--gold-500, #d4ae5a); text-decoration: none; }
+  .qa-pillar { font-size: .72rem; letter-spacing: .12em; text-transform: uppercase; color: var(--gold-500, #d4ae5a); margin: 0 0 .4rem; }
+  .qa-page h1 { font-family: 'Cormorant Garamond', serif; font-size: clamp(2rem, 5vw, 3rem); font-weight: 700; color: #fff; margin: 0 0 2rem; line-height: 1.1; }
+  .qa-snippet { background: rgba(212,174,90,.08); border-left: 3px solid var(--gold-500, #d4ae5a); border-radius: 0 6px 6px 0; padding: 1rem 1.25rem; margin-bottom: 2.5rem; font-size: 1.03rem; }
+  .qa-section { margin-bottom: 2.5rem; }
+  .qa-section h2 { font-family: 'Cormorant Garamond', serif; font-size: 1.5rem; font-weight: 600; color: #fff; margin: 0 0 .9rem; border-bottom: 1px solid rgba(212,174,90,.2); padding-bottom: .4rem; }
+  .qa-section p { margin: 0 0 1rem; font-size: .97rem; }
+  .qa-section ul { padding-left: 1.25rem; margin: 0 0 1rem; }
+  .qa-section li { margin-bottom: .4rem; font-size: .95rem; }
+  .claim-science { color: #7ab9e0; font-style: normal; font-size: .78rem; }
+  .claim-lore { color: #c49a3c; font-style: normal; font-size: .78rem; }
+  a[href] { color: var(--gold-500, #d4ae5a); }
+  .qa-faq-item { border-bottom: 1px solid rgba(255,255,255,.07); }
+  .qa-faq-q { cursor: pointer; padding: .9rem 0; font-size: .97rem; font-weight: 500; color: #fff; list-style: none; }
+  .qa-faq-q::before { content: '+ '; color: var(--gold-500, #d4ae5a); font-weight: 700; }
+  details[open] .qa-faq-q::before { content: '− '; }
+  .qa-faq-a { margin: 0 0 1rem; line-height: 1.7; font-size: .93rem; color: var(--ink-soft, #c8c0b0); }
+  .qa-src-list { padding-left: 1.25rem; margin: 0 0 1rem; }
+  .qa-src-list li { margin-bottom: .6rem; font-size: .82rem; color: var(--ink-soft, #8a8070); line-height: 1.6; }
+  .qa-claim-note { font-size: .78rem; color: var(--ink-soft, #605848); border-top: 1px solid rgba(255,255,255,.06); padding-top: .75rem; }
+</style>

@@ -1,0 +1,152 @@
+---
+/**
+ * Q&A — Do ravens get along with other animals?
+ * Primary keyword: do ravens get along with other animals
+ * Secondary: raven interspecies relationships, raven and dogs, raven and wolves
+ */
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const title       = 'Do Ravens Get Along with Other Animals?';
+const description = 'Ravens have complex relationships with other animals — mutualistic with wolves and dogs, competitive with other scavengers, and sometimes playful with large mammals. This page examines raven interspecies relationships in the wild and in captivity.';
+const path        = '/questions/do-ravens-get-along-with-other-animals/';
+
+const breadcrumbs = [
+  { name: 'Home',      url: '/' },
+  { name: 'Questions', url: '/questions/' },
+  { name: 'Do Ravens Get Along with Other Animals?', url: path },
+];
+
+const faq = [
+  { q: 'Do ravens and wolves get along?', a: 'Ravens and wolves have a well-documented mutualistic relationship. Ravens follow wolf packs to access carcasses, while wolves\' hunting creates the carrion that ravens depend on in winter. In Yellowstone, ravens have been observed alerting wolves to carcasses they have found by flying toward the wolves and calling. Ravens play with wolf pups, engage in apparent games of tag with adult wolves, and tolerate close approach from wolves at carcasses — far more than they would tolerate from most other carnivores. The relationship is not merely exploitation; it appears to have genuine mutualistic elements.' },
+  { q: 'Do ravens get along with dogs?', a: 'Ravens show a range of responses to domestic dogs — from bold opportunism (stealing food from dogs, playing near dogs) to avoidance. In areas where ravens have learned that dogs are associated with humans and food (farms, campsites), they may approach closely. Wild ravens have been documented playing with domesticated dogs, particularly in winter when other social stimulation is reduced. Ravens raised by humans sometimes form strong affiliations with dogs and cats in the household, treating them as social companions. The raven-dog relationship in rural communities is long-established — dogs and ravens both scavenge from the same human waste and carcasses.' },
+  { q: 'Do ravens bother other birds?', a: 'Ravens are dominant over most other birds at food sources owing to their large size. They displace smaller corvids (crows, jackdaws, magpies), gulls, and raptors from carcasses. Ravens are mobbed by crows and smaller corvids but are generally undeterred. At breeding season, ravens occasionally prey on eggs and nestlings of other birds, particularly ground-nesters. They have complex relationships with large raptors (golden eagles): ravens mob eagles persistently, and the two species are both competitors for large carcasses. Ravens and eagles have been observed in what appear to be play interactions (aerial chasing) in some field accounts.' },
+];
+---
+
+<BaseLayout title={title} description={description} path={path} ogType="article"
+  datePublished="2026-11-07" dateModified="2026-11-07"
+  breadcrumbs={breadcrumbs} faq={faq} pageType="Article">
+
+<article class="qa-page">
+
+  <nav class="qa-breadcrumb" aria-label="Breadcrumb">
+    <ol>
+      {breadcrumbs.map((b, i) => (
+        <li>
+          {i < breadcrumbs.length - 1
+            ? <><a href={b.url}>{b.name}</a><span aria-hidden="true"> › </span></>
+            : <span aria-current="page">{b.name}</span>}
+        </li>
+      ))}
+    </ol>
+  </nav>
+
+  <header class="qa-header">
+    <p class="qa-pillar">Question · Biology</p>
+    <h1>Do Ravens Get Along with Other Animals?</h1>
+  </header>
+
+  <section class="qa-snippet" aria-label="Direct answer">
+    <p><strong class="claim-science">[science]</strong> Ravens have varied interspecies relationships: genuinely mutualistic with wolves (food access exchange), opportunistic but sometimes playful with large mammals and dogs, dominant over smaller scavengers, and complex with large raptors. Ravens' social intelligence extends across species — they are curious, manipulative, and adaptable in their interactions with virtually every large animal in their environment.</p>
+  </section>
+
+  <section class="qa-section">
+    <h2>Ravens and Wolves</h2>
+    <p><strong class="claim-science">[science]</strong> The raven-wolf relationship is the most studied raven interspecies interaction. The key dynamics:<sup><a href="#src-1">1</a></sup><sup><a href="#src-2">2</a></sup></p>
+    <ul>
+      <li>Ravens follow wolf packs during winter, accessing carcasses from wolf kills that ravens could not open alone.</li>
+      <li>Ravens provide wolves with early detection of carcasses (flying toward them, calling) — a genuine mutualistic benefit.</li>
+      <li>Ravens alarm-call when wolves approach their roosting area, effectively acting as sentinel birds for wolf activity.</li>
+      <li>Ravens play with wolves — aerial interactions, ground games of approach-flee — particularly with juvenile wolves. This interspecies play has been extensively documented in Yellowstone ravens.</li>
+      <li>Ravens steal food directly from wolves — darting in to grab pieces while wolves feed, often working in groups to distract the wolf.</li>
+    </ul>
+    <p>Heinrich estimated that ravens could consume up to 25% of a wolf kill's meat before wolves and other scavengers dispersed it — a significant energetic contribution from the wolves' perspective, though the net energy of the mutualism is disputed.</p>
+  </section>
+
+  <section class="qa-section">
+    <h2>Ravens and Other Carnivores</h2>
+    <p><strong class="claim-science">[science]</strong> Ravens interact with other large carnivores in broadly similar ways to their wolf interactions:<sup><a href="#src-1">1</a></sup></p>
+    <ul>
+      <li><strong>Brown/Grizzly Bear:</strong> ravens follow bears to access carrion and food bears disturb. At bear-killed carcasses, ravens maintain a respectful distance but are persistent in stealing morsels.</li>
+      <li><strong>Coyote:</strong> similar dynamic to wolves, though coyotes are smaller and ravens are more aggressive with them. Ravens have been observed manipulating coyotes — diving at them, pulling their tails — in apparent play or food-access strategies.</li>
+      <li><strong>Red Fox:</strong> at carcasses, ravens dominate foxes, displacing them readily. Ravens will cache food in areas foxes frequent and attempt to monitor fox movements relative to their caches.</li>
+    </ul>
+  </section>
+
+  <section class="qa-section">
+    <h2>Ravens and Other Birds</h2>
+    <p><strong class="claim-science">[science]</strong> At food sources, ravens dominate most other birds:<sup><a href="#src-1">1</a></sup></p>
+    <ul>
+      <li><strong>Smaller corvids (crows, jackdaws, magpies):</strong> displaced by size; smaller corvids often mob ravens.</li>
+      <li><strong>Gulls:</strong> displaced at carcasses; ravens will harass gulls carrying food.</li>
+      <li><strong>Vultures:</strong> New World and Old World vultures compete with ravens for carrion; large vultures typically displace ravens from large carcasses.</li>
+      <li><strong>Golden Eagle:</strong> complex relationship — ravens mob eagles, and both species compete for carcasses. Eagles can kill ravens but rarely do so except defensively.</li>
+    </ul>
+  </section>
+
+  <section class="qa-section">
+    <h2>Play Across Species</h2>
+    <p><strong class="claim-science">[science]</strong> Ravens are unusual among birds in their willingness to engage in apparent play with animals of other species. Documented interspecies play includes:<sup><a href="#src-1">1</a></sup></p>
+    <ul>
+      <li>Play-chasing with wolves and young bears.</li>
+      <li>Apparent games of tag with domestic dogs.</li>
+      <li>Diving at the tails or ears of large ungulates (horses, cattle, moose) in ways that look playful rather than predatory.</li>
+    </ul>
+    <p>Whether these interactions are "true play" (intrinsically motivated, pleasurable) or functional manipulation (testing responses, keeping animals at accessible distances for food access) is debated. The raven's evident enjoyment of aerial acrobatics suggests genuine play motivation, but the distinction may be moot — motivated behaviour can be both intrinsically rewarding and functionally useful.</p>
+  </section>
+
+  <section class="qa-section">
+    <h2>Related Pages</h2>
+    <ul>
+      <li><a href="/behaviour/raven-and-wolves/">Ravens and wolves</a></li>
+      <li><a href="/behaviour/raven-play/">Raven play behaviour</a></li>
+      <li><a href="/places/ravens-in-yellowstone/">Ravens in Yellowstone</a></li>
+      <li><a href="/questions/do-ravens-have-predators/">Do ravens have predators?</a></li>
+    </ul>
+  </section>
+
+  <section class="qa-faq qa-section" aria-labelledby="faq-h2">
+    <h2 id="faq-h2">Frequently Asked Questions</h2>
+    {faq.map(item => (
+      <details class="qa-faq-item">
+        <summary class="qa-faq-q">{item.q}</summary>
+        <p class="qa-faq-a">{item.a}</p>
+      </details>
+    ))}
+  </section>
+
+  <section class="qa-sources qa-section" aria-labelledby="src-h2">
+    <h2 id="src-h2">Sources</h2>
+    <ol class="qa-src-list">
+      <li id="src-1">Boarman, W.I. & Heinrich, B. (1999). Common Raven (<em>Corvus corax</em>). In Poole, A. (ed.), <em>The Birds of North America</em>, No. 476. Cornell Lab of Ornithology. — interspecies relationships, play with mammals, carcass interactions.</li>
+      <li id="src-2">Heinrich, B. (1989). <em>Ravens in Winter</em>. Simon & Schuster. — raven-wolf mutualism, coyote and bear interactions, field observations.</li>
+    </ol>
+    <p class="qa-claim-note"><strong class="claim-science">[science]</strong> peer-reviewed or field-guide data</p>
+  </section>
+
+</article>
+</BaseLayout>
+
+<style>
+  .qa-page { max-width: 820px; margin: 0 auto; padding: 2rem 1.25rem 4rem; color: var(--iron-ink, #e8e4d8); font-family: 'Inter', sans-serif; line-height: 1.72; }
+  .qa-breadcrumb ol { display: flex; flex-wrap: wrap; gap: .25rem; list-style: none; padding: 0; margin: 0 0 2rem; font-size: .8rem; color: var(--ink-soft, #8a8070); }
+  .qa-breadcrumb a { color: var(--gold-500, #d4ae5a); text-decoration: none; }
+  .qa-pillar { font-size: .72rem; letter-spacing: .12em; text-transform: uppercase; color: var(--gold-500, #d4ae5a); margin: 0 0 .4rem; }
+  .qa-page h1 { font-family: 'Cormorant Garamond', serif; font-size: clamp(2rem, 5vw, 3rem); font-weight: 700; color: #fff; margin: 0 0 2rem; line-height: 1.1; }
+  .qa-snippet { background: rgba(212,174,90,.08); border-left: 3px solid var(--gold-500, #d4ae5a); border-radius: 0 6px 6px 0; padding: 1rem 1.25rem; margin-bottom: 2.5rem; font-size: 1.03rem; }
+  .qa-section { margin-bottom: 2.5rem; }
+  .qa-section h2 { font-family: 'Cormorant Garamond', serif; font-size: 1.5rem; font-weight: 600; color: #fff; margin: 0 0 .9rem; border-bottom: 1px solid rgba(212,174,90,.2); padding-bottom: .4rem; }
+  .qa-section p { margin: 0 0 1rem; font-size: .97rem; }
+  .qa-section ul { padding-left: 1.25rem; margin: 0 0 1rem; }
+  .qa-section li { margin-bottom: .4rem; font-size: .95rem; }
+  .claim-science { color: #7ab9e0; font-style: normal; font-size: .78rem; }
+  a[href] { color: var(--gold-500, #d4ae5a); }
+  .qa-faq-item { border-bottom: 1px solid rgba(255,255,255,.07); }
+  .qa-faq-q { cursor: pointer; padding: .9rem 0; font-size: .97rem; font-weight: 500; color: #fff; list-style: none; }
+  .qa-faq-q::before { content: '+ '; color: var(--gold-500, #d4ae5a); font-weight: 700; }
+  details[open] .qa-faq-q::before { content: '− '; }
+  .qa-faq-a { margin: 0 0 1rem; line-height: 1.7; font-size: .93rem; color: var(--ink-soft, #c8c0b0); }
+  .qa-src-list { padding-left: 1.25rem; margin: 0 0 1rem; }
+  .qa-src-list li { margin-bottom: .6rem; font-size: .82rem; color: var(--ink-soft, #8a8070); line-height: 1.6; }
+  .qa-claim-note { font-size: .78rem; color: var(--ink-soft, #605848); border-top: 1px solid rgba(255,255,255,.06); padding-top: .75rem; }
+</style>

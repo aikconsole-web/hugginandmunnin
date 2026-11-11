@@ -1,0 +1,133 @@
+---
+/**
+ * Species sub-page — White-necked Raven nesting
+ * SPC·07n
+ * Primary keyword: white-necked raven nesting
+ * Secondary: white-necked raven nest, white-necked raven breeding, corvus albicollis eggs
+ */
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+
+const title       = 'White-necked Raven Nesting: Breeding and Nest Sites';
+const description = 'The White-necked Raven nests on cliff faces and rocky outcrops throughout its montane African range. This page covers nest structure, egg number, incubation, and the breeding season of this largest African corvid.';
+const path        = '/species/white-necked-raven/nesting/';
+
+const breadcrumbs = [
+  { name: 'Home',               url: '/' },
+  { name: 'Species',            url: '/species/' },
+  { name: 'White-necked Raven', url: '/species/white-necked-raven/' },
+  { name: 'Nesting',            url: path },
+];
+
+const faq = [
+  { q: 'Where does the White-necked Raven nest?', a: 'The White-necked Raven nests almost exclusively on cliff faces and rocky outcrops. It is a strongly cliff-associated species, and its nest sites are typically on ledges or in crevices on steep rock faces in montane habitats across eastern and southern Africa. In areas where natural cliffs are scarce, it may nest on large buildings, bridges, or rock quarry faces.' },
+  { q: 'When does the White-necked Raven breed?', a: 'Breeding season varies across the species\' wide range. In East Africa (Kenya, Tanzania, Ethiopia), breeding is documented from approximately July to October — coinciding with the drier periods between the main rains. In South Africa, breeding occurs from about July to November. These timing differences reflect local climatic conditions rather than a fixed continental calendar.' },
+  { q: 'How many eggs does the White-necked Raven lay?', a: 'Clutch size is typically 3–5 eggs, consistent with other large raven species. Eggs are pale blue-green to greenish-white, heavily blotched with brown and grey. Incubation is approximately 20–21 days, primarily by the female while the male provides food. Both parents care for the young after hatching; fledging occurs at approximately 6 weeks.' },
+];
+---
+
+<BaseLayout title={title} description={description} path={path} ogType="article"
+  datePublished="2026-11-07" dateModified="2026-11-07"
+  breadcrumbs={breadcrumbs} faq={faq} pageType="Article">
+
+<article class="qa-page">
+
+  <nav class="qa-breadcrumb" aria-label="Breadcrumb">
+    <ol>
+      {breadcrumbs.map((b, i) => (
+        <li>
+          {i < breadcrumbs.length - 1
+            ? <><a href={b.url}>{b.name}</a><span aria-hidden="true"> › </span></>
+            : <span aria-current="page">{b.name}</span>}
+        </li>
+      ))}
+    </ol>
+  </nav>
+
+  <header class="qa-header">
+    <p class="qa-pillar">Species Sub-page · SPC·07n</p>
+    <h1>White-necked Raven Nesting: Breeding and Nest Sites</h1>
+  </header>
+
+  <section class="qa-snippet" aria-label="Direct answer">
+    <p><strong class="claim-science">[science]</strong> The White-necked Raven (<em>Corvus albicollis</em>) nests on cliff faces and rocky outcrops across the mountains of eastern and southern Africa. The nest is a large stick structure on a ledge or in a cliff crevice. Clutch size is typically 3–5 eggs. Breeding season varies by location: July–October in East Africa; July–November in South Africa.</p>
+  </section>
+
+  <section class="qa-section">
+    <h2>Nest Sites</h2>
+    <p><strong class="claim-science">[science]</strong> The White-necked Raven is primarily a cliff-nester throughout its range:<sup><a href="#src-1">1</a></sup></p>
+    <ul>
+      <li><strong>Primary sites:</strong> ledges and crevices on steep cliff faces in highland gorges, escarpments, and rocky mountains — the Rift Valley escarpment, Drakensberg, Ethiopian highlands, and East African uplands.</li>
+      <li><strong>Human structures:</strong> occasionally nests on large buildings and bridges in areas where natural cliff sites are limited.</li>
+    </ul>
+    <p>Pairs maintain strong site fidelity — returning to the same cliff face and often the same ledge in successive years, adding material to an existing nest. Well-used nests become large over time.</p>
+  </section>
+
+  <section class="qa-section">
+    <h2>Nest Structure and Eggs</h2>
+    <p><strong class="claim-science">[science]</strong> The nest is a large platform of sticks and branches, lined with softer materials including wool (from sheep in pastoral areas), hair, grass, and bark. Clutch: typically 3–5 eggs. Eggs are pale blue-green to greenish-white with heavy brown and grey blotching. Incubation: approximately 20–21 days by the female with male provisioning. Chicks fledge at approximately 6 weeks; post-fledging dependence continues for several weeks.<sup><a href="#src-1">1</a></sup></p>
+  </section>
+
+  <section class="qa-section">
+    <h2>Breeding Season</h2>
+    <p><strong class="claim-science">[science]</strong> Breeding timing varies across the species' range:<sup><a href="#src-1">1</a></sup></p>
+    <ul>
+      <li><strong>East Africa (Kenya, Tanzania, Ethiopia):</strong> breeding documented July–October, coinciding with the inter-monsoon dry season.</li>
+      <li><strong>Southern Africa (South Africa, Zimbabwe):</strong> breeding July–November — late dry season into early summer.</li>
+      <li><strong>Generalisation:</strong> the species tends to breed in the drier part of its local annual cycle, consistent with the pattern of other large African corvids.</li>
+    </ul>
+  </section>
+
+  <section class="qa-section">
+    <h2>Related Pages</h2>
+    <ul>
+      <li><a href="/species/white-necked-raven/">White-necked Raven — species hub</a></li>
+      <li><a href="/species/white-necked-raven/diet/">White-necked Raven diet</a></li>
+      <li><a href="/compare/white-necked-raven-vs-pied-crow/">White-necked Raven vs Pied Crow</a></li>
+      <li><a href="/questions/when-do-ravens-nest/">When do ravens nest?</a></li>
+    </ul>
+  </section>
+
+  <section class="qa-faq qa-section" aria-labelledby="faq-h2">
+    <h2 id="faq-h2">Frequently Asked Questions</h2>
+    {faq.map(item => (
+      <details class="qa-faq-item">
+        <summary class="qa-faq-q">{item.q}</summary>
+        <p class="qa-faq-a">{item.a}</p>
+      </details>
+    ))}
+  </section>
+
+  <section class="qa-sources qa-section" aria-labelledby="src-h2">
+    <h2 id="src-h2">Sources</h2>
+    <ol class="qa-src-list">
+      <li id="src-1">del Hoyo, J. et al. (eds., 2009). <em>Handbook of the Birds of the World</em>, vol. 14. Lynx Edicions. — White-necked Raven species account; nest, eggs, breeding season.</li>
+    </ol>
+    <p class="qa-claim-note"><strong class="claim-science">[science]</strong> peer-reviewed study or field-guide data</p>
+  </section>
+
+</article>
+</BaseLayout>
+
+<style>
+  .qa-page { max-width: 820px; margin: 0 auto; padding: 2rem 1.25rem 4rem; color: var(--iron-ink, #e8e4d8); font-family: 'Inter', sans-serif; line-height: 1.72; }
+  .qa-breadcrumb ol { display: flex; flex-wrap: wrap; gap: .25rem; list-style: none; padding: 0; margin: 0 0 2rem; font-size: .8rem; color: var(--ink-soft, #8a8070); }
+  .qa-breadcrumb a { color: var(--gold-500, #d4ae5a); text-decoration: none; }
+  .qa-pillar { font-size: .72rem; letter-spacing: .12em; text-transform: uppercase; color: var(--gold-500, #d4ae5a); margin: 0 0 .4rem; }
+  .qa-page h1 { font-family: 'Cormorant Garamond', serif; font-size: clamp(2rem, 5vw, 3rem); font-weight: 700; color: #fff; margin: 0 0 2rem; line-height: 1.1; }
+  .qa-snippet { background: rgba(212,174,90,.08); border-left: 3px solid var(--gold-500, #d4ae5a); border-radius: 0 6px 6px 0; padding: 1rem 1.25rem; margin-bottom: 2.5rem; font-size: 1.03rem; }
+  .qa-section { margin-bottom: 2.5rem; }
+  .qa-section h2 { font-family: 'Cormorant Garamond', serif; font-size: 1.5rem; font-weight: 600; color: #fff; margin: 0 0 .9rem; border-bottom: 1px solid rgba(212,174,90,.2); padding-bottom: .4rem; }
+  .qa-section p { margin: 0 0 1rem; font-size: .97rem; }
+  .qa-section ul { padding-left: 1.25rem; margin: 0 0 1rem; }
+  .qa-section li { margin-bottom: .4rem; font-size: .95rem; }
+  .claim-science { color: #7ab9e0; font-style: normal; font-size: .78rem; }
+  a[href] { color: var(--gold-500, #d4ae5a); }
+  .qa-faq-item { border-bottom: 1px solid rgba(255,255,255,.07); }
+  .qa-faq-q { cursor: pointer; padding: .9rem 0; font-size: .97rem; font-weight: 500; color: #fff; list-style: none; }
+  .qa-faq-q::before { content: '+ '; color: var(--gold-500, #d4ae5a); font-weight: 700; }
+  details[open] .qa-faq-q::before { content: '− '; }
+  .qa-faq-a { margin: 0 0 1rem; line-height: 1.7; font-size: .93rem; color: var(--ink-soft, #c8c0b0); }
+  .qa-src-list { padding-left: 1.25rem; margin: 0 0 1rem; }
+  .qa-src-list li { margin-bottom: .6rem; font-size: .82rem; color: var(--ink-soft, #8a8070); line-height: 1.6; }
+  .qa-claim-note { font-size: .78rem; color: var(--ink-soft, #605848); border-top: 1px solid rgba(255,255,255,.06); padding-top: .75rem; }
+</style>

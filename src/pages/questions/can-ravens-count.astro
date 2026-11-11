@@ -1,0 +1,133 @@
+---
+/**
+ * Q&A — Can ravens count?
+ * Primary keyword: can ravens count
+ * Secondary: raven numeracy, raven number sense, do birds count
+ */
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const title       = 'Can Ravens Count? Numeracy and Number Sense in Ravens';
+const description = 'Ravens show evidence of numerical abilities — distinguishing larger from smaller quantities, tracking number of cache events, and even demonstrating rudimentary symbolic number comprehension. This page examines what science has found about raven numeracy.';
+const path        = '/questions/can-ravens-count/';
+
+const breadcrumbs = [
+  { name: 'Home',      url: '/' },
+  { name: 'Questions', url: '/questions/' },
+  { name: 'Can Ravens Count?', url: path },
+];
+
+const faq = [
+  { q: 'Can ravens count or do maths?', a: 'Ravens show numerical abilities: they can distinguish quantities (more from fewer food items), track the number of agents entering or leaving a situation, and in captive studies respond differentially to different numbers of objects. Whether this constitutes "counting" in a formal sense depends on definition. Ravens appear to have approximate number sense (distinguishing 1 from 3, 2 from 6) rather than precise sequential counting. No study has demonstrated ravens doing arithmetic (addition, subtraction), though some corvid research approaches this question.' },
+  { q: 'Which birds are best at counting?', a: 'Among birds, corvids (ravens, crows, jackdaws) and parrots (particularly African Grey Parrots, studied extensively by Irene Pepperberg) show the strongest numerical abilities. Alex, an African Grey Parrot trained by Pepperberg, demonstrated labelling of small exact quantities up to 6, and could answer "how many?" questions correctly. Corvids in comparative tests show approximate number sense broadly comparable to primates. Pigeons have also been trained to respond to number, but show less flexible transfer to novel contexts than corvids.' },
+  { q: 'Do ravens understand zero?', a: 'Understanding of zero — the concept of "none" as a quantity — has been demonstrated in some primates and recently in corvids. A 2021 study by Kirschhock, Ditz & Nieder in <em>Journal of Neuroscience</em> showed that crows could place "zero" (empty set) in its correct numerical position relative to other quantities (zero is less than 1, which is less than 2, etc.), a form of ordinal number understanding that extends to the empty set. As a close relative with similar cognitive abilities, ravens are expected to show similar capacity, though direct raven zero-concept testing is less published.' },
+];
+---
+
+<BaseLayout title={title} description={description} path={path} ogType="article"
+  datePublished="2026-11-07" dateModified="2026-11-07"
+  breadcrumbs={breadcrumbs} faq={faq} pageType="Article">
+
+<article class="qa-page">
+
+  <nav class="qa-breadcrumb" aria-label="Breadcrumb">
+    <ol>
+      {breadcrumbs.map((b, i) => (
+        <li>
+          {i < breadcrumbs.length - 1
+            ? <><a href={b.url}>{b.name}</a><span aria-hidden="true"> › </span></>
+            : <span aria-current="page">{b.name}</span>}
+        </li>
+      ))}
+    </ol>
+  </nav>
+
+  <header class="qa-header">
+    <p class="qa-pillar">Question · Intelligence</p>
+    <h1>Can Ravens Count? Numeracy and Number Sense in Ravens</h1>
+  </header>
+
+  <section class="qa-snippet" aria-label="Direct answer">
+    <p><strong class="claim-science">[science]</strong> Ravens show approximate number sense — the ability to distinguish more from fewer and to track quantities. They can discriminate small quantities, monitor the number of cache events, and respond differentially to different object counts in experimental settings. Precise counting (tracking each unit in an ordered sequence) has not been definitively demonstrated, but ravens' numerical abilities are comparable to those of non-human primates and significantly exceed most non-corvid birds.</p>
+  </section>
+
+  <section class="qa-section">
+    <h2>Approximate Number Sense</h2>
+    <p><strong class="claim-science">[science]</strong> Approximate number sense (ANS) — the ability to quickly estimate quantity without precise counting — is widespread among vertebrates, including birds. ANS allows discrimination when quantity ratios are large (e.g. 2 vs 10) and becomes less reliable as ratios approach 1:1 (e.g. 7 vs 8). Ravens show ANS in food choice situations: when choosing between two food amounts, ravens reliably choose the larger quantity when the ratio is 1:2 or greater, with performance declining as quantities approach equal size.<sup><a href="#src-1">1</a></sup></p>
+    <p>In cache monitoring contexts, ravens appear to track the number of times they have cached food in a location — a form of numerical monitoring with direct survival relevance. Bugnyar's research group showed ravens recache food (move it to a new location) more after competitor ravens were nearby for multiple cache events than after single events, suggesting sensitivity to how many potentially compromising observations occurred.</p>
+  </section>
+
+  <section class="qa-section">
+    <h2>Comparative Numeracy in Corvids</h2>
+    <p><strong class="claim-science">[science]</strong> Much of the most precise corvid numeracy research has been conducted with carrion crows and jackdaws rather than ravens, using controlled laboratory paradigms:<sup><a href="#src-2">2</a></sup></p>
+    <ul>
+      <li>Nieder's group at the University of Tübingen has extensively studied numerical cognition in carrion crows using neurophysiological recordings alongside behavioural tests. Crows can be trained to match quantities, order quantities, and respond to symbolic representations of numbers (abstract symbols associated with specific quantities).</li>
+      <li>Single-unit recordings from crow pallium (the avian equivalent of cerebral cortex) show neurons that respond to specific numerical quantities — "number neurons" — analogous to those found in monkey prefrontal cortex during numerical tasks.</li>
+      <li>Ravens, as the most cognitively capable corvid in many comparisons, are expected to show at least equivalent numerical abilities, though the neurophysiological work has focused more on crows.</li>
+    </ul>
+  </section>
+
+  <section class="qa-section">
+    <h2>Practical Numerical Monitoring</h2>
+    <p><strong class="claim-science">[science]</strong> Even without laboratory training, wild ravens appear to use numerical information in natural contexts:<sup><a href="#src-1">1</a></sup></p>
+    <ul>
+      <li><strong>Tracking observers:</strong> cache concealment decisions appear sensitive to the number of watching competitors, suggesting ravens count or estimate audience size.</li>
+      <li><strong>Food division:</strong> at a carcass with multiple competitors, ravens appear to monitor relative amounts consumed, though this is difficult to separate from general quantity assessment.</li>
+      <li><strong>Social counting:</strong> ravens can track the composition of coalitions — knowing when one's social allies are present vs absent in a group, which requires monitoring individual identities and overall group size.</li>
+    </ul>
+  </section>
+
+  <section class="qa-section">
+    <h2>Related Pages</h2>
+    <ul>
+      <li><a href="/questions/how-smart-are-ravens/">How smart are ravens?</a></li>
+      <li><a href="/behaviour/raven-cognition-theory-of-mind/">Raven cognition: theory of mind</a></li>
+      <li><a href="/behaviour/raven-object-permanence-and-memory/">Raven memory</a></li>
+      <li><a href="/questions/are-ravens-smarter-than-crows/">Are ravens smarter than crows?</a></li>
+    </ul>
+  </section>
+
+  <section class="qa-faq qa-section" aria-labelledby="faq-h2">
+    <h2 id="faq-h2">Frequently Asked Questions</h2>
+    {faq.map(item => (
+      <details class="qa-faq-item">
+        <summary class="qa-faq-q">{item.q}</summary>
+        <p class="qa-faq-a">{item.a}</p>
+      </details>
+    ))}
+  </section>
+
+  <section class="qa-sources qa-section" aria-labelledby="src-h2">
+    <h2 id="src-h2">Sources</h2>
+    <ol class="qa-src-list">
+      <li id="src-1">Bugnyar, T. & Heinrich, B. (2005). Ravens, <em>Corvus corax</em>, differentiate between knowledgeable and ignorant competitors. <em>Proceedings of the Royal Society B</em>, 272, 1641–1646. — quantity tracking in cache competition contexts.</li>
+      <li id="src-2">Ditz, H.M. & Nieder, A. (2015). Neurons selective to the number of visual items in the corvid songbird endbrain. <em>Proceedings of the National Academy of Sciences</em>, 112(25), 7827–7832. — number neurons in crow pallium; corvid numerical cognition.</li>
+    </ol>
+    <p class="qa-claim-note"><strong class="claim-science">[science]</strong> peer-reviewed data</p>
+  </section>
+
+</article>
+</BaseLayout>
+
+<style>
+  .qa-page { max-width: 820px; margin: 0 auto; padding: 2rem 1.25rem 4rem; color: var(--iron-ink, #e8e4d8); font-family: 'Inter', sans-serif; line-height: 1.72; }
+  .qa-breadcrumb ol { display: flex; flex-wrap: wrap; gap: .25rem; list-style: none; padding: 0; margin: 0 0 2rem; font-size: .8rem; color: var(--ink-soft, #8a8070); }
+  .qa-breadcrumb a { color: var(--gold-500, #d4ae5a); text-decoration: none; }
+  .qa-pillar { font-size: .72rem; letter-spacing: .12em; text-transform: uppercase; color: var(--gold-500, #d4ae5a); margin: 0 0 .4rem; }
+  .qa-page h1 { font-family: 'Cormorant Garamond', serif; font-size: clamp(2rem, 5vw, 3rem); font-weight: 700; color: #fff; margin: 0 0 2rem; line-height: 1.1; }
+  .qa-snippet { background: rgba(212,174,90,.08); border-left: 3px solid var(--gold-500, #d4ae5a); border-radius: 0 6px 6px 0; padding: 1rem 1.25rem; margin-bottom: 2.5rem; font-size: 1.03rem; }
+  .qa-section { margin-bottom: 2.5rem; }
+  .qa-section h2 { font-family: 'Cormorant Garamond', serif; font-size: 1.5rem; font-weight: 600; color: #fff; margin: 0 0 .9rem; border-bottom: 1px solid rgba(212,174,90,.2); padding-bottom: .4rem; }
+  .qa-section p { margin: 0 0 1rem; font-size: .97rem; }
+  .qa-section ul { padding-left: 1.25rem; margin: 0 0 1rem; }
+  .qa-section li { margin-bottom: .4rem; font-size: .95rem; }
+  .claim-science { color: #7ab9e0; font-style: normal; font-size: .78rem; }
+  a[href] { color: var(--gold-500, #d4ae5a); }
+  .qa-faq-item { border-bottom: 1px solid rgba(255,255,255,.07); }
+  .qa-faq-q { cursor: pointer; padding: .9rem 0; font-size: .97rem; font-weight: 500; color: #fff; list-style: none; }
+  .qa-faq-q::before { content: '+ '; color: var(--gold-500, #d4ae5a); font-weight: 700; }
+  details[open] .qa-faq-q::before { content: '− '; }
+  .qa-faq-a { margin: 0 0 1rem; line-height: 1.7; font-size: .93rem; color: var(--ink-soft, #c8c0b0); }
+  .qa-src-list { padding-left: 1.25rem; margin: 0 0 1rem; }
+  .qa-src-list li { margin-bottom: .6rem; font-size: .82rem; color: var(--ink-soft, #8a8070); line-height: 1.6; }
+  .qa-claim-note { font-size: .78rem; color: var(--ink-soft, #605848); border-top: 1px solid rgba(255,255,255,.06); padding-top: .75rem; }
+</style>

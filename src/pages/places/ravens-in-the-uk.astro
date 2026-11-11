@@ -1,0 +1,147 @@
+---
+/**
+ * Places — Ravens in the UK
+ * PLC·02
+ * Primary keyword: ravens in the uk
+ * Secondary: common raven uk, raven distribution britain, ravens wales england scotland
+ */
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const title       = 'Ravens in the UK: Distribution, Population, and Recovery';
+const description = 'The Common Raven was once extirpated from most of England. Its remarkable recovery since the mid-20th century has seen ravens recolonise Wales, northern England, and Scotland. This page covers UK raven distribution, history, and conservation status.';
+const path        = '/places/ravens-in-the-uk/';
+
+const breadcrumbs = [
+  { name: 'Home',   url: '/' },
+  { name: 'Places', url: '/places/' },
+  { name: 'Ravens in the UK', url: path },
+];
+
+const faq = [
+  { q: 'Where do ravens live in the UK?', a: 'Ravens are present throughout Wales, in upland northern England (Cumbria, North Yorkshire, the Pennines), southern Scotland, and the Scottish Highlands and islands. They have been slowly recolonising central and southern England — birds are now recorded breeding in some lowland English counties where they were absent for centuries. Ireland has a healthy raven population throughout. Coastal cliffs, upland moorland, and forestry plantation edge are typical habitats.' },
+  { q: 'How many ravens are there in the UK?', a: 'The UK breeding population has been estimated at approximately 7,000–8,000 pairs as of recent surveys (RSPB/BTO data from the 2010s), with the population continuing to increase and expand its range southward and eastward. This represents a substantial recovery from the population low of the 19th and early 20th centuries, when ravens were confined to Wales and remote Scottish areas.' },
+  { q: 'Are ravens protected in the UK?', a: 'Yes. Common Ravens are protected under the Wildlife and Countryside Act 1981 (and equivalent legislation in Scotland and Northern Ireland). It is illegal to intentionally kill, injure, or take wild ravens, to damage or destroy their nests while in use or being built, or to take or destroy their eggs. Limited licence-based management may be granted under specific circumstances, but general persecution is illegal.' },
+];
+---
+
+<BaseLayout title={title} description={description} path={path} ogType="article"
+  datePublished="2026-11-07" dateModified="2026-11-07"
+  breadcrumbs={breadcrumbs} faq={faq} pageType="Article">
+
+<article class="qa-page">
+
+  <nav class="qa-breadcrumb" aria-label="Breadcrumb">
+    <ol>
+      {breadcrumbs.map((b, i) => (
+        <li>
+          {i < breadcrumbs.length - 1
+            ? <><a href={b.url}>{b.name}</a><span aria-hidden="true"> › </span></>
+            : <span aria-current="page">{b.name}</span>}
+        </li>
+      ))}
+    </ol>
+  </nav>
+
+  <header class="qa-header">
+    <p class="qa-pillar">Places · PLC·02</p>
+    <h1>Ravens in the UK: Distribution, Population, and Recovery</h1>
+  </header>
+
+  <section class="qa-snippet" aria-label="Direct answer">
+    <p><strong class="claim-science">[science]</strong> The Common Raven (<em>Corvus corax</em>) is recovering strongly in the UK after centuries of persecution. From a low point confined to Wales and remote Scotland, the breeding population has grown to an estimated 7,000–8,000 pairs, with ongoing range expansion into lowland England. Ravens are fully legally protected under the Wildlife and Countryside Act 1981.</p>
+  </section>
+
+  <section class="qa-section">
+    <h2>Historical Decline and Persecution</h2>
+    <p><strong class="claim-science">[science]</strong> Ravens were once widespread across all of Britain and Ireland, inhabiting urban areas as street scavengers in medieval towns as well as rural and upland habitats. From the 16th century onwards, systematic persecution by gamekeepers, farmers, and poisoning campaigns eliminated ravens from most of England and lowland Scotland by the 19th century. The main causes:<sup><a href="#src-1">1</a></sup></p>
+    <ul>
+      <li>Persecution as livestock predators (particularly at lambing).</li>
+      <li>Game preservation — gamekeepers killed ravens as nest-robbers and perceived threats to gamebird eggs and chicks.</li>
+      <li>Egg collection — raven eggs were popular collectors' items.</li>
+      <li>Poisoned baits set for predators.</li>
+    </ul>
+    <p>By the early 20th century, UK ravens were largely confined to Wales, parts of northern England, and the Scottish Highlands and islands.</p>
+  </section>
+
+  <section class="qa-section">
+    <h2>Recovery and Range Expansion</h2>
+    <p><strong class="claim-science">[science]</strong> Legal protection from 1981 (Wildlife and Countryside Act) and the broader decline of intensive gamekeeping and poisoning have driven a substantial recovery:<sup><a href="#src-1">1</a></sup></p>
+    <ul>
+      <li><strong>Wales:</strong> always the raven's stronghold in Britain; population remains dense, with ravens abundant on coastal cliffs, upland moorland, and forestry.</li>
+      <li><strong>Northern England:</strong> the Lake District, Pennines, North Pennines, and North York Moors have seen population increases and range consolidation since the 1980s.</li>
+      <li><strong>Scotland:</strong> population recovered throughout upland Scotland, with ongoing expansion into lowland areas.</li>
+      <li><strong>England — recolonisation:</strong> ravens have been breeding in increasing numbers of English counties through the late 20th and early 21st centuries, including areas in the Midlands, East Anglia, and the South West that were raven-free for over a century.</li>
+    </ul>
+  </section>
+
+  <section class="qa-section">
+    <h2>UK Habitats</h2>
+    <p><strong class="claim-science">[science]</strong> UK ravens favour:<sup><a href="#src-1">1</a></sup></p>
+    <ul>
+      <li><strong>Upland moorland and mountain:</strong> the classic raven habitat in Wales and Scotland — open ground, rocky outcrops, abundant sheep carrion.</li>
+      <li><strong>Sea cliffs:</strong> coastal cliffs around Wales, south-west England, and northern Scotland are important breeding habitat.</li>
+      <li><strong>Forestry:</strong> plantation forest edges provide nest trees and roosting sites, with adjacent open moorland for foraging.</li>
+      <li><strong>Farmland:</strong> lowland farmland with scattered trees is now used increasingly, particularly by recovering English populations.</li>
+    </ul>
+  </section>
+
+  <section class="qa-section">
+    <h2>Tower of London Ravens</h2>
+    <p><strong class="claim-lore">[lore]</strong> The most famous ravens in the UK are the resident ravens of the Tower of London — currently maintained under the care of the Ravenmaster. The legend that "if the ravens of the Tower should be lost, the Crown will fall" is a tradition documented from the 1880s, not from medieval sources. See <a href="/lore/world/tower-of-london-ravens/">Tower of London Ravens</a> for the full history.</p>
+  </section>
+
+  <section class="qa-section">
+    <h2>Related Pages</h2>
+    <ul>
+      <li><a href="/lore/world/tower-of-london-ravens/">Tower of London Ravens</a></li>
+      <li><a href="/lore/world/bran-the-blessed/">Bran the Blessed and the Ravens of Britain</a></li>
+      <li><a href="/species/common-raven/">Common Raven — species profile</a></li>
+      <li><a href="/questions/are-ravens-protected/">Are ravens protected?</a></li>
+    </ul>
+  </section>
+
+  <section class="qa-faq qa-section" aria-labelledby="faq-h2">
+    <h2 id="faq-h2">Frequently Asked Questions</h2>
+    {faq.map(item => (
+      <details class="qa-faq-item">
+        <summary class="qa-faq-q">{item.q}</summary>
+        <p class="qa-faq-a">{item.a}</p>
+      </details>
+    ))}
+  </section>
+
+  <section class="qa-sources qa-section" aria-labelledby="src-h2">
+    <h2 id="src-h2">Sources</h2>
+    <ol class="qa-src-list">
+      <li id="src-1">Mearns, R. & Newton, I. (1988). Factors affecting breeding success of peregrines and ravens in south Scotland. <em>Journal of Animal Ecology</em>, 57(3), 903–916. — raven population trends, UK; and BTO/RSPB Breeding Bird Survey data (various years).</li>
+    </ol>
+    <p class="qa-claim-note"><strong class="claim-science">[science]</strong> peer-reviewed study or survey data &nbsp;|&nbsp; <strong class="claim-lore">[lore]</strong> named cultural/historical source</p>
+  </section>
+
+</article>
+</BaseLayout>
+
+<style>
+  .qa-page { max-width: 820px; margin: 0 auto; padding: 2rem 1.25rem 4rem; color: var(--iron-ink, #e8e4d8); font-family: 'Inter', sans-serif; line-height: 1.72; }
+  .qa-breadcrumb ol { display: flex; flex-wrap: wrap; gap: .25rem; list-style: none; padding: 0; margin: 0 0 2rem; font-size: .8rem; color: var(--ink-soft, #8a8070); }
+  .qa-breadcrumb a { color: var(--gold-500, #d4ae5a); text-decoration: none; }
+  .qa-pillar { font-size: .72rem; letter-spacing: .12em; text-transform: uppercase; color: var(--gold-500, #d4ae5a); margin: 0 0 .4rem; }
+  .qa-page h1 { font-family: 'Cormorant Garamond', serif; font-size: clamp(2rem, 5vw, 3rem); font-weight: 700; color: #fff; margin: 0 0 2rem; line-height: 1.1; }
+  .qa-snippet { background: rgba(212,174,90,.08); border-left: 3px solid var(--gold-500, #d4ae5a); border-radius: 0 6px 6px 0; padding: 1rem 1.25rem; margin-bottom: 2.5rem; font-size: 1.03rem; }
+  .qa-section { margin-bottom: 2.5rem; }
+  .qa-section h2 { font-family: 'Cormorant Garamond', serif; font-size: 1.5rem; font-weight: 600; color: #fff; margin: 0 0 .9rem; border-bottom: 1px solid rgba(212,174,90,.2); padding-bottom: .4rem; }
+  .qa-section p { margin: 0 0 1rem; font-size: .97rem; }
+  .qa-section ul { padding-left: 1.25rem; margin: 0 0 1rem; }
+  .qa-section li { margin-bottom: .4rem; font-size: .95rem; }
+  .claim-science { color: #7ab9e0; font-style: normal; font-size: .78rem; }
+  .claim-lore { color: #c4a26a; font-style: normal; font-size: .78rem; }
+  a[href] { color: var(--gold-500, #d4ae5a); }
+  .qa-faq-item { border-bottom: 1px solid rgba(255,255,255,.07); }
+  .qa-faq-q { cursor: pointer; padding: .9rem 0; font-size: .97rem; font-weight: 500; color: #fff; list-style: none; }
+  .qa-faq-q::before { content: '+ '; color: var(--gold-500, #d4ae5a); font-weight: 700; }
+  details[open] .qa-faq-q::before { content: '− '; }
+  .qa-faq-a { margin: 0 0 1rem; line-height: 1.7; font-size: .93rem; color: var(--ink-soft, #c8c0b0); }
+  .qa-src-list { padding-left: 1.25rem; margin: 0 0 1rem; }
+  .qa-src-list li { margin-bottom: .6rem; font-size: .82rem; color: var(--ink-soft, #8a8070); line-height: 1.6; }
+  .qa-claim-note { font-size: .78rem; color: var(--ink-soft, #605848); border-top: 1px solid rgba(255,255,255,.06); padding-top: .75rem; }
+</style>

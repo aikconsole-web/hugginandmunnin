@@ -1,0 +1,144 @@
+---
+/**
+ * Norse Lore — Hrafnsmál (The Raven's Speech)
+ * NRS·22
+ * Primary keyword: hrafnsmal raven speech
+ * Secondary: hrafnsmál old norse poem, raven speech norse poetry, haraldskvæði
+ */
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const title       = 'Hrafnsmál: The Raven\'s Speech and Harald Fairhair\'s Victory';
+const description = 'Hrafnsmál (The Raven\'s Speech), also known as Haraldskvæði, is a 9th-century Old Norse skaldic poem in which a valkyrie and a raven discuss King Harald Fairhair\'s victories. This page examines the poem\'s structure, its raven as battlefield informant, and what it reveals about how Norse poets used the raven to voice military history.';
+const path        = '/lore/norse/hrafnsmal-the-raven-speech/';
+
+const breadcrumbs = [
+  { name: 'Home',       url: '/' },
+  { name: 'Norse Lore', url: '/lore/norse/' },
+  { name: 'Hrafnsmál', url: path },
+];
+
+const faq = [
+  { q: 'What is Hrafnsmál?', a: 'Hrafnsmál (literally "Raven\'s Speech" or "Raven-Song") is an Old Norse skaldic poem, also called Haraldskvæði (Harald\'s Poem), composed in the 9th century — traditionally attributed to the skald Þorbjörn hornklofi (Þorbjörn Horn-Cleaver), who composed it in praise of King Harald Fairhair of Norway. The poem is structured as a dialogue between a valkyrie and a raven: the raven speaks from its position on the battlefield, describing Harald\'s warriors and their prowess. The raven is used here as the authentic eyewitness of battle — a figure whose presence at carnage gives it unquestionable authority to report what happened.' },
+  { q: 'Who speaks in Hrafnsmál?', a: 'The poem is structured as a dialogue. A valkyrie (or "shield-maid," skjaldmær) addresses a raven, asking it about King Harald\'s warriors. The raven responds, describing the hirðmenn (household warriors), the berserkers, the ulfhéðnar (wolf-coated warriors), and Harald\'s personal qualities and victories. The dialogue structure creates a layered authenticity: the valkyrie is the supernatural figure who attends battles and chooses the slain; the raven is the natural scavenger who attends battles for food. Both have firsthand knowledge of warfare that a human narrator would lack.' },
+  { q: 'Why is Hrafnsmál important?', a: 'Hrafnsmál is one of the earliest surviving skaldic poems about a specific historical Norwegian king and an important primary source for Harald Fairhair\'s unification of Norway. The poem\'s use of the raven as narrator is significant for understanding Norse raven symbolism: the raven is not merely an omen here but an active participant in the communication of historical memory — the bird who witnessed the battles and reports them. This positions the raven as a vehicle for authoritative historical transmission, paralleling the function of Huginn and Muninn in transmitting world-knowledge to Odin.' },
+];
+---
+
+<BaseLayout title={title} description={description} path={path} ogType="article"
+  datePublished="2026-11-09" dateModified="2026-11-09"
+  breadcrumbs={breadcrumbs} faq={faq} pageType="Article">
+
+<article class="qa-page">
+
+  <nav class="qa-breadcrumb" aria-label="Breadcrumb">
+    <ol>
+      {breadcrumbs.map((b, i) => (
+        <li>
+          {i < breadcrumbs.length - 1
+            ? <><a href={b.url}>{b.name}</a><span aria-hidden="true"> › </span></>
+            : <span aria-current="page">{b.name}</span>}
+        </li>
+      ))}
+    </ol>
+  </nav>
+
+  <header class="qa-header">
+    <p class="qa-pillar">Norse Lore · NRS·22</p>
+    <h1>Hrafnsmál: The Raven's Speech and Harald Fairhair's Victory</h1>
+  </header>
+
+  <section class="qa-snippet" aria-label="Direct answer">
+    <p><strong class="claim-lore">[lore]</strong> Hrafnsmál (9th century, attributed to Þorbjörn hornklofi) is a skaldic dialogue poem in which a raven reports Harald Fairhair's military victories to a valkyrie. The raven speaks as the authentic eyewitness of battle — a figure whose presence at carnage grants authoritative firsthand knowledge. This positions the raven as narrator and historical transmitter, extending its role beyond omen-bird into something closer to Huginn and Muninn's function as Odin's cosmic informants.</p>
+  </section>
+
+  <section class="qa-section">
+    <h2>The Poem's Structure and Setting</h2>
+    <p><strong class="claim-lore">[lore]</strong> Hrafnsmál survives in fragmentary form in the 13th-century compilation Fagrskinna (a kings' saga compilation) and in Snorri Sturluson's Heimskringla. The poem opens with a dialogue frame:<sup><a href="#src-1">1</a></sup></p>
+    <ul>
+      <li>A valkyrie (described as "shield-maid," wearing a helmet and holding a spear) meets a raven. The raven has just come from a battle, and its feathers are bloodstained — it has been feeding on the slain.</li>
+      <li>The valkyrie asks where the raven has come from and what it knows of Harald's warriors. The raven then speaks at length, describing the king's retinue.</li>
+      <li>The metre is fornyrðislag (the "old verse" measure), the same alliterative metre used in the Poetic Edda — giving the poem the same formal weight as mythological verse.</li>
+    </ul>
+  </section>
+
+  <section class="qa-section">
+    <h2>The Raven as Battlefield Witness</h2>
+    <p><strong class="claim-lore">[lore]</strong> The choice of a raven as narrator is deliberate and significant within the Norse symbolic framework. The raven can serve as an authoritative narrator of battle for several reasons:<sup><a href="#src-1">1</a></sup><sup><a href="#src-2">2</a></sup></p>
+    <ul>
+      <li><strong>Physical presence:</strong> ravens are actual scavengers of battlefields — their appearance at a site of carnage is empirically predictable. The Norse poet uses this real behaviour as the foundation for the narrative conceit: the raven was there because ravens are always there.</li>
+      <li><strong>Odinic association:</strong> as Odin's sacred birds, ravens carry authority in the Norse worldview. A raven's report is implicitly Odin-vouched — the god of battle has his bird watching every field.</li>
+      <li><strong>Kenning tradition:</strong> the Norse skaldic tradition uses raven-kennings extensively for war and death (the raven-feeder = warrior; the raven's field = battlefield). Using a raven as narrator builds on this dense intertextual association — the poem's audience would recognise the raven as the proper perspective from which to view battle.</li>
+    </ul>
+  </section>
+
+  <section class="qa-section">
+    <h2>The Warriors Described</h2>
+    <p><strong class="claim-lore">[lore]</strong> The raven's speech in Hrafnsmál describes Harald's warrior retinue in detail — providing one of the primary literary sources for Norse warrior types:<sup><a href="#src-1">1</a></sup></p>
+    <ul>
+      <li><strong>Berserkers (berserkir):</strong> the poem describes Harald's berserkers as wolf-skinned fighters who go into battle without armour, in a battle-fury (berserksgangr). The description in Hrafnsmál is one of the foundational texts for understanding the berserker phenomenon.</li>
+      <li><strong>Ulfhéðnar:</strong> the wolf-coated warriors — a variant of the berserker tradition associated with wolves rather than bears. Hrafnsmál distinguishes them from berserkers.</li>
+      <li><strong>Hirðmenn:</strong> the household warriors who form the king's standing retinue, described in terms of their loyalty, equipment, and skill.</li>
+    </ul>
+    <p>The raven's description of these warriors is simultaneously a praise poem for Harald and a portrait of the ideal Norse warrior class as the raven — the battlefield's permanent resident — would know them.</p>
+  </section>
+
+  <section class="qa-section">
+    <h2>Historical Context: Harald Fairhair</h2>
+    <p><strong class="claim-lore">[lore]</strong> Harald Fairhair (Harald Hårfagre, c.850–c.933) is the first king credited with unifying Norway into a single kingdom. The Battle of Hafrsfjord (c.872) — usually considered the decisive battle in his unification campaign — is the event Hrafnsmál most likely celebrates. As a contemporary skaldic composition (if the attribution to Þorbjörn hornklofi is correct), Hrafnsmál would be one of the earliest surviving poems composed about a specifically historical Norwegian king — making the raven's testimony a vehicle for historical record as much as poetic praise.<sup><a href="#src-1">1</a></sup></p>
+  </section>
+
+  <section class="qa-section">
+    <h2>Related Pages</h2>
+    <ul>
+      <li><a href="/lore/norse/ravens-in-skaldic-poetry/">Ravens in skaldic poetry</a></li>
+      <li><a href="/lore/norse/ravens-in-eddic-kennings/">Ravens in Eddic kennings</a></li>
+      <li><a href="/lore/norse/huginn-and-muninn/">Huginn and Muninn</a></li>
+      <li><a href="/lore/norse/raven-banner/">The Viking raven banner</a></li>
+    </ul>
+  </section>
+
+  <section class="qa-faq qa-section" aria-labelledby="faq-h2">
+    <h2 id="faq-h2">Frequently Asked Questions</h2>
+    {faq.map(item => (
+      <details class="qa-faq-item">
+        <summary class="qa-faq-q">{item.q}</summary>
+        <p class="qa-faq-a">{item.a}</p>
+      </details>
+    ))}
+  </section>
+
+  <section class="qa-sources qa-section" aria-labelledby="src-h2">
+    <h2 id="src-h2">Sources</h2>
+    <ol class="qa-src-list">
+      <li id="src-1">Larrington, C. (trans.) (2014). <em>The Poetic Edda</em>. Oxford University Press. — skaldic metre, fornyrðislag, berserker descriptions, raven as battle narrator.</li>
+      <li id="src-2">Faulkes, A. (trans.) (1987). <em>Edda</em> (Snorri Sturluson). Everyman. — Hrafnsmál in Heimskringla context, Harald Fairhair, Þorbjörn hornklofi attribution, kenning tradition.</li>
+    </ol>
+    <p class="qa-claim-note"><strong class="claim-lore">[lore]</strong> named cultural/historical source</p>
+  </section>
+
+</article>
+</BaseLayout>
+
+<style>
+  .qa-page { max-width: 820px; margin: 0 auto; padding: 2rem 1.25rem 4rem; color: var(--iron-ink, #e8e4d8); font-family: 'Inter', sans-serif; line-height: 1.72; }
+  .qa-breadcrumb ol { display: flex; flex-wrap: wrap; gap: .25rem; list-style: none; padding: 0; margin: 0 0 2rem; font-size: .8rem; color: var(--ink-soft, #8a8070); }
+  .qa-breadcrumb a { color: var(--gold-500, #d4ae5a); text-decoration: none; }
+  .qa-pillar { font-size: .72rem; letter-spacing: .12em; text-transform: uppercase; color: var(--gold-500, #d4ae5a); margin: 0 0 .4rem; }
+  .qa-page h1 { font-family: 'Cormorant Garamond', serif; font-size: clamp(2rem, 5vw, 3rem); font-weight: 700; color: #fff; margin: 0 0 2rem; line-height: 1.1; }
+  .qa-snippet { background: rgba(212,174,90,.08); border-left: 3px solid var(--gold-500, #d4ae5a); border-radius: 0 6px 6px 0; padding: 1rem 1.25rem; margin-bottom: 2.5rem; font-size: 1.03rem; }
+  .qa-section { margin-bottom: 2.5rem; }
+  .qa-section h2 { font-family: 'Cormorant Garamond', serif; font-size: 1.5rem; font-weight: 600; color: #fff; margin: 0 0 .9rem; border-bottom: 1px solid rgba(212,174,90,.2); padding-bottom: .4rem; }
+  .qa-section p { margin: 0 0 1rem; font-size: .97rem; }
+  .qa-section ul { padding-left: 1.25rem; margin: 0 0 1rem; }
+  .qa-section li { margin-bottom: .4rem; font-size: .95rem; }
+  .claim-lore { color: #c49a3c; font-style: normal; font-size: .78rem; }
+  a[href] { color: var(--gold-500, #d4ae5a); }
+  .qa-faq-item { border-bottom: 1px solid rgba(255,255,255,.07); }
+  .qa-faq-q { cursor: pointer; padding: .9rem 0; font-size: .97rem; font-weight: 500; color: #fff; list-style: none; }
+  .qa-faq-q::before { content: '+ '; color: var(--gold-500, #d4ae5a); font-weight: 700; }
+  details[open] .qa-faq-q::before { content: '− '; }
+  .qa-faq-a { margin: 0 0 1rem; line-height: 1.7; font-size: .93rem; color: var(--ink-soft, #c8c0b0); }
+  .qa-src-list { padding-left: 1.25rem; margin: 0 0 1rem; }
+  .qa-src-list li { margin-bottom: .6rem; font-size: .82rem; color: var(--ink-soft, #8a8070); line-height: 1.6; }
+  .qa-claim-note { font-size: .78rem; color: var(--ink-soft, #605848); border-top: 1px solid rgba(255,255,255,.06); padding-top: .75rem; }
+</style>

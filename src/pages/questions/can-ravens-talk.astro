@@ -1,0 +1,121 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const title       = 'Can Ravens Talk? — Mimicry, Words, and Vocalisation';
+const description = 'Ravens can mimic human speech and other sounds, but do they "talk"? This page explains what raven mimicry involves, how it differs from parrots, and what the science says.';
+const path        = '/questions/can-ravens-talk/';
+
+const breadcrumbs = [
+  { name: 'Home',      url: '/' },
+  { name: 'Questions', url: '/questions/' },
+  { name: 'Can Ravens Talk?', url: path },
+];
+
+const faq = [
+  { q: 'Can you teach a raven to say words?', a: 'Yes — captive ravens can learn to produce recognisable words and phrases through exposure to human speech, particularly when raised from fledglings. Wild ravens do not normally produce human words but can mimic a wide range of sounds including other animals and mechanical noises.' },
+  { q: 'Are ravens better talkers than parrots?', a: 'No — parrots (especially African Grey Parrots and Amazon parrots) are significantly better mimics of human speech, with larger vocal repertoires and clearer reproduction. Ravens can mimic well but their speech attempts are typically less accurate. Ravens excel at mimicking environmental sounds.' },
+  { q: 'Do ravens understand what they are saying?', a: 'The evidence is limited. Ravens do not appear to use mimicked human words with consistent meaning the way some parrots have been trained to do. Some captive ravens associate specific mimicked sounds with contexts (e.g., calling a handler\'s name when that person approaches), which suggests associative learning rather than linguistic understanding.' },
+];
+---
+
+<BaseLayout title={title} description={description} path={path} ogType="article"
+  datePublished="2026-11-07" dateModified="2026-11-07"
+  breadcrumbs={breadcrumbs} faq={faq} pageType="Article">
+
+<article class="qa-page">
+  <nav class="qa-breadcrumb" aria-label="Breadcrumb">
+    <ol>
+      {breadcrumbs.map((b, i) => (
+        <li>
+          {i < breadcrumbs.length - 1
+            ? <><a href={b.url}>{b.name}</a><span aria-hidden="true"> › </span></>
+            : <span aria-current="page">{b.name}</span>}
+        </li>
+      ))}
+    </ol>
+  </nav>
+
+  <header class="qa-header">
+    <p class="qa-pillar">Question · Biology</p>
+    <h1>Can Ravens Talk?</h1>
+  </header>
+
+  <section class="qa-snippet" aria-label="Direct answer">
+    <p><strong class="claim-science">[science]</strong> Ravens can mimic human speech and produce recognisable words, but they are not "talking" in the linguistic sense. Captive ravens, especially those raised from chicks, learn to produce human-sounding words and phrases through vocal mimicry. Wild ravens do not normally produce human words but can mimic a wide range of environmental sounds — other animals, tools, vehicles, and human voices.</p>
+  </section>
+
+  <section class="qa-section">
+    <h2>Raven Vocalisation — What They Can Do</h2>
+    <p><strong class="claim-science">[science]</strong> Common Ravens have one of the most complex vocal repertoires of any non-parrot bird. Their calls include deep croaks, hollow "kronk" calls, a gurgling water-drip sound, wooden knocking, and a wide variety of contact and alarm calls.<sup><a href="#src-1">1</a></sup></p>
+    <p><strong class="claim-science">[science]</strong> Ravens are vocal learners: they learn their calls from other ravens and from their environment, rather than having a fully innate repertoire. This capacity for vocal learning is the same mechanism that enables human speech mimicry.<sup><a href="#src-1">1</a></sup></p>
+  </section>
+
+  <section class="qa-section">
+    <h2>Mimicry in Captive Ravens</h2>
+    <p><strong class="claim-science">[science]</strong> Captive ravens raised in close contact with humans can learn to produce human-sounding words. This is documented in aviculture, keeper reports, and several scientific accounts. The most cited historical example is Dickens' pet raven "Grip", which reportedly said "Halloa, old girl!" and other phrases — though these are keeper reports, not controlled experiments.<sup><a href="#src-2">2</a></sup></p>
+    <p>Well-documented captive examples show ravens producing words that are recognisable to human listeners, though often with raven-characteristic tonal qualities. The mimicry is real; the question of whether it carries meaning is more complex.</p>
+  </section>
+
+  <section class="qa-section">
+    <h2>Wild Raven Mimicry</h2>
+    <p><strong class="claim-science">[science]</strong> In the wild, ravens mimic other species — the calls of other corvids, raptors, and mammals — apparently to manipulate them. For example, ravens in some areas have been observed mimicking wolf howls, possibly to attract wolves to carcasses the ravens cannot open alone. They also mimic sounds associated with food sources.<sup><a href="#src-3">3</a></sup></p>
+  </section>
+
+  <section class="qa-section">
+    <h2>Ravens vs Parrots for Speech</h2>
+    <p>Ravens are impressive mimics, but parrots — particularly African Greys (<em>Psittacus erithacus</em>) — are superior in terms of clarity, volume range, and depth of vocal repertoire for human speech. The comparison is sometimes made in popular writing; in controlled tests, parrot speech mimicry is more accurate and consistent than raven mimicry.</p>
+  </section>
+
+  <section class="qa-section">
+    <h2>Related Pages</h2>
+    <ul>
+      <li><a href="/questions/how-smart-are-ravens/">How smart are ravens?</a></li>
+      <li><a href="/species/common-raven/">Common Raven — species profile</a></li>
+    </ul>
+  </section>
+
+  <section class="qa-faq qa-section" aria-labelledby="faq-h2">
+    <h2 id="faq-h2">Frequently Asked Questions</h2>
+    {faq.map(item => (
+      <details class="qa-faq-item">
+        <summary class="qa-faq-q">{item.q}</summary>
+        <p class="qa-faq-a">{item.a}</p>
+      </details>
+    ))}
+  </section>
+
+  <section class="qa-sources qa-section" aria-labelledby="src-h2">
+    <h2 id="src-h2">Sources</h2>
+    <ol class="qa-src-list">
+      <li id="src-1">Boarman, W.I. & Heinrich, B. (1999). Common Raven (<em>Corvus corax</em>). <em>Birds of the World</em>. Cornell Lab. — vocal repertoire, vocal learning.</li>
+      <li id="src-2">Dickens, C. (1868). <em>Preface to Barnaby Rudge</em>. Chapman & Hall. — historical account of Grip the raven's mimicry.</li>
+      <li id="src-3">Heinrich, B. (2000). <em>Mind of the Raven</em>. HarperCollins. — wild mimicry, wolf-raven interactions.</li>
+    </ol>
+    <p class="qa-claim-note"><strong class="claim-science">[science]</strong> peer-reviewed/field-guide data</p>
+  </section>
+</article>
+</BaseLayout>
+
+<style>
+  .qa-page { max-width: 820px; margin: 0 auto; padding: 2rem 1.25rem 4rem; color: var(--iron-ink, #e8e4d8); font-family: 'Inter', sans-serif; line-height: 1.72; }
+  .qa-breadcrumb ol { display: flex; flex-wrap: wrap; gap: .25rem; list-style: none; padding: 0; margin: 0 0 2rem; font-size: .8rem; color: var(--ink-soft, #8a8070); }
+  .qa-breadcrumb a { color: var(--gold-500, #d4ae5a); text-decoration: none; }
+  .qa-pillar { font-size: .72rem; letter-spacing: .12em; text-transform: uppercase; color: var(--gold-500, #d4ae5a); margin: 0 0 .4rem; }
+  .qa-page h1 { font-family: 'Cormorant Garamond', serif; font-size: clamp(2rem, 5vw, 3rem); font-weight: 700; color: #fff; margin: 0 0 2rem; line-height: 1.1; }
+  .qa-snippet { background: rgba(212,174,90,.08); border-left: 3px solid var(--gold-500, #d4ae5a); border-radius: 0 6px 6px 0; padding: 1rem 1.25rem; margin-bottom: 2.5rem; font-size: 1.03rem; }
+  .qa-section { margin-bottom: 2.5rem; }
+  .qa-section h2 { font-family: 'Cormorant Garamond', serif; font-size: 1.5rem; font-weight: 600; color: #fff; margin: 0 0 .9rem; border-bottom: 1px solid rgba(212,174,90,.2); padding-bottom: .4rem; }
+  .qa-section p { margin: 0 0 1rem; font-size: .97rem; }
+  .qa-section ul { padding-left: 1.25rem; margin: 0 0 1rem; }
+  .qa-section li { margin-bottom: .4rem; font-size: .95rem; }
+  .claim-science { color: #7ab9e0; font-style: normal; font-size: .78rem; }
+  a[href] { color: var(--gold-500, #d4ae5a); }
+  .qa-faq-item { border-bottom: 1px solid rgba(255,255,255,.07); }
+  .qa-faq-q { cursor: pointer; padding: .9rem 0; font-size: .97rem; font-weight: 500; color: #fff; list-style: none; }
+  .qa-faq-q::before { content: '+ '; color: var(--gold-500, #d4ae5a); font-weight: 700; }
+  details[open] .qa-faq-q::before { content: '− '; }
+  .qa-faq-a { margin: 0 0 1rem; line-height: 1.7; font-size: .93rem; color: var(--ink-soft, #c8c0b0); }
+  .qa-src-list { padding-left: 1.25rem; margin: 0 0 1rem; }
+  .qa-src-list li { margin-bottom: .6rem; font-size: .82rem; color: var(--ink-soft, #8a8070); line-height: 1.6; }
+  .qa-claim-note { font-size: .78rem; color: var(--ink-soft, #605848); border-top: 1px solid rgba(255,255,255,.06); padding-top: .75rem; }
+</style>

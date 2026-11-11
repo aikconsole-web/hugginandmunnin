@@ -1,0 +1,141 @@
+---
+/**
+ * World Lore — Ravens in Slavic folklore
+ * MYW·15
+ * Primary keyword: ravens in slavic folklore
+ * Secondary: raven slavic mythology, voron slavic, raven symbolism slavic
+ */
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+
+const title       = 'Ravens in Slavic Folklore and Mythology';
+const description = 'In Slavic folklore, the raven (voron) is a potent figure associated with prophecy, death, transformation, and hidden knowledge. This page surveys the raven\'s role across Russian, Polish, Czech, and South Slavic folk traditions.';
+const path        = '/lore/world/ravens-in-slavic-folklore/';
+
+const breadcrumbs = [
+  { name: 'Home',       url: '/' },
+  { name: 'World Lore', url: '/lore/world/' },
+  { name: 'Ravens in Slavic Folklore', url: path },
+];
+
+const faq = [
+  { q: 'What does the raven symbolise in Slavic mythology?', a: 'In Slavic folklore the raven (Russian and many other Slavic languages: voron) carries multiple symbolic registers — prophecy and foreknowledge, death and war, transformation, and the possession of hidden or magical knowledge. The raven is often associated with Veles, the Slavic deity of the underworld, cattle, wealth, and magic. It appears in byliny (epic oral poems), fairy tales (skazki), and folk beliefs as a liminal creature connected to death and the Other World.' },
+  { q: 'Is the raven good or bad in Slavic folklore?', a: 'The raven in Slavic tradition is morally ambivalent — not simply good or evil. It possesses knowledge and power, but that power is not inherently benign. Ravens are associated with death and the underworld, which means encountering one can be an ill omen (particularly in folk belief about predicting deaths), but ravens can also be helpers, guides, or messengers for heroes in fairy tales. The ambivalence mirrors the broader Slavic cosmological duality between the upper world (Prav) and the lower world (Nav).' },
+  { q: 'Who is Voron Voronovich in Slavic fairy tales?', a: 'Voron Voronovich (literally "Raven son of Raven" or "Raven Ravenovich") is a character in Russian and Eastern Slavic fairy tales — a raven who possesses secret knowledge, treasures, or magical power. The character appears in skazki (folktales) in various roles: as a guide who provides the hero with vital information, as a keeper of a treasure or hidden place, or as a shape-shifter moving between the human world and the underworld. The doubled name ("Raven son of Raven") is a typical Slavic fairy-tale naming convention emphasising primordial, essential identity.' },
+];
+---
+
+<BaseLayout title={title} description={description} path={path} ogType="article"
+  datePublished="2026-11-07" dateModified="2026-11-07"
+  breadcrumbs={breadcrumbs} faq={faq} pageType="Article">
+
+<article class="qa-page">
+
+  <nav class="qa-breadcrumb" aria-label="Breadcrumb">
+    <ol>
+      {breadcrumbs.map((b, i) => (
+        <li>
+          {i < breadcrumbs.length - 1
+            ? <><a href={b.url}>{b.name}</a><span aria-hidden="true"> › </span></>
+            : <span aria-current="page">{b.name}</span>}
+        </li>
+      ))}
+    </ol>
+  </nav>
+
+  <header class="qa-header">
+    <p class="qa-pillar">World Lore · MYW·15</p>
+    <h1>Ravens in Slavic Folklore and Mythology</h1>
+  </header>
+
+  <section class="qa-snippet" aria-label="Direct answer">
+    <p><strong class="claim-lore">[lore]</strong> In Slavic folklore the raven (<em>voron</em> in Russian and related Slavic languages) is a figure of prophecy, death, and hidden knowledge, associated with Veles — the deity of the underworld, magic, and cattle. Ravens appear across byliny, skazki (fairy tales), and folk belief as liminal creatures connecting the living world and the Other World, capable of acting as helpers, omens, or bearers of transformative power.</p>
+  </section>
+
+  <section class="qa-section">
+    <h2>The Raven in Slavic Cosmology</h2>
+    <p><strong class="claim-lore">[lore]</strong> Pre-Christian Slavic religion organised the world into three realms: Prav (the upper, divine world), Yav (the living world), and Nav (the underworld, the world of the dead). The raven is a Nav-associated creature — connected to death, the ancestors, and the hidden knowledge that belongs to the underworld. This cosmological positioning aligns with the raven's real ecological role as a carrion-eater, making it a natural symbol for the boundary between life and death.<sup><a href="#src-1">1</a></sup></p>
+    <p>Veles (<em>Volos</em> in some variants), the Slavic deity of the underworld and magic, is frequently depicted in later syncretic sources as associated with ravens and other corvids. The connection is not as well-documented in primary sources as the Norse Odin–raven association, but is present in reconstructions of Slavic religion based on folk survivals and medieval accounts.</p>
+  </section>
+
+  <section class="qa-section">
+    <h2>Ravens in Russian Byliny and Skazki</h2>
+    <p><strong class="claim-lore">[lore]</strong> The raven appears across the two major genres of Slavic oral tradition:<sup><a href="#src-2">2</a></sup></p>
+    <ul>
+      <li><strong>Byliny (heroic epics):</strong> ravens appear on the battlefield, feeding on the slain, as in numerous battles described in the byliny of Ilya Muromets and Dobrynya Nikitich. This battlefield-scavenger imagery is shared with Germanic, Celtic, and other European traditions and reflects direct observation of raven behaviour.</li>
+      <li><strong>Skazki (fairy tales):</strong> the character Voron Voronovich appears as a keeper of hidden knowledge, treasure, or magical secrets. In some tales, the hero must obtain information from this raven, often through a gift, a riddle, or a service rendered. The raven acts as a threshold guardian between the hero's world and the supernatural realm beyond.</li>
+      <li><strong>Transformation tales:</strong> witches, sorcerers, and shapeshifters in Slavic fairy tales frequently take raven form. The ability to become a raven is a marker of magical power — the bird's dark colour, intelligence, and association with Nav making it a natural transformation vehicle.</li>
+    </ul>
+  </section>
+
+  <section class="qa-section">
+    <h2>Folk Beliefs and Omens</h2>
+    <p><strong class="claim-lore">[lore]</strong> In recorded folk beliefs from across Slavic Europe (collected by ethnographers in the 19th and 20th centuries), ravens carry multiple omen associations:<sup><a href="#src-1">1</a></sup></p>
+    <ul>
+      <li><strong>Death omens:</strong> a raven croaking above a house was widely understood as a sign of impending death — a belief shared across much of Europe but particularly well-attested in Russian, Ukrainian, Polish, and Serbian folk belief collections.</li>
+      <li><strong>Prophecy:</strong> ravens were sometimes consulted or observed for divination — the direction of flight, the number of birds, and the nature of their call were interpreted as signs. This practice parallels Roman augury and Norse practice, suggesting deep Indo-European roots.</li>
+      <li><strong>Rain and weather:</strong> in some traditions, ravens circling or croaking in certain patterns were taken as weather omens — particularly of rain or storms.</li>
+      <li><strong>Protective power:</strong> raven feathers and raven eggs were used in folk medicine and protective charms in some regions — drawing on the raven's Nav associations to ward off malevolent forces from the same realm.</li>
+    </ul>
+  </section>
+
+  <section class="qa-section">
+    <h2>The Living Bird</h2>
+    <p><strong class="claim-science">[science]</strong> The Common Raven (<em>Corvus corax</em>) is widespread across the Slavic world — found across the boreal and temperate forests of Russia, Poland, the Czech Republic, Slovakia, and the Balkans. It is a conspicuous, intelligent, loud bird that would have been a familiar presence in pre-modern Slavic communities. The folk associations between ravens and death, prophecy, and the supernatural reflect direct observation of the raven's real behaviour: following armies, attending carcasses, and demonstrating a conspicuous intelligence that made it appear knowing and purposeful.</p>
+  </section>
+
+  <section class="qa-section">
+    <h2>Related Pages</h2>
+    <ul>
+      <li><a href="/lore/world/raven-symbolism/">Raven symbolism across cultures</a></li>
+      <li><a href="/lore/world/the-morrigan/">The Morrígan — Celtic raven goddess</a></li>
+      <li><a href="/questions/why-are-ravens-associated-with-death/">Why are ravens associated with death?</a></li>
+      <li><a href="/lore/norse/huginn-and-muninn/">Huginn and Muninn — Norse raven myths</a></li>
+    </ul>
+  </section>
+
+  <section class="qa-faq qa-section" aria-labelledby="faq-h2">
+    <h2 id="faq-h2">Frequently Asked Questions</h2>
+    {faq.map(item => (
+      <details class="qa-faq-item">
+        <summary class="qa-faq-q">{item.q}</summary>
+        <p class="qa-faq-a">{item.a}</p>
+      </details>
+    ))}
+  </section>
+
+  <section class="qa-sources qa-section" aria-labelledby="src-h2">
+    <h2 id="src-h2">Sources</h2>
+    <ol class="qa-src-list">
+      <li id="src-1">Ivanits, L.J. (1989). <em>Russian Folk Belief</em>. M.E. Sharpe. — omen beliefs, death associations, folk religion; raven in Slavic folk tradition.</li>
+      <li id="src-2">Afanas'ev, A.N. (1855–1863; trans. N. Guterman, 1973). <em>Russian Fairy Tales</em>. Pantheon Books. — Voron Voronovich and other raven characters in skazki.</li>
+    </ol>
+    <p class="qa-claim-note"><strong class="claim-lore">[lore]</strong> named cultural/historical source &nbsp;|&nbsp; <strong class="claim-science">[science]</strong> peer-reviewed or field-guide data</p>
+  </section>
+
+</article>
+</BaseLayout>
+
+<style>
+  .qa-page { max-width: 820px; margin: 0 auto; padding: 2rem 1.25rem 4rem; color: var(--iron-ink, #e8e4d8); font-family: 'Inter', sans-serif; line-height: 1.72; }
+  .qa-breadcrumb ol { display: flex; flex-wrap: wrap; gap: .25rem; list-style: none; padding: 0; margin: 0 0 2rem; font-size: .8rem; color: var(--ink-soft, #8a8070); }
+  .qa-breadcrumb a { color: var(--gold-500, #d4ae5a); text-decoration: none; }
+  .qa-pillar { font-size: .72rem; letter-spacing: .12em; text-transform: uppercase; color: var(--gold-500, #d4ae5a); margin: 0 0 .4rem; }
+  .qa-page h1 { font-family: 'Cormorant Garamond', serif; font-size: clamp(2rem, 5vw, 3rem); font-weight: 700; color: #fff; margin: 0 0 2rem; line-height: 1.1; }
+  .qa-snippet { background: rgba(212,174,90,.08); border-left: 3px solid var(--gold-500, #d4ae5a); border-radius: 0 6px 6px 0; padding: 1rem 1.25rem; margin-bottom: 2.5rem; font-size: 1.03rem; }
+  .qa-section { margin-bottom: 2.5rem; }
+  .qa-section h2 { font-family: 'Cormorant Garamond', serif; font-size: 1.5rem; font-weight: 600; color: #fff; margin: 0 0 .9rem; border-bottom: 1px solid rgba(212,174,90,.2); padding-bottom: .4rem; }
+  .qa-section p { margin: 0 0 1rem; font-size: .97rem; }
+  .qa-section ul { padding-left: 1.25rem; margin: 0 0 1rem; }
+  .qa-section li { margin-bottom: .4rem; font-size: .95rem; }
+  .claim-lore { color: #c4a26a; font-style: normal; font-size: .78rem; }
+  .claim-science { color: #7ab9e0; font-style: normal; font-size: .78rem; }
+  a[href] { color: var(--gold-500, #d4ae5a); }
+  .qa-faq-item { border-bottom: 1px solid rgba(255,255,255,.07); }
+  .qa-faq-q { cursor: pointer; padding: .9rem 0; font-size: .97rem; font-weight: 500; color: #fff; list-style: none; }
+  .qa-faq-q::before { content: '+ '; color: var(--gold-500, #d4ae5a); font-weight: 700; }
+  details[open] .qa-faq-q::before { content: '− '; }
+  .qa-faq-a { margin: 0 0 1rem; line-height: 1.7; font-size: .93rem; color: var(--ink-soft, #c8c0b0); }
+  .qa-src-list { padding-left: 1.25rem; margin: 0 0 1rem; }
+  .qa-src-list li { margin-bottom: .6rem; font-size: .82rem; color: var(--ink-soft, #8a8070); line-height: 1.6; }
+  .qa-claim-note { font-size: .78rem; color: var(--ink-soft, #605848); border-top: 1px solid rgba(255,255,255,.06); padding-top: .75rem; }
+</style>

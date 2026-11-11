@@ -1,0 +1,144 @@
+---
+/**
+ * Species sub-page — Common Raven range
+ * SPC·01r
+ * Primary keyword: common raven range
+ * Secondary: where does the common raven live, corvus corax range map, common raven habitat
+ */
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+
+const title       = 'Common Raven Range: Where This Species Lives';
+const description = 'The Common Raven has one of the widest ranges of any bird — from Arctic Alaska and Canada to the Sahara, from Ireland to the Pacific coast of Asia. This page covers the full distribution, habitat preferences, and population density of Corvus corax.';
+const path        = '/species/common-raven/range/';
+
+const breadcrumbs = [
+  { name: 'Home',          url: '/' },
+  { name: 'Species',       url: '/species/' },
+  { name: 'Common Raven',  url: '/species/common-raven/' },
+  { name: 'Range',         url: path },
+];
+
+const faq = [
+  { q: 'Where does the Common Raven live?', a: 'The Common Raven (Corvus corax) is one of the most widely distributed land birds in the world. It is resident across most of the Northern Hemisphere: from northern Alaska and Canada across the boreal zone of North America to Greenland; across all of Europe and Scandinavia; across the Middle East, Central Asia, and Himalayas; and in the mountains of North Africa (Atlas Mountains, Morocco, Algeria). It is absent only from the Arctic Ocean islands, densely forested lowland tropics, and most of Asia south of the Himalayas.' },
+  { q: 'What habitats do Common Ravens prefer?', a: 'Common Ravens are habitat generalists but prefer open or semi-open terrain with cliff sites for nesting. Optimal habitats include: coastal cliffs and sea-bird colonies; mountain plateaus and rocky uplands; boreal forest and taiga edges; Arctic and subarctic tundra; desert and semi-desert terrain with rocky outcrops. They are also increasingly associated with human infrastructure — roads, landfills, farm buildings — in many parts of their range. Dense closed-canopy lowland forest is suboptimal; ravens prefer to soar and need open areas for foraging.' },
+  { q: 'Have Common Ravens expanded their range?', a: 'Yes, in several regions. In Britain, ravens were largely extirpated from England by the late 19th century through persecution. Since legal protection in 1981, the breeding range has expanded steadily eastward and southward from Wales and Scotland. As of the 2020s, ravens breed in most English counties. In the western US and Canada, ravens have expanded into agricultural areas with human food subsidies (landfills, roads). In contrast, persecuted populations in some parts of Europe remain below historical range.' },
+];
+---
+
+<BaseLayout title={title} description={description} path={path} ogType="article"
+  datePublished="2026-11-07" dateModified="2026-11-07"
+  breadcrumbs={breadcrumbs} faq={faq} pageType="Article">
+
+<article class="qa-page">
+
+  <nav class="qa-breadcrumb" aria-label="Breadcrumb">
+    <ol>
+      {breadcrumbs.map((b, i) => (
+        <li>
+          {i < breadcrumbs.length - 1
+            ? <><a href={b.url}>{b.name}</a><span aria-hidden="true"> › </span></>
+            : <span aria-current="page">{b.name}</span>}
+        </li>
+      ))}
+    </ol>
+  </nav>
+
+  <header class="qa-header">
+    <p class="qa-pillar">Species Sub-page · SPC·01r</p>
+    <h1>Common Raven Range: Where This Species Lives</h1>
+  </header>
+
+  <section class="qa-snippet" aria-label="Direct answer">
+    <p><strong class="claim-science">[science]</strong> The Common Raven (<em>Corvus corax</em>) has one of the widest ranges of any land bird — resident across the entire Northern Hemisphere from the High Arctic to the Sahara, from Ireland to the Pacific coast of Asia. It occupies diverse habitats but prefers open and semi-open terrain with cliff or tall-tree nest sites. It is absent from densely forested lowland tropics and most of southern Asia.</p>
+  </section>
+
+  <section class="qa-section">
+    <h2>Global Distribution</h2>
+    <p><strong class="claim-science">[science]</strong> The Common Raven's range spans much of the Northern Hemisphere:<sup><a href="#src-1">1</a></sup></p>
+    <ul>
+      <li><strong>North America:</strong> resident from northern Alaska and the Canadian Arctic (including Greenland) south through the boreal forest to the northern US. Breeding populations extend south in the Rocky Mountains, Sierra Nevada, Appalachians, and Pacific Coast ranges. Absent from the mid-continental agricultural belt (central Great Plains, Midwest) where the Chihuahuan Raven takes its place in drier areas.</li>
+      <li><strong>Europe:</strong> resident across the British Isles (now recovering in England), Scandinavia, Iberian Peninsula, Alps, Carpathians, and Balkans. Absent from lowland northern Europe (Netherlands, northern Germany, Denmark) except as a rare vagrant or recolonist.</li>
+      <li><strong>Asia:</strong> resident across Russia (the entire boreal zone from the Urals to the Pacific), the Caucasus, Turkey, the Middle East, Iran, the Himalayan range, Central Asia, and extending into China (Qinghai-Tibet Plateau, Xinjiang). Absent from lowland tropical Asia.</li>
+      <li><strong>North Africa:</strong> resident in the Atlas Mountains of Morocco, Algeria, and Tunisia. Absent from the Sahara lowlands (where the Brown-necked Raven replaces it).</li>
+      <li><strong>Islands:</strong> resident in the Canary Islands (Lanzarote and Fuerteventura; subspecies <em>C. c. tingitanus</em>), Faroe Islands, and Iceland.</li>
+    </ul>
+  </section>
+
+  <section class="qa-section">
+    <h2>Habitat Preferences</h2>
+    <p><strong class="claim-science">[science]</strong> Common Ravens occupy a diverse range of habitats:<sup><a href="#src-1">1</a></sup></p>
+    <ul>
+      <li><strong>Optimal:</strong> coastal cliffs, rocky mountains and plateaus, Arctic tundra, boreal forest edges, desert with rocky outcrops. These habitats provide cliff or tall-tree nest sites and open foraging terrain.</li>
+      <li><strong>Suboptimal but used:</strong> farmland with scattered trees or pylons; urban edges near landfills or slaughterhouses; coniferous plantations (nesting in tall trees).</li>
+      <li><strong>Avoided:</strong> closed-canopy lowland forest (limited soaring opportunities); intensively managed agricultural monocultures without structural features.</li>
+    </ul>
+    <p>Ravens are remarkably cold-tolerant and are among the few birds that remain in the High Arctic year-round, exploiting marine mammal carcasses, human camps, and seabird colonies for food through the polar winter.</p>
+  </section>
+
+  <section class="qa-section">
+    <h2>Population Estimates</h2>
+    <p><strong class="claim-science">[science]</strong> Global population estimates are approximate due to the species' vast range:<sup><a href="#src-2">2</a></sup></p>
+    <ul>
+      <li>Global population: estimated at several million individuals — exact figures are uncertain due to inaccessible range in boreal Asia and the Arctic.</li>
+      <li>Europe: approximately 300,000–600,000 breeding pairs (BirdLife International).</li>
+      <li>Britain: approximately 7,000–8,000 breeding pairs (recovering from historical persecution).</li>
+      <li>IUCN status: Least Concern — not globally threatened; stable or increasing in most of its range.</li>
+    </ul>
+  </section>
+
+  <section class="qa-section">
+    <h2>Related Pages</h2>
+    <ul>
+      <li><a href="/species/common-raven/">Common Raven — species hub</a></li>
+      <li><a href="/species/common-raven/identification/">Common Raven identification</a></li>
+      <li><a href="/places/ravens-in-the-uk/">Ravens in the UK</a></li>
+      <li><a href="/places/ravens-in-iceland/">Ravens in Iceland</a></li>
+      <li><a href="/questions/where-do-ravens-live/">Where do ravens live?</a></li>
+    </ul>
+  </section>
+
+  <section class="qa-faq qa-section" aria-labelledby="faq-h2">
+    <h2 id="faq-h2">Frequently Asked Questions</h2>
+    {faq.map(item => (
+      <details class="qa-faq-item">
+        <summary class="qa-faq-q">{item.q}</summary>
+        <p class="qa-faq-a">{item.a}</p>
+      </details>
+    ))}
+  </section>
+
+  <section class="qa-sources qa-section" aria-labelledby="src-h2">
+    <h2 id="src-h2">Sources</h2>
+    <ol class="qa-src-list">
+      <li id="src-1">Boarman, W.I. & Heinrich, B. (1999). Common Raven (<em>Corvus corax</em>). In Poole, A. (ed.), <em>The Birds of North America</em>, No. 476. Cornell Lab of Ornithology. — range, habitat, distribution, subspecies.</li>
+      <li id="src-2">BirdLife International (2023). Species factsheet: <em>Corvus corax</em>. — global population estimate, IUCN status, European breeding population.</li>
+    </ol>
+    <p class="qa-claim-note"><strong class="claim-science">[science]</strong> peer-reviewed or field-guide data</p>
+  </section>
+
+</article>
+</BaseLayout>
+
+<style>
+  .qa-page { max-width: 820px; margin: 0 auto; padding: 2rem 1.25rem 4rem; color: var(--iron-ink, #e8e4d8); font-family: 'Inter', sans-serif; line-height: 1.72; }
+  .qa-breadcrumb ol { display: flex; flex-wrap: wrap; gap: .25rem; list-style: none; padding: 0; margin: 0 0 2rem; font-size: .8rem; color: var(--ink-soft, #8a8070); }
+  .qa-breadcrumb a { color: var(--gold-500, #d4ae5a); text-decoration: none; }
+  .qa-pillar { font-size: .72rem; letter-spacing: .12em; text-transform: uppercase; color: var(--gold-500, #d4ae5a); margin: 0 0 .4rem; }
+  .qa-page h1 { font-family: 'Cormorant Garamond', serif; font-size: clamp(2rem, 5vw, 3rem); font-weight: 700; color: #fff; margin: 0 0 2rem; line-height: 1.1; }
+  .qa-snippet { background: rgba(212,174,90,.08); border-left: 3px solid var(--gold-500, #d4ae5a); border-radius: 0 6px 6px 0; padding: 1rem 1.25rem; margin-bottom: 2.5rem; font-size: 1.03rem; }
+  .qa-section { margin-bottom: 2.5rem; }
+  .qa-section h2 { font-family: 'Cormorant Garamond', serif; font-size: 1.5rem; font-weight: 600; color: #fff; margin: 0 0 .9rem; border-bottom: 1px solid rgba(212,174,90,.2); padding-bottom: .4rem; }
+  .qa-section p { margin: 0 0 1rem; font-size: .97rem; }
+  .qa-section ul { padding-left: 1.25rem; margin: 0 0 1rem; }
+  .qa-section li { margin-bottom: .4rem; font-size: .95rem; }
+  .claim-science { color: #7ab9e0; font-style: normal; font-size: .78rem; }
+  a[href] { color: var(--gold-500, #d4ae5a); }
+  .qa-faq-item { border-bottom: 1px solid rgba(255,255,255,.07); }
+  .qa-faq-q { cursor: pointer; padding: .9rem 0; font-size: .97rem; font-weight: 500; color: #fff; list-style: none; }
+  .qa-faq-q::before { content: '+ '; color: var(--gold-500, #d4ae5a); font-weight: 700; }
+  details[open] .qa-faq-q::before { content: '− '; }
+  .qa-faq-a { margin: 0 0 1rem; line-height: 1.7; font-size: .93rem; color: var(--ink-soft, #c8c0b0); }
+  .qa-src-list { padding-left: 1.25rem; margin: 0 0 1rem; }
+  .qa-src-list li { margin-bottom: .6rem; font-size: .82rem; color: var(--ink-soft, #8a8070); line-height: 1.6; }
+  .qa-claim-note { font-size: .78rem; color: var(--ink-soft, #605848); border-top: 1px solid rgba(255,255,255,.06); padding-top: .75rem; }
+</style>

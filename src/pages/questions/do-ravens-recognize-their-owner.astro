@@ -1,0 +1,132 @@
+---
+/**
+ * Q&A — Do ravens recognize their owner?
+ * Primary keyword: do ravens recognize their owner
+ * Secondary: raven recognise people, do ravens know their owner, raven bonding with humans
+ */
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const title       = 'Do Ravens Recognize Their Owner? Individual Recognition in Ravens';
+const description = 'Ravens can recognise individual humans by face and voice, and form strong bonds with specific people. This page examines what science says about raven individual recognition, including recognition of their carers and of human "enemies."';
+const path        = '/questions/do-ravens-recognize-their-owner/';
+
+const breadcrumbs = [
+  { name: 'Home',      url: '/' },
+  { name: 'Questions', url: '/questions/' },
+  { name: 'Do Ravens Recognize Their Owner?', url: path },
+];
+
+const faq = [
+  { q: 'Can ravens recognize individual humans?', a: 'Yes. Ravens (and closely related crows) are well-documented face-recognisers. Wild ravens show differential responses to different humans — approaching some individuals and avoiding others based on past interactions. Research on crows (Marzluff et al., 2008, Animal Cognition) demonstrated that crows can remember a specific threatening human face and alter their behaviour toward that person for years, suggesting ravens have similar abilities. Captive ravens strongly distinguish their regular carers from strangers.' },
+  { q: 'Do ravens form bonds with humans?', a: 'Yes, particularly in captivity. Ravens that have been raised by or regularly interact with specific humans show individual recognition, approach their carers selectively, engage in play and social behaviour with them, and can form lasting bonds. Konrad Lorenz described in detail the behaviour of ravens he raised, including their apparent attachment to him as an individual. Wild ravens in areas with regular human contact (Tower of London ravens, research facility birds) similarly show strong individual recognition.' },
+  { q: 'How long can ravens remember a person?', a: 'The duration of individual recognition in ravens has not been precisely measured. In closely related crows (Corvus brachyrhynchos), Marzluff et al. showed that recognition of a specific human face persisted for at least 2 years without reinforcement. Given that ravens have similar or greater cognitive capacities to crows, long-term retention of individual human faces (years) is plausible. The long lifespan of ravens (10–20+ years wild) suggests they could retain such recognition for extended periods.' },
+];
+---
+
+<BaseLayout title={title} description={description} path={path} ogType="article"
+  datePublished="2026-11-07" dateModified="2026-11-07"
+  breadcrumbs={breadcrumbs} faq={faq} pageType="Article">
+
+<article class="qa-page">
+
+  <nav class="qa-breadcrumb" aria-label="Breadcrumb">
+    <ol>
+      {breadcrumbs.map((b, i) => (
+        <li>
+          {i < breadcrumbs.length - 1
+            ? <><a href={b.url}>{b.name}</a><span aria-hidden="true"> › </span></>
+            : <span aria-current="page">{b.name}</span>}
+        </li>
+      ))}
+    </ol>
+  </nav>
+
+  <header class="qa-header">
+    <p class="qa-pillar">Question · Intelligence</p>
+    <h1>Do Ravens Recognize Their Owner? Individual Recognition in Ravens</h1>
+  </header>
+
+  <section class="qa-snippet" aria-label="Direct answer">
+    <p><strong class="claim-science">[science]</strong> Yes — ravens can recognise individual humans by face and voice. Wild ravens show differential responses to different people based on past experience. Captive ravens strongly distinguish regular carers from strangers and form individual bonds. Research on closely related crows documents face recognition persisting for at least 2 years; similar capacity is expected in ravens given their comparable or superior cognitive abilities.</p>
+  </section>
+
+  <section class="qa-section">
+    <h2>Face Recognition in Corvids</h2>
+    <p><strong class="claim-science">[science]</strong> Individual face recognition by corvids is well-documented:<sup><a href="#src-1">1</a></sup></p>
+    <ul>
+      <li>Marzluff et al. (2008) demonstrated that American Crows (<em>Corvus brachyrhynchos</em>) could recognise a specific "dangerous face" (worn by a person who had trapped and banded them) and differentiated it from a "neutral face" for over 2 years. The crows alarm-called and mobbed the dangerous face but not neutral controls.</li>
+      <li>Crucially, crows that had never seen the original dangerous face still responded to it — they had learned the face from other crows (social transmission of face recognition information).</li>
+      <li>Ravens have comparable or greater cognitive capacity to crows in most measures. Direct studies of raven face-recognition are less published, but their demonstrated capacity for individual recognition of conspecifics (ravens distinguish individual ravens by voice and appearance) extends to humans in captive and semi-wild contexts.</li>
+    </ul>
+  </section>
+
+  <section class="qa-section">
+    <h2>Raven-Human Bonds in Captivity</h2>
+    <p><strong class="claim-science">[science]</strong> Ravens raised by or regularly handled by humans form individual attachments that go beyond simple conditioning:<sup><a href="#src-2">2</a></sup></p>
+    <ul>
+      <li>Konrad Lorenz's detailed ethological observations of his ravens (described in <em>King Solomon's Ring</em>, 1949) document ravens recognising him individually, following him specifically, sharing food with him, and behaving toward him as a conspecific social partner.</li>
+      <li>Ravens at Tower of London and similar institutions recognise and behave differently toward regular keepers versus visitors.</li>
+      <li>Bugnyar's research birds at the Konrad Lorenz Research Centre recognise individual researchers — approaching some, avoiding others — based on accumulated experience.</li>
+    </ul>
+  </section>
+
+  <section class="qa-section">
+    <h2>What "Owner" Means to a Raven</h2>
+    <p>Ravens do not have an owner in a subordinate sense — they are cognitively too capable and socially too complex for simple owner-pet dynamics. A person who raises or regularly interacts with a raven becomes, from the raven's perspective, a social partner — a member of its small group, with an individual identity, remembered history, and social rank. Ravens test social relationships through play, mock aggression, and food-sharing — all behaviours Lorenz documented in his captive birds. What looks like bonding is real social recognition and social relationship formation.</p>
+  </section>
+
+  <section class="qa-section">
+    <h2>Related Pages</h2>
+    <ul>
+      <li><a href="/questions/do-ravens-remember-faces/">Do ravens remember faces?</a></li>
+      <li><a href="/behaviour/ravens-and-humans/">Ravens and humans</a></li>
+      <li><a href="/questions/how-smart-are-ravens/">How smart are ravens?</a></li>
+      <li><a href="/questions/do-ravens-make-good-pets/">Do ravens make good pets?</a></li>
+    </ul>
+  </section>
+
+  <section class="qa-faq qa-section" aria-labelledby="faq-h2">
+    <h2 id="faq-h2">Frequently Asked Questions</h2>
+    {faq.map(item => (
+      <details class="qa-faq-item">
+        <summary class="qa-faq-q">{item.q}</summary>
+        <p class="qa-faq-a">{item.a}</p>
+      </details>
+    ))}
+  </section>
+
+  <section class="qa-sources qa-section" aria-labelledby="src-h2">
+    <h2 id="src-h2">Sources</h2>
+    <ol class="qa-src-list">
+      <li id="src-1">Marzluff, J.M., Walls, J., Cornell, H.N., Withey, J.C. & Craig, D.P. (2010). Lasting recognition of threatening people by wild American crows. <em>Animal Behaviour</em>, 79(3), 699–707. — face recognition, long-term retention, social transmission of face information.</li>
+      <li id="src-2">Lorenz, K. (1949). <em>King Solomon's Ring</em>. Methuen. — detailed ethological accounts of captive raven individual recognition and bonding behaviour.</li>
+    </ol>
+    <p class="qa-claim-note"><strong class="claim-science">[science]</strong> peer-reviewed data</p>
+  </section>
+
+</article>
+</BaseLayout>
+
+<style>
+  .qa-page { max-width: 820px; margin: 0 auto; padding: 2rem 1.25rem 4rem; color: var(--iron-ink, #e8e4d8); font-family: 'Inter', sans-serif; line-height: 1.72; }
+  .qa-breadcrumb ol { display: flex; flex-wrap: wrap; gap: .25rem; list-style: none; padding: 0; margin: 0 0 2rem; font-size: .8rem; color: var(--ink-soft, #8a8070); }
+  .qa-breadcrumb a { color: var(--gold-500, #d4ae5a); text-decoration: none; }
+  .qa-pillar { font-size: .72rem; letter-spacing: .12em; text-transform: uppercase; color: var(--gold-500, #d4ae5a); margin: 0 0 .4rem; }
+  .qa-page h1 { font-family: 'Cormorant Garamond', serif; font-size: clamp(2rem, 5vw, 3rem); font-weight: 700; color: #fff; margin: 0 0 2rem; line-height: 1.1; }
+  .qa-snippet { background: rgba(212,174,90,.08); border-left: 3px solid var(--gold-500, #d4ae5a); border-radius: 0 6px 6px 0; padding: 1rem 1.25rem; margin-bottom: 2.5rem; font-size: 1.03rem; }
+  .qa-section { margin-bottom: 2.5rem; }
+  .qa-section h2 { font-family: 'Cormorant Garamond', serif; font-size: 1.5rem; font-weight: 600; color: #fff; margin: 0 0 .9rem; border-bottom: 1px solid rgba(212,174,90,.2); padding-bottom: .4rem; }
+  .qa-section p { margin: 0 0 1rem; font-size: .97rem; }
+  .qa-section ul { padding-left: 1.25rem; margin: 0 0 1rem; }
+  .qa-section li { margin-bottom: .4rem; font-size: .95rem; }
+  .claim-science { color: #7ab9e0; font-style: normal; font-size: .78rem; }
+  a[href] { color: var(--gold-500, #d4ae5a); }
+  .qa-faq-item { border-bottom: 1px solid rgba(255,255,255,.07); }
+  .qa-faq-q { cursor: pointer; padding: .9rem 0; font-size: .97rem; font-weight: 500; color: #fff; list-style: none; }
+  .qa-faq-q::before { content: '+ '; color: var(--gold-500, #d4ae5a); font-weight: 700; }
+  details[open] .qa-faq-q::before { content: '− '; }
+  .qa-faq-a { margin: 0 0 1rem; line-height: 1.7; font-size: .93rem; color: var(--ink-soft, #c8c0b0); }
+  .qa-src-list { padding-left: 1.25rem; margin: 0 0 1rem; }
+  .qa-src-list li { margin-bottom: .6rem; font-size: .82rem; color: var(--ink-soft, #8a8070); line-height: 1.6; }
+  .qa-claim-note { font-size: .78rem; color: var(--ink-soft, #605848); border-top: 1px solid rgba(255,255,255,.06); padding-top: .75rem; }
+</style>

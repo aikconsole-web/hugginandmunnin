@@ -1,0 +1,142 @@
+---
+/**
+ * Q&A — Do ravens have a sense of humour?
+ * Primary keyword: do ravens have a sense of humour
+ * Secondary: raven play behaviour, raven pranks, raven mischief
+ */
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const title       = 'Do Ravens Have a Sense of Humour? Play, Mischief, and Apparent Pranks';
+const description = 'Ravens engage in object play, aerial acrobatics, and behaviours that look remarkably like pranks — tugging tails, stealing food theatrically, and teasing predators. This page examines the science behind apparent raven mischief and whether it constitutes a genuine sense of humour.';
+const path        = '/questions/do-ravens-have-a-sense-of-humour/';
+
+const breadcrumbs = [
+  { name: 'Home',      url: '/' },
+  { name: 'Questions', url: '/questions/' },
+  { name: 'Do Ravens Have a Sense of Humour?', url: path },
+];
+
+const faq = [
+  { q: 'Do ravens play pranks on other animals?', a: 'Ravens engage in behaviours that look like pranks: they sneak up on resting dogs or wolves and tug their tails, then hop back to avoid a reaction; they steal objects within sight of humans or other ravens and carry them conspicuously, apparently soliciting a chase; they emit alarm calls without apparent danger, sending food-competitors fleeing so the raven can steal their food. Whether these constitute "pranks" in the sense requiring intent to amuse depends on interpretation, but the behaviours are well-documented and appear playfully calculated rather than purely food-driven.' },
+  { q: 'Do ravens laugh?', a: 'Ravens do not produce a sound conventionally identified as laughter, but they have multiple vocalizations associated with play: a soft, rapid "knocking" call produced during social play; a range of non-distress, low-intensity calls exchanged between affiliative individuals. They also produce sounds researchers describe as "gurgling" or "knocking" in relaxed, playful contexts. Whether any of these constitutes a functional analogue to laughter (a vocal signal of positive affect during play) is an open research question.' },
+  { q: 'Are ravens mischievous birds?', a: 'Ravens are frequently described as mischievous by researchers and long-term observers, and the description fits: they investigate, manipulate, steal, and play with objects and other animals in ways that exceed what food-seeking alone would predict. Bernd Heinrich\'s accounts of young ravens at his Vermont forest camp describe birds that persistently investigated objects, hid and retrieved them, manipulated tarps and strings, and solicited play with the researcher. This exploratory, apparently playful excess of behaviour relative to immediate needs is a consistent feature of raven reports across cultures and contexts.' },
+];
+---
+
+<BaseLayout title={title} description={description} path={path} ogType="article"
+  datePublished="2026-11-08" dateModified="2026-11-08"
+  breadcrumbs={breadcrumbs} faq={faq} pageType="Article">
+
+<article class="qa-page">
+
+  <nav class="qa-breadcrumb" aria-label="Breadcrumb">
+    <ol>
+      {breadcrumbs.map((b, i) => (
+        <li>
+          {i < breadcrumbs.length - 1
+            ? <><a href={b.url}>{b.name}</a><span aria-hidden="true"> › </span></>
+            : <span aria-current="page">{b.name}</span>}
+        </li>
+      ))}
+    </ol>
+  </nav>
+
+  <header class="qa-header">
+    <p class="qa-pillar">Question · Intelligence</p>
+    <h1>Do Ravens Have a Sense of Humour? Play, Mischief, and Apparent Pranks</h1>
+  </header>
+
+  <section class="qa-snippet" aria-label="Direct answer">
+    <p><strong class="claim-science">[science]</strong> Ravens show play behaviour that in some contexts looks remarkably like mischief or pranks — tail-tugging wolves, issuing false alarm calls to steal food, and carrying objects conspicuously to solicit chases. Whether this constitutes a "sense of humour" (requiring that behaviour is performed for its own comic effect) is debated, but ravens clearly play beyond immediate need and appear to find novelty intrinsically rewarding.</p>
+  </section>
+
+  <section class="qa-section">
+    <h2>The Science of Raven Play</h2>
+    <p><strong class="claim-science">[science]</strong> Play in animals is defined as behaviour that is not immediately functional — it uses energy without directly producing food, territory, or mates, is repeated, and occurs in relaxed, non-stressful contexts. Ravens are among the most play-prone birds known, engaging in:<sup><a href="#src-1">1</a></sup></p>
+    <ul>
+      <li><strong>Object play:</strong> manipulating, dropping, carrying, hiding, and re-retrieving objects with no food value.</li>
+      <li><strong>Locomotor play:</strong> aerial acrobatics — hanging upside down from branches, performing rolls and dives in wind, sliding repeatedly down snow slopes.</li>
+      <li><strong>Social play:</strong> rough-and-tumble wrestling with conspecifics; play-fighting sequences that stop short of actual aggression.</li>
+      <li><strong>Play with other species:</strong> tail-tugging of wolves and dogs; soliciting chase sequences with large predators.</li>
+    </ul>
+    <p>Raven play is especially pronounced in juveniles and young adults — the period of greatest neural plasticity — suggesting play functions in learning and cognitive development, not merely as a by-product of excess energy.</p>
+  </section>
+
+  <section class="qa-section">
+    <h2>Apparent Pranks: What Ravens Actually Do</h2>
+    <p><strong class="claim-science">[science]</strong> Several raven behaviours have a prank-like quality when described:<sup><a href="#src-1">1</a></sup><sup><a href="#src-2">2</a></sup></p>
+    <ul>
+      <li><strong>Tail-tugging:</strong> a raven approaches a wolf or large dog from behind, tugs the tail, and retreats rapidly when the animal turns. The sequence is repeated. No food is obtained. The raven appears to be soliciting a reaction for its own interest.</li>
+      <li><strong>False alarm calls:</strong> ravens emit alarm calls associated with aerial predators in the absence of such predators, sending competitor ravens or other animals fleeing from food — which the caller then moves in to steal. This is tactical deception, but the theatrical nature of the behaviour adds to its prank-like appearance.</li>
+      <li><strong>Object theft and display:</strong> ravens steal objects from humans or other animals and carry them conspicuously in view of the owner, apparently soliciting a chase rather than simply keeping the object.</li>
+    </ul>
+    <p>Heinrich recounts repeated examples from his long-term raven studies in Maine and Vermont: individual birds that developed consistent "personalities" toward novel objects and toward the researcher himself, including apparent testing of boundaries.</p>
+  </section>
+
+  <section class="qa-section">
+    <h2>Does This Require a Sense of Humour?</h2>
+    <p><strong class="claim-science">[science]</strong> A "sense of humour" in the full human sense implies the deliberate performance of behaviour for comic effect — requiring theory of mind (understanding how others will perceive the action) and positive emotional valence associated with the other's confusion or reaction. This is a high bar.<sup><a href="#src-2">2</a></sup></p>
+    <p>What can be said without that inference:</p>
+    <ul>
+      <li>Ravens perform behaviours that are not immediately food- or survival-motivated and that appear directed at eliciting reactions in others.</li>
+      <li>Ravens show evidence of theory of mind in other contexts (perspective-taking in cache-protection studies), so the cognitive capacity for understanding another's reaction exists.</li>
+      <li>Ravens show positive emotional states during play (relaxed posture, play-vocalizations, repeated engagement).</li>
+    </ul>
+    <p>Whether the subjective experience of a raven during tail-tugging a wolf resembles anything like human amusement is unknown and perhaps unknowable. What is clear is that the functional structure of the behaviour — seeking a reaction, apparently for the engagement itself rather than material gain — parallels the function of mischief in social, cognitively complex species.</p>
+  </section>
+
+  <section class="qa-section">
+    <h2>Related Pages</h2>
+    <ul>
+      <li><a href="/behaviour/raven-play/">Raven play behaviour</a></li>
+      <li><a href="/questions/do-ravens-have-feelings/">Do ravens have feelings?</a></li>
+      <li><a href="/questions/how-smart-are-ravens/">How smart are ravens?</a></li>
+      <li><a href="/behaviour/raven-deception-and-tactical-deception/">Raven deception</a></li>
+    </ul>
+  </section>
+
+  <section class="qa-faq qa-section" aria-labelledby="faq-h2">
+    <h2 id="faq-h2">Frequently Asked Questions</h2>
+    {faq.map(item => (
+      <details class="qa-faq-item">
+        <summary class="qa-faq-q">{item.q}</summary>
+        <p class="qa-faq-a">{item.a}</p>
+      </details>
+    ))}
+  </section>
+
+  <section class="qa-sources qa-section" aria-labelledby="src-h2">
+    <h2 id="src-h2">Sources</h2>
+    <ol class="qa-src-list">
+      <li id="src-1">Heinrich, B. (1999). <em>Mind of the Raven: Investigations and Adventures with Wolf-Birds</em>. Cliff Street Books. — play behaviour, apparent pranks, tail-tugging, object play; first-hand field observations.</li>
+      <li id="src-2">Bugnyar, T. & Heinrich, B. (2005). Ravens, <em>Corvus corax</em>, differentiate between knowledgeable and ignorant competitors. <em>Proceedings of the Royal Society B</em>, 272(1570), 1641–1646. — theory of mind evidence; perspective-taking; social intelligence context for mischief-like behaviour.</li>
+    </ol>
+    <p class="qa-claim-note"><strong class="claim-science">[science]</strong> peer-reviewed data</p>
+  </section>
+
+</article>
+</BaseLayout>
+
+<style>
+  .qa-page { max-width: 820px; margin: 0 auto; padding: 2rem 1.25rem 4rem; color: var(--iron-ink, #e8e4d8); font-family: 'Inter', sans-serif; line-height: 1.72; }
+  .qa-breadcrumb ol { display: flex; flex-wrap: wrap; gap: .25rem; list-style: none; padding: 0; margin: 0 0 2rem; font-size: .8rem; color: var(--ink-soft, #8a8070); }
+  .qa-breadcrumb a { color: var(--gold-500, #d4ae5a); text-decoration: none; }
+  .qa-pillar { font-size: .72rem; letter-spacing: .12em; text-transform: uppercase; color: var(--gold-500, #d4ae5a); margin: 0 0 .4rem; }
+  .qa-page h1 { font-family: 'Cormorant Garamond', serif; font-size: clamp(2rem, 5vw, 3rem); font-weight: 700; color: #fff; margin: 0 0 2rem; line-height: 1.1; }
+  .qa-snippet { background: rgba(212,174,90,.08); border-left: 3px solid var(--gold-500, #d4ae5a); border-radius: 0 6px 6px 0; padding: 1rem 1.25rem; margin-bottom: 2.5rem; font-size: 1.03rem; }
+  .qa-section { margin-bottom: 2.5rem; }
+  .qa-section h2 { font-family: 'Cormorant Garamond', serif; font-size: 1.5rem; font-weight: 600; color: #fff; margin: 0 0 .9rem; border-bottom: 1px solid rgba(212,174,90,.2); padding-bottom: .4rem; }
+  .qa-section p { margin: 0 0 1rem; font-size: .97rem; }
+  .qa-section ul { padding-left: 1.25rem; margin: 0 0 1rem; }
+  .qa-section li { margin-bottom: .4rem; font-size: .95rem; }
+  .claim-science { color: #7ab9e0; font-style: normal; font-size: .78rem; }
+  a[href] { color: var(--gold-500, #d4ae5a); }
+  .qa-faq-item { border-bottom: 1px solid rgba(255,255,255,.07); }
+  .qa-faq-q { cursor: pointer; padding: .9rem 0; font-size: .97rem; font-weight: 500; color: #fff; list-style: none; }
+  .qa-faq-q::before { content: '+ '; color: var(--gold-500, #d4ae5a); font-weight: 700; }
+  details[open] .qa-faq-q::before { content: '− '; }
+  .qa-faq-a { margin: 0 0 1rem; line-height: 1.7; font-size: .93rem; color: var(--ink-soft, #c8c0b0); }
+  .qa-src-list { padding-left: 1.25rem; margin: 0 0 1rem; }
+  .qa-src-list li { margin-bottom: .6rem; font-size: .82rem; color: var(--ink-soft, #8a8070); line-height: 1.6; }
+  .qa-claim-note { font-size: .78rem; color: var(--ink-soft, #605848); border-top: 1px solid rgba(255,255,255,.06); padding-top: .75rem; }
+</style>

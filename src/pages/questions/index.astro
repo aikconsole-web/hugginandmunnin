@@ -1,0 +1,84 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const title       = 'Raven Questions — Answers to the Most-Asked Questions About Ravens';
+const description = 'Sourced answers to the most-asked questions about ravens: biology, behaviour, mythology, and identification. Every answer is fact-checked and labelled science or lore.';
+const path        = '/questions/';
+
+const breadcrumbs = [
+  { name: 'Home',      url: '/' },
+  { name: 'Questions', url: '/questions/' },
+];
+
+const questions = [
+  { slug: 'how-smart-are-ravens',           title: 'How smart are ravens?',                        cat: 'Biology' },
+  { slug: 'how-long-do-ravens-live',         title: 'How long do ravens live?',                     cat: 'Biology' },
+  { slug: 'do-ravens-mate-for-life',         title: 'Do ravens mate for life?',                     cat: 'Biology' },
+  { slug: 'what-do-ravens-eat',              title: 'What do ravens eat?',                           cat: 'Biology' },
+  { slug: 'what-is-a-group-of-ravens-called', title: 'What is a group of ravens called?',           cat: 'Culture' },
+  { slug: 'what-are-odins-ravens-called',       title: "What are Odin's ravens called?",           cat: 'Norse Lore' },
+  { slug: 'why-are-ravens-associated-with-death', title: 'Why are ravens associated with death?',  cat: 'Culture' },
+  { slug: 'where-do-ravens-live',               title: 'Where do ravens live?',                    cat: 'Biology' },
+  { slug: 'can-ravens-talk',                    title: 'Can ravens talk?',                         cat: 'Biology' },
+  { slug: 'how-big-are-ravens',                 title: 'How big are ravens?',                      cat: 'Biology' },
+  { slug: 'do-ravens-migrate',                  title: 'Do ravens migrate?',                       cat: 'Biology' },
+  { slug: 'how-do-ravens-communicate',          title: 'How do ravens communicate?',               cat: 'Biology' },
+  { slug: 'do-ravens-use-tools',                title: 'Do ravens use tools?',                     cat: 'Cognition' },
+  { slug: 'how-do-ravens-use-tools',            title: 'How do ravens use tools?',                 cat: 'Cognition' },
+  { slug: 'what-does-a-raven-symbolise',        title: 'What does a raven symbolise?',             cat: 'Culture' },
+  { slug: 'what-sound-does-a-raven-make',       title: 'What sound does a raven make?',            cat: 'Biology' },
+  { slug: 'are-ravens-smarter-than-crows',      title: 'Are ravens smarter than crows?',           cat: 'Cognition' },
+  { slug: 'are-ravens-related-to-crows',        title: 'Are ravens related to crows?',             cat: 'Biology' },
+  { slug: 'how-do-you-tell-a-raven-from-a-crow-in-flight', title: 'How do you tell a raven from a crow in flight?', cat: 'ID' },
+  { slug: 'what-is-the-raven-spirit-animal',    title: 'What is the raven spirit animal?',         cat: 'Culture' },
+  { slug: 'how-do-ravens-fly',                  title: 'How do ravens fly?',                       cat: 'Biology' },
+  { slug: 'are-ravens-dangerous',               title: 'Are ravens dangerous?',                    cat: 'Biology' },
+  { slug: 'do-ravens-have-feelings',            title: 'Do ravens have feelings?',                 cat: 'Cognition' },
+  { slug: 'why-does-the-tower-of-london-keep-ravens', title: 'Why does the Tower of London keep ravens?', cat: 'Culture' },
+];
+---
+
+<BaseLayout title={title} description={description} path={path} breadcrumbs={breadcrumbs}>
+
+<div class="qidx-page">
+
+  <nav class="qidx-breadcrumb" aria-label="Breadcrumb">
+    <ol>
+      <li><a href="/">Home</a><span aria-hidden="true"> › </span></li>
+      <li><span aria-current="page">Questions</span></li>
+    </ol>
+  </nav>
+
+  <header class="qidx-header">
+    <h1>Raven Questions</h1>
+    <p class="qidx-lead">Sourced answers to the most-asked questions about ravens. Every claim labelled <strong>science</strong> or <strong>lore</strong>.</p>
+  </header>
+
+  <ul class="qidx-list">
+    {questions.map(q => (
+      <li class="qidx-item">
+        <a href={`/questions/${q.slug}/`} class="qidx-link">
+          <span class="qidx-cat">{q.cat}</span>
+          <span class="qidx-title">{q.title}</span>
+        </a>
+      </li>
+    ))}
+  </ul>
+
+</div>
+
+</BaseLayout>
+
+<style>
+  .qidx-page { max-width: 760px; margin: 0 auto; padding: 2rem 1.25rem 4rem; color: var(--iron-ink, #e8e4d8); font-family: 'Inter', sans-serif; }
+  .qidx-breadcrumb ol { display: flex; gap: .25rem; list-style: none; padding: 0; margin: 0 0 2rem; font-size: .8rem; color: var(--ink-soft, #8a8070); }
+  .qidx-breadcrumb a { color: var(--gold-500, #d4ae5a); text-decoration: none; }
+  .qidx-header h1 { font-family: 'Cormorant Garamond', serif; font-size: clamp(2rem, 5vw, 2.75rem); font-weight: 700; color: #fff; margin: 0 0 .75rem; }
+  .qidx-lead { font-size: 1rem; color: var(--ink-soft, #c0b89a); margin: 0 0 2.5rem; line-height: 1.65; }
+  .qidx-list { list-style: none; padding: 0; margin: 0; }
+  .qidx-item { border-bottom: 1px solid rgba(255,255,255,.07); }
+  .qidx-link { display: flex; align-items: baseline; gap: .75rem; padding: .9rem 0; text-decoration: none; color: inherit; }
+  .qidx-link:hover .qidx-title { color: var(--gold-500, #d4ae5a); }
+  .qidx-cat { flex-shrink: 0; font-size: .68rem; letter-spacing: .1em; text-transform: uppercase; color: var(--gold-500, #d4ae5a); opacity: .7; min-width: 70px; }
+  .qidx-title { font-size: .97rem; color: var(--ink-soft, #e0d8c8); }
+</style>

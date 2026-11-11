@@ -1,0 +1,148 @@
+---
+/**
+ * Norse lore — Meaning of Muninn
+ * NRS·11
+ * Primary keyword: muninn meaning
+ * Secondary: what does muninn mean, muninn old norse, muninn memory raven
+ */
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+
+const title       = 'Muninn: Meaning, Etymology, and the Raven of Memory';
+const description = 'Muninn is one of Odin\'s two ravens in Norse mythology. The name means "memory" in Old Norse, and Odin confesses to worrying more for Muninn than for Huginn. This page examines the etymology, the primary sources, and what Muninn represents.';
+const path        = '/lore/norse/meaning-of-muninn/';
+
+const breadcrumbs = [
+  { name: 'Home',       url: '/' },
+  { name: 'Norse Lore', url: '/lore/norse/' },
+  { name: 'Meaning of Muninn', url: path },
+];
+
+const faq = [
+  { q: 'What does Muninn mean?', a: 'Muninn (Old Norse: <em>Muninn</em>) derives from the Old Norse noun <em>munr</em> (also <em>muna</em>, "to remember"), related to memory, desire, and the capacity to retain experience. The name is standardly translated as "Memory." The root is Proto-Germanic <em>*munaz</em>, related to English "mind," Latin <em>mens</em>, and Sanskrit <em>manas</em> — all from Proto-Indo-European <em>*men-</em> ("to think, remember").' },
+  { q: 'Why does Odin worry more for Muninn?', a: 'Grímnismál stanza 20 states Odin fears for Huginn but worries more for Muninn. Scholars have interpreted this as reflecting the Norse view that memory is more fundamental than thought: without memory, nothing learned can be retained; without thought, one can still draw on what is remembered. Memory sustains identity and accumulated wisdom over time, making its loss more catastrophic than the loss of active thinking. This interpretation is widely accepted but not beyond debate — the stanza is terse and admits multiple readings.' },
+  { q: 'Is Muninn the same as Odin\'s personal memory?', a: 'Some scholars read Huginn and Muninn as externalisations of Odin\'s own cognitive capacities — his thought and memory taking bird form. On this reading, Muninn represents Odin\'s accumulated knowledge, his memory of everything that has occurred across the nine worlds. When Odin fears for Muninn, he fears losing his accumulated wisdom and knowledge of history. This psychoanalytic or allegorical reading is influential but should be read alongside the narrative presentation: in the Eddas, the ravens are also literally birds who fly and return.' },
+];
+---
+
+<BaseLayout title={title} description={description} path={path} ogType="article"
+  datePublished="2026-11-07" dateModified="2026-11-07"
+  breadcrumbs={breadcrumbs} faq={faq} pageType="Article">
+
+<article class="qa-page">
+
+  <nav class="qa-breadcrumb" aria-label="Breadcrumb">
+    <ol>
+      {breadcrumbs.map((b, i) => (
+        <li>
+          {i < breadcrumbs.length - 1
+            ? <><a href={b.url}>{b.name}</a><span aria-hidden="true"> › </span></>
+            : <span aria-current="page">{b.name}</span>}
+        </li>
+      ))}
+    </ol>
+  </nav>
+
+  <header class="qa-header">
+    <p class="qa-pillar">Norse Lore · NRS·11</p>
+    <h1>Muninn: Meaning, Etymology, and the Raven of Memory</h1>
+  </header>
+
+  <section class="qa-snippet" aria-label="Direct answer">
+    <p><strong class="claim-lore">[lore]</strong> Muninn (Old Norse: <em>Muninn</em>) is one of Odin's two ravens. The name derives from Old Norse <em>munr</em> — meaning "memory," "desire," or "mind" — and is standardly translated as "Memory." Together with Huginn ("Thought"), Muninn gives Odin knowledge of all that passes in the nine worlds. Crucially, Grímnismál stanza 20 reveals that Odin worries more for Muninn than for Huginn — suggesting memory is considered the more essential capacity.</p>
+  </section>
+
+  <section class="qa-section">
+    <h2>Etymology: Muninn and Munr</h2>
+    <p><strong class="claim-lore">[lore]</strong> The name <em>Muninn</em> is formed from Old Norse <em>munr</em> (memory, desire, mind) + the definite suffix <em>-inn</em>. The root Proto-Germanic <em>*munaz</em> is cognate with:<sup><a href="#src-1">1</a></sup></p>
+    <ul>
+      <li>Old English <em>gemynd</em> ("mind, memory") → Modern English "mind"</li>
+      <li>Latin <em>mens</em> ("mind") and <em>memini</em> ("I remember")</li>
+      <li>Sanskrit <em>manas</em> ("mind, thought")</li>
+      <li>Greek <em>menos</em> ("spirit, force, passion")</li>
+    </ul>
+    <p>The Proto-Indo-European root <em>*men-</em> ("to think, remember, have one's mind directed") underlies all these forms. <em>Munr</em> in Old Norse carries a range of related meanings: memory, longing, desire, and the capacity for inner experience — again, not purely cognitive but encompassing the emotional and volitional dimensions of mind.</p>
+  </section>
+
+  <section class="qa-section">
+    <h2>The Primary Source: Grímnismál 20</h2>
+    <p><strong class="claim-lore">[lore]</strong> Grímnismál stanza 20 in the <em>Poetic Edda</em> is the key text:<sup><a href="#src-2">2</a></sup></p>
+    <blockquote>
+      <p><em>Huginn ok Muninn fljúga hverjan dag / Jörmungrund yfir; / óumk ek of Hugin at hann aftr né komit, / þó sjámk meir of Munin.</em></p>
+      <p>"Huginn and Muninn fly every day / over the great earth; / I fear for Huginn that he may not come back, / though I worry more for Muninn."</p>
+    </blockquote>
+    <p>The word <em>sjámk</em> ("I am more concerned") indicates a comparative worry: not that Odin fears Huginn will be lost, but that the loss of Muninn would be more devastating. This hierarchy has generated substantial scholarly commentary on what it reveals about Norse cognitive and metaphysical values.</p>
+  </section>
+
+  <section class="qa-section">
+    <h2>Why Memory More Than Thought?</h2>
+    <p><strong class="claim-lore">[lore]</strong> Several interpretations of Odin's greater concern for Muninn have been proposed:<sup><a href="#src-3">3</a></sup></p>
+    <ul>
+      <li><strong>Memory sustains identity:</strong> without memory, all prior knowledge and experience is erased; thought without memory produces nothing durable. For a god who has accumulated cosmic wisdom over aeons, memory loss would be existential.</li>
+      <li><strong>Desire and will:</strong> <em>munr</em> also carries the meaning of desire or will — without Muninn, Odin loses not just memory but motivation and direction. Thought (<em>hugr</em>) without desire is sterile.</li>
+      <li><strong>The mnemonic tradition:</strong> in an oral culture, memory is the foundation of everything — law, poetry, genealogy, ritual. Losing memory means losing everything that has been learned. This cultural valuation may be encoded in the stanza.</li>
+    </ul>
+  </section>
+
+  <section class="qa-section">
+    <h2>Muninn and the Real Raven</h2>
+    <p><strong class="claim-science">[science]</strong> The choice of a raven to personify memory may draw on observed raven behaviour. Ravens have exceptional spatial and episodic-like memory: they remember the locations of hundreds of food caches, recall which caches have been observed by competitors, and retrieve items cached weeks or months earlier. For a Norse audience familiar with ravens, the association of this bird with extraordinary memory would not have been arbitrary. See <a href="/questions/why-do-ravens-hide-food/">Why do ravens hide food?</a> for the caching memory research.</p>
+  </section>
+
+  <section class="qa-section">
+    <h2>Related Pages</h2>
+    <ul>
+      <li><a href="/lore/norse/meaning-of-huginn/">Huginn: meaning and etymology</a></li>
+      <li><a href="/lore/norse/huginn-and-muninn/">Huginn and Muninn — full article</a></li>
+      <li><a href="/lore/norse/grimnismal-stanza-20/">Grímnismál stanza 20 — the primary text</a></li>
+    </ul>
+  </section>
+
+  <section class="qa-faq qa-section" aria-labelledby="faq-h2">
+    <h2 id="faq-h2">Frequently Asked Questions</h2>
+    {faq.map(item => (
+      <details class="qa-faq-item">
+        <summary class="qa-faq-q">{item.q}</summary>
+        <p class="qa-faq-a">{item.a}</p>
+      </details>
+    ))}
+  </section>
+
+  <section class="qa-sources qa-section" aria-labelledby="src-h2">
+    <h2 id="src-h2">Sources</h2>
+    <ol class="qa-src-list">
+      <li id="src-1">Ringe, D. (2006). <em>A Linguistic History of English, Vol. 1: From Proto-Indo-European to Proto-Germanic</em>. Oxford University Press. — etymology of <em>*munaz</em>, PIE <em>*men-</em> root.</li>
+      <li id="src-2">Larrington, C. (trans., 2014). <em>The Poetic Edda</em> (revised ed.). Oxford World's Classics. — Grímnismál stanza 20.</li>
+      <li id="src-3">Simek, R. (1993). <em>Dictionary of Northern Mythology</em> (trans. A. Hall). D.S. Brewer. — Huginn and Muninn entries; scholarly commentary on the ravens.</li>
+    </ol>
+    <p class="qa-claim-note"><strong class="claim-lore">[lore]</strong> named cultural/historical source &nbsp;|&nbsp; <strong class="claim-science">[science]</strong> peer-reviewed or field-guide data</p>
+  </section>
+
+</article>
+</BaseLayout>
+
+<style>
+  .qa-page { max-width: 820px; margin: 0 auto; padding: 2rem 1.25rem 4rem; color: var(--iron-ink, #e8e4d8); font-family: 'Inter', sans-serif; line-height: 1.72; }
+  .qa-breadcrumb ol { display: flex; flex-wrap: wrap; gap: .25rem; list-style: none; padding: 0; margin: 0 0 2rem; font-size: .8rem; color: var(--ink-soft, #8a8070); }
+  .qa-breadcrumb a { color: var(--gold-500, #d4ae5a); text-decoration: none; }
+  .qa-pillar { font-size: .72rem; letter-spacing: .12em; text-transform: uppercase; color: var(--gold-500, #d4ae5a); margin: 0 0 .4rem; }
+  .qa-page h1 { font-family: 'Cormorant Garamond', serif; font-size: clamp(2rem, 5vw, 3rem); font-weight: 700; color: #fff; margin: 0 0 2rem; line-height: 1.1; }
+  .qa-snippet { background: rgba(212,174,90,.08); border-left: 3px solid var(--gold-500, #d4ae5a); border-radius: 0 6px 6px 0; padding: 1rem 1.25rem; margin-bottom: 2.5rem; font-size: 1.03rem; }
+  .qa-section { margin-bottom: 2.5rem; }
+  .qa-section h2 { font-family: 'Cormorant Garamond', serif; font-size: 1.5rem; font-weight: 600; color: #fff; margin: 0 0 .9rem; border-bottom: 1px solid rgba(212,174,90,.2); padding-bottom: .4rem; }
+  .qa-section p, blockquote p { margin: 0 0 1rem; font-size: .97rem; }
+  .qa-section ul { padding-left: 1.25rem; margin: 0 0 1rem; }
+  .qa-section li { margin-bottom: .4rem; font-size: .95rem; }
+  blockquote { border-left: 3px solid rgba(212,174,90,.35); margin: 0 0 1.25rem; padding: .5rem 1rem; background: rgba(255,255,255,.03); }
+  blockquote p { font-style: italic; color: var(--ink-soft, #c8c0b0); }
+  .claim-lore { color: #c4a26a; font-style: normal; font-size: .78rem; }
+  .claim-science { color: #7ab9e0; font-style: normal; font-size: .78rem; }
+  a[href] { color: var(--gold-500, #d4ae5a); }
+  .qa-faq-item { border-bottom: 1px solid rgba(255,255,255,.07); }
+  .qa-faq-q { cursor: pointer; padding: .9rem 0; font-size: .97rem; font-weight: 500; color: #fff; list-style: none; }
+  .qa-faq-q::before { content: '+ '; color: var(--gold-500, #d4ae5a); font-weight: 700; }
+  details[open] .qa-faq-q::before { content: '− '; }
+  .qa-faq-a { margin: 0 0 1rem; line-height: 1.7; font-size: .93rem; color: var(--ink-soft, #c8c0b0); }
+  .qa-src-list { padding-left: 1.25rem; margin: 0 0 1rem; }
+  .qa-src-list li { margin-bottom: .6rem; font-size: .82rem; color: var(--ink-soft, #8a8070); line-height: 1.6; }
+  .qa-claim-note { font-size: .78rem; color: var(--ink-soft, #605848); border-top: 1px solid rgba(255,255,255,.06); padding-top: .75rem; }
+</style>

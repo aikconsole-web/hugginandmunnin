@@ -1,0 +1,126 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+
+const title       = 'Brown-necked Raven Range and Habitat — Sahara and Arabian Desert';
+const description = 'The Brown-necked Raven (Corvus ruficollis) is a desert specialist of the Sahara, Arabian Peninsula, and Middle East. Range, desert habitat preferences, and conservation status.';
+const path        = '/species/brown-necked-raven/range-and-habitat/';
+
+const breadcrumbs = [
+  { name: 'Home',              url: '/' },
+  { name: 'Species',           url: '/species/' },
+  { name: 'Brown-necked Raven', url: '/species/brown-necked-raven/' },
+  { name: 'Range and Habitat', url: path },
+];
+
+const faq = [
+  { q: 'Where does the Brown-necked Raven live?', a: 'The Brown-necked Raven is a desert specialist found across the Sahara from Morocco and Mauritania east to Egypt and Sudan, throughout the Arabian Peninsula (Saudi Arabia, Yemen, Oman, UAE), the Middle East (Israel, Jordan, Syria, Iraq, Iran), and east to Afghanistan and Pakistan. It is the dominant large corvid in true desert and arid scrub habitats across this region.' },
+];
+---
+
+<BaseLayout title={title} description={description} path={path} ogType="article"
+  datePublished="2026-11-07" dateModified="2026-11-07"
+  breadcrumbs={breadcrumbs} faq={faq} pageType="Article">
+
+<article class="id-page">
+  <nav class="id-breadcrumb" aria-label="Breadcrumb">
+    <ol>
+      {breadcrumbs.map((b, i) => (
+        <li>
+          {i < breadcrumbs.length - 1
+            ? <><a href={b.url}>{b.name}</a><span aria-hidden="true"> › </span></>
+            : <span aria-current="page">{b.name}</span>}
+        </li>
+      ))}
+    </ol>
+  </nav>
+  <header class="id-header">
+    <p class="id-pillar">Species · Range and Habitat</p>
+    <h1>Brown-necked Raven — Range and Habitat</h1>
+    <p class="id-subtitle"><em>Corvus ruficollis</em> · Sahara and Arabian Desert</p>
+  </header>
+
+  <section class="id-snippet" aria-label="Quick answer">
+    <p><strong class="claim-science">[science]</strong> The Brown-necked Raven is a desert specialist ranging from Morocco and the Sahara east through the Arabian Peninsula and Middle East to Afghanistan and Pakistan. It is the dominant large corvid in sandy and stony desert, arid scrub, and semi-arid areas across this region. Conservation status: Least Concern.</p>
+  </section>
+
+  <section class="id-section">
+    <h2>Range</h2>
+    <p><strong class="claim-science">[science]</strong></p>
+    <ul>
+      <li><strong>North Africa:</strong> Morocco, Western Sahara, Mauritania, Mali, Niger, Algeria, Libya, Tunisia, Egypt, Sudan</li>
+      <li><strong>East Africa:</strong> Ethiopia and Eritrea (lowland areas — not highlands, where Thick-billed and White-necked Ravens occur)</li>
+      <li><strong>Arabian Peninsula:</strong> Saudi Arabia, Yemen, Oman, UAE, Qatar, Bahrain, Kuwait</li>
+      <li><strong>Middle East:</strong> Israel (Negev), Jordan, Syria, Iraq, Iran</li>
+      <li><strong>Central Asia:</strong> Afghanistan, Pakistan (west), India (north-west Rajasthan)<sup><a href="#src-1">1</a></sup></li>
+    </ul>
+  </section>
+
+  <section class="id-section">
+    <h2>Habitat</h2>
+    <p><strong class="claim-science">[science]</strong> True desert specialist:</p>
+    <ul>
+      <li>Sandy desert (erg) and stony desert (reg/hammada)</li>
+      <li>Arid scrub — sparse acacia, tamarisk, and desert shrub</li>
+      <li>Semi-arid savanna at desert margins</li>
+      <li>Oases and desert towns — opportunistic scavenger at human settlements</li>
+      <li>Avoids: mountains (replaced there by Common Raven at desert-mountain boundaries in Sinai, Atlas, etc.)<sup><a href="#src-1">1</a></sup></li>
+    </ul>
+  </section>
+
+  <section class="id-section">
+    <h2>Conservation Status</h2>
+    <p><strong class="claim-science">[science]</strong> <strong>Least Concern</strong> (IUCN Red List). Common across its extensive desert range.</p>
+  </section>
+
+  <section class="id-faq id-section" aria-labelledby="faq-h2">
+    <h2 id="faq-h2">Frequently Asked Questions</h2>
+    {faq.map(item => (
+      <details class="id-faq-item">
+        <summary class="id-faq-q">{item.q}</summary>
+        <p class="id-faq-a">{item.a}</p>
+      </details>
+    ))}
+  </section>
+
+  <section class="id-sources id-section" aria-labelledby="src-h2">
+    <h2 id="src-h2">Sources</h2>
+    <ol class="id-src-list">
+      <li id="src-1">Madge, S. &amp; Burn, H. (1994). <em>Crows and Jays</em>. Christopher Helm. — range and habitat.</li>
+    </ol>
+    <p class="id-claim-note"><strong class="claim-science">[science]</strong> field-guide data</p>
+  </section>
+
+  <nav class="id-nav-bottom">
+    <a href="/species/brown-necked-raven/identification/" class="id-back">← Identification</a>
+    <a href="/species/brown-necked-raven/" class="id-next">Brown-necked Raven Overview →</a>
+  </nav>
+</article>
+</BaseLayout>
+
+<style>
+  .id-page { max-width: 820px; margin: 0 auto; padding: 2rem 1.25rem 4rem; color: var(--iron-ink, #e8e4d8); font-family: 'Inter', sans-serif; line-height: 1.72; }
+  .id-breadcrumb ol { display: flex; flex-wrap: wrap; gap: .25rem; list-style: none; padding: 0; margin: 0 0 2rem; font-size: .8rem; color: var(--ink-soft, #8a8070); }
+  .id-breadcrumb a { color: var(--gold-500, #d4ae5a); text-decoration: none; }
+  .id-pillar { font-size: .72rem; letter-spacing: .12em; text-transform: uppercase; color: var(--gold-500, #d4ae5a); margin: 0 0 .4rem; }
+  .id-page h1 { font-family: 'Cormorant Garamond', serif; font-size: clamp(2rem, 5vw, 3.25rem); font-weight: 700; color: #fff; margin: 0 0 .2rem; line-height: 1.1; }
+  .id-subtitle { font-size: 1rem; color: var(--ink-soft, #c0b89a); margin: 0 0 2rem; }
+  .id-snippet { background: rgba(212,174,90,.08); border-left: 3px solid var(--gold-500, #d4ae5a); border-radius: 0 6px 6px 0; padding: 1rem 1.25rem; margin-bottom: 2.5rem; font-size: 1.03rem; }
+  .id-section { margin-bottom: 2.75rem; }
+  .id-section h2 { font-family: 'Cormorant Garamond', serif; font-size: 1.6rem; font-weight: 600; color: #fff; margin: 0 0 1rem; border-bottom: 1px solid rgba(212,174,90,.2); padding-bottom: .4rem; }
+  .id-section p { margin: 0 0 1rem; font-size: .97rem; }
+  .id-section ul { padding-left: 1.25rem; margin: 0 0 1rem; }
+  .id-section li { margin-bottom: .4rem; font-size: .95rem; }
+  .claim-science { color: #7ab9e0; font-style: normal; font-size: .78rem; }
+  a[href] { color: var(--gold-500, #d4ae5a); }
+  .id-faq-item { border-bottom: 1px solid rgba(255,255,255,.07); }
+  .id-faq-q { cursor: pointer; padding: .9rem 0; font-size: .97rem; font-weight: 500; color: #fff; list-style: none; }
+  .id-faq-q::before { content: '+ '; color: var(--gold-500, #d4ae5a); font-weight: 700; }
+  details[open] .id-faq-q::before { content: '− '; }
+  .id-faq-a { margin: 0 0 1rem; line-height: 1.7; font-size: .93rem; color: var(--ink-soft, #c8c0b0); }
+  .id-src-list { padding-left: 1.25rem; margin: 0 0 1rem; }
+  .id-src-list li { margin-bottom: .6rem; font-size: .82rem; color: var(--ink-soft, #8a8070); line-height: 1.6; }
+  .id-claim-note { font-size: .78rem; color: var(--ink-soft, #605848); border-top: 1px solid rgba(255,255,255,.06); padding-top: .75rem; }
+  .id-nav-bottom { display: flex; justify-content: space-between; padding-top: 2rem; border-top: 1px solid rgba(255,255,255,.07); }
+  .id-nav-bottom a { font-size: .9rem; text-decoration: none; }
+  .id-nav-bottom a:hover { text-decoration: underline; }
+</style>

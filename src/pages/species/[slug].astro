@@ -1,0 +1,287 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { SPECIES_CONTENT } from '../../data/species-content';
+
+export function getStaticPaths() {
+  return SPECIES_CONTENT.map(sp => ({ params: { slug: sp.slug }, props: { sp } }));
+}
+
+const { sp } = Astro.props;
+
+const title       = `${sp.commonName} (${sp.latinName}) — Facts, Field Marks & Range`;
+const description = sp.metaDescription;
+const path        = `/species/${sp.slug}/`;
+
+const breadcrumbs = [
+  { name: 'Home',    url: '/' },
+  { name: 'Species', url: '/species/' },
+  { name: sp.commonName, url: path },
+];
+---
+
+<BaseLayout
+  title={title}
+  description={description}
+  path={path}
+  ogType="article"
+  datePublished="2026-11-06"
+  dateModified="2026-11-06"
+  breadcrumbs={breadcrumbs}
+  faq={sp.faq}
+  pageType="Article"
+>
+
+<article class="sp-page">
+
+  <!-- ── Breadcrumb ──────────────────────────────────────────────────── -->
+  <nav class="sp-breadcrumb" aria-label="Breadcrumb">
+    <ol>
+      {breadcrumbs.map((b, i) => (
+        <li>
+          {i < breadcrumbs.length - 1
+            ? <><a href={b.url}>{b.name}</a><span aria-hidden="true"> › </span></>
+            : <span aria-current="page">{b.name}</span>
+          }
+        </li>
+      ))}
+    </ol>
+  </nav>
+
+  <!-- ── Hero header ────────────────────────────────────────────────── -->
+  <header class="sp-header">
+    <div class="sp-header-text">
+      <p class="sp-call-num">{sp.callNum}</p>
+      <h1 class="sp-h1">{sp.commonName}</h1>
+      <p class="sp-latin"><em>{sp.latinName}</em> <span class="sp-authority">{sp.authority}</span></p>
+      <p class="sp-region">{sp.region}</p>
+      <p class="sp-iucn">
+        <span class="sp-iucn-badge">{sp.iucn.startsWith('Least') ? 'LC' : sp.iucn.slice(0,2)}</span>
+        {sp.iucn}
+      </p>
+    </div>
+    <div class="sp-rune" aria-hidden="true">{sp.rune}</div>
+  </header>
+
+  <!-- ── Snippet / featured answer ─────────────────────────────────── -->
+  <section class="sp-snippet" aria-label="Quick answer">
+    <p>{sp.snippet}</p>
+  </section>
+
+  <!-- ── Quick facts ────────────────────────────────────────────────── -->
+  <section class="sp-facts" aria-labelledby="sp-facts-h2">
+    <h2 id="sp-facts-h2">Quick Facts</h2>
+    <dl class="sp-facts-grid">
+      <div class="sp-fact-cell">
+        <dt>Length</dt>
+        <dd>{sp.lengthCm} cm</dd>
+      </div>
+      <div class="sp-fact-cell">
+        <dt>Wingspan</dt>
+        <dd>{sp.wingspanCm} cm</dd>
+      </div>
+      <div class="sp-fact-cell">
+        <dt>Weight</dt>
+        <dd>{sp.weightG} g</dd>
+      </div>
+      <div class="sp-fact-cell">
+        <dt>IUCN Status</dt>
+        <dd>{sp.iucn.split('·')[0].trim()}</dd>
+      </div>
+      <div class="sp-fact-cell sp-fact-wide">
+        <dt>Range</dt>
+        <dd>{sp.range}</dd>
+      </div>
+      <div class="sp-fact-cell sp-fact-wide">
+        <dt>Habitat</dt>
+        <dd>{sp.habitat}</dd>
+      </div>
+      <div class="sp-fact-cell sp-fact-wide">
+        <dt>Diet</dt>
+        <dd>{sp.diet}</dd>
+      </div>
+      <div class="sp-fact-cell sp-fact-wide">
+        <dt>Voice</dt>
+        <dd>{sp.voice}</dd>
+      </div>
+    </dl>
+  </section>
+
+  <!-- ── Field marks ────────────────────────────────────────────────── -->
+  <section class="sp-fieldmarks" aria-labelledby="sp-fm-h2">
+    <h2 id="sp-fm-h2">Field Marks — How to Identify {sp.commonName}</h2>
+    <ul class="sp-fm-list">
+      {sp.fieldMarks.map(mark => <li>{mark}</li>)}
+    </ul>
+  </section>
+
+  <!-- ── Behaviour ──────────────────────────────────────────────────── -->
+  <section class="sp-behaviour" aria-labelledby="sp-beh-h2">
+    <h2 id="sp-beh-h2">Behaviour</h2>
+    <p>{sp.behaviour}</p>
+  </section>
+
+  <!-- ── Conservation ───────────────────────────────────────────────── -->
+  <section class="sp-conservation" aria-labelledby="sp-con-h2">
+    <h2 id="sp-con-h2">Conservation Status</h2>
+    <p>{sp.conservation}</p>
+  </section>
+
+  <!-- ── Compare with look-alikes ───────────────────────────────────── -->
+  {sp.lookAlikes.length > 0 && (
+    <section class="sp-lookalikes" aria-labelledby="sp-la-h2">
+      <h2 id="sp-la-h2">Similar Species</h2>
+      <ul class="sp-la-list">
+        {sp.lookAlikes.map(la => (
+          <li class="sp-la-item">
+            <a href={`/compare/${la.slug}/`} class="sp-la-link">
+              <strong>{la.name}</strong>
+              <span class="sp-la-key">{la.key}</span>
+            </a>
+          </li>
+        ))}
+      </ul>
+    </section>
+  )}
+
+  <!-- ── Norse / cultural cross-link ───────────────────────────────── -->
+  {sp.loreLink && (
+    <aside class="sp-lore-aside">
+      <p>
+        <span class="sp-lore-rune" aria-hidden="true">ᚺ</span>
+        <a href={sp.loreLink.href}>{sp.loreLink.label}</a>
+      </p>
+    </aside>
+  )}
+
+  <!-- ── FAQ ────────────────────────────────────────────────────────── -->
+  <section class="sp-faq" aria-labelledby="sp-faq-h2">
+    <h2 id="sp-faq-h2">Frequently Asked Questions</h2>
+    {sp.faq.map(item => (
+      <details class="sp-faq-item">
+        <summary class="sp-faq-q">{item.q}</summary>
+        <p class="sp-faq-a">{item.a}</p>
+      </details>
+    ))}
+  </section>
+
+  <!-- ── Sources ────────────────────────────────────────────────────── -->
+  <section class="sp-sources" aria-labelledby="sp-src-h2">
+    <h2 id="sp-src-h2">Sources</h2>
+    <ol class="sp-src-list">
+      {sp.sources.map(src => (
+        <li id={`src-${src.id}`}>
+          {src.url
+            ? <><a href={src.url} rel="noopener noreferrer" target="_blank">{src.citation}</a> — {src.usedFor}</>
+            : <>{src.citation} — {src.usedFor}</>
+          }
+        </li>
+      ))}
+    </ol>
+  </section>
+
+  <!-- ── All species nav ────────────────────────────────────────────── -->
+  <nav class="sp-sibling-nav" aria-label="Other raven species">
+    <a href="/species/" class="sp-back-link">← All 10 raven species</a>
+  </nav>
+
+</article>
+
+</BaseLayout>
+
+<style>
+/* ── Species hub page styles ───────────────────────────────────────── */
+.sp-page {
+  max-width: 860px;
+  margin: 0 auto;
+  padding: 2rem 1.25rem 4rem;
+  color: var(--iron-ink, #e8e4d8);
+  font-family: 'Inter', sans-serif;
+}
+
+/* Breadcrumb */
+.sp-breadcrumb ol { display: flex; flex-wrap: wrap; gap: .25rem; list-style: none; padding: 0; margin: 0 0 2rem; font-size: .8rem; color: var(--ink-soft, #8a8070); }
+.sp-breadcrumb a { color: var(--gold-500, #d4ae5a); text-decoration: none; }
+.sp-breadcrumb a:hover { text-decoration: underline; }
+
+/* Header */
+.sp-header { display: flex; justify-content: space-between; align-items: flex-start; gap: 1rem; margin-bottom: 2rem; }
+.sp-call-num { font-size: .75rem; letter-spacing: .12em; text-transform: uppercase; color: var(--gold-500, #d4ae5a); margin: 0 0 .25rem; }
+.sp-h1 { font-family: 'Cormorant Garamond', serif; font-size: clamp(2rem, 5vw, 3.25rem); font-weight: 700; margin: 0 0 .4rem; line-height: 1.1; color: #fff; }
+.sp-latin { margin: 0 0 .25rem; font-size: 1rem; color: var(--ink-soft, #8a8070); }
+.sp-authority { font-style: normal; font-size: .85rem; }
+.sp-region { font-size: .85rem; color: var(--ink-soft, #8a8070); margin: 0 0 .5rem; }
+.sp-iucn { font-size: .8rem; display: flex; align-items: center; gap: .4rem; color: var(--ink-soft, #8a8070); margin: 0; }
+.sp-iucn-badge { background: #2a4a2a; color: #6faf6f; border-radius: 3px; padding: .1em .4em; font-weight: 600; font-size: .75rem; letter-spacing: .04em; }
+.sp-rune { font-family: 'Noto Sans Runic', serif; font-size: clamp(3rem, 8vw, 6rem); color: var(--gold-500, #d4ae5a); opacity: .18; user-select: none; flex-shrink: 0; }
+
+/* Snippet */
+.sp-snippet { background: rgba(212,174,90,.08); border-left: 3px solid var(--gold-500, #d4ae5a); border-radius: 0 6px 6px 0; padding: 1rem 1.25rem; margin-bottom: 2.5rem; font-size: 1.05rem; line-height: 1.65; }
+
+/* Quick facts */
+.sp-facts { margin-bottom: 2.5rem; }
+.sp-facts h2, .sp-fieldmarks h2, .sp-behaviour h2, .sp-conservation h2, .sp-lookalikes h2, .sp-faq h2, .sp-sources h2 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin: 0 0 1rem;
+  color: #fff;
+  border-bottom: 1px solid rgba(212,174,90,.2);
+  padding-bottom: .4rem;
+}
+.sp-facts-grid { display: grid; grid-template-columns: 1fr 1fr; gap: .6rem; list-style: none; padding: 0; margin: 0; }
+.sp-fact-cell { background: rgba(255,255,255,.04); border-radius: 6px; padding: .75rem 1rem; }
+.sp-fact-wide { grid-column: 1 / -1; }
+.sp-fact-cell dt { font-size: .7rem; letter-spacing: .1em; text-transform: uppercase; color: var(--gold-500, #d4ae5a); margin-bottom: .2rem; }
+.sp-fact-cell dd { margin: 0; font-size: .95rem; line-height: 1.5; }
+
+/* Field marks */
+.sp-fieldmarks { margin-bottom: 2.5rem; }
+.sp-fm-list { padding-left: 1.25rem; margin: 0; }
+.sp-fm-list li { margin-bottom: .6rem; line-height: 1.6; font-size: .97rem; }
+
+/* Behaviour / conservation */
+.sp-behaviour, .sp-conservation { margin-bottom: 2.5rem; }
+.sp-behaviour p, .sp-conservation p { line-height: 1.75; font-size: .97rem; margin: 0; }
+
+/* Look-alikes */
+.sp-lookalikes { margin-bottom: 2.5rem; }
+.sp-la-list { list-style: none; padding: 0; margin: 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: .6rem; }
+.sp-la-item { background: rgba(255,255,255,.04); border-radius: 6px; }
+.sp-la-link { display: block; padding: .75rem 1rem; text-decoration: none; color: inherit; }
+.sp-la-link:hover { background: rgba(212,174,90,.08); border-radius: 6px; }
+.sp-la-link strong { display: block; color: var(--gold-500, #d4ae5a); font-size: .9rem; margin-bottom: .2rem; }
+.sp-la-key { font-size: .8rem; color: var(--ink-soft, #8a8070); }
+
+/* Lore aside */
+.sp-lore-aside { margin-bottom: 2.5rem; background: rgba(107,45,28,.15); border: 1px solid rgba(107,45,28,.4); border-radius: 6px; padding: 1rem 1.25rem; }
+.sp-lore-aside p { margin: 0; display: flex; align-items: center; gap: .6rem; font-size: .95rem; }
+.sp-lore-rune { font-family: 'Noto Sans Runic', serif; font-size: 1.3rem; color: var(--gold-500, #d4ae5a); }
+.sp-lore-aside a { color: var(--gold-500, #d4ae5a); }
+
+/* FAQ */
+.sp-faq { margin-bottom: 2.5rem; }
+.sp-faq-item { border-bottom: 1px solid rgba(255,255,255,.07); }
+.sp-faq-item:last-child { border-bottom: none; }
+.sp-faq-q { cursor: pointer; padding: .9rem 0; font-size: .97rem; font-weight: 500; list-style: none; color: #fff; }
+.sp-faq-q::before { content: '+ '; color: var(--gold-500, #d4ae5a); font-weight: 700; }
+details[open] .sp-faq-q::before { content: '− '; }
+.sp-faq-a { margin: 0 0 1rem; line-height: 1.7; font-size: .93rem; color: var(--ink-soft, #c8c0b0); }
+
+/* Sources */
+.sp-sources { margin-bottom: 2.5rem; }
+.sp-src-list { padding-left: 1.25rem; margin: 0; }
+.sp-src-list li { margin-bottom: .6rem; font-size: .82rem; color: var(--ink-soft, #8a8070); line-height: 1.6; }
+.sp-src-list a { color: var(--gold-500, #d4ae5a); }
+
+/* Back link */
+.sp-sibling-nav { padding-top: 1.5rem; border-top: 1px solid rgba(255,255,255,.07); }
+.sp-back-link { color: var(--gold-500, #d4ae5a); font-size: .9rem; text-decoration: none; }
+.sp-back-link:hover { text-decoration: underline; }
+
+@media (max-width: 540px) {
+  .sp-facts-grid { grid-template-columns: 1fr; }
+  .sp-fact-wide { grid-column: 1; }
+  .sp-header { flex-direction: column-reverse; }
+  .sp-rune { font-size: 3rem; }
+}
+</style>

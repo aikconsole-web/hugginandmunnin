@@ -1,0 +1,157 @@
+---
+/**
+ * World Lore — Ravens in the Bible
+ * MYW·11
+ * Primary keyword: ravens in the bible
+ * Secondary: raven bible meaning, biblical raven symbolism, elijah and the ravens, noah raven
+ */
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+
+const title       = 'Ravens in the Bible: Every Passage Explained';
+const description = 'Ravens appear in at least seven distinct passages across the Hebrew Bible and New Testament, playing roles ranging from God\'s messenger to the first bird Noah sent from the Ark. This page covers every passage with its context.';
+const path        = '/lore/world/ravens-in-the-bible/';
+
+const breadcrumbs = [
+  { name: 'Home',         url: '/' },
+  { name: 'World Lore',   url: '/lore/world/' },
+  { name: 'Ravens in the Bible', url: path },
+];
+
+const faq = [
+  { q: 'What is the significance of the raven in the Bible?', a: 'Ravens in the Bible carry contradictory symbolic weight. In Leviticus 11:15 and Deuteronomy 14:14, ravens are listed among the unclean birds — not to be eaten. Yet in 1 Kings 17, God commands ravens to feed the prophet Elijah — using an "unclean" bird as his messenger and provider. In Job 38:41 and Psalm 147:9, God feeds the ravens, using them as an example of his providence. The raven thus sits in an ambiguous position: ritually impure, yet providential.' },
+  { q: 'Did Noah send a raven or a dove first?', a: 'The raven came first. Genesis 8:7 states that Noah first sent a raven, which "kept going to and fro until the waters had dried up from the earth." Only then (Genesis 8:8) did he send a dove. The raven\'s inconclusive return contrasts with the dove\'s eventual return with an olive branch — a narrative structure that may reflect older Mesopotamian flood traditions.' },
+  { q: 'What does "Consider the ravens" mean in Luke 12?', a: 'Luke 12:24 records Jesus saying "Consider the ravens: they do not sow or reap, they have no storeroom or barn; yet God feeds them. How much more valuable you are than birds!" The passage uses ravens (Greek κόρακας, korakas) as an example of creatures cared for by God without effort on their part — an argument against anxious concern about material needs. The parallel passage in Matthew 6:26 uses "birds of the air" rather than specifying ravens.' },
+];
+---
+
+<BaseLayout title={title} description={description} path={path} ogType="article"
+  datePublished="2026-11-07" dateModified="2026-11-07"
+  breadcrumbs={breadcrumbs} faq={faq} pageType="Article">
+
+<article class="qa-page">
+
+  <nav class="qa-breadcrumb" aria-label="Breadcrumb">
+    <ol>
+      {breadcrumbs.map((b, i) => (
+        <li>
+          {i < breadcrumbs.length - 1
+            ? <><a href={b.url}>{b.name}</a><span aria-hidden="true"> › </span></>
+            : <span aria-current="page">{b.name}</span>}
+        </li>
+      ))}
+    </ol>
+  </nav>
+
+  <header class="qa-header">
+    <p class="qa-pillar">World Lore · MYW·11</p>
+    <h1>Ravens in the Bible: Every Passage Explained</h1>
+  </header>
+
+  <section class="qa-snippet" aria-label="Direct answer">
+    <p><strong class="claim-lore">[lore]</strong> Ravens appear in at least seven distinct contexts across the Hebrew Bible (Old Testament) and New Testament: in dietary law (unclean), in Noah's Flood (first bird sent from the Ark), as providers for Elijah (1 Kings 17), as objects of God's care (Job, Psalms), as examples of divine providence (Luke 12 / Jesus), and as symbols of physical beauty (Song of Songs). The raven's role shifts dramatically between passages.</p>
+  </section>
+
+  <section class="qa-section">
+    <h2>1. Dietary Law — The Raven as Unclean Bird</h2>
+    <p><strong class="claim-lore">[lore]</strong> The first biblical mention of ravens occurs in the lists of forbidden foods. Leviticus 11:13–19 and Deuteronomy 14:12–18 both list the raven (<em>ʿōrēb</em>, עֹרֵב in Hebrew) among the birds that are "detestable" and not to be eaten.<sup><a href="#src-1">1</a></sup></p>
+    <p>These are not narratives about ravens but legal texts. The Hebrew word <em>ʿōrēb</em> likely covers the whole genus — Common Raven, Carrion Crow, and related corvids — rather than distinguishing species as modern ornithology does.</p>
+  </section>
+
+  <section class="qa-section">
+    <h2>2. Noah's Raven — Genesis 8:6–7</h2>
+    <p><strong class="claim-lore">[lore]</strong> After forty days afloat, Noah opens the window of the Ark and sends out a raven: "He sent out a raven, and it kept flying back and forth until the water had dried up from the earth" (Genesis 8:7, NIV). The raven does not return with any sign; it simply flies. Noah then sends a dove, which provides the hoped-for indication — first returning without a branch, then with an olive branch, then not returning at all.<sup><a href="#src-1">1</a></sup></p>
+    <p>The contrast between the inconclusive raven and the informative dove has led to divergent interpretations. Some commentators read the raven negatively — as an unreliable, scavenging bird. Others note that the raven is faithful to its nature (a carrion-feeder in a world of floating carcasses) and that the text does not condemn it. See also <a href="/lore/world/noah-and-the-raven/">Noah and the Raven — full chapter</a>.</p>
+  </section>
+
+  <section class="qa-section">
+    <h2>3. Ravens Feed Elijah — 1 Kings 17:1–6</h2>
+    <p><strong class="claim-lore">[lore]</strong> This is the most striking raven passage in the Hebrew Bible. God commands the prophet Elijah to hide by the Kerith Ravine, east of the Jordan, during a drought: "I have directed the ravens to supply you with food there" (1 Kings 17:4, NIV). The ravens bring Elijah bread and meat morning and evening.<sup><a href="#src-1">1</a></sup></p>
+    <p>Several features of this passage have attracted comment:</p>
+    <ul>
+      <li>Ravens are classified as unclean, yet here they serve as divine messengers — a reversal of expected categories.</li>
+      <li>The Hebrew <em>ʿōrebîm</em> (ravens) is phonetically similar to <em>ʿArabîm</em> (Arabs/people from the region of Arab) and some scholars have proposed the text originally read "people from Arab" (a town in Gilead mentioned in Joshua 15:52). Most translations, ancient and modern, follow the Masoretic text's "ravens."</li>
+      <li>Theologically, the passage is read as God's providential care for his prophet using an unexpected means — the "unclean" bird as agent of grace.</li>
+    </ul>
+  </section>
+
+  <section class="qa-section">
+    <h2>4. God Feeds the Ravens — Job 38:41 and Psalm 147:9</h2>
+    <p><strong class="claim-lore">[lore]</strong> Two wisdom texts use the raven as an example of God's providential care for creation:</p>
+    <ul>
+      <li>Job 38:41: "Who provides food for the raven when its young cry out to God and wander about for lack of food?" (NIV). This is part of God's speech from the whirlwind, using natural examples to illustrate divine wisdom and power beyond human understanding.</li>
+      <li>Psalm 147:9: "He provides food for the cattle and for the young ravens when they call." (NIV). The young ravens' cry for food is an image of dependence on God's provision.</li>
+    </ul>
+    <p>Both passages observe an ecological reality: raven nestlings are indeed vocal and demanding in their food calls.<sup><a href="#src-1">1</a></sup></p>
+  </section>
+
+  <section class="qa-section">
+    <h2>5. "Consider the Ravens" — Luke 12:24</h2>
+    <p><strong class="claim-lore">[lore]</strong> Jesus uses ravens explicitly in his teaching on anxiety. Luke 12:24 records: "Consider the ravens: They do not sow or reap, they have no storeroom or barn; yet God feeds them. How much more valuable you are than birds!" (NIV).<sup><a href="#src-1">1</a></sup></p>
+    <p>The parallel in Matthew 6:26 says "birds of the air" rather than specifically ravens. Luke's specificity — ravens — is notable given their status as unclean birds. Using ravens (not doves or sparrows) as the example of divine care makes the argument stronger: even birds that are ritually impure are cared for by God.</p>
+  </section>
+
+  <section class="qa-section">
+    <h2>6. The Raven and Beauty — Song of Songs 5:11</h2>
+    <p><strong class="claim-lore">[lore]</strong> The only use of the raven as a positive aesthetic image in the Bible comes in the erotic poetry of the Song of Songs. The woman praises her beloved: "His head is the finest gold; his hair is wavy and black as a raven" (Song of Songs 5:11, NIV). Here the raven's blackness is a mark of beauty — a striking contrast to its associations elsewhere with impurity and death.<sup><a href="#src-1">1</a></sup></p>
+  </section>
+
+  <section class="qa-section">
+    <h2>The Birds Behind the Texts</h2>
+    <p><strong class="claim-science">[science]</strong> The Common Raven (<em>Corvus corax</em>) is native to the Levant and present throughout the region today. The Hebrew <em>ʿōrēb</em> and Greek <em>korax</em>/κόραξ in biblical texts most likely referred primarily to the Common Raven, though the terms may have covered other large corvids. Ravens in the Middle East are year-round residents and would have been familiar birds to the biblical authors.</p>
+  </section>
+
+  <section class="qa-section">
+    <h2>Related Pages</h2>
+    <ul>
+      <li><a href="/lore/world/noah-and-the-raven/">Noah and the Raven — full chapter</a></li>
+      <li><a href="/questions/what-does-the-bible-say-about-ravens/">What does the Bible say about ravens? (Q&A)</a></li>
+      <li><a href="/lore/world/raven-symbolism/">Raven symbolism across cultures</a></li>
+      <li><a href="/species/common-raven/">Common Raven — species profile</a></li>
+    </ul>
+  </section>
+
+  <section class="qa-faq qa-section" aria-labelledby="faq-h2">
+    <h2 id="faq-h2">Frequently Asked Questions</h2>
+    {faq.map(item => (
+      <details class="qa-faq-item">
+        <summary class="qa-faq-q">{item.q}</summary>
+        <p class="qa-faq-a">{item.a}</p>
+      </details>
+    ))}
+  </section>
+
+  <section class="qa-sources qa-section" aria-labelledby="src-h2">
+    <h2 id="src-h2">Sources</h2>
+    <ol class="qa-src-list">
+      <li id="src-1">The Holy Bible, New International Version (NIV). 2011. Biblica. — primary text; all quotations from NIV unless otherwise noted. Passage references: Genesis 8:6–7; Leviticus 11:13–19; Deuteronomy 14:12–18; 1 Kings 17:1–6; Job 38:41; Psalm 147:9; Song of Songs 5:11; Luke 12:24.</li>
+    </ol>
+    <p class="qa-claim-note"><strong class="claim-lore">[lore]</strong> named cultural/historical source &nbsp;|&nbsp; <strong class="claim-science">[science]</strong> peer-reviewed or field-guide data</p>
+  </section>
+
+</article>
+</BaseLayout>
+
+<style>
+  .qa-page { max-width: 820px; margin: 0 auto; padding: 2rem 1.25rem 4rem; color: var(--iron-ink, #e8e4d8); font-family: 'Inter', sans-serif; line-height: 1.72; }
+  .qa-breadcrumb ol { display: flex; flex-wrap: wrap; gap: .25rem; list-style: none; padding: 0; margin: 0 0 2rem; font-size: .8rem; color: var(--ink-soft, #8a8070); }
+  .qa-breadcrumb a { color: var(--gold-500, #d4ae5a); text-decoration: none; }
+  .qa-pillar { font-size: .72rem; letter-spacing: .12em; text-transform: uppercase; color: var(--gold-500, #d4ae5a); margin: 0 0 .4rem; }
+  .qa-page h1 { font-family: 'Cormorant Garamond', serif; font-size: clamp(2rem, 5vw, 3rem); font-weight: 700; color: #fff; margin: 0 0 2rem; line-height: 1.1; }
+  .qa-snippet { background: rgba(212,174,90,.08); border-left: 3px solid var(--gold-500, #d4ae5a); border-radius: 0 6px 6px 0; padding: 1rem 1.25rem; margin-bottom: 2.5rem; font-size: 1.03rem; }
+  .qa-section { margin-bottom: 2.5rem; }
+  .qa-section h2 { font-family: 'Cormorant Garamond', serif; font-size: 1.5rem; font-weight: 600; color: #fff; margin: 0 0 .9rem; border-bottom: 1px solid rgba(212,174,90,.2); padding-bottom: .4rem; }
+  .qa-section p { margin: 0 0 1rem; font-size: .97rem; }
+  .qa-section ul { padding-left: 1.25rem; margin: 0 0 1rem; }
+  .qa-section li { margin-bottom: .4rem; font-size: .95rem; }
+  .claim-science { color: #7ab9e0; font-style: normal; font-size: .78rem; }
+  .claim-lore { color: #c4a26a; font-style: normal; font-size: .78rem; }
+  a[href] { color: var(--gold-500, #d4ae5a); }
+  .qa-faq-item { border-bottom: 1px solid rgba(255,255,255,.07); }
+  .qa-faq-q { cursor: pointer; padding: .9rem 0; font-size: .97rem; font-weight: 500; color: #fff; list-style: none; }
+  .qa-faq-q::before { content: '+ '; color: var(--gold-500, #d4ae5a); font-weight: 700; }
+  details[open] .qa-faq-q::before { content: '− '; }
+  .qa-faq-a { margin: 0 0 1rem; line-height: 1.7; font-size: .93rem; color: var(--ink-soft, #c8c0b0); }
+  .qa-src-list { padding-left: 1.25rem; margin: 0 0 1rem; }
+  .qa-src-list li { margin-bottom: .6rem; font-size: .82rem; color: var(--ink-soft, #8a8070); line-height: 1.6; }
+  .qa-claim-note { font-size: .78rem; color: var(--ink-soft, #605848); border-top: 1px solid rgba(255,255,255,.06); padding-top: .75rem; }
+</style>

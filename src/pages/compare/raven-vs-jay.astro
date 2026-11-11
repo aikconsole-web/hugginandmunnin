@@ -1,0 +1,152 @@
+---
+/**
+ * Compare — Raven vs Jay
+ * Primary keyword: raven vs jay
+ * Secondary: difference between raven and jay, jay vs raven size, eurasian jay vs raven
+ */
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const title       = 'Raven vs Jay: Size, Identification, and Differences';
+const description = 'Ravens and jays are both corvids but very different birds. This comparison covers how to tell a raven from a Eurasian Jay or Blue Jay — differences in size, colour, calls, habitat, and behaviour.';
+const path        = '/compare/raven-vs-jay/';
+
+const breadcrumbs = [
+  { name: 'Home',    url: '/' },
+  { name: 'Compare', url: '/compare/' },
+  { name: 'Raven vs Jay', url: path },
+];
+
+const faq = [
+  { q: 'Is a jay bigger than a raven?', a: 'No — a raven is dramatically larger than any jay. The Common Raven weighs 700–1,600 g and measures 54–67 cm long with a 115–150 cm wingspan. The Eurasian Jay (Garrulus glandarius) weighs 140–190 g and measures 32–37 cm, with a 52–58 cm wingspan. The Blue Jay (Cyanocitta cristata) of North America is similar in size to the Eurasian Jay. Ravens are roughly 5–8 times heavier than jays and are approximately twice as long.' },
+  { q: 'How do you tell a raven from a jay?', a: 'Colour alone identifies them in most regions: Eurasian Jays are pinkish-brown with a striking blue and black wing patch; Blue Jays are blue, white, and black with a crest. Ravens are entirely glossy black. At any distance where colour can be seen, there is no confusion. Even in silhouette, the size difference is dramatic — a raven is a large crow-sized bird; a jay is a small- to medium-sized corvid roughly half the raven\'s length. Raven calls (deep "kronk" or "prruk") are completely different from jay screaming calls.' },
+  { q: 'Are ravens and jays closely related?', a: 'Yes — both are members of the family Corvidae (the crow family). Within Corvidae, ravens are in the genus Corvus (with crows, jackdaws, and rooks). Jays are more distantly related within the family, occupying different genera depending on species: Garrulus (Eurasian Jay), Cyanocitta (Blue Jay), Aphelocoma (scrub-jays), Perisoreus (Siberian Jay), and others. Jays represent several independent lineages within Corvidae; the family is not fully resolved phylogenetically, but ravens and jays share a common corvid ancestor roughly 20–25 million years ago.' },
+];
+---
+
+<BaseLayout title={title} description={description} path={path} ogType="article"
+  datePublished="2026-11-07" dateModified="2026-11-07"
+  breadcrumbs={breadcrumbs} faq={faq} pageType="Article">
+
+<article class="qa-page">
+
+  <nav class="qa-breadcrumb" aria-label="Breadcrumb">
+    <ol>
+      {breadcrumbs.map((b, i) => (
+        <li>
+          {i < breadcrumbs.length - 1
+            ? <><a href={b.url}>{b.name}</a><span aria-hidden="true"> › </span></>
+            : <span aria-current="page">{b.name}</span>}
+        </li>
+      ))}
+    </ol>
+  </nav>
+
+  <header class="qa-header">
+    <p class="qa-pillar">Compare</p>
+    <h1>Raven vs Jay: Size, Identification, and Differences</h1>
+  </header>
+
+  <section class="qa-snippet" aria-label="Direct answer">
+    <p><strong class="claim-science">[science]</strong> Ravens and jays are both corvids but vastly different in size and appearance. A Common Raven (700–1,600 g) is 5–8 times heavier than a Eurasian Jay or Blue Jay (140–190 g). Ravens are entirely glossy black; Eurasian Jays are pinkish with a blue wing patch; Blue Jays are blue and white. In practice, there is no field identification difficulty between ravens and jays — the size and colour differences are unmistakeable.</p>
+  </section>
+
+  <section class="qa-section">
+    <h2>At a Glance</h2>
+    <table class="cmp-table">
+      <thead>
+        <tr><th>Feature</th><th>Common Raven</th><th>Eurasian Jay</th><th>Blue Jay</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Weight</td><td>700–1,600 g</td><td>140–190 g</td><td>70–100 g</td></tr>
+        <tr><td>Length</td><td>54–67 cm</td><td>32–37 cm</td><td>22–30 cm</td></tr>
+        <tr><td>Wingspan</td><td>115–150 cm</td><td>52–58 cm</td><td>34–43 cm</td></tr>
+        <tr><td>Colour</td><td>All glossy black</td><td>Pinkish-brown, blue wing patch</td><td>Blue, white, black; crest</td></tr>
+        <tr><td>Bill</td><td>Large, heavy, curved</td><td>Medium, straight</td><td>Medium, straight</td></tr>
+        <tr><td>Tail</td><td>Wedge-shaped</td><td>Rounded</td><td>Long, rounded</td></tr>
+        <tr><td>Call</td><td>Deep "kronk", "prruk"</td><td>Harsh screaming "skaaak"</td><td>"Jay-jay", screaming</td></tr>
+        <tr><td>Flight style</td><td>Powerful, soaring; flap-glide</td><td>Undulating, flap-flap-glide</td><td>Undulating</td></tr>
+        <tr><td>Primary habitat</td><td>Open country, mountains, forest edges</td><td>Broadleaf woodland</td><td>Mixed woodland, suburbs</td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section class="qa-section">
+    <h2>Size and Appearance</h2>
+    <p><strong class="claim-science">[science]</strong> The size difference between ravens and jays is dramatic. A Common Raven at 54–67 cm is approximately twice the length of a Eurasian Jay (32–37 cm) and roughly three times the length of a Blue Jay. In weight, ravens are 5–8× heavier. At any shared observation distance, the disparity is immediately obvious.<sup><a href="#src-1">1</a></sup></p>
+    <p>Colour is equally diagnostic. Ravens are entirely black with an iridescent sheen (blue-green-purple in good light). Eurasian Jays are unmistakeable: pinkish-brown body, white rump, black tail, and striking blue-and-black barred wing patch visible even in flight. Blue Jays are blue above with white underparts, a black necklace, and a prominent crest. No field identification challenge exists between ravens and jays.</p>
+  </section>
+
+  <section class="qa-section">
+    <h2>Behaviour and Ecology</h2>
+    <p><strong class="claim-science">[science]</strong> Ravens and jays are both highly intelligent corvids, but their ecological roles differ substantially:<sup><a href="#src-1">1</a></sup></p>
+    <ul>
+      <li><strong>Diet:</strong> ravens are generalist omnivores and significant scavengers — carrion is a major food source. Eurasian Jays specialise in acorn caching; they bury tens of thousands of acorns each autumn and are major agents of oak forest regeneration. Blue Jays similarly cache acorns and other nuts.</li>
+      <li><strong>Social structure:</strong> ravens live in complex non-breeding flocks (floater population) and form long-term breeding pairs. Jays are less social — typically in pairs or small family groups, not forming large flocks.</li>
+      <li><strong>Habitat:</strong> ravens prefer open landscapes (cliffs, tundra, mountains, desert) or forest edges; jays are woodland birds, particularly associated with oak and mixed deciduous forest.</li>
+      <li><strong>Nest sites:</strong> ravens nest on cliff ledges or in tall tree crowns; jays build cup nests in the forks of trees, typically concealed in broadleaf canopy.</li>
+    </ul>
+  </section>
+
+  <section class="qa-section">
+    <h2>Shared Corvid Traits</h2>
+    <p><strong class="claim-science">[science]</strong> As members of Corvidae, ravens and jays share a suite of family-level traits: high encephalisation quotient (large brain relative to body), excellent memory (both cache food and retrieve it accurately), complex vocalisations and mimicry ability, and demonstrated problem-solving in captive studies. Jays in some cognitive tasks (particularly those involving future planning and cache management) have been used as the foundational study species for corvid cognition; Western Scrub-Jays (now California Scrub-Jays) were the subjects of Clayton & Dickinson's pioneering episodic-like memory studies.<sup><a href="#src-1">1</a></sup></p>
+  </section>
+
+  <section class="qa-section">
+    <h2>Related Pages</h2>
+    <ul>
+      <li><a href="/compare/raven-vs-crow/">Raven vs crow</a></li>
+      <li><a href="/compare/raven-vs-jackdaw/">Raven vs jackdaw</a></li>
+      <li><a href="/compare/raven-vs-magpie/">Raven vs magpie</a></li>
+      <li><a href="/questions/are-ravens-related-to-crows/">Are ravens related to crows?</a></li>
+    </ul>
+  </section>
+
+  <section class="qa-faq qa-section" aria-labelledby="faq-h2">
+    <h2 id="faq-h2">Frequently Asked Questions</h2>
+    {faq.map(item => (
+      <details class="qa-faq-item">
+        <summary class="qa-faq-q">{item.q}</summary>
+        <p class="qa-faq-a">{item.a}</p>
+      </details>
+    ))}
+  </section>
+
+  <section class="qa-sources qa-section" aria-labelledby="src-h2">
+    <h2 id="src-h2">Sources</h2>
+    <ol class="qa-src-list">
+      <li id="src-1">Madge, S. & Burn, H. (1994). <em>Crows and Jays: A Guide to the Crows, Jays and Magpies of the World</em>. Christopher Helm. — size, identification, ecology and distribution of Corvidae including ravens and jays.</li>
+    </ol>
+    <p class="qa-claim-note"><strong class="claim-science">[science]</strong> peer-reviewed or field-guide data</p>
+  </section>
+
+</article>
+</BaseLayout>
+
+<style>
+  .qa-page { max-width: 820px; margin: 0 auto; padding: 2rem 1.25rem 4rem; color: var(--iron-ink, #e8e4d8); font-family: 'Inter', sans-serif; line-height: 1.72; }
+  .qa-breadcrumb ol { display: flex; flex-wrap: wrap; gap: .25rem; list-style: none; padding: 0; margin: 0 0 2rem; font-size: .8rem; color: var(--ink-soft, #8a8070); }
+  .qa-breadcrumb a { color: var(--gold-500, #d4ae5a); text-decoration: none; }
+  .qa-pillar { font-size: .72rem; letter-spacing: .12em; text-transform: uppercase; color: var(--gold-500, #d4ae5a); margin: 0 0 .4rem; }
+  .qa-page h1 { font-family: 'Cormorant Garamond', serif; font-size: clamp(2rem, 5vw, 3rem); font-weight: 700; color: #fff; margin: 0 0 2rem; line-height: 1.1; }
+  .qa-snippet { background: rgba(212,174,90,.08); border-left: 3px solid var(--gold-500, #d4ae5a); border-radius: 0 6px 6px 0; padding: 1rem 1.25rem; margin-bottom: 2.5rem; font-size: 1.03rem; }
+  .qa-section { margin-bottom: 2.5rem; }
+  .qa-section h2 { font-family: 'Cormorant Garamond', serif; font-size: 1.5rem; font-weight: 600; color: #fff; margin: 0 0 .9rem; border-bottom: 1px solid rgba(212,174,90,.2); padding-bottom: .4rem; }
+  .qa-section p { margin: 0 0 1rem; font-size: .97rem; }
+  .qa-section ul { padding-left: 1.25rem; margin: 0 0 1rem; }
+  .qa-section li { margin-bottom: .4rem; font-size: .95rem; }
+  .cmp-table { width: 100%; border-collapse: collapse; font-size: .88rem; margin-bottom: 1rem; }
+  .cmp-table th { background: rgba(212,174,90,.12); color: #fff; padding: .5rem .75rem; text-align: left; border-bottom: 1px solid rgba(212,174,90,.3); }
+  .cmp-table td { padding: .45rem .75rem; border-bottom: 1px solid rgba(255,255,255,.05); vertical-align: top; }
+  .cmp-table tr:nth-child(even) td { background: rgba(255,255,255,.02); }
+  .claim-science { color: #7ab9e0; font-style: normal; font-size: .78rem; }
+  a[href] { color: var(--gold-500, #d4ae5a); }
+  .qa-faq-item { border-bottom: 1px solid rgba(255,255,255,.07); }
+  .qa-faq-q { cursor: pointer; padding: .9rem 0; font-size: .97rem; font-weight: 500; color: #fff; list-style: none; }
+  .qa-faq-q::before { content: '+ '; color: var(--gold-500, #d4ae5a); font-weight: 700; }
+  details[open] .qa-faq-q::before { content: '− '; }
+  .qa-faq-a { margin: 0 0 1rem; line-height: 1.7; font-size: .93rem; color: var(--ink-soft, #c8c0b0); }
+  .qa-src-list { padding-left: 1.25rem; margin: 0 0 1rem; }
+  .qa-src-list li { margin-bottom: .6rem; font-size: .82rem; color: var(--ink-soft, #8a8070); line-height: 1.6; }
+  .qa-claim-note { font-size: .78rem; color: var(--ink-soft, #605848); border-top: 1px solid rgba(255,255,255,.06); padding-top: .75rem; }
+</style>

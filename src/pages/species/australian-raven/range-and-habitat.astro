@@ -1,0 +1,131 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+
+const title       = 'Australian Raven Range and Habitat — Where Does It Live?';
+const description = 'The Australian Raven (Corvus coronoides) is the most widespread corvid in Australia. Range, habitat, and separation from Forest Raven and Little Raven territories.';
+const path        = '/species/australian-raven/range-and-habitat/';
+
+const breadcrumbs = [
+  { name: 'Home',             url: '/' },
+  { name: 'Species',          url: '/species/' },
+  { name: 'Australian Raven', url: '/species/australian-raven/' },
+  { name: 'Range and Habitat', url: path },
+];
+
+const faq = [
+  { q: 'Where does the Australian Raven live?', a: 'The Australian Raven is found throughout most of Australia — the most widely distributed of the Australian corvids. It is common in coastal and inland New South Wales, Victoria, South Australia, Western Australia, and Queensland. It is absent from the Northern Territory interior, true desert regions, and Tasmania (where the Forest Raven replaces it).' },
+];
+---
+
+<BaseLayout title={title} description={description} path={path} ogType="article"
+  datePublished="2026-11-07" dateModified="2026-11-07"
+  breadcrumbs={breadcrumbs} faq={faq} pageType="Article">
+
+<article class="id-page">
+  <nav class="id-breadcrumb" aria-label="Breadcrumb">
+    <ol>
+      {breadcrumbs.map((b, i) => (
+        <li>
+          {i < breadcrumbs.length - 1
+            ? <><a href={b.url}>{b.name}</a><span aria-hidden="true"> › </span></>
+            : <span aria-current="page">{b.name}</span>}
+        </li>
+      ))}
+    </ol>
+  </nav>
+  <header class="id-header">
+    <p class="id-pillar">Species · Range and Habitat</p>
+    <h1>Australian Raven — Range and Habitat</h1>
+    <p class="id-subtitle"><em>Corvus coronoides</em> · Australia's Most Widespread Corvid</p>
+  </header>
+
+  <section class="id-snippet" aria-label="Quick answer">
+    <p><strong class="claim-science">[science]</strong> The Australian Raven is the most widespread of Australia's corvids, found throughout coastal and inland eastern, southern, and western Australia. It is absent from Tasmania (Forest Raven), the Northern Territory interior, and true desert. It is a habitat generalist — found in woodland, forest edges, farmland, urban areas, and coastal scrub. Conservation status: Least Concern.</p>
+  </section>
+
+  <section class="id-section">
+    <h2>Range</h2>
+    <p><strong class="claim-science">[science]</strong> Australia-wide except:</p>
+    <ul>
+      <li>Tasmania (replaced by Forest Raven)</li>
+      <li>Northern Territory interior and far north-west (replaced by Torresian Crow in tropical north)</li>
+      <li>True desert areas of the interior where little food or water is available</li>
+    </ul>
+    <p>Present throughout New South Wales (including Sydney and surrounds), Victoria (including Melbourne), South Australia, Queensland (south and east), and much of Western Australia (south and south-west). The most familiar large corvid in Sydney, Canberra, and many other Australian cities and suburbs.<sup><a href="#src-1">1</a></sup></p>
+  </section>
+
+  <section class="id-section">
+    <h2>Habitat</h2>
+    <p><strong class="claim-science">[science]</strong> Generalist — tolerates a wide range of habitats:</p>
+    <ul>
+      <li>Woodland and forest edges — particularly eucalypt woodland</li>
+      <li>Farmland — widespread in agricultural areas</li>
+      <li>Urban and suburban areas — common in parks, gardens, rubbish tips in cities</li>
+      <li>Coastal heath and scrub</li>
+      <li>Avoids dense rainforest interior and true desert</li>
+    </ul>
+    <p>The Australian Raven's urban tolerance has made it one of the most familiar corvids to Australian city-dwellers — it is a common presence at sporting events, school grounds, and suburban gardens across south-eastern Australia.<sup><a href="#src-1">1</a></sup></p>
+  </section>
+
+  <section class="id-section">
+    <h2>Overlap with Other Corvids</h2>
+    <p><strong class="claim-science">[science]</strong> Where its range meets the Forest Raven (Victoria–New South Wales border area), call and shape are the main separators. Where it meets the Little Raven (much of south-eastern Australia), wing-flick and call separate them. In Queensland, the Torresian Crow and Australian Raven can occur together — different call and habitat position (Australian Raven more in woodland and urban; Torresian Crow more in tropics).<sup><a href="#src-1">1</a></sup></p>
+  </section>
+
+  <section class="id-section">
+    <h2>Conservation Status</h2>
+    <p><strong class="claim-science">[science]</strong> <strong>Least Concern</strong> (IUCN Red List). Common and widespread; benefits from agricultural waste and urban food sources.</p>
+  </section>
+
+  <section class="id-faq id-section" aria-labelledby="faq-h2">
+    <h2 id="faq-h2">Frequently Asked Questions</h2>
+    {faq.map(item => (
+      <details class="id-faq-item">
+        <summary class="id-faq-q">{item.q}</summary>
+        <p class="id-faq-a">{item.a}</p>
+      </details>
+    ))}
+  </section>
+
+  <section class="id-sources id-section" aria-labelledby="src-h2">
+    <h2 id="src-h2">Sources</h2>
+    <ol class="id-src-list">
+      <li id="src-1">Madge, S. &amp; Burn, H. (1994). <em>Crows and Jays</em>. Christopher Helm. — range and habitat.</li>
+    </ol>
+    <p class="id-claim-note"><strong class="claim-science">[science]</strong> field-guide data</p>
+  </section>
+
+  <nav class="id-nav-bottom">
+    <a href="/species/australian-raven/identification/" class="id-back">← Identification</a>
+    <a href="/species/australian-raven/" class="id-next">Australian Raven Overview →</a>
+  </nav>
+</article>
+</BaseLayout>
+
+<style>
+  .id-page { max-width: 820px; margin: 0 auto; padding: 2rem 1.25rem 4rem; color: var(--iron-ink, #e8e4d8); font-family: 'Inter', sans-serif; line-height: 1.72; }
+  .id-breadcrumb ol { display: flex; flex-wrap: wrap; gap: .25rem; list-style: none; padding: 0; margin: 0 0 2rem; font-size: .8rem; color: var(--ink-soft, #8a8070); }
+  .id-breadcrumb a { color: var(--gold-500, #d4ae5a); text-decoration: none; }
+  .id-pillar { font-size: .72rem; letter-spacing: .12em; text-transform: uppercase; color: var(--gold-500, #d4ae5a); margin: 0 0 .4rem; }
+  .id-page h1 { font-family: 'Cormorant Garamond', serif; font-size: clamp(2rem, 5vw, 3.25rem); font-weight: 700; color: #fff; margin: 0 0 .2rem; line-height: 1.1; }
+  .id-subtitle { font-size: 1rem; color: var(--ink-soft, #c0b89a); margin: 0 0 2rem; }
+  .id-snippet { background: rgba(212,174,90,.08); border-left: 3px solid var(--gold-500, #d4ae5a); border-radius: 0 6px 6px 0; padding: 1rem 1.25rem; margin-bottom: 2.5rem; font-size: 1.03rem; }
+  .id-section { margin-bottom: 2.75rem; }
+  .id-section h2 { font-family: 'Cormorant Garamond', serif; font-size: 1.6rem; font-weight: 600; color: #fff; margin: 0 0 1rem; border-bottom: 1px solid rgba(212,174,90,.2); padding-bottom: .4rem; }
+  .id-section p { margin: 0 0 1rem; font-size: .97rem; }
+  .id-section ul { padding-left: 1.25rem; margin: 0 0 1rem; }
+  .id-section li { margin-bottom: .4rem; font-size: .95rem; }
+  .claim-science { color: #7ab9e0; font-style: normal; font-size: .78rem; }
+  a[href] { color: var(--gold-500, #d4ae5a); }
+  .id-faq-item { border-bottom: 1px solid rgba(255,255,255,.07); }
+  .id-faq-q { cursor: pointer; padding: .9rem 0; font-size: .97rem; font-weight: 500; color: #fff; list-style: none; }
+  .id-faq-q::before { content: '+ '; color: var(--gold-500, #d4ae5a); font-weight: 700; }
+  details[open] .id-faq-q::before { content: '− '; }
+  .id-faq-a { margin: 0 0 1rem; line-height: 1.7; font-size: .93rem; color: var(--ink-soft, #c8c0b0); }
+  .id-src-list { padding-left: 1.25rem; margin: 0 0 1rem; }
+  .id-src-list li { margin-bottom: .6rem; font-size: .82rem; color: var(--ink-soft, #8a8070); line-height: 1.6; }
+  .id-claim-note { font-size: .78rem; color: var(--ink-soft, #605848); border-top: 1px solid rgba(255,255,255,.06); padding-top: .75rem; }
+  .id-nav-bottom { display: flex; justify-content: space-between; padding-top: 2rem; border-top: 1px solid rgba(255,255,255,.07); }
+  .id-nav-bottom a { font-size: .9rem; text-decoration: none; }
+  .id-nav-bottom a:hover { text-decoration: underline; }
+</style>

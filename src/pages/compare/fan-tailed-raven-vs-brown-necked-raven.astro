@@ -1,0 +1,146 @@
+---
+/**
+ * Comparison — Fan-tailed Raven vs Brown-necked Raven
+ * CMP·11
+ * Primary keyword: fan-tailed raven vs brown-necked raven
+ * Secondary: how to tell fan-tailed raven from brown-necked raven, desert raven identification
+ */
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const title       = 'Fan-tailed Raven vs Brown-necked Raven: How to Tell Them Apart';
+const description = 'Fan-tailed Raven and Brown-necked Raven are the two most confusing corvids of North Africa and the Middle East. The fan-shaped tail and shorter bill separate the Fan-tailed; neck tone is unreliable in the field.';
+const path        = '/compare/fan-tailed-raven-vs-brown-necked-raven/';
+
+const breadcrumbs = [
+  { name: 'Home',    url: '/' },
+  { name: 'Compare', url: '/compare/' },
+  { name: 'Fan-tailed Raven vs Brown-necked Raven', url: path },
+];
+
+const faq = [
+  { q: 'Is the neck really brown on Brown-necked Raven?', a: 'Only in certain lights. The Brown-necked Raven\'s neck and nape feathers have a brownish, dull cast compared to the glossy black of most of the body — but this is subtle and variable with lighting conditions. It is not the most useful field mark. The head-on silhouette (longer wings relative to tail) and the call are more reliable separations.' },
+  { q: 'Which is larger — Fan-tailed Raven or Brown-necked Raven?', a: 'The Brown-necked Raven is notably larger, with a body length of 50–53 cm compared to the Fan-tailed Raven\'s 44–47 cm. This size difference is useful when the two are seen together or in comparison with known species. Alone, size is harder to judge.' },
+  { q: 'Where do Fan-tailed Raven and Brown-necked Raven overlap?', a: 'Both species occur across North Africa, the Sahara, the Arabian Peninsula, and northeast Africa. They are broadly sympatric across much of this range. The Fan-tailed Raven tends to favour mountainous terrain and cliff faces; the Brown-necked Raven uses flatter desert and semi-desert. In areas like the Sahara and Arabian mountains, both may be found in proximity.' },
+];
+---
+
+<BaseLayout title={title} description={description} path={path} ogType="article"
+  datePublished="2026-11-07" dateModified="2026-11-07"
+  breadcrumbs={breadcrumbs} faq={faq} pageType="Article">
+
+<article class="qa-page">
+
+  <nav class="qa-breadcrumb" aria-label="Breadcrumb">
+    <ol>
+      {breadcrumbs.map((b, i) => (
+        <li>
+          {i < breadcrumbs.length - 1
+            ? <><a href={b.url}>{b.name}</a><span aria-hidden="true"> › </span></>
+            : <span aria-current="page">{b.name}</span>}
+        </li>
+      ))}
+    </ol>
+  </nav>
+
+  <header class="qa-header">
+    <p class="qa-pillar">Compare · CMP·11</p>
+    <h1>Fan-tailed Raven vs Brown-necked Raven: How to Tell Them Apart</h1>
+  </header>
+
+  <section class="qa-snippet" aria-label="Direct answer">
+    <p><strong class="claim-science">[science]</strong> The Fan-tailed Raven is smaller and shorter-tailed, with a rounded "fan" tail shape visible in flight that is distinctive once learned. The Brown-necked Raven is larger with a proportionally longer, more graduated tail. The Fan-tailed's bill is also shorter and less strongly arched. Both are mostly all-black desert corvids; the brownish neck tone of the Brown-necked is subtle and variable.</p>
+  </section>
+
+  <section class="qa-section">
+    <h2>Side-by-Side Comparison</h2>
+    <table>
+      <thead>
+        <tr><th>Feature</th><th>Fan-tailed Raven</th><th>Brown-necked Raven</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Scientific name</td><td><em>Corvus rhipidurus</em></td><td><em>Corvus ruficollis</em></td></tr>
+        <tr><td>Body length</td><td>44–47 cm</td><td>50–53 cm</td></tr>
+        <tr><td>Tail shape</td><td>Short, broad, rounded — fan-shaped in flight</td><td>Longer, graduated; not fan-shaped</td></tr>
+        <tr><td>Bill</td><td>Shorter, less deeply curved</td><td>Longer, more arched</td></tr>
+        <tr><td>Wing shape in flight</td><td>Shorter, broader wings; more buoyant flight</td><td>Longer wings; more direct flight</td></tr>
+        <tr><td>Neck/nape</td><td>Glossy black throughout</td><td>Brownish dull cast on neck/nape (variable, light-dependent)</td></tr>
+        <tr><td>Call</td><td>Short, deep "korr" or nasal "aak"</td><td>Deep, croaking "kraa" or "kronk"</td></tr>
+        <tr><td>Preferred habitat</td><td>Rocky mountains, cliffs, gorges</td><td>Flat desert, semi-desert, stony plains</td></tr>
+        <tr><td>IUCN status</td><td>Least Concern</td><td>Least Concern</td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section class="qa-section">
+    <h2>The Tail — Key Character in Flight</h2>
+    <p><strong class="claim-science">[science]</strong> The Fan-tailed Raven gets its name from the distinctive broad, rounded tail that fans out visibly in flight. While all raven tails look "wedge" or "diamond" shaped compared to crows, the Fan-tailed Raven's tail is proportionally shorter and much broader, creating an almost circular silhouette when fanned. This is visible from a reasonable distance and is the most reliable single character when good views are obtained in flight.<sup><a href="#src-1">1</a></sup></p>
+    <p>The Brown-necked Raven has a more graduated, longer tail — still diamond-shaped but more elongated, closer in proportion to other large ravens.</p>
+  </section>
+
+  <section class="qa-section">
+    <h2>Size and Structure</h2>
+    <p><strong class="claim-science">[science]</strong> The Brown-necked Raven is appreciably larger — the size difference is noticeable when both birds are seen together. When alone, comparison with other species in the landscape helps. The Fan-tailed Raven also has a relatively shorter, stouter bill. Both have the heavy, arched corvid bill profile, but the Brown-necked's is proportionally longer.<sup><a href="#src-1">1</a></sup></p>
+  </section>
+
+  <section class="qa-section">
+    <h2>The Brown Neck — How Useful Is It?</h2>
+    <p><strong class="claim-science">[science]</strong> The Brown-necked Raven's scientific name (<em>ruficollis</em>, "red-necked" or "rufous-necked") refers to the brownish-dull neck feathers that distinguish it from the iridescent gloss of fully black corvids. In practice, this is a character best seen in good light at close range. In harsh desert light, against bright sky, or at distance, the brownish neck can be invisible. Field guides advise treating the neck colour as a supporting character rather than a primary identification feature.<sup><a href="#src-1">1</a></sup></p>
+  </section>
+
+  <section class="qa-section">
+    <h2>Related Pages</h2>
+    <ul>
+      <li><a href="/species/fan-tailed-raven/">Fan-tailed Raven — species profile</a></li>
+      <li><a href="/species/brown-necked-raven/">Brown-necked Raven — species profile</a></li>
+      <li><a href="/compare/raven-vs-crow/">Raven vs Crow</a></li>
+    </ul>
+  </section>
+
+  <section class="qa-faq qa-section" aria-labelledby="faq-h2">
+    <h2 id="faq-h2">Frequently Asked Questions</h2>
+    {faq.map(item => (
+      <details class="qa-faq-item">
+        <summary class="qa-faq-q">{item.q}</summary>
+        <p class="qa-faq-a">{item.a}</p>
+      </details>
+    ))}
+  </section>
+
+  <section class="qa-sources qa-section" aria-labelledby="src-h2">
+    <h2 id="src-h2">Sources</h2>
+    <ol class="qa-src-list">
+      <li id="src-1">del Hoyo, J. et al. (eds., 2009). <em>Handbook of the Birds of the World</em>, vol. 14. Lynx Edicions. — species accounts for Fan-tailed and Brown-necked Ravens; field marks, distribution.</li>
+    </ol>
+    <p class="qa-claim-note"><strong class="claim-science">[science]</strong> peer-reviewed study or field-guide data</p>
+  </section>
+
+</article>
+</BaseLayout>
+
+<style>
+  .qa-page { max-width: 820px; margin: 0 auto; padding: 2rem 1.25rem 4rem; color: var(--iron-ink, #e8e4d8); font-family: 'Inter', sans-serif; line-height: 1.72; }
+  .qa-breadcrumb ol { display: flex; flex-wrap: wrap; gap: .25rem; list-style: none; padding: 0; margin: 0 0 2rem; font-size: .8rem; color: var(--ink-soft, #8a8070); }
+  .qa-breadcrumb a { color: var(--gold-500, #d4ae5a); text-decoration: none; }
+  .qa-pillar { font-size: .72rem; letter-spacing: .12em; text-transform: uppercase; color: var(--gold-500, #d4ae5a); margin: 0 0 .4rem; }
+  .qa-page h1 { font-family: 'Cormorant Garamond', serif; font-size: clamp(2rem, 5vw, 3rem); font-weight: 700; color: #fff; margin: 0 0 2rem; line-height: 1.1; }
+  .qa-snippet { background: rgba(212,174,90,.08); border-left: 3px solid var(--gold-500, #d4ae5a); border-radius: 0 6px 6px 0; padding: 1rem 1.25rem; margin-bottom: 2.5rem; font-size: 1.03rem; }
+  .qa-section { margin-bottom: 2.5rem; }
+  .qa-section h2 { font-family: 'Cormorant Garamond', serif; font-size: 1.5rem; font-weight: 600; color: #fff; margin: 0 0 .9rem; border-bottom: 1px solid rgba(212,174,90,.2); padding-bottom: .4rem; }
+  .qa-section p { margin: 0 0 1rem; font-size: .97rem; }
+  .qa-section ul { padding-left: 1.25rem; margin: 0 0 1rem; }
+  .qa-section li { margin-bottom: .4rem; font-size: .95rem; }
+  .claim-science { color: #7ab9e0; font-style: normal; font-size: .78rem; }
+  a[href] { color: var(--gold-500, #d4ae5a); }
+  table { width: 100%; border-collapse: collapse; margin: 0 0 1.25rem; font-size: .9rem; }
+  th { text-align: left; padding: .5rem .75rem; background: rgba(212,174,90,.12); color: #d4ae5a; font-weight: 600; font-size: .78rem; letter-spacing: .08em; text-transform: uppercase; }
+  td { padding: .5rem .75rem; border-bottom: 1px solid rgba(255,255,255,.06); vertical-align: top; }
+  tr:last-child td { border-bottom: none; }
+  .qa-faq-item { border-bottom: 1px solid rgba(255,255,255,.07); }
+  .qa-faq-q { cursor: pointer; padding: .9rem 0; font-size: .97rem; font-weight: 500; color: #fff; list-style: none; }
+  .qa-faq-q::before { content: '+ '; color: var(--gold-500, #d4ae5a); font-weight: 700; }
+  details[open] .qa-faq-q::before { content: '− '; }
+  .qa-faq-a { margin: 0 0 1rem; line-height: 1.7; font-size: .93rem; color: var(--ink-soft, #c8c0b0); }
+  .qa-src-list { padding-left: 1.25rem; margin: 0 0 1rem; }
+  .qa-src-list li { margin-bottom: .6rem; font-size: .82rem; color: var(--ink-soft, #8a8070); line-height: 1.6; }
+  .qa-claim-note { font-size: .78rem; color: var(--ink-soft, #605848); border-top: 1px solid rgba(255,255,255,.06); padding-top: .75rem; }
+</style>

@@ -1,0 +1,139 @@
+---
+/**
+ * Q&A — Do ravens have a favourite food?
+ * Primary keyword: what is a raven's favourite food
+ * Secondary: raven food preference, raven diet preferences, what do ravens prefer to eat
+ */
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const title       = 'What Is a Raven\'s Favourite Food?';
+const description = 'Ravens are dietary opportunists — but they do have strong food preferences, particularly for meat and carrion. This page examines raven food preferences, what they seek when given choice, and how their diet varies seasonally and regionally.';
+const path        = '/questions/do-ravens-have-a-favourite-food/';
+
+const breadcrumbs = [
+  { name: 'Home',      url: '/' },
+  { name: 'Questions', url: '/questions/' },
+  { name: 'What Is a Raven\'s Favourite Food?', url: path },
+];
+
+const faq = [
+  { q: 'What is a raven\'s favourite food?', a: 'Ravens show a strong preference for meat and high-fat, high-protein foods. In field observations and captive preference tests, ravens consistently favour: large carcasses (ungulate carrion — deer, elk, cattle, moose); eggs and nestlings; small mammals; and cached fat and meat stores. Among plant foods, ravens prefer energy-rich items — large seeds, nuts, and berries — over vegetation. When given choice in captive studies, ravens reliably prefer animal protein over plant food, and within animal food, prefer higher-fat items (brain, organ meat) over lean muscle meat.' },
+  { q: 'Do ravens like eggs?', a: 'Yes — eggs are a highly preferred food for ravens. Ravens will travel specifically to known nesting sites of ground-nesting birds (ptarmigan, geese, shorebirds) during their breeding seasons. Raven predation on eggs and chicks of ground-nesting birds is documented as a significant source of nest failure in some Arctic and sub-Arctic habitats. Ravens locate eggs through visual search and possibly smell; they carry eggs in their bill or throat pouch to cache or consume elsewhere.' },
+  { q: 'Do ravens prefer live prey or carrion?', a: 'Ravens are primarily scavengers and opportunistic predators — they strongly prefer carrion over live prey of comparable size, as it requires less energy to obtain. However, ravens do take live prey when it is easily caught: invertebrates, small rodents, bird eggs and chicks, fish stranded in shallow water. The raven\'s powerful bill can break through frozen skin and thick hide on carcasses — an advantage over many smaller scavengers. When both are available, a large carcass will typically draw ravens away from live-prey opportunities.' },
+];
+---
+
+<BaseLayout title={title} description={description} path={path} ogType="article"
+  datePublished="2026-11-07" dateModified="2026-11-07"
+  breadcrumbs={breadcrumbs} faq={faq} pageType="Article">
+
+<article class="qa-page">
+
+  <nav class="qa-breadcrumb" aria-label="Breadcrumb">
+    <ol>
+      {breadcrumbs.map((b, i) => (
+        <li>
+          {i < breadcrumbs.length - 1
+            ? <><a href={b.url}>{b.name}</a><span aria-hidden="true"> › </span></>
+            : <span aria-current="page">{b.name}</span>}
+        </li>
+      ))}
+    </ol>
+  </nav>
+
+  <header class="qa-header">
+    <p class="qa-pillar">Question · Biology</p>
+    <h1>What Is a Raven's Favourite Food?</h1>
+  </header>
+
+  <section class="qa-snippet" aria-label="Direct answer">
+    <p><strong class="claim-science">[science]</strong> Ravens strongly prefer meat — particularly large-animal carrion, organ meat, brain, and eggs. Their bill is adapted to tear through carcass skin and open eggs. When choice is available, ravens consistently favour high-protein, high-fat animal food over plant material. Carrion from ungulates (deer, moose, cattle) is the most important food type for populations in northern and montane environments.</p>
+  </section>
+
+  <section class="qa-section">
+    <h2>Preferred Food Types</h2>
+    <p><strong class="claim-science">[science]</strong> Ravens show clear food preferences when multiple options are available:<sup><a href="#src-1">1</a></sup></p>
+    <ul>
+      <li><strong>Carrion:</strong> ungulate carcasses (deer, moose, elk, caribou, cattle, sheep) are the most important food source for ravens in northern environments. Ravens are attracted to carcasses from several kilometres and can consume large amounts quickly. They prioritise organ meat, fat deposits, and brain — the most energy-dense parts — before consuming muscle.</li>
+      <li><strong>Eggs:</strong> a highly preferred seasonal food; ravens actively seek bird nests during the spring breeding season.</li>
+      <li><strong>Stored (cached) food:</strong> ravens revisit caches of meat and fat preferentially, suggesting awareness of the high value of stored animal protein.</li>
+      <li><strong>Human food waste:</strong> in areas with human settlement, ravens exploit high-calorie human food — especially meat scraps, fat, and cooked food. This preference for human waste is a major driver of raven population increase near urban areas.</li>
+    </ul>
+  </section>
+
+  <section class="qa-section">
+    <h2>Seasonal Dietary Shifts</h2>
+    <p><strong class="claim-science">[science]</strong> While ravens consistently prefer meat, their actual diet shifts seasonally based on what is available:<sup><a href="#src-1">1</a></sup></p>
+    <ul>
+      <li><strong>Winter:</strong> carrion-dependent; ungulate die-offs and cached food are critical. Ravens will follow wolves, coyotes, and human hunters to access carcasses.</li>
+      <li><strong>Spring:</strong> eggs and nestlings; invertebrates emerging; some plant material (early berries in warmer climates).</li>
+      <li><strong>Summer:</strong> invertebrates (beetles, earthworms, insect larvae); fruits and berries; small mammals; some ground-nesting bird predation continues.</li>
+      <li><strong>Autumn:</strong> caching season — ravens invest in storing high-calorie foods (nuts, meat, fat) for winter retrieval. Berry and fruit consumption peaks where seasonal abundance allows.</li>
+    </ul>
+  </section>
+
+  <section class="qa-section">
+    <h2>Captive Food Preferences</h2>
+    <p><strong class="claim-science">[science]</strong> In captive studies and zoo settings, food preferences can be directly tested by offering ravens simultaneous choices. Results consistently show:<sup><a href="#src-1">1</a></sup></p>
+    <ul>
+      <li>Strong preference for meat over equivalent volumes of plant food.</li>
+      <li>Preference for fat-rich over lean meat.</li>
+      <li>Preference for novel foods when familiar staples are well-supplied (neophilia toward food, in contrast to neophobia toward novel objects in general).</li>
+      <li>Willingness to defer consumption of a preferred food to cache it for later — suggesting they value future access to preferred food.</li>
+    </ul>
+  </section>
+
+  <section class="qa-section">
+    <h2>Related Pages</h2>
+    <ul>
+      <li><a href="/questions/what-do-ravens-eat/">What do ravens eat?</a></li>
+      <li><a href="/questions/how-do-ravens-find-food/">How do ravens find food?</a></li>
+      <li><a href="/behaviour/raven-food-caching/">Raven food caching</a></li>
+      <li><a href="/behaviour/raven-scavenging-strategies/">Raven scavenging strategies</a></li>
+    </ul>
+  </section>
+
+  <section class="qa-faq qa-section" aria-labelledby="faq-h2">
+    <h2 id="faq-h2">Frequently Asked Questions</h2>
+    {faq.map(item => (
+      <details class="qa-faq-item">
+        <summary class="qa-faq-q">{item.q}</summary>
+        <p class="qa-faq-a">{item.a}</p>
+      </details>
+    ))}
+  </section>
+
+  <section class="qa-sources qa-section" aria-labelledby="src-h2">
+    <h2 id="src-h2">Sources</h2>
+    <ol class="qa-src-list">
+      <li id="src-1">Boarman, W.I. & Heinrich, B. (1999). Common Raven (<em>Corvus corax</em>). In Poole, A. (ed.), <em>The Birds of North America</em>, No. 476. Cornell Lab of Ornithology. — diet composition, food preferences, seasonal dietary shifts, caching behaviour.</li>
+    </ol>
+    <p class="qa-claim-note"><strong class="claim-science">[science]</strong> peer-reviewed or field-guide data</p>
+  </section>
+
+</article>
+</BaseLayout>
+
+<style>
+  .qa-page { max-width: 820px; margin: 0 auto; padding: 2rem 1.25rem 4rem; color: var(--iron-ink, #e8e4d8); font-family: 'Inter', sans-serif; line-height: 1.72; }
+  .qa-breadcrumb ol { display: flex; flex-wrap: wrap; gap: .25rem; list-style: none; padding: 0; margin: 0 0 2rem; font-size: .8rem; color: var(--ink-soft, #8a8070); }
+  .qa-breadcrumb a { color: var(--gold-500, #d4ae5a); text-decoration: none; }
+  .qa-pillar { font-size: .72rem; letter-spacing: .12em; text-transform: uppercase; color: var(--gold-500, #d4ae5a); margin: 0 0 .4rem; }
+  .qa-page h1 { font-family: 'Cormorant Garamond', serif; font-size: clamp(2rem, 5vw, 3rem); font-weight: 700; color: #fff; margin: 0 0 2rem; line-height: 1.1; }
+  .qa-snippet { background: rgba(212,174,90,.08); border-left: 3px solid var(--gold-500, #d4ae5a); border-radius: 0 6px 6px 0; padding: 1rem 1.25rem; margin-bottom: 2.5rem; font-size: 1.03rem; }
+  .qa-section { margin-bottom: 2.5rem; }
+  .qa-section h2 { font-family: 'Cormorant Garamond', serif; font-size: 1.5rem; font-weight: 600; color: #fff; margin: 0 0 .9rem; border-bottom: 1px solid rgba(212,174,90,.2); padding-bottom: .4rem; }
+  .qa-section p { margin: 0 0 1rem; font-size: .97rem; }
+  .qa-section ul { padding-left: 1.25rem; margin: 0 0 1rem; }
+  .qa-section li { margin-bottom: .4rem; font-size: .95rem; }
+  .claim-science { color: #7ab9e0; font-style: normal; font-size: .78rem; }
+  a[href] { color: var(--gold-500, #d4ae5a); }
+  .qa-faq-item { border-bottom: 1px solid rgba(255,255,255,.07); }
+  .qa-faq-q { cursor: pointer; padding: .9rem 0; font-size: .97rem; font-weight: 500; color: #fff; list-style: none; }
+  .qa-faq-q::before { content: '+ '; color: var(--gold-500, #d4ae5a); font-weight: 700; }
+  details[open] .qa-faq-q::before { content: '− '; }
+  .qa-faq-a { margin: 0 0 1rem; line-height: 1.7; font-size: .93rem; color: var(--ink-soft, #c8c0b0); }
+  .qa-src-list { padding-left: 1.25rem; margin: 0 0 1rem; }
+  .qa-src-list li { margin-bottom: .6rem; font-size: .82rem; color: var(--ink-soft, #8a8070); line-height: 1.6; }
+  .qa-claim-note { font-size: .78rem; color: var(--ink-soft, #605848); border-top: 1px solid rgba(255,255,255,.06); padding-top: .75rem; }
+</style>

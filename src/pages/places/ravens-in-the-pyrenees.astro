@@ -1,0 +1,143 @@
+---
+/**
+ * Places — Ravens in the Pyrenees
+ * PLC·08
+ * Primary keyword: ravens in the Pyrenees
+ * Secondary: pyrenees raven population, raven spain france mountains
+ */
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const title       = 'Ravens in the Pyrenees: Mountain Stronghold on the Spanish-French Border';
+const description = 'The Pyrenees Mountains support a healthy raven population year-round, sustained by pastoral farming, rugged cliff habitat, and the abundant carrion of a mountain ecosystem. This page examines raven life in the Pyrenees, their overlap with vultures and eagles, and their place in Basque and Catalan tradition.';
+const path        = '/places/ravens-in-the-pyrenees/';
+
+const breadcrumbs = [
+  { name: 'Home',   url: '/' },
+  { name: 'Places', url: '/places/' },
+  { name: 'Ravens in the Pyrenees', url: path },
+];
+
+const faq = [
+  { q: 'Are ravens common in the Pyrenees?', a: 'Yes — the common raven (Corvus corax) is a year-round resident of the Pyrenees, found throughout the mountain range from the Atlantic coast to the Mediterranean. The Pyrenees provide ideal raven habitat: rugged cliff faces for nesting, extensive pastoral land for foraging, and a large ungulate (sheep, cattle, wild boar, deer, chamois) population that provides carrion. Ravens are frequently seen soaring alongside griffon vultures and alongside bearded vultures (lammergeiers) at traditional carrion sites.' },
+  { q: 'Do ravens nest on Pyrenean cliffs?', a: 'Ravens are cliff nesters throughout the Pyrenees, selecting inaccessible ledges on south-facing cliff faces for their bulky stick nests. Nesting begins in February — ravens are among the earliest breeding birds in the mountains, with eggs laid before snowmelt and chicks fledging in May–June. The same cliff sites are reused across years; some Pyrenean cliff sites show evidence of repeated raven nesting over decades. The timing of early breeding is linked to the raven\'s ability to exploit the first spring carrion resources.' },
+  { q: 'What do ravens eat in the Pyrenees?', a: 'Pyrenean ravens are opportunistic omnivores with a diet centred on carrion (domestic livestock, wild ungulates, road-killed animals) supplemented by invertebrates, plant material, eggs, and small vertebrates. The Pyrenees\' extensive sheep and cattle transhumance traditions historically provided abundant livestock carcasses; modern continuation of pastoral farming maintains this resource. Ravens also exploit refuse from mountain refuges and tourist areas along the GR hiking routes.' },
+];
+---
+
+<BaseLayout title={title} description={description} path={path} ogType="article"
+  datePublished="2026-11-08" dateModified="2026-11-08"
+  breadcrumbs={breadcrumbs} faq={faq} pageType="Article">
+
+<article class="qa-page">
+
+  <nav class="qa-breadcrumb" aria-label="Breadcrumb">
+    <ol>
+      {breadcrumbs.map((b, i) => (
+        <li>
+          {i < breadcrumbs.length - 1
+            ? <><a href={b.url}>{b.name}</a><span aria-hidden="true"> › </span></>
+            : <span aria-current="page">{b.name}</span>}
+        </li>
+      ))}
+    </ol>
+  </nav>
+
+  <header class="qa-header">
+    <p class="qa-pillar">Places · PLC·08</p>
+    <h1>Ravens in the Pyrenees: Mountain Stronghold on the Spanish-French Border</h1>
+  </header>
+
+  <section class="qa-snippet" aria-label="Direct answer">
+    <p><strong class="claim-science">[science]</strong> The Pyrenees support a stable year-round raven population across the full length of the mountain chain. Cliff habitat, pastoral carrion, and wild ungulate populations provide ideal conditions; ravens share the mountains with griffon vultures, bearded vultures, and golden eagles in one of Europe's richest raptor communities. Early nesting in February — before snowmelt — allows ravens to exploit the year's first carrion pulse.</p>
+  </section>
+
+  <section class="qa-section">
+    <h2>Habitat and Distribution</h2>
+    <p><strong class="claim-science">[science]</strong> Common ravens occur throughout the Pyrenees from sea level to above the treeline, with highest densities in the zone between 500–2,000 m where cliff habitat and pastoral land overlap. The western (Atlantic) Pyrenees on the Spanish-French border and the central Pyrenean massif support the densest populations; the drier eastern Pyrenees transitioning to Mediterranean habitat also hold ravens but at lower density.<sup><a href="#src-1">1</a></sup></p>
+    <p>Key habitat features ravens use in the Pyrenees:</p>
+    <ul>
+      <li><strong>Cliffs:</strong> limestone and granite cliff faces throughout the range provide nesting ledges. The Pyrenees' complex geology produces abundant vertical rock faces inaccessible to terrestrial predators.</li>
+      <li><strong>Pastoral land:</strong> the extensive mountain pastures (<em>estives</em> in French; <em>puertos</em> in Spanish) used for seasonal transhumance generate year-round carrion from livestock mortality.</li>
+      <li><strong>Forest edges:</strong> mixed forest-open habitat provides foraging diversity and roosting trees for communal gatherings.</li>
+    </ul>
+  </section>
+
+  <section class="qa-section">
+    <h2>Ravens Among the Pyrenean Raptor Community</h2>
+    <p><strong class="claim-science">[science]</strong> The Pyrenees hosts one of Europe's most intact large raptor communities, and ravens operate within — and alongside — this assemblage:<sup><a href="#src-1">1</a></sup></p>
+    <ul>
+      <li><strong>Griffon vultures (<em>Gyps fulvus</em>):</strong> the dominant large scavengers; ravens are often present at griffon vulture feeding events, waiting to steal scraps or access carcass soft tissue that vultures cannot reach efficiently.</li>
+      <li><strong>Bearded vultures / Lammergeiers (<em>Gypaetus barbatus</em>):</strong> the Pyrenees hold one of western Europe's most significant bearded vulture populations. Ravens coexist with lammergeiers at carcasses; the two species target different nutritional fractions (ravens favour soft tissue; lammergeiers consume bones).</li>
+      <li><strong>Golden eagles (<em>Aquila chrysaetos</em>):</strong> a raven predator and competitor. Ravens mob golden eagles intensively — often involving entire communal groups — to protect nest sites and food resources.</li>
+    </ul>
+  </section>
+
+  <section class="qa-section">
+    <h2>Breeding Ecology in the Pyrenees</h2>
+    <p><strong class="claim-science">[science]</strong> Pyrenean ravens breed early: nest building or refurbishment begins January–February, eggs are laid February–March, and chicks fledge May–June — before the alpine breeding season peaks. This timing is an adaptation to exploit the winter-spring carrion pulse before migratory and hibernation-emerging species increase competition.<sup><a href="#src-1">1</a></sup></p>
+    <p>Nest sites in the Pyrenees are typically on south or south-west facing cliff ledges, sheltered from prevailing wind and weather. The same nesting cliff may hold a raven pair for decades; site fidelity across generations has been recorded at several well-studied Pyrenean sites.</p>
+  </section>
+
+  <section class="qa-section">
+    <h2>Ravens in Basque and Catalan Tradition</h2>
+    <p><strong class="claim-lore">[lore]</strong> The cultural communities of the Pyrenees — Basque, Catalan, Aragonese, Occitan — have distinct raven traditions rooted in the bird's permanent presence in the mountain landscape.<sup><a href="#src-2">2</a></sup></p>
+    <p>In Basque tradition, the raven (<em>bele</em> or <em>erroia</em>) is a persistent figure in rural folklore — an omen bird whose call near a farm was interpreted as a sign of imminent death or misfortune. The long Basque memory of wolf and bear predation on livestock made the raven's presence at carcasses symbolically loaded. Basque shepherds historically regarded ravens as both practical nuisances (targeting newborn lambs) and as predictable scavengers whose early arrival at a carcass site could lead the shepherd to a dead animal.</p>
+    <p>In Catalan mountain tradition, the raven (<em>corb</em>) similarly occupied an ambiguous position — a bird of the high peaks associated with winter, death, and the unknowable nature of mountain weather. The raven's early breeding and presence through the harshest winter months gave it an aura of hardiness and otherworldliness in a landscape where most birds had fled south.</p>
+  </section>
+
+  <section class="qa-section">
+    <h2>Related Pages</h2>
+    <ul>
+      <li><a href="/places/ravens-in-the-scottish-highlands/">Ravens in the Scottish Highlands</a></li>
+      <li><a href="/places/ravens-in-norway/">Ravens in Norway</a></li>
+      <li><a href="/behaviour/raven-and-wolves/">Ravens and wolves</a></li>
+      <li><a href="/questions/what-do-ravens-eat/">What do ravens eat?</a></li>
+    </ul>
+  </section>
+
+  <section class="qa-faq qa-section" aria-labelledby="faq-h2">
+    <h2 id="faq-h2">Frequently Asked Questions</h2>
+    {faq.map(item => (
+      <details class="qa-faq-item">
+        <summary class="qa-faq-q">{item.q}</summary>
+        <p class="qa-faq-a">{item.a}</p>
+      </details>
+    ))}
+  </section>
+
+  <section class="qa-sources qa-section" aria-labelledby="src-h2">
+    <h2 id="src-h2">Sources</h2>
+    <ol class="qa-src-list">
+      <li id="src-1">del Hoyo, J., Elliott, A. & Christie, D.A. (eds.) (2009). <em>Handbook of the Birds of the World</em>, Vol. 14: Bush-shrikes to Old World Sparrows. Lynx Edicions. — common raven range, habitat, breeding biology, European population data.</li>
+      <li id="src-2">Barandiarán, J.M. de (1972). <em>Diccionario Ilustrado de Mitología Vasca</em>. Editorial La Gran Enciclopedia Vasca. — Basque animal folklore including raven omen traditions.</li>
+    </ol>
+    <p class="qa-claim-note"><strong class="claim-science">[science]</strong> peer-reviewed data · <strong class="claim-lore">[lore]</strong> named cultural/historical source</p>
+  </section>
+
+</article>
+</BaseLayout>
+
+<style>
+  .qa-page { max-width: 820px; margin: 0 auto; padding: 2rem 1.25rem 4rem; color: var(--iron-ink, #e8e4d8); font-family: 'Inter', sans-serif; line-height: 1.72; }
+  .qa-breadcrumb ol { display: flex; flex-wrap: wrap; gap: .25rem; list-style: none; padding: 0; margin: 0 0 2rem; font-size: .8rem; color: var(--ink-soft, #8a8070); }
+  .qa-breadcrumb a { color: var(--gold-500, #d4ae5a); text-decoration: none; }
+  .qa-pillar { font-size: .72rem; letter-spacing: .12em; text-transform: uppercase; color: var(--gold-500, #d4ae5a); margin: 0 0 .4rem; }
+  .qa-page h1 { font-family: 'Cormorant Garamond', serif; font-size: clamp(2rem, 5vw, 3rem); font-weight: 700; color: #fff; margin: 0 0 2rem; line-height: 1.1; }
+  .qa-snippet { background: rgba(212,174,90,.08); border-left: 3px solid var(--gold-500, #d4ae5a); border-radius: 0 6px 6px 0; padding: 1rem 1.25rem; margin-bottom: 2.5rem; font-size: 1.03rem; }
+  .qa-section { margin-bottom: 2.5rem; }
+  .qa-section h2 { font-family: 'Cormorant Garamond', serif; font-size: 1.5rem; font-weight: 600; color: #fff; margin: 0 0 .9rem; border-bottom: 1px solid rgba(212,174,90,.2); padding-bottom: .4rem; }
+  .qa-section p { margin: 0 0 1rem; font-size: .97rem; }
+  .qa-section ul { padding-left: 1.25rem; margin: 0 0 1rem; }
+  .qa-section li { margin-bottom: .4rem; font-size: .95rem; }
+  .claim-science { color: #7ab9e0; font-style: normal; font-size: .78rem; }
+  .claim-lore { color: #c49a3c; font-style: normal; font-size: .78rem; }
+  a[href] { color: var(--gold-500, #d4ae5a); }
+  .qa-faq-item { border-bottom: 1px solid rgba(255,255,255,.07); }
+  .qa-faq-q { cursor: pointer; padding: .9rem 0; font-size: .97rem; font-weight: 500; color: #fff; list-style: none; }
+  .qa-faq-q::before { content: '+ '; color: var(--gold-500, #d4ae5a); font-weight: 700; }
+  details[open] .qa-faq-q::before { content: '− '; }
+  .qa-faq-a { margin: 0 0 1rem; line-height: 1.7; font-size: .93rem; color: var(--ink-soft, #c8c0b0); }
+  .qa-src-list { padding-left: 1.25rem; margin: 0 0 1rem; }
+  .qa-src-list li { margin-bottom: .6rem; font-size: .82rem; color: var(--ink-soft, #8a8070); line-height: 1.6; }
+  .qa-claim-note { font-size: .78rem; color: var(--ink-soft, #605848); border-top: 1px solid rgba(255,255,255,.06); padding-top: .75rem; }
+</style>

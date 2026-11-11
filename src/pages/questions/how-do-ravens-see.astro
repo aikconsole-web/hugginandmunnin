@@ -1,0 +1,146 @@
+---
+/**
+ * Q&A — How do ravens see?
+ * Primary keyword: raven vision
+ * Secondary: can ravens see colour, raven eyesight, raven eye
+ */
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const title       = 'Raven Vision: How Do Ravens See? Colour, UV, and Visual Acuity';
+const description = 'Ravens have excellent vision — a key tool for a visually-oriented forager and social species. This page examines raven eyesight including colour vision, UV detection, visual acuity, and how their visual system compares to humans.';
+const path        = '/questions/how-do-ravens-see/';
+
+const breadcrumbs = [
+  { name: 'Home',      url: '/' },
+  { name: 'Questions', url: '/questions/' },
+  { name: 'How Do Ravens See?', url: path },
+];
+
+const faq = [
+  { q: 'Can ravens see in colour?', a: 'Yes — ravens are tetrachromats, meaning they have four types of cone photoreceptors compared to the human three. This gives ravens colour vision across the visual spectrum including ultraviolet (UV) wavelengths invisible to humans. UV sensitivity is relevant for raven foraging (some food items reflect UV distinctively), feather condition assessment (UV-reflective plumage signals mate quality), and possibly navigation (UV patterns in the sky). Ravens see the world in a broader colour space than humans, though the subjective experience of their colour vision is unknown.' },
+  { q: 'Do ravens have good eyesight?', a: 'Ravens have excellent visual acuity — their eyes are proportionally large and have a high density of cone and rod photoreceptors. Like most birds, ravens have a fovea (region of maximum acuity) and some species have a secondary foveal region for forward binocular vision. Ravens can detect food items, conspecifics, and predators at considerable distances. Their visual acuity in photopic (bright light) conditions is estimated to be at least as good as human acuity and likely better for small high-contrast objects.' },
+  { q: 'Can ravens see at night?', a: 'Ravens are diurnal (day-active) birds and their eyes are optimised for daylight vision. They are not adapted for low-light hunting as owls are. However, like most corvids, ravens can function in low-light conditions (dawn, dusk, overcast days) better than many other diurnal birds, with sufficient rod photoreceptors for twilight activity. They are not effective foragers in full darkness and roost communally at night rather than remaining active.' },
+];
+---
+
+<BaseLayout title={title} description={description} path={path} ogType="article"
+  datePublished="2026-11-08" dateModified="2026-11-08"
+  breadcrumbs={breadcrumbs} faq={faq} pageType="Article">
+
+<article class="qa-page">
+
+  <nav class="qa-breadcrumb" aria-label="Breadcrumb">
+    <ol>
+      {breadcrumbs.map((b, i) => (
+        <li>
+          {i < breadcrumbs.length - 1
+            ? <><a href={b.url}>{b.name}</a><span aria-hidden="true"> › </span></>
+            : <span aria-current="page">{b.name}</span>}
+        </li>
+      ))}
+    </ol>
+  </nav>
+
+  <header class="qa-header">
+    <p class="qa-pillar">Question · Biology</p>
+    <h1>Raven Vision: How Do Ravens See? Colour, UV, and Visual Acuity</h1>
+  </header>
+
+  <section class="qa-snippet" aria-label="Direct answer">
+    <p><strong class="claim-science">[science]</strong> Ravens are tetrachromats with four cone types, giving them colour vision extending into ultraviolet wavelengths invisible to humans. Their visual acuity is excellent — they can spot food and social partners at long distances. As diurnal birds, their eyes are optimised for bright-light vision; they are not night-hunters but can function at dusk and dawn.</p>
+  </section>
+
+  <section class="qa-section">
+    <h2>Tetrachromacy and UV Vision</h2>
+    <p><strong class="claim-science">[science]</strong> Most birds, including corvids, are tetrachromats — they possess four types of cone photoreceptors sensitive to different wavelength ranges: ultraviolet (or violet), short-wave blue, medium-wave green, and long-wave red. Humans are trichromats (three cone types: blue, green, red). This extra UV-sensitive cone gives ravens access to colour information in the UV range (approximately 300–400 nm wavelength) that humans cannot perceive.<sup><a href="#src-1">1</a></sup></p>
+    <p>UV vision is functionally relevant for ravens in several contexts:</p>
+    <ul>
+      <li><strong>Food detection:</strong> some food items (urine trails of small mammals, certain insects, some fruits) reflect UV distinctively, potentially allowing ravens to detect food sources invisible to human observers.</li>
+      <li><strong>Plumage assessment:</strong> raven feather iridescence has a UV component; UV-reflective plumage may signal individual condition and quality in social contexts including mate choice.</li>
+      <li><strong>Navigation:</strong> UV patterns in the sky (the polarisation pattern of skylight, atmospheric scattering) may provide navigational cues used by ravens during long-distance movements.</li>
+    </ul>
+  </section>
+
+  <section class="qa-section">
+    <h2>Visual Acuity</h2>
+    <p><strong class="claim-science">[science]</strong> Ravens' eyes are large relative to body size — a consistent feature of visually-oriented birds. Large eyes allow more light collection and a larger image on the retina, supporting higher spatial resolution. The raven retina contains a fovea — a region of densely packed cone cells providing maximum acuity — in the lateral visual field, appropriate for detection of objects to the side while flying or foraging.<sup><a href="#src-1">1</a></sup></p>
+    <p>Practical consequences of raven visual acuity:</p>
+    <ul>
+      <li>Ravens can detect a carcass from several hundred metres in open terrain, particularly when other vultures or ravens are already gathering (using conspecifics as distance visual cues).</li>
+      <li>They track the gaze direction of other ravens and humans with high precision — a skill relevant to both social monitoring and cache protection.</li>
+      <li>They recognise individual human faces reliably, distinguishing between familiar people at considerable distances.</li>
+    </ul>
+  </section>
+
+  <section class="qa-section">
+    <h2>Visual Field and Binocular Vision</h2>
+    <p><strong class="claim-science">[science]</strong> Like most birds, ravens have eyes positioned on the sides of the head, providing a wide monocular visual field (nearly 180° per eye) with a relatively narrow binocular overlap zone in front. This "panoramic" visual arrangement suits animals that need to monitor for predators across a wide field while also processing detail in the forward zone.<sup><a href="#src-1">1</a></sup></p>
+    <p>Ravens have a blind spot directly behind the head — a vulnerability that may explain some of their characteristic head-turning behaviours (tilting the head to view objects with one eye at close range) and their vigilance behaviour when foraging, turning the head frequently to scan the full visual field.</p>
+  </section>
+
+  <section class="qa-section">
+    <h2>Vision in Social Contexts</h2>
+    <p><strong class="claim-science">[science]</strong> Ravens' visual sophistication is not purely for finding food — it is also central to their social intelligence. Studies by Bugnyar and colleagues have shown that ravens track the visual access of other ravens and humans with high precision:<sup><a href="#src-2">2</a></sup></p>
+    <ul>
+      <li>When caching food, ravens check whether other ravens can see them and modify their caching behaviour if observed.</li>
+      <li>They assess whether a potential observer has a clear line of sight — not just whether another bird is present, but whether that bird can specifically see the cache location.</li>
+      <li>They recognize when a barrier blocks a competitor's view, using this knowledge to conceal their actions behind objects.</li>
+    </ul>
+    <p>This visual perspective-taking — understanding what others can and cannot see — reflects the integration of visual processing with social cognition, making raven vision not just a sensory tool but a component of their social intelligence.</p>
+  </section>
+
+  <section class="qa-section">
+    <h2>Related Pages</h2>
+    <ul>
+      <li><a href="/questions/do-ravens-remember-faces/">Do ravens remember faces?</a></li>
+      <li><a href="/behaviour/raven-deception-and-tactical-deception/">Raven deception</a></li>
+      <li><a href="/questions/do-ravens-have-a-sense-of-smell/">Do ravens have a sense of smell?</a></li>
+      <li><a href="/questions/how-smart-are-ravens/">How smart are ravens?</a></li>
+    </ul>
+  </section>
+
+  <section class="qa-faq qa-section" aria-labelledby="faq-h2">
+    <h2 id="faq-h2">Frequently Asked Questions</h2>
+    {faq.map(item => (
+      <details class="qa-faq-item">
+        <summary class="qa-faq-q">{item.q}</summary>
+        <p class="qa-faq-a">{item.a}</p>
+      </details>
+    ))}
+  </section>
+
+  <section class="qa-sources qa-section" aria-labelledby="src-h2">
+    <h2 id="src-h2">Sources</h2>
+    <ol class="qa-src-list">
+      <li id="src-1">Cuthill, I.C. (2006). Color perception. In Hill, G.E. & McGraw, K.J. (eds.), <em>Bird Coloration, Vol. 1: Mechanisms and Measurements</em>. Harvard University Press. — avian tetrachromacy, UV vision, visual ecology of birds.</li>
+      <li id="src-2">Bugnyar, T. & Heinrich, B. (2005). Ravens, <em>Corvus corax</em>, differentiate between knowledgeable and ignorant competitors. <em>Proceedings of the Royal Society B</em>, 272(1570), 1641–1646. — visual perspective-taking in ravens, gaze monitoring, cache protection.</li>
+    </ol>
+    <p class="qa-claim-note"><strong class="claim-science">[science]</strong> peer-reviewed data</p>
+  </section>
+
+</article>
+</BaseLayout>
+
+<style>
+  .qa-page { max-width: 820px; margin: 0 auto; padding: 2rem 1.25rem 4rem; color: var(--iron-ink, #e8e4d8); font-family: 'Inter', sans-serif; line-height: 1.72; }
+  .qa-breadcrumb ol { display: flex; flex-wrap: wrap; gap: .25rem; list-style: none; padding: 0; margin: 0 0 2rem; font-size: .8rem; color: var(--ink-soft, #8a8070); }
+  .qa-breadcrumb a { color: var(--gold-500, #d4ae5a); text-decoration: none; }
+  .qa-pillar { font-size: .72rem; letter-spacing: .12em; text-transform: uppercase; color: var(--gold-500, #d4ae5a); margin: 0 0 .4rem; }
+  .qa-page h1 { font-family: 'Cormorant Garamond', serif; font-size: clamp(2rem, 5vw, 3rem); font-weight: 700; color: #fff; margin: 0 0 2rem; line-height: 1.1; }
+  .qa-snippet { background: rgba(212,174,90,.08); border-left: 3px solid var(--gold-500, #d4ae5a); border-radius: 0 6px 6px 0; padding: 1rem 1.25rem; margin-bottom: 2.5rem; font-size: 1.03rem; }
+  .qa-section { margin-bottom: 2.5rem; }
+  .qa-section h2 { font-family: 'Cormorant Garamond', serif; font-size: 1.5rem; font-weight: 600; color: #fff; margin: 0 0 .9rem; border-bottom: 1px solid rgba(212,174,90,.2); padding-bottom: .4rem; }
+  .qa-section p { margin: 0 0 1rem; font-size: .97rem; }
+  .qa-section ul { padding-left: 1.25rem; margin: 0 0 1rem; }
+  .qa-section li { margin-bottom: .4rem; font-size: .95rem; }
+  .claim-science { color: #7ab9e0; font-style: normal; font-size: .78rem; }
+  a[href] { color: var(--gold-500, #d4ae5a); }
+  .qa-faq-item { border-bottom: 1px solid rgba(255,255,255,.07); }
+  .qa-faq-q { cursor: pointer; padding: .9rem 0; font-size: .97rem; font-weight: 500; color: #fff; list-style: none; }
+  .qa-faq-q::before { content: '+ '; color: var(--gold-500, #d4ae5a); font-weight: 700; }
+  details[open] .qa-faq-q::before { content: '− '; }
+  .qa-faq-a { margin: 0 0 1rem; line-height: 1.7; font-size: .93rem; color: var(--ink-soft, #c8c0b0); }
+  .qa-src-list { padding-left: 1.25rem; margin: 0 0 1rem; }
+  .qa-src-list li { margin-bottom: .6rem; font-size: .82rem; color: var(--ink-soft, #8a8070); line-height: 1.6; }
+  .qa-claim-note { font-size: .78rem; color: var(--ink-soft, #605848); border-top: 1px solid rgba(255,255,255,.06); padding-top: .75rem; }
+</style>

@@ -1,0 +1,121 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+
+const title       = 'Somali Crow Identification — Field Guide';
+const description = 'How to identify the Somali Crow (Corvus edithae): all-black plumage, medium raven-sized, restricted range in the Horn of Africa. Limited published data noted.';
+const path        = '/species/somali-crow/identification/';
+
+const breadcrumbs = [
+  { name: 'Home',        url: '/' },
+  { name: 'Species',     url: '/species/' },
+  { name: 'Somali Crow', url: '/species/somali-crow/' },
+  { name: 'Identification', url: path },
+];
+
+const faq = [
+  { q: 'How do I identify a Somali Crow?', a: 'The Somali Crow is an entirely black corvid of medium-large size, intermediate between typical crows and the large ravens it co-exists with in the Horn of Africa. Published field data are sparse — it was considered a subspecies of Brown-necked Raven until relatively recently. In its limited range (Somalia, parts of Ethiopia and Djibouti), it is best identified by range and by its less arched, more typically crow-like bill compared to Brown-necked and Thick-billed Ravens.' },
+];
+---
+
+<BaseLayout title={title} description={description} path={path} ogType="article"
+  datePublished="2026-11-07" dateModified="2026-11-07"
+  breadcrumbs={breadcrumbs} faq={faq} pageType="Article">
+
+<article class="id-page">
+  <nav class="id-breadcrumb" aria-label="Breadcrumb">
+    <ol>
+      {breadcrumbs.map((b, i) => (
+        <li>
+          {i < breadcrumbs.length - 1
+            ? <><a href={b.url}>{b.name}</a><span aria-hidden="true"> › </span></>
+            : <span aria-current="page">{b.name}</span>}
+        </li>
+      ))}
+    </ol>
+  </nav>
+  <header class="id-header">
+    <p class="id-pillar">Species · Field Identification</p>
+    <h1>Somali Crow — Identification</h1>
+    <p class="id-subtitle"><em>Corvus edithae</em></p>
+  </header>
+
+  <section class="id-snippet" aria-label="Quick answer">
+    <p><strong class="claim-science">[science]</strong> The Somali Crow is an entirely black, medium-large corvid of the Horn of Africa. Published measurement data are limited — this species was treated as a subspecies of Brown-necked Raven for many years and is still not fully studied. In its restricted range (Somalia, parts of Ethiopia and Djibouti), identification relies primarily on range and on its less heavily-arched bill compared to sympatric Thick-billed Raven and Brown-necked Raven.</p>
+  </section>
+
+  <section class="id-section">
+    <h2>Taxonomic Note</h2>
+    <p><strong class="claim-science">[science]</strong> <em>Corvus edithae</em> was for most of the 20th century treated as a subspecies of Brown-necked Raven (<em>Corvus ruficollis</em>). It was elevated to full species status based on morphological and distributional grounds. Published measurements and detailed field descriptions remain sparse in the ornithological literature compared to better-studied raven species. The wing, tail, and weight data for this species are not reliably published in the sources consulted for this library.<sup><a href="#src-1">1</a></sup></p>
+  </section>
+
+  <section class="id-section">
+    <h2>Key Field Marks (from available data)</h2>
+
+    <h3>Plumage</h3>
+    <p><strong class="claim-science">[science]</strong> Entirely black, with iridescent gloss. Unlike Brown-necked Raven, the Somali Crow does not show the brownish neck/mantle wash of that species — it is uniformly black. This is the primary visible difference from its nearest relative in the region.</p>
+
+    <h3>Bill</h3>
+    <p><strong class="claim-science">[science]</strong> Less heavily arched than Thick-billed Raven; comparable to Brown-necked Raven but without the brownish plumage contrast. The bill is relatively medium-weight for a large corvid.</p>
+
+    <h3>Range</h3>
+    <p><strong class="claim-science">[science]</strong> Restricted to Somalia, the adjacent Ogaden region of eastern Ethiopia, and Djibouti. This limited range is itself a key identification aid — any all-black medium-large corvid in this area without the brownish neck wash of Brown-necked Raven is likely Somali Crow.</p>
+  </section>
+
+  <section class="id-section">
+    <h2>Data Limitation Notice</h2>
+    <p>The Somali Crow is among the least-studied of the raven-group corvids. Wingspan and weight data are not reliably available in Madge &amp; Burn (1994) or other standard references consulted. This page will be updated when better published data become available.</p>
+  </section>
+
+  <section class="id-faq id-section" aria-labelledby="faq-h2">
+    <h2 id="faq-h2">Frequently Asked Questions</h2>
+    {faq.map(item => (
+      <details class="id-faq-item">
+        <summary class="id-faq-q">{item.q}</summary>
+        <p class="id-faq-a">{item.a}</p>
+      </details>
+    ))}
+  </section>
+
+  <section class="id-sources id-section" aria-labelledby="src-h2">
+    <h2 id="src-h2">Sources</h2>
+    <ol class="id-src-list">
+      <li id="src-1">Madge, S. &amp; Burn, H. (1994). <em>Crows and Jays</em>. Christopher Helm. — species account; limited measurement data for <em>edithae</em> noted.</li>
+    </ol>
+    <p class="id-claim-note"><strong class="claim-science">[science]</strong> field-guide data (limited for this species)</p>
+  </section>
+
+  <nav class="id-nav-bottom">
+    <a href="/species/somali-crow/" class="id-back">← Somali Crow Overview</a>
+    <a href="/species/somali-crow/range-and-habitat/" class="id-next">Range and Habitat →</a>
+  </nav>
+</article>
+</BaseLayout>
+
+<style>
+  .id-page { max-width: 820px; margin: 0 auto; padding: 2rem 1.25rem 4rem; color: var(--iron-ink, #e8e4d8); font-family: 'Inter', sans-serif; line-height: 1.72; }
+  .id-breadcrumb ol { display: flex; flex-wrap: wrap; gap: .25rem; list-style: none; padding: 0; margin: 0 0 2rem; font-size: .8rem; color: var(--ink-soft, #8a8070); }
+  .id-breadcrumb a { color: var(--gold-500, #d4ae5a); text-decoration: none; }
+  .id-pillar { font-size: .72rem; letter-spacing: .12em; text-transform: uppercase; color: var(--gold-500, #d4ae5a); margin: 0 0 .4rem; }
+  .id-page h1 { font-family: 'Cormorant Garamond', serif; font-size: clamp(2rem, 5vw, 3.25rem); font-weight: 700; color: #fff; margin: 0 0 .2rem; line-height: 1.1; }
+  .id-subtitle { font-size: 1rem; color: var(--ink-soft, #c0b89a); margin: 0 0 2rem; }
+  .id-snippet { background: rgba(212,174,90,.08); border-left: 3px solid var(--gold-500, #d4ae5a); border-radius: 0 6px 6px 0; padding: 1rem 1.25rem; margin-bottom: 2.5rem; font-size: 1.03rem; }
+  .id-section { margin-bottom: 2.75rem; }
+  .id-section h2 { font-family: 'Cormorant Garamond', serif; font-size: 1.6rem; font-weight: 600; color: #fff; margin: 0 0 1rem; border-bottom: 1px solid rgba(212,174,90,.2); padding-bottom: .4rem; }
+  .id-section h3 { font-size: 1rem; font-weight: 600; color: var(--gold-500, #d4ae5a); margin: 1.25rem 0 .5rem; }
+  .id-section p { margin: 0 0 1rem; font-size: .97rem; }
+  .id-section ul { padding-left: 1.25rem; margin: 0 0 1rem; }
+  .id-section li { margin-bottom: .4rem; font-size: .95rem; }
+  .claim-science { color: #7ab9e0; font-style: normal; font-size: .78rem; }
+  a[href] { color: var(--gold-500, #d4ae5a); }
+  .id-faq-item { border-bottom: 1px solid rgba(255,255,255,.07); }
+  .id-faq-q { cursor: pointer; padding: .9rem 0; font-size: .97rem; font-weight: 500; color: #fff; list-style: none; }
+  .id-faq-q::before { content: '+ '; color: var(--gold-500, #d4ae5a); font-weight: 700; }
+  details[open] .id-faq-q::before { content: '− '; }
+  .id-faq-a { margin: 0 0 1rem; line-height: 1.7; font-size: .93rem; color: var(--ink-soft, #c8c0b0); }
+  .id-src-list { padding-left: 1.25rem; margin: 0 0 1rem; }
+  .id-src-list li { margin-bottom: .6rem; font-size: .82rem; color: var(--ink-soft, #8a8070); line-height: 1.6; }
+  .id-claim-note { font-size: .78rem; color: var(--ink-soft, #605848); border-top: 1px solid rgba(255,255,255,.06); padding-top: .75rem; }
+  .id-nav-bottom { display: flex; justify-content: space-between; padding-top: 2rem; border-top: 1px solid rgba(255,255,255,.07); }
+  .id-nav-bottom a { font-size: .9rem; text-decoration: none; }
+  .id-nav-bottom a:hover { text-decoration: underline; }
+</style>

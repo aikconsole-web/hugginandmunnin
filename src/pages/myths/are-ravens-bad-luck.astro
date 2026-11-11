@@ -1,0 +1,144 @@
+---
+/**
+ * MYTH·01 — Are ravens bad luck?
+ * Primary keyword: are ravens bad luck
+ * Secondary: raven omen bad luck, raven superstition, raven symbolism bad luck
+ */
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const title       = 'Myth: "Ravens Are Bad Luck" — Verdict and Evidence';
+const description = 'Is seeing a raven bad luck? This page examines the belief, its cultural origins, and what different traditions actually say — many of which are positive. Every claim sourced.';
+const path        = '/myths/are-ravens-bad-luck/';
+
+const breadcrumbs = [
+  { name: 'Home',         url: '/' },
+  { name: 'Myths vs Facts', url: '/myths/' },
+  { name: 'Are Ravens Bad Luck?', url: path },
+];
+
+const faq = [
+  { q: 'Are ravens really bad luck?', a: 'No single answer applies — it depends on the tradition. In Norse mythology, ravens were associated with Odin\'s wisdom, not misfortune. In many Indigenous cultures of the Pacific Northwest, the Raven is a creator and trickster figure. The "bad luck" association is strongest in some European Christian traditions where ravens were linked to death and battle, but even there the association was contextual, not universal.' },
+  { q: 'What does it mean when a raven visits you?', a: 'There is no scientifically meaningful answer to this question — birds do not deliver omens. What a raven visiting means culturally varies enormously by tradition. If the question is about behaviour: ravens are curious and intelligent birds that may approach humans in search of food or out of exploratory interest.' },
+  { q: 'Why are ravens associated with death?', a: 'Ravens are carrion birds — they eat dead animals and historically gathered at battlefields and places of execution. This observable behaviour made them a natural symbol for death and the battlefield in many cultures independently. The association is rooted in real raven ecology, not superstition.' },
+];
+---
+
+<BaseLayout title={title} description={description} path={path} ogType="article"
+  datePublished="2026-11-06" dateModified="2026-11-06"
+  breadcrumbs={breadcrumbs} faq={faq} pageType="Article">
+
+<article class="myth-page">
+
+  <nav class="myth-breadcrumb" aria-label="Breadcrumb">
+    <ol>
+      {breadcrumbs.map((b, i) => (
+        <li>
+          {i < breadcrumbs.length - 1
+            ? <><a href={b.url}>{b.name}</a><span aria-hidden="true"> › </span></>
+            : <span aria-current="page">{b.name}</span>}
+        </li>
+      ))}
+    </ol>
+  </nav>
+
+  <header class="myth-header">
+    <p class="myth-pillar">Myths vs Facts · MYTH·01</p>
+    <h1>Myth: "Ravens Are Bad Luck"</h1>
+  </header>
+
+  <!-- Verdict block -->
+  <section class="myth-verdict" aria-label="Verdict">
+    <div class="myth-verdict-badge myth-verdict-false">Partly True — It Depends on the Tradition</div>
+    <p>The belief that ravens are bad luck is real and widespread in some cultures, but it is not universal. Many traditions associate ravens with wisdom, creation, or protection. The "bad luck" association is strongest in certain European contexts and is rooted in the raven's ecological role as a carrion bird — an observable fact that different cultures have interpreted very differently.</p>
+  </section>
+
+  <section class="myth-section">
+    <h2>The Belief</h2>
+    <p><strong class="claim-lore">[lore]</strong> In parts of European Christian tradition, ravens became associated with ill omen, death, and misfortune — partly because of their black plumage, partly because of their presence at death-related sites (battlefields, gallows, cemeteries), and partly because of their role in biblical narrative (Noah's raven that did not return; ravens as unclean birds in Leviticus 11:15).</p>
+    <p><strong class="claim-lore">[lore]</strong> This association was reinforced in literature: Edgar Allan Poe's poem "The Raven" (1845) cemented the bird's association with grief, loss, and foreboding in popular English-language culture. The poem's narrator interprets the raven as a messenger of doom — but Poe was writing fiction, and his narrator is explicitly in a state of distressed grief.<sup><a href="#src-1">1</a></sup></p>
+  </section>
+
+  <section class="myth-section">
+    <h2>What the Evidence Says</h2>
+
+    <h3>Many traditions do not share this association</h3>
+    <p><strong class="claim-lore">[lore]</strong> In Norse mythology, ravens were associated with Odin — god of wisdom and war — not with misfortune. Huginn and Muninn were valued messengers, and the raven banner was a battle standard intended to bring victory, not bad luck.<sup><a href="#src-2">2</a></sup></p>
+    <p><strong class="claim-lore">[lore]</strong> In the oral traditions of several Pacific Northwest Indigenous peoples — including the Haida and Tlingit — the Raven is a transformative creator figure and trickster who brought light to the world and shaped the landscape. This is not an omen tradition but a cosmological one, and the specific traditions are living and belong to those communities. We note it here only to illustrate that "ravens = bad luck" is not a universal human association, and we do not claim to represent those traditions beyond this factual observation.<sup><a href="#src-3">3</a></sup></p>
+
+    <h3>The ecological basis of the death association</h3>
+    <p><strong class="claim-science">[science]</strong> Ravens are carrion birds. They gather at carcasses, executions, and battlefields because that is where food is — not because they cause death. The association is a case of correlation misread as causation: ravens appear where death has occurred; therefore (in some cultural logics) they predict or cause death. The science is clear that ravens are following food, not forecasting fate.<sup><a href="#src-4">4</a></sup></p>
+
+    <h3>The Tower of London tradition</h3>
+    <p><strong class="claim-lore">[lore]</strong> The belief that the Tower of London will fall if its ravens leave is frequently cited as evidence of ravens' ominous significance. However, the history of this tradition is more recent than commonly assumed: the first documentary evidence for kept ravens at the Tower dates to the late 19th century, and the "legend" in its current form appears to have been formalised in the 20th century. It is a tradition, not an ancient curse.<sup><a href="#src-5">5</a></sup></p>
+  </section>
+
+  <section class="myth-section">
+    <h2>Where the Belief Comes From</h2>
+    <p>The "ravens are bad luck" belief in European tradition draws on several converging sources:</p>
+    <ol>
+      <li><strong class="claim-science">[science]</strong> Real raven behaviour: carrion-eating, loud calls at night, and gathering in numbers at death sites (all observable).</li>
+      <li><strong class="claim-lore">[lore]</strong> Biblical associations: unclean birds (Leviticus), Noah's unreturning raven, Elijah fed by ravens in the wilderness (a positive association, actually).</li>
+      <li><strong class="claim-lore">[lore]</strong> European folklore linking black animals to darkness, the devil, and misfortune — a colour-based association that is cultural, not factual.</li>
+      <li><strong class="claim-lore">[lore]</strong> Literary reinforcement through Poe and later popular culture.</li>
+    </ol>
+  </section>
+
+  <section class="myth-section">
+    <h2>The Verdict Restated</h2>
+    <p><strong>"Ravens are bad luck"</strong> is a belief held in some cultural contexts, with traceable historical origins in European tradition. It is not universal, not supported by any scientific evidence, and not shared by many major cultural traditions that feature ravens prominently. The raven's association with death is rooted in real biology (carrion-eating), which different cultures have interpreted in radically different ways.</p>
+  </section>
+
+  <section class="myth-faq myth-section" aria-labelledby="faq-h2">
+    <h2 id="faq-h2">Frequently Asked Questions</h2>
+    {faq.map(item => (
+      <details class="myth-faq-item">
+        <summary class="myth-faq-q">{item.q}</summary>
+        <p class="myth-faq-a">{item.a}</p>
+      </details>
+    ))}
+  </section>
+
+  <section class="myth-sources myth-section" aria-labelledby="src-h2">
+    <h2 id="src-h2">Sources</h2>
+    <ol class="myth-src-list">
+      <li id="src-1">Poe, E.A. (1845). "The Raven." <em>The American Review</em> (Jan. 1845). — literary context; fictional narrative explicitly labelled as such.</li>
+      <li id="src-2">Simek, R. (1993). <em>Dictionary of Northern Mythology</em>. D.S. Brewer. p. 160. — Norse raven associations (wisdom, Odin).</li>
+      <li id="src-3">Jonaitis, A. (1986). <em>Art of the Northern Tlingit</em>. University of Washington Press. — Raven as creator figure in Northwest Coast traditions (noted as an external academic source; living traditions belong to their communities).</li>
+      <li id="src-4">Boarman, W.I. & Heinrich, B. (1999). Common Raven (<em>Corvus corax</em>). <em>Birds of the World</em>. Cornell Lab. — carrion-feeding behaviour.</li>
+      <li id="src-5">Sax, B. (2007). <em>City of Ravens: The Extraordinary History of London, the Tower and its Famous Ravens</em>. Duckworth. — history of the Tower raven tradition.</li>
+    </ol>
+    <p class="myth-claim-note"><strong class="claim-science">[science]</strong> peer-reviewed/field-guide · <strong class="claim-lore">[lore]</strong> named cultural/historical source</p>
+  </section>
+
+</article>
+</BaseLayout>
+
+<style>
+  .myth-page { max-width: 820px; margin: 0 auto; padding: 2rem 1.25rem 4rem; color: var(--iron-ink, #e8e4d8); font-family: 'Inter', sans-serif; line-height: 1.72; }
+  .myth-breadcrumb ol { display: flex; flex-wrap: wrap; gap: .25rem; list-style: none; padding: 0; margin: 0 0 2rem; font-size: .8rem; color: var(--ink-soft, #8a8070); }
+  .myth-breadcrumb a { color: var(--gold-500, #d4ae5a); text-decoration: none; }
+  .myth-pillar { font-size: .72rem; letter-spacing: .12em; text-transform: uppercase; color: var(--gold-500, #d4ae5a); margin: 0 0 .4rem; }
+  .myth-page h1 { font-family: 'Cormorant Garamond', serif; font-size: clamp(2rem, 5vw, 3rem); font-weight: 700; color: #fff; margin: 0 0 1.5rem; line-height: 1.1; }
+  /* Verdict */
+  .myth-verdict { background: rgba(255,255,255,.04); border: 1px solid rgba(255,255,255,.1); border-radius: 8px; padding: 1.25rem 1.5rem; margin-bottom: 2.5rem; }
+  .myth-verdict-badge { display: inline-block; padding: .3em .8em; border-radius: 4px; font-size: .78rem; font-weight: 700; letter-spacing: .06em; text-transform: uppercase; margin-bottom: .75rem; }
+  .myth-verdict-false { background: rgba(220,180,60,.15); color: #d4ae5a; border: 1px solid rgba(220,180,60,.3); }
+  .myth-verdict p { margin: 0; font-size: .97rem; }
+  .myth-section { margin-bottom: 2.5rem; }
+  .myth-section h2 { font-family: 'Cormorant Garamond', serif; font-size: 1.5rem; font-weight: 600; color: #fff; margin: 0 0 .9rem; border-bottom: 1px solid rgba(212,174,90,.2); padding-bottom: .4rem; }
+  .myth-section h3 { font-size: 1rem; font-weight: 600; color: var(--gold-500, #d4ae5a); margin: 1.25rem 0 .5rem; }
+  .myth-section p { margin: 0 0 1rem; font-size: .97rem; }
+  .myth-section ol, .myth-section ul { padding-left: 1.25rem; margin: 0 0 1rem; }
+  .myth-section li { margin-bottom: .5rem; font-size: .95rem; }
+  .claim-science { color: #7ab9e0; font-style: normal; font-size: .78rem; }
+  .claim-lore    { color: #c8a46a; font-style: normal; font-size: .78rem; }
+  a[href] { color: var(--gold-500, #d4ae5a); }
+  .myth-faq-item { border-bottom: 1px solid rgba(255,255,255,.07); }
+  .myth-faq-q { cursor: pointer; padding: .9rem 0; font-size: .97rem; font-weight: 500; color: #fff; list-style: none; }
+  .myth-faq-q::before { content: '+ '; color: var(--gold-500, #d4ae5a); font-weight: 700; }
+  details[open] .myth-faq-q::before { content: '− '; }
+  .myth-faq-a { margin: 0 0 1rem; line-height: 1.7; font-size: .93rem; color: var(--ink-soft, #c8c0b0); }
+  .myth-src-list { padding-left: 1.25rem; margin: 0 0 1rem; }
+  .myth-src-list li { margin-bottom: .6rem; font-size: .82rem; color: var(--ink-soft, #8a8070); line-height: 1.6; }
+  .myth-claim-note { font-size: .78rem; color: var(--ink-soft, #605848); border-top: 1px solid rgba(255,255,255,.06); padding-top: .75rem; }
+</style>

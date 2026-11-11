@@ -1,0 +1,143 @@
+---
+/**
+ * Places — Ravens in the Scottish Highlands
+ * PLC·07
+ * Primary keyword: ravens in scotland
+ * Secondary: scottish highland raven, common raven scotland, raven uk highlands
+ */
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const title       = 'Ravens in the Scottish Highlands: Britain\'s Raven Stronghold';
+const description = 'The Scottish Highlands hold the densest and most stable raven population in Britain. This page covers raven ecology in highland Scotland, their relationship with red deer carcasses, their history of persecution, and their role in highland folklore.';
+const path        = '/places/ravens-in-the-scottish-highlands/';
+
+const breadcrumbs = [
+  { name: 'Home',   url: '/' },
+  { name: 'Places', url: '/places/' },
+  { name: 'Ravens in the Scottish Highlands', url: path },
+];
+
+const faq = [
+  { q: 'Are ravens common in the Scottish Highlands?', a: 'Yes — the Scottish Highlands are the most important raven habitat in Britain and among the most significant in Europe. Rough estimates put the Scottish raven breeding population at 4,000–5,000+ pairs, with the Highlands and Islands supporting the highest densities. The combination of rugged cliff nesting sites, abundant red deer carrion (from the world\'s largest unmanaged red deer population), open moorland, and relatively low human persecution pressure makes the Highlands ideal raven habitat.' },
+  { q: 'What do ravens eat in the Scottish Highlands?', a: 'Red deer (Cervus elaphus) carrion is the primary winter food source for Highland ravens — the red deer population (over 350,000 animals) provides predictable carcasses through winter deaths, stalking kills, and road casualties. Ravens also eat mountain hare, grouse (eggs and chicks), invertebrates (beetles, earthworms), sheep carrion, and food from farms and settlements. The game-keeping tradition of providing sheep and deer carcasses has incidentally benefited raven populations.' },
+  { q: 'Have ravens always been in the Scottish Highlands?', a: 'Ravens are native to Scotland and historically widespread, but their current distribution reflects a history of persecution. During the 18th–20th centuries, ravens were heavily killed on grouse moors and sheep farms throughout the British uplands as perceived threats to livestock and game. The Highland population survived this persecution better than lowland English populations (which were nearly extirpated) owing to the terrain\'s inaccessibility and lower gamekeeping intensity in the most remote glens. Legal protection from 1954 (Protection of Birds Act) and improved public attitudes have allowed population recovery.' },
+];
+---
+
+<BaseLayout title={title} description={description} path={path} ogType="article"
+  datePublished="2026-11-07" dateModified="2026-11-07"
+  breadcrumbs={breadcrumbs} faq={faq} pageType="Article">
+
+<article class="qa-page">
+
+  <nav class="qa-breadcrumb" aria-label="Breadcrumb">
+    <ol>
+      {breadcrumbs.map((b, i) => (
+        <li>
+          {i < breadcrumbs.length - 1
+            ? <><a href={b.url}>{b.name}</a><span aria-hidden="true"> › </span></>
+            : <span aria-current="page">{b.name}</span>}
+        </li>
+      ))}
+    </ol>
+  </nav>
+
+  <header class="qa-header">
+    <p class="qa-pillar">Places · PLC·07</p>
+    <h1>Ravens in the Scottish Highlands: Britain's Raven Stronghold</h1>
+  </header>
+
+  <section class="qa-snippet" aria-label="Direct answer">
+    <p><strong class="claim-science">[science]</strong> The Scottish Highlands are Britain's most important raven habitat — with 4,000–5,000+ breeding pairs sustained by abundant red deer carrion, rugged cliff nesting sites, and legal protection since 1954. The Highland raven maintained a continuous presence through the worst years of gamekeeping persecution and now supports range recovery south into England and Wales.</p>
+  </section>
+
+  <section class="qa-section">
+    <h2>The Highland Landscape</h2>
+    <p><strong class="claim-science">[science]</strong> The Scottish Highlands — covering roughly 25,000 km² of mountains, moorland, glen, and sea cliff — provide nearly ideal raven habitat:<sup><a href="#src-1">1</a></sup></p>
+    <ul>
+      <li><strong>Nesting sites:</strong> extensive cliff systems on Highland mountains (Ben Nevis, the Cairngorms, Torridon, Sutherland) and sea cliffs on the west coast and islands offer abundant nest ledges, with minimal human disturbance at the most remote sites.</li>
+      <li><strong>Carrion:</strong> Scotland holds approximately 350,000–400,000 red deer (the largest red deer population in Europe), which die through winter cold stress, disease, and stalking. This enormous carrion resource underpins raven density in the region.</li>
+      <li><strong>Open terrain:</strong> upland moorland allows ravens to scan large areas for food.</li>
+      <li><strong>Low human density:</strong> the Highlands are among the least densely populated areas in Europe, with low road density and minimal urban development in many areas.</li>
+    </ul>
+  </section>
+
+  <section class="qa-section">
+    <h2>Red Deer and Ravens</h2>
+    <p><strong class="claim-science">[science]</strong> The relationship between red deer carcasses and raven winter survival in the Highlands is the Scottish equivalent of the wolf-raven dynamic studied in Yellowstone. Red deer provide concentrated, predictable carrion:<sup><a href="#src-1">1</a></sup></p>
+    <ul>
+      <li>Winter die-off of deer (typically January–March) provides the largest single carrion pulse of the year.</li>
+      <li>Deer stalking (legal deer management) results in carcasses on the hill throughout the stalking season (July–February).</li>
+      <li>Ravens are attracted to deer carcasses from several kilometres — a single large deer provides food for many birds over several days.</li>
+    </ul>
+    <p>The expansion of deer management and the increase in the deer population through the 20th century have likely benefited raven numbers. Conversely, any significant reduction in deer numbers would affect raven winter food supply.</p>
+  </section>
+
+  <section class="qa-section">
+    <h2>Persecution History</h2>
+    <p><strong class="claim-science">[science]</strong> The Highland raven survived centuries of persecution that eliminated ravens from much of lowland Britain. From the late 18th century through the mid-20th century, ravens were killed on game-managed estates (grouse moors and sheep farms) throughout Britain. In England, ravens were essentially extirpated except in a few remote Welsh and northern English uplands.<sup><a href="#src-1">1</a></sup></p>
+    <p>In the Highlands, inaccessible terrain, lower gamekeeping intensity in remote glens, and the survival of traditional attitudes toward ravens (Gaelic oral tradition — see below) contributed to survival. Even in the Highlands, ravens were heavily killed on some estates; populations were reduced but never eliminated. Legal protection in 1954 began the recovery, though illegal persecution of ravens on some game-managed estates continues to be recorded.</p>
+  </section>
+
+  <section class="qa-section">
+    <h2>Gaelic Raven Tradition</h2>
+    <p><strong class="claim-lore">[lore]</strong> In Scottish Gaelic culture, the raven (<em>fitheach</em>) is a bird of prophecy, battlefields, and the wild places of the highlands. Gaelic oral tradition uses the raven's call as an omen — most often of death or the approach of strangers. The <em>fitheach</em> appears in Gaelic poetry and proverbs: "Mar fhitheach air spoth" ("like a raven on a peak") describes a keen, watchful person. The raven was associated with the Cailleach (the supernatural hag of the wilderness) in some highland traditions, and with second sight.<sup><a href="#src-2">2</a></sup></p>
+    <p>Unlike in some English and lowland traditions where the raven is unambiguously sinister, Gaelic attitudes show more ambivalence — the raven is a figure of power and wild nature, respected even when feared.</p>
+  </section>
+
+  <section class="qa-section">
+    <h2>Related Pages</h2>
+    <ul>
+      <li><a href="/places/ravens-in-the-uk/">Ravens in the UK</a></li>
+      <li><a href="/places/ravens-in-norway/">Ravens in Norway</a></li>
+      <li><a href="/lore/world/raven-in-celtic-mythology/">Raven in Celtic mythology</a></li>
+      <li><a href="/species/common-raven/range/">Common Raven range</a></li>
+    </ul>
+  </section>
+
+  <section class="qa-faq qa-section" aria-labelledby="faq-h2">
+    <h2 id="faq-h2">Frequently Asked Questions</h2>
+    {faq.map(item => (
+      <details class="qa-faq-item">
+        <summary class="qa-faq-q">{item.q}</summary>
+        <p class="qa-faq-a">{item.a}</p>
+      </details>
+    ))}
+  </section>
+
+  <section class="qa-sources qa-section" aria-labelledby="src-h2">
+    <h2 id="src-h2">Sources</h2>
+    <ol class="qa-src-list">
+      <li id="src-1">Mearns, R. & Newton, I. (1988). Factors affecting breeding success of peregrines and ravens in south Scotland. <em>Journal of Animal Ecology</em>, 57(1), 269–284. — raven nesting, persecution history, and carrion in Scottish uplands; also Boarman, W.I. & Heinrich, B. (1999) for general Common Raven ecology.</li>
+      <li id="src-2">MacInnes, J. (2006). <em>Dùthchas nan Gàidheal: Selected Essays of John MacInnes</em>. Birlinn. — Gaelic oral tradition, natural world symbolism including the fitheach (raven).</li>
+    </ol>
+    <p class="qa-claim-note"><strong class="claim-science">[science]</strong> peer-reviewed data · <strong class="claim-lore">[lore]</strong> named cultural/historical source</p>
+  </section>
+
+</article>
+</BaseLayout>
+
+<style>
+  .qa-page { max-width: 820px; margin: 0 auto; padding: 2rem 1.25rem 4rem; color: var(--iron-ink, #e8e4d8); font-family: 'Inter', sans-serif; line-height: 1.72; }
+  .qa-breadcrumb ol { display: flex; flex-wrap: wrap; gap: .25rem; list-style: none; padding: 0; margin: 0 0 2rem; font-size: .8rem; color: var(--ink-soft, #8a8070); }
+  .qa-breadcrumb a { color: var(--gold-500, #d4ae5a); text-decoration: none; }
+  .qa-pillar { font-size: .72rem; letter-spacing: .12em; text-transform: uppercase; color: var(--gold-500, #d4ae5a); margin: 0 0 .4rem; }
+  .qa-page h1 { font-family: 'Cormorant Garamond', serif; font-size: clamp(2rem, 5vw, 3rem); font-weight: 700; color: #fff; margin: 0 0 2rem; line-height: 1.1; }
+  .qa-snippet { background: rgba(212,174,90,.08); border-left: 3px solid var(--gold-500, #d4ae5a); border-radius: 0 6px 6px 0; padding: 1rem 1.25rem; margin-bottom: 2.5rem; font-size: 1.03rem; }
+  .qa-section { margin-bottom: 2.5rem; }
+  .qa-section h2 { font-family: 'Cormorant Garamond', serif; font-size: 1.5rem; font-weight: 600; color: #fff; margin: 0 0 .9rem; border-bottom: 1px solid rgba(212,174,90,.2); padding-bottom: .4rem; }
+  .qa-section p { margin: 0 0 1rem; font-size: .97rem; }
+  .qa-section ul { padding-left: 1.25rem; margin: 0 0 1rem; }
+  .qa-section li { margin-bottom: .4rem; font-size: .95rem; }
+  .claim-science { color: #7ab9e0; font-style: normal; font-size: .78rem; }
+  .claim-lore { color: #c49a3c; font-style: normal; font-size: .78rem; }
+  a[href] { color: var(--gold-500, #d4ae5a); }
+  .qa-faq-item { border-bottom: 1px solid rgba(255,255,255,.07); }
+  .qa-faq-q { cursor: pointer; padding: .9rem 0; font-size: .97rem; font-weight: 500; color: #fff; list-style: none; }
+  .qa-faq-q::before { content: '+ '; color: var(--gold-500, #d4ae5a); font-weight: 700; }
+  details[open] .qa-faq-q::before { content: '− '; }
+  .qa-faq-a { margin: 0 0 1rem; line-height: 1.7; font-size: .93rem; color: var(--ink-soft, #c8c0b0); }
+  .qa-src-list { padding-left: 1.25rem; margin: 0 0 1rem; }
+  .qa-src-list li { margin-bottom: .6rem; font-size: .82rem; color: var(--ink-soft, #8a8070); line-height: 1.6; }
+  .qa-claim-note { font-size: .78rem; color: var(--ink-soft, #605848); border-top: 1px solid rgba(255,255,255,.06); padding-top: .75rem; }
+</style>

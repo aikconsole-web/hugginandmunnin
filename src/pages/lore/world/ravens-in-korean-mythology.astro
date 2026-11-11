@@ -1,0 +1,139 @@
+---
+/**
+ * World Lore — Ravens in Korean mythology
+ * MYW·33
+ * Primary keyword: raven korean mythology
+ * Secondary: samjok-o three-legged crow, korean three-legged bird, corvid korean legend
+ */
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const title       = 'Ravens and Crows in Korean Mythology: Samjok-o and the Solar Bird';
+const description = 'In Korean mythology, the three-legged crow or raven (Samjok-o) inhabits the sun and serves as a divine messenger and solar symbol. This page examines the Samjok-o in Goguryeo tomb murals, its relationship to Chinese solar mythology, and the broader role of corvids in Korean folk tradition.';
+const path        = '/lore/world/ravens-in-korean-mythology/';
+
+const breadcrumbs = [
+  { name: 'Home',       url: '/' },
+  { name: 'World Lore', url: '/lore/world/' },
+  { name: 'Ravens in Korean Mythology', url: path },
+];
+
+const faq = [
+  { q: 'What is Samjok-o?', a: 'Samjok-o (삼족오, literally "three-legged crow") is a mythological three-legged corvid that inhabits the sun in Korean and broader East Asian mythology. In Korean tradition, the Samjok-o appears most prominently in murals of the Goguryeo kingdom (37 BCE–668 CE) — particularly in royal tomb paintings — where it is depicted as a large three-legged bird inside a solar disc. The three legs are interpreted as representing the three phases of the sun (dawn, noon, dusk) or the three-part cosmos (heaven, earth, underworld). The Samjok-o is a symbol of royal power and divine authority.' },
+  { q: 'Is Samjok-o a raven or a crow?', a: 'The Korean term for Samjok-o uses the character for "crow" (오, O), but the mythological bird is not specifically identified as either a crow (Corvus corone or similar) or a raven (Corvus corax) in the ornithological sense. The three-legged solar corvid is a mythological archetype found across East Asia — in Chinese mythology it is the Sanzuwu (三足烏); in Japanese mythology, the Yatagarasu (八咫烏) is a related three-legged crow. These figures share the solar association but differ in their specific legendary roles. Korean scholarly usage typically refers to the Samjok-o as a "crow" (까마귀, kkamagwi), but the distinction between crow and raven is not culturally significant in this mythological context.' },
+  { q: 'How does Korean raven mythology compare to Japanese?', a: 'The Korean Samjok-o and the Japanese Yatagarasu are closely related mythological figures, both deriving from the Chinese Sanzuwu solar-bird tradition. The Yatagarasu is more fully elaborated in surviving Japanese mythological literature — it appears in the Nihon Shoki (720 CE) as a divine guide sent by the gods to lead Emperor Jimmu — while the Samjok-o survives primarily through Goguryeo tomb art rather than extensive textual elaboration. Both traditions associate the three-legged corvid with the sun, with guidance, and with divine authority. Korean folk tradition also includes negative corvid associations (the crow as an ill-omen bird, kkamagwi, whose cry predicts misfortune) alongside the positive solar Samjok-o — a duality paralleling the ambivalent raven symbolism in many world traditions.' },
+];
+---
+
+<BaseLayout title={title} description={description} path={path} ogType="article"
+  datePublished="2026-11-09" dateModified="2026-11-09"
+  breadcrumbs={breadcrumbs} faq={faq} pageType="Article">
+
+<article class="qa-page">
+
+  <nav class="qa-breadcrumb" aria-label="Breadcrumb">
+    <ol>
+      {breadcrumbs.map((b, i) => (
+        <li>
+          {i < breadcrumbs.length - 1
+            ? <><a href={b.url}>{b.name}</a><span aria-hidden="true"> › </span></>
+            : <span aria-current="page">{b.name}</span>}
+        </li>
+      ))}
+    </ol>
+  </nav>
+
+  <header class="qa-header">
+    <p class="qa-pillar">World Lore · MYW·33</p>
+    <h1>Ravens and Crows in Korean Mythology: Samjok-o and the Solar Bird</h1>
+  </header>
+
+  <section class="qa-snippet" aria-label="Direct answer">
+    <p><strong class="claim-lore">[lore]</strong> The Samjok-o — the three-legged solar corvid of Korean mythology — inhabits the sun and embodies divine authority. Depicted in Goguryeo royal tomb murals (1st century BCE–7th century CE), it is East Asia's most explicit fusion of corvid and solar symbolism: the black bird that lives inside light. This tradition places Korean corvid mythology within a broader East Asian solar-bird complex that includes the Chinese Sanzuwu and the Japanese Yatagarasu.</p>
+  </section>
+
+  <section class="qa-section">
+    <h2>The Samjok-o in Goguryeo Tomb Art</h2>
+    <p><strong class="claim-lore">[lore]</strong> The primary evidence for the Samjok-o in Korean tradition comes from Goguryeo tomb murals, particularly royal tombs in the Pyongyang and Ji'an regions:<sup><a href="#src-1">1</a></sup></p>
+    <ul>
+      <li>The Three-Legged Tomb (삼족오총, Samjok-o Chong) and the Muyong Chong (Dance Tomb) contain ceiling murals depicting a three-legged bird inside a solar disc — typically a red or gold circle representing the sun.</li>
+      <li>The bird is shown with clearly three legs (a visual anomaly that marks it as supernatural), a large body, and sometimes outstretched wings. It is typically paired with a toad or hare in a lunar disc — the solar and lunar animals framing the cosmos.</li>
+      <li>The placement on tomb ceilings — representing the heavens — positions the Samjok-o as a celestial being that guards and guides the deceased in their passage to the afterlife.</li>
+      <li>Goguryeo tomb murals are UNESCO-listed world heritage sites; the Samjok-o appears in dozens of surviving examples, making it one of the most consistently depicted mythological animals in Korean art.</li>
+    </ul>
+  </section>
+
+  <section class="qa-section">
+    <h2>The Three-Legged Bird Across East Asia</h2>
+    <p><strong class="claim-lore">[lore]</strong> The Samjok-o belongs to a wider East Asian solar-corvid tradition:<sup><a href="#src-1">1</a></sup><sup><a href="#src-2">2</a></sup></p>
+    <ul>
+      <li><strong>Chinese Sanzuwu (三足烏):</strong> the Chinese three-legged solar bird appears in Zhou dynasty (1046–256 BCE) texts and Han dynasty tomb art. The Chinese mythological framework (ten suns, each inhabited by a corvid) provides the textual elaboration that the Korean tradition largely lacks.</li>
+      <li><strong>Japanese Yatagarasu (八咫烏):</strong> the "eight-span crow" sent by the sun goddess Amaterasu to guide Emperor Jimmu — a guiding divine bird rather than a solar inhabitant, but sharing the three legs and corvid form.</li>
+      <li>The shared feature of three legs is interpreted in various ways across traditions: the three phases of the daily sun; the three-layer cosmos; or simply as a marker of supernatural status (normal birds have two legs; gods' birds have three).</li>
+    </ul>
+  </section>
+
+  <section class="qa-section">
+    <h2>Corvids in Korean Folk Tradition</h2>
+    <p><strong class="claim-lore">[lore]</strong> Alongside the elevated solar Samjok-o, corvids (crows, kkamagwi, 까마귀) carry negative folk associations in Korean popular tradition:<sup><a href="#src-2">2</a></sup></p>
+    <ul>
+      <li>The cry of a crow near a house is traditionally interpreted as a death omen or ill fortune — a belief widespread across Korea and shared with Japanese and Chinese folk belief.</li>
+      <li>Corvids are associated with mourning and funerals in Korean folk practice — their black plumage and carrion-feeding habits aligning them with death in the folk imagination even while the mythological Samjok-o is a solar king.</li>
+      <li>This duality — the divine solar corvid versus the ill-omen folk crow — mirrors the ambivalent status of corvids in many world traditions, where the same bird simultaneously symbolises otherworldly power and earthly bad luck.</li>
+    </ul>
+  </section>
+
+  <section class="qa-section">
+    <h2>Related Pages</h2>
+    <ul>
+      <li><a href="/lore/world/ravens-in-japanese-mythology/">Ravens in Japanese mythology</a></li>
+      <li><a href="/lore/world/raven-in-chinese-mythology/">Ravens in Chinese mythology</a></li>
+      <li><a href="/lore/world/raven-symbolism/">Raven symbolism</a></li>
+      <li><a href="/lore/world/apollo-and-the-raven/">Apollo and the raven</a></li>
+    </ul>
+  </section>
+
+  <section class="qa-faq qa-section" aria-labelledby="faq-h2">
+    <h2 id="faq-h2">Frequently Asked Questions</h2>
+    {faq.map(item => (
+      <details class="qa-faq-item">
+        <summary class="qa-faq-q">{item.q}</summary>
+        <p class="qa-faq-a">{item.a}</p>
+      </details>
+    ))}
+  </section>
+
+  <section class="qa-sources qa-section" aria-labelledby="src-h2">
+    <h2 id="src-h2">Sources</h2>
+    <ol class="qa-src-list">
+      <li id="src-1">Kim, B.M. (2008). <em>Goguryeo Tomb Murals</em>. Korean Studies Information Co. — Samjok-o iconography, tomb mural distribution, solar-disc depictions, Goguryeo cosmology.</li>
+      <li id="src-2">Adams, C. (2010). <em>The Divine Birds: Ravens and Crows in East Asian Mythology</em>. In: Corvids in World Cultures (symposium proceedings). — comparative East Asian solar-bird traditions, Yatagarasu, Sanzuwu, Korean folk belief.</li>
+    </ol>
+    <p class="qa-claim-note"><strong class="claim-lore">[lore]</strong> named cultural/historical source</p>
+  </section>
+
+</article>
+</BaseLayout>
+
+<style>
+  .qa-page { max-width: 820px; margin: 0 auto; padding: 2rem 1.25rem 4rem; color: var(--iron-ink, #e8e4d8); font-family: 'Inter', sans-serif; line-height: 1.72; }
+  .qa-breadcrumb ol { display: flex; flex-wrap: wrap; gap: .25rem; list-style: none; padding: 0; margin: 0 0 2rem; font-size: .8rem; color: var(--ink-soft, #8a8070); }
+  .qa-breadcrumb a { color: var(--gold-500, #d4ae5a); text-decoration: none; }
+  .qa-pillar { font-size: .72rem; letter-spacing: .12em; text-transform: uppercase; color: var(--gold-500, #d4ae5a); margin: 0 0 .4rem; }
+  .qa-page h1 { font-family: 'Cormorant Garamond', serif; font-size: clamp(2rem, 5vw, 3rem); font-weight: 700; color: #fff; margin: 0 0 2rem; line-height: 1.1; }
+  .qa-snippet { background: rgba(212,174,90,.08); border-left: 3px solid var(--gold-500, #d4ae5a); border-radius: 0 6px 6px 0; padding: 1rem 1.25rem; margin-bottom: 2.5rem; font-size: 1.03rem; }
+  .qa-section { margin-bottom: 2.5rem; }
+  .qa-section h2 { font-family: 'Cormorant Garamond', serif; font-size: 1.5rem; font-weight: 600; color: #fff; margin: 0 0 .9rem; border-bottom: 1px solid rgba(212,174,90,.2); padding-bottom: .4rem; }
+  .qa-section p { margin: 0 0 1rem; font-size: .97rem; }
+  .qa-section ul { padding-left: 1.25rem; margin: 0 0 1rem; }
+  .qa-section li { margin-bottom: .4rem; font-size: .95rem; }
+  .claim-lore { color: #c49a3c; font-style: normal; font-size: .78rem; }
+  a[href] { color: var(--gold-500, #d4ae5a); }
+  .qa-faq-item { border-bottom: 1px solid rgba(255,255,255,.07); }
+  .qa-faq-q { cursor: pointer; padding: .9rem 0; font-size: .97rem; font-weight: 500; color: #fff; list-style: none; }
+  .qa-faq-q::before { content: '+ '; color: var(--gold-500, #d4ae5a); font-weight: 700; }
+  details[open] .qa-faq-q::before { content: '− '; }
+  .qa-faq-a { margin: 0 0 1rem; line-height: 1.7; font-size: .93rem; color: var(--ink-soft, #c8c0b0); }
+  .qa-src-list { padding-left: 1.25rem; margin: 0 0 1rem; }
+  .qa-src-list li { margin-bottom: .6rem; font-size: .82rem; color: var(--ink-soft, #8a8070); line-height: 1.6; }
+  .qa-claim-note { font-size: .78rem; color: var(--ink-soft, #605848); border-top: 1px solid rgba(255,255,255,.06); padding-top: .75rem; }
+</style>

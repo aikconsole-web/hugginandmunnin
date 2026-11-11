@@ -1,0 +1,154 @@
+---
+/**
+ * Behaviour — Raven feather care and moult
+ * BEH·25
+ * Primary keyword: raven moult
+ * Secondary: raven feathers, raven plumage, raven moulting schedule
+ */
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const title       = 'Raven Feather Care and Moult: Plumage, Maintenance, and Annual Cycle';
+const description = 'Ravens maintain complex, iridescent plumage through daily preening and undergo a complete moult each year. This chapter examines raven feather structure, the moult schedule, iridescence, and the social significance of plumage condition.';
+const path        = '/behaviour/raven-feather-care-and-moult/';
+
+const breadcrumbs = [
+  { name: 'Home',      url: '/' },
+  { name: 'Behaviour', url: '/behaviour/' },
+  { name: 'Raven Feather Care and Moult', url: path },
+];
+
+const faq = [
+  { q: 'When do ravens moult?', a: 'Common ravens undergo a complete moult (replacement of all flight and body feathers) once a year, beginning after breeding concludes in late summer and completing through autumn. The timing is later in birds that bred — breeding individuals moult after the nutritional demands of raising young are met. Non-breeding ravens in communal groups may begin moulting earlier. Flight feathers are replaced sequentially to maintain flight capability throughout the process — ravens do not go through a flightless period as some waterfowl do.' },
+  { q: 'Why are raven feathers iridescent?', a: 'Raven feathers appear iridescent — shifting between black, blue-violet, blue-green, and bronze — because of microscopic surface structures in the feather barbules that cause structural colouration through light interference, in addition to the base dark pigmentation from eumelanin. The iridescence is angle-dependent: the same feather appears different colours from different viewing angles. This structural colouration produces colours beyond what pigment alone could achieve and is a signal of feather quality and overall condition in corvids.' },
+  { q: 'Do ravens preen each other?', a: 'Yes — allopreening (mutual preening between individuals) is a well-documented behaviour in ravens, occurring primarily between bonded pairs. Mates preen each other\'s head and neck feathers — regions the bird cannot reach by self-preening. Allopreening in ravens functions both in feather maintenance (removing parasites and debris from hard-to-reach areas) and in social bonding — the behaviour is associated with affiliative pair contact and increases around the breeding season.' },
+];
+---
+
+<BaseLayout title={title} description={description} path={path} ogType="article"
+  datePublished="2026-11-08" dateModified="2026-11-08"
+  breadcrumbs={breadcrumbs} faq={faq} pageType="Article">
+
+<article class="qa-page">
+
+  <nav class="qa-breadcrumb" aria-label="Breadcrumb">
+    <ol>
+      {breadcrumbs.map((b, i) => (
+        <li>
+          {i < breadcrumbs.length - 1
+            ? <><a href={b.url}>{b.name}</a><span aria-hidden="true"> › </span></>
+            : <span aria-current="page">{b.name}</span>}
+        </li>
+      ))}
+    </ol>
+  </nav>
+
+  <header class="qa-header">
+    <p class="qa-pillar">Behaviour · BEH·25</p>
+    <h1>Raven Feather Care and Moult: Plumage, Maintenance, and Annual Cycle</h1>
+  </header>
+
+  <section class="qa-snippet" aria-label="Direct answer">
+    <p><strong class="claim-science">[science]</strong> Ravens maintain their plumage through daily self-preening and allopreening with mates, and undergo a complete annual moult beginning after breeding. Their all-black plumage is structurally iridescent — microscopic barbule structures produce blue-violet and blue-green shifts across the feather surface, making plumage condition a visible signal of individual quality.</p>
+  </section>
+
+  <section class="qa-section">
+    <h2>Raven Feather Structure and Iridescence</h2>
+    <p><strong class="claim-science">[science]</strong> Raven feathers are uniformly black in base pigmentation from eumelanin — the same melanin pigment that produces dark colouration across many bird species. What makes raven plumage distinctive is its structural colouration: nanoscale surface structures in the feather barbules cause constructive light interference, producing iridescent colour shifts visible from different angles.<sup><a href="#src-1">1</a></sup></p>
+    <p>The iridescent colours observed in raven plumage include:</p>
+    <ul>
+      <li><strong>Blue-violet:</strong> throat hackles and upper body in strong light.</li>
+      <li><strong>Blue-green:</strong> wing coverts and back.</li>
+      <li><strong>Bronze/brown:</strong> sometimes visible at certain angles on worn feathers.</li>
+    </ul>
+    <p>This iridescence is not merely cosmetic — it is angle-dependent structural colour that may function as an honest signal of feather condition and health. Structurally coloured feathers degrade differently from uniformly pigmented ones, so their condition is a reliable indicator of feather age and maintenance.</p>
+  </section>
+
+  <section class="qa-section">
+    <h2>The Annual Moult</h2>
+    <p><strong class="claim-science">[science]</strong> Common ravens undergo a complete annual moult — replacing all primary, secondary, and tail flight feathers plus body feathers — once per year. This is energetically expensive and timed to avoid periods of maximum metabolic demand.<sup><a href="#src-2">2</a></sup></p>
+    <p>The moult schedule:</p>
+    <ul>
+      <li><strong>Timing:</strong> post-breeding, typically late summer through autumn (July–November in the Northern Hemisphere). Non-breeders may begin earlier; breeding birds delay until chick-rearing demands are past.</li>
+      <li><strong>Pattern:</strong> flight feathers are replaced sequentially from innermost primaries outward, so at any point only a few feathers are missing or pinfeathers (newly growing). This prevents significant loss of flight performance.</li>
+      <li><strong>Duration:</strong> complete moult takes several months. A bird that begins moulting in July may not complete primary replacement until October or November.</li>
+    </ul>
+    <p>During active moult, ravens may avoid sustained long-distance flights and territorial skirmishes that require peak aerial performance.</p>
+  </section>
+
+  <section class="qa-section">
+    <h2>Daily Feather Maintenance</h2>
+    <p><strong class="claim-science">[science]</strong> Outside of the moult period, ravens spend considerable time on feather maintenance behaviours:<sup><a href="#src-2">2</a></sup></p>
+    <ul>
+      <li><strong>Self-preening:</strong> using the bill to zip feather barbs together (re-interlocking the barbules of flight feathers), remove parasites, apply uropygial gland oil, and remove debris. Ravens preen at multiple points during the day, particularly after feeding, bathing, or roosting.</li>
+      <li><strong>Uropygial (preen) gland:</strong> ravens have a well-developed preen gland above the tail base. The oily secretion spread during preening waterproofs feathers, maintains flexibility, and may have anti-parasitic properties.</li>
+      <li><strong>Bathing:</strong> water bathing (in pools, streams, or rain) softens and cleans feathers, facilitating preening. Ravens may also engage in snow bathing and dust bathing.</li>
+      <li><strong>Sunning:</strong> spreading wings and body feathers in direct sun — a behaviour that may warm the bird, facilitate vitamin D synthesis, and cause feather parasites to become mobile and easier to remove.</li>
+    </ul>
+  </section>
+
+  <section class="qa-section">
+    <h2>Allopreening and Social Bonding</h2>
+    <p><strong class="claim-science">[science]</strong> Allopreening — mutual preening between individuals — is concentrated in bonded pairs and functions both in feather maintenance and pair-bond reinforcement. The head and neck are regions a bird cannot reach by self-preening, making allopreening genuinely functionally necessary, not purely social.<sup><a href="#src-2">2</a></sup></p>
+    <p>In ravens, allopreening frequency:</p>
+    <ul>
+      <li>Is highest between established pair partners.</li>
+      <li>Increases before and during the breeding season, when pair-bond strength is under greatest selection.</li>
+      <li>Occurs more between pairs with better breeding outcomes — suggesting it is an indicator of relationship quality, not merely a maintenance behaviour.</li>
+    </ul>
+  </section>
+
+  <section class="qa-section">
+    <h2>Related Pages</h2>
+    <ul>
+      <li><a href="/behaviour/raven-bathing-and-preening/">Raven bathing and preening</a></li>
+      <li><a href="/questions/what-does-a-raven-look-like/">What does a raven look like?</a></li>
+      <li><a href="/behaviour/raven-pair-bonds/">Raven pair bonds</a></li>
+      <li><a href="/compare/raven-vs-crow/">Raven vs crow</a></li>
+    </ul>
+  </section>
+
+  <section class="qa-faq qa-section" aria-labelledby="faq-h2">
+    <h2 id="faq-h2">Frequently Asked Questions</h2>
+    {faq.map(item => (
+      <details class="qa-faq-item">
+        <summary class="qa-faq-q">{item.q}</summary>
+        <p class="qa-faq-a">{item.a}</p>
+      </details>
+    ))}
+  </section>
+
+  <section class="qa-sources qa-section" aria-labelledby="src-h2">
+    <h2 id="src-h2">Sources</h2>
+    <ol class="qa-src-list">
+      <li id="src-1">Doucet, S.M. & Meadows, M.G. (2009). Iridescence: a functional perspective. <em>Journal of the Royal Society Interface</em>, 6(Suppl 2), S115–S132. — structural colouration in bird feathers, iridescence mechanisms, corvid plumage.</li>
+      <li id="src-2">Boarman, W.I. & Heinrich, B. (1999). Common Raven (<em>Corvus corax</em>). In Poole, A. (ed.), <em>The Birds of North America</em>, No. 476. Cornell Lab of Ornithology. — moult schedule, feather maintenance, allopreening, uropygial gland.</li>
+    </ol>
+    <p class="qa-claim-note"><strong class="claim-science">[science]</strong> peer-reviewed data</p>
+  </section>
+
+</article>
+</BaseLayout>
+
+<style>
+  .qa-page { max-width: 820px; margin: 0 auto; padding: 2rem 1.25rem 4rem; color: var(--iron-ink, #e8e4d8); font-family: 'Inter', sans-serif; line-height: 1.72; }
+  .qa-breadcrumb ol { display: flex; flex-wrap: wrap; gap: .25rem; list-style: none; padding: 0; margin: 0 0 2rem; font-size: .8rem; color: var(--ink-soft, #8a8070); }
+  .qa-breadcrumb a { color: var(--gold-500, #d4ae5a); text-decoration: none; }
+  .qa-pillar { font-size: .72rem; letter-spacing: .12em; text-transform: uppercase; color: var(--gold-500, #d4ae5a); margin: 0 0 .4rem; }
+  .qa-page h1 { font-family: 'Cormorant Garamond', serif; font-size: clamp(2rem, 5vw, 3rem); font-weight: 700; color: #fff; margin: 0 0 2rem; line-height: 1.1; }
+  .qa-snippet { background: rgba(212,174,90,.08); border-left: 3px solid var(--gold-500, #d4ae5a); border-radius: 0 6px 6px 0; padding: 1rem 1.25rem; margin-bottom: 2.5rem; font-size: 1.03rem; }
+  .qa-section { margin-bottom: 2.5rem; }
+  .qa-section h2 { font-family: 'Cormorant Garamond', serif; font-size: 1.5rem; font-weight: 600; color: #fff; margin: 0 0 .9rem; border-bottom: 1px solid rgba(212,174,90,.2); padding-bottom: .4rem; }
+  .qa-section p { margin: 0 0 1rem; font-size: .97rem; }
+  .qa-section ul { padding-left: 1.25rem; margin: 0 0 1rem; }
+  .qa-section li { margin-bottom: .4rem; font-size: .95rem; }
+  .claim-science { color: #7ab9e0; font-style: normal; font-size: .78rem; }
+  a[href] { color: var(--gold-500, #d4ae5a); }
+  .qa-faq-item { border-bottom: 1px solid rgba(255,255,255,.07); }
+  .qa-faq-q { cursor: pointer; padding: .9rem 0; font-size: .97rem; font-weight: 500; color: #fff; list-style: none; }
+  .qa-faq-q::before { content: '+ '; color: var(--gold-500, #d4ae5a); font-weight: 700; }
+  details[open] .qa-faq-q::before { content: '− '; }
+  .qa-faq-a { margin: 0 0 1rem; line-height: 1.7; font-size: .93rem; color: var(--ink-soft, #c8c0b0); }
+  .qa-src-list { padding-left: 1.25rem; margin: 0 0 1rem; }
+  .qa-src-list li { margin-bottom: .6rem; font-size: .82rem; color: var(--ink-soft, #8a8070); line-height: 1.6; }
+  .qa-claim-note { font-size: .78rem; color: var(--ink-soft, #605848); border-top: 1px solid rgba(255,255,255,.06); padding-top: .75rem; }
+</style>

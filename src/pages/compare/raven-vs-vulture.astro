@@ -1,0 +1,158 @@
+---
+/**
+ * Compare — Raven vs Vulture
+ * Primary keyword: raven vs vulture
+ * Secondary: difference between raven and vulture, raven vs buzzard, do ravens and vultures compete
+ */
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const title       = 'Raven vs Vulture: Identification, Size, and Ecological Roles';
+const description = 'Ravens and vultures share carcasses — but they are very different birds. This comparison covers how to tell a raven from a vulture in flight, their size differences, ecological roles, and how they interact at a carcass.';
+const path        = '/compare/raven-vs-vulture/';
+
+const breadcrumbs = [
+  { name: 'Home',    url: '/' },
+  { name: 'Compare', url: '/compare/' },
+  { name: 'Raven vs Vulture', url: path },
+];
+
+const faq = [
+  { q: 'How do you tell a raven from a vulture in flight?', a: 'Ravens and vultures are both large black soaring birds, which can cause confusion at distance — but they are very different on closer inspection. Key differences in flight: Turkey Vultures (North America) soar with wings in a V-shape (dihedral), rocking side to side; ravens soar with flat wings. Vultures have tiny, naked heads (usually red in Turkey Vulture); ravens have a large head with a heavy bill clearly visible in silhouette. Vultures are substantially larger (Turkey Vulture wingspan 170–183 cm vs raven\'s 115–150 cm). In Europe, Eurasian griffon vultures dwarf ravens; Black Vultures are more similarly sized but show very different wing shape and proportions.' },
+  { q: 'Do ravens compete with vultures at carcasses?', a: 'Yes — ravens and vultures are both scavengers and regularly compete at large carcasses. At most carcasses the outcome depends on relative numbers: a large group of griffon vultures or turkey vultures will displace ravens; solitary or small groups of vultures may be driven away by ravens mobbing in groups. Ravens arrive at carcasses faster than most vultures (better distributed visual scanning; following other animals to carcasses) and may consume significant portions before vultures arrive. Once vultures arrive in numbers, ravens defer and pick at the edges.' },
+  { q: 'Are ravens related to vultures?', a: 'No — ravens and vultures are not closely related. Ravens are passerine birds (order Passeriformes), in the family Corvidae. New World vultures (Turkey Vulture, Condors) are in the order Accipitriformes or Cathartiformes (closely related to storks — their resemblance to Old World vultures is convergent evolution). Old World vultures (griffon, bearded, black vultures of Europe/Africa/Asia) are in the order Accipitriformes (with hawks and eagles). Ravens and vultures share black plumage and scavenging behaviour as convergent adaptations, not ancestry.' },
+];
+---
+
+<BaseLayout title={title} description={description} path={path} ogType="article"
+  datePublished="2026-11-08" dateModified="2026-11-08"
+  breadcrumbs={breadcrumbs} faq={faq} pageType="Article">
+
+<article class="qa-page">
+
+  <nav class="qa-breadcrumb" aria-label="Breadcrumb">
+    <ol>
+      {breadcrumbs.map((b, i) => (
+        <li>
+          {i < breadcrumbs.length - 1
+            ? <><a href={b.url}>{b.name}</a><span aria-hidden="true"> › </span></>
+            : <span aria-current="page">{b.name}</span>}
+        </li>
+      ))}
+    </ol>
+  </nav>
+
+  <header class="qa-header">
+    <p class="qa-pillar">Compare</p>
+    <h1>Raven vs Vulture: Identification, Size, and Ecological Roles</h1>
+  </header>
+
+  <section class="qa-snippet" aria-label="Direct answer">
+    <p><strong class="claim-science">[science]</strong> Ravens and vultures are both large dark soaring birds that scavenge carcasses — but they are unrelated and easily distinguished at any reasonable viewing distance. Key differences: vultures soar with wings in a dihedral (V-shape), have naked heads and much larger wingspans; ravens soar with flat wings, have a large-billed head clearly visible in silhouette, and are significantly smaller than most vultures.</p>
+  </section>
+
+  <section class="qa-section">
+    <h2>At a Glance</h2>
+    <table class="cmp-table">
+      <thead>
+        <tr><th>Feature</th><th>Common Raven</th><th>Turkey Vulture (NA)</th><th>Griffon Vulture (EU/AF)</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Weight</td><td>700–1,600 g</td><td>1,900–2,250 g</td><td>7,000–11,000 g</td></tr>
+        <tr><td>Wingspan</td><td>115–150 cm</td><td>170–183 cm</td><td>230–280 cm</td></tr>
+        <tr><td>Head in flight</td><td>Large, heavy billed</td><td>Tiny, naked (red)</td><td>Tiny, pale-feathered</td></tr>
+        <tr><td>Wing posture</td><td>Flat, slightly bowed</td><td>Strong V (dihedral)</td><td>Flat to slight dihedral</td></tr>
+        <tr><td>Tail shape</td><td>Wedge</td><td>Long, rounded</td><td>Short, rounded</td></tr>
+        <tr><td>Colour</td><td>All glossy black</td><td>Blackish-brown; red head</td><td>Brown and buff; pale head</td></tr>
+        <tr><td>Call</td><td>Deep "kronk"</td><td>Mostly silent; hisses</td><td>Hisses, grunts</td></tr>
+        <tr><td>Finds food by</td><td>Vision; following others</td><td>Smell + vision</td><td>Vision; following others</td></tr>
+        <tr><td>Order</td><td>Passeriformes</td><td>Accipitriformes/Cathartiformes</td><td>Accipitriformes</td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section class="qa-section">
+    <h2>Flight Identification</h2>
+    <p><strong class="claim-science">[science]</strong> In flight, the distinction between ravens and Turkey Vultures (the most commonly confused species in North America) is reliable at good distances:<sup><a href="#src-1">1</a></sup></p>
+    <ul>
+      <li><strong>Wing angle:</strong> Turkey Vultures hold their wings in a strong dihedral (V-angle), rocking and tilting in thermals. Ravens soar with wings held flat or very slightly below horizontal, without the characteristic rocking.</li>
+      <li><strong>Head projection:</strong> ravens show a large, prominent head and heavy bill in silhouette. Turkey Vultures appear almost headless — the tiny naked head barely projects beyond the leading edge of the wing.</li>
+      <li><strong>Tail:</strong> raven tail is distinctly wedge-shaped (diamond in a full fan); Turkey Vulture tail is long and rounded.</li>
+      <li><strong>Size:</strong> Turkey Vultures are noticeably larger than ravens — a comparison bird (hawk, crow) makes this clear in the same viewfield.</li>
+    </ul>
+    <p>In Europe and Africa, Black Vultures (<em>Aegypius monachus</em>) and Griffon Vultures (<em>Gyps fulvus</em>) are even larger and differ dramatically from ravens in proportions.</p>
+  </section>
+
+  <section class="qa-section">
+    <h2>Ecological Relationship: Sharing Carcasses</h2>
+    <p><strong class="claim-science">[science]</strong> Ravens and vultures often share the same carcasses and have complex competitive relationships:<sup><a href="#src-1">1</a></sup></p>
+    <ul>
+      <li>Ravens locate carcasses faster — through extensive visual scanning while soaring, following predators and other ravens, and monitoring behavioural cues from other animals. Vultures in some regions locate carcasses partly by watching ravens and other scavengers descend.</li>
+      <li>Ravens can open the skin of small to medium carcasses with their powerful bills; vultures (especially smaller species) wait at large carcasses until a larger vulture or predator opens the hide.</li>
+      <li>At large carcasses, once vultures arrive in numbers they displace ravens. Ravens then hover around the edges, darting in to steal pieces.</li>
+      <li>Ravens co-exist alongside bearded vultures (lammergeiers) in mountain environments (Alps, Himalayas) where they exploit different portions of carcasses — ravens take flesh, bearded vultures drop bones from height to access marrow.</li>
+    </ul>
+  </section>
+
+  <section class="qa-section">
+    <h2>Sensory Differences</h2>
+    <p><strong class="claim-science">[science]</strong> An important ecological difference is in how ravens and New World vultures find food. Turkey Vultures are unusual among birds in using smell extensively — they have large olfactory bulbs and can detect gases from decomposing carcasses from kilometres away. Old World vultures rely primarily on vision. Ravens rely on vision, learning, and social information (following other ravens and predators). This sensory difference means ravens and New World vultures occupy different foraging niches even when exploiting the same resource.<sup><a href="#src-1">1</a></sup></p>
+  </section>
+
+  <section class="qa-section">
+    <h2>Related Pages</h2>
+    <ul>
+      <li><a href="/compare/raven-vs-crow/">Raven vs crow</a></li>
+      <li><a href="/behaviour/raven-scavenging-strategies/">Raven scavenging strategies</a></li>
+      <li><a href="/behaviour/raven-and-wolves/">Ravens and wolves</a></li>
+      <li><a href="/questions/what-do-ravens-eat/">What do ravens eat?</a></li>
+    </ul>
+  </section>
+
+  <section class="qa-faq qa-section" aria-labelledby="faq-h2">
+    <h2 id="faq-h2">Frequently Asked Questions</h2>
+    {faq.map(item => (
+      <details class="qa-faq-item">
+        <summary class="qa-faq-q">{item.q}</summary>
+        <p class="qa-faq-a">{item.a}</p>
+      </details>
+    ))}
+  </section>
+
+  <section class="qa-sources qa-section" aria-labelledby="src-h2">
+    <h2 id="src-h2">Sources</h2>
+    <ol class="qa-src-list">
+      <li id="src-1">Boarman, W.I. & Heinrich, B. (1999). Common Raven (<em>Corvus corax</em>). In Poole, A. (ed.), <em>The Birds of North America</em>, No. 476. Cornell Lab of Ornithology. — raven-vulture carcass interactions, food detection, flight identification.</li>
+    </ol>
+    <p class="qa-claim-note"><strong class="claim-science">[science]</strong> peer-reviewed or field-guide data</p>
+  </section>
+
+</article>
+</BaseLayout>
+
+<style>
+  .qa-page { max-width: 820px; margin: 0 auto; padding: 2rem 1.25rem 4rem; color: var(--iron-ink, #e8e4d8); font-family: 'Inter', sans-serif; line-height: 1.72; }
+  .qa-breadcrumb ol { display: flex; flex-wrap: wrap; gap: .25rem; list-style: none; padding: 0; margin: 0 0 2rem; font-size: .8rem; color: var(--ink-soft, #8a8070); }
+  .qa-breadcrumb a { color: var(--gold-500, #d4ae5a); text-decoration: none; }
+  .qa-pillar { font-size: .72rem; letter-spacing: .12em; text-transform: uppercase; color: var(--gold-500, #d4ae5a); margin: 0 0 .4rem; }
+  .qa-page h1 { font-family: 'Cormorant Garamond', serif; font-size: clamp(2rem, 5vw, 3rem); font-weight: 700; color: #fff; margin: 0 0 2rem; line-height: 1.1; }
+  .qa-snippet { background: rgba(212,174,90,.08); border-left: 3px solid var(--gold-500, #d4ae5a); border-radius: 0 6px 6px 0; padding: 1rem 1.25rem; margin-bottom: 2.5rem; font-size: 1.03rem; }
+  .qa-section { margin-bottom: 2.5rem; }
+  .qa-section h2 { font-family: 'Cormorant Garamond', serif; font-size: 1.5rem; font-weight: 600; color: #fff; margin: 0 0 .9rem; border-bottom: 1px solid rgba(212,174,90,.2); padding-bottom: .4rem; }
+  .qa-section p { margin: 0 0 1rem; font-size: .97rem; }
+  .qa-section ul { padding-left: 1.25rem; margin: 0 0 1rem; }
+  .qa-section li { margin-bottom: .4rem; font-size: .95rem; }
+  .cmp-table { width: 100%; border-collapse: collapse; font-size: .88rem; margin-bottom: 1rem; }
+  .cmp-table th { background: rgba(212,174,90,.12); color: #fff; padding: .5rem .75rem; text-align: left; border-bottom: 1px solid rgba(212,174,90,.3); }
+  .cmp-table td { padding: .45rem .75rem; border-bottom: 1px solid rgba(255,255,255,.05); vertical-align: top; }
+  .cmp-table tr:nth-child(even) td { background: rgba(255,255,255,.02); }
+  .claim-science { color: #7ab9e0; font-style: normal; font-size: .78rem; }
+  a[href] { color: var(--gold-500, #d4ae5a); }
+  .qa-faq-item { border-bottom: 1px solid rgba(255,255,255,.07); }
+  .qa-faq-q { cursor: pointer; padding: .9rem 0; font-size: .97rem; font-weight: 500; color: #fff; list-style: none; }
+  .qa-faq-q::before { content: '+ '; color: var(--gold-500, #d4ae5a); font-weight: 700; }
+  details[open] .qa-faq-q::before { content: '− '; }
+  .qa-faq-a { margin: 0 0 1rem; line-height: 1.7; font-size: .93rem; color: var(--ink-soft, #c8c0b0); }
+  .qa-src-list { padding-left: 1.25rem; margin: 0 0 1rem; }
+  .qa-src-list li { margin-bottom: .6rem; font-size: .82rem; color: var(--ink-soft, #8a8070); line-height: 1.6; }
+  .qa-claim-note { font-size: .78rem; color: var(--ink-soft, #605848); border-top: 1px solid rgba(255,255,255,.06); padding-top: .75rem; }
+</style>

@@ -1,0 +1,140 @@
+---
+/**
+ * Q&A — How do ravens learn?
+ * Primary keyword: how do ravens learn
+ * Secondary: raven learning methods, raven social learning, raven observational learning
+ */
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const title       = 'How Do Ravens Learn? Social Learning, Insight, and Experience';
+const description = 'Ravens learn through multiple mechanisms — observation of others, individual trial-and-error, insight, and imitation. This page examines the science of raven learning, including social transmission, observational learning, and what makes raven intelligence distinctive.';
+const path        = '/questions/how-do-ravens-learn/';
+
+const breadcrumbs = [
+  { name: 'Home',      url: '/' },
+  { name: 'Questions', url: '/questions/' },
+  { name: 'How Do Ravens Learn?', url: path },
+];
+
+const faq = [
+  { q: 'Do ravens learn from watching other ravens?', a: 'Yes — ravens engage in social learning (learning by observing others). They learn which foods are safe to eat by watching conspecifics; they learn cache locations by watching others cache; they learn about predators and threats from alarm responses of other ravens; and they can acquire novel techniques (such as string-pulling or container-opening) by observing successful individuals. Social learning is faster and less costly than individual trial-and-error and is a primary mechanism for information transmission in long-lived, socially complex animals like ravens.' },
+  { q: 'Can ravens imitate?', a: 'Ravens can imitate sounds (vocal mimicry) with high fidelity — reproducing bird calls, human speech, mechanical sounds, and other environmental sounds. Whether they can imitate actions (copying another individual\'s motor behaviour on first observation) is less clear. Some studies suggest corvids can imitate novel actions in controlled conditions, but the evidence is less robust than for social learning through observation. Ravens appear to learn what to do (which locations to visit, which objects to manipulate) more readily through observation than how to do it (the specific motor sequences).' },
+  { q: 'How long does it take a raven to learn something?', a: 'The rate of learning in ravens varies by task type. For simple conditioning (learning a specific stimulus predicts food), ravens learn in a small number of trials — often fewer than 10. For complex multi-step tasks (like string-pulling or tool use), insight-based solving can occur on the first attempt. Social learning — acquiring information from watching another raven — can transfer in a single observation. Memory retention is long: ravens retain learned associations for months to years, with some evidence of retention across the bird\'s entire adult life.' },
+];
+---
+
+<BaseLayout title={title} description={description} path={path} ogType="article"
+  datePublished="2026-11-08" dateModified="2026-11-08"
+  breadcrumbs={breadcrumbs} faq={faq} pageType="Article">
+
+<article class="qa-page">
+
+  <nav class="qa-breadcrumb" aria-label="Breadcrumb">
+    <ol>
+      {breadcrumbs.map((b, i) => (
+        <li>
+          {i < breadcrumbs.length - 1
+            ? <><a href={b.url}>{b.name}</a><span aria-hidden="true"> › </span></>
+            : <span aria-current="page">{b.name}</span>}
+        </li>
+      ))}
+    </ol>
+  </nav>
+
+  <header class="qa-header">
+    <p class="qa-pillar">Question · Intelligence</p>
+    <h1>How Do Ravens Learn? Social Learning, Insight, and Experience</h1>
+  </header>
+
+  <section class="qa-snippet" aria-label="Direct answer">
+    <p><strong class="claim-science">[science]</strong> Ravens learn through multiple mechanisms: individual trial-and-error, insight (solving novel problems without extended learning), observational social learning (watching others), and potentially imitation. Social transmission of information is particularly well-developed — ravens learn food locations, threat identities, and social conventions by watching conspecifics. Their learning is fast, flexible, and persistent across years.</p>
+  </section>
+
+  <section class="qa-section">
+    <h2>Individual Trial-and-Error Learning</h2>
+    <p><strong class="claim-science">[science]</strong> Like all animals, ravens learn through direct experience — approaching stimuli that predict reward, avoiding those that predict punishment or loss. Ravens condition quickly to environmental regularities: they learn that specific perches reliably provide food, that specific humans are threatening, that specific alarm calls signal specific danger types. Trial-and-error learning is the substrate on which more complex cognitive abilities operate.<sup><a href="#src-1">1</a></sup></p>
+    <p>Ravens are also notable for their neophobia — wariness toward novel objects — in contexts outside food. This caution slows initial learning about new items but reduces risk. Once a raven has safely explored a novel object or food, it incorporates the information rapidly.</p>
+  </section>
+
+  <section class="qa-section">
+    <h2>Social Learning and Observational Learning</h2>
+    <p><strong class="claim-science">[science]</strong> Social learning — acquiring information through observation of others' behaviour — is well-documented in ravens. Key examples:<sup><a href="#src-1">1</a></sup><sup><a href="#src-2">2</a></sup></p>
+    <ul>
+      <li><strong>Food location learning:</strong> observer ravens watch where successful foragers land to feed and visit those locations. This information transfer happens within a single observation event in some studies.</li>
+      <li><strong>Predator/threat learning:</strong> naive ravens respond to alarm calls from experienced individuals and retain this response without directly experiencing the threat. The cultural transmission of "dangerous human face" information in crows (Marzluff et al., 2010) — naive birds learning to mob a specific face from watching others — is the most striking documented example.</li>
+      <li><strong>Cache raiding:</strong> Bugnyar demonstrated that ravens learn to raid caches by watching others cache and retrieve. Observing another raven's cache event is sufficient to identify the location, even without rehearsal.</li>
+      <li><strong>Technique acquisition:</strong> observer ravens in Heinrich's string-pulling studies who watched successful string-pullers were more likely to attempt and succeed at the task themselves.</li>
+    </ul>
+  </section>
+
+  <section class="qa-section">
+    <h2>Insight Learning</h2>
+    <p><strong class="claim-science">[science]</strong> Insight — solving problems without extended trial-and-error, through apparent internal representation of the problem — is documented in ravens in classic paradigms (string-pulling, trap-tube) and in Kabadayi & Osvath's 2017 planning study. Some ravens solve novel multi-step problems on first exposure, suggesting they model the problem mentally before acting.<sup><a href="#src-2">2</a></sup></p>
+    <p>The developmental trajectory of raven intelligence is relevant: young ravens (first year) show less flexible problem-solving than adults. Adult ravens in Heinrich's studies were consistently better than juveniles at novel food-access problems. This improvement with age suggests learning contributes to cognitive flexibility, not just innate capacity.</p>
+  </section>
+
+  <section class="qa-section">
+    <h2>Vocal Learning</h2>
+    <p><strong class="claim-science">[science]</strong> Ravens are vocal learners — they acquire new calls throughout life by hearing and imitating sounds in their environment. This includes:<sup><a href="#src-1">1</a></sup></p>
+    <ul>
+      <li>Acquiring regional dialects within the raven population (similar calls shared among individuals in the same geographic area, different from other regions).</li>
+      <li>Mimicry of other species' calls — including hawk calls (possibly used to alarm conspecifics), human speech, and mechanical sounds.</li>
+      <li>Learning specific individual calls of pair partners — ravens in bonded pairs share distinct calls that differ from generic population vocalizations.</li>
+    </ul>
+  </section>
+
+  <section class="qa-section">
+    <h2>Related Pages</h2>
+    <ul>
+      <li><a href="/behaviour/raven-insight-problem-solving/">Raven problem solving</a></li>
+      <li><a href="/behaviour/raven-object-permanence-and-memory/">Raven memory</a></li>
+      <li><a href="/questions/how-smart-are-ravens/">How smart are ravens?</a></li>
+      <li><a href="/behaviour/raven-mimicry-and-talking/">Raven mimicry and talking</a></li>
+    </ul>
+  </section>
+
+  <section class="qa-faq qa-section" aria-labelledby="faq-h2">
+    <h2 id="faq-h2">Frequently Asked Questions</h2>
+    {faq.map(item => (
+      <details class="qa-faq-item">
+        <summary class="qa-faq-q">{item.q}</summary>
+        <p class="qa-faq-a">{item.a}</p>
+      </details>
+    ))}
+  </section>
+
+  <section class="qa-sources qa-section" aria-labelledby="src-h2">
+    <h2 id="src-h2">Sources</h2>
+    <ol class="qa-src-list">
+      <li id="src-1">Boarman, W.I. & Heinrich, B. (1999). Common Raven (<em>Corvus corax</em>). In Poole, A. (ed.), <em>The Birds of North America</em>, No. 476. Cornell Lab of Ornithology. — learning, social learning, vocal learning, neophobia.</li>
+      <li id="src-2">Kabadayi, C. & Osvath, M. (2017). Ravens parallel great apes in flexible planning for tool-use and barter. <em>Science</em>, 357(6347), 202–204. — insight, prospective learning, planning in ravens.</li>
+    </ol>
+    <p class="qa-claim-note"><strong class="claim-science">[science]</strong> peer-reviewed data</p>
+  </section>
+
+</article>
+</BaseLayout>
+
+<style>
+  .qa-page { max-width: 820px; margin: 0 auto; padding: 2rem 1.25rem 4rem; color: var(--iron-ink, #e8e4d8); font-family: 'Inter', sans-serif; line-height: 1.72; }
+  .qa-breadcrumb ol { display: flex; flex-wrap: wrap; gap: .25rem; list-style: none; padding: 0; margin: 0 0 2rem; font-size: .8rem; color: var(--ink-soft, #8a8070); }
+  .qa-breadcrumb a { color: var(--gold-500, #d4ae5a); text-decoration: none; }
+  .qa-pillar { font-size: .72rem; letter-spacing: .12em; text-transform: uppercase; color: var(--gold-500, #d4ae5a); margin: 0 0 .4rem; }
+  .qa-page h1 { font-family: 'Cormorant Garamond', serif; font-size: clamp(2rem, 5vw, 3rem); font-weight: 700; color: #fff; margin: 0 0 2rem; line-height: 1.1; }
+  .qa-snippet { background: rgba(212,174,90,.08); border-left: 3px solid var(--gold-500, #d4ae5a); border-radius: 0 6px 6px 0; padding: 1rem 1.25rem; margin-bottom: 2.5rem; font-size: 1.03rem; }
+  .qa-section { margin-bottom: 2.5rem; }
+  .qa-section h2 { font-family: 'Cormorant Garamond', serif; font-size: 1.5rem; font-weight: 600; color: #fff; margin: 0 0 .9rem; border-bottom: 1px solid rgba(212,174,90,.2); padding-bottom: .4rem; }
+  .qa-section p { margin: 0 0 1rem; font-size: .97rem; }
+  .qa-section ul { padding-left: 1.25rem; margin: 0 0 1rem; }
+  .qa-section li { margin-bottom: .4rem; font-size: .95rem; }
+  .claim-science { color: #7ab9e0; font-style: normal; font-size: .78rem; }
+  a[href] { color: var(--gold-500, #d4ae5a); }
+  .qa-faq-item { border-bottom: 1px solid rgba(255,255,255,.07); }
+  .qa-faq-q { cursor: pointer; padding: .9rem 0; font-size: .97rem; font-weight: 500; color: #fff; list-style: none; }
+  .qa-faq-q::before { content: '+ '; color: var(--gold-500, #d4ae5a); font-weight: 700; }
+  details[open] .qa-faq-q::before { content: '− '; }
+  .qa-faq-a { margin: 0 0 1rem; line-height: 1.7; font-size: .93rem; color: var(--ink-soft, #c8c0b0); }
+  .qa-src-list { padding-left: 1.25rem; margin: 0 0 1rem; }
+  .qa-src-list li { margin-bottom: .6rem; font-size: .82rem; color: var(--ink-soft, #8a8070); line-height: 1.6; }
+  .qa-claim-note { font-size: .78rem; color: var(--ink-soft, #605848); border-top: 1px solid rgba(255,255,255,.06); padding-top: .75rem; }
+</style>

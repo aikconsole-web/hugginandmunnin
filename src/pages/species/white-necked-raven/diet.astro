@@ -1,0 +1,131 @@
+---
+/**
+ * Species sub-page — White-necked Raven diet
+ * SPC·07d
+ * Primary keyword: white-necked raven diet
+ * Secondary: what does a white-necked raven eat, white-necked raven food
+ */
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+
+const title       = 'White-necked Raven Diet: What This Species Eats';
+const description = 'The White-necked Raven of eastern and southern Africa is a broad omnivore specialising in carrion, invertebrates, and food from human settlements. Its powerful bill opens large carcasses and hard food items. Full diet breakdown.';
+const path        = '/species/white-necked-raven/diet/';
+
+const breadcrumbs = [
+  { name: 'Home',               url: '/' },
+  { name: 'Species',            url: '/species/' },
+  { name: 'White-necked Raven', url: '/species/white-necked-raven/' },
+  { name: 'Diet',               url: path },
+];
+
+const faq = [
+  { q: 'What does the White-necked Raven eat?', a: 'The White-necked Raven eats carrion (a major component), invertebrates, grain and seeds, fruit, small vertebrates, eggs, and human food waste. Its large and strongly arched bill gives it access to large carcasses and hard food items. The species is highly opportunistic and commonly forages around human settlements, agricultural land, and cliffs in eastern and southern Africa.' },
+  { q: 'Is the White-necked Raven a scavenger?', a: 'Primarily yes. Carrion — dead livestock, roadkill, and large wildlife carcasses — forms a major part of the White-necked Raven\'s diet. The species is frequently observed at carcasses across its African mountain range, often alongside vultures and other scavengers, though it arrives faster at fresh kills due to its mobile, wide-ranging foraging. It is also an active hunter of invertebrates and small vertebrates.' },
+  { q: 'Where does the White-necked Raven find food?', a: 'The White-necked Raven forages across a wide range of habitats including mountain cliffs, highland grassland, agricultural land, and urban and peri-urban areas. Villages and towns in highland East Africa and South Africa are important feeding areas — the species exploits rubbish, food waste, and market discards. It also forages along roads for roadkill.' },
+];
+---
+
+<BaseLayout title={title} description={description} path={path} ogType="article"
+  datePublished="2026-11-07" dateModified="2026-11-07"
+  breadcrumbs={breadcrumbs} faq={faq} pageType="Article">
+
+<article class="qa-page">
+
+  <nav class="qa-breadcrumb" aria-label="Breadcrumb">
+    <ol>
+      {breadcrumbs.map((b, i) => (
+        <li>
+          {i < breadcrumbs.length - 1
+            ? <><a href={b.url}>{b.name}</a><span aria-hidden="true"> › </span></>
+            : <span aria-current="page">{b.name}</span>}
+        </li>
+      ))}
+    </ol>
+  </nav>
+
+  <header class="qa-header">
+    <p class="qa-pillar">Species Sub-page · SPC·07d</p>
+    <h1>White-necked Raven Diet: What This Species Eats</h1>
+  </header>
+
+  <section class="qa-snippet" aria-label="Direct answer">
+    <p><strong class="claim-science">[science]</strong> The White-necked Raven (<em>Corvus albicollis</em>) is a broad omnivore. Carrion — dead livestock and wildlife — is a primary food source, accessed via a massively arched bill that ranks among the most powerful of any corvid. The diet also includes invertebrates, grain, fruit, small vertebrates, eggs, and human food waste from settlements across the mountains of eastern and southern Africa.</p>
+  </section>
+
+  <section class="qa-section">
+    <h2>Primary Food Items</h2>
+    <p><strong class="claim-science">[science]</strong> Based on species accounts in the <em>Handbook of the Birds of the World</em> (HBW) and published southern and East African ornithological literature:<sup><a href="#src-1">1</a></sup></p>
+    <ul>
+      <li><strong>Carrion:</strong> dead livestock (cattle, sheep, goats), roadkill, and wildlife carcasses — the White-necked Raven is a major scavenger across its highland range. It attends carcasses rapidly and can open large carcasses with its powerful bill.</li>
+      <li><strong>Invertebrates:</strong> beetles, grasshoppers, caterpillars, termites — ground-foraging, particularly on grassland plateaus and after rain when invertebrates are exposed.</li>
+      <li><strong>Grain and seeds:</strong> cereal grain from agricultural fields; foraging on recently ploughed land documented.</li>
+      <li><strong>Fruit:</strong> various wild fruits and figs taken opportunistically.</li>
+      <li><strong>Small vertebrates:</strong> lizards, mice, nestlings, and eggs. Taken opportunistically rather than as a dietary staple.</li>
+      <li><strong>Eggs:</strong> eggs of ground-nesting birds, particularly from cliff-associated nesting colonies in the same habitat.</li>
+      <li><strong>Human food waste:</strong> markets, rubbish tips, abattoir waste — particularly important in highland towns in Kenya, Tanzania, Ethiopia, and South Africa.</li>
+    </ul>
+  </section>
+
+  <section class="qa-section">
+    <h2>Bill Morphology and Feeding</h2>
+    <p><strong class="claim-science">[science]</strong> The White-necked Raven's bill is exceptionally large for its body size — massive, deeply arched from base to tip, and tipped with white. This bill provides high mechanical advantage for prying and ripping at carcasses, cracking hard food items, and manipulating large prey. It is second only to the Thick-billed Raven (<em>Corvus crassirostris</em>) in corvid bill robustness, and gives the species access to food unavailable to co-occurring smaller corvids such as the Pied Crow (<em>Corvus albus</em>).<sup><a href="#src-1">1</a></sup></p>
+  </section>
+
+  <section class="qa-section">
+    <h2>Foraging Behaviour</h2>
+    <p><strong class="claim-science">[science]</strong> White-necked Ravens are primarily ground-foragers and cliff-associated birds. They soar widely from cliff roosts and nest sites to locate carrion over large areas — an effective search strategy in the highland terrain they favour. Pairs typically forage together; outside the breeding season, loose groups may form at rich food sources such as abattoirs or large carcasses. The species is bold and dominant at food sources relative to smaller corvids.<sup><a href="#src-1">1</a></sup></p>
+  </section>
+
+  <section class="qa-section">
+    <h2>Related Pages</h2>
+    <ul>
+      <li><a href="/species/white-necked-raven/">White-necked Raven — species hub</a></li>
+      <li><a href="/compare/white-necked-raven-vs-pied-crow/">White-necked Raven vs Pied Crow</a></li>
+      <li><a href="/questions/what-do-ravens-eat/">What do ravens eat?</a></li>
+    </ul>
+  </section>
+
+  <section class="qa-faq qa-section" aria-labelledby="faq-h2">
+    <h2 id="faq-h2">Frequently Asked Questions</h2>
+    {faq.map(item => (
+      <details class="qa-faq-item">
+        <summary class="qa-faq-q">{item.q}</summary>
+        <p class="qa-faq-a">{item.a}</p>
+      </details>
+    ))}
+  </section>
+
+  <section class="qa-sources qa-section" aria-labelledby="src-h2">
+    <h2 id="src-h2">Sources</h2>
+    <ol class="qa-src-list">
+      <li id="src-1">del Hoyo, J. et al. (eds., 2009). <em>Handbook of the Birds of the World</em>, vol. 14. Lynx Edicions. — White-necked Raven species account; diet, bill morphology, foraging ecology.</li>
+    </ol>
+    <p class="qa-claim-note"><strong class="claim-science">[science]</strong> peer-reviewed study or field-guide data</p>
+  </section>
+
+</article>
+</BaseLayout>
+
+<style>
+  .qa-page { max-width: 820px; margin: 0 auto; padding: 2rem 1.25rem 4rem; color: var(--iron-ink, #e8e4d8); font-family: 'Inter', sans-serif; line-height: 1.72; }
+  .qa-breadcrumb ol { display: flex; flex-wrap: wrap; gap: .25rem; list-style: none; padding: 0; margin: 0 0 2rem; font-size: .8rem; color: var(--ink-soft, #8a8070); }
+  .qa-breadcrumb a { color: var(--gold-500, #d4ae5a); text-decoration: none; }
+  .qa-pillar { font-size: .72rem; letter-spacing: .12em; text-transform: uppercase; color: var(--gold-500, #d4ae5a); margin: 0 0 .4rem; }
+  .qa-page h1 { font-family: 'Cormorant Garamond', serif; font-size: clamp(2rem, 5vw, 3rem); font-weight: 700; color: #fff; margin: 0 0 2rem; line-height: 1.1; }
+  .qa-snippet { background: rgba(212,174,90,.08); border-left: 3px solid var(--gold-500, #d4ae5a); border-radius: 0 6px 6px 0; padding: 1rem 1.25rem; margin-bottom: 2.5rem; font-size: 1.03rem; }
+  .qa-section { margin-bottom: 2.5rem; }
+  .qa-section h2 { font-family: 'Cormorant Garamond', serif; font-size: 1.5rem; font-weight: 600; color: #fff; margin: 0 0 .9rem; border-bottom: 1px solid rgba(212,174,90,.2); padding-bottom: .4rem; }
+  .qa-section p { margin: 0 0 1rem; font-size: .97rem; }
+  .qa-section ul { padding-left: 1.25rem; margin: 0 0 1rem; }
+  .qa-section li { margin-bottom: .4rem; font-size: .95rem; }
+  .claim-science { color: #7ab9e0; font-style: normal; font-size: .78rem; }
+  a[href] { color: var(--gold-500, #d4ae5a); }
+  .qa-faq-item { border-bottom: 1px solid rgba(255,255,255,.07); }
+  .qa-faq-q { cursor: pointer; padding: .9rem 0; font-size: .97rem; font-weight: 500; color: #fff; list-style: none; }
+  .qa-faq-q::before { content: '+ '; color: var(--gold-500, #d4ae5a); font-weight: 700; }
+  details[open] .qa-faq-q::before { content: '− '; }
+  .qa-faq-a { margin: 0 0 1rem; line-height: 1.7; font-size: .93rem; color: var(--ink-soft, #c8c0b0); }
+  .qa-src-list { padding-left: 1.25rem; margin: 0 0 1rem; }
+  .qa-src-list li { margin-bottom: .6rem; font-size: .82rem; color: var(--ink-soft, #8a8070); line-height: 1.6; }
+  .qa-claim-note { font-size: .78rem; color: var(--ink-soft, #605848); border-top: 1px solid rgba(255,255,255,.06); padding-top: .75rem; }
+</style>

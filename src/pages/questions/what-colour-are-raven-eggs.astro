@@ -1,0 +1,135 @@
+---
+/**
+ * Q&A — What colour are raven eggs?
+ * Primary keyword: what colour are raven eggs
+ * Secondary: raven egg colour, what do raven eggs look like, raven egg description
+ */
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const title       = 'What Colour Are Raven Eggs?';
+const description = 'Raven eggs are pale blue-green to greenish, heavily blotched with brown, grey, and olive markings. This page covers raven egg colour, appearance, clutch size, and how to identify raven eggs from other corvid eggs.';
+const path        = '/questions/what-colour-are-raven-eggs/';
+
+const breadcrumbs = [
+  { name: 'Home',      url: '/' },
+  { name: 'Questions', url: '/questions/' },
+  { name: 'What Colour Are Raven Eggs?', url: path },
+];
+
+const faq = [
+  { q: 'What do raven eggs look like?', a: 'Raven eggs are pale blue-green to greenish-grey or olive-blue, heavily marked with brown, grey, and olive-brown blotches, spots, and streaks. The blotching is typically concentrated at the larger end of the egg. Eggs are oval, measuring approximately 48–52 mm long by 33–35 mm wide in the Common Raven. The ground colour can vary from fairly bright blue-green to dull brownish-green depending on individual variation.' },
+  { q: 'How many eggs do ravens lay in a clutch?', a: 'Common Ravens typically lay 3–7 eggs per clutch, with 4–6 most common. Clutch size varies with food availability, female condition, and habitat quality. Some raven species vary: the Chihuahuan Raven typically lays 4–7 eggs (larger average); the White-necked Raven and other African/Middle Eastern species typically lay 3–5 eggs. Eggs are laid at approximately 24-hour intervals; incubation begins with the first or second egg, producing hatching asynchrony.' },
+  { q: 'Can you identify raven eggs by sight?', a: 'Identifying raven eggs with certainty requires knowing the nest belongs to a raven rather than another large corvid. The eggs themselves overlap in appearance with other large corvid eggs (carrion crow, hooded crow, jackdaw). The best identification is by context: a large stick nest on a cliff ledge or in the top of a tall tree, with one or both raven parents nearby. Egg size (larger than crow, smaller than a chicken egg) and the classic blue-green base with heavy brown blotching is consistent with the description.' },
+];
+---
+
+<BaseLayout title={title} description={description} path={path} ogType="article"
+  datePublished="2026-11-07" dateModified="2026-11-07"
+  breadcrumbs={breadcrumbs} faq={faq} pageType="Article">
+
+<article class="qa-page">
+
+  <nav class="qa-breadcrumb" aria-label="Breadcrumb">
+    <ol>
+      {breadcrumbs.map((b, i) => (
+        <li>
+          {i < breadcrumbs.length - 1
+            ? <><a href={b.url}>{b.name}</a><span aria-hidden="true"> › </span></>
+            : <span aria-current="page">{b.name}</span>}
+        </li>
+      ))}
+    </ol>
+  </nav>
+
+  <header class="qa-header">
+    <p class="qa-pillar">Question · Biology</p>
+    <h1>What Colour Are Raven Eggs?</h1>
+  </header>
+
+  <section class="qa-snippet" aria-label="Direct answer">
+    <p><strong class="claim-science">[science]</strong> Raven eggs are <strong>pale blue-green to greenish-grey</strong>, heavily blotched with brown, grey, and olive-brown markings, usually concentrated at the larger end. Common Raven eggs measure approximately 48–52 mm × 33–35 mm. Clutch size is typically 3–7 eggs (4–6 most common). Incubation lasts approximately 20–21 days, primarily by the female.</p>
+  </section>
+
+  <section class="qa-section">
+    <h2>Egg Description</h2>
+    <p><strong class="claim-science">[science]</strong> Common Raven egg characteristics:<sup><a href="#src-1">1</a></sup></p>
+    <ul>
+      <li><strong>Ground colour:</strong> pale blue-green, greenish, or greenish-grey. The blue-green is variable — some eggs are quite vivid; others are duller and more olive.</li>
+      <li><strong>Markings:</strong> blotches, spots, and streaks of brown, reddish-brown, grey, and olive-brown. Markings are typically concentrated at the larger (blunt) end, though some eggs have more evenly distributed blotching.</li>
+      <li><strong>Size:</strong> approximately 48–52 mm long × 33–35 mm wide in Common Ravens — slightly larger than a large chicken egg in length but narrower.</li>
+      <li><strong>Shape:</strong> oval, slightly asymmetrical — the blunt end noticeably broader than the pointed end.</li>
+      <li><strong>Texture:</strong> shell slightly glossy when fresh.</li>
+    </ul>
+  </section>
+
+  <section class="qa-section">
+    <h2>Variation Across Species</h2>
+    <p><strong class="claim-science">[science]</strong> All raven species produce eggs with the same basic appearance — blue-green ground colour with brown/grey blotching — consistent with the broader corvid egg pattern. Specific measurements vary:<sup><a href="#src-1">1</a></sup><sup><a href="#src-2">2</a></sup></p>
+    <ul>
+      <li><strong>Common Raven (<em>C. corax</em>):</strong> ~48–52 × 33–35 mm.</li>
+      <li><strong>Chihuahuan Raven (<em>C. cryptoleucus</em>):</strong> slightly smaller — ~43–49 × 30–33 mm.</li>
+      <li><strong>Australian Raven (<em>C. coronoides</em>):</strong> ~44–50 × 30–34 mm.</li>
+      <li><strong>African/Middle Eastern species (White-necked, Thick-billed, Fan-tailed, Brown-necked):</strong> similar size range, same colour pattern.</li>
+    </ul>
+  </section>
+
+  <section class="qa-section">
+    <h2>Why Are Raven Eggs Blue-Green?</h2>
+    <p><strong class="claim-science">[science]</strong> Blue-green egg colour in corvids and other birds is produced by biliverdin — a bile pigment deposited in the eggshell during formation. The blotches of brown and grey are produced by protoporphyrin and biliverdin deposited at a later stage or in different concentrations. The specific function of this colour pattern in ravens is debated; possible functions include camouflage of the eggs in the nest against visual predators, stimulation of incubation behaviour in the parents, or signalling of egg quality. In corvids that nest in concealed or high cliff sites, egg camouflage may be less critical than in ground-nesting species.<sup><a href="#src-1">1</a></sup></p>
+  </section>
+
+  <section class="qa-section">
+    <h2>Related Pages</h2>
+    <ul>
+      <li><a href="/questions/how-many-eggs-do-ravens-lay/">How many eggs do ravens lay?</a></li>
+      <li><a href="/questions/what-do-raven-eggs-look-like/">What do raven eggs look like?</a></li>
+      <li><a href="/questions/when-do-ravens-nest/">When do ravens nest?</a></li>
+      <li><a href="/species/common-raven/nesting/">Common Raven nesting</a></li>
+    </ul>
+  </section>
+
+  <section class="qa-faq qa-section" aria-labelledby="faq-h2">
+    <h2 id="faq-h2">Frequently Asked Questions</h2>
+    {faq.map(item => (
+      <details class="qa-faq-item">
+        <summary class="qa-faq-q">{item.q}</summary>
+        <p class="qa-faq-a">{item.a}</p>
+      </details>
+    ))}
+  </section>
+
+  <section class="qa-sources qa-section" aria-labelledby="src-h2">
+    <h2 id="src-h2">Sources</h2>
+    <ol class="qa-src-list">
+      <li id="src-1">Boarman, W.I. & Heinrich, B. (1999). Common Raven (<em>Corvus corax</em>). In Poole, A. (ed.), <em>The Birds of North America</em>, No. 476. Cornell Lab of Ornithology. — egg description, measurements, clutch size, incubation.</li>
+      <li id="src-2">del Hoyo, J. et al. (eds., 2009). <em>Handbook of the Birds of the World</em>, vol. 14. Lynx Edicions. — egg descriptions across raven species accounts.</li>
+    </ol>
+    <p class="qa-claim-note"><strong class="claim-science">[science]</strong> peer-reviewed or field-guide data</p>
+  </section>
+
+</article>
+</BaseLayout>
+
+<style>
+  .qa-page { max-width: 820px; margin: 0 auto; padding: 2rem 1.25rem 4rem; color: var(--iron-ink, #e8e4d8); font-family: 'Inter', sans-serif; line-height: 1.72; }
+  .qa-breadcrumb ol { display: flex; flex-wrap: wrap; gap: .25rem; list-style: none; padding: 0; margin: 0 0 2rem; font-size: .8rem; color: var(--ink-soft, #8a8070); }
+  .qa-breadcrumb a { color: var(--gold-500, #d4ae5a); text-decoration: none; }
+  .qa-pillar { font-size: .72rem; letter-spacing: .12em; text-transform: uppercase; color: var(--gold-500, #d4ae5a); margin: 0 0 .4rem; }
+  .qa-page h1 { font-family: 'Cormorant Garamond', serif; font-size: clamp(2rem, 5vw, 3rem); font-weight: 700; color: #fff; margin: 0 0 2rem; line-height: 1.1; }
+  .qa-snippet { background: rgba(212,174,90,.08); border-left: 3px solid var(--gold-500, #d4ae5a); border-radius: 0 6px 6px 0; padding: 1rem 1.25rem; margin-bottom: 2.5rem; font-size: 1.03rem; }
+  .qa-section { margin-bottom: 2.5rem; }
+  .qa-section h2 { font-family: 'Cormorant Garamond', serif; font-size: 1.5rem; font-weight: 600; color: #fff; margin: 0 0 .9rem; border-bottom: 1px solid rgba(212,174,90,.2); padding-bottom: .4rem; }
+  .qa-section p { margin: 0 0 1rem; font-size: .97rem; }
+  .qa-section ul { padding-left: 1.25rem; margin: 0 0 1rem; }
+  .qa-section li { margin-bottom: .4rem; font-size: .95rem; }
+  .claim-science { color: #7ab9e0; font-style: normal; font-size: .78rem; }
+  a[href] { color: var(--gold-500, #d4ae5a); }
+  .qa-faq-item { border-bottom: 1px solid rgba(255,255,255,.07); }
+  .qa-faq-q { cursor: pointer; padding: .9rem 0; font-size: .97rem; font-weight: 500; color: #fff; list-style: none; }
+  .qa-faq-q::before { content: '+ '; color: var(--gold-500, #d4ae5a); font-weight: 700; }
+  details[open] .qa-faq-q::before { content: '− '; }
+  .qa-faq-a { margin: 0 0 1rem; line-height: 1.7; font-size: .93rem; color: var(--ink-soft, #c8c0b0); }
+  .qa-src-list { padding-left: 1.25rem; margin: 0 0 1rem; }
+  .qa-src-list li { margin-bottom: .6rem; font-size: .82rem; color: var(--ink-soft, #8a8070); line-height: 1.6; }
+  .qa-claim-note { font-size: .78rem; color: var(--ink-soft, #605848); border-top: 1px solid rgba(255,255,255,.06); padding-top: .75rem; }
+</style>

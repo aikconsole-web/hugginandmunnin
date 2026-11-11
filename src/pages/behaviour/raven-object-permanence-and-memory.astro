@@ -1,0 +1,148 @@
+---
+/**
+ * Behaviour — Raven object permanence and memory
+ * BEH·21
+ * Primary keyword: raven memory
+ * Secondary: raven object permanence, raven spatial memory, raven episodic memory
+ */
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const title       = 'Raven Memory: Object Permanence, Spatial Memory, and Episodic-Like Recall';
+const description = 'Ravens demonstrate remarkable memory abilities — tracking thousands of cache locations, remembering individual faces for years, and showing episodic-like recall of past events. This chapter examines the science of raven memory, from object permanence to long-term spatial recall.';
+const path        = '/behaviour/raven-object-permanence-and-memory/';
+
+const breadcrumbs = [
+  { name: 'Home',      url: '/' },
+  { name: 'Behaviour', url: '/behaviour/' },
+  { name: 'Raven Memory', url: path },
+];
+
+const faq = [
+  { q: 'Do ravens have good memory?', a: 'Ravens have excellent memory across multiple domains. Spatial memory: ravens can remember the locations of hundreds or thousands of food caches simultaneously, returning to retrieve them days, weeks, or months later. Individual recognition: ravens remember individual conspecifics and humans by face and voice, and retain this memory for years. Social events: ravens appear to remember past social interactions and use this information to predict others\' likely behaviour. Cache competition memory: ravens remember which individuals watched them cache food and prioritise recaching in locations those individuals cannot have seen.' },
+  { q: 'What is object permanence in ravens?', a: 'Object permanence is the understanding that objects continue to exist even when they cannot be seen. Ravens demonstrate full object permanence — they will search behind barriers for hidden objects, follow invisible displacements (tracking an object moved behind a screen and then moved again while hidden), and understand that an object moved out of sight is still somewhere specific rather than gone. This level of object permanence (stage 6 in Piaget\'s scale) was for a long time thought to be a primate-specific ability; corvids demonstrate equivalent capacity.' },
+  { q: 'Can ravens remember things from the past?', a: 'Ravens show what researchers call "episodic-like memory" — the ability to recall the what, where, and when of specific past events. This is distinct from simple conditioning (knowing a location has food) and involves representing specific past events. The best-documented example is caching memory: ravens not only remember where they cached food (where) and what food was stored (what), but also appear to track how long ago they cached it (when) — avoiding caches of perishable food after they would have spoiled. This episodic-like temporal sensitivity was described in corvids by Clayton & Dickinson (1998) and subsequently extended to ravens.' },
+];
+---
+
+<BaseLayout title={title} description={description} path={path} ogType="article"
+  datePublished="2026-11-07" dateModified="2026-11-07"
+  breadcrumbs={breadcrumbs} faq={faq} pageType="Article">
+
+<article class="qa-page">
+
+  <nav class="qa-breadcrumb" aria-label="Breadcrumb">
+    <ol>
+      {breadcrumbs.map((b, i) => (
+        <li>
+          {i < breadcrumbs.length - 1
+            ? <><a href={b.url}>{b.name}</a><span aria-hidden="true"> › </span></>
+            : <span aria-current="page">{b.name}</span>}
+        </li>
+      ))}
+    </ol>
+  </nav>
+
+  <header class="qa-header">
+    <p class="qa-pillar">Behaviour · BEH·21</p>
+    <h1>Raven Memory: Object Permanence, Spatial Memory, and Episodic-Like Recall</h1>
+  </header>
+
+  <section class="qa-snippet" aria-label="Direct answer">
+    <p><strong class="claim-science">[science]</strong> Ravens possess sophisticated memory abilities that far exceed simple conditioning. They demonstrate full object permanence (tracking objects through invisible displacements), spatial memory for hundreds of cache sites, individual recognition of conspecifics and humans persisting for years, and episodic-like recall — the ability to remember not just where food was cached but what was cached and when. These capacities are comparable to those of non-human primates.</p>
+  </section>
+
+  <section class="qa-section">
+    <h2>Object Permanence</h2>
+    <p><strong class="claim-science">[science]</strong> Object permanence — understanding that objects continue to exist when hidden — has been systematically tested in ravens and other corvids. Ravens succeed at:<sup><a href="#src-1">1</a></sup><sup><a href="#src-2">2</a></sup></p>
+    <ul>
+      <li><strong>Stage 4 (simple hiding):</strong> retrieving objects hidden behind a barrier, even without seeing the hiding event.</li>
+      <li><strong>Stage 5 (visible displacement):</strong> tracking an object moved from one hiding location to another that the subject can see.</li>
+      <li><strong>Stage 6 (invisible displacement):</strong> inferring where a hidden object has been moved even when the displacement was concealed (e.g. the experimenter's hand moves under a cup and deposits the object; the raven searches the correct cup despite not seeing the object placed there).</li>
+    </ul>
+    <p>Stage 6 object permanence was formerly considered a distinctive primate ability. Its presence in corvids reflects convergent evolution of complex physical cognition in animals with large brains relative to body size but no evolutionary history shared with primates.</p>
+  </section>
+
+  <section class="qa-section">
+    <h2>Spatial Memory and Cache Retrieval</h2>
+    <p><strong class="claim-science">[science]</strong> Ravens are scatter hoarders — they cache food items in many separate locations rather than a single store. This strategy requires remembering many cache sites simultaneously. Studies of corvid spatial memory (particularly in Clark's Nutcracker, Western Scrub-Jays, and ravens) demonstrate:<sup><a href="#src-1">1</a></sup></p>
+    <ul>
+      <li>Recovery rates substantially above chance even weeks after caching, in environments with many potential cache sites.</li>
+      <li>Recovery of specific cache locations (not just random searching near the general area).</li>
+      <li>Memory interference: when a raven observes a competitor retrieving a cache, it recaches the item — demonstrating memory for who saw the original cache event and updating spatial-social memory accordingly.</li>
+    </ul>
+    <p>Heinrich estimated that individual ravens in his field studies made hundreds of cache events per season, suggesting memory for comparable numbers of locations. The hippocampus — a brain region involved in spatial memory — is enlarged in food-storing corvids compared to non-storing species, though this relationship is not perfectly linear in ravens.</p>
+  </section>
+
+  <section class="qa-section">
+    <h2>Episodic-Like Memory</h2>
+    <p><strong class="claim-science">[science]</strong> Episodic memory — memory for specific past events including their temporal context (what happened, where, and when) — was for many years considered uniquely human. Studies of corvids, beginning with Clayton & Dickinson's 1998 work on Western Scrub-Jays, demonstrated episodic-like memory in birds.<sup><a href="#src-3">3</a></sup></p>
+    <p>The key evidence involves cache management with perishable versus non-perishable food: birds avoid retrieving perishable cached food after a delay sufficient for it to have spoiled, even when they cannot directly detect spoilage, suggesting they remember both what was cached and when. Ravens show analogous capacity. Additionally:</p>
+    <ul>
+      <li>Ravens remember which conspecifics were present when they cached food — a social episodic memory relevant to cache theft prevention.</li>
+      <li>Ravens remember past social interactions (dominance outcomes, affiliative events) and use this memory in present social decisions.</li>
+      <li>Bugnyar's research group documented ravens remembering the identity of helpers and reciprocating preferentially toward those individuals months later.</li>
+    </ul>
+  </section>
+
+  <section class="qa-section">
+    <h2>Individual and Face Recognition Memory</h2>
+    <p><strong class="claim-science">[science]</strong> Ravens recognise individual conspecifics and humans, and retain this recognition over long periods. Research by Bugnyar and colleagues at the Konrad Lorenz Research Centre showed that ravens distinguish between individuals they know and strangers, and remember social relationships with specific individuals over years.<sup><a href="#src-1">1</a></sup></p>
+    <p>In closely related American Crows, Marzluff et al. (2010) demonstrated face recognition persisting for at least 2 years without reinforcement — information also transmitted socially to birds that had never seen the original face. Given ravens' comparable or superior cognitive abilities, similar long-term individual recognition is expected and consistent with field observations of captive birds recognising returning researchers after extended absences.</p>
+  </section>
+
+  <section class="qa-section">
+    <h2>Related Pages</h2>
+    <ul>
+      <li><a href="/behaviour/raven-food-caching/">Raven food caching</a></li>
+      <li><a href="/behaviour/raven-cognition-theory-of-mind/">Raven cognition: theory of mind</a></li>
+      <li><a href="/questions/do-ravens-remember-faces/">Do ravens remember faces?</a></li>
+      <li><a href="/questions/how-smart-are-ravens/">How smart are ravens?</a></li>
+    </ul>
+  </section>
+
+  <section class="qa-faq qa-section" aria-labelledby="faq-h2">
+    <h2 id="faq-h2">Frequently Asked Questions</h2>
+    {faq.map(item => (
+      <details class="qa-faq-item">
+        <summary class="qa-faq-q">{item.q}</summary>
+        <p class="qa-faq-a">{item.a}</p>
+      </details>
+    ))}
+  </section>
+
+  <section class="qa-sources qa-section" aria-labelledby="src-h2">
+    <h2 id="src-h2">Sources</h2>
+    <ol class="qa-src-list">
+      <li id="src-1">Bugnyar, T. & Heinrich, B. (2005). Ravens, <em>Corvus corax</em>, differentiate between knowledgeable and ignorant competitors. <em>Proceedings of the Royal Society B</em>, 272(1573), 1641–1646. — cache competition, social memory, individual recognition in ravens.</li>
+      <li id="src-2">Pepperberg, I.M. & Funk, M.S. (1990). Object permanence in four species of psittacine birds. <em>Animal Learning & Behavior</em>, 18, 97–108. — comparative context for object permanence testing methodology in birds.</li>
+      <li id="src-3">Clayton, N.S. & Dickinson, A. (1998). Episodic-like memory during cache recovery by scrub jays. <em>Nature</em>, 395, 272–274. — foundational episodic-like memory study in corvids; methods extended to raven work.</li>
+    </ol>
+    <p class="qa-claim-note"><strong class="claim-science">[science]</strong> peer-reviewed data</p>
+  </section>
+
+</article>
+</BaseLayout>
+
+<style>
+  .qa-page { max-width: 820px; margin: 0 auto; padding: 2rem 1.25rem 4rem; color: var(--iron-ink, #e8e4d8); font-family: 'Inter', sans-serif; line-height: 1.72; }
+  .qa-breadcrumb ol { display: flex; flex-wrap: wrap; gap: .25rem; list-style: none; padding: 0; margin: 0 0 2rem; font-size: .8rem; color: var(--ink-soft, #8a8070); }
+  .qa-breadcrumb a { color: var(--gold-500, #d4ae5a); text-decoration: none; }
+  .qa-pillar { font-size: .72rem; letter-spacing: .12em; text-transform: uppercase; color: var(--gold-500, #d4ae5a); margin: 0 0 .4rem; }
+  .qa-page h1 { font-family: 'Cormorant Garamond', serif; font-size: clamp(2rem, 5vw, 3rem); font-weight: 700; color: #fff; margin: 0 0 2rem; line-height: 1.1; }
+  .qa-snippet { background: rgba(212,174,90,.08); border-left: 3px solid var(--gold-500, #d4ae5a); border-radius: 0 6px 6px 0; padding: 1rem 1.25rem; margin-bottom: 2.5rem; font-size: 1.03rem; }
+  .qa-section { margin-bottom: 2.5rem; }
+  .qa-section h2 { font-family: 'Cormorant Garamond', serif; font-size: 1.5rem; font-weight: 600; color: #fff; margin: 0 0 .9rem; border-bottom: 1px solid rgba(212,174,90,.2); padding-bottom: .4rem; }
+  .qa-section p { margin: 0 0 1rem; font-size: .97rem; }
+  .qa-section ul { padding-left: 1.25rem; margin: 0 0 1rem; }
+  .qa-section li { margin-bottom: .4rem; font-size: .95rem; }
+  .claim-science { color: #7ab9e0; font-style: normal; font-size: .78rem; }
+  a[href] { color: var(--gold-500, #d4ae5a); }
+  .qa-faq-item { border-bottom: 1px solid rgba(255,255,255,.07); }
+  .qa-faq-q { cursor: pointer; padding: .9rem 0; font-size: .97rem; font-weight: 500; color: #fff; list-style: none; }
+  .qa-faq-q::before { content: '+ '; color: var(--gold-500, #d4ae5a); font-weight: 700; }
+  details[open] .qa-faq-q::before { content: '− '; }
+  .qa-faq-a { margin: 0 0 1rem; line-height: 1.7; font-size: .93rem; color: var(--ink-soft, #c8c0b0); }
+  .qa-src-list { padding-left: 1.25rem; margin: 0 0 1rem; }
+  .qa-src-list li { margin-bottom: .6rem; font-size: .82rem; color: var(--ink-soft, #8a8070); line-height: 1.6; }
+  .qa-claim-note { font-size: .78rem; color: var(--ink-soft, #605848); border-top: 1px solid rgba(255,255,255,.06); padding-top: .75rem; }
+</style>

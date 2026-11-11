@@ -1,0 +1,143 @@
+---
+/**
+ * Comparison — White-necked Raven vs Pied Crow
+ * CMP·12
+ * Primary keyword: white-necked raven vs pied crow
+ * Secondary: how to tell white-necked raven from pied crow, pied crow raven identification
+ */
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const title       = 'White-necked Raven vs Pied Crow: How to Tell Them Apart';
+const description = 'White-necked Raven and Pied Crow overlap in eastern and southern Africa and both show white on black. The neck patch vs chest band and body size immediately separate them. Full comparison with table.';
+const path        = '/compare/white-necked-raven-vs-pied-crow/';
+
+const breadcrumbs = [
+  { name: 'Home',    url: '/' },
+  { name: 'Compare', url: '/compare/' },
+  { name: 'White-necked Raven vs Pied Crow', url: path },
+];
+
+const faq = [
+  { q: 'Which is bigger — White-necked Raven or Pied Crow?', a: 'The White-necked Raven is notably larger. Body length approximately 50–54 cm and weight 500–800 g, compared to the Pied Crow\'s body length of about 46–52 cm. The difference in bulk is more significant than the overlap in length suggests — the White-necked Raven is a heavier-bodied bird with a much more powerful bill.' },
+  { q: 'Are White-necked Raven and Pied Crow in the same genus?', a: 'Yes. Both belong to the genus Corvus (family Corvidae). The White-necked Raven is Corvus albicollis; the Pied Crow is Corvus albus. Despite their common names, both are corvids. The Pied Crow is classified as a crow rather than a raven, based primarily on its smaller size and its different distribution of white plumage.' },
+  { q: 'Where do White-necked Raven and Pied Crow overlap?', a: 'Both species occur across eastern and southern Africa, particularly in highland and mountain areas. The White-necked Raven is primarily associated with mountains and rocky terrain; the Pied Crow is more widespread across open lowlands, farmland, and urban areas. In highland areas of Kenya, Tanzania, Ethiopia, and South Africa, both species can be found in proximity.' },
+];
+---
+
+<BaseLayout title={title} description={description} path={path} ogType="article"
+  datePublished="2026-11-07" dateModified="2026-11-07"
+  breadcrumbs={breadcrumbs} faq={faq} pageType="Article">
+
+<article class="qa-page">
+
+  <nav class="qa-breadcrumb" aria-label="Breadcrumb">
+    <ol>
+      {breadcrumbs.map((b, i) => (
+        <li>
+          {i < breadcrumbs.length - 1
+            ? <><a href={b.url}>{b.name}</a><span aria-hidden="true"> › </span></>
+            : <span aria-current="page">{b.name}</span>}
+        </li>
+      ))}
+    </ol>
+  </nav>
+
+  <header class="qa-header">
+    <p class="qa-pillar">Compare · CMP·12</p>
+    <h1>White-necked Raven vs Pied Crow: How to Tell Them Apart</h1>
+  </header>
+
+  <section class="qa-snippet" aria-label="Direct answer">
+    <p><strong class="claim-science">[science]</strong> Both birds are large black corvids with white markings, but the patterns are completely different: the White-necked Raven has a white patch on the nape and upper back; the Pied Crow has a white chest and belly, with a white collar. The White-necked Raven is also noticeably larger and heavier, with a massive deep-arched bill — immediately distinctive once seen.</p>
+  </section>
+
+  <section class="qa-section">
+    <h2>Side-by-Side Comparison</h2>
+    <table>
+      <thead>
+        <tr><th>Feature</th><th>White-necked Raven</th><th>Pied Crow</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Scientific name</td><td><em>Corvus albicollis</em></td><td><em>Corvus albus</em></td></tr>
+        <tr><td>Body length</td><td>50–54 cm</td><td>46–52 cm</td></tr>
+        <tr><td>White on plumage</td><td>Nape, upper back/neck patch</td><td>Breast, belly, collar (front half of underparts)</td></tr>
+        <tr><td>Rest of plumage</td><td>Glossy black</td><td>Glossy black (back, wings, tail)</td></tr>
+        <tr><td>Bill</td><td>Very heavy, deeply arched, white tip</td><td>Heavy but less extreme; no white tip</td></tr>
+        <tr><td>Tail</td><td>Wedge-shaped (raven)</td><td>Graduated, less wedge-shaped</td></tr>
+        <tr><td>Preferred habitat</td><td>Mountains, gorges, rocky cliffs</td><td>Open farmland, savannah, urban areas</td></tr>
+        <tr><td>Range</td><td>Mountains of E and S Africa</td><td>Widespread sub-Saharan Africa</td></tr>
+        <tr><td>IUCN status</td><td>Least Concern</td><td>Least Concern</td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section class="qa-section">
+    <h2>The White Pattern — the Easiest Separation</h2>
+    <p><strong class="claim-science">[science]</strong> The white markings in the two species do not overlap:<sup><a href="#src-1">1</a></sup></p>
+    <p><strong>White-necked Raven:</strong> white is confined to the nape and upper back — a patch visible from behind and above, not from the front. From a distance in front view, a White-necked Raven looks all-black.</p>
+    <p><strong>Pied Crow:</strong> white is on the breast and belly — a large white "bib" covering the chest and upper belly, with a white collar connecting to white on the lower back. From a front view, a Pied Crow is strikingly bicoloured — clearly not all-black.</p>
+    <p>This single character eliminates confusion in most cases. Any large black African corvid with a white chest is a Pied Crow; any with white only on the nape/back is a White-necked Raven.</p>
+  </section>
+
+  <section class="qa-section">
+    <h2>Bill Size — Dramatic Difference</h2>
+    <p><strong class="claim-science">[science]</strong> The White-necked Raven has one of the most impressive bills of any corvid — very heavy, strongly arched (deep-curved from base to tip), and tipped with white. This bill allows it to open large carcasses and exploit tough food items unavailable to smaller corvids. The Pied Crow has a substantial corvid bill, but it is proportionally much less extreme. Bill profile alone identifies a White-necked Raven at close range.<sup><a href="#src-1">1</a></sup></p>
+  </section>
+
+  <section class="qa-section">
+    <h2>Related Pages</h2>
+    <ul>
+      <li><a href="/species/white-necked-raven/">White-necked Raven — species profile</a></li>
+      <li><a href="/compare/raven-vs-crow/">Raven vs Crow</a></li>
+      <li><a href="/species/">All ten raven species</a></li>
+    </ul>
+  </section>
+
+  <section class="qa-faq qa-section" aria-labelledby="faq-h2">
+    <h2 id="faq-h2">Frequently Asked Questions</h2>
+    {faq.map(item => (
+      <details class="qa-faq-item">
+        <summary class="qa-faq-q">{item.q}</summary>
+        <p class="qa-faq-a">{item.a}</p>
+      </details>
+    ))}
+  </section>
+
+  <section class="qa-sources qa-section" aria-labelledby="src-h2">
+    <h2 id="src-h2">Sources</h2>
+    <ol class="qa-src-list">
+      <li id="src-1">del Hoyo, J. et al. (eds., 2009). <em>Handbook of the Birds of the World</em>, vol. 14. Lynx Edicions. — species accounts for White-necked Raven and Pied Crow; field marks, distribution.</li>
+    </ol>
+    <p class="qa-claim-note"><strong class="claim-science">[science]</strong> peer-reviewed study or field-guide data</p>
+  </section>
+
+</article>
+</BaseLayout>
+
+<style>
+  .qa-page { max-width: 820px; margin: 0 auto; padding: 2rem 1.25rem 4rem; color: var(--iron-ink, #e8e4d8); font-family: 'Inter', sans-serif; line-height: 1.72; }
+  .qa-breadcrumb ol { display: flex; flex-wrap: wrap; gap: .25rem; list-style: none; padding: 0; margin: 0 0 2rem; font-size: .8rem; color: var(--ink-soft, #8a8070); }
+  .qa-breadcrumb a { color: var(--gold-500, #d4ae5a); text-decoration: none; }
+  .qa-pillar { font-size: .72rem; letter-spacing: .12em; text-transform: uppercase; color: var(--gold-500, #d4ae5a); margin: 0 0 .4rem; }
+  .qa-page h1 { font-family: 'Cormorant Garamond', serif; font-size: clamp(2rem, 5vw, 3rem); font-weight: 700; color: #fff; margin: 0 0 2rem; line-height: 1.1; }
+  .qa-snippet { background: rgba(212,174,90,.08); border-left: 3px solid var(--gold-500, #d4ae5a); border-radius: 0 6px 6px 0; padding: 1rem 1.25rem; margin-bottom: 2.5rem; font-size: 1.03rem; }
+  .qa-section { margin-bottom: 2.5rem; }
+  .qa-section h2 { font-family: 'Cormorant Garamond', serif; font-size: 1.5rem; font-weight: 600; color: #fff; margin: 0 0 .9rem; border-bottom: 1px solid rgba(212,174,90,.2); padding-bottom: .4rem; }
+  .qa-section p { margin: 0 0 1rem; font-size: .97rem; }
+  .qa-section ul { padding-left: 1.25rem; margin: 0 0 1rem; }
+  .qa-section li { margin-bottom: .4rem; font-size: .95rem; }
+  .claim-science { color: #7ab9e0; font-style: normal; font-size: .78rem; }
+  a[href] { color: var(--gold-500, #d4ae5a); }
+  table { width: 100%; border-collapse: collapse; margin: 0 0 1.25rem; font-size: .9rem; }
+  th { text-align: left; padding: .5rem .75rem; background: rgba(212,174,90,.12); color: #d4ae5a; font-weight: 600; font-size: .78rem; letter-spacing: .08em; text-transform: uppercase; }
+  td { padding: .5rem .75rem; border-bottom: 1px solid rgba(255,255,255,.06); vertical-align: top; }
+  tr:last-child td { border-bottom: none; }
+  .qa-faq-item { border-bottom: 1px solid rgba(255,255,255,.07); }
+  .qa-faq-q { cursor: pointer; padding: .9rem 0; font-size: .97rem; font-weight: 500; color: #fff; list-style: none; }
+  .qa-faq-q::before { content: '+ '; color: var(--gold-500, #d4ae5a); font-weight: 700; }
+  details[open] .qa-faq-q::before { content: '− '; }
+  .qa-faq-a { margin: 0 0 1rem; line-height: 1.7; font-size: .93rem; color: var(--ink-soft, #c8c0b0); }
+  .qa-src-list { padding-left: 1.25rem; margin: 0 0 1rem; }
+  .qa-src-list li { margin-bottom: .6rem; font-size: .82rem; color: var(--ink-soft, #8a8070); line-height: 1.6; }
+  .qa-claim-note { font-size: .78rem; color: var(--ink-soft, #605848); border-top: 1px solid rgba(255,255,255,.06); padding-top: .75rem; }
+</style>

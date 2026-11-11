@@ -1,0 +1,146 @@
+---
+/**
+ * World lore — Raven in Chinese mythology
+ * MYW·18
+ * Primary keyword: raven in chinese mythology
+ * Secondary: three-legged raven china, sun crow chinese mythology, Yangwu raven
+ */
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+
+const title       = 'The Raven in Chinese Mythology: The Three-Legged Sun Crow';
+const description = 'In Chinese mythology, the sun contains a three-legged raven or crow (Yangwu or Jīnyā). This page examines the solar bird symbolism, its role in Chinese cosmology, its appearances in classical texts and art, and its relationship to the Japanese Yatagarasu.';
+const path        = '/lore/world/raven-in-chinese-mythology/';
+
+const breadcrumbs = [
+  { name: 'Home',       url: '/' },
+  { name: 'Lore',       url: '/lore/' },
+  { name: 'World',      url: '/lore/world/' },
+  { name: 'Raven in Chinese Mythology', url: path },
+];
+
+const faq = [
+  { q: 'What is the three-legged raven in Chinese mythology?', a: 'The three-legged raven (or crow) — called Yangwu (陽烏, "sun crow") or Jīnyā (金鴉, "golden crow") in Chinese — is a solar deity or spirit said to inhabit the suns. In classical Chinese cosmology, there were originally ten suns, each containing a three-legged bird. The archer Yi (后羿) shot down nine of the ten suns (and their birds) to save humanity from scorching — a myth recorded in the Huainanzi (c. 139 BCE). One sun (and one bird) was spared, becoming the present sun.' },
+  { q: 'Is the Chinese sun crow a raven or a crow?', a: 'The distinction between raven and crow was not always made in classical Chinese texts — the character 烏 (wū) can mean both raven and crow. The solar bird is typically described as black and three-legged; some art traditions render it as a large, raven-like bird. Scholars generally translate Yangwu as "sun crow" or "sun raven" depending on context. The key symbolic point is a large black corvid as a solar emblem — a strikingly different symbolic role from the Western tradition where ravens are associated with darkness and death.' },
+  { q: 'How is the Chinese three-legged raven related to the Japanese Yatagarasu?', a: 'The Japanese three-legged crow, Yatagarasu (八咫烏), is directly derived from the Chinese solar bird via cultural transmission across the Korean peninsula. In Japan, Yatagarasu serves as a divine guide (guiding Emperor Jimmu in Japanese foundation mythology) and is associated with the Kumano Sanzan shrines. The three-legged form is shared; the symbolic function shifts from solar embodiment (Chinese) to divine guidance (Japanese). Both traditions derive ultimately from a broader East Asian solar bird symbolism.' },
+];
+---
+
+<BaseLayout title={title} description={description} path={path} ogType="article"
+  datePublished="2026-11-07" dateModified="2026-11-07"
+  breadcrumbs={breadcrumbs} faq={faq} pageType="Article">
+
+<article class="qa-page">
+
+  <nav class="qa-breadcrumb" aria-label="Breadcrumb">
+    <ol>
+      {breadcrumbs.map((b, i) => (
+        <li>
+          {i < breadcrumbs.length - 1
+            ? <><a href={b.url}>{b.name}</a><span aria-hidden="true"> › </span></>
+            : <span aria-current="page">{b.name}</span>}
+        </li>
+      ))}
+    </ol>
+  </nav>
+
+  <header class="qa-header">
+    <p class="qa-pillar">World Lore · MYW·18</p>
+    <h1>The Raven in Chinese Mythology: The Three-Legged Sun Crow</h1>
+  </header>
+
+  <section class="qa-snippet" aria-label="Direct answer">
+    <p><strong class="claim-lore">[lore]</strong> In Chinese mythology, each of the ten original suns contained a three-legged raven or crow — the Yangwu (陽烏, "sun crow"). The archer Yi shot down nine suns (and nine solar birds) to save humanity from scorching; one sun (and its bird) was spared. This solar bird tradition spread to Japan (the three-legged Yatagarasu) and Korea (Samjok-o). The Chinese solar crow represents a strikingly different symbolic role for the corvid than its Western associations with death.</p>
+  </section>
+
+  <section class="qa-section">
+    <h2>The Ten Suns and Yi the Archer</h2>
+    <p><strong class="claim-lore">[lore]</strong> The foundational Chinese myth of the solar bird is recorded in the <em>Huainanzi</em> (淮南子, c. 139 BCE), a Western Han dynasty philosophical encyclopaedia:<sup><a href="#src-1">1</a></sup></p>
+    <ul>
+      <li>Originally ten suns existed, each housed in a divine mulberry tree (the Fúsāng tree, 扶桑) at the edge of the eastern ocean.</li>
+      <li>Each sun contained a three-legged bird (Yangwu, 陽烏). One sun rose at a time; they were supposed to take turns.</li>
+      <li>When all ten rose simultaneously, the earth was scorched. The Divine Archer Yi (后羿) shot down nine suns with his arrows, sparing one (and its bird) on the order of the supreme deity Yao.</li>
+      <li>The surviving sun and its three-legged bird became the present-day sun.</li>
+    </ul>
+    <p>The myth also appears in the <em>Chu Ci</em> (楚辭, "Songs of Chu," c. 4th–3rd century BCE) and in later dynastic sources. The <em>Shanhaijing</em> (山海經, "Classic of Mountains and Seas") mentions solar birds in its cosmographical sections.</p>
+  </section>
+
+  <section class="qa-section">
+    <h2>The Yangwu in Chinese Art</h2>
+    <p><strong class="claim-lore">[lore]</strong> Solar bird imagery is well-attested in Chinese art from the Han dynasty (206 BCE–220 CE) onward:<sup><a href="#src-1">1</a></sup></p>
+    <ul>
+      <li>Bronze mirrors, lacquerware, and tomb paintings often show a three-legged bird inside a solar disc or red circle.</li>
+      <li>The Mawangdui silk tomb banner (c. 168 BCE, Hunan Provincial Museum) — one of the best-preserved Han dynasty artefacts — shows a solar disc on the right side containing a bird, typically identified as the Yangwu.</li>
+      <li>The bird is depicted as large, black, and three-legged, clearly distinct from the two-legged birds (phoenixes, cranes) associated with other symbolic registers.</li>
+    </ul>
+  </section>
+
+  <section class="qa-section">
+    <h2>Solar Symbolism: Raven as Sun</h2>
+    <p><strong class="claim-lore">[lore]</strong> The Chinese solar crow represents the opposite of the Western raven tradition. Where European traditions consistently associate ravens with darkness, death, prophecy, and the underworld, the Yangwu is a creature of pure solar power — the embodiment of yang (陽) energy, light, warmth, and heaven. The black colour of the corvid, in this tradition, does not signify darkness but the intense concentration of solar power — a black that absorbs and embodies all light rather than representing its absence.<sup><a href="#src-2">2</a></sup></p>
+    <p>This East Asian solar crow tradition demonstrates that the symbolic meaning of the raven/crow is not universal but culturally constructed — the same bird can represent opposite principles depending on the cosmological system within which it is embedded.</p>
+  </section>
+
+  <section class="qa-section">
+    <h2>Connections: Korea and Japan</h2>
+    <p><strong class="claim-lore">[lore]</strong> The solar three-legged corvid spread from China across East Asia:<sup><a href="#src-2">2</a></sup></p>
+    <ul>
+      <li><strong>Korea (Samjok-o, 삼족오):</strong> the three-legged crow appears in Goguryeo kingdom (37 BCE–668 CE) tomb murals in modern North Korea and China. It retained solar and celestial symbolism and remained important in Korean decorative art through subsequent dynasties.</li>
+      <li><strong>Japan (Yatagarasu, 八咫烏):</strong> the three-legged crow is recorded in the <em>Kojiki</em> (712 CE) as a divine messenger sent by the sun goddess Amaterasu to guide Emperor Jimmu. It is the emblem of the Japan Football Association and closely associated with the Kumano Sanzan shrines in Wakayama Prefecture.</li>
+    </ul>
+  </section>
+
+  <section class="qa-section">
+    <h2>Related Pages</h2>
+    <ul>
+      <li><a href="/lore/world/raven-symbolism/">Raven symbolism across cultures</a></li>
+      <li><a href="/lore/world/ravens-in-japanese-mythology/">Ravens in Japanese mythology (Yatagarasu)</a></li>
+      <li><a href="/lore/norse/huginn-and-muninn/">Huginn and Muninn</a></li>
+      <li><a href="/questions/why-are-ravens-associated-with-death/">Why are ravens associated with death?</a></li>
+    </ul>
+  </section>
+
+  <section class="qa-faq qa-section" aria-labelledby="faq-h2">
+    <h2 id="faq-h2">Frequently Asked Questions</h2>
+    {faq.map(item => (
+      <details class="qa-faq-item">
+        <summary class="qa-faq-q">{item.q}</summary>
+        <p class="qa-faq-a">{item.a}</p>
+      </details>
+    ))}
+  </section>
+
+  <section class="qa-sources qa-section" aria-labelledby="src-h2">
+    <h2 id="src-h2">Sources</h2>
+    <ol class="qa-src-list">
+      <li id="src-1">Major, J.S. et al. (trans., 2010). <em>The Huainanzi: A Guide to the Theory and Practice of Government in Early Han China</em>. Columbia University Press. — solar mythology sections (chapter 3, Tiānwén xùn); ten suns, Yi the archer, solar crow.</li>
+      <li id="src-2">Loewe, M. & Shaughnessy, E.L. (eds., 1999). <em>The Cambridge History of Ancient China</em>. Cambridge University Press. — solar bird imagery in Han art; East Asian transmission of three-legged corvid symbolism.</li>
+    </ol>
+    <p class="qa-claim-note"><strong class="claim-lore">[lore]</strong> named cultural/historical source</p>
+  </section>
+
+</article>
+</BaseLayout>
+
+<style>
+  .qa-page { max-width: 820px; margin: 0 auto; padding: 2rem 1.25rem 4rem; color: var(--iron-ink, #e8e4d8); font-family: 'Inter', sans-serif; line-height: 1.72; }
+  .qa-breadcrumb ol { display: flex; flex-wrap: wrap; gap: .25rem; list-style: none; padding: 0; margin: 0 0 2rem; font-size: .8rem; color: var(--ink-soft, #8a8070); }
+  .qa-breadcrumb a { color: var(--gold-500, #d4ae5a); text-decoration: none; }
+  .qa-pillar { font-size: .72rem; letter-spacing: .12em; text-transform: uppercase; color: var(--gold-500, #d4ae5a); margin: 0 0 .4rem; }
+  .qa-page h1 { font-family: 'Cormorant Garamond', serif; font-size: clamp(2rem, 5vw, 3rem); font-weight: 700; color: #fff; margin: 0 0 2rem; line-height: 1.1; }
+  .qa-snippet { background: rgba(212,174,90,.08); border-left: 3px solid var(--gold-500, #d4ae5a); border-radius: 0 6px 6px 0; padding: 1rem 1.25rem; margin-bottom: 2.5rem; font-size: 1.03rem; }
+  .qa-section { margin-bottom: 2.5rem; }
+  .qa-section h2 { font-family: 'Cormorant Garamond', serif; font-size: 1.5rem; font-weight: 600; color: #fff; margin: 0 0 .9rem; border-bottom: 1px solid rgba(212,174,90,.2); padding-bottom: .4rem; }
+  .qa-section p { margin: 0 0 1rem; font-size: .97rem; }
+  .qa-section ul { padding-left: 1.25rem; margin: 0 0 1rem; }
+  .qa-section li { margin-bottom: .4rem; font-size: .95rem; }
+  .claim-lore { color: #c4a26a; font-style: normal; font-size: .78rem; }
+  a[href] { color: var(--gold-500, #d4ae5a); }
+  .qa-faq-item { border-bottom: 1px solid rgba(255,255,255,.07); }
+  .qa-faq-q { cursor: pointer; padding: .9rem 0; font-size: .97rem; font-weight: 500; color: #fff; list-style: none; }
+  .qa-faq-q::before { content: '+ '; color: var(--gold-500, #d4ae5a); font-weight: 700; }
+  details[open] .qa-faq-q::before { content: '− '; }
+  .qa-faq-a { margin: 0 0 1rem; line-height: 1.7; font-size: .93rem; color: var(--ink-soft, #c8c0b0); }
+  .qa-src-list { padding-left: 1.25rem; margin: 0 0 1rem; }
+  .qa-src-list li { margin-bottom: .6rem; font-size: .82rem; color: var(--ink-soft, #8a8070); line-height: 1.6; }
+  .qa-claim-note { font-size: .78rem; color: var(--ink-soft, #605848); border-top: 1px solid rgba(255,255,255,.06); padding-top: .75rem; }
+</style>

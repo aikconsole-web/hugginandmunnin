@@ -1,0 +1,142 @@
+---
+/**
+ * Norse lore — Ravens in skaldic poetry
+ * NRS·12
+ * Primary keyword: ravens in skaldic poetry
+ * Secondary: raven kenning norse poetry, skaldic raven, beasts of battle norse
+ */
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+
+const title       = 'Ravens in Skaldic Poetry: Kennings, Battle Birds, and Odin\'s Flock';
+const description = 'In Old Norse skaldic poetry, ravens are omnipresent — as "beasts of battle" feasting on the slain, as kenning elements in compound metaphors, and as symbols of Odin\'s knowledge. This page surveys raven imagery in the skaldic corpus.';
+const path        = '/lore/norse/ravens-in-skaldic-poetry/';
+
+const breadcrumbs = [
+  { name: 'Home',       url: '/' },
+  { name: 'Norse Lore', url: '/lore/norse/' },
+  { name: 'Ravens in Skaldic Poetry', url: path },
+];
+
+const faq = [
+  { q: 'What is a kenning for raven in Old Norse?', a: 'Old Norse skaldic poetry uses many kennings for ravens. The raven appears in battle poetry as: "carrion-bird," "wound-bird" (sárfugl), "wound-raven" (sárshrefn), "blood-drinker," "feeder of wolves" — since wolves and ravens often co-occur at battlefields. In Odinic contexts, the raven is "thought-bird" or "memory-bird" (referencing Huginn and Muninn). Some kennings use the raven to form compound metaphors for battles or swords: a "raven-feast" (hrafnseðja) is a battle that feeds ravens.' },
+  { q: 'What is the "beast of battle" formula in Norse poetry?', a: 'The "beasts of battle" is a traditional poetic formula found in Old Norse, Old English (Anglo-Saxon), Old High German, and other Germanic poetry. It describes the wolf, the raven, and the eagle — creatures that follow armies and feed on the slain. In Old Norse poetry the formula appears in various battle descriptions: before a great fight, ravens croak, eagles scream, and wolves howl in anticipation. This conventional motif reflects real observation of these scavengers following armed conflict.' },
+  { q: 'Which skalds wrote about ravens?', a: 'Ravens appear across the skaldic corpus from the 9th to 13th centuries. Notable uses include: Bragi Boddason (c. 9th century) in Ragnarsdrápa; Egill Skallagrímsson\'s lausavísur; and many anonymous lausavísur (occasional verses). The raven-feast (hrafnseðja) formula for battle appears in dozens of skaldic poems. Almost any skaldic battle poem will contain raven imagery — it was a standard register of the genre.' },
+];
+---
+
+<BaseLayout title={title} description={description} path={path} ogType="article"
+  datePublished="2026-11-07" dateModified="2026-11-07"
+  breadcrumbs={breadcrumbs} faq={faq} pageType="Article">
+
+<article class="qa-page">
+
+  <nav class="qa-breadcrumb" aria-label="Breadcrumb">
+    <ol>
+      {breadcrumbs.map((b, i) => (
+        <li>
+          {i < breadcrumbs.length - 1
+            ? <><a href={b.url}>{b.name}</a><span aria-hidden="true"> › </span></>
+            : <span aria-current="page">{b.name}</span>}
+        </li>
+      ))}
+    </ol>
+  </nav>
+
+  <header class="qa-header">
+    <p class="qa-pillar">Norse Lore · NRS·12</p>
+    <h1>Ravens in Skaldic Poetry: Kennings, Battle Birds, and Odin's Flock</h1>
+  </header>
+
+  <section class="qa-snippet" aria-label="Direct answer">
+    <p><strong class="claim-lore">[lore]</strong> Ravens are among the most frequent images in Old Norse skaldic poetry. As battle scavengers, they form the core of the "beasts of battle" formula — wolf, raven, and eagle croaking and circling over the slain. As kenning elements, the raven generates dozens of compound metaphors for swords, battles, wounds, and death. As Odin's birds, they appear in Odinic poetry representing divine knowledge and the battlefield deaths that feed both god and bird.</p>
+  </section>
+
+  <section class="qa-section">
+    <h2>Skaldic Poetry and the Raven</h2>
+    <p><strong class="claim-lore">[lore]</strong> Old Norse skaldic poetry is a highly formal, technically demanding court poetry using complex metres (<em>dróttkvætt</em> and others) and elaborate periphrastic compounds called kennings. It was composed by named poets (skalds) from the 9th to 13th centuries and preserved in later saga texts and the poetry manuscripts. The raven appears in this tradition as:<sup><a href="#src-1">1</a></sup></p>
+    <ul>
+      <li><strong>A battle-bird:</strong> in almost every military poem, ravens attend the battlefield to eat the dead. This is not mere metaphor — ravens genuinely follow armies and feed on casualties, and the skalds drew on this observable fact.</li>
+      <li><strong>A kenning element:</strong> kennings are periphrastic two-part compounds. The raven generates a whole cluster of kenning types — for battles, wounds, swords, and warriors.</li>
+      <li><strong>An Odinic symbol:</strong> in poems touching on Odin and his attributes, ravens appear as the god's familiars, embodying his supernatural knowledge.</li>
+    </ul>
+  </section>
+
+  <section class="qa-section">
+    <h2>Raven Kennings</h2>
+    <p><strong class="claim-lore">[lore]</strong> Some representative kenning types using ravens from the skaldic corpus:<sup><a href="#src-1">1</a><sup><a href="#src-2">2</a></sup></p>
+    <ul>
+      <li><strong>Kennings for "battle":</strong> <em>hrafnseðja</em> ("raven-feast," "food for ravens"), <em>hrafnleikr</em> ("raven-play") — battles are events that provide feasts for ravens.</li>
+      <li><strong>Kennings for "sword":</strong> swords are often described as the implements that create raven-feasts — the sword is the bird's "feeder" or "nourisher."</li>
+      <li><strong>Kennings for "warrior" or "lord":</strong> a generous lord who provides great battles is a "feeder of ravens" or "raven-gladdener."</li>
+      <li><strong>Kennings for "wound":</strong> wounds are described via the raven — "raven's drink" (blood), "raven's red" (blood).</li>
+      <li><strong>Kennings for "corpse":</strong> the dead body is the raven's food — "raven-prey," "raven-portion."</li>
+    </ul>
+    <p>This cluster of kenning types shows how central the raven was to the Old Norse poetic imagination of violence, war, and death.</p>
+  </section>
+
+  <section class="qa-section">
+    <h2>The Beasts of Battle</h2>
+    <p><strong class="claim-lore">[lore]</strong> Old Norse poetry shares with Old English poetry a "beasts of battle" formula: before or during a great battle, three scavengers anticipate the feast of the slain — the wolf (<em>úlfr</em>), the raven (<em>hrafn</em>), and the eagle (<em>örn</em>). These three constitute a conventional triad in both traditions, reflecting real behavioural ecology (wolves, ravens, and eagles genuinely co-occur at large carrion events) elevated into a standard poetic formula.<sup><a href="#src-2">2</a></sup></p>
+    <p>The formula appears in Old English poems including Beowulf, Exodus, and The Battle of Brunanburh; in Old Norse it recurs across saga verse, Eddic poems, and lausavísur. Its shared presence across both traditions suggests Proto-Germanic origins or at least very early parallel development.</p>
+  </section>
+
+  <section class="qa-section">
+    <h2>The Raven and Odin in Skaldic Verse</h2>
+    <p><strong class="claim-lore">[lore]</strong> In skaldic poems touching on Odin, the raven figures as his attribute. The god is called <em>Hrafnáss</em> ("Raven-god") and <em>Hrafnaguð</em> ("Raven-deity") in several kennings for Odin. The connection between the valraven (the raven of the slain) and Odin (the god who chooses the slain — the Allfather) is built into the fabric of skaldic poetry: the ravens eating on the battlefield are implicitly Odin's ravens gathering information and nourishment for the god from the sacrifice of warriors.<sup><a href="#src-1">1</a></sup></p>
+  </section>
+
+  <section class="qa-section">
+    <h2>Related Pages</h2>
+    <ul>
+      <li><a href="/lore/norse/huginn-and-muninn/">Huginn and Muninn</a></li>
+      <li><a href="/lore/norse/ravens-in-eddic-kennings/">Ravens in Eddic kennings</a></li>
+      <li><a href="/lore/norse/odin-the-raven-god/">Odin the Raven God</a></li>
+      <li><a href="/questions/why-are-ravens-associated-with-death/">Why are ravens associated with death?</a></li>
+    </ul>
+  </section>
+
+  <section class="qa-faq qa-section" aria-labelledby="faq-h2">
+    <h2 id="faq-h2">Frequently Asked Questions</h2>
+    {faq.map(item => (
+      <details class="qa-faq-item">
+        <summary class="qa-faq-q">{item.q}</summary>
+        <p class="qa-faq-a">{item.a}</p>
+      </details>
+    ))}
+  </section>
+
+  <section class="qa-sources qa-section" aria-labelledby="src-h2">
+    <h2 id="src-h2">Sources</h2>
+    <ol class="qa-src-list">
+      <li id="src-1">Meissner, R. (1921). <em>Die Kenningar der Skalden</em>. Kurt Schroeder. — systematic catalogue of skaldic kennings including raven kennings (German; standard reference for kenning research).</li>
+      <li id="src-2">Griffith, M. (1993). Some difficulties in Beowulf, lines 874–902: Sigemund reconsidered. <em>Anglo-Saxon England</em>, 24, 11–41. — beasts of battle formula in Old English and Old Norse comparative context.</li>
+    </ol>
+    <p class="qa-claim-note"><strong class="claim-lore">[lore]</strong> named cultural/historical source</p>
+  </section>
+
+</article>
+</BaseLayout>
+
+<style>
+  .qa-page { max-width: 820px; margin: 0 auto; padding: 2rem 1.25rem 4rem; color: var(--iron-ink, #e8e4d8); font-family: 'Inter', sans-serif; line-height: 1.72; }
+  .qa-breadcrumb ol { display: flex; flex-wrap: wrap; gap: .25rem; list-style: none; padding: 0; margin: 0 0 2rem; font-size: .8rem; color: var(--ink-soft, #8a8070); }
+  .qa-breadcrumb a { color: var(--gold-500, #d4ae5a); text-decoration: none; }
+  .qa-pillar { font-size: .72rem; letter-spacing: .12em; text-transform: uppercase; color: var(--gold-500, #d4ae5a); margin: 0 0 .4rem; }
+  .qa-page h1 { font-family: 'Cormorant Garamond', serif; font-size: clamp(2rem, 5vw, 3rem); font-weight: 700; color: #fff; margin: 0 0 2rem; line-height: 1.1; }
+  .qa-snippet { background: rgba(212,174,90,.08); border-left: 3px solid var(--gold-500, #d4ae5a); border-radius: 0 6px 6px 0; padding: 1rem 1.25rem; margin-bottom: 2.5rem; font-size: 1.03rem; }
+  .qa-section { margin-bottom: 2.5rem; }
+  .qa-section h2 { font-family: 'Cormorant Garamond', serif; font-size: 1.5rem; font-weight: 600; color: #fff; margin: 0 0 .9rem; border-bottom: 1px solid rgba(212,174,90,.2); padding-bottom: .4rem; }
+  .qa-section p { margin: 0 0 1rem; font-size: .97rem; }
+  .qa-section ul { padding-left: 1.25rem; margin: 0 0 1rem; }
+  .qa-section li { margin-bottom: .4rem; font-size: .95rem; }
+  .claim-lore { color: #c4a26a; font-style: normal; font-size: .78rem; }
+  a[href] { color: var(--gold-500, #d4ae5a); }
+  .qa-faq-item { border-bottom: 1px solid rgba(255,255,255,.07); }
+  .qa-faq-q { cursor: pointer; padding: .9rem 0; font-size: .97rem; font-weight: 500; color: #fff; list-style: none; }
+  .qa-faq-q::before { content: '+ '; color: var(--gold-500, #d4ae5a); font-weight: 700; }
+  details[open] .qa-faq-q::before { content: '− '; }
+  .qa-faq-a { margin: 0 0 1rem; line-height: 1.7; font-size: .93rem; color: var(--ink-soft, #c8c0b0); }
+  .qa-src-list { padding-left: 1.25rem; margin: 0 0 1rem; }
+  .qa-src-list li { margin-bottom: .6rem; font-size: .82rem; color: var(--ink-soft, #8a8070); line-height: 1.6; }
+  .qa-claim-note { font-size: .78rem; color: var(--ink-soft, #605848); border-top: 1px solid rgba(255,255,255,.06); padding-top: .75rem; }
+</style>

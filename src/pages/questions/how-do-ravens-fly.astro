@@ -1,0 +1,149 @@
+---
+/**
+ * Questions — How do ravens fly?
+ * Primary keyword: how do ravens fly
+ * Secondary: raven flight speed, raven soaring, raven aerobatics
+ */
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const title       = 'How Do Ravens Fly? Flight Mechanics, Soaring, and Aerobatics';
+const description = 'Ravens are powerful, versatile fliers capable of sustained soaring, steep dives, barrel rolls, and hovering. This page covers raven flight mechanics, wing morphology, recorded speeds, and the aerobatic play behaviour that makes ravens among the most accomplished avian fliers.';
+const path        = '/questions/how-do-ravens-fly/';
+
+const breadcrumbs = [
+  { name: 'Home',      url: '/' },
+  { name: 'Questions', url: '/questions/' },
+  { name: 'How Do Ravens Fly?', url: path },
+];
+
+const faq = [
+  { q: 'How fast can ravens fly?', a: 'Common Ravens cruise at approximately 25–40 km/h in level flight and can reach 48–64 km/h when flying with purpose or fleeing a threat. In steep stoops or power dives — behaviour documented during aerial play and courtship — ravens can exceed these speeds significantly. Their large wingspan (115–150 cm) and body mass (800–1,600 g) give them considerable momentum in powered dives. These figures are based on radar and field tracking studies; exact maximum speeds vary by individual and conditions.' },
+  { q: 'Can ravens soar?', a: 'Yes — ravens are accomplished soarers, exploiting thermals (rising columns of warm air) and orographic lift (updrafts along cliff faces and ridgelines) to gain altitude with minimal wingbeats. In montane and coastal cliff habitats, ravens routinely soar for extended periods. Soaring behaviour is frequently observed at regular sites — cliff edges, valley ridges, coastal headlands — where updrafts are predictable. This thermal soaring ability is unusual among corvids; crows and rooks rarely soar in the raven manner.' },
+  { q: 'Do ravens do aerobatics?', a: 'Ravens are among the most aerobatically accomplished of all birds. Documented aerial manoeuvres include: sustained inverted flight (flying upside down); barrel rolls and rolls without stalling; steep plunge-dives with half-rolls; and wing-folding speed dives. These manoeuvres occur during play (juvenile and adult ravens play in strong winds), courtship displays (paired ravens perform synchronised aerobatics), and apparently simply for the experience of flight — ravens will seek out strong winds and updrafts and perform manoeuvres with no apparent foraging or territorial function. Bernd Heinrich documented ravens repeatedly climbing and diving in strong mountain winds over sustained periods.' },
+];
+---
+
+<BaseLayout title={title} description={description} path={path} ogType="article"
+  datePublished="2026-11-09" dateModified="2026-11-09"
+  breadcrumbs={breadcrumbs} faq={faq} pageType="Article">
+
+<article class="qa-page">
+
+  <nav class="qa-breadcrumb" aria-label="Breadcrumb">
+    <ol>
+      {breadcrumbs.map((b, i) => (
+        <li>
+          {i < breadcrumbs.length - 1
+            ? <><a href={b.url}>{b.name}</a><span aria-hidden="true"> › </span></>
+            : <span aria-current="page">{b.name}</span>}
+        </li>
+      ))}
+    </ol>
+  </nav>
+
+  <header class="qa-header">
+    <p class="qa-pillar">Questions · Flight</p>
+    <h1>How Do Ravens Fly? Flight Mechanics, Soaring, and Aerobatics</h1>
+  </header>
+
+  <section class="qa-snippet" aria-label="Direct answer">
+    <p><strong class="claim-science">[science]</strong> Ravens are large-bodied, broad-winged corvids capable of three distinct flight modes: sustained powered flapping flight (25–40 km/h cruise), thermal and orographic soaring (exploiting updrafts for altitude gain with minimal effort), and high-speed aerobatics including inverted flight, barrel rolls, and plunge-dives. Their flight versatility is unmatched among corvids and rivals that of large raptors — ravens routinely seek out strong winds to play in, performing manoeuvres with no apparent foraging function.</p>
+  </section>
+
+  <section class="qa-section">
+    <h2>Wing Morphology and What It Enables</h2>
+    <p><strong class="claim-science">[science]</strong> The Common Raven's wing shape is adapted for versatility rather than pure speed or pure efficiency:<sup><a href="#src-1">1</a></sup></p>
+    <ul>
+      <li><strong>Large, broad wings:</strong> wingspan 115–150 cm provides lift area sufficient for soaring in weak thermals and orographic conditions.</li>
+      <li><strong>Prominent primary projection ("fingers"):</strong> the outer primaries are noticeably separated in soaring flight — a silhouette feature shared with large raptors. These fingered wingtips allow fine adjustments to lift in turbulent conditions.</li>
+      <li><strong>Wedge-shaped tail:</strong> the diamond/wedge tail shape (versus the rounded tail of crows) acts as a longitudinal stabiliser and provides additional lift surface during soaring and slow manoeuvring flight.</li>
+      <li><strong>Relatively large body mass:</strong> at 800–1,600 g, ravens have enough momentum for sustained dives and powerful flapping but require more energy for rapid take-off than smaller corvids.</li>
+    </ul>
+  </section>
+
+  <section class="qa-section">
+    <h2>Soaring: Thermals and Ridge Lift</h2>
+    <p><strong class="claim-science">[science]</strong> Ravens exploit two main sources of natural lift for soaring:<sup><a href="#src-1">1</a></sup><sup><a href="#src-2">2</a></sup></p>
+    <ul>
+      <li><strong>Thermals:</strong> rising columns of warm air over sun-heated ground. Ravens circle within thermals, gaining altitude, then glide toward the next thermal or foraging area — a flight strategy identical to that of buzzards and eagles. This allows low-energy long-distance movement.</li>
+      <li><strong>Orographic (ridge) lift:</strong> air deflected upward by cliff faces, valley walls, and ridgelines. Ravens in highland and coastal habitats use this extensively — hovering stationary in updrafts at cliff edges, performing aerobatics in strong ridge winds, and monitoring territory from elevation with minimal wing effort.</li>
+    </ul>
+    <p>This soaring capacity distinguishes ravens clearly from crows: American Crows and Carrion Crows rarely soar in this manner, flapping where ravens would glide.</p>
+  </section>
+
+  <section class="qa-section">
+    <h2>Aerobatic Play and Courtship Flights</h2>
+    <p><strong class="claim-science">[science]</strong> Ravens perform aerial manoeuvres well beyond what foraging or predator escape requires:<sup><a href="#src-2">2</a></sup></p>
+    <ul>
+      <li><strong>Inverted flight:</strong> ravens fly upside down for brief periods — this requires active muscular effort against gravity and serves no obvious foraging function. It is documented in both juveniles and adults, most often in strong winds.</li>
+      <li><strong>Barrel rolls and wing-tucks:</strong> full 360° rolls and partial rolls during descents are recorded in play contexts — multiple repetitions over the same airspace strongly suggest enjoyment of the sensation rather than functional flying.</li>
+      <li><strong>Object play in flight:</strong> ravens carry objects — sticks, pine cones, pieces of bark — aloft and then drop and catch them, or drop them for other ravens to catch mid-air. This aerial object play requires precise flight control.</li>
+      <li><strong>Courtship synchrony:</strong> paired ravens perform parallel aerobatics — mirrored rolls, synchronised dives, and close-formation flying — during pair formation and territory establishment in late winter.</li>
+    </ul>
+  </section>
+
+  <section class="qa-section">
+    <h2>Flight as a Field Identification Mark</h2>
+    <p><strong class="claim-science">[science]</strong> Raven flight style is diagnostic for field identification:<sup><a href="#src-1">1</a></sup></p>
+    <ul>
+      <li>At distance, the soaring silhouette — broad wings, fingered wingtips, wedge tail — is distinctive against crow or rook.</li>
+      <li>Flapping flight is slower and deeper-stroked than a crow's; ravens flap at a measured pace, with deep wingbeats, rather than the crow's quicker, more regular flap.</li>
+      <li>Ravens frequently alternate flapping with gliding even in still conditions — crows rarely glide.</li>
+    </ul>
+  </section>
+
+  <section class="qa-section">
+    <h2>Related Pages</h2>
+    <ul>
+      <li><a href="/questions/how-fast-can-ravens-fly/">How fast can ravens fly?</a></li>
+      <li><a href="/questions/how-do-you-tell-a-raven-from-a-crow-in-flight/">How do you tell a raven from a crow in flight?</a></li>
+      <li><a href="/compare/raven-vs-crow-size/">Raven vs crow size</a></li>
+      <li><a href="/behaviour/raven-play/">Raven play behaviour</a></li>
+    </ul>
+  </section>
+
+  <section class="qa-faq qa-section" aria-labelledby="faq-h2">
+    <h2 id="faq-h2">Frequently Asked Questions</h2>
+    {faq.map(item => (
+      <details class="qa-faq-item">
+        <summary class="qa-faq-q">{item.q}</summary>
+        <p class="qa-faq-a">{item.a}</p>
+      </details>
+    ))}
+  </section>
+
+  <section class="qa-sources qa-section" aria-labelledby="src-h2">
+    <h2 id="src-h2">Sources</h2>
+    <ol class="qa-src-list">
+      <li id="src-1">del Hoyo, J., Elliott, A. & Christie, D. (eds.) (2009). <em>Handbook of the Birds of the World</em>, Vol. 14. Lynx Edicions. — wing measurements, flight silhouette, soaring behaviour, speed estimates.</li>
+      <li id="src-2">Heinrich, B. (1989). <em>Ravens in Winter</em>. Summit Books. — aerobatic play documentation, inverted flight, object play in flight, courtship aerobatics.</li>
+    </ol>
+    <p class="qa-claim-note"><strong class="claim-science">[science]</strong> peer-reviewed data</p>
+  </section>
+
+</article>
+</BaseLayout>
+
+<style>
+  .qa-page { max-width: 820px; margin: 0 auto; padding: 2rem 1.25rem 4rem; color: var(--iron-ink, #e8e4d8); font-family: 'Inter', sans-serif; line-height: 1.72; }
+  .qa-breadcrumb ol { display: flex; flex-wrap: wrap; gap: .25rem; list-style: none; padding: 0; margin: 0 0 2rem; font-size: .8rem; color: var(--ink-soft, #8a8070); }
+  .qa-breadcrumb a { color: var(--gold-500, #d4ae5a); text-decoration: none; }
+  .qa-pillar { font-size: .72rem; letter-spacing: .12em; text-transform: uppercase; color: var(--gold-500, #d4ae5a); margin: 0 0 .4rem; }
+  .qa-page h1 { font-family: 'Cormorant Garamond', serif; font-size: clamp(2rem, 5vw, 3rem); font-weight: 700; color: #fff; margin: 0 0 2rem; line-height: 1.1; }
+  .qa-snippet { background: rgba(212,174,90,.08); border-left: 3px solid var(--gold-500, #d4ae5a); border-radius: 0 6px 6px 0; padding: 1rem 1.25rem; margin-bottom: 2.5rem; font-size: 1.03rem; }
+  .qa-section { margin-bottom: 2.5rem; }
+  .qa-section h2 { font-family: 'Cormorant Garamond', serif; font-size: 1.5rem; font-weight: 600; color: #fff; margin: 0 0 .9rem; border-bottom: 1px solid rgba(212,174,90,.2); padding-bottom: .4rem; }
+  .qa-section p { margin: 0 0 1rem; font-size: .97rem; }
+  .qa-section ul { padding-left: 1.25rem; margin: 0 0 1rem; }
+  .qa-section li { margin-bottom: .4rem; font-size: .95rem; }
+  .claim-science { color: #7ab9e0; font-style: normal; font-size: .78rem; }
+  a[href] { color: var(--gold-500, #d4ae5a); }
+  .qa-faq-item { border-bottom: 1px solid rgba(255,255,255,.07); }
+  .qa-faq-q { cursor: pointer; padding: .9rem 0; font-size: .97rem; font-weight: 500; color: #fff; list-style: none; }
+  .qa-faq-q::before { content: '+ '; color: var(--gold-500, #d4ae5a); font-weight: 700; }
+  details[open] .qa-faq-q::before { content: '− '; }
+  .qa-faq-a { margin: 0 0 1rem; line-height: 1.7; font-size: .93rem; color: var(--ink-soft, #c8c0b0); }
+  .qa-src-list { padding-left: 1.25rem; margin: 0 0 1rem; }
+  .qa-src-list li { margin-bottom: .6rem; font-size: .82rem; color: var(--ink-soft, #8a8070); line-height: 1.6; }
+  .qa-claim-note { font-size: .78rem; color: var(--ink-soft, #605848); border-top: 1px solid rgba(255,255,255,.06); padding-top: .75rem; }
+</style>

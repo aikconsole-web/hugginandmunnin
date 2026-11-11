@@ -1,0 +1,148 @@
+---
+/**
+ * Q&A — How long do ravens live in captivity vs wild?
+ * This is a NEW page at a different path from raven-lifespan-in-captivity.astro
+ * Primary keyword: how long do ravens live in captivity
+ * Secondary: raven lifespan captivity vs wild, raven maximum age
+ */
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const title       = 'How Long Do Ravens Live in Captivity vs the Wild?';
+const description = 'Wild ravens typically live 10–15 years; captive ravens can reach 40+ years. This page examines the differences in raven lifespan between wild and captive conditions, what causes early death in the wild, and the record ages recorded in both settings.';
+const path        = '/questions/how-long-do-ravens-live-in-captivity/';
+
+const breadcrumbs = [
+  { name: 'Home',      url: '/' },
+  { name: 'Questions', url: '/questions/' },
+  { name: 'How Long Do Ravens Live in Captivity?', url: path },
+];
+
+const faq = [
+  { q: 'What is the oldest recorded raven?', a: 'The oldest reliably documented raven was a captive individual named "Jimmy" at the Tower of London, reported to have lived to approximately 44 years. However, Tower of London raven records are not rigorously scientific. In peer-reviewed contexts, the longest-lived wild raven with confirmed band data was recorded at 23 years (a banded individual in North America); the longest captive ravens in controlled settings have been documented at 30–40+ years. The Tower of London\'s ravens (kept since at least the 17th century, with continuous care) represent the most famous long-lived raven population in the world.' },
+  { q: 'How long do wild ravens typically live?', a: 'Wild Common Ravens typically live 10–15 years, with a maximum of approximately 20–25 years for the longest-lived individuals. Survival is lowest in the first year of life — predation, food scarcity, and inexperience kill many juveniles before their first birthday. Adults with established territories have higher annual survival rates (estimated 70–80% per year in some populations) but still face hazards including predation by eagles and large owls, human persecution (poisoning, shooting), collisions with vehicles and structures, and disease.' },
+  { q: 'Why do captive ravens live so much longer than wild ravens?', a: 'Captive ravens live longer primarily because they are protected from the main causes of wild raven death: predation (zero predator pressure in captivity); food scarcity (fed reliably regardless of weather or season); accidental death (no vehicles, power lines, or traps); and disease (veterinary care available). The physiological lifespan of a raven — how long the body can function absent external mortality — is apparently 40+ years, as demonstrated by long-lived captive birds. Wild ravens rarely approach this because external mortality kills most birds long before they reach physiological age limits.' },
+];
+---
+
+<BaseLayout title={title} description={description} path={path} ogType="article"
+  datePublished="2026-11-08" dateModified="2026-11-08"
+  breadcrumbs={breadcrumbs} faq={faq} pageType="Article">
+
+<article class="qa-page">
+
+  <nav class="qa-breadcrumb" aria-label="Breadcrumb">
+    <ol>
+      {breadcrumbs.map((b, i) => (
+        <li>
+          {i < breadcrumbs.length - 1
+            ? <><a href={b.url}>{b.name}</a><span aria-hidden="true"> › </span></>
+            : <span aria-current="page">{b.name}</span>}
+        </li>
+      ))}
+    </ol>
+  </nav>
+
+  <header class="qa-header">
+    <p class="qa-pillar">Question · Biology</p>
+    <h1>How Long Do Ravens Live in Captivity vs the Wild?</h1>
+  </header>
+
+  <section class="qa-snippet" aria-label="Direct answer">
+    <p><strong class="claim-science">[science]</strong> Wild Common Ravens typically live 10–15 years; maximum recorded wild age is approximately 23 years (banded individuals). Captive ravens regularly reach 30–40+ years when protected from predation, food scarcity, and accidents. The difference reflects external mortality causes in the wild rather than any biological limit — the physiological lifespan of a raven appears to exceed 40 years.</p>
+  </section>
+
+  <section class="qa-section">
+    <h2>Wild Raven Lifespan</h2>
+    <p><strong class="claim-science">[science]</strong> Wild raven survival follows the typical pattern of long-lived birds: high juvenile mortality; improved survival once a territory is established; gradual decline with age.<sup><a href="#src-1">1</a></sup></p>
+    <p>Key survival data for wild Common Ravens:</p>
+    <ul>
+      <li><strong>First-year survival:</strong> approximately 50–60% of juveniles survive their first year — mortality from predation, starvation, and inexperience is highest in this period.</li>
+      <li><strong>Adult annual survival:</strong> established territorial adults have annual survival rates estimated at 70–85% in stable populations.</li>
+      <li><strong>Median lifespan:</strong> approximately 10–15 years in temperate North American and European populations.</li>
+      <li><strong>Maximum recorded wild age:</strong> approximately 21–23 years for banded individuals with confirmed records.</li>
+    </ul>
+  </section>
+
+  <section class="qa-section">
+    <h2>Captive Raven Lifespan</h2>
+    <p><strong class="claim-science">[science]</strong> Captive ravens consistently survive well beyond wild maximums when given appropriate care:<sup><a href="#src-1">1</a></sup></p>
+    <ul>
+      <li>Well-documented captive ravens in research and educational settings have reached 30–40 years.</li>
+      <li>The Tower of London ravens (a continuous captive population maintained since the 17th–18th century) have included individuals reportedly reaching 40+ years; records are not scientifically verified but reflect extraordinary longevity.</li>
+      <li>Ravens in zoos and aviaries regularly reach their mid-20s and beyond with proper nutrition and veterinary care.</li>
+    </ul>
+    <p>The key factors enabling captive longevity: elimination of predation, reliable nutrition, veterinary treatment of injury and disease, and removal of competition stress that causes chronic physiological stress in subordinate wild ravens.</p>
+  </section>
+
+  <section class="qa-section">
+    <h2>Main Causes of Death in Wild Ravens</h2>
+    <p><strong class="claim-science">[science]</strong> Wild ravens face several mortality causes absent in captivity:<sup><a href="#src-1">1</a></sup></p>
+    <ul>
+      <li><strong>Predation:</strong> Golden Eagles and Great Horned Owls take ravens, particularly at roosts and during the vulnerable fledgling stage. Foxes and martens may raid ground nests.</li>
+      <li><strong>Human persecution:</strong> historically extensive (ravens were widely killed as vermin and livestock predators); legally reduced in most countries now but still occurring illegally.</li>
+      <li><strong>Vehicle collisions:</strong> ravens feeding on road-killed animals are frequently struck by vehicles themselves — a significant modern mortality cause.</li>
+      <li><strong>Starvation:</strong> particularly in juveniles and during severe winters when food scarcity is prolonged.</li>
+      <li><strong>Lead poisoning:</strong> ravens ingesting shot animals (deer carcasses with lead shot fragments) accumulate lead — a documented cause of death in scavenger birds.</li>
+    </ul>
+  </section>
+
+  <section class="qa-section">
+    <h2>Aging in Ravens</h2>
+    <p><strong class="claim-science">[science]</strong> Ravens show some behavioural correlates of aging in long-lived captive individuals: reduced activity levels, slower moult, and gradual reduction in reproductive output with very advanced age. However, the cellular and molecular biology of raven aging is not well-studied compared to model organisms. Ravens have proportionally long telomeres for their body size — a correlate of longevity in birds — consistent with their actual lifespan exceeding most passerines of equivalent size.<sup><a href="#src-2">2</a></sup></p>
+  </section>
+
+  <section class="qa-section">
+    <h2>Related Pages</h2>
+    <ul>
+      <li><a href="/questions/how-long-do-ravens-live/">How long do ravens live?</a></li>
+      <li><a href="/questions/raven-lifespan-in-captivity/">Raven lifespan in captivity</a></li>
+      <li><a href="/lore/world/tower-of-london-ravens/">Tower of London ravens</a></li>
+      <li><a href="/questions/do-ravens-have-predators/">Do ravens have predators?</a></li>
+    </ul>
+  </section>
+
+  <section class="qa-faq qa-section" aria-labelledby="faq-h2">
+    <h2 id="faq-h2">Frequently Asked Questions</h2>
+    {faq.map(item => (
+      <details class="qa-faq-item">
+        <summary class="qa-faq-q">{item.q}</summary>
+        <p class="qa-faq-a">{item.a}</p>
+      </details>
+    ))}
+  </section>
+
+  <section class="qa-sources qa-section" aria-labelledby="src-h2">
+    <h2 id="src-h2">Sources</h2>
+    <ol class="qa-src-list">
+      <li id="src-1">Boarman, W.I. & Heinrich, B. (1999). Common Raven (<em>Corvus corax</em>). In Poole, A. (ed.), <em>The Birds of North America</em>, No. 476. Cornell Lab of Ornithology. — survival rates, lifespan data, mortality causes in wild ravens.</li>
+      <li id="src-2">Heidinger, B.J. et al. (2012). Telomere length in early life predicts lifespan. <em>Proceedings of the National Academy of Sciences</em>, 109(5), 1743–1748. — telomere biology and avian lifespan; context for raven longevity.</li>
+    </ol>
+    <p class="qa-claim-note"><strong class="claim-science">[science]</strong> peer-reviewed data</p>
+  </section>
+
+</article>
+</BaseLayout>
+
+<style>
+  .qa-page { max-width: 820px; margin: 0 auto; padding: 2rem 1.25rem 4rem; color: var(--iron-ink, #e8e4d8); font-family: 'Inter', sans-serif; line-height: 1.72; }
+  .qa-breadcrumb ol { display: flex; flex-wrap: wrap; gap: .25rem; list-style: none; padding: 0; margin: 0 0 2rem; font-size: .8rem; color: var(--ink-soft, #8a8070); }
+  .qa-breadcrumb a { color: var(--gold-500, #d4ae5a); text-decoration: none; }
+  .qa-pillar { font-size: .72rem; letter-spacing: .12em; text-transform: uppercase; color: var(--gold-500, #d4ae5a); margin: 0 0 .4rem; }
+  .qa-page h1 { font-family: 'Cormorant Garamond', serif; font-size: clamp(2rem, 5vw, 3rem); font-weight: 700; color: #fff; margin: 0 0 2rem; line-height: 1.1; }
+  .qa-snippet { background: rgba(212,174,90,.08); border-left: 3px solid var(--gold-500, #d4ae5a); border-radius: 0 6px 6px 0; padding: 1rem 1.25rem; margin-bottom: 2.5rem; font-size: 1.03rem; }
+  .qa-section { margin-bottom: 2.5rem; }
+  .qa-section h2 { font-family: 'Cormorant Garamond', serif; font-size: 1.5rem; font-weight: 600; color: #fff; margin: 0 0 .9rem; border-bottom: 1px solid rgba(212,174,90,.2); padding-bottom: .4rem; }
+  .qa-section p { margin: 0 0 1rem; font-size: .97rem; }
+  .qa-section ul { padding-left: 1.25rem; margin: 0 0 1rem; }
+  .qa-section li { margin-bottom: .4rem; font-size: .95rem; }
+  .claim-science { color: #7ab9e0; font-style: normal; font-size: .78rem; }
+  a[href] { color: var(--gold-500, #d4ae5a); }
+  .qa-faq-item { border-bottom: 1px solid rgba(255,255,255,.07); }
+  .qa-faq-q { cursor: pointer; padding: .9rem 0; font-size: .97rem; font-weight: 500; color: #fff; list-style: none; }
+  .qa-faq-q::before { content: '+ '; color: var(--gold-500, #d4ae5a); font-weight: 700; }
+  details[open] .qa-faq-q::before { content: '− '; }
+  .qa-faq-a { margin: 0 0 1rem; line-height: 1.7; font-size: .93rem; color: var(--ink-soft, #c8c0b0); }
+  .qa-src-list { padding-left: 1.25rem; margin: 0 0 1rem; }
+  .qa-src-list li { margin-bottom: .6rem; font-size: .82rem; color: var(--ink-soft, #8a8070); line-height: 1.6; }
+  .qa-claim-note { font-size: .78rem; color: var(--ink-soft, #605848); border-top: 1px solid rgba(255,255,255,.06); padding-top: .75rem; }
+</style>

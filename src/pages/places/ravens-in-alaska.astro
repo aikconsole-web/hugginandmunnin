@@ -1,0 +1,142 @@
+---
+/**
+ * Places — Ravens in Alaska
+ * PLC·05
+ * Primary keyword: ravens in alaska
+ * Secondary: alaska raven, common raven alaska, trickster raven alaska
+ */
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const title       = 'Ravens in Alaska: Ecology, Population, and Indigenous Traditions';
+const description = 'Alaska has one of the world\'s highest raven densities. The raven is central to Tlingit, Haida, and other Northwest Coast and Arctic Indigenous traditions as the Trickster-Creator. This page covers the Alaskan raven population, ecology, and cultural significance.';
+const path        = '/places/ravens-in-alaska/';
+
+const breadcrumbs = [
+  { name: 'Home',   url: '/' },
+  { name: 'Places', url: '/places/' },
+  { name: 'Ravens in Alaska', url: path },
+];
+
+const faq = [
+  { q: 'Are ravens common in Alaska?', a: 'Yes. The Common Raven is abundant and widespread throughout Alaska — from the temperate rainforests of the southeast (where it is closely associated with Tlingit and Haida culture) to the boreal forests of the interior (around Fairbanks and the Tanana valley) to the Arctic tundra of the North Slope. Ravens are year-round residents in Alaska, among the few birds that remain through the severe interior winters. They are closely associated with human settlements in winter, exploiting food waste.' },
+  { q: 'What do Alaska ravens eat in winter?', a: 'Alaska ravens in winter are highly opportunistic. Major winter food sources include: carrion from moose, caribou, and other large mammals that die in the cold; food scraps around human communities and roadsides; fish carcasses near rivers and coastal areas; and cache retrieval — ravens cache food extensively in autumn and retrieve it in winter. In the most extreme interior winter conditions, ravens from communal roosts near towns (Fairbanks, Anchorage, Juneau) forage almost entirely around human infrastructure.' },
+  { q: 'What is the significance of the raven in Tlingit culture?', a: 'In Tlingit culture (and those of the Haida, Tsimshian, and other Northwest Coast peoples), Raven (Yéil in Tlingit) is the supreme Trickster-Creator figure. Raven stole the sun, moon, stars, and fire for humanity; he released the first humans from a clamshell; he created rivers and lakes. The raven is not only a trickster but also an ambiguous moral force — clever, greedy, creative, and transformative. The Raven moiety is one of the two fundamental social divisions of Tlingit society, encompassing roughly half the people.' },
+];
+---
+
+<BaseLayout title={title} description={description} path={path} ogType="article"
+  datePublished="2026-11-07" dateModified="2026-11-07"
+  breadcrumbs={breadcrumbs} faq={faq} pageType="Article">
+
+<article class="qa-page">
+
+  <nav class="qa-breadcrumb" aria-label="Breadcrumb">
+    <ol>
+      {breadcrumbs.map((b, i) => (
+        <li>
+          {i < breadcrumbs.length - 1
+            ? <><a href={b.url}>{b.name}</a><span aria-hidden="true"> › </span></>
+            : <span aria-current="page">{b.name}</span>}
+        </li>
+      ))}
+    </ol>
+  </nav>
+
+  <header class="qa-header">
+    <p class="qa-pillar">Places · PLC·05</p>
+    <h1>Ravens in Alaska: Ecology, Population, and Indigenous Traditions</h1>
+  </header>
+
+  <section class="qa-snippet" aria-label="Direct answer">
+    <p><strong class="claim-science">[science]</strong> Alaska supports one of the world's highest raven densities — birds are present year-round from the rainforests of the southeast to the Arctic tundra of the North Slope. <strong class="claim-lore">[lore]</strong> The raven is the central Trickster-Creator in Tlingit, Haida, and other Northwest Coast and Arctic Indigenous traditions — a figure who stole the sun and released humanity from a clamshell. The Raven moiety is a fundamental social division in Tlingit society.</p>
+  </section>
+
+  <section class="qa-section">
+    <h2>Population and Ecology</h2>
+    <p><strong class="claim-science">[science]</strong> Ravens occupy every major Alaskan habitat type year-round:<sup><a href="#src-1">1</a></sup></p>
+    <ul>
+      <li><strong>Southeast Alaska (rainforest coast):</strong> densest populations associated with the temperate rainforest, intertidal zone, and human settlements. Ravens forage on marine life, salmon carcasses, and food scraps from fishing communities.</li>
+      <li><strong>Interior Alaska (boreal forest and taiga):</strong> breeding pairs in boreal forest; large communal winter roosts near towns. Fairbanks ravens are famous for surviving temperatures below −40°C, roosting on warm structures and exploiting dumpsters and food waste.</li>
+      <li><strong>Arctic Alaska (tundra):</strong> breeding pairs use the few cliff sites and permafrost outcrops on the North Slope. Ravens are closely associated with human camps and infrastructure in this otherwise food-poor landscape.</li>
+      <li><strong>Winter aggregations:</strong> non-breeding and territorial ravens alike concentrate around towns in the extreme interior winters — Fairbanks regularly has roosts of hundreds of birds.</li>
+    </ul>
+  </section>
+
+  <section class="qa-section">
+    <h2>Winter Survival at the Extremes</h2>
+    <p><strong class="claim-science">[science]</strong> Ravens in interior Alaska have been extensively studied for cold-tolerance and behavioural adaptation. Key adaptations include:<sup><a href="#src-1">1</a></sup></p>
+    <ul>
+      <li>Dense plumage with high insulation value — ravens can maintain body temperature at temperatures below −40°C with appropriate food intake.</li>
+      <li>Increased foraging time and reduced activity in extreme cold — minimising heat loss through behaviour.</li>
+      <li>Heavy use of food caches established in autumn; food caching is especially extensive in Alaskan ravens before winter.</li>
+      <li>Communal roosting — large groups at sheltered warm sites (near power plants, buildings, in dense spruce stands) reduce individual heat loss through clustering.</li>
+    </ul>
+  </section>
+
+  <section class="qa-section">
+    <h2>The Raven in Tlingit and Northwest Coast Culture</h2>
+    <p><strong class="claim-lore">[lore]</strong> The Raven (Yéil) is the supreme cultural hero and trickster of Tlingit oral tradition — and of the closely related Haida (Yáahl), Tsimshian, and other Northwest Coast peoples:<sup><a href="#src-2">2</a></sup></p>
+    <ul>
+      <li><strong>Stealing light:</strong> in the most widespread Raven creation myth, Raven steals the sun, moon, and stars from a great chief who keeps them in boxes, releasing them into the sky for all humanity.</li>
+      <li><strong>Releasing humanity:</strong> in one widely told version, Raven finds the first humans trapped inside a giant clamshell and coaxes or tricks them into emerging into the world.</li>
+      <li><strong>Creating geography:</strong> Raven makes rivers, lakes, mountains, and other landscape features through trickery or transformation throughout the cycle of stories.</li>
+      <li><strong>The Raven moiety:</strong> Tlingit society is divided into two clans (moieties) — Raven (Yéil) and Eagle (Ch'áak'). The moiety system regulates marriage, ceremony, and mutual obligation. Roughly half of all Tlingit people are Ravens.</li>
+    </ul>
+  </section>
+
+  <section class="qa-section">
+    <h2>Related Pages</h2>
+    <ul>
+      <li><a href="/places/ravens-in-yellowstone/">Ravens in Yellowstone</a></li>
+      <li><a href="/places/ravens-in-iceland/">Ravens in Iceland</a></li>
+      <li><a href="/lore/world/raven-trickster-northwest-coast/">Raven Trickster: Northwest Coast traditions</a></li>
+      <li><a href="/questions/where-do-ravens-live/">Where do ravens live?</a></li>
+    </ul>
+  </section>
+
+  <section class="qa-faq qa-section" aria-labelledby="faq-h2">
+    <h2 id="faq-h2">Frequently Asked Questions</h2>
+    {faq.map(item => (
+      <details class="qa-faq-item">
+        <summary class="qa-faq-q">{item.q}</summary>
+        <p class="qa-faq-a">{item.a}</p>
+      </details>
+    ))}
+  </section>
+
+  <section class="qa-sources qa-section" aria-labelledby="src-h2">
+    <h2 id="src-h2">Sources</h2>
+    <ol class="qa-src-list">
+      <li id="src-1">Boarman, W.I. & Heinrich, B. (1999). Common Raven (<em>Corvus corax</em>). In Poole, A. (ed.), <em>The Birds of North America</em>, No. 476. Cornell Lab of Ornithology. — range, population, winter ecology, cold tolerance.</li>
+      <li id="src-2">Dauenhauer, N.M. & Dauenhauer, R. (eds., 1987). <em>Haa Shuká, Our Ancestors: Tlingit Oral Narratives</em>. University of Washington Press / Sealaska Heritage Foundation. — Raven creation cycle; Yéil stories; moiety system.</li>
+    </ol>
+    <p class="qa-claim-note"><strong class="claim-science">[science]</strong> peer-reviewed or field-guide data &nbsp;|&nbsp; <strong class="claim-lore">[lore]</strong> named cultural/historical source</p>
+  </section>
+
+</article>
+</BaseLayout>
+
+<style>
+  .qa-page { max-width: 820px; margin: 0 auto; padding: 2rem 1.25rem 4rem; color: var(--iron-ink, #e8e4d8); font-family: 'Inter', sans-serif; line-height: 1.72; }
+  .qa-breadcrumb ol { display: flex; flex-wrap: wrap; gap: .25rem; list-style: none; padding: 0; margin: 0 0 2rem; font-size: .8rem; color: var(--ink-soft, #8a8070); }
+  .qa-breadcrumb a { color: var(--gold-500, #d4ae5a); text-decoration: none; }
+  .qa-pillar { font-size: .72rem; letter-spacing: .12em; text-transform: uppercase; color: var(--gold-500, #d4ae5a); margin: 0 0 .4rem; }
+  .qa-page h1 { font-family: 'Cormorant Garamond', serif; font-size: clamp(2rem, 5vw, 3rem); font-weight: 700; color: #fff; margin: 0 0 2rem; line-height: 1.1; }
+  .qa-snippet { background: rgba(212,174,90,.08); border-left: 3px solid var(--gold-500, #d4ae5a); border-radius: 0 6px 6px 0; padding: 1rem 1.25rem; margin-bottom: 2.5rem; font-size: 1.03rem; }
+  .qa-section { margin-bottom: 2.5rem; }
+  .qa-section h2 { font-family: 'Cormorant Garamond', serif; font-size: 1.5rem; font-weight: 600; color: #fff; margin: 0 0 .9rem; border-bottom: 1px solid rgba(212,174,90,.2); padding-bottom: .4rem; }
+  .qa-section p { margin: 0 0 1rem; font-size: .97rem; }
+  .qa-section ul { padding-left: 1.25rem; margin: 0 0 1rem; }
+  .qa-section li { margin-bottom: .4rem; font-size: .95rem; }
+  .claim-science { color: #7ab9e0; font-style: normal; font-size: .78rem; }
+  .claim-lore { color: #c4a26a; font-style: normal; font-size: .78rem; }
+  a[href] { color: var(--gold-500, #d4ae5a); }
+  .qa-faq-item { border-bottom: 1px solid rgba(255,255,255,.07); }
+  .qa-faq-q { cursor: pointer; padding: .9rem 0; font-size: .97rem; font-weight: 500; color: #fff; list-style: none; }
+  .qa-faq-q::before { content: '+ '; color: var(--gold-500, #d4ae5a); font-weight: 700; }
+  details[open] .qa-faq-q::before { content: '− '; }
+  .qa-faq-a { margin: 0 0 1rem; line-height: 1.7; font-size: .93rem; color: var(--ink-soft, #c8c0b0); }
+  .qa-src-list { padding-left: 1.25rem; margin: 0 0 1rem; }
+  .qa-src-list li { margin-bottom: .6rem; font-size: .82rem; color: var(--ink-soft, #8a8070); line-height: 1.6; }
+  .qa-claim-note { font-size: .78rem; color: var(--ink-soft, #605848); border-top: 1px solid rgba(255,255,255,.06); padding-top: .75rem; }
+</style>

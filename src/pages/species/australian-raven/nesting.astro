@@ -1,0 +1,136 @@
+---
+/**
+ * Species sub-page — Australian Raven nesting
+ * SPC·02n
+ * Primary keyword: australian raven nesting
+ * Secondary: australian raven nest, corvus coronoides eggs, australian raven breeding season
+ */
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+
+const title       = 'Australian Raven Nesting: Breeding Season and Nest Sites';
+const description = 'The Australian Raven builds a large stick nest in the fork of a tall tree and breeds from July to October. This page covers nest structure, clutch size, incubation, and the breeding season of Corvus coronoides.';
+const path        = '/species/australian-raven/nesting/';
+
+const breadcrumbs = [
+  { name: 'Home',              url: '/' },
+  { name: 'Species',           url: '/species/' },
+  { name: 'Australian Raven',  url: '/species/australian-raven/' },
+  { name: 'Nesting',           url: path },
+];
+
+const faq = [
+  { q: 'Where does the Australian Raven nest?', a: 'The Australian Raven nests in the fork or on a horizontal branch of a tall tree — typically a large eucalyptus in open woodland, pastoral land, or the edge of towns. Unlike cliff-nesting ravens (such as the White-necked Raven of Africa), the Australian Raven is primarily a tree-nester across its range in south-eastern and south-western Australia.' },
+  { q: 'When does the Australian Raven breed?', a: 'The Australian Raven breeds from approximately July to October — the Southern Hemisphere late-winter to spring. Egg-laying typically peaks August–September. The timing varies slightly with latitude and local conditions but is broadly consistent across the species\' range in south-eastern and south-western Australia.' },
+  { q: 'How many eggs does the Australian Raven lay?', a: 'Clutch size is typically 4–6 eggs, slightly larger than many Northern Hemisphere raven species. Eggs are pale blue-green to greenish, blotched with brown and grey. Incubation is approximately 20 days, primarily by the female. Chicks fledge at approximately 5–6 weeks, but family groups remain together for some months after fledging.' },
+];
+---
+
+<BaseLayout title={title} description={description} path={path} ogType="article"
+  datePublished="2026-11-07" dateModified="2026-11-07"
+  breadcrumbs={breadcrumbs} faq={faq} pageType="Article">
+
+<article class="qa-page">
+
+  <nav class="qa-breadcrumb" aria-label="Breadcrumb">
+    <ol>
+      {breadcrumbs.map((b, i) => (
+        <li>
+          {i < breadcrumbs.length - 1
+            ? <><a href={b.url}>{b.name}</a><span aria-hidden="true"> › </span></>
+            : <span aria-current="page">{b.name}</span>}
+        </li>
+      ))}
+    </ol>
+  </nav>
+
+  <header class="qa-header">
+    <p class="qa-pillar">Species Sub-page · SPC·02n</p>
+    <h1>Australian Raven Nesting: Breeding Season and Nest Sites</h1>
+  </header>
+
+  <section class="qa-snippet" aria-label="Direct answer">
+    <p><strong class="claim-science">[science]</strong> The Australian Raven (<em>Corvus coronoides</em>) builds a large stick nest in the fork of a tall eucalyptus or similar tree. Clutch size is typically 4–6 eggs. Breeding season runs approximately July–October (Southern Hemisphere late-winter to spring), with egg-laying peaking in August–September.</p>
+  </section>
+
+  <section class="qa-section">
+    <h2>Nest Sites</h2>
+    <p><strong class="claim-science">[science]</strong> The Australian Raven is a tree-nester throughout its range in south-eastern and south-western Australia:<sup><a href="#src-1">1</a></sup></p>
+    <ul>
+      <li><strong>Primary sites:</strong> the fork or a stout horizontal branch of a tall tree — most commonly a large eucalyptus (gum tree) in open woodland, pastoral land, roadside trees, or parks on the edge of towns and cities.</li>
+      <li><strong>Height:</strong> nests are usually placed high — typically 10–25 m above ground — giving a clear view of the surroundings and deterring ground predators.</li>
+      <li><strong>Human structures:</strong> occasionally uses electricity pylons or similar structures in treeless agricultural areas.</li>
+    </ul>
+    <p>Pairs maintain long-term territories and show site fidelity, often returning to the same tree and rebuilding or refurbishing an existing nest in successive breeding seasons.</p>
+  </section>
+
+  <section class="qa-section">
+    <h2>Nest Structure and Eggs</h2>
+    <p><strong class="claim-science">[science]</strong> The nest is a large, bulky platform of sticks and branches, lined with bark, wool, grass, and other soft materials. Completed nests measure roughly 50–80 cm in diameter. Clutch size: typically 4–6 eggs. Eggs are pale blue-green to greenish, heavily blotched with brown, grey, and olive. Incubation: approximately 20 days, mainly by the female while the male provisions her. Chicks fledge at approximately 5–6 weeks; family groups remain loosely associated for several months post-fledging.<sup><a href="#src-1">1</a></sup></p>
+  </section>
+
+  <section class="qa-section">
+    <h2>Breeding Season</h2>
+    <p><strong class="claim-science">[science]</strong> Breeding in the Southern Hemisphere corresponds to late winter and spring:<sup><a href="#src-1">1</a></sup></p>
+    <ul>
+      <li><strong>Nest building / territory reinforcement:</strong> June–July.</li>
+      <li><strong>Egg-laying:</strong> July–September (peak August–September).</li>
+      <li><strong>Fledging:</strong> October–November.</li>
+      <li><strong>Post-fledging dependence:</strong> October–January, overlapping with early summer.</li>
+    </ul>
+    <p>Breeding pairs are strongly territorial and exclude conspecifics from the nest area throughout the season.</p>
+  </section>
+
+  <section class="qa-section">
+    <h2>Related Pages</h2>
+    <ul>
+      <li><a href="/species/australian-raven/">Australian Raven — species hub</a></li>
+      <li><a href="/species/australian-raven/diet/">Australian Raven diet</a></li>
+      <li><a href="/species/forest-raven/nesting/">Forest Raven nesting (closest relative)</a></li>
+      <li><a href="/questions/how-many-eggs-do-ravens-lay/">How many eggs do ravens lay?</a></li>
+    </ul>
+  </section>
+
+  <section class="qa-faq qa-section" aria-labelledby="faq-h2">
+    <h2 id="faq-h2">Frequently Asked Questions</h2>
+    {faq.map(item => (
+      <details class="qa-faq-item">
+        <summary class="qa-faq-q">{item.q}</summary>
+        <p class="qa-faq-a">{item.a}</p>
+      </details>
+    ))}
+  </section>
+
+  <section class="qa-sources qa-section" aria-labelledby="src-h2">
+    <h2 id="src-h2">Sources</h2>
+    <ol class="qa-src-list">
+      <li id="src-1">Higgins, P.J., Peter, J.M. & Cowling, S.J. (eds., 2006). <em>Handbook of Australian, New Zealand and Antarctic Birds</em> (HANZAB), vol. 7. Oxford University Press. — Australian Raven species account; nest, eggs, breeding season.</li>
+    </ol>
+    <p class="qa-claim-note"><strong class="claim-science">[science]</strong> peer-reviewed or field-guide data</p>
+  </section>
+
+</article>
+</BaseLayout>
+
+<style>
+  .qa-page { max-width: 820px; margin: 0 auto; padding: 2rem 1.25rem 4rem; color: var(--iron-ink, #e8e4d8); font-family: 'Inter', sans-serif; line-height: 1.72; }
+  .qa-breadcrumb ol { display: flex; flex-wrap: wrap; gap: .25rem; list-style: none; padding: 0; margin: 0 0 2rem; font-size: .8rem; color: var(--ink-soft, #8a8070); }
+  .qa-breadcrumb a { color: var(--gold-500, #d4ae5a); text-decoration: none; }
+  .qa-pillar { font-size: .72rem; letter-spacing: .12em; text-transform: uppercase; color: var(--gold-500, #d4ae5a); margin: 0 0 .4rem; }
+  .qa-page h1 { font-family: 'Cormorant Garamond', serif; font-size: clamp(2rem, 5vw, 3rem); font-weight: 700; color: #fff; margin: 0 0 2rem; line-height: 1.1; }
+  .qa-snippet { background: rgba(212,174,90,.08); border-left: 3px solid var(--gold-500, #d4ae5a); border-radius: 0 6px 6px 0; padding: 1rem 1.25rem; margin-bottom: 2.5rem; font-size: 1.03rem; }
+  .qa-section { margin-bottom: 2.5rem; }
+  .qa-section h2 { font-family: 'Cormorant Garamond', serif; font-size: 1.5rem; font-weight: 600; color: #fff; margin: 0 0 .9rem; border-bottom: 1px solid rgba(212,174,90,.2); padding-bottom: .4rem; }
+  .qa-section p { margin: 0 0 1rem; font-size: .97rem; }
+  .qa-section ul { padding-left: 1.25rem; margin: 0 0 1rem; }
+  .qa-section li { margin-bottom: .4rem; font-size: .95rem; }
+  .claim-science { color: #7ab9e0; font-style: normal; font-size: .78rem; }
+  a[href] { color: var(--gold-500, #d4ae5a); }
+  .qa-faq-item { border-bottom: 1px solid rgba(255,255,255,.07); }
+  .qa-faq-q { cursor: pointer; padding: .9rem 0; font-size: .97rem; font-weight: 500; color: #fff; list-style: none; }
+  .qa-faq-q::before { content: '+ '; color: var(--gold-500, #d4ae5a); font-weight: 700; }
+  details[open] .qa-faq-q::before { content: '− '; }
+  .qa-faq-a { margin: 0 0 1rem; line-height: 1.7; font-size: .93rem; color: var(--ink-soft, #c8c0b0); }
+  .qa-src-list { padding-left: 1.25rem; margin: 0 0 1rem; }
+  .qa-src-list li { margin-bottom: .6rem; font-size: .82rem; color: var(--ink-soft, #8a8070); line-height: 1.6; }
+  .qa-claim-note { font-size: .78rem; color: var(--ink-soft, #605848); border-top: 1px solid rgba(255,255,255,.06); padding-top: .75rem; }
+</style>

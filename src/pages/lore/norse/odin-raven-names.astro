@@ -1,0 +1,136 @@
+---
+/**
+ * Norse Lore — Odin's raven names and epithets
+ * NRS·17
+ * Primary keyword: odin raven names
+ * Secondary: odin raven god names, hrafnaguð, odin raven epithet
+ */
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const title       = 'Odin\'s Raven Names: Hrafnaguð and the Raven Epithets of the Allfather';
+const description = 'Odin has dozens of names in Norse tradition — several specifically reference his ravens and his identity as the Raven-God. This page examines Odin\'s raven-related names, what they reveal about his nature, and how the raven defines his identity in eddic and skaldic tradition.';
+const path        = '/lore/norse/odin-raven-names/';
+
+const breadcrumbs = [
+  { name: 'Home',       url: '/' },
+  { name: 'Norse Lore', url: '/lore/norse/' },
+  { name: 'Odin\'s Raven Names', url: path },
+];
+
+const faq = [
+  { q: 'What are Odin\'s raven names?', a: 'Odin\'s most direct raven-related names include: Hrafnaguð ("Raven-God"), attested in several skaldic poems; Hrafnáss ("Raven-God" / "Raven-Deity", a compound with áss, one of the terms for the Æsir gods); and by extension his kennings as "lord of Huginn" or "feeder of Huginn and Muninn." These names encode Odin\'s identity as the deity who keeps and communicates with ravens, with the ravens serving as an extension of his omniscient gaze.' },
+  { q: 'Why is Odin called the Raven-God?', a: 'Odin is called the Raven-God because his ravens Huginn and Muninn — Thought and Memory — fly throughout the world each day and report back to him, giving him knowledge of all events. This knowledge-gathering function defines Odin\'s character: he is the god of wisdom, strategy, poetry, and death — all obtained through seeking knowledge at great cost. The raven, as his primary instrument of knowledge, defines him. Additionally, Odin\'s association with battle and the dead connects him to the battlefield raven as a scavenger of the slain.' },
+  { q: 'How many names does Odin have?', a: 'The Prose Edda\'s Gylfaginning lists over 50 names for Odin, with additional names appearing in the Poetic Edda\'s Grímnismál (where Odin, in disguise as Grímnir, lists his own names) and throughout skaldic poetry. The total number of attested Odin names across Old Norse sources exceeds 200 by some counts, though many are single attestations or uncertain. Among these, the raven-related names represent a consistent and important cluster, reflecting the centrality of the raven to Odin\'s mythological identity.' },
+];
+---
+
+<BaseLayout title={title} description={description} path={path} ogType="article"
+  datePublished="2026-11-07" dateModified="2026-11-07"
+  breadcrumbs={breadcrumbs} faq={faq} pageType="Article">
+
+<article class="qa-page">
+
+  <nav class="qa-breadcrumb" aria-label="Breadcrumb">
+    <ol>
+      {breadcrumbs.map((b, i) => (
+        <li>
+          {i < breadcrumbs.length - 1
+            ? <><a href={b.url}>{b.name}</a><span aria-hidden="true"> › </span></>
+            : <span aria-current="page">{b.name}</span>}
+        </li>
+      ))}
+    </ol>
+  </nav>
+
+  <header class="qa-header">
+    <p class="qa-pillar">Norse Lore · NRS·17</p>
+    <h1>Odin's Raven Names: Hrafnaguð and the Raven Epithets of the Allfather</h1>
+  </header>
+
+  <section class="qa-snippet" aria-label="Direct answer">
+    <p><strong class="claim-lore">[lore]</strong> Among Odin's 200+ attested names, several specifically reference his identity as the Raven-God: <em>Hrafnaguð</em> and <em>Hrafnáss</em> ("Raven-God") are the most explicit. His ravens Huginn and Muninn are so central to his identity that he is kenned as their master throughout skaldic poetry. These raven names encode Odin's nature as a deity of knowledge, death, and the battlefield — all domains where the raven is his instrument.</p>
+  </section>
+
+  <section class="qa-section">
+    <h2>The Raven Names</h2>
+    <p><strong class="claim-lore">[lore]</strong> The following Odin names directly reference ravens:<sup><a href="#src-1">1</a></sup><sup><a href="#src-2">2</a></sup></p>
+    <ul>
+      <li><strong>Hrafnaguð</strong> — "Raven-God." The most direct of the raven epithets. Used in skaldic poetry to identify Odin as the deity specifically associated with the raven. Composed of <em>hrafn</em> (raven) + <em>guð</em> (god).</li>
+      <li><strong>Hrafnáss</strong> — "Raven-God" / "Raven Deity." An alternative compound using <em>áss</em> (a divine being of the Æsir) rather than <em>guð</em>. Same meaning as Hrafnaguð.</li>
+      <li><strong>Farmaguð</strong> and similar "travelling god" names — while not exclusively raven-linked, Odin's travelling identity relates to his ravens' daily flights across the world.</li>
+    </ul>
+    <p>Beyond explicit raven names, Odin is extensively kenned in relation to Huginn and Muninn in skaldic poetry — called "the feeder of Huginn," "lord of the ravens," "master of Muninn," and similar constructions. These kennings effectively function as additional raven-linked names.</p>
+  </section>
+
+  <section class="qa-section">
+    <h2>What the Raven Names Reveal About Odin</h2>
+    <p><strong class="claim-lore">[lore]</strong> The identification of Odin as Hrafnaguð places the raven at the centre of his divine identity. This is unusual: most Norse deities are not so closely identified with a single animal. Thor is not "the eagle-god" or "the wolf-god" despite his mythology; Odin's identification as specifically the raven-god suggests the ravens are not merely symbolic accessories but essential expressions of his nature.<sup><a href="#src-1">1</a></sup></p>
+    <p>Three aspects of Odin converge in the raven name:</p>
+    <ul>
+      <li><strong>Omniscience:</strong> his ravens gather knowledge from across the nine worlds, making Odin the best-informed being in existence — the essence of his wisdom.</li>
+      <li><strong>Death:</strong> ravens are battlefield scavengers; Odin is the lord of the slain, the master of Valhöll. The raven on the battlefield is Odin's presence at the moment of death.</li>
+      <li><strong>Magic:</strong> in some traditions, Odin practices <em>seiðr</em> (a shamanic magic form) which involves sending out the consciousness in animal form. His ravens are externalised consciousness — literally Huginn (Thought) and Muninn (Memory) flying free of his body.</li>
+    </ul>
+  </section>
+
+  <section class="qa-section">
+    <h2>Odin's Names in the Eddas</h2>
+    <p><strong class="claim-lore">[lore]</strong> The Poetic Edda's <em>Grímnismál</em> includes a section where Odin (in disguise as Grímnir) recites his own names — a list that fills several stanzas. The same poem contains the naming of Huginn and Muninn (stanza 20). The juxtaposition — the naming of the ravens immediately adjacent to the recitation of his divine names — signals their inseparability.<sup><a href="#src-1">1</a></sup></p>
+    <p>The Prose Edda's <em>Gylfaginning</em> includes a longer catalogue of Odin names compiled by Snorri Sturluson from earlier tradition. Snorri glosses the raven names as reflecting Odin's ownership of the ravens and their role in his information network.</p>
+  </section>
+
+  <section class="qa-section">
+    <h2>Related Pages</h2>
+    <ul>
+      <li><a href="/lore/norse/huginn-and-muninn/">Huginn and Muninn</a></li>
+      <li><a href="/lore/norse/odin-the-raven-god/">Odin: the Raven God</a></li>
+      <li><a href="/lore/norse/meaning-of-huginn/">The meaning of Huginn</a></li>
+      <li><a href="/lore/norse/meaning-of-muninn/">The meaning of Muninn</a></li>
+    </ul>
+  </section>
+
+  <section class="qa-faq qa-section" aria-labelledby="faq-h2">
+    <h2 id="faq-h2">Frequently Asked Questions</h2>
+    {faq.map(item => (
+      <details class="qa-faq-item">
+        <summary class="qa-faq-q">{item.q}</summary>
+        <p class="qa-faq-a">{item.a}</p>
+      </details>
+    ))}
+  </section>
+
+  <section class="qa-sources qa-section" aria-labelledby="src-h2">
+    <h2 id="src-h2">Sources</h2>
+    <ol class="qa-src-list">
+      <li id="src-1">Larrington, C. (trans., 2014). <em>The Poetic Edda</em>. Oxford University Press. — Grímnismál name list, Huginn and Muninn stanza, Odin's nature.</li>
+      <li id="src-2">Faulkes, A. (trans., 1987). <em>Edda</em> (Prose Edda). Everyman Library. — Gylfaginning Odin name catalogue; Snorri's glosses on raven names.</li>
+    </ol>
+    <p class="qa-claim-note"><strong class="claim-lore">[lore]</strong> named cultural/historical source</p>
+  </section>
+
+</article>
+</BaseLayout>
+
+<style>
+  .qa-page { max-width: 820px; margin: 0 auto; padding: 2rem 1.25rem 4rem; color: var(--iron-ink, #e8e4d8); font-family: 'Inter', sans-serif; line-height: 1.72; }
+  .qa-breadcrumb ol { display: flex; flex-wrap: wrap; gap: .25rem; list-style: none; padding: 0; margin: 0 0 2rem; font-size: .8rem; color: var(--ink-soft, #8a8070); }
+  .qa-breadcrumb a { color: var(--gold-500, #d4ae5a); text-decoration: none; }
+  .qa-pillar { font-size: .72rem; letter-spacing: .12em; text-transform: uppercase; color: var(--gold-500, #d4ae5a); margin: 0 0 .4rem; }
+  .qa-page h1 { font-family: 'Cormorant Garamond', serif; font-size: clamp(2rem, 5vw, 3rem); font-weight: 700; color: #fff; margin: 0 0 2rem; line-height: 1.1; }
+  .qa-snippet { background: rgba(212,174,90,.08); border-left: 3px solid var(--gold-500, #d4ae5a); border-radius: 0 6px 6px 0; padding: 1rem 1.25rem; margin-bottom: 2.5rem; font-size: 1.03rem; }
+  .qa-section { margin-bottom: 2.5rem; }
+  .qa-section h2 { font-family: 'Cormorant Garamond', serif; font-size: 1.5rem; font-weight: 600; color: #fff; margin: 0 0 .9rem; border-bottom: 1px solid rgba(212,174,90,.2); padding-bottom: .4rem; }
+  .qa-section p { margin: 0 0 1rem; font-size: .97rem; }
+  .qa-section ul { padding-left: 1.25rem; margin: 0 0 1rem; }
+  .qa-section li { margin-bottom: .4rem; font-size: .95rem; }
+  .claim-lore { color: #c49a3c; font-style: normal; font-size: .78rem; }
+  a[href] { color: var(--gold-500, #d4ae5a); }
+  .qa-faq-item { border-bottom: 1px solid rgba(255,255,255,.07); }
+  .qa-faq-q { cursor: pointer; padding: .9rem 0; font-size: .97rem; font-weight: 500; color: #fff; list-style: none; }
+  .qa-faq-q::before { content: '+ '; color: var(--gold-500, #d4ae5a); font-weight: 700; }
+  details[open] .qa-faq-q::before { content: '− '; }
+  .qa-faq-a { margin: 0 0 1rem; line-height: 1.7; font-size: .93rem; color: var(--ink-soft, #c8c0b0); }
+  .qa-src-list { padding-left: 1.25rem; margin: 0 0 1rem; }
+  .qa-src-list li { margin-bottom: .6rem; font-size: .82rem; color: var(--ink-soft, #8a8070); line-height: 1.6; }
+  .qa-claim-note { font-size: .78rem; color: var(--ink-soft, #605848); border-top: 1px solid rgba(255,255,255,.06); padding-top: .75rem; }
+</style>

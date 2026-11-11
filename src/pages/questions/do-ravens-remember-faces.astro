@@ -1,0 +1,136 @@
+---
+/**
+ * Q&A — Do ravens remember faces?
+ * Primary keyword: do ravens remember faces
+ * Secondary: raven facial recognition, ravens recognise people, raven memory
+ */
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const title       = 'Do Ravens Remember Faces?';
+const description = 'Research shows ravens can distinguish individual humans and remember specific people for extended periods. This page reviews the evidence on raven facial recognition and individual memory.';
+const path        = '/questions/do-ravens-remember-faces/';
+
+const breadcrumbs = [
+  { name: 'Home',      url: '/' },
+  { name: 'Questions', url: '/questions/' },
+  { name: 'Do Ravens Remember Faces?', url: path },
+];
+
+const faq = [
+  { q: 'Have ravens been tested for facial recognition in controlled experiments?', a: 'The most rigorous facial recognition research has been conducted with American Crows (Marzluff et al., 2010), not ravens. Crows were shown to remember specific human faces associated with capture and handling for at least 5 years, and to recruit others to mob those individuals. Ravens have not been the subject of equivalent masked-face experiments, but observations and indirect evidence suggest similar capacities.' },
+  { q: 'Can ravens hold grudges against specific people?', a: 'Field observations and keeper accounts describe ravens treating familiar people differently depending on past experience — avoiding individuals who trapped or handled them while approaching those who fed them. The word "grudge" implies extended negative memory, and the evidence is consistent with this but mainly observational rather than from controlled experiments on ravens specifically.' },
+  { q: 'How long can ravens remember faces?', a: 'The duration of raven-specific memory for individual faces has not been experimentally established. American Crow facial memory has been shown to persist for at least 5 years. Given ravens\' comparable or greater cognitive capacity, researchers consider long-term individual recognition plausible, but it has not been confirmed in ravens with the same rigour.' },
+];
+---
+
+<BaseLayout title={title} description={description} path={path} ogType="article"
+  datePublished="2026-11-07" dateModified="2026-11-07"
+  breadcrumbs={breadcrumbs} faq={faq} pageType="Article">
+
+<article class="qa-page">
+
+  <nav class="qa-breadcrumb" aria-label="Breadcrumb">
+    <ol>
+      {breadcrumbs.map((b, i) => (
+        <li>
+          {i < breadcrumbs.length - 1
+            ? <><a href={b.url}>{b.name}</a><span aria-hidden="true"> › </span></>
+            : <span aria-current="page">{b.name}</span>}
+        </li>
+      ))}
+    </ol>
+  </nav>
+
+  <header class="qa-header">
+    <p class="qa-pillar">Question · Mind</p>
+    <h1>Do Ravens Remember Faces?</h1>
+  </header>
+
+  <section class="qa-snippet" aria-label="Direct answer">
+    <p><strong class="claim-science">[science]</strong> Evidence strongly suggests ravens can recognise and remember individual humans — responding differently to familiar people depending on past experience. The most controlled facial-recognition experiments have been run with the closely related American Crow; ravens show equivalent or greater cognitive capacity. Direct raven experiments are more limited but point in the same direction.</p>
+  </section>
+
+  <section class="qa-section">
+    <h2>What the Crow Research Shows</h2>
+    <p><strong class="claim-science">[science]</strong> The clearest evidence for corvid facial recognition comes from a series of studies by John Marzluff and colleagues at the University of Washington. In a 2010 study, researchers trapped and banded American Crows while wearing specific latex face masks. Crows rapidly learned to associate those specific mask faces — not other masks — with the threatening experience of capture, and would dive-bomb and scold people wearing those masks while ignoring control masks. This response persisted for at least five years and spread to birds that had never experienced the trapping directly, apparently through social learning.<sup><a href="#src-1">1</a></sup></p>
+    <p>These findings are specifically for American Crows, not ravens. However, ravens and crows are closely related, have similar (or in some respects greater) cognitive capacities, and live in similarly complex social environments where individual recognition would be adaptive.</p>
+  </section>
+
+  <section class="qa-section">
+    <h2>Raven-Specific Evidence</h2>
+    <p><strong class="claim-science">[science]</strong> Ravens have been directly studied for individual recognition — of other ravens and of humans:</p>
+    <ul>
+      <li><strong>Raven–raven recognition:</strong> Bugnyar and colleagues have documented that ravens recognise individual conspecifics and adjust their behaviour accordingly — including remembering past social interactions, alliance histories, and which individuals have previously taken their cached food.<sup><a href="#src-2">2</a></sup></li>
+      <li><strong>Human recognition:</strong> Ravens at research stations and long-term study sites (such as Konrad Lorenz Research Station in Austria) show strong individual recognition of regular human handlers. Birds approach some people and avoid others, based on individual experience. This is well-documented observationally but has not been tested with the controlled masked-face design used for crows.</li>
+      <li><strong>Long-term memory:</strong> Ravens show excellent long-term memory in food-caching tasks — remembering the locations of thousands of caches and updating those memories over months. This demonstrates the memory capacity that would underpin long-term facial recognition, though caching memory and face memory are distinct systems.<sup><a href="#src-3">3</a></sup></li>
+    </ul>
+  </section>
+
+  <section class="qa-section">
+    <h2>What We Don't Yet Know</h2>
+    <p>Several important questions remain open for ravens specifically:</p>
+    <ul>
+      <li>Can ravens generalise from a specific face to the same face in different lighting, angles, or aged appearance?</li>
+      <li>How long do ravens retain individual human face memories in controlled tests?</li>
+      <li>Do ravens spread face recognition socially, as crows appear to do?</li>
+      <li>Is facial recognition in ravens primarily olfactory, visual, or based on other cues (voice, gait)?</li>
+    </ul>
+    <p>The evidence is consistent with ravens remembering human faces, but the raven-specific experimental literature is thinner than for crows. Confident claims that ravens "definitely remember faces for X years" are ahead of the published evidence for ravens in particular.</p>
+  </section>
+
+  <section class="qa-section">
+    <h2>Related Questions</h2>
+    <ul>
+      <li><a href="/questions/how-smart-are-ravens/">How smart are ravens?</a></li>
+      <li><a href="/behaviour/raven-intelligence/">Raven intelligence — the full picture</a></li>
+      <li><a href="/behaviour/raven-food-caching/">How ravens hide and remember food</a></li>
+      <li><a href="/behaviour/raven-cognition-theory-of-mind/">Raven theory of mind</a></li>
+    </ul>
+  </section>
+
+  <section class="qa-faq qa-section" aria-labelledby="faq-h2">
+    <h2 id="faq-h2">Frequently Asked Questions</h2>
+    {faq.map(item => (
+      <details class="qa-faq-item">
+        <summary class="qa-faq-q">{item.q}</summary>
+        <p class="qa-faq-a">{item.a}</p>
+      </details>
+    ))}
+  </section>
+
+  <section class="qa-sources qa-section" aria-labelledby="src-h2">
+    <h2 id="src-h2">Sources</h2>
+    <ol class="qa-src-list">
+      <li id="src-1">Marzluff, J.M., Walls, J., Cornell, H.N., Withey, J.C. & Craig, D.P. (2010). Lasting recognition of threatening people by wild American crows. <em>Animal Behaviour</em>, 79(3), 699–707. — crow facial recognition study.</li>
+      <li id="src-2">Bugnyar, T. & Heinrich, B. (2005). Ravens, <em>Corvus corax</em>, differentiate between knowledgeable and ignorant competitors. <em>Proceedings of the Royal Society B</em>, 272, 1641–1646. — raven individual recognition and social cognition.</li>
+      <li id="src-3">Bugnyar, T. & Kotrschal, K. (2002). Observational learning and the raiding of food caches in ravens (<em>Corvus corax</em>): is it 'tactical' deception? <em>Animal Behaviour</em>, 64, 185–195. — raven memory and caching.</li>
+    </ol>
+    <p class="qa-claim-note"><strong class="claim-science">[science]</strong> peer-reviewed study or field-guide data</p>
+  </section>
+
+</article>
+</BaseLayout>
+
+<style>
+  .qa-page { max-width: 820px; margin: 0 auto; padding: 2rem 1.25rem 4rem; color: var(--iron-ink, #e8e4d8); font-family: 'Inter', sans-serif; line-height: 1.72; }
+  .qa-breadcrumb ol { display: flex; flex-wrap: wrap; gap: .25rem; list-style: none; padding: 0; margin: 0 0 2rem; font-size: .8rem; color: var(--ink-soft, #8a8070); }
+  .qa-breadcrumb a { color: var(--gold-500, #d4ae5a); text-decoration: none; }
+  .qa-pillar { font-size: .72rem; letter-spacing: .12em; text-transform: uppercase; color: var(--gold-500, #d4ae5a); margin: 0 0 .4rem; }
+  .qa-page h1 { font-family: 'Cormorant Garamond', serif; font-size: clamp(2rem, 5vw, 3rem); font-weight: 700; color: #fff; margin: 0 0 2rem; line-height: 1.1; }
+  .qa-snippet { background: rgba(212,174,90,.08); border-left: 3px solid var(--gold-500, #d4ae5a); border-radius: 0 6px 6px 0; padding: 1rem 1.25rem; margin-bottom: 2.5rem; font-size: 1.03rem; }
+  .qa-section { margin-bottom: 2.5rem; }
+  .qa-section h2 { font-family: 'Cormorant Garamond', serif; font-size: 1.5rem; font-weight: 600; color: #fff; margin: 0 0 .9rem; border-bottom: 1px solid rgba(212,174,90,.2); padding-bottom: .4rem; }
+  .qa-section p { margin: 0 0 1rem; font-size: .97rem; }
+  .qa-section ul { padding-left: 1.25rem; margin: 0 0 1rem; }
+  .qa-section li { margin-bottom: .4rem; font-size: .95rem; }
+  .claim-science { color: #7ab9e0; font-style: normal; font-size: .78rem; }
+  a[href] { color: var(--gold-500, #d4ae5a); }
+  .qa-faq-item { border-bottom: 1px solid rgba(255,255,255,.07); }
+  .qa-faq-q { cursor: pointer; padding: .9rem 0; font-size: .97rem; font-weight: 500; color: #fff; list-style: none; }
+  .qa-faq-q::before { content: '+ '; color: var(--gold-500, #d4ae5a); font-weight: 700; }
+  details[open] .qa-faq-q::before { content: '− '; }
+  .qa-faq-a { margin: 0 0 1rem; line-height: 1.7; font-size: .93rem; color: var(--ink-soft, #c8c0b0); }
+  .qa-src-list { padding-left: 1.25rem; margin: 0 0 1rem; }
+  .qa-src-list li { margin-bottom: .6rem; font-size: .82rem; color: var(--ink-soft, #8a8070); line-height: 1.6; }
+  .qa-claim-note { font-size: .78rem; color: var(--ink-soft, #605848); border-top: 1px solid rgba(255,255,255,.06); padding-top: .75rem; }
+</style>

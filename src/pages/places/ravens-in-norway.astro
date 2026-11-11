@@ -1,0 +1,142 @@
+---
+/**
+ * Places — Ravens in Norway
+ * PLC·04
+ * Primary keyword: ravens in norway
+ * Secondary: norwegian raven, raven norway population, hrafn norway
+ */
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const title       = 'Ravens in Norway: Population, Ecology, and Cultural History';
+const description = 'Norway has one of Europe\'s densest raven populations. The raven (hrafn) is woven into Norse mythology, the Viking Age, and place names across the country. This page covers the Norwegian raven population, ecology, and cultural significance.';
+const path        = '/places/ravens-in-norway/';
+
+const breadcrumbs = [
+  { name: 'Home',   url: '/' },
+  { name: 'Places', url: '/places/' },
+  { name: 'Ravens in Norway', url: path },
+];
+
+const faq = [
+  { q: 'Are ravens common in Norway?', a: 'Yes. The raven (Corvus corax) is a common resident throughout Norway, including above the Arctic Circle. Norway\'s large areas of wilderness — mountain plateaus (fjell), boreal forest, coastline, and fjords — provide extensive raven habitat. Estimates for the Norwegian breeding population are in the range of 15,000–20,000 pairs, making it one of the highest raven densities in Europe.' },
+  { q: 'What is the Norwegian word for raven?', a: 'The Norwegian word for raven is "ravn" (Bokmål/Nynorsk). This derives directly from the Old Norse hrafn — the same word found in Icelandic hrafn, Swedish korp (a related Germanic form), and historically in English as hrœfn or hrœfn. The Old Norse hrafn is everywhere in Norwegian place names: Ravnefjell (Raven Mountain), Ravnøya (Raven Island), and many others across the country.' },
+  { q: 'What role does the raven play in Norse mythology from Norway?', a: 'Norway was the heartland of Viking Age Norse culture and the raven\'s mythological role is deeply embedded here. Odin\'s ravens Huginn and Muninn — Thought and Memory — were believed to fly the world daily and return to whisper what they had seen into Odin\'s ears. The raven banner (Hrafnsmerki) was used by Norwegian Viking chieftains and kings. Harald Fairhair\'s era (late 9th century) saw raven symbolism prominently used in Norwegian warrior culture.' },
+];
+---
+
+<BaseLayout title={title} description={description} path={path} ogType="article"
+  datePublished="2026-11-07" dateModified="2026-11-07"
+  breadcrumbs={breadcrumbs} faq={faq} pageType="Article">
+
+<article class="qa-page">
+
+  <nav class="qa-breadcrumb" aria-label="Breadcrumb">
+    <ol>
+      {breadcrumbs.map((b, i) => (
+        <li>
+          {i < breadcrumbs.length - 1
+            ? <><a href={b.url}>{b.name}</a><span aria-hidden="true"> › </span></>
+            : <span aria-current="page">{b.name}</span>}
+        </li>
+      ))}
+    </ol>
+  </nav>
+
+  <header class="qa-header">
+    <p class="qa-pillar">Places · PLC·04</p>
+    <h1>Ravens in Norway: Population, Ecology, and Cultural History</h1>
+  </header>
+
+  <section class="qa-snippet" aria-label="Direct answer">
+    <p><strong class="claim-science">[science]</strong> Norway supports one of Europe's densest raven populations — an estimated 15,000–20,000 breeding pairs across the country's mountains, forests, and coastlines. <strong class="claim-lore">[lore]</strong> As the cultural heartland of Old Norse civilisation, Norway's connection with the raven (hrafn) runs from Odin's mythological ravens Huginn and Muninn to Viking-age raven war banners and place names across the landscape.</p>
+  </section>
+
+  <section class="qa-section">
+    <h2>Population and Distribution</h2>
+    <p><strong class="claim-science">[science]</strong> The Common Raven is widespread across all of Norway's major habitat types:<sup><a href="#src-1">1</a></sup></p>
+    <ul>
+      <li><strong>Mountain plateaus (fjell):</strong> ravens are particularly associated with the high plateau habitats of central and northern Norway — open terrain where they soar extensively and exploit reindeer and sheep carcasses.</li>
+      <li><strong>Boreal forest (taiga):</strong> raven pairs nest throughout the spruce and pine forests of south and central Norway.</li>
+      <li><strong>Coastline and fjords:</strong> coastal ravens exploit marine food sources — fish, shellfish, and seabird colonies — particularly in western and northern Norway.</li>
+      <li><strong>Arctic Norway (Finnmark):</strong> ravens are present year-round above the Arctic Circle, exploiting reindeer herding and the abundant winter carcass resource it creates.</li>
+    </ul>
+    <p>Norway's raven population has benefited from the large semi-domesticated reindeer herds of Sámi herders in the north — reindeer mortality provides a significant, predictable winter food source.</p>
+  </section>
+
+  <section class="qa-section">
+    <h2>Ravens and Reindeer Herding</h2>
+    <p><strong class="claim-science">[science]</strong> The relationship between ravens and reindeer herding in northern Norway (and Sápmi more broadly) is ecologically significant. Ravens follow reindeer herds, exploiting:</p>
+    <ul>
+      <li>Natural reindeer mortality (the highest death rates are in winter, providing peak raven food availability).</li>
+      <li>Slaughter waste from herding operations.</li>
+      <li>Invertebrates disturbed by reindeer digging through snow for lichen.</li>
+    </ul>
+    <p>The Sámi people of northern Norway, Sweden, and Finland have their own complex cultural relationship with the raven (Sámi: <em>gámaš</em> or <em>krákka</em> in various dialects), involving the bird both as a nuisance at herding camps and as a culturally significant creature in Sámi cosmology.</p>
+  </section>
+
+  <section class="qa-section">
+    <h2>The Raven in Norwegian Cultural History</h2>
+    <p><strong class="claim-lore">[lore]</strong> Norway was the Norse heartland, and the raven's cultural significance here is ancient and pervasive:<sup><a href="#src-2">2</a></sup></p>
+    <ul>
+      <li><strong>Huginn and Muninn:</strong> Odin's ravens — Thought and Memory — described in <em>Grímnismál</em> (Poetic Edda). The image of Odin as a raven-god with ravens perching on his shoulders is fundamentally a Norwegian Viking Age image.</li>
+      <li><strong>Raven banners:</strong> the Hrafnsmerki (raven banner) was used by Norwegian, Orkney, and Icelandic chieftains in the Viking Age. The sagas record numerous instances of raven banners in battle, believed to give victory to those under whom the banner flew.</li>
+      <li><strong>Place names:</strong> raven place names are common throughout Norway — from Ravnefjell in Rogaland to Ravnøya in Troms. The element <em>hrafn-</em> in place names indicates sites of historical raven association going back to the medieval period.</li>
+    </ul>
+  </section>
+
+  <section class="qa-section">
+    <h2>Related Pages</h2>
+    <ul>
+      <li><a href="/places/ravens-in-iceland/">Ravens in Iceland</a></li>
+      <li><a href="/places/ravens-in-the-uk/">Ravens in the UK</a></li>
+      <li><a href="/lore/norse/huginn-and-muninn/">Huginn and Muninn</a></li>
+      <li><a href="/lore/norse/meaning-of-huginn/">Meaning of Huginn</a></li>
+    </ul>
+  </section>
+
+  <section class="qa-faq qa-section" aria-labelledby="faq-h2">
+    <h2 id="faq-h2">Frequently Asked Questions</h2>
+    {faq.map(item => (
+      <details class="qa-faq-item">
+        <summary class="qa-faq-q">{item.q}</summary>
+        <p class="qa-faq-a">{item.a}</p>
+      </details>
+    ))}
+  </section>
+
+  <section class="qa-sources qa-section" aria-labelledby="src-h2">
+    <h2 id="src-h2">Sources</h2>
+    <ol class="qa-src-list">
+      <li id="src-1">Boarman, W.I. & Heinrich, B. (1999). Common Raven (<em>Corvus corax</em>). In Poole, A. (ed.), <em>The Birds of North America</em>, No. 476. Cornell Lab of Ornithology; and BirdLife International (2023). Species factsheet: <em>Corvus corax</em>. — range, population estimates, habitat associations.</li>
+      <li id="src-2">Larrington, C. (trans., 2014). <em>The Poetic Edda</em>. Oxford University Press. — Grímnismál stanzas on Huginn and Muninn; raven banner references drawn from saga literature (Orkneyinga saga, Njáls saga).</li>
+    </ol>
+    <p class="qa-claim-note"><strong class="claim-science">[science]</strong> peer-reviewed or field-guide data &nbsp;|&nbsp; <strong class="claim-lore">[lore]</strong> named cultural/historical source</p>
+  </section>
+
+</article>
+</BaseLayout>
+
+<style>
+  .qa-page { max-width: 820px; margin: 0 auto; padding: 2rem 1.25rem 4rem; color: var(--iron-ink, #e8e4d8); font-family: 'Inter', sans-serif; line-height: 1.72; }
+  .qa-breadcrumb ol { display: flex; flex-wrap: wrap; gap: .25rem; list-style: none; padding: 0; margin: 0 0 2rem; font-size: .8rem; color: var(--ink-soft, #8a8070); }
+  .qa-breadcrumb a { color: var(--gold-500, #d4ae5a); text-decoration: none; }
+  .qa-pillar { font-size: .72rem; letter-spacing: .12em; text-transform: uppercase; color: var(--gold-500, #d4ae5a); margin: 0 0 .4rem; }
+  .qa-page h1 { font-family: 'Cormorant Garamond', serif; font-size: clamp(2rem, 5vw, 3rem); font-weight: 700; color: #fff; margin: 0 0 2rem; line-height: 1.1; }
+  .qa-snippet { background: rgba(212,174,90,.08); border-left: 3px solid var(--gold-500, #d4ae5a); border-radius: 0 6px 6px 0; padding: 1rem 1.25rem; margin-bottom: 2.5rem; font-size: 1.03rem; }
+  .qa-section { margin-bottom: 2.5rem; }
+  .qa-section h2 { font-family: 'Cormorant Garamond', serif; font-size: 1.5rem; font-weight: 600; color: #fff; margin: 0 0 .9rem; border-bottom: 1px solid rgba(212,174,90,.2); padding-bottom: .4rem; }
+  .qa-section p { margin: 0 0 1rem; font-size: .97rem; }
+  .qa-section ul { padding-left: 1.25rem; margin: 0 0 1rem; }
+  .qa-section li { margin-bottom: .4rem; font-size: .95rem; }
+  .claim-science { color: #7ab9e0; font-style: normal; font-size: .78rem; }
+  .claim-lore { color: #c4a26a; font-style: normal; font-size: .78rem; }
+  a[href] { color: var(--gold-500, #d4ae5a); }
+  .qa-faq-item { border-bottom: 1px solid rgba(255,255,255,.07); }
+  .qa-faq-q { cursor: pointer; padding: .9rem 0; font-size: .97rem; font-weight: 500; color: #fff; list-style: none; }
+  .qa-faq-q::before { content: '+ '; color: var(--gold-500, #d4ae5a); font-weight: 700; }
+  details[open] .qa-faq-q::before { content: '− '; }
+  .qa-faq-a { margin: 0 0 1rem; line-height: 1.7; font-size: .93rem; color: var(--ink-soft, #c8c0b0); }
+  .qa-src-list { padding-left: 1.25rem; margin: 0 0 1rem; }
+  .qa-src-list li { margin-bottom: .6rem; font-size: .82rem; color: var(--ink-soft, #8a8070); line-height: 1.6; }
+  .qa-claim-note { font-size: .78rem; color: var(--ink-soft, #605848); border-top: 1px solid rgba(255,255,255,.06); padding-top: .75rem; }
+</style>
